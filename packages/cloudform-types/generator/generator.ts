@@ -216,6 +216,20 @@ ${Object.keys(innerTypes)
 }`
 }
 
+function isExportableInnerType([innerTypeFullName, innerType]: [string, any]) {
+  if (innerTypeFullName.endsWith('.ResourceTag')) {
+    // Avoid declaration conflicts.
+    // ResourceTag is imported from /types/resource.ts
+    return false
+  }
+  const hasProperties = !!innerType.Properties
+  const hasPrimitiveType = !!innerType.PrimitiveType
+  const hasPrimitiveItemType = !!innerType.PrimitiveItemType
+  const hasType = !!innerType.Type
+
+  return hasProperties || hasPrimitiveType || hasPrimitiveItemType || hasType
+}
+
 function generateFile(
   fileHeader: string,
   namespace: string,
@@ -225,21 +239,7 @@ function generateFile(
 ): void {
   let innerHasTags = false
   const innerTypesTemplates = Object.entries(innerTypes)
-    .filter(([innerTypeFullName, innerType]: [string, any]) => {
-      if (innerTypeFullName.endsWith('.ResourceTag')) {
-        // Avoid declaration conflicts.
-        // ResourceTag is imported from /types/resource.ts
-        return false
-      }
-      const hasProperties = !!innerType.Properties
-      const hasPrimitiveType = !!innerType.PrimitiveType
-      const hasPrimitiveItemType = !!innerType.PrimitiveItemType
-      const hasType = !!innerType.Type
-
-      return (
-        hasProperties || hasPrimitiveType || hasPrimitiveItemType || hasType
-      )
-    })
+    .filter(isExportableInnerType)
     .map(([innerTypeFullName, innerType]) => {
       const resolvedInnerTypeName = innerTypeName(innerTypeFullName)
       if (innerType.Properties) {
@@ -417,9 +417,10 @@ function generateFilesFromSchema(
       indexContent[namespace] = indexContent[namespace] || []
       indexContent[namespace].push({
         typeName,
-        innerTypes: Object.keys(resourcePropertyTypes).map(name =>
-          name.slice(name.lastIndexOf('.') + 1)
-        ),
+        innerTypes: Object.entries(resourcePropertyTypes)
+          .filter(isExportableInnerType)
+          .map(([name]) => name.slice(name.lastIndexOf('.') + 1))
+          .filter(name => name !== typeName),
       })
 
       generateFile(
