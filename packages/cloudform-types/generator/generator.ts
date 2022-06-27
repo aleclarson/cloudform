@@ -245,9 +245,9 @@ function generateFile(
       if (innerType.Properties) {
         innerHasTags = innerHasTags || hasTags(innerType.Properties)
         return generateInnerClass(resolvedInnerTypeName, innerType.Properties)
-      } else {
-        return generateInnerType(resolvedInnerTypeName, innerType as any)
       }
+      innerHasTags = innerHasTags || isTagList(innerType as any)
+      return generateInnerType(resolvedInnerTypeName, innerType as any)
     })
 
   const resourceImports = ['ResourceBase']
