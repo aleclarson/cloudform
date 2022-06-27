@@ -17,7 +17,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PortalProperties {
+export interface Properties {
     PortalAuthMode?: Value<string>
     PortalContactEmail: Value<string>
     PortalDescription?: Value<string>
@@ -28,10 +28,11 @@ export interface PortalProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Portal extends ResourceBase<PortalProperties> {
+class Portal extends ResourceBase<Properties> {
 
 
-    constructor(properties: PortalProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTSiteWise::Portal', properties)
     }
 }
+export { Portal as R }

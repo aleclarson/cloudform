@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NetworkAclProperties {
+export interface Properties {
     Tags?: List<ResourceTag>
     VpcId: Value<string>
 }
 
-export default class NetworkAcl extends ResourceBase<NetworkAclProperties> {
+class NetworkAcl extends ResourceBase<Properties> {
 
 
-    constructor(properties: NetworkAclProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::NetworkAcl', properties)
     }
 }
+export { NetworkAcl as R }

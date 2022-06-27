@@ -18,15 +18,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ApplicationFleetAssociationProperties {
+export interface Properties {
     FleetName: Value<string>
     ApplicationArn: Value<string>
 }
 
-export default class ApplicationFleetAssociation extends ResourceBase<ApplicationFleetAssociationProperties> {
+class ApplicationFleetAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: ApplicationFleetAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppStream::ApplicationFleetAssociation', properties)
     }
 }
+export { ApplicationFleetAssociation as R }

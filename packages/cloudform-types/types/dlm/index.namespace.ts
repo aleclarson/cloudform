@@ -17,10 +17,29 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import LifecyclePolicy_ from './lifecyclePolicy'
+import * as _0 from './lifecyclePolicy'
 
 export namespace DLM {
-  export const LifecyclePolicy = LifecyclePolicy_
+  export const LifecyclePolicy = _0.R
 
-  export type LifecyclePolicy = LifecyclePolicy_
+  export type LifecyclePolicy = _0.R
+
+  export namespace LifecyclePolicy {
+    export type FastRestoreRule = _0.FastRestoreRule
+    export type EventSource = _0.EventSource
+    export type EventParameters = _0.EventParameters
+    export type Action = _0.Action
+    export type CreateRule = _0.CreateRule
+    export type RetainRule = _0.RetainRule
+    export type PolicyDetails = _0.PolicyDetails
+    export type Parameters = _0.Parameters
+    export type EncryptionConfiguration = _0.EncryptionConfiguration
+    export type Schedule = _0.Schedule
+    export type CrossRegionCopyRetainRule = _0.CrossRegionCopyRetainRule
+    export type CrossRegionCopyRule = _0.CrossRegionCopyRule
+    export type CrossRegionCopyAction = _0.CrossRegionCopyAction
+    export type DeprecateRule = _0.DeprecateRule
+    export type CrossRegionCopyDeprecateRule = _0.CrossRegionCopyDeprecateRule
+    export type ShareRule = _0.ShareRule
+  }
 }

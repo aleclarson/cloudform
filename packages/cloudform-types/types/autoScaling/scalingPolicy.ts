@@ -180,7 +180,7 @@ export class Metric {
     }
 }
 
-export interface ScalingPolicyProperties {
+export interface Properties {
     AdjustmentType?: Value<string>
     AutoScalingGroupName: Value<string>
     Cooldown?: Value<string>
@@ -194,7 +194,7 @@ export interface ScalingPolicyProperties {
     TargetTrackingConfiguration?: TargetTrackingConfiguration
 }
 
-export default class ScalingPolicy extends ResourceBase<ScalingPolicyProperties> {
+class ScalingPolicy extends ResourceBase<Properties> {
     static PredictiveScalingConfiguration = PredictiveScalingConfiguration
     static CustomizedMetricSpecification = CustomizedMetricSpecification
     static PredictiveScalingPredefinedMetricPair = PredictiveScalingPredefinedMetricPair
@@ -212,7 +212,8 @@ export default class ScalingPolicy extends ResourceBase<ScalingPolicyProperties>
     static PredictiveScalingMetricSpecification = PredictiveScalingMetricSpecification
     static Metric = Metric
 
-    constructor(properties: ScalingPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::AutoScaling::ScalingPolicy', properties)
     }
 }
+export { ScalingPolicy as R }

@@ -7,7 +7,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class SendingOptions {
@@ -51,7 +51,7 @@ export class DeliveryOptions {
     }
 }
 
-export interface ConfigurationSetProperties {
+export interface Properties {
     SendingOptions?: SendingOptions
     TrackingOptions?: TrackingOptions
     ReputationOptions?: ReputationOptions
@@ -60,14 +60,15 @@ export interface ConfigurationSetProperties {
     Name: Value<string>
 }
 
-export default class ConfigurationSet extends ResourceBase<ConfigurationSetProperties> {
+class ConfigurationSet extends ResourceBase<Properties> {
     static SendingOptions = SendingOptions
     static ReputationOptions = ReputationOptions
     static TrackingOptions = TrackingOptions
     static Tags = Tags
     static DeliveryOptions = DeliveryOptions
 
-    constructor(properties: ConfigurationSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::PinpointEmail::ConfigurationSet', properties)
     }
 }
+export { ConfigurationSet as R }

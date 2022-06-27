@@ -1,1 +1,1 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface ResourceProperties{ParentId:Value<string>;PathPart:Value<string>;RestApiId:Value<string>;}export default class Resource extends ResourceBase<ResourceProperties>{constructor(properties:ResourceProperties);}
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{RestApiId:Value<string>;ParentId:Value<string>;PathPart:Value<string>;}declare class Resource extends ResourceBase<Properties>{constructor(properties:Properties);}export{Resource as R};

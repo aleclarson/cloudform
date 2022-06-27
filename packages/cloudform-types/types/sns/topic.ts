@@ -29,7 +29,7 @@ export class Subscription {
     }
 }
 
-export interface TopicProperties {
+export interface Properties {
     ContentBasedDeduplication?: Value<boolean>
     DisplayName?: Value<string>
     FifoTopic?: Value<boolean>
@@ -39,10 +39,11 @@ export interface TopicProperties {
     TopicName?: Value<string>
 }
 
-export default class Topic extends ResourceBase<TopicProperties> {
+class Topic extends ResourceBase<Properties> {
     static Subscription = Subscription
 
-    constructor(properties?: TopicProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SNS::Topic', properties || {})
     }
 }
+export { Topic as R }

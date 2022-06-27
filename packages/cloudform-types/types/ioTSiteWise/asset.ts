@@ -34,7 +34,7 @@ export class AssetProperty {
     }
 }
 
-export interface AssetProperties {
+export interface Properties {
     AssetModelId: Value<string>
     AssetName: Value<string>
     AssetDescription?: Value<string>
@@ -43,11 +43,12 @@ export interface AssetProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Asset extends ResourceBase<AssetProperties> {
+class Asset extends ResourceBase<Properties> {
     static AssetHierarchy = AssetHierarchy
     static AssetProperty = AssetProperty
 
-    constructor(properties: AssetProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTSiteWise::Asset', properties)
     }
 }
+export { Asset as R }

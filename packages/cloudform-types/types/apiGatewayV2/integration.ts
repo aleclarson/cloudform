@@ -45,7 +45,7 @@ export class ResponseParameter {
     }
 }
 
-export interface IntegrationProperties {
+export interface Properties {
     Description?: Value<string>
     TemplateSelectionExpression?: Value<string>
     ConnectionType?: Value<string>
@@ -66,12 +66,13 @@ export interface IntegrationProperties {
     IntegrationType: Value<string>
 }
 
-export default class Integration extends ResourceBase<IntegrationProperties> {
+class Integration extends ResourceBase<Properties> {
     static ResponseParameterList = ResponseParameterList
     static TlsConfig = TlsConfig
     static ResponseParameter = ResponseParameter
 
-    constructor(properties: IntegrationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGatewayV2::Integration', properties)
     }
 }
+export { Integration as R }

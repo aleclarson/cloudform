@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TransitGatewayMulticastGroupSourceProperties {
+export interface Properties {
     GroupIpAddress: Value<string>
     TransitGatewayMulticastDomainId: Value<string>
     NetworkInterfaceId: Value<string>
 }
 
-export default class TransitGatewayMulticastGroupSource extends ResourceBase<TransitGatewayMulticastGroupSourceProperties> {
+class TransitGatewayMulticastGroupSource extends ResourceBase<Properties> {
 
 
-    constructor(properties: TransitGatewayMulticastGroupSourceProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::TransitGatewayMulticastGroupSource', properties)
     }
 }
+export { TransitGatewayMulticastGroupSource as R }

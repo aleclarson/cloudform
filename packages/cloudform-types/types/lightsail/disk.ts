@@ -35,7 +35,7 @@ export class AutoSnapshotAddOn {
     }
 }
 
-export interface DiskProperties {
+export interface Properties {
     DiskName: Value<string>
     AvailabilityZone?: Value<string>
     Tags?: List<ResourceTag>
@@ -43,11 +43,12 @@ export interface DiskProperties {
     SizeInGb: Value<number>
 }
 
-export default class Disk extends ResourceBase<DiskProperties> {
+class Disk extends ResourceBase<Properties> {
     static AddOn = AddOn
     static AutoSnapshotAddOn = AutoSnapshotAddOn
 
-    constructor(properties: DiskProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lightsail::Disk', properties)
     }
 }
+export { Disk as R }

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class UsagePlanKey extends resource_1.ResourceBase{constructor(properties){super("AWS::ApiGateway::UsagePlanKey",properties)}}exports.default=UsagePlanKey;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class UsagePlanKey extends resource_1.ResourceBase{constructor(properties){super("AWS::ApiGateway::UsagePlanKey",properties)}}exports.R=UsagePlanKey;

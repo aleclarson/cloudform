@@ -29,7 +29,7 @@ export class Entry {
     }
 }
 
-export interface PrefixListProperties {
+export interface Properties {
     PrefixListName: Value<string>
     AddressFamily: Value<string>
     MaxEntries: Value<number>
@@ -37,10 +37,11 @@ export interface PrefixListProperties {
     Entries?: List<Entry>
 }
 
-export default class PrefixList extends ResourceBase<PrefixListProperties> {
+class PrefixList extends ResourceBase<Properties> {
     static Entry = Entry
 
-    constructor(properties: PrefixListProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::PrefixList', properties)
     }
 }
+export { PrefixList as R }

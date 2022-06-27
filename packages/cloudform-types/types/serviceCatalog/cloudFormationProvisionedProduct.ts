@@ -43,7 +43,7 @@ export class ProvisioningPreferences {
     }
 }
 
-export interface CloudFormationProvisionedProductProperties {
+export interface Properties {
     AcceptLanguage?: Value<string>
     NotificationArns?: List<Value<string>>
     PathId?: Value<string>
@@ -58,11 +58,12 @@ export interface CloudFormationProvisionedProductProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class CloudFormationProvisionedProduct extends ResourceBase<CloudFormationProvisionedProductProperties> {
+class CloudFormationProvisionedProduct extends ResourceBase<Properties> {
     static ProvisioningParameter = ProvisioningParameter
     static ProvisioningPreferences = ProvisioningPreferences
 
-    constructor(properties?: CloudFormationProvisionedProductProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ServiceCatalog::CloudFormationProvisionedProduct', properties || {})
     }
 }
+export { CloudFormationProvisionedProduct as R }

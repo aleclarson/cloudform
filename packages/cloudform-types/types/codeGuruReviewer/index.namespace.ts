@@ -17,10 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import RepositoryAssociation_ from './repositoryAssociation'
+import * as _0 from './repositoryAssociation'
 
 export namespace CodeGuruReviewer {
-  export const RepositoryAssociation = RepositoryAssociation_
+  export const RepositoryAssociation = _0.R
 
-  export type RepositoryAssociation = RepositoryAssociation_
+  export type RepositoryAssociation = _0.R
+
+
 }

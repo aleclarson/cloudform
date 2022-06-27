@@ -42,7 +42,7 @@ export class OptionConfiguration {
     }
 }
 
-export interface OptionGroupProperties {
+export interface Properties {
     EngineName: Value<string>
     MajorEngineVersion: Value<string>
     OptionConfigurations: List<OptionConfiguration>
@@ -50,11 +50,12 @@ export interface OptionGroupProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class OptionGroup extends ResourceBase<OptionGroupProperties> {
+class OptionGroup extends ResourceBase<Properties> {
     static OptionSetting = OptionSetting
     static OptionConfiguration = OptionConfiguration
 
-    constructor(properties: OptionGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::RDS::OptionGroup', properties)
     }
 }
+export { OptionGroup as R }

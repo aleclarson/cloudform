@@ -29,15 +29,16 @@ export class HealthCheckTag {
     }
 }
 
-export interface HealthCheckProperties {
+export interface Properties {
     HealthCheckConfig: {[key: string]: any}
     HealthCheckTags?: List<HealthCheckTag>
 }
 
-export default class HealthCheck extends ResourceBase<HealthCheckProperties> {
+class HealthCheck extends ResourceBase<Properties> {
     static HealthCheckTag = HealthCheckTag
 
-    constructor(properties: HealthCheckProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53::HealthCheck', properties)
     }
 }
+export { HealthCheck as R }

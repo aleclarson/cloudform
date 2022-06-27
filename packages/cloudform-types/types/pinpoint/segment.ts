@@ -12,7 +12,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class AttributeDimension {
@@ -132,7 +132,7 @@ export class Behavior {
     }
 }
 
-export interface SegmentProperties {
+export interface Properties {
     SegmentGroups?: SegmentGroups
     Dimensions?: SegmentDimensions
     ApplicationId: Value<string>
@@ -140,7 +140,7 @@ export interface SegmentProperties {
     Name: Value<string>
 }
 
-export default class Segment extends ResourceBase<SegmentProperties> {
+class Segment extends ResourceBase<Properties> {
     static AttributeDimension = AttributeDimension
     static Recency = Recency
     static Groups = Groups
@@ -154,7 +154,8 @@ export default class Segment extends ResourceBase<SegmentProperties> {
     static SetDimension = SetDimension
     static Behavior = Behavior
 
-    constructor(properties: SegmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::Segment', properties)
     }
 }
+export { Segment as R }

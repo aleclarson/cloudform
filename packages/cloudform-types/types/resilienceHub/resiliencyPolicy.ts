@@ -16,7 +16,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class FailurePolicy {
@@ -28,7 +28,7 @@ export class FailurePolicy {
     }
 }
 
-export interface ResiliencyPolicyProperties {
+export interface Properties {
     PolicyName: Value<string>
     PolicyDescription?: Value<string>
     DataLocationConstraint?: Value<string>
@@ -37,10 +37,11 @@ export interface ResiliencyPolicyProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class ResiliencyPolicy extends ResourceBase<ResiliencyPolicyProperties> {
+class ResiliencyPolicy extends ResourceBase<Properties> {
     static FailurePolicy = FailurePolicy
 
-    constructor(properties: ResiliencyPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::ResilienceHub::ResiliencyPolicy', properties)
     }
 }
+export { ResiliencyPolicy as R }

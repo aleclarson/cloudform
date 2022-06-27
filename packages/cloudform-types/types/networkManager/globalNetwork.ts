@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface GlobalNetworkProperties {
+export interface Properties {
     Description?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class GlobalNetwork extends ResourceBase<GlobalNetworkProperties> {
+class GlobalNetwork extends ResourceBase<Properties> {
 
 
-    constructor(properties?: GlobalNetworkProperties) {
+    constructor(properties?: Properties) {
         super('AWS::NetworkManager::GlobalNetwork', properties || {})
     }
 }
+export { GlobalNetwork as R }

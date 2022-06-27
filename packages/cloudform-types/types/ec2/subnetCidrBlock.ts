@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SubnetCidrBlockProperties {
+export interface Properties {
     Ipv6CidrBlock: Value<string>
     SubnetId: Value<string>
 }
 
-export default class SubnetCidrBlock extends ResourceBase<SubnetCidrBlockProperties> {
+class SubnetCidrBlock extends ResourceBase<Properties> {
 
 
-    constructor(properties: SubnetCidrBlockProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::SubnetCidrBlock', properties)
     }
 }
+export { SubnetCidrBlock as R }

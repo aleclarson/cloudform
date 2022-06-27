@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Tags {
@@ -29,16 +29,17 @@ export class Tags {
     }
 }
 
-export interface ApplicationProperties {
+export interface Properties {
     Description?: Value<string>
     Tags?: List<Tags>
     Name: Value<string>
 }
 
-export default class Application extends ResourceBase<ApplicationProperties> {
+class Application extends ResourceBase<Properties> {
     static Tags = Tags
 
-    constructor(properties: ApplicationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppConfig::Application', properties)
     }
 }
+export { Application as R }

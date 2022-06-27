@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const budgetsAction_1=require("./budgetsAction"),budget_1=require("./budget");var Budgets;!function(Budgets){Budgets.BudgetsAction=budgetsAction_1.default,Budgets.Budget=budget_1.default}(Budgets=exports.Budgets||(exports.Budgets={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Budgets=void 0;const _0=require("./budgetsAction"),_1=require("./budget");var Budgets;!function(Budgets){Budgets.BudgetsAction=_0.R,Budgets.Budget=_1.R}(Budgets=exports.Budgets||(exports.Budgets={}));

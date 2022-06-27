@@ -19,17 +19,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CertificateProperties {
+export interface Properties {
     CertificateName: Value<string>
     DomainName: Value<string>
     SubjectAlternativeNames?: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class Certificate extends ResourceBase<CertificateProperties> {
+class Certificate extends ResourceBase<Properties> {
 
 
-    constructor(properties: CertificateProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lightsail::Certificate', properties)
     }
 }
+export { Certificate as R }

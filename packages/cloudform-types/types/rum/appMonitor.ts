@@ -29,7 +29,7 @@ export class AppMonitorConfiguration {
     }
 }
 
-export interface AppMonitorProperties {
+export interface Properties {
     Name: Value<string>
     Domain: Value<string>
     CwLogEnabled?: Value<boolean>
@@ -37,10 +37,11 @@ export interface AppMonitorProperties {
     AppMonitorConfiguration?: AppMonitorConfiguration
 }
 
-export default class AppMonitor extends ResourceBase<AppMonitorProperties> {
+class AppMonitor extends ResourceBase<Properties> {
     static AppMonitorConfiguration = AppMonitorConfiguration
 
-    constructor(properties: AppMonitorProperties) {
+    constructor(properties: Properties) {
         super('AWS::RUM::AppMonitor', properties)
     }
 }
+export { AppMonitor as R }

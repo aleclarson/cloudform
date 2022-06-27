@@ -35,16 +35,17 @@ export class LoRaWANServiceProfile {
     }
 }
 
-export interface ServiceProfileProperties {
+export interface Properties {
     Name?: Value<string>
     LoRaWAN?: LoRaWANServiceProfile
     Tags?: List<ResourceTag>
 }
 
-export default class ServiceProfile extends ResourceBase<ServiceProfileProperties> {
+class ServiceProfile extends ResourceBase<Properties> {
     static LoRaWANServiceProfile = LoRaWANServiceProfile
 
-    constructor(properties?: ServiceProfileProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IoTWireless::ServiceProfile', properties || {})
     }
 }
+export { ServiceProfile as R }

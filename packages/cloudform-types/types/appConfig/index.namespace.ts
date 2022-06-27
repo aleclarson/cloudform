@@ -17,25 +17,43 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Environment_ from './environment'
-import DeploymentStrategy_ from './deploymentStrategy'
-import Deployment_ from './deployment'
-import HostedConfigurationVersion_ from './hostedConfigurationVersion'
-import ConfigurationProfile_ from './configurationProfile'
-import Application_ from './application'
+import * as _0 from './environment'
+import * as _1 from './deploymentStrategy'
+import * as _2 from './deployment'
+import * as _3 from './hostedConfigurationVersion'
+import * as _4 from './configurationProfile'
+import * as _5 from './application'
 
 export namespace AppConfig {
-  export const Environment = Environment_
-  export const DeploymentStrategy = DeploymentStrategy_
-  export const Deployment = Deployment_
-  export const HostedConfigurationVersion = HostedConfigurationVersion_
-  export const ConfigurationProfile = ConfigurationProfile_
-  export const Application = Application_
+  export const Environment = _0.R
+  export const DeploymentStrategy = _1.R
+  export const Deployment = _2.R
+  export const HostedConfigurationVersion = _3.R
+  export const ConfigurationProfile = _4.R
+  export const Application = _5.R
 
-  export type Environment = Environment_
-  export type DeploymentStrategy = DeploymentStrategy_
-  export type Deployment = Deployment_
-  export type HostedConfigurationVersion = HostedConfigurationVersion_
-  export type ConfigurationProfile = ConfigurationProfile_
-  export type Application = Application_
+  export type Environment = _0.R
+  export type DeploymentStrategy = _1.R
+  export type Deployment = _2.R
+  export type HostedConfigurationVersion = _3.R
+  export type ConfigurationProfile = _4.R
+  export type Application = _5.R
+
+  export namespace Environment {
+    export type Monitors = _0.Monitors
+    export type Tags = _0.Tags
+  }
+  export namespace DeploymentStrategy {
+    export type Tags = _1.Tags
+  }
+  export namespace Deployment {
+    export type Tags = _2.Tags
+  }
+  export namespace ConfigurationProfile {
+    export type Validators = _4.Validators
+    export type Tags = _4.Tags
+  }
+  export namespace Application {
+    export type Tags = _5.Tags
+  }
 }

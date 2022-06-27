@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class MutualTlsAuthentication {
@@ -41,18 +41,19 @@ export class DomainNameConfiguration {
     }
 }
 
-export interface DomainNameProperties {
+export interface Properties {
     MutualTlsAuthentication?: MutualTlsAuthentication
     DomainName: Value<string>
     DomainNameConfigurations?: List<DomainNameConfiguration>
     Tags?: {[key: string]: any}
 }
 
-export default class DomainName extends ResourceBase<DomainNameProperties> {
+class DomainName extends ResourceBase<Properties> {
     static MutualTlsAuthentication = MutualTlsAuthentication
     static DomainNameConfiguration = DomainNameConfiguration
 
-    constructor(properties: DomainNameProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGatewayV2::DomainName', properties)
     }
 }
+export { DomainName as R }

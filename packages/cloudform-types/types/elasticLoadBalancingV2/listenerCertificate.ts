@@ -28,15 +28,16 @@ export class Certificate {
     }
 }
 
-export interface ListenerCertificateProperties {
+export interface Properties {
     Certificates: List<Certificate>
     ListenerArn: Value<string>
 }
 
-export default class ListenerCertificate extends ResourceBase<ListenerCertificateProperties> {
+class ListenerCertificate extends ResourceBase<Properties> {
     static Certificate = Certificate
 
-    constructor(properties: ListenerCertificateProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElasticLoadBalancingV2::ListenerCertificate', properties)
     }
 }
+export { ListenerCertificate as R }

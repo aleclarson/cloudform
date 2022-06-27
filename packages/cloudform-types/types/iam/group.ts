@@ -29,17 +29,18 @@ export class Policy {
     }
 }
 
-export interface GroupProperties {
+export interface Properties {
     GroupName?: Value<string>
     ManagedPolicyArns?: List<Value<string>>
     Path?: Value<string>
     Policies?: List<Policy>
 }
 
-export default class Group extends ResourceBase<GroupProperties> {
+class Group extends ResourceBase<Properties> {
     static Policy = Policy
 
-    constructor(properties?: GroupProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IAM::Group', properties || {})
     }
 }
+export { Group as R }

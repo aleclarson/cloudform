@@ -17,13 +17,27 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ScalableTarget_ from './scalableTarget'
-import ScalingPolicy_ from './scalingPolicy'
+import * as _0 from './scalableTarget'
+import * as _1 from './scalingPolicy'
 
 export namespace ApplicationAutoScaling {
-  export const ScalableTarget = ScalableTarget_
-  export const ScalingPolicy = ScalingPolicy_
+  export const ScalableTarget = _0.R
+  export const ScalingPolicy = _1.R
 
-  export type ScalableTarget = ScalableTarget_
-  export type ScalingPolicy = ScalingPolicy_
+  export type ScalableTarget = _0.R
+  export type ScalingPolicy = _1.R
+
+  export namespace ScalableTarget {
+    export type SuspendedState = _0.SuspendedState
+    export type ScheduledAction = _0.ScheduledAction
+    export type ScalableTargetAction = _0.ScalableTargetAction
+  }
+  export namespace ScalingPolicy {
+    export type StepScalingPolicyConfiguration = _1.StepScalingPolicyConfiguration
+    export type PredefinedMetricSpecification = _1.PredefinedMetricSpecification
+    export type CustomizedMetricSpecification = _1.CustomizedMetricSpecification
+    export type MetricDimension = _1.MetricDimension
+    export type StepAdjustment = _1.StepAdjustment
+    export type TargetTrackingScalingPolicyConfiguration = _1.TargetTrackingScalingPolicyConfiguration
+  }
 }

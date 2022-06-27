@@ -10,15 +10,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SuiteDefinitionProperties {
+export interface Properties {
     SuiteDefinitionConfiguration: {[key: string]: any}
     Tags?: List<ResourceTag>
 }
 
-export default class SuiteDefinition extends ResourceBase<SuiteDefinitionProperties> {
+class SuiteDefinition extends ResourceBase<Properties> {
 
 
-    constructor(properties: SuiteDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTCoreDeviceAdvisor::SuiteDefinition', properties)
     }
 }
+export { SuiteDefinition as R }

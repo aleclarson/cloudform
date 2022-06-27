@@ -17,16 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Project_ from './project'
-import Placement_ from './placement'
-import Device_ from './device'
+import * as _0 from './project'
+import * as _1 from './placement'
+import * as _2 from './device'
 
 export namespace IoT1Click {
-  export const Project = Project_
-  export const Placement = Placement_
-  export const Device = Device_
+  export const Project = _0.R
+  export const Placement = _1.R
+  export const Device = _2.R
 
-  export type Project = Project_
-  export type Placement = Placement_
-  export type Device = Device_
+  export type Project = _0.R
+  export type Placement = _1.R
+  export type Device = _2.R
+
+  export namespace Project {
+    export type DeviceTemplate = _0.DeviceTemplate
+    export type PlacementTemplate = _0.PlacementTemplate
+  }
 }

@@ -35,18 +35,19 @@ export class Authorization {
     }
 }
 
-export interface PackagingGroupProperties {
+export interface Properties {
     Id: Value<string>
     Authorization?: Authorization
     Tags?: List<ResourceTag>
     EgressAccessLogs?: LogConfiguration
 }
 
-export default class PackagingGroup extends ResourceBase<PackagingGroupProperties> {
+class PackagingGroup extends ResourceBase<Properties> {
     static LogConfiguration = LogConfiguration
     static Authorization = Authorization
 
-    constructor(properties: PackagingGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaPackage::PackagingGroup', properties)
     }
 }
+export { PackagingGroup as R }

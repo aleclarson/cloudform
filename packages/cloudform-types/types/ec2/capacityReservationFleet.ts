@@ -43,7 +43,7 @@ export class InstanceTypeSpecification {
     }
 }
 
-export interface CapacityReservationFleetProperties {
+export interface Properties {
     AllocationStrategy?: Value<string>
     TagSpecifications?: List<TagSpecification>
     InstanceTypeSpecifications?: List<InstanceTypeSpecification>
@@ -55,11 +55,12 @@ export interface CapacityReservationFleetProperties {
     NoRemoveEndDate?: Value<boolean>
 }
 
-export default class CapacityReservationFleet extends ResourceBase<CapacityReservationFleetProperties> {
+class CapacityReservationFleet extends ResourceBase<Properties> {
     static TagSpecification = TagSpecification
     static InstanceTypeSpecification = InstanceTypeSpecification
 
-    constructor(properties?: CapacityReservationFleetProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::CapacityReservationFleet', properties || {})
     }
 }
+export { CapacityReservationFleet as R }

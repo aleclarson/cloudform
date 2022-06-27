@@ -30,7 +30,7 @@ export class Predicate {
     }
 }
 
-export interface RateBasedRuleProperties {
+export interface Properties {
     MetricName: Value<string>
     RateLimit: Value<number>
     MatchPredicates?: List<Predicate>
@@ -38,10 +38,11 @@ export interface RateBasedRuleProperties {
     Name: Value<string>
 }
 
-export default class RateBasedRule extends ResourceBase<RateBasedRuleProperties> {
+class RateBasedRule extends ResourceBase<Properties> {
     static Predicate = Predicate
 
-    constructor(properties: RateBasedRuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAFRegional::RateBasedRule', properties)
     }
 }
+export { RateBasedRule as R }

@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class FastLaunchSnapshotConfiguration {
@@ -116,14 +116,14 @@ export class LaunchPermissionConfiguration {
     }
 }
 
-export interface DistributionConfigurationProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     Distributions: List<Distribution>
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class DistributionConfiguration extends ResourceBase<DistributionConfigurationProperties> {
+class DistributionConfiguration extends ResourceBase<Properties> {
     static FastLaunchSnapshotConfiguration = FastLaunchSnapshotConfiguration
     static TargetContainerRepository = TargetContainerRepository
     static AmiDistributionConfiguration = AmiDistributionConfiguration
@@ -134,7 +134,8 @@ export default class DistributionConfiguration extends ResourceBase<Distribution
     static FastLaunchConfiguration = FastLaunchConfiguration
     static LaunchPermissionConfiguration = LaunchPermissionConfiguration
 
-    constructor(properties: DistributionConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ImageBuilder::DistributionConfiguration', properties)
     }
 }
+export { DistributionConfiguration as R }

@@ -29,7 +29,7 @@ export class JWTConfiguration {
     }
 }
 
-export interface AuthorizerProperties {
+export interface Properties {
     IdentityValidationExpression?: Value<string>
     AuthorizerUri?: Value<string>
     AuthorizerCredentialsArn?: Value<string>
@@ -43,10 +43,11 @@ export interface AuthorizerProperties {
     Name: Value<string>
 }
 
-export default class Authorizer extends ResourceBase<AuthorizerProperties> {
+class Authorizer extends ResourceBase<Properties> {
     static JWTConfiguration = JWTConfiguration
 
-    constructor(properties: AuthorizerProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGatewayV2::Authorizer', properties)
     }
 }
+export { Authorizer as R }

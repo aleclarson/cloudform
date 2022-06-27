@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UserToGroupAdditionProperties {
+export interface Properties {
     GroupName: Value<string>
     Users: List<Value<string>>
 }
 
-export default class UserToGroupAddition extends ResourceBase<UserToGroupAdditionProperties> {
+class UserToGroupAddition extends ResourceBase<Properties> {
 
 
-    constructor(properties: UserToGroupAdditionProperties) {
+    constructor(properties: Properties) {
         super('AWS::IAM::UserToGroupAddition', properties)
     }
 }
+export { UserToGroupAddition as R }

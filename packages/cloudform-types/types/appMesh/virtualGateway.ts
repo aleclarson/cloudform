@@ -280,7 +280,7 @@ export class VirtualGatewayListenerTlsSdsCertificate {
     }
 }
 
-export interface VirtualGatewayProperties {
+export interface Properties {
     VirtualGatewayName?: Value<string>
     MeshName: Value<string>
     MeshOwner?: Value<string>
@@ -288,7 +288,7 @@ export interface VirtualGatewayProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class VirtualGateway extends ResourceBase<VirtualGatewayProperties> {
+class VirtualGateway extends ResourceBase<Properties> {
     static VirtualGatewayTlsValidationContextTrust = VirtualGatewayTlsValidationContextTrust
     static VirtualGatewayListenerTlsAcmCertificate = VirtualGatewayListenerTlsAcmCertificate
     static VirtualGatewayTlsValidationContextFileTrust = VirtualGatewayTlsValidationContextFileTrust
@@ -319,7 +319,8 @@ export default class VirtualGateway extends ResourceBase<VirtualGatewayPropertie
     static VirtualGatewayListenerTlsValidationContextTrust = VirtualGatewayListenerTlsValidationContextTrust
     static VirtualGatewayListenerTlsSdsCertificate = VirtualGatewayListenerTlsSdsCertificate
 
-    constructor(properties: VirtualGatewayProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppMesh::VirtualGateway', properties)
     }
 }
+export { VirtualGateway as R }

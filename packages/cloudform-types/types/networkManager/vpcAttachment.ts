@@ -21,7 +21,7 @@ export class VpcOptions {
     }
 }
 
-export interface VpcAttachmentProperties {
+export interface Properties {
     CoreNetworkId?: Value<string>
     VpcArn?: Value<string>
     Tags?: List<ResourceTag>
@@ -29,10 +29,11 @@ export interface VpcAttachmentProperties {
     Options?: VpcOptions
 }
 
-export default class VpcAttachment extends ResourceBase<VpcAttachmentProperties> {
+class VpcAttachment extends ResourceBase<Properties> {
     static VpcOptions = VpcOptions
 
-    constructor(properties?: VpcAttachmentProperties) {
+    constructor(properties?: Properties) {
         super('AWS::NetworkManager::VpcAttachment', properties || {})
     }
 }
+export { VpcAttachment as R }

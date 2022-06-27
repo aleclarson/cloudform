@@ -165,7 +165,7 @@ export class S3SourceConfig {
     }
 }
 
-export interface AnomalyDetectorProperties {
+export interface Properties {
     AnomalyDetectorName?: Value<string>
     AnomalyDetectorDescription?: Value<string>
     AnomalyDetectorConfig: AnomalyDetectorConfig
@@ -173,7 +173,7 @@ export interface AnomalyDetectorProperties {
     KmsKeyArn?: Value<string>
 }
 
-export default class AnomalyDetector extends ResourceBase<AnomalyDetectorProperties> {
+class AnomalyDetector extends ResourceBase<Properties> {
     static FileFormatDescriptor = FileFormatDescriptor
     static CsvFormatDescriptor = CsvFormatDescriptor
     static VpcConfiguration = VpcConfiguration
@@ -189,7 +189,8 @@ export default class AnomalyDetector extends ResourceBase<AnomalyDetectorPropert
     static CloudwatchConfig = CloudwatchConfig
     static S3SourceConfig = S3SourceConfig
 
-    constructor(properties: AnomalyDetectorProperties) {
+    constructor(properties: Properties) {
         super('AWS::LookoutMetrics::AnomalyDetector', properties)
     }
 }
+export { AnomalyDetector as R }

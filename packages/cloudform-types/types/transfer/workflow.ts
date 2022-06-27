@@ -32,17 +32,18 @@ export class WorkflowStep {
     }
 }
 
-export interface WorkflowProperties {
+export interface Properties {
     OnExceptionSteps?: List<WorkflowStep>
     Steps: List<WorkflowStep>
     Tags?: List<ResourceTag>
     Description?: Value<string>
 }
 
-export default class Workflow extends ResourceBase<WorkflowProperties> {
+class Workflow extends ResourceBase<Properties> {
     static WorkflowStep = WorkflowStep
 
-    constructor(properties: WorkflowProperties) {
+    constructor(properties: Properties) {
         super('AWS::Transfer::Workflow', properties)
     }
 }
+export { Workflow as R }

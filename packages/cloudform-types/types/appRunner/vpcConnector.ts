@@ -11,17 +11,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VpcConnectorProperties {
+export interface Properties {
     VpcConnectorName?: Value<string>
     Subnets: List<Value<string>>
     SecurityGroups?: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class VpcConnector extends ResourceBase<VpcConnectorProperties> {
+class VpcConnector extends ResourceBase<Properties> {
 
 
-    constructor(properties: VpcConnectorProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppRunner::VpcConnector', properties)
     }
 }
+export { VpcConnector as R }

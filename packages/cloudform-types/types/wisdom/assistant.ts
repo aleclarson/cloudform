@@ -18,7 +18,7 @@ export class ServerSideEncryptionConfiguration {
     }
 }
 
-export interface AssistantProperties {
+export interface Properties {
     Type: Value<string>
     Description?: Value<string>
     ServerSideEncryptionConfiguration?: ServerSideEncryptionConfiguration
@@ -26,10 +26,11 @@ export interface AssistantProperties {
     Name: Value<string>
 }
 
-export default class Assistant extends ResourceBase<AssistantProperties> {
+class Assistant extends ResourceBase<Properties> {
     static ServerSideEncryptionConfiguration = ServerSideEncryptionConfiguration
 
-    constructor(properties: AssistantProperties) {
+    constructor(properties: Properties) {
         super('AWS::Wisdom::Assistant', properties)
     }
 }
+export { Assistant as R }

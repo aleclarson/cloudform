@@ -16,7 +16,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class HopDestination {
@@ -37,7 +37,7 @@ export class AccelerationSettings {
     }
 }
 
-export interface JobTemplateProperties {
+export interface Properties {
     Category?: Value<string>
     Description?: Value<string>
     AccelerationSettings?: AccelerationSettings
@@ -50,11 +50,12 @@ export interface JobTemplateProperties {
     Name?: Value<string>
 }
 
-export default class JobTemplate extends ResourceBase<JobTemplateProperties> {
+class JobTemplate extends ResourceBase<Properties> {
     static HopDestination = HopDestination
     static AccelerationSettings = AccelerationSettings
 
-    constructor(properties: JobTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaConvert::JobTemplate', properties)
     }
 }
+export { JobTemplate as R }

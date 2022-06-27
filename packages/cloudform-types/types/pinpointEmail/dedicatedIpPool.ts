@@ -7,7 +7,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Tags {
@@ -19,15 +19,16 @@ export class Tags {
     }
 }
 
-export interface DedicatedIpPoolProperties {
+export interface Properties {
     PoolName?: Value<string>
     Tags?: List<Tags>
 }
 
-export default class DedicatedIpPool extends ResourceBase<DedicatedIpPoolProperties> {
+class DedicatedIpPool extends ResourceBase<Properties> {
     static Tags = Tags
 
-    constructor(properties?: DedicatedIpPoolProperties) {
+    constructor(properties?: Properties) {
         super('AWS::PinpointEmail::DedicatedIpPool', properties || {})
     }
 }
+export { DedicatedIpPool as R }

@@ -17,10 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Namespace_ from './namespace'
+import * as _0 from './namespace'
 
 export namespace RedshiftServerless {
-  export const Namespace = Namespace_
+  export const Namespace = _0.R
 
-  export type Namespace = Namespace_
+  export type Namespace = _0.R
+
+
 }

@@ -17,19 +17,35 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Workspace_ from './workspace'
-import Scene_ from './scene'
-import ComponentType_ from './componentType'
-import Entity_ from './entity'
+import * as _0 from './workspace'
+import * as _1 from './scene'
+import * as _2 from './componentType'
+import * as _3 from './entity'
 
 export namespace IoTTwinMaker {
-  export const Workspace = Workspace_
-  export const Scene = Scene_
-  export const ComponentType = ComponentType_
-  export const Entity = Entity_
+  export const Workspace = _0.R
+  export const Scene = _1.R
+  export const ComponentType = _2.R
+  export const Entity = _3.R
 
-  export type Workspace = Workspace_
-  export type Scene = Scene_
-  export type ComponentType = ComponentType_
-  export type Entity = Entity_
+  export type Workspace = _0.R
+  export type Scene = _1.R
+  export type ComponentType = _2.R
+  export type Entity = _3.R
+
+  export namespace ComponentType {
+    export type PropertyDefinition = _2.PropertyDefinition
+    export type DataType = _2.DataType
+    export type DataConnector = _2.DataConnector
+    export type Relationship = _2.Relationship
+    export type LambdaFunction = _2.LambdaFunction
+    export type DataValue = _2.DataValue
+    export type Function = _2.Function
+  }
+  export namespace Entity {
+    export type Component = _3.Component
+    export type Status = _3.Status
+    export type Property = _3.Property
+    export type DataValue = _3.DataValue
+  }
 }

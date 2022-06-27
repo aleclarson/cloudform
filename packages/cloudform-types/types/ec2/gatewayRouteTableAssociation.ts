@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface GatewayRouteTableAssociationProperties {
+export interface Properties {
     RouteTableId: Value<string>
     GatewayId: Value<string>
 }
 
-export default class GatewayRouteTableAssociation extends ResourceBase<GatewayRouteTableAssociationProperties> {
+class GatewayRouteTableAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: GatewayRouteTableAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::GatewayRouteTableAssociation', properties)
     }
 }
+export { GatewayRouteTableAssociation as R }

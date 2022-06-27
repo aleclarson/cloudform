@@ -17,19 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Application_ from './application'
-import ResourceAssociation_ from './resourceAssociation'
-import AttributeGroup_ from './attributeGroup'
-import AttributeGroupAssociation_ from './attributeGroupAssociation'
+import * as _0 from './application'
+import * as _1 from './resourceAssociation'
+import * as _2 from './attributeGroup'
+import * as _3 from './attributeGroupAssociation'
 
 export namespace ServiceCatalogAppRegistry {
-  export const Application = Application_
-  export const ResourceAssociation = ResourceAssociation_
-  export const AttributeGroup = AttributeGroup_
-  export const AttributeGroupAssociation = AttributeGroupAssociation_
+  export const Application = _0.R
+  export const ResourceAssociation = _1.R
+  export const AttributeGroup = _2.R
+  export const AttributeGroupAssociation = _3.R
 
-  export type Application = Application_
-  export type ResourceAssociation = ResourceAssociation_
-  export type AttributeGroup = AttributeGroup_
-  export type AttributeGroupAssociation = AttributeGroupAssociation_
+  export type Application = _0.R
+  export type ResourceAssociation = _1.R
+  export type AttributeGroup = _2.R
+  export type AttributeGroupAssociation = _3.R
+
+
 }

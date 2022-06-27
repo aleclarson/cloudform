@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface MasterProperties {
+export interface Properties {
     DetectorId: Value<string>
     MasterId: Value<string>
     InvitationId?: Value<string>
 }
 
-export default class Master extends ResourceBase<MasterProperties> {
+class Master extends ResourceBase<Properties> {
 
 
-    constructor(properties: MasterProperties) {
+    constructor(properties: Properties) {
         super('AWS::GuardDuty::Master', properties)
     }
 }
+export { Master as R }

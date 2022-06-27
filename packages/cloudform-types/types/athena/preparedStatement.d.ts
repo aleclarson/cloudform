@@ -1,0 +1,1 @@
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{StatementName:Value<string>;WorkGroup:Value<string>;Description?:Value<string>;QueryStatement:Value<string>;}declare class PreparedStatement extends ResourceBase<Properties>{constructor(properties:Properties);}export{PreparedStatement as R};

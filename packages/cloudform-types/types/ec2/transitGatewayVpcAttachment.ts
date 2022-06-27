@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TransitGatewayVpcAttachmentProperties {
+export interface Properties {
     TransitGatewayId: Value<string>
     VpcId: Value<string>
     SubnetIds: List<Value<string>>
@@ -31,10 +31,11 @@ export interface TransitGatewayVpcAttachmentProperties {
     Options?: {[key: string]: any}
 }
 
-export default class TransitGatewayVpcAttachment extends ResourceBase<TransitGatewayVpcAttachmentProperties> {
+class TransitGatewayVpcAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties: TransitGatewayVpcAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::TransitGatewayVpcAttachment', properties)
     }
 }
+export { TransitGatewayVpcAttachment as R }

@@ -17,19 +17,30 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Environment_ from './environment'
-import Service_ from './service'
-import Route_ from './route'
-import Application_ from './application'
+import * as _0 from './environment'
+import * as _1 from './service'
+import * as _2 from './route'
+import * as _3 from './application'
 
 export namespace RefactorSpaces {
-  export const Environment = Environment_
-  export const Service = Service_
-  export const Route = Route_
-  export const Application = Application_
+  export const Environment = _0.R
+  export const Service = _1.R
+  export const Route = _2.R
+  export const Application = _3.R
 
-  export type Environment = Environment_
-  export type Service = Service_
-  export type Route = Route_
-  export type Application = Application_
+  export type Environment = _0.R
+  export type Service = _1.R
+  export type Route = _2.R
+  export type Application = _3.R
+
+  export namespace Service {
+    export type LambdaEndpointInput = _1.LambdaEndpointInput
+    export type UrlEndpointInput = _1.UrlEndpointInput
+  }
+  export namespace Route {
+    export type UriPathRouteInput = _2.UriPathRouteInput
+  }
+  export namespace Application {
+    export type ApiGatewayProxyInput = _3.ApiGatewayProxyInput
+  }
 }

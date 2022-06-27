@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TrafficMirrorFilterProperties {
+export interface Properties {
     Description?: Value<string>
     NetworkServices?: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class TrafficMirrorFilter extends ResourceBase<TrafficMirrorFilterProperties> {
+class TrafficMirrorFilter extends ResourceBase<Properties> {
 
 
-    constructor(properties?: TrafficMirrorFilterProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::TrafficMirrorFilter', properties || {})
     }
 }
+export { TrafficMirrorFilter as R }

@@ -17,13 +17,15 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Stream_ from './stream'
-import SignalingChannel_ from './signalingChannel'
+import * as _0 from './stream'
+import * as _1 from './signalingChannel'
 
 export namespace KinesisVideo {
-  export const Stream = Stream_
-  export const SignalingChannel = SignalingChannel_
+  export const Stream = _0.R
+  export const SignalingChannel = _1.R
 
-  export type Stream = Stream_
-  export type SignalingChannel = SignalingChannel_
+  export type Stream = _0.R
+  export type SignalingChannel = _1.R
+
+
 }

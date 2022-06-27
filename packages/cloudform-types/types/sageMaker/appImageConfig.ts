@@ -47,18 +47,19 @@ export class KernelSpec {
     }
 }
 
-export interface AppImageConfigProperties {
+export interface Properties {
     AppImageConfigName: Value<string>
     KernelGatewayImageConfig?: KernelGatewayImageConfig
     Tags?: List<ResourceTag>
 }
 
-export default class AppImageConfig extends ResourceBase<AppImageConfigProperties> {
+class AppImageConfig extends ResourceBase<Properties> {
     static KernelGatewayImageConfig = KernelGatewayImageConfig
     static FileSystemConfig = FileSystemConfig
     static KernelSpec = KernelSpec
 
-    constructor(properties: AppImageConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::AppImageConfig', properties)
     }
 }
+export { AppImageConfig as R }

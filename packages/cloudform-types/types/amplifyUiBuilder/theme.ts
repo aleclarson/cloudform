@@ -16,7 +16,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class ThemeValues {
@@ -37,18 +37,19 @@ export class ThemeValue {
     }
 }
 
-export interface ThemeProperties {
+export interface Properties {
     Name: Value<string>
     Overrides?: List<ThemeValues>
     Tags?: {[key: string]: Value<string>}
     Values: List<ThemeValues>
 }
 
-export default class Theme extends ResourceBase<ThemeProperties> {
+class Theme extends ResourceBase<Properties> {
     static ThemeValues = ThemeValues
     static ThemeValue = ThemeValue
 
-    constructor(properties: ThemeProperties) {
+    constructor(properties: Properties) {
         super('AWS::AmplifyUIBuilder::Theme', properties)
     }
 }
+export { Theme as R }

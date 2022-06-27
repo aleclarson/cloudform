@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RegistryPolicyProperties {
+export interface Properties {
     Policy: {[key: string]: any}
     RegistryName: Value<string>
     RevisionId?: Value<string>
 }
 
-export default class RegistryPolicy extends ResourceBase<RegistryPolicyProperties> {
+class RegistryPolicy extends ResourceBase<Properties> {
 
 
-    constructor(properties: RegistryPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::EventSchemas::RegistryPolicy', properties)
     }
 }
+export { RegistryPolicy as R }

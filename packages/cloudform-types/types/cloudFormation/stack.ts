@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface StackProperties {
+export interface Properties {
     NotificationARNs?: List<Value<string>>
     Parameters?: {[key: string]: Value<string>}
     Tags?: List<ResourceTag>
@@ -30,10 +30,11 @@ export interface StackProperties {
     TimeoutInMinutes?: Value<number>
 }
 
-export default class Stack extends ResourceBase<StackProperties> {
+class Stack extends ResourceBase<Properties> {
 
 
-    constructor(properties: StackProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFormation::Stack', properties)
     }
 }
+export { Stack as R }

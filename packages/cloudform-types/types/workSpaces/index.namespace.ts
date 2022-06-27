@@ -17,13 +17,20 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ConnectionAlias_ from './connectionAlias'
-import Workspace_ from './workspace'
+import * as _0 from './connectionAlias'
+import * as _1 from './workspace'
 
 export namespace WorkSpaces {
-  export const ConnectionAlias = ConnectionAlias_
-  export const Workspace = Workspace_
+  export const ConnectionAlias = _0.R
+  export const Workspace = _1.R
 
-  export type ConnectionAlias = ConnectionAlias_
-  export type Workspace = Workspace_
+  export type ConnectionAlias = _0.R
+  export type Workspace = _1.R
+
+  export namespace ConnectionAlias {
+    export type ConnectionAliasAssociation = _0.ConnectionAliasAssociation
+  }
+  export namespace Workspace {
+    export type WorkspaceProperties = _1.WorkspaceProperties
+  }
 }

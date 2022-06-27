@@ -1,0 +1,1 @@
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{RecoveryGroupName:Value<string>;Cells?:List<Value<string>>;Tags?:List<ResourceTag>;}declare class RecoveryGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{RecoveryGroup as R};

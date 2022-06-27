@@ -12,16 +12,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface OutcomeProperties {
+export interface Properties {
     Name: Value<string>
     Tags?: List<ResourceTag>
     Description?: Value<string>
 }
 
-export default class Outcome extends ResourceBase<OutcomeProperties> {
+class Outcome extends ResourceBase<Properties> {
 
 
-    constructor(properties: OutcomeProperties) {
+    constructor(properties: Properties) {
         super('AWS::FraudDetector::Outcome', properties)
     }
 }
+export { Outcome as R }

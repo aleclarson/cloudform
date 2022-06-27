@@ -17,12 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface ComponentProperties {
+export interface Properties {
     Name: Value<string>
     Version: Value<string>
     Description?: Value<string>
@@ -35,10 +35,11 @@ export interface ComponentProperties {
     SupportedOsVersions?: List<Value<string>>
 }
 
-export default class Component extends ResourceBase<ComponentProperties> {
+class Component extends ResourceBase<Properties> {
 
 
-    constructor(properties: ComponentProperties) {
+    constructor(properties: Properties) {
         super('AWS::ImageBuilder::Component', properties)
     }
 }
+export { Component as R }

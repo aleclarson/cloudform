@@ -30,16 +30,17 @@ export class CapacityProviderStrategy {
     }
 }
 
-export interface ClusterCapacityProviderAssociationsProperties {
+export interface Properties {
     CapacityProviders: List<Value<string>>
     Cluster: Value<string>
     DefaultCapacityProviderStrategy: List<CapacityProviderStrategy>
 }
 
-export default class ClusterCapacityProviderAssociations extends ResourceBase<ClusterCapacityProviderAssociationsProperties> {
+class ClusterCapacityProviderAssociations extends ResourceBase<Properties> {
     static CapacityProviderStrategy = CapacityProviderStrategy
 
-    constructor(properties: ClusterCapacityProviderAssociationsProperties) {
+    constructor(properties: Properties) {
         super('AWS::ECS::ClusterCapacityProviderAssociations', properties)
     }
 }
+export { ClusterCapacityProviderAssociations as R }

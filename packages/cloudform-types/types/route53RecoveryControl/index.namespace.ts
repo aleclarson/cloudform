@@ -17,19 +17,28 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import SafetyRule_ from './safetyRule'
-import Cluster_ from './cluster'
-import RoutingControl_ from './routingControl'
-import ControlPanel_ from './controlPanel'
+import * as _0 from './safetyRule'
+import * as _1 from './cluster'
+import * as _2 from './routingControl'
+import * as _3 from './controlPanel'
 
 export namespace Route53RecoveryControl {
-  export const SafetyRule = SafetyRule_
-  export const Cluster = Cluster_
-  export const RoutingControl = RoutingControl_
-  export const ControlPanel = ControlPanel_
+  export const SafetyRule = _0.R
+  export const Cluster = _1.R
+  export const RoutingControl = _2.R
+  export const ControlPanel = _3.R
 
-  export type SafetyRule = SafetyRule_
-  export type Cluster = Cluster_
-  export type RoutingControl = RoutingControl_
-  export type ControlPanel = ControlPanel_
+  export type SafetyRule = _0.R
+  export type Cluster = _1.R
+  export type RoutingControl = _2.R
+  export type ControlPanel = _3.R
+
+  export namespace SafetyRule {
+    export type AssertionRule = _0.AssertionRule
+    export type RuleConfig = _0.RuleConfig
+    export type GatingRule = _0.GatingRule
+  }
+  export namespace Cluster {
+    export type ClusterEndpoint = _1.ClusterEndpoint
+  }
 }

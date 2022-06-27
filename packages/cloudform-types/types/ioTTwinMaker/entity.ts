@@ -7,7 +7,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Component {
@@ -57,7 +57,7 @@ export class DataValue {
     }
 }
 
-export interface EntityProperties {
+export interface Properties {
     EntityId?: Value<string>
     EntityName: Value<string>
     ParentEntityId?: Value<string>
@@ -67,13 +67,14 @@ export interface EntityProperties {
     Components?: {[key: string]: Component}
 }
 
-export default class Entity extends ResourceBase<EntityProperties> {
+class Entity extends ResourceBase<Properties> {
     static Component = Component
     static Status = Status
     static Property = Property
     static DataValue = DataValue
 
-    constructor(properties: EntityProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTTwinMaker::Entity', properties)
     }
 }
+export { Entity as R }

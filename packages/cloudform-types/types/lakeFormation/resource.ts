@@ -19,16 +19,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResourceProperties {
+export interface Properties {
     ResourceArn: Value<string>
     UseServiceLinkedRole: Value<boolean>
     RoleArn?: Value<string>
 }
 
-export default class Resource extends ResourceBase<ResourceProperties> {
+class Resource extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResourceProperties) {
+    constructor(properties: Properties) {
         super('AWS::LakeFormation::Resource', properties)
     }
 }
+export { Resource as R }

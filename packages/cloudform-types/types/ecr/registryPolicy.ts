@@ -22,14 +22,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RegistryPolicyProperties {
+export interface Properties {
     PolicyText: {[key: string]: any}
 }
 
-export default class RegistryPolicy extends ResourceBase<RegistryPolicyProperties> {
+class RegistryPolicy extends ResourceBase<Properties> {
 
 
-    constructor(properties: RegistryPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::ECR::RegistryPolicy', properties)
     }
 }
+export { RegistryPolicy as R }

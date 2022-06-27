@@ -136,12 +136,12 @@ export class AccountLevel {
     }
 }
 
-export interface StorageLensProperties {
+export interface Properties {
     StorageLensConfiguration: StorageLensConfiguration
     Tags?: List<ResourceTag>
 }
 
-export default class StorageLens extends ResourceBase<StorageLensProperties> {
+class StorageLens extends ResourceBase<Properties> {
     static PrefixLevelStorageMetrics = PrefixLevelStorageMetrics
     static SelectionCriteria = SelectionCriteria
     static ActivityMetrics = ActivityMetrics
@@ -155,7 +155,8 @@ export default class StorageLens extends ResourceBase<StorageLensProperties> {
     static StorageLensConfiguration = StorageLensConfiguration
     static AccountLevel = AccountLevel
 
-    constructor(properties: StorageLensProperties) {
+    constructor(properties: Properties) {
         super('AWS::S3::StorageLens', properties)
     }
 }
+export { StorageLens as R }

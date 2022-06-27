@@ -119,7 +119,7 @@ export class SharingSettings {
     }
 }
 
-export interface DomainProperties {
+export interface Properties {
     AppNetworkAccessType?: Value<string>
     AuthMode: Value<string>
     DefaultUserSettings: UserSettings
@@ -132,7 +132,7 @@ export interface DomainProperties {
     AppSecurityGroupManagement?: Value<string>
 }
 
-export default class Domain extends ResourceBase<DomainProperties> {
+class Domain extends ResourceBase<Properties> {
     static JupyterServerAppSettings = JupyterServerAppSettings
     static UserSettings = UserSettings
     static CustomImage = CustomImage
@@ -144,7 +144,8 @@ export default class Domain extends ResourceBase<DomainProperties> {
     static DomainSettings = DomainSettings
     static SharingSettings = SharingSettings
 
-    constructor(properties: DomainProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::Domain', properties)
     }
 }
+export { Domain as R }

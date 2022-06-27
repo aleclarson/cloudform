@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface EIPProperties {
+export interface Properties {
     Domain?: Value<string>
     InstanceId?: Value<string>
     NetworkBorderGroup?: Value<string>
@@ -30,10 +30,11 @@ export interface EIPProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class EIP extends ResourceBase<EIPProperties> {
+class EIP extends ResourceBase<Properties> {
 
 
-    constructor(properties?: EIPProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::EIP', properties || {})
     }
 }
+export { EIP as R }

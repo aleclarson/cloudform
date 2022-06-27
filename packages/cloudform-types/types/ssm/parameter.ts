@@ -17,12 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface ParameterProperties {
+export interface Properties {
     Type: Value<string>
     Description?: Value<string>
     Policies?: Value<string>
@@ -34,10 +34,11 @@ export interface ParameterProperties {
     Name?: Value<string>
 }
 
-export default class Parameter extends ResourceBase<ParameterProperties> {
+class Parameter extends ResourceBase<Properties> {
 
 
-    constructor(properties: ParameterProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSM::Parameter', properties)
     }
 }
+export { Parameter as R }

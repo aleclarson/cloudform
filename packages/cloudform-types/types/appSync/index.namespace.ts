@@ -17,34 +17,67 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Resolver_ from './resolver'
-import GraphQLSchema_ from './graphQlSchema'
-import GraphQLApi_ from './graphQlApi'
-import ApiKey_ from './apiKey'
-import DomainNameApiAssociation_ from './domainNameApiAssociation'
-import FunctionConfiguration_ from './functionConfiguration'
-import ApiCache_ from './apiCache'
-import DomainName_ from './domainName'
-import DataSource_ from './dataSource'
+import * as _0 from './resolver'
+import * as _1 from './graphQlSchema'
+import * as _2 from './graphQlApi'
+import * as _3 from './apiKey'
+import * as _4 from './domainNameApiAssociation'
+import * as _5 from './functionConfiguration'
+import * as _6 from './apiCache'
+import * as _7 from './domainName'
+import * as _8 from './dataSource'
 
 export namespace AppSync {
-  export const Resolver = Resolver_
-  export const GraphQLSchema = GraphQLSchema_
-  export const GraphQLApi = GraphQLApi_
-  export const ApiKey = ApiKey_
-  export const DomainNameApiAssociation = DomainNameApiAssociation_
-  export const FunctionConfiguration = FunctionConfiguration_
-  export const ApiCache = ApiCache_
-  export const DomainName = DomainName_
-  export const DataSource = DataSource_
+  export const Resolver = _0.R
+  export const GraphQLSchema = _1.R
+  export const GraphQLApi = _2.R
+  export const ApiKey = _3.R
+  export const DomainNameApiAssociation = _4.R
+  export const FunctionConfiguration = _5.R
+  export const ApiCache = _6.R
+  export const DomainName = _7.R
+  export const DataSource = _8.R
 
-  export type Resolver = Resolver_
-  export type GraphQLSchema = GraphQLSchema_
-  export type GraphQLApi = GraphQLApi_
-  export type ApiKey = ApiKey_
-  export type DomainNameApiAssociation = DomainNameApiAssociation_
-  export type FunctionConfiguration = FunctionConfiguration_
-  export type ApiCache = ApiCache_
-  export type DomainName = DomainName_
-  export type DataSource = DataSource_
+  export type Resolver = _0.R
+  export type GraphQLSchema = _1.R
+  export type GraphQLApi = _2.R
+  export type ApiKey = _3.R
+  export type DomainNameApiAssociation = _4.R
+  export type FunctionConfiguration = _5.R
+  export type ApiCache = _6.R
+  export type DomainName = _7.R
+  export type DataSource = _8.R
+
+  export namespace Resolver {
+    export type LambdaConflictHandlerConfig = _0.LambdaConflictHandlerConfig
+    export type PipelineConfig = _0.PipelineConfig
+    export type SyncConfig = _0.SyncConfig
+    export type CachingConfig = _0.CachingConfig
+  }
+  export namespace GraphQLApi {
+    export type LambdaAuthorizerConfig = _2.LambdaAuthorizerConfig
+    export type OpenIDConnectConfig = _2.OpenIDConnectConfig
+    export type CognitoUserPoolConfig = _2.CognitoUserPoolConfig
+    export type UserPoolConfig = _2.UserPoolConfig
+    export type LogConfig = _2.LogConfig
+    export type AdditionalAuthenticationProvider = _2.AdditionalAuthenticationProvider
+    export type Tags = _2.Tags
+    export type AdditionalAuthenticationProviders = _2.AdditionalAuthenticationProviders
+  }
+  export namespace FunctionConfiguration {
+    export type SyncConfig = _5.SyncConfig
+    export type LambdaConflictHandlerConfig = _5.LambdaConflictHandlerConfig
+  }
+  export namespace DataSource {
+    export type RelationalDatabaseConfig = _8.RelationalDatabaseConfig
+    export type LambdaConfig = _8.LambdaConfig
+    export type HttpConfig = _8.HttpConfig
+    export type AwsIamConfig = _8.AwsIamConfig
+    export type OpenSearchServiceConfig = _8.OpenSearchServiceConfig
+    export type DynamoDBConfig = _8.DynamoDBConfig
+    export type AuthorizationConfig = _8.AuthorizationConfig
+    export type RdsHttpEndpointConfig = _8.RdsHttpEndpointConfig
+    export type ElasticsearchConfig = _8.ElasticsearchConfig
+    export type DeltaSyncConfig = _8.DeltaSyncConfig
+  }
 }

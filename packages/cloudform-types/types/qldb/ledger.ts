@@ -16,7 +16,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LedgerProperties {
+export interface Properties {
     PermissionsMode: Value<string>
     DeletionProtection?: Value<boolean>
     KmsKey?: Value<string>
@@ -24,10 +24,11 @@ export interface LedgerProperties {
     Name?: Value<string>
 }
 
-export default class Ledger extends ResourceBase<LedgerProperties> {
+class Ledger extends ResourceBase<Properties> {
 
 
-    constructor(properties: LedgerProperties) {
+    constructor(properties: Properties) {
         super('AWS::QLDB::Ledger', properties)
     }
 }
+export { Ledger as R }

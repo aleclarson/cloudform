@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NotebookInstanceProperties {
+export interface Properties {
     KmsKeyId?: Value<string>
     VolumeSizeInGB?: Value<number>
     AdditionalCodeRepositories?: List<Value<string>>
@@ -40,10 +40,11 @@ export interface NotebookInstanceProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class NotebookInstance extends ResourceBase<NotebookInstanceProperties> {
+class NotebookInstance extends ResourceBase<Properties> {
 
 
-    constructor(properties: NotebookInstanceProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::NotebookInstance', properties)
     }
 }
+export { NotebookInstance as R }

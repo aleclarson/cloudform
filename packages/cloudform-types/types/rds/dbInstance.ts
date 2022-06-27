@@ -38,7 +38,7 @@ export class ProcessorFeature {
     }
 }
 
-export interface DBInstanceProperties {
+export interface Properties {
     AllocatedStorage?: Value<string>
     AllowMajorVersionUpgrade?: Value<boolean>
     AssociatedRoles?: List<DBInstanceRole>
@@ -93,11 +93,12 @@ export interface DBInstanceProperties {
     VPCSecurityGroups?: List<Value<string>>
 }
 
-export default class DBInstance extends ResourceBase<DBInstanceProperties> {
+class DBInstance extends ResourceBase<Properties> {
     static DBInstanceRole = DBInstanceRole
     static ProcessorFeature = ProcessorFeature
 
-    constructor(properties: DBInstanceProperties) {
+    constructor(properties: Properties) {
         super('AWS::RDS::DBInstance', properties)
     }
 }
+export { DBInstance as R }

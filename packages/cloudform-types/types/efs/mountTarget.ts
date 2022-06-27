@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface MountTargetProperties {
+export interface Properties {
     IpAddress?: Value<string>
     FileSystemId: Value<string>
     SecurityGroups: List<Value<string>>
     SubnetId: Value<string>
 }
 
-export default class MountTarget extends ResourceBase<MountTargetProperties> {
+class MountTarget extends ResourceBase<Properties> {
 
 
-    constructor(properties: MountTargetProperties) {
+    constructor(properties: Properties) {
         super('AWS::EFS::MountTarget', properties)
     }
 }
+export { MountTarget as R }

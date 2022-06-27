@@ -63,7 +63,7 @@ export class IntegrationResponse {
     }
 }
 
-export interface MethodProperties {
+export interface Properties {
     ApiKeyRequired?: Value<boolean>
     AuthorizationScopes?: List<Value<string>>
     AuthorizationType?: Value<string>
@@ -79,12 +79,13 @@ export interface MethodProperties {
     RestApiId: Value<string>
 }
 
-export default class Method extends ResourceBase<MethodProperties> {
+class Method extends ResourceBase<Properties> {
     static MethodResponse = MethodResponse
     static Integration = Integration
     static IntegrationResponse = IntegrationResponse
 
-    constructor(properties: MethodProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::Method', properties)
     }
 }
+export { Method as R }

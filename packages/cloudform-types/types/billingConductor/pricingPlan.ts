@@ -7,17 +7,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PricingPlanProperties {
+export interface Properties {
     Name: Value<string>
     PricingRuleArns?: List<Value<string>>
     Description?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class PricingPlan extends ResourceBase<PricingPlanProperties> {
+class PricingPlan extends ResourceBase<Properties> {
 
 
-    constructor(properties: PricingPlanProperties) {
+    constructor(properties: Properties) {
         super('AWS::BillingConductor::PricingPlan', properties)
     }
 }
+export { PricingPlan as R }

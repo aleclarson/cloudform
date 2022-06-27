@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SubscriptionProperties {
+export interface Properties {
     DeliveryPolicy?: {[key: string]: any}
     Endpoint?: Value<string>
     FilterPolicy?: {[key: string]: any}
@@ -34,10 +34,11 @@ export interface SubscriptionProperties {
     TopicArn: Value<string>
 }
 
-export default class Subscription extends ResourceBase<SubscriptionProperties> {
+class Subscription extends ResourceBase<Properties> {
 
 
-    constructor(properties: SubscriptionProperties) {
+    constructor(properties: Properties) {
         super('AWS::SNS::Subscription', properties)
     }
 }
+export { Subscription as R }

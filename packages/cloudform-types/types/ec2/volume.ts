@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VolumeProperties {
+export interface Properties {
     AutoEnableIO?: Value<boolean>
     AvailabilityZone: Value<string>
     Encrypted?: Value<boolean>
@@ -37,10 +37,11 @@ export interface VolumeProperties {
     VolumeType?: Value<string>
 }
 
-export default class Volume extends ResourceBase<VolumeProperties> {
+class Volume extends ResourceBase<Properties> {
 
 
-    constructor(properties: VolumeProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::Volume', properties)
     }
 }
+export { Volume as R }

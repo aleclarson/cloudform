@@ -28,14 +28,15 @@ export class ExpiryEventsConfiguration {
     }
 }
 
-export interface AccountProperties {
+export interface Properties {
     ExpiryEventsConfiguration: ExpiryEventsConfiguration
 }
 
-export default class Account extends ResourceBase<AccountProperties> {
+class Account extends ResourceBase<Properties> {
     static ExpiryEventsConfiguration = ExpiryEventsConfiguration
 
-    constructor(properties: AccountProperties) {
+    constructor(properties: Properties) {
         super('AWS::CertificateManager::Account', properties)
     }
 }
+export { Account as R }

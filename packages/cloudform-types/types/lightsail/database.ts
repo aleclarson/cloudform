@@ -32,7 +32,7 @@ export class RelationalDatabaseParameter {
     }
 }
 
-export interface DatabaseProperties {
+export interface Properties {
     RelationalDatabaseName: Value<string>
     AvailabilityZone?: Value<string>
     RelationalDatabaseBlueprintId: Value<string>
@@ -50,10 +50,11 @@ export interface DatabaseProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Database extends ResourceBase<DatabaseProperties> {
+class Database extends ResourceBase<Properties> {
     static RelationalDatabaseParameter = RelationalDatabaseParameter
 
-    constructor(properties: DatabaseProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lightsail::Database', properties)
     }
 }
+export { Database as R }

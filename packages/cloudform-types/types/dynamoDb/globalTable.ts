@@ -182,7 +182,7 @@ export class ReplicaSSESpecification {
     }
 }
 
-export interface GlobalTableProperties {
+export interface Properties {
     AttributeDefinitions: List<AttributeDefinition>
     BillingMode?: Value<string>
     GlobalSecondaryIndexes?: List<GlobalSecondaryIndex>
@@ -196,7 +196,7 @@ export interface GlobalTableProperties {
     TimeToLiveSpecification?: TimeToLiveSpecification
 }
 
-export default class GlobalTable extends ResourceBase<GlobalTableProperties> {
+class GlobalTable extends ResourceBase<Properties> {
     static PointInTimeRecoverySpecification = PointInTimeRecoverySpecification
     static ContributorInsightsSpecification = ContributorInsightsSpecification
     static CapacityAutoScalingSettings = CapacityAutoScalingSettings
@@ -215,7 +215,8 @@ export default class GlobalTable extends ResourceBase<GlobalTableProperties> {
     static TimeToLiveSpecification = TimeToLiveSpecification
     static ReplicaSSESpecification = ReplicaSSESpecification
 
-    constructor(properties: GlobalTableProperties) {
+    constructor(properties: Properties) {
         super('AWS::DynamoDB::GlobalTable', properties)
     }
 }
+export { GlobalTable as R }

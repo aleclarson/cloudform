@@ -81,7 +81,7 @@ export class LivePreRollConfiguration {
     }
 }
 
-export interface PlaybackConfigurationProperties {
+export interface Properties {
     AdDecisionServerUrl: Value<string>
     AvailSuppression?: AvailSuppression
     Bumper?: Bumper
@@ -98,7 +98,7 @@ export interface PlaybackConfigurationProperties {
     VideoContentSourceUrl: Value<string>
 }
 
-export default class PlaybackConfiguration extends ResourceBase<PlaybackConfigurationProperties> {
+class PlaybackConfiguration extends ResourceBase<Properties> {
     static AdMarkerPassthrough = AdMarkerPassthrough
     static CdnConfiguration = CdnConfiguration
     static AvailSuppression = AvailSuppression
@@ -108,7 +108,8 @@ export default class PlaybackConfiguration extends ResourceBase<PlaybackConfigur
     static HlsConfiguration = HlsConfiguration
     static LivePreRollConfiguration = LivePreRollConfiguration
 
-    constructor(properties: PlaybackConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaTailor::PlaybackConfiguration', properties)
     }
 }
+export { PlaybackConfiguration as R }

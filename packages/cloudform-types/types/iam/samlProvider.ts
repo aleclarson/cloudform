@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SAMLProviderProperties {
+export interface Properties {
     Name?: Value<string>
     SamlMetadataDocument: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class SAMLProvider extends ResourceBase<SAMLProviderProperties> {
+class SAMLProvider extends ResourceBase<Properties> {
 
 
-    constructor(properties: SAMLProviderProperties) {
+    constructor(properties: Properties) {
         super('AWS::IAM::SAMLProvider', properties)
     }
 }
+export { SAMLProvider as R }

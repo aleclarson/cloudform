@@ -28,15 +28,16 @@ export class SnsChannelConfig {
     }
 }
 
-export interface NotificationChannelProperties {
+export interface Properties {
     Config: NotificationChannelConfig
 }
 
-export default class NotificationChannel extends ResourceBase<NotificationChannelProperties> {
+class NotificationChannel extends ResourceBase<Properties> {
     static NotificationChannelConfig = NotificationChannelConfig
     static SnsChannelConfig = SnsChannelConfig
 
-    constructor(properties: NotificationChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::DevOpsGuru::NotificationChannel', properties)
     }
 }
+export { NotificationChannel as R }

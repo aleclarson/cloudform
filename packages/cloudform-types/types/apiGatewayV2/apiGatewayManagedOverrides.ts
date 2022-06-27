@@ -77,21 +77,22 @@ export class IntegrationOverrides {
     }
 }
 
-export interface ApiGatewayManagedOverridesProperties {
+export interface Properties {
     Integration?: IntegrationOverrides
     Stage?: StageOverrides
     ApiId: Value<string>
     Route?: RouteOverrides
 }
 
-export default class ApiGatewayManagedOverrides extends ResourceBase<ApiGatewayManagedOverridesProperties> {
+class ApiGatewayManagedOverrides extends ResourceBase<Properties> {
     static AccessLogSettings = AccessLogSettings
     static RouteOverrides = RouteOverrides
     static StageOverrides = StageOverrides
     static RouteSettings = RouteSettings
     static IntegrationOverrides = IntegrationOverrides
 
-    constructor(properties: ApiGatewayManagedOverridesProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGatewayV2::ApiGatewayManagedOverrides', properties)
     }
 }
+export { ApiGatewayManagedOverrides as R }

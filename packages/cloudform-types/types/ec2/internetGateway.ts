@@ -22,14 +22,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface InternetGatewayProperties {
+export interface Properties {
     Tags?: List<ResourceTag>
 }
 
-export default class InternetGateway extends ResourceBase<InternetGatewayProperties> {
+class InternetGateway extends ResourceBase<Properties> {
 
 
-    constructor(properties?: InternetGatewayProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::InternetGateway', properties || {})
     }
 }
+export { InternetGateway as R }

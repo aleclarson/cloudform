@@ -21,17 +21,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ClientVpnRouteProperties {
+export interface Properties {
     ClientVpnEndpointId: Value<string>
     TargetVpcSubnetId: Value<string>
     Description?: Value<string>
     DestinationCidrBlock: Value<string>
 }
 
-export default class ClientVpnRoute extends ResourceBase<ClientVpnRouteProperties> {
+class ClientVpnRoute extends ResourceBase<Properties> {
 
 
-    constructor(properties: ClientVpnRouteProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::ClientVpnRoute', properties)
     }
 }
+export { ClientVpnRoute as R }

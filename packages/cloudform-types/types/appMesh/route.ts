@@ -255,7 +255,7 @@ export class MatchRange {
     }
 }
 
-export interface RouteProperties {
+export interface Properties {
     MeshName: Value<string>
     VirtualRouterName: Value<string>
     MeshOwner?: Value<string>
@@ -264,7 +264,7 @@ export interface RouteProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Route extends ResourceBase<RouteProperties> {
+class Route extends ResourceBase<Properties> {
     static Duration = Duration
     static WeightedTarget = WeightedTarget
     static GrpcRouteMetadataMatchMethod = GrpcRouteMetadataMatchMethod
@@ -290,7 +290,8 @@ export default class Route extends ResourceBase<RouteProperties> {
     static HttpRouteAction = HttpRouteAction
     static MatchRange = MatchRange
 
-    constructor(properties: RouteProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppMesh::Route', properties)
     }
 }
+export { Route as R }

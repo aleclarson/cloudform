@@ -17,55 +17,72 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import StackSet_ from './stackSet'
-import HookTypeConfig_ from './hookTypeConfig'
-import ResourceDefaultVersion_ from './resourceDefaultVersion'
-import CustomResource_ from './customResource'
-import TypeActivation_ from './typeActivation'
-import PublicTypeVersion_ from './publicTypeVersion'
-import HookVersion_ from './hookVersion'
-import ResourceVersion_ from './resourceVersion'
-import Macro_ from './macro'
-import ModuleDefaultVersion_ from './moduleDefaultVersion'
-import Stack_ from './stack'
-import Publisher_ from './publisher'
-import WaitCondition_ from './waitCondition'
-import WaitConditionHandle_ from './waitConditionHandle'
-import HookDefaultVersion_ from './hookDefaultVersion'
-import ModuleVersion_ from './moduleVersion'
+import * as _0 from './stackSet'
+import * as _1 from './hookTypeConfig'
+import * as _2 from './resourceDefaultVersion'
+import * as _3 from './customResource'
+import * as _4 from './typeActivation'
+import * as _5 from './publicTypeVersion'
+import * as _6 from './hookVersion'
+import * as _7 from './resourceVersion'
+import * as _8 from './macro'
+import * as _9 from './moduleDefaultVersion'
+import * as _a from './stack'
+import * as _b from './publisher'
+import * as _c from './waitCondition'
+import * as _d from './waitConditionHandle'
+import * as _e from './hookDefaultVersion'
+import * as _f from './moduleVersion'
 
 export namespace CloudFormation {
-  export const StackSet = StackSet_
-  export const HookTypeConfig = HookTypeConfig_
-  export const ResourceDefaultVersion = ResourceDefaultVersion_
-  export const CustomResource = CustomResource_
-  export const TypeActivation = TypeActivation_
-  export const PublicTypeVersion = PublicTypeVersion_
-  export const HookVersion = HookVersion_
-  export const ResourceVersion = ResourceVersion_
-  export const Macro = Macro_
-  export const ModuleDefaultVersion = ModuleDefaultVersion_
-  export const Stack = Stack_
-  export const Publisher = Publisher_
-  export const WaitCondition = WaitCondition_
-  export const WaitConditionHandle = WaitConditionHandle_
-  export const HookDefaultVersion = HookDefaultVersion_
-  export const ModuleVersion = ModuleVersion_
+  export const StackSet = _0.R
+  export const HookTypeConfig = _1.R
+  export const ResourceDefaultVersion = _2.R
+  export const CustomResource = _3.R
+  export const TypeActivation = _4.R
+  export const PublicTypeVersion = _5.R
+  export const HookVersion = _6.R
+  export const ResourceVersion = _7.R
+  export const Macro = _8.R
+  export const ModuleDefaultVersion = _9.R
+  export const Stack = _a.R
+  export const Publisher = _b.R
+  export const WaitCondition = _c.R
+  export const WaitConditionHandle = _d.R
+  export const HookDefaultVersion = _e.R
+  export const ModuleVersion = _f.R
 
-  export type StackSet = StackSet_
-  export type HookTypeConfig = HookTypeConfig_
-  export type ResourceDefaultVersion = ResourceDefaultVersion_
-  export type CustomResource = CustomResource_
-  export type TypeActivation = TypeActivation_
-  export type PublicTypeVersion = PublicTypeVersion_
-  export type HookVersion = HookVersion_
-  export type ResourceVersion = ResourceVersion_
-  export type Macro = Macro_
-  export type ModuleDefaultVersion = ModuleDefaultVersion_
-  export type Stack = Stack_
-  export type Publisher = Publisher_
-  export type WaitCondition = WaitCondition_
-  export type WaitConditionHandle = WaitConditionHandle_
-  export type HookDefaultVersion = HookDefaultVersion_
-  export type ModuleVersion = ModuleVersion_
+  export type StackSet = _0.R
+  export type HookTypeConfig = _1.R
+  export type ResourceDefaultVersion = _2.R
+  export type CustomResource = _3.R
+  export type TypeActivation = _4.R
+  export type PublicTypeVersion = _5.R
+  export type HookVersion = _6.R
+  export type ResourceVersion = _7.R
+  export type Macro = _8.R
+  export type ModuleDefaultVersion = _9.R
+  export type Stack = _a.R
+  export type Publisher = _b.R
+  export type WaitCondition = _c.R
+  export type WaitConditionHandle = _d.R
+  export type HookDefaultVersion = _e.R
+  export type ModuleVersion = _f.R
+
+  export namespace StackSet {
+    export type StackInstances = _0.StackInstances
+    export type AutoDeployment = _0.AutoDeployment
+    export type DeploymentTargets = _0.DeploymentTargets
+    export type OperationPreferences = _0.OperationPreferences
+    export type Parameter = _0.Parameter
+  }
+  export namespace TypeActivation {
+    export type LoggingConfig = _4.LoggingConfig
+  }
+  export namespace HookVersion {
+    export type LoggingConfig = _6.LoggingConfig
+  }
+  export namespace ResourceVersion {
+    export type LoggingConfig = _7.LoggingConfig
+  }
 }

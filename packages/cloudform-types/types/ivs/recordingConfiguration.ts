@@ -36,19 +36,20 @@ export class ThumbnailConfiguration {
     }
 }
 
-export interface RecordingConfigurationProperties {
+export interface Properties {
     Name?: Value<string>
     DestinationConfiguration: DestinationConfiguration
     Tags?: List<ResourceTag>
     ThumbnailConfiguration?: ThumbnailConfiguration
 }
 
-export default class RecordingConfiguration extends ResourceBase<RecordingConfigurationProperties> {
+class RecordingConfiguration extends ResourceBase<Properties> {
     static DestinationConfiguration = DestinationConfiguration
     static S3DestinationConfiguration = S3DestinationConfiguration
     static ThumbnailConfiguration = ThumbnailConfiguration
 
-    constructor(properties: RecordingConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::IVS::RecordingConfiguration', properties)
     }
 }
+export { RecordingConfiguration as R }

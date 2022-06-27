@@ -367,11 +367,11 @@ export class VCpuCountRangeRequest {
     }
 }
 
-export interface SpotFleetProperties {
+export interface Properties {
     SpotFleetRequestConfigData: SpotFleetRequestConfigData
 }
 
-export default class SpotFleet extends ResourceBase<SpotFleetProperties> {
+class SpotFleet extends ResourceBase<Properties> {
     static MemoryGiBPerVCpuRequest = MemoryGiBPerVCpuRequest
     static MemoryMiBRequest = MemoryMiBRequest
     static SpotPlacement = SpotPlacement
@@ -404,7 +404,8 @@ export default class SpotFleet extends ResourceBase<SpotFleetProperties> {
     static BlockDeviceMapping = BlockDeviceMapping
     static VCpuCountRangeRequest = VCpuCountRangeRequest
 
-    constructor(properties: SpotFleetProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::SpotFleet', properties)
     }
 }
+export { SpotFleet as R }

@@ -384,13 +384,13 @@ export class TimestreamTimestamp {
     }
 }
 
-export interface TopicRuleProperties {
+export interface Properties {
     RuleName?: Value<string>
     TopicRulePayload: TopicRulePayload
     Tags?: List<ResourceTag>
 }
 
-export default class TopicRule extends ResourceBase<TopicRuleProperties> {
+class TopicRule extends ResourceBase<Properties> {
     static AssetPropertyVariant = AssetPropertyVariant
     static SigV4Authorization = SigV4Authorization
     static SqsAction = SqsAction
@@ -425,7 +425,8 @@ export default class TopicRule extends ResourceBase<TopicRuleProperties> {
     static TimestreamDimension = TimestreamDimension
     static TimestreamTimestamp = TimestreamTimestamp
 
-    constructor(properties: TopicRuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::TopicRule', properties)
     }
 }
+export { TopicRule as R }

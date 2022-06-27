@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPNGatewayRoutePropagationProperties {
+export interface Properties {
     RouteTableIds: List<Value<string>>
     VpnGatewayId: Value<string>
 }
 
-export default class VPNGatewayRoutePropagation extends ResourceBase<VPNGatewayRoutePropagationProperties> {
+class VPNGatewayRoutePropagation extends ResourceBase<Properties> {
 
 
-    constructor(properties: VPNGatewayRoutePropagationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::VPNGatewayRoutePropagation', properties)
     }
 }
+export { VPNGatewayRoutePropagation as R }

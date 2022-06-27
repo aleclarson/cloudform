@@ -7,7 +7,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface InstanceProfileProperties {
+export interface Properties {
     Description?: Value<string>
     ExcludeAppPackagesFromCleanup?: List<Value<string>>
     Name: Value<string>
@@ -16,10 +16,11 @@ export interface InstanceProfileProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class InstanceProfile extends ResourceBase<InstanceProfileProperties> {
+class InstanceProfile extends ResourceBase<Properties> {
 
 
-    constructor(properties: InstanceProfileProperties) {
+    constructor(properties: Properties) {
         super('AWS::DeviceFarm::InstanceProfile', properties)
     }
 }
+export { InstanceProfile as R }

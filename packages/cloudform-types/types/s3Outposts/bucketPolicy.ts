@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface BucketPolicyProperties {
+export interface Properties {
     Bucket: Value<string>
     PolicyDocument: {[key: string]: any}
 }
 
-export default class BucketPolicy extends ResourceBase<BucketPolicyProperties> {
+class BucketPolicy extends ResourceBase<Properties> {
 
 
-    constructor(properties: BucketPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::S3Outposts::BucketPolicy', properties)
     }
 }
+export { BucketPolicy as R }

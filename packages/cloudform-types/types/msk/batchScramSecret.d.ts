@@ -1,0 +1,1 @@
+import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{ClusterArn:Value<string>;SecretArnList?:List<Value<string>>;}declare class BatchScramSecret extends ResourceBase<Properties>{constructor(properties:Properties);}export{BatchScramSecret as R};

@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SubnetProperties {
+export interface Properties {
     AssignIpv6AddressOnCreation?: Value<boolean>
     VpcId: Value<string>
     MapPublicIpOnLaunch?: Value<boolean>
@@ -37,10 +37,11 @@ export interface SubnetProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Subnet extends ResourceBase<SubnetProperties> {
+class Subnet extends ResourceBase<Properties> {
 
 
-    constructor(properties: SubnetProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::Subnet', properties)
     }
 }
+export { Subnet as R }

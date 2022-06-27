@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DBSecurityGroupIngressProperties {
+export interface Properties {
     CIDRIP?: Value<string>
     DBSecurityGroupName: Value<string>
     EC2SecurityGroupId?: Value<string>
@@ -30,10 +30,11 @@ export interface DBSecurityGroupIngressProperties {
     EC2SecurityGroupOwnerId?: Value<string>
 }
 
-export default class DBSecurityGroupIngress extends ResourceBase<DBSecurityGroupIngressProperties> {
+class DBSecurityGroupIngress extends ResourceBase<Properties> {
 
 
-    constructor(properties: DBSecurityGroupIngressProperties) {
+    constructor(properties: Properties) {
         super('AWS::RDS::DBSecurityGroupIngress', properties)
     }
 }
+export { DBSecurityGroupIngress as R }

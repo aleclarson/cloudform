@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),reportDefinition_1=(exports.default=index_namespace_1.CUR,Object.defineProperty(exports,"__esModule",{value:!0}),require("./reportDefinition"));var CUR;!function(CUR){CUR.ReportDefinition=reportDefinition_1.default}(CUR=exports.CUR||(exports.CUR={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.CUR;

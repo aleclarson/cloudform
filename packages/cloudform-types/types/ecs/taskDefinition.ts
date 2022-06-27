@@ -347,7 +347,7 @@ export class ProxyConfiguration {
     }
 }
 
-export interface TaskDefinitionProperties {
+export interface Properties {
     Family?: Value<string>
     ContainerDefinitions?: List<ContainerDefinition>
     Cpu?: Value<string>
@@ -367,7 +367,7 @@ export interface TaskDefinitionProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class TaskDefinition extends ResourceBase<TaskDefinitionProperties> {
+class TaskDefinition extends ResourceBase<Properties> {
     static LogConfiguration = LogConfiguration
     static FirelensConfiguration = FirelensConfiguration
     static Device = Device
@@ -399,7 +399,8 @@ export default class TaskDefinition extends ResourceBase<TaskDefinitionPropertie
     static LinuxParameters = LinuxParameters
     static ProxyConfiguration = ProxyConfiguration
 
-    constructor(properties?: TaskDefinitionProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ECS::TaskDefinition', properties || {})
     }
 }
+export { TaskDefinition as R }

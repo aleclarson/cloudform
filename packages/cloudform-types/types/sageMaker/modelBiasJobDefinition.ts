@@ -154,7 +154,7 @@ export class MonitoringOutput {
     }
 }
 
-export interface ModelBiasJobDefinitionProperties {
+export interface Properties {
     JobDefinitionName?: Value<string>
     ModelBiasBaselineConfig?: ModelBiasBaselineConfig
     ModelBiasAppSpecification: ModelBiasAppSpecification
@@ -168,7 +168,7 @@ export interface ModelBiasJobDefinitionProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ModelBiasJobDefinition extends ResourceBase<ModelBiasJobDefinitionProperties> {
+class ModelBiasJobDefinition extends ResourceBase<Properties> {
     static ClusterConfig = ClusterConfig
     static S3Output = S3Output
     static ModelBiasBaselineConfig = ModelBiasBaselineConfig
@@ -184,7 +184,8 @@ export default class ModelBiasJobDefinition extends ResourceBase<ModelBiasJobDef
     static EndpointInput = EndpointInput
     static MonitoringOutput = MonitoringOutput
 
-    constructor(properties: ModelBiasJobDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::ModelBiasJobDefinition', properties)
     }
 }
+export { ModelBiasJobDefinition as R }

@@ -74,13 +74,13 @@ export class AccessPolicyIdentity {
     }
 }
 
-export interface AccessPolicyProperties {
+export interface Properties {
     AccessPolicyIdentity: AccessPolicyIdentity
     AccessPolicyPermission: Value<string>
     AccessPolicyResource: AccessPolicyResource
 }
 
-export default class AccessPolicy extends ResourceBase<AccessPolicyProperties> {
+class AccessPolicy extends ResourceBase<Properties> {
     static Project = Project
     static IamRole = IamRole
     static AccessPolicyResource = AccessPolicyResource
@@ -89,7 +89,8 @@ export default class AccessPolicy extends ResourceBase<AccessPolicyProperties> {
     static Portal = Portal
     static AccessPolicyIdentity = AccessPolicyIdentity
 
-    constructor(properties: AccessPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTSiteWise::AccessPolicy', properties)
     }
 }
+export { AccessPolicy as R }

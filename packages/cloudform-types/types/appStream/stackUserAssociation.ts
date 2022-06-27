@@ -19,17 +19,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface StackUserAssociationProperties {
+export interface Properties {
     SendEmailNotification?: Value<boolean>
     UserName: Value<string>
     StackName: Value<string>
     AuthenticationType: Value<string>
 }
 
-export default class StackUserAssociation extends ResourceBase<StackUserAssociationProperties> {
+class StackUserAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: StackUserAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppStream::StackUserAssociation', properties)
     }
 }
+export { StackUserAssociation as R }

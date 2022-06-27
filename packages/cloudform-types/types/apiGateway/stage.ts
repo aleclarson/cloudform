@@ -57,7 +57,7 @@ export class MethodSetting {
     }
 }
 
-export interface StageProperties {
+export interface Properties {
     AccessLogSetting?: AccessLogSetting
     CacheClusterEnabled?: Value<boolean>
     CacheClusterSize?: Value<string>
@@ -74,12 +74,13 @@ export interface StageProperties {
     Variables?: {[key: string]: Value<string>}
 }
 
-export default class Stage extends ResourceBase<StageProperties> {
+class Stage extends ResourceBase<Properties> {
     static CanarySetting = CanarySetting
     static AccessLogSetting = AccessLogSetting
     static MethodSetting = MethodSetting
 
-    constructor(properties: StageProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::Stage', properties)
     }
 }
+export { Stage as R }

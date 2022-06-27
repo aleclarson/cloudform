@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface HostedConfigurationVersionProperties {
+export interface Properties {
     ConfigurationProfileId: Value<string>
     Description?: Value<string>
     ContentType: Value<string>
@@ -31,10 +31,11 @@ export interface HostedConfigurationVersionProperties {
     ApplicationId: Value<string>
 }
 
-export default class HostedConfigurationVersion extends ResourceBase<HostedConfigurationVersionProperties> {
+class HostedConfigurationVersion extends ResourceBase<Properties> {
 
 
-    constructor(properties: HostedConfigurationVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppConfig::HostedConfigurationVersion', properties)
     }
 }
+export { HostedConfigurationVersion as R }

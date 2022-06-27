@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 export type Tags = List<ResourceTag>
 
-export interface InsightRuleProperties {
+export interface Properties {
     RuleState: Value<string>
     RuleBody: Value<string>
     RuleName: Value<string>
     Tags?: Tags
 }
 
-export default class InsightRule extends ResourceBase<InsightRuleProperties> {
+class InsightRule extends ResourceBase<Properties> {
 
 
-    constructor(properties: InsightRuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudWatch::InsightRule', properties)
     }
 }
+export { InsightRule as R }

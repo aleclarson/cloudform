@@ -151,7 +151,7 @@ export class EndpointInput {
     }
 }
 
-export interface DataQualityJobDefinitionProperties {
+export interface Properties {
     JobDefinitionName?: Value<string>
     DataQualityBaselineConfig?: DataQualityBaselineConfig
     DataQualityAppSpecification: DataQualityAppSpecification
@@ -165,7 +165,7 @@ export interface DataQualityJobDefinitionProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class DataQualityJobDefinition extends ResourceBase<DataQualityJobDefinitionProperties> {
+class DataQualityJobDefinition extends ResourceBase<Properties> {
     static DataQualityBaselineConfig = DataQualityBaselineConfig
     static StatisticsResource = StatisticsResource
     static ConstraintsResource = ConstraintsResource
@@ -181,7 +181,8 @@ export default class DataQualityJobDefinition extends ResourceBase<DataQualityJo
     static NetworkConfig = NetworkConfig
     static EndpointInput = EndpointInput
 
-    constructor(properties: DataQualityJobDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::DataQualityJobDefinition', properties)
     }
 }
+export { DataQualityJobDefinition as R }

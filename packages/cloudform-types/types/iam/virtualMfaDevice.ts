@@ -21,17 +21,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VirtualMFADeviceProperties {
+export interface Properties {
     VirtualMfaDeviceName?: Value<string>
     Path?: Value<string>
     Users: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class VirtualMFADevice extends ResourceBase<VirtualMFADeviceProperties> {
+class VirtualMFADevice extends ResourceBase<Properties> {
 
 
-    constructor(properties: VirtualMFADeviceProperties) {
+    constructor(properties: Properties) {
         super('AWS::IAM::VirtualMFADevice', properties)
     }
 }
+export { VirtualMFADevice as R }

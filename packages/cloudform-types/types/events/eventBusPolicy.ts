@@ -30,7 +30,7 @@ export class Condition {
     }
 }
 
-export interface EventBusPolicyProperties {
+export interface Properties {
     EventBusName?: Value<string>
     Condition?: Condition
     Action?: Value<string>
@@ -39,10 +39,11 @@ export interface EventBusPolicyProperties {
     Principal?: Value<string>
 }
 
-export default class EventBusPolicy extends ResourceBase<EventBusPolicyProperties> {
+class EventBusPolicy extends ResourceBase<Properties> {
     static Condition = Condition
 
-    constructor(properties: EventBusPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::Events::EventBusPolicy', properties)
     }
 }
+export { EventBusPolicy as R }

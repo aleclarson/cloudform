@@ -7,7 +7,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class StudioEncryptionConfiguration {
@@ -19,7 +19,7 @@ export class StudioEncryptionConfiguration {
     }
 }
 
-export interface StudioProperties {
+export interface Properties {
     AdminRoleArn: Value<string>
     DisplayName: Value<string>
     StudioEncryptionConfiguration?: StudioEncryptionConfiguration
@@ -28,10 +28,11 @@ export interface StudioProperties {
     UserRoleArn: Value<string>
 }
 
-export default class Studio extends ResourceBase<StudioProperties> {
+class Studio extends ResourceBase<Properties> {
     static StudioEncryptionConfiguration = StudioEncryptionConfiguration
 
-    constructor(properties: StudioProperties) {
+    constructor(properties: Properties) {
         super('AWS::NimbleStudio::Studio', properties)
     }
 }
+export { Studio as R }

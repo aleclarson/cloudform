@@ -13,7 +13,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ChannelProperties {
+export interface Properties {
     Name?: Value<string>
     Authorized?: Value<boolean>
     LatencyMode?: Value<string>
@@ -22,10 +22,11 @@ export interface ChannelProperties {
     RecordingConfigurationArn?: Value<string>
 }
 
-export default class Channel extends ResourceBase<ChannelProperties> {
+class Channel extends ResourceBase<Properties> {
 
 
-    constructor(properties?: ChannelProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IVS::Channel', properties || {})
     }
 }
+export { Channel as R }

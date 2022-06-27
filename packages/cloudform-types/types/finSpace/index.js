@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),environment_1=(exports.default=index_namespace_1.FinSpace,Object.defineProperty(exports,"__esModule",{value:!0}),require("./environment"));var FinSpace;!function(FinSpace){FinSpace.Environment=environment_1.default}(FinSpace=exports.FinSpace||(exports.FinSpace={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.FinSpace;

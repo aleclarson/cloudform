@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class Subscription extends resource_1.ResourceBase{constructor(properties){super("AWS::SNS::Subscription",properties)}}exports.default=Subscription;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class Subscription extends resource_1.ResourceBase{constructor(properties){super("AWS::SNS::Subscription",properties)}}exports.R=Subscription;

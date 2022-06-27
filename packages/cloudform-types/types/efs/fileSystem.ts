@@ -46,7 +46,7 @@ export class BackupPolicy {
     }
 }
 
-export interface FileSystemProperties {
+export interface Properties {
     Encrypted?: Value<boolean>
     FileSystemTags?: List<ElasticFileSystemTag>
     KmsKeyId?: Value<string>
@@ -60,12 +60,13 @@ export interface FileSystemProperties {
     AvailabilityZoneName?: Value<string>
 }
 
-export default class FileSystem extends ResourceBase<FileSystemProperties> {
+class FileSystem extends ResourceBase<Properties> {
     static ElasticFileSystemTag = ElasticFileSystemTag
     static LifecyclePolicy = LifecyclePolicy
     static BackupPolicy = BackupPolicy
 
-    constructor(properties?: FileSystemProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EFS::FileSystem', properties || {})
     }
 }
+export { FileSystem as R }

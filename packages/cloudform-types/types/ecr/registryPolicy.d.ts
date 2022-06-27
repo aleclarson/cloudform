@@ -1,1 +1,1 @@
-import{ResourceBase}from'../resource';export interface RegistryPolicyProperties{PolicyText:{[key:string]:any;};}export default class RegistryPolicy extends ResourceBase<RegistryPolicyProperties>{constructor(properties:RegistryPolicyProperties);}
+import{ResourceBase}from'../resource';export interface Properties{PolicyText:{[key:string]:any;};}declare class RegistryPolicy extends ResourceBase<Properties>{constructor(properties:Properties);}export{RegistryPolicy as R};

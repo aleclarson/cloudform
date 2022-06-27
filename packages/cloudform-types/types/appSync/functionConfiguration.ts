@@ -38,7 +38,7 @@ export class LambdaConflictHandlerConfig {
     }
 }
 
-export interface FunctionConfigurationProperties {
+export interface Properties {
     ResponseMappingTemplateS3Location?: Value<string>
     Description?: Value<string>
     DataSourceName: Value<string>
@@ -52,11 +52,12 @@ export interface FunctionConfigurationProperties {
     Name: Value<string>
 }
 
-export default class FunctionConfiguration extends ResourceBase<FunctionConfigurationProperties> {
+class FunctionConfiguration extends ResourceBase<Properties> {
     static SyncConfig = SyncConfig
     static LambdaConflictHandlerConfig = LambdaConflictHandlerConfig
 
-    constructor(properties: FunctionConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppSync::FunctionConfiguration', properties)
     }
 }
+export { FunctionConfiguration as R }

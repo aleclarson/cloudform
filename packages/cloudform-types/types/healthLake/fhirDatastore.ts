@@ -32,7 +32,7 @@ export class KmsEncryptionConfig {
     }
 }
 
-export interface FHIRDatastoreProperties {
+export interface Properties {
     DatastoreName?: Value<string>
     DatastoreTypeVersion: Value<string>
     PreloadDataConfig?: PreloadDataConfig
@@ -40,12 +40,13 @@ export interface FHIRDatastoreProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class FHIRDatastore extends ResourceBase<FHIRDatastoreProperties> {
+class FHIRDatastore extends ResourceBase<Properties> {
     static SseConfiguration = SseConfiguration
     static PreloadDataConfig = PreloadDataConfig
     static KmsEncryptionConfig = KmsEncryptionConfig
 
-    constructor(properties: FHIRDatastoreProperties) {
+    constructor(properties: Properties) {
         super('AWS::HealthLake::FHIRDatastore', properties)
     }
 }
+export { FHIRDatastore as R }

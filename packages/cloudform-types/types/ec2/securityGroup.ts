@@ -52,7 +52,7 @@ export class Ingress {
     }
 }
 
-export interface SecurityGroupProperties {
+export interface Properties {
     GroupDescription: Value<string>
     GroupName?: Value<string>
     SecurityGroupEgress?: List<Egress>
@@ -61,11 +61,12 @@ export interface SecurityGroupProperties {
     VpcId?: Value<string>
 }
 
-export default class SecurityGroup extends ResourceBase<SecurityGroupProperties> {
+class SecurityGroup extends ResourceBase<Properties> {
     static Egress = Egress
     static Ingress = Ingress
 
-    constructor(properties: SecurityGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::SecurityGroup', properties)
     }
 }
+export { SecurityGroup as R }

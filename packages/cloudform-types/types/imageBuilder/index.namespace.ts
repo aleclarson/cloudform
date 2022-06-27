@@ -17,28 +17,67 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Component_ from './component'
-import ImagePipeline_ from './imagePipeline'
-import ContainerRecipe_ from './containerRecipe'
-import ImageRecipe_ from './imageRecipe'
-import InfrastructureConfiguration_ from './infrastructureConfiguration'
-import DistributionConfiguration_ from './distributionConfiguration'
-import Image_ from './image'
+import * as _0 from './component'
+import * as _1 from './imagePipeline'
+import * as _2 from './containerRecipe'
+import * as _3 from './imageRecipe'
+import * as _4 from './infrastructureConfiguration'
+import * as _5 from './distributionConfiguration'
+import * as _6 from './image'
 
 export namespace ImageBuilder {
-  export const Component = Component_
-  export const ImagePipeline = ImagePipeline_
-  export const ContainerRecipe = ContainerRecipe_
-  export const ImageRecipe = ImageRecipe_
-  export const InfrastructureConfiguration = InfrastructureConfiguration_
-  export const DistributionConfiguration = DistributionConfiguration_
-  export const Image = Image_
+  export const Component = _0.R
+  export const ImagePipeline = _1.R
+  export const ContainerRecipe = _2.R
+  export const ImageRecipe = _3.R
+  export const InfrastructureConfiguration = _4.R
+  export const DistributionConfiguration = _5.R
+  export const Image = _6.R
 
-  export type Component = Component_
-  export type ImagePipeline = ImagePipeline_
-  export type ContainerRecipe = ContainerRecipe_
-  export type ImageRecipe = ImageRecipe_
-  export type InfrastructureConfiguration = InfrastructureConfiguration_
-  export type DistributionConfiguration = DistributionConfiguration_
-  export type Image = Image_
+  export type Component = _0.R
+  export type ImagePipeline = _1.R
+  export type ContainerRecipe = _2.R
+  export type ImageRecipe = _3.R
+  export type InfrastructureConfiguration = _4.R
+  export type DistributionConfiguration = _5.R
+  export type Image = _6.R
+
+  export namespace ImagePipeline {
+    export type ImageTestsConfiguration = _1.ImageTestsConfiguration
+    export type Schedule = _1.Schedule
+  }
+  export namespace ContainerRecipe {
+    export type ComponentConfiguration = _2.ComponentConfiguration
+    export type EbsInstanceBlockDeviceSpecification = _2.EbsInstanceBlockDeviceSpecification
+    export type InstanceBlockDeviceMapping = _2.InstanceBlockDeviceMapping
+    export type InstanceConfiguration = _2.InstanceConfiguration
+    export type TargetContainerRepository = _2.TargetContainerRepository
+  }
+  export namespace ImageRecipe {
+    export type InstanceBlockDeviceMapping = _3.InstanceBlockDeviceMapping
+    export type SystemsManagerAgent = _3.SystemsManagerAgent
+    export type ComponentConfiguration = _3.ComponentConfiguration
+    export type ComponentParameter = _3.ComponentParameter
+    export type AdditionalInstanceConfiguration = _3.AdditionalInstanceConfiguration
+    export type EbsInstanceBlockDeviceSpecification = _3.EbsInstanceBlockDeviceSpecification
+  }
+  export namespace InfrastructureConfiguration {
+    export type Logging = _4.Logging
+    export type S3Logs = _4.S3Logs
+    export type InstanceMetadataOptions = _4.InstanceMetadataOptions
+  }
+  export namespace DistributionConfiguration {
+    export type FastLaunchSnapshotConfiguration = _5.FastLaunchSnapshotConfiguration
+    export type TargetContainerRepository = _5.TargetContainerRepository
+    export type AmiDistributionConfiguration = _5.AmiDistributionConfiguration
+    export type Distribution = _5.Distribution
+    export type FastLaunchLaunchTemplateSpecification = _5.FastLaunchLaunchTemplateSpecification
+    export type ContainerDistributionConfiguration = _5.ContainerDistributionConfiguration
+    export type LaunchTemplateConfiguration = _5.LaunchTemplateConfiguration
+    export type FastLaunchConfiguration = _5.FastLaunchConfiguration
+    export type LaunchPermissionConfiguration = _5.LaunchPermissionConfiguration
+  }
+  export namespace Image {
+    export type ImageTestsConfiguration = _6.ImageTestsConfiguration
+  }
 }

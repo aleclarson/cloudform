@@ -14,7 +14,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TrackerProperties {
+export interface Properties {
     Description?: Value<string>
     KmsKeyId?: Value<string>
     PricingPlan?: Value<string>
@@ -23,10 +23,11 @@ export interface TrackerProperties {
     TrackerName: Value<string>
 }
 
-export default class Tracker extends ResourceBase<TrackerProperties> {
+class Tracker extends ResourceBase<Properties> {
 
 
-    constructor(properties: TrackerProperties) {
+    constructor(properties: Properties) {
         super('AWS::Location::Tracker', properties)
     }
 }
+export { Tracker as R }

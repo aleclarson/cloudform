@@ -87,14 +87,14 @@ export class MemberFabricConfiguration {
     }
 }
 
-export interface MemberProperties {
+export interface Properties {
     MemberConfiguration: MemberConfiguration
     NetworkConfiguration?: NetworkConfiguration
     NetworkId?: Value<string>
     InvitationId?: Value<string>
 }
 
-export default class Member extends ResourceBase<MemberProperties> {
+class Member extends ResourceBase<Properties> {
     static NetworkFrameworkConfiguration = NetworkFrameworkConfiguration
     static NetworkConfiguration = NetworkConfiguration
     static NetworkFabricConfiguration = NetworkFabricConfiguration
@@ -104,7 +104,8 @@ export default class Member extends ResourceBase<MemberProperties> {
     static VotingPolicy = VotingPolicy
     static MemberFabricConfiguration = MemberFabricConfiguration
 
-    constructor(properties: MemberProperties) {
+    constructor(properties: Properties) {
         super('AWS::ManagedBlockchain::Member', properties)
     }
 }
+export { Member as R }

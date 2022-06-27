@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const container_1=require("./container");var MediaStore;!function(MediaStore){MediaStore.Container=container_1.default}(MediaStore=exports.MediaStore||(exports.MediaStore={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.MediaStore=void 0;const _0=require("./container");var MediaStore;!function(MediaStore){MediaStore.Container=_0.R}(MediaStore=exports.MediaStore||(exports.MediaStore={}));

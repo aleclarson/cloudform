@@ -34,7 +34,7 @@ export class UserPhoneConfig {
     }
 }
 
-export interface UserProperties {
+export interface Properties {
     InstanceArn: Value<string>
     DirectoryUserId?: Value<string>
     HierarchyGroupArn?: Value<string>
@@ -47,11 +47,12 @@ export interface UserProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class User extends ResourceBase<UserProperties> {
+class User extends ResourceBase<Properties> {
     static UserIdentityInfo = UserIdentityInfo
     static UserPhoneConfig = UserPhoneConfig
 
-    constructor(properties: UserProperties) {
+    constructor(properties: Properties) {
         super('AWS::Connect::User', properties)
     }
 }
+export { User as R }

@@ -17,10 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Connection_ from './connection'
+import * as _0 from './connection'
 
 export namespace CodeStarConnections {
-  export const Connection = Connection_
+  export const Connection = _0.R
 
-  export type Connection = Connection_
+  export type Connection = _0.R
+
+
 }

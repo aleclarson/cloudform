@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPCEndpointServiceProperties {
+export interface Properties {
     NetworkLoadBalancerArns?: List<Value<string>>
     PayerResponsibility?: Value<string>
     AcceptanceRequired?: Value<boolean>
     GatewayLoadBalancerArns?: List<Value<string>>
 }
 
-export default class VPCEndpointService extends ResourceBase<VPCEndpointServiceProperties> {
+class VPCEndpointService extends ResourceBase<Properties> {
 
 
-    constructor(properties?: VPCEndpointServiceProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::VPCEndpointService', properties || {})
     }
 }
+export { VPCEndpointService as R }

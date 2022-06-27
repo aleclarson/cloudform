@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface KeyProperties {
+export interface Properties {
     Description?: Value<string>
     Enabled?: Value<boolean>
     EnableKeyRotation?: Value<boolean>
@@ -34,10 +34,11 @@ export interface KeyProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Key extends ResourceBase<KeyProperties> {
+class Key extends ResourceBase<Properties> {
 
 
-    constructor(properties: KeyProperties) {
+    constructor(properties: Properties) {
         super('AWS::KMS::Key', properties)
     }
 }
+export { Key as R }

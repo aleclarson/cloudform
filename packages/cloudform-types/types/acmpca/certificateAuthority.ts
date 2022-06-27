@@ -157,7 +157,7 @@ export class GeneralName {
     }
 }
 
-export interface CertificateAuthorityProperties {
+export interface Properties {
     Type: Value<string>
     KeyAlgorithm: Value<string>
     SigningAlgorithm: Value<string>
@@ -168,7 +168,7 @@ export interface CertificateAuthorityProperties {
     KeyStorageSecurityStandard?: Value<string>
 }
 
-export default class CertificateAuthority extends ResourceBase<CertificateAuthorityProperties> {
+class CertificateAuthority extends ResourceBase<Properties> {
     static RevocationConfiguration = RevocationConfiguration
     static KeyUsage = KeyUsage
     static CsrExtensions = CsrExtensions
@@ -182,7 +182,8 @@ export default class CertificateAuthority extends ResourceBase<CertificateAuthor
     static CrlConfiguration = CrlConfiguration
     static GeneralName = GeneralName
 
-    constructor(properties: CertificateAuthorityProperties) {
+    constructor(properties: Properties) {
         super('AWS::ACMPCA::CertificateAuthority', properties)
     }
 }
+export { CertificateAuthority as R }

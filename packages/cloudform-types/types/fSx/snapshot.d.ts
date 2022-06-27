@@ -1,0 +1,1 @@
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{VolumeId:Value<string>;Tags?:List<ResourceTag>;Name:Value<string>;}declare class Snapshot extends ResourceBase<Properties>{constructor(properties:Properties);}export{Snapshot as R};

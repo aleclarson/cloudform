@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class FairsharePolicy {
@@ -39,17 +39,18 @@ export class ShareAttributes {
     }
 }
 
-export interface SchedulingPolicyProperties {
+export interface Properties {
     Name?: Value<string>
     FairsharePolicy?: FairsharePolicy
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class SchedulingPolicy extends ResourceBase<SchedulingPolicyProperties> {
+class SchedulingPolicy extends ResourceBase<Properties> {
     static FairsharePolicy = FairsharePolicy
     static ShareAttributes = ShareAttributes
 
-    constructor(properties?: SchedulingPolicyProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Batch::SchedulingPolicy', properties || {})
     }
 }
+export { SchedulingPolicy as R }

@@ -173,7 +173,7 @@ export class SubComponentTypeConfiguration {
     }
 }
 
-export interface ApplicationProperties {
+export interface Properties {
     ResourceGroupName: Value<string>
     CWEMonitorEnabled?: Value<boolean>
     OpsCenterEnabled?: Value<boolean>
@@ -186,7 +186,7 @@ export interface ApplicationProperties {
     GroupingType?: Value<string>
 }
 
-export default class Application extends ResourceBase<ApplicationProperties> {
+class Application extends ResourceBase<Properties> {
     static SubComponentConfigurationDetails = SubComponentConfigurationDetails
     static ComponentMonitoringSetting = ComponentMonitoringSetting
     static LogPattern = LogPattern
@@ -203,7 +203,8 @@ export default class Application extends ResourceBase<ApplicationProperties> {
     static Log = Log
     static SubComponentTypeConfiguration = SubComponentTypeConfiguration
 
-    constructor(properties: ApplicationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApplicationInsights::Application', properties)
     }
 }
+export { Application as R }

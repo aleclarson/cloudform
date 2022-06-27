@@ -20,7 +20,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ParameterGroupProperties {
+export interface Properties {
     ParameterGroupName: Value<string>
     Family: Value<string>
     Description?: Value<string>
@@ -28,10 +28,11 @@ export interface ParameterGroupProperties {
     Parameters?: {[key: string]: any}
 }
 
-export default class ParameterGroup extends ResourceBase<ParameterGroupProperties> {
+class ParameterGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: ParameterGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::MemoryDB::ParameterGroup', properties)
     }
 }
+export { ParameterGroup as R }

@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class TagsEntry {
@@ -29,7 +29,7 @@ export class TagsEntry {
     }
 }
 
-export interface ConfigurationProperties {
+export interface Properties {
     EngineVersion: Value<string>
     Description?: Value<string>
     AuthenticationStrategy?: Value<string>
@@ -39,10 +39,11 @@ export interface ConfigurationProperties {
     Name: Value<string>
 }
 
-export default class Configuration extends ResourceBase<ConfigurationProperties> {
+class Configuration extends ResourceBase<Properties> {
     static TagsEntry = TagsEntry
 
-    constructor(properties: ConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AmazonMQ::Configuration', properties)
     }
 }
+export { Configuration as R }

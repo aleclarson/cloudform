@@ -27,7 +27,7 @@ export class SolutionConfig {
     }
 }
 
-export interface SolutionProperties {
+export interface Properties {
     Name: Value<string>
     EventType?: Value<string>
     DatasetGroupArn: Value<string>
@@ -37,10 +37,11 @@ export interface SolutionProperties {
     SolutionConfig?: SolutionConfig
 }
 
-export default class Solution extends ResourceBase<SolutionProperties> {
+class Solution extends ResourceBase<Properties> {
     static SolutionConfig = SolutionConfig
 
-    constructor(properties: SolutionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Personalize::Solution', properties)
     }
 }
+export { Solution as R }

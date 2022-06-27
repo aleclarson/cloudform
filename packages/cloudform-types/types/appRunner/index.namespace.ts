@@ -17,16 +17,37 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import VpcConnector_ from './vpcConnector'
-import ObservabilityConfiguration_ from './observabilityConfiguration'
-import Service_ from './service'
+import * as _0 from './vpcConnector'
+import * as _1 from './observabilityConfiguration'
+import * as _2 from './service'
 
 export namespace AppRunner {
-  export const VpcConnector = VpcConnector_
-  export const ObservabilityConfiguration = ObservabilityConfiguration_
-  export const Service = Service_
+  export const VpcConnector = _0.R
+  export const ObservabilityConfiguration = _1.R
+  export const Service = _2.R
 
-  export type VpcConnector = VpcConnector_
-  export type ObservabilityConfiguration = ObservabilityConfiguration_
-  export type Service = Service_
+  export type VpcConnector = _0.R
+  export type ObservabilityConfiguration = _1.R
+  export type Service = _2.R
+
+  export namespace ObservabilityConfiguration {
+    export type TraceConfiguration = _1.TraceConfiguration
+  }
+  export namespace Service {
+    export type ImageConfiguration = _2.ImageConfiguration
+    export type InstanceConfiguration = _2.InstanceConfiguration
+    export type AuthenticationConfiguration = _2.AuthenticationConfiguration
+    export type KeyValuePair = _2.KeyValuePair
+    export type EncryptionConfiguration = _2.EncryptionConfiguration
+    export type HealthCheckConfiguration = _2.HealthCheckConfiguration
+    export type CodeConfigurationValues = _2.CodeConfigurationValues
+    export type ServiceObservabilityConfiguration = _2.ServiceObservabilityConfiguration
+    export type SourceCodeVersion = _2.SourceCodeVersion
+    export type ImageRepository = _2.ImageRepository
+    export type NetworkConfiguration = _2.NetworkConfiguration
+    export type EgressConfiguration = _2.EgressConfiguration
+    export type SourceConfiguration = _2.SourceConfiguration
+    export type CodeRepository = _2.CodeRepository
+    export type CodeConfiguration = _2.CodeConfiguration
+  }
 }

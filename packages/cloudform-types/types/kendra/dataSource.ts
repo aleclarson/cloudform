@@ -551,7 +551,7 @@ export class DocumentsMetadataConfiguration {
     }
 }
 
-export interface DataSourceProperties {
+export interface Properties {
     Name: Value<string>
     IndexId: Value<string>
     Type: Value<string>
@@ -563,7 +563,7 @@ export interface DataSourceProperties {
     CustomDocumentEnrichmentConfiguration?: CustomDocumentEnrichmentConfiguration
 }
 
-export default class DataSource extends ResourceBase<DataSourceProperties> {
+class DataSource extends ResourceBase<Properties> {
     static WebCrawlerBasicAuthentication = WebCrawlerBasicAuthentication
     static WebCrawlerUrls = WebCrawlerUrls
     static WebCrawlerSeedUrlConfiguration = WebCrawlerSeedUrlConfiguration
@@ -614,7 +614,8 @@ export default class DataSource extends ResourceBase<DataSourceProperties> {
     static SharePointConfiguration = SharePointConfiguration
     static DocumentsMetadataConfiguration = DocumentsMetadataConfiguration
 
-    constructor(properties: DataSourceProperties) {
+    constructor(properties: Properties) {
         super('AWS::Kendra::DataSource', properties)
     }
 }
+export { DataSource as R }

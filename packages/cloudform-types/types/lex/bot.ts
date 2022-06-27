@@ -558,7 +558,7 @@ export class SampleValue {
     }
 }
 
-export interface BotProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     RoleArn: Value<string>
@@ -572,7 +572,7 @@ export interface BotProperties {
     TestBotAliasSettings?: TestBotAliasSettings
 }
 
-export default class Bot extends ResourceBase<BotProperties> {
+class Bot extends ResourceBase<Properties> {
     static SlotValueRegexFilter = SlotValueRegexFilter
     static FulfillmentUpdatesSpecification = FulfillmentUpdatesSpecification
     static SlotType = SlotType
@@ -631,7 +631,8 @@ export default class Bot extends ResourceBase<BotProperties> {
     static CustomPayload = CustomPayload
     static SampleValue = SampleValue
 
-    constructor(properties: BotProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lex::Bot', properties)
     }
 }
+export { Bot as R }

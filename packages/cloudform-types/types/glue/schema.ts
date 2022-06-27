@@ -37,7 +37,7 @@ export class Registry {
     }
 }
 
-export interface SchemaProperties {
+export interface Properties {
     Registry?: Registry
     Name: Value<string>
     Description?: Value<string>
@@ -48,11 +48,12 @@ export interface SchemaProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Schema extends ResourceBase<SchemaProperties> {
+class Schema extends ResourceBase<Properties> {
     static SchemaVersion = SchemaVersion
     static Registry = Registry
 
-    constructor(properties: SchemaProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::Schema', properties)
     }
 }
+export { Schema as R }

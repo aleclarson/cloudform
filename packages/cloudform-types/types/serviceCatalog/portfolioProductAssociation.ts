@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PortfolioProductAssociationProperties {
+export interface Properties {
     SourcePortfolioId?: Value<string>
     AcceptLanguage?: Value<string>
     PortfolioId: Value<string>
     ProductId: Value<string>
 }
 
-export default class PortfolioProductAssociation extends ResourceBase<PortfolioProductAssociationProperties> {
+class PortfolioProductAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: PortfolioProductAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::PortfolioProductAssociation', properties)
     }
 }
+export { PortfolioProductAssociation as R }

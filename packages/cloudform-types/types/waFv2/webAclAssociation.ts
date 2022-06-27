@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface WebACLAssociationProperties {
+export interface Properties {
     ResourceArn: Value<string>
     WebACLArn: Value<string>
 }
 
-export default class WebACLAssociation extends ResourceBase<WebACLAssociationProperties> {
+class WebACLAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: WebACLAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAFv2::WebACLAssociation', properties)
     }
 }
+export { WebACLAssociation as R }

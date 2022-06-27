@@ -20,17 +20,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface StudioSessionMappingProperties {
+export interface Properties {
     IdentityName: Value<string>
     IdentityType: Value<string>
     SessionPolicyArn: Value<string>
     StudioId: Value<string>
 }
 
-export default class StudioSessionMapping extends ResourceBase<StudioSessionMappingProperties> {
+class StudioSessionMapping extends ResourceBase<Properties> {
 
 
-    constructor(properties: StudioSessionMappingProperties) {
+    constructor(properties: Properties) {
         super('AWS::EMR::StudioSessionMapping', properties)
     }
 }
+export { StudioSessionMapping as R }

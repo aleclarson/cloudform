@@ -43,7 +43,7 @@ export class PrivateDnsPropertiesMutable {
     }
 }
 
-export interface PrivateDnsNamespaceProperties {
+export interface Properties {
     Description?: Value<string>
     Vpc: Value<string>
     Properties?: Properties
@@ -51,12 +51,13 @@ export interface PrivateDnsNamespaceProperties {
     Name: Value<string>
 }
 
-export default class PrivateDnsNamespace extends ResourceBase<PrivateDnsNamespaceProperties> {
+class PrivateDnsNamespace extends ResourceBase<Properties> {
     static Properties = Properties
     static SOA = SOA
     static PrivateDnsPropertiesMutable = PrivateDnsPropertiesMutable
 
-    constructor(properties: PrivateDnsNamespaceProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceDiscovery::PrivateDnsNamespace', properties)
     }
 }
+export { PrivateDnsNamespace as R }

@@ -20,17 +20,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CustomMetricProperties {
+export interface Properties {
     MetricName?: Value<string>
     DisplayName?: Value<string>
     MetricType: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class CustomMetric extends ResourceBase<CustomMetricProperties> {
+class CustomMetric extends ResourceBase<Properties> {
 
 
-    constructor(properties: CustomMetricProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::CustomMetric', properties)
     }
 }
+export { CustomMetric as R }

@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SchemaVersionMetadataProperties {
+export interface Properties {
     SchemaVersionId: Value<string>
     Key: Value<string>
     Value: Value<string>
 }
 
-export default class SchemaVersionMetadata extends ResourceBase<SchemaVersionMetadataProperties> {
+class SchemaVersionMetadata extends ResourceBase<Properties> {
 
 
-    constructor(properties: SchemaVersionMetadataProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::SchemaVersionMetadata', properties)
     }
 }
+export { SchemaVersionMetadata as R }

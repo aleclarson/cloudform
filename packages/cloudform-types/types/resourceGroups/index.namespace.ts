@@ -17,10 +17,18 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Group_ from './group'
+import * as _0 from './group'
 
 export namespace ResourceGroups {
-  export const Group = Group_
+  export const Group = _0.R
 
-  export type Group = Group_
+  export type Group = _0.R
+
+  export namespace Group {
+    export type TagFilter = _0.TagFilter
+    export type Query = _0.Query
+    export type ConfigurationParameter = _0.ConfigurationParameter
+    export type ConfigurationItem = _0.ConfigurationItem
+    export type ResourceQuery = _0.ResourceQuery
+  }
 }

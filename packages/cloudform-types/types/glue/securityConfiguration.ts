@@ -59,18 +59,19 @@ export class CloudWatchEncryption {
     }
 }
 
-export interface SecurityConfigurationProperties {
+export interface Properties {
     EncryptionConfiguration: EncryptionConfiguration
     Name: Value<string>
 }
 
-export default class SecurityConfiguration extends ResourceBase<SecurityConfigurationProperties> {
+class SecurityConfiguration extends ResourceBase<Properties> {
     static EncryptionConfiguration = EncryptionConfiguration
     static JobBookmarksEncryption = JobBookmarksEncryption
     static S3Encryption = S3Encryption
     static CloudWatchEncryption = CloudWatchEncryption
 
-    constructor(properties: SecurityConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::SecurityConfiguration', properties)
     }
 }
+export { SecurityConfiguration as R }

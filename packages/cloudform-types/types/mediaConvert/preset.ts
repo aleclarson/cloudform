@@ -16,12 +16,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface PresetProperties {
+export interface Properties {
     Category?: Value<string>
     Description?: Value<string>
     SettingsJson: {[key: string]: any}
@@ -29,10 +29,11 @@ export interface PresetProperties {
     Name?: Value<string>
 }
 
-export default class Preset extends ResourceBase<PresetProperties> {
+class Preset extends ResourceBase<Properties> {
 
 
-    constructor(properties: PresetProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaConvert::Preset', properties)
     }
 }
+export { Preset as R }

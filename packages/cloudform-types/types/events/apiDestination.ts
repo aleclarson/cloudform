@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ApiDestinationProperties {
+export interface Properties {
     Name?: Value<string>
     Description?: Value<string>
     ConnectionArn: Value<string>
@@ -30,10 +30,11 @@ export interface ApiDestinationProperties {
     HttpMethod: Value<string>
 }
 
-export default class ApiDestination extends ResourceBase<ApiDestinationProperties> {
+class ApiDestination extends ResourceBase<Properties> {
 
 
-    constructor(properties: ApiDestinationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Events::ApiDestination', properties)
     }
 }
+export { ApiDestination as R }

@@ -34,7 +34,7 @@ export class Encryption {
     }
 }
 
-export interface FlowSourceProperties {
+export interface Properties {
     FlowArn?: Value<string>
     Decryption?: Encryption
     Description: Value<string>
@@ -49,10 +49,11 @@ export interface FlowSourceProperties {
     WhitelistCidr?: Value<string>
 }
 
-export default class FlowSource extends ResourceBase<FlowSourceProperties> {
+class FlowSource extends ResourceBase<Properties> {
     static Encryption = Encryption
 
-    constructor(properties: FlowSourceProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaConnect::FlowSource', properties)
     }
 }
+export { FlowSource as R }

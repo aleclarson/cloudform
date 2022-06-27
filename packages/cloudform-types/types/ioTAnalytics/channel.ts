@@ -42,19 +42,20 @@ export class ChannelStorage {
     }
 }
 
-export interface ChannelProperties {
+export interface Properties {
     ChannelStorage?: ChannelStorage
     ChannelName?: Value<string>
     RetentionPeriod?: RetentionPeriod
     Tags?: List<ResourceTag>
 }
 
-export default class Channel extends ResourceBase<ChannelProperties> {
+class Channel extends ResourceBase<Properties> {
     static CustomerManagedS3 = CustomerManagedS3
     static RetentionPeriod = RetentionPeriod
     static ChannelStorage = ChannelStorage
 
-    constructor(properties?: ChannelProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IoTAnalytics::Channel', properties || {})
     }
 }
+export { Channel as R }

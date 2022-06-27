@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TrafficMirrorTargetProperties {
+export interface Properties {
     NetworkLoadBalancerArn?: Value<string>
     Description?: Value<string>
     NetworkInterfaceId?: Value<string>
@@ -29,10 +29,11 @@ export interface TrafficMirrorTargetProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class TrafficMirrorTarget extends ResourceBase<TrafficMirrorTargetProperties> {
+class TrafficMirrorTarget extends ResourceBase<Properties> {
 
 
-    constructor(properties?: TrafficMirrorTargetProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::TrafficMirrorTarget', properties || {})
     }
 }
+export { TrafficMirrorTarget as R }

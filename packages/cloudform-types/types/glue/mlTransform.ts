@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class FindMatchesParameters {
@@ -77,7 +77,7 @@ export class TransformParameters {
     }
 }
 
-export interface MLTransformProperties {
+export interface Properties {
     MaxRetries?: Value<number>
     Description?: Value<string>
     TransformEncryption?: TransformEncryption
@@ -93,7 +93,7 @@ export interface MLTransformProperties {
     MaxCapacity?: Value<number>
 }
 
-export default class MLTransform extends ResourceBase<MLTransformProperties> {
+class MLTransform extends ResourceBase<Properties> {
     static FindMatchesParameters = FindMatchesParameters
     static MLUserDataEncryption = MLUserDataEncryption
     static InputRecordTables = InputRecordTables
@@ -101,7 +101,8 @@ export default class MLTransform extends ResourceBase<MLTransformProperties> {
     static TransformEncryption = TransformEncryption
     static TransformParameters = TransformParameters
 
-    constructor(properties: MLTransformProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::MLTransform', properties)
     }
 }
+export { MLTransform as R }

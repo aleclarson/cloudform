@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NetworkInterfacePermissionProperties {
+export interface Properties {
     AwsAccountId: Value<string>
     NetworkInterfaceId: Value<string>
     Permission: Value<string>
 }
 
-export default class NetworkInterfacePermission extends ResourceBase<NetworkInterfacePermissionProperties> {
+class NetworkInterfacePermission extends ResourceBase<Properties> {
 
 
-    constructor(properties: NetworkInterfacePermissionProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::NetworkInterfacePermission', properties)
     }
 }
+export { NetworkInterfacePermission as R }

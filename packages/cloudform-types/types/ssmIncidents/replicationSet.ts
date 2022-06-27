@@ -36,16 +36,17 @@ export class ReplicationRegion {
     }
 }
 
-export interface ReplicationSetProperties {
+export interface Properties {
     Regions: List<ReplicationRegion>
     DeletionProtected?: Value<boolean>
 }
 
-export default class ReplicationSet extends ResourceBase<ReplicationSetProperties> {
+class ReplicationSet extends ResourceBase<Properties> {
     static RegionConfiguration = RegionConfiguration
     static ReplicationRegion = ReplicationRegion
 
-    constructor(properties: ReplicationSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSMIncidents::ReplicationSet', properties)
     }
 }
+export { ReplicationSet as R }

@@ -24,7 +24,7 @@ export class KinesisConfiguration {
     }
 }
 
-export interface StreamProperties {
+export interface Properties {
     LedgerName: Value<string>
     StreamName: Value<string>
     RoleArn: Value<string>
@@ -34,10 +34,11 @@ export interface StreamProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Stream extends ResourceBase<StreamProperties> {
+class Stream extends ResourceBase<Properties> {
     static KinesisConfiguration = KinesisConfiguration
 
-    constructor(properties: StreamProperties) {
+    constructor(properties: Properties) {
         super('AWS::QLDB::Stream', properties)
     }
 }
+export { Stream as R }

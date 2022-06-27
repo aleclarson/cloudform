@@ -17,16 +17,28 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import MountTarget_ from './mountTarget'
-import FileSystem_ from './fileSystem'
-import AccessPoint_ from './accessPoint'
+import * as _0 from './mountTarget'
+import * as _1 from './fileSystem'
+import * as _2 from './accessPoint'
 
 export namespace EFS {
-  export const MountTarget = MountTarget_
-  export const FileSystem = FileSystem_
-  export const AccessPoint = AccessPoint_
+  export const MountTarget = _0.R
+  export const FileSystem = _1.R
+  export const AccessPoint = _2.R
 
-  export type MountTarget = MountTarget_
-  export type FileSystem = FileSystem_
-  export type AccessPoint = AccessPoint_
+  export type MountTarget = _0.R
+  export type FileSystem = _1.R
+  export type AccessPoint = _2.R
+
+  export namespace FileSystem {
+    export type ElasticFileSystemTag = _1.ElasticFileSystemTag
+    export type LifecyclePolicy = _1.LifecyclePolicy
+    export type BackupPolicy = _1.BackupPolicy
+  }
+  export namespace AccessPoint {
+    export type AccessPointTag = _2.AccessPointTag
+    export type RootDirectory = _2.RootDirectory
+    export type CreationInfo = _2.CreationInfo
+    export type PosixUser = _2.PosixUser
+  }
 }

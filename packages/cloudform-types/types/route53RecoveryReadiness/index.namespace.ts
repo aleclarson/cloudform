@@ -17,19 +17,27 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ReadinessCheck_ from './readinessCheck'
-import RecoveryGroup_ from './recoveryGroup'
-import Cell_ from './cell'
-import ResourceSet_ from './resourceSet'
+import * as _0 from './readinessCheck'
+import * as _1 from './recoveryGroup'
+import * as _2 from './cell'
+import * as _3 from './resourceSet'
 
 export namespace Route53RecoveryReadiness {
-  export const ReadinessCheck = ReadinessCheck_
-  export const RecoveryGroup = RecoveryGroup_
-  export const Cell = Cell_
-  export const ResourceSet = ResourceSet_
+  export const ReadinessCheck = _0.R
+  export const RecoveryGroup = _1.R
+  export const Cell = _2.R
+  export const ResourceSet = _3.R
 
-  export type ReadinessCheck = ReadinessCheck_
-  export type RecoveryGroup = RecoveryGroup_
-  export type Cell = Cell_
-  export type ResourceSet = ResourceSet_
+  export type ReadinessCheck = _0.R
+  export type RecoveryGroup = _1.R
+  export type Cell = _2.R
+  export type ResourceSet = _3.R
+
+  export namespace ResourceSet {
+    export type TargetResource = _3.TargetResource
+    export type Resource = _3.Resource
+    export type DNSTargetResource = _3.DNSTargetResource
+    export type NLBResource = _3.NLBResource
+    export type R53ResourceRecord = _3.R53ResourceRecord
+  }
 }

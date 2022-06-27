@@ -65,19 +65,20 @@ export class FailoverConfig {
     }
 }
 
-export interface FlowProperties {
+export interface Properties {
     Name: Value<string>
     AvailabilityZone?: Value<string>
     Source: Source
     SourceFailoverConfig?: FailoverConfig
 }
 
-export default class Flow extends ResourceBase<FlowProperties> {
+class Flow extends ResourceBase<Properties> {
     static Encryption = Encryption
     static Source = Source
     static FailoverConfig = FailoverConfig
 
-    constructor(properties: FlowProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaConnect::Flow', properties)
     }
 }
+export { Flow as R }

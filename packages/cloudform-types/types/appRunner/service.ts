@@ -155,7 +155,7 @@ export class CodeConfiguration {
     }
 }
 
-export interface ServiceProperties {
+export interface Properties {
     ServiceName?: Value<string>
     SourceConfiguration: SourceConfiguration
     InstanceConfiguration?: InstanceConfiguration
@@ -167,7 +167,7 @@ export interface ServiceProperties {
     NetworkConfiguration?: NetworkConfiguration
 }
 
-export default class Service extends ResourceBase<ServiceProperties> {
+class Service extends ResourceBase<Properties> {
     static ImageConfiguration = ImageConfiguration
     static InstanceConfiguration = InstanceConfiguration
     static AuthenticationConfiguration = AuthenticationConfiguration
@@ -184,7 +184,8 @@ export default class Service extends ResourceBase<ServiceProperties> {
     static CodeRepository = CodeRepository
     static CodeConfiguration = CodeConfiguration
 
-    constructor(properties: ServiceProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppRunner::Service', properties)
     }
 }
+export { Service as R }

@@ -109,14 +109,14 @@ export class SchemaId {
     }
 }
 
-export interface PartitionProperties {
+export interface Properties {
     TableName: Value<string>
     DatabaseName: Value<string>
     CatalogId: Value<string>
     PartitionInput: PartitionInput
 }
 
-export default class Partition extends ResourceBase<PartitionProperties> {
+class Partition extends ResourceBase<Properties> {
     static PartitionInput = PartitionInput
     static Order = Order
     static SchemaReference = SchemaReference
@@ -126,7 +126,8 @@ export default class Partition extends ResourceBase<PartitionProperties> {
     static SkewedInfo = SkewedInfo
     static SchemaId = SchemaId
 
-    constructor(properties: PartitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::Partition', properties)
     }
 }
+export { Partition as R }

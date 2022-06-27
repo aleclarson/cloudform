@@ -37,7 +37,7 @@ export class VpcInterfaceAttachment {
     }
 }
 
-export interface FlowOutputProperties {
+export interface Properties {
     FlowArn: Value<string>
     CidrAllowList?: List<Value<string>>
     Encryption?: Encryption
@@ -54,11 +54,12 @@ export interface FlowOutputProperties {
     VpcInterfaceAttachment?: VpcInterfaceAttachment
 }
 
-export default class FlowOutput extends ResourceBase<FlowOutputProperties> {
+class FlowOutput extends ResourceBase<Properties> {
     static Encryption = Encryption
     static VpcInterfaceAttachment = VpcInterfaceAttachment
 
-    constructor(properties: FlowOutputProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaConnect::FlowOutput', properties)
     }
 }
+export { FlowOutput as R }

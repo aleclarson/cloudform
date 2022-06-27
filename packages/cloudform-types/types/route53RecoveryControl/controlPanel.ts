@@ -8,16 +8,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ControlPanelProperties {
+export interface Properties {
     ClusterArn?: Value<string>
     Name: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class ControlPanel extends ResourceBase<ControlPanelProperties> {
+class ControlPanel extends ResourceBase<Properties> {
 
 
-    constructor(properties: ControlPanelProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53RecoveryControl::ControlPanel', properties)
     }
 }
+export { ControlPanel as R }

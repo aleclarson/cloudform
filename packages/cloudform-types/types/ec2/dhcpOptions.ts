@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DHCPOptionsProperties {
+export interface Properties {
     DomainName?: Value<string>
     DomainNameServers?: List<Value<string>>
     NetbiosNameServers?: List<Value<string>>
@@ -31,10 +31,11 @@ export interface DHCPOptionsProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class DHCPOptions extends ResourceBase<DHCPOptionsProperties> {
+class DHCPOptions extends ResourceBase<Properties> {
 
 
-    constructor(properties?: DHCPOptionsProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::DHCPOptions', properties || {})
     }
 }
+export { DHCPOptions as R }

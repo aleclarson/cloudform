@@ -20,17 +20,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UserProperties {
+export interface Properties {
     UserName: Value<string>
     AccessString: Value<string>
     AuthenticationMode: {[key: string]: any}
     Tags?: List<ResourceTag>
 }
 
-export default class User extends ResourceBase<UserProperties> {
+class User extends ResourceBase<Properties> {
 
 
-    constructor(properties: UserProperties) {
+    constructor(properties: Properties) {
         super('AWS::MemoryDB::User', properties)
     }
 }
+export { User as R }

@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TransitGatewayPeeringAttachmentProperties {
+export interface Properties {
     TransitGatewayId: Value<string>
     PeerTransitGatewayId: Value<string>
     PeerAccountId: Value<string>
@@ -29,10 +29,11 @@ export interface TransitGatewayPeeringAttachmentProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class TransitGatewayPeeringAttachment extends ResourceBase<TransitGatewayPeeringAttachmentProperties> {
+class TransitGatewayPeeringAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties: TransitGatewayPeeringAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::TransitGatewayPeeringAttachment', properties)
     }
 }
+export { TransitGatewayPeeringAttachment as R }

@@ -17,10 +17,16 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Repository_ from './repository'
+import * as _0 from './repository'
 
 export namespace CodeCommit {
-  export const Repository = Repository_
+  export const Repository = _0.R
 
-  export type Repository = Repository_
+  export type Repository = _0.R
+
+  export namespace Repository {
+    export type Code = _0.Code
+    export type S3 = _0.S3
+    export type RepositoryTrigger = _0.RepositoryTrigger
+  }
 }

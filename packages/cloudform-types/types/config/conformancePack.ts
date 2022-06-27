@@ -28,7 +28,7 @@ export class ConformancePackInputParameter {
     }
 }
 
-export interface ConformancePackProperties {
+export interface Properties {
     ConformancePackName: Value<string>
     DeliveryS3Bucket?: Value<string>
     DeliveryS3KeyPrefix?: Value<string>
@@ -37,10 +37,11 @@ export interface ConformancePackProperties {
     ConformancePackInputParameters?: List<ConformancePackInputParameter>
 }
 
-export default class ConformancePack extends ResourceBase<ConformancePackProperties> {
+class ConformancePack extends ResourceBase<Properties> {
     static ConformancePackInputParameter = ConformancePackInputParameter
 
-    constructor(properties: ConformancePackProperties) {
+    constructor(properties: Properties) {
         super('AWS::Config::ConformancePack', properties)
     }
 }
+export { ConformancePack as R }

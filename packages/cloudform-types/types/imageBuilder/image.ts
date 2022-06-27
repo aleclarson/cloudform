@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class ImageTestsConfiguration {
@@ -29,7 +29,7 @@ export class ImageTestsConfiguration {
     }
 }
 
-export interface ImageProperties {
+export interface Properties {
     ImageTestsConfiguration?: ImageTestsConfiguration
     ImageRecipeArn?: Value<string>
     ContainerRecipeArn?: Value<string>
@@ -39,10 +39,11 @@ export interface ImageProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class Image extends ResourceBase<ImageProperties> {
+class Image extends ResourceBase<Properties> {
     static ImageTestsConfiguration = ImageTestsConfiguration
 
-    constructor(properties: ImageProperties) {
+    constructor(properties: Properties) {
         super('AWS::ImageBuilder::Image', properties)
     }
 }
+export { Image as R }

@@ -103,13 +103,13 @@ export class LambdaAction {
     }
 }
 
-export interface ReceiptRuleProperties {
+export interface Properties {
     After?: Value<string>
     Rule: Rule
     RuleSetName: Value<string>
 }
 
-export default class ReceiptRule extends ResourceBase<ReceiptRuleProperties> {
+class ReceiptRule extends ResourceBase<Properties> {
     static BounceAction = BounceAction
     static Action = Action
     static WorkmailAction = WorkmailAction
@@ -120,7 +120,8 @@ export default class ReceiptRule extends ResourceBase<ReceiptRuleProperties> {
     static S3Action = S3Action
     static LambdaAction = LambdaAction
 
-    constructor(properties: ReceiptRuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::SES::ReceiptRule', properties)
     }
 }
+export { ReceiptRule as R }

@@ -2,19 +2,12 @@
  * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase} from '../resource'
+import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
 
-export class ResourceTag {
-    Key!: Value<string>
-    Value!: Value<string>
 
-    constructor(properties: ResourceTag) {
-        Object.assign(this, properties)
-    }
-}
 
-export interface AnomalyMonitorProperties {
+export interface Properties {
     MonitorType: Value<string>
     MonitorName: Value<string>
     MonitorDimension?: Value<string>
@@ -22,10 +15,11 @@ export interface AnomalyMonitorProperties {
     ResourceTags?: List<ResourceTag>
 }
 
-export default class AnomalyMonitor extends ResourceBase<AnomalyMonitorProperties> {
+class AnomalyMonitor extends ResourceBase<Properties> {
     static ResourceTag = ResourceTag
 
-    constructor(properties: AnomalyMonitorProperties) {
+    constructor(properties: Properties) {
         super('AWS::CE::AnomalyMonitor', properties)
     }
 }
+export { AnomalyMonitor as R }

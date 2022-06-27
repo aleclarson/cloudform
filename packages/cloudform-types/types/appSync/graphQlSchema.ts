@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface GraphQLSchemaProperties {
+export interface Properties {
     Definition?: Value<string>
     DefinitionS3Location?: Value<string>
     ApiId: Value<string>
 }
 
-export default class GraphQLSchema extends ResourceBase<GraphQLSchemaProperties> {
+class GraphQLSchema extends ResourceBase<Properties> {
 
 
-    constructor(properties: GraphQLSchemaProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppSync::GraphQLSchema', properties)
     }
 }
+export { GraphQLSchema as R }

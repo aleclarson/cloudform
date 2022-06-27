@@ -30,7 +30,7 @@ export class DomainValidationOption {
     }
 }
 
-export interface CertificateProperties {
+export interface Properties {
     CertificateAuthorityArn?: Value<string>
     CertificateTransparencyLoggingPreference?: Value<string>
     DomainName: Value<string>
@@ -40,10 +40,11 @@ export interface CertificateProperties {
     ValidationMethod?: Value<string>
 }
 
-export default class Certificate extends ResourceBase<CertificateProperties> {
+class Certificate extends ResourceBase<Properties> {
     static DomainValidationOption = DomainValidationOption
 
-    constructor(properties: CertificateProperties) {
+    constructor(properties: Properties) {
         super('AWS::CertificateManager::Certificate', properties)
     }
 }
+export { Certificate as R }

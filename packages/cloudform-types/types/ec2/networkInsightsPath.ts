@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NetworkInsightsPathProperties {
+export interface Properties {
     SourceIp?: Value<string>
     DestinationIp?: Value<string>
     Source: Value<string>
@@ -31,10 +31,11 @@ export interface NetworkInsightsPathProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class NetworkInsightsPath extends ResourceBase<NetworkInsightsPathProperties> {
+class NetworkInsightsPath extends ResourceBase<Properties> {
 
 
-    constructor(properties: NetworkInsightsPathProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::NetworkInsightsPath', properties)
     }
 }
+export { NetworkInsightsPath as R }

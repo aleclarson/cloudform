@@ -17,10 +17,20 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Filter_ from './filter'
+import * as _0 from './filter'
 
 export namespace InspectorV2 {
-  export const Filter = Filter_
+  export const Filter = _0.R
 
-  export type Filter = Filter_
+  export type Filter = _0.R
+
+  export namespace Filter {
+    export type NumberFilter = _0.NumberFilter
+    export type PortRangeFilter = _0.PortRangeFilter
+    export type DateFilter = _0.DateFilter
+    export type MapFilter = _0.MapFilter
+    export type PackageFilter = _0.PackageFilter
+    export type StringFilter = _0.StringFilter
+    export type FilterCriteria = _0.FilterCriteria
+  }
 }

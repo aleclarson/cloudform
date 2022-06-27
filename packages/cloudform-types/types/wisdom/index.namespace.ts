@@ -17,16 +17,29 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import KnowledgeBase_ from './knowledgeBase'
-import AssistantAssociation_ from './assistantAssociation'
-import Assistant_ from './assistant'
+import * as _0 from './knowledgeBase'
+import * as _1 from './assistantAssociation'
+import * as _2 from './assistant'
 
 export namespace Wisdom {
-  export const KnowledgeBase = KnowledgeBase_
-  export const AssistantAssociation = AssistantAssociation_
-  export const Assistant = Assistant_
+  export const KnowledgeBase = _0.R
+  export const AssistantAssociation = _1.R
+  export const Assistant = _2.R
 
-  export type KnowledgeBase = KnowledgeBase_
-  export type AssistantAssociation = AssistantAssociation_
-  export type Assistant = Assistant_
+  export type KnowledgeBase = _0.R
+  export type AssistantAssociation = _1.R
+  export type Assistant = _2.R
+
+  export namespace KnowledgeBase {
+    export type AppIntegrationsConfiguration = _0.AppIntegrationsConfiguration
+    export type ServerSideEncryptionConfiguration = _0.ServerSideEncryptionConfiguration
+    export type RenderingConfiguration = _0.RenderingConfiguration
+    export type SourceConfiguration = _0.SourceConfiguration
+  }
+  export namespace AssistantAssociation {
+    export type AssociationData = _1.AssociationData
+  }
+  export namespace Assistant {
+    export type ServerSideEncryptionConfiguration = _2.ServerSideEncryptionConfiguration
+  }
 }

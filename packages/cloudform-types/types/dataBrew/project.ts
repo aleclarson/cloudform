@@ -28,7 +28,7 @@ export class Sample {
     }
 }
 
-export interface ProjectProperties {
+export interface Properties {
     DatasetName: Value<string>
     Name: Value<string>
     RecipeName: Value<string>
@@ -37,10 +37,11 @@ export interface ProjectProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Project extends ResourceBase<ProjectProperties> {
+class Project extends ResourceBase<Properties> {
     static Sample = Sample
 
-    constructor(properties: ProjectProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataBrew::Project', properties)
     }
 }
+export { Project as R }

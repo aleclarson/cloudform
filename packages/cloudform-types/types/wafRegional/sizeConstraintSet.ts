@@ -40,16 +40,17 @@ export class FieldToMatch {
     }
 }
 
-export interface SizeConstraintSetProperties {
+export interface Properties {
     SizeConstraints?: List<SizeConstraint>
     Name: Value<string>
 }
 
-export default class SizeConstraintSet extends ResourceBase<SizeConstraintSetProperties> {
+class SizeConstraintSet extends ResourceBase<Properties> {
     static SizeConstraint = SizeConstraint
     static FieldToMatch = FieldToMatch
 
-    constructor(properties: SizeConstraintSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAFRegional::SizeConstraintSet', properties)
     }
 }
+export { SizeConstraintSet as R }

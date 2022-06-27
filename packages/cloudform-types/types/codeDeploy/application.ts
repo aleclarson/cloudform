@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ApplicationProperties {
+export interface Properties {
     ApplicationName?: Value<string>
     ComputePlatform?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Application extends ResourceBase<ApplicationProperties> {
+class Application extends ResourceBase<Properties> {
 
 
-    constructor(properties?: ApplicationProperties) {
+    constructor(properties?: Properties) {
         super('AWS::CodeDeploy::Application', properties || {})
     }
 }
+export { Application as R }

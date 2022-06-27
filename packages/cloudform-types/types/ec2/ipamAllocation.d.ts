@@ -1,0 +1,1 @@
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{IpamPoolId:Value<string>;Cidr?:Value<string>;NetmaskLength?:Value<number>;Description?:Value<string>;}declare class IPAMAllocation extends ResourceBase<Properties>{constructor(properties:Properties);}export{IPAMAllocation as R};

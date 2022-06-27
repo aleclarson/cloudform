@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface MemberProperties {
+export interface Properties {
     Status?: Value<string>
     MemberId: Value<string>
     Email: Value<string>
@@ -31,10 +31,11 @@ export interface MemberProperties {
     DetectorId: Value<string>
 }
 
-export default class Member extends ResourceBase<MemberProperties> {
+class Member extends ResourceBase<Properties> {
 
 
-    constructor(properties: MemberProperties) {
+    constructor(properties: Properties) {
         super('AWS::GuardDuty::Member', properties)
     }
 }
+export { Member as R }

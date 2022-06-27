@@ -17,7 +17,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AssessmentTemplateProperties {
+export interface Properties {
     AssessmentTargetArn: Value<string>
     DurationInSeconds: Value<number>
     AssessmentTemplateName?: Value<string>
@@ -25,10 +25,11 @@ export interface AssessmentTemplateProperties {
     UserAttributesForFindings?: List<ResourceTag>
 }
 
-export default class AssessmentTemplate extends ResourceBase<AssessmentTemplateProperties> {
+class AssessmentTemplate extends ResourceBase<Properties> {
 
 
-    constructor(properties: AssessmentTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::Inspector::AssessmentTemplate', properties)
     }
 }
+export { AssessmentTemplate as R }

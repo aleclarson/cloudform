@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPCEndpointConnectionNotificationProperties {
+export interface Properties {
     ConnectionEvents: List<Value<string>>
     VPCEndpointId?: Value<string>
     ServiceId?: Value<string>
     ConnectionNotificationArn: Value<string>
 }
 
-export default class VPCEndpointConnectionNotification extends ResourceBase<VPCEndpointConnectionNotificationProperties> {
+class VPCEndpointConnectionNotification extends ResourceBase<Properties> {
 
 
-    constructor(properties: VPCEndpointConnectionNotificationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::VPCEndpointConnectionNotification', properties)
     }
 }
+export { VPCEndpointConnectionNotification as R }

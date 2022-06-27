@@ -92,7 +92,7 @@ export class ImageConfig {
     }
 }
 
-export interface FunctionProperties {
+export interface Properties {
     Code: Code
     DeadLetterConfig?: DeadLetterConfig
     Description?: Value<string>
@@ -117,7 +117,7 @@ export interface FunctionProperties {
     PackageType?: Value<string>
 }
 
-export default class Function extends ResourceBase<FunctionProperties> {
+class Function extends ResourceBase<Properties> {
     static VpcConfig = VpcConfig
     static DeadLetterConfig = DeadLetterConfig
     static FileSystemConfig = FileSystemConfig
@@ -127,7 +127,8 @@ export default class Function extends ResourceBase<FunctionProperties> {
     static Environment = Environment
     static ImageConfig = ImageConfig
 
-    constructor(properties: FunctionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lambda::Function', properties)
     }
 }
+export { Function as R }

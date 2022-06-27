@@ -17,10 +17,52 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import DeliveryStream_ from './deliveryStream'
+import * as _0 from './deliveryStream'
 
 export namespace KinesisFirehose {
-  export const DeliveryStream = DeliveryStream_
+  export const DeliveryStream = _0.R
 
-  export type DeliveryStream = DeliveryStream_
+  export type DeliveryStream = _0.R
+
+  export namespace DeliveryStream {
+    export type EncryptionConfiguration = _0.EncryptionConfiguration
+    export type InputFormatConfiguration = _0.InputFormatConfiguration
+    export type AmazonopensearchserviceRetryOptions = _0.AmazonopensearchserviceRetryOptions
+    export type HiveJsonSerDe = _0.HiveJsonSerDe
+    export type Processor = _0.Processor
+    export type DataFormatConversionConfiguration = _0.DataFormatConversionConfiguration
+    export type SchemaConfiguration = _0.SchemaConfiguration
+    export type SplunkRetryOptions = _0.SplunkRetryOptions
+    export type HttpEndpointRequestConfiguration = _0.HttpEndpointRequestConfiguration
+    export type HttpEndpointConfiguration = _0.HttpEndpointConfiguration
+    export type AmazonopensearchserviceDestinationConfiguration = _0.AmazonopensearchserviceDestinationConfiguration
+    export type Serializer = _0.Serializer
+    export type CopyCommand = _0.CopyCommand
+    export type OpenXJsonSerDe = _0.OpenXJsonSerDe
+    export type DynamicPartitioningConfiguration = _0.DynamicPartitioningConfiguration
+    export type OrcSerDe = _0.OrcSerDe
+    export type ElasticsearchBufferingHints = _0.ElasticsearchBufferingHints
+    export type SplunkDestinationConfiguration = _0.SplunkDestinationConfiguration
+    export type CloudWatchLoggingOptions = _0.CloudWatchLoggingOptions
+    export type ProcessingConfiguration = _0.ProcessingConfiguration
+    export type BufferingHints = _0.BufferingHints
+    export type ProcessorParameter = _0.ProcessorParameter
+    export type AmazonopensearchserviceBufferingHints = _0.AmazonopensearchserviceBufferingHints
+    export type DeliveryStreamEncryptionConfigurationInput = _0.DeliveryStreamEncryptionConfigurationInput
+    export type ElasticsearchRetryOptions = _0.ElasticsearchRetryOptions
+    export type KMSEncryptionConfig = _0.KMSEncryptionConfig
+    export type OutputFormatConfiguration = _0.OutputFormatConfiguration
+    export type ElasticsearchDestinationConfiguration = _0.ElasticsearchDestinationConfiguration
+    export type Deserializer = _0.Deserializer
+    export type KinesisStreamSourceConfiguration = _0.KinesisStreamSourceConfiguration
+    export type RedshiftRetryOptions = _0.RedshiftRetryOptions
+    export type RetryOptions = _0.RetryOptions
+    export type ParquetSerDe = _0.ParquetSerDe
+    export type S3DestinationConfiguration = _0.S3DestinationConfiguration
+    export type VpcConfiguration = _0.VpcConfiguration
+    export type ExtendedS3DestinationConfiguration = _0.ExtendedS3DestinationConfiguration
+    export type RedshiftDestinationConfiguration = _0.RedshiftDestinationConfiguration
+    export type HttpEndpointCommonAttribute = _0.HttpEndpointCommonAttribute
+    export type HttpEndpointDestinationConfiguration = _0.HttpEndpointDestinationConfiguration
+  }
 }

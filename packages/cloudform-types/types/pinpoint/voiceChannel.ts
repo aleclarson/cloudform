@@ -17,15 +17,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VoiceChannelProperties {
+export interface Properties {
     Enabled?: Value<boolean>
     ApplicationId: Value<string>
 }
 
-export default class VoiceChannel extends ResourceBase<VoiceChannelProperties> {
+class VoiceChannel extends ResourceBase<Properties> {
 
 
-    constructor(properties: VoiceChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::VoiceChannel', properties)
     }
 }
+export { VoiceChannel as R }

@@ -28,16 +28,17 @@ export class IpamOperatingRegion {
     }
 }
 
-export interface IPAMProperties {
+export interface Properties {
     Description?: Value<string>
     OperatingRegions?: List<IpamOperatingRegion>
     Tags?: List<ResourceTag>
 }
 
-export default class IPAM extends ResourceBase<IPAMProperties> {
+class IPAM extends ResourceBase<Properties> {
     static IpamOperatingRegion = IpamOperatingRegion
 
-    constructor(properties?: IPAMProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::IPAM', properties || {})
     }
 }
+export { IPAM as R }

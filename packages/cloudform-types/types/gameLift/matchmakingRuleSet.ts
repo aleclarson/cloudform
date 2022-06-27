@@ -20,16 +20,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface MatchmakingRuleSetProperties {
+export interface Properties {
     RuleSetBody: Value<string>
     Tags?: List<ResourceTag>
     Name: Value<string>
 }
 
-export default class MatchmakingRuleSet extends ResourceBase<MatchmakingRuleSetProperties> {
+class MatchmakingRuleSet extends ResourceBase<Properties> {
 
 
-    constructor(properties: MatchmakingRuleSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::GameLift::MatchmakingRuleSet', properties)
     }
 }
+export { MatchmakingRuleSet as R }

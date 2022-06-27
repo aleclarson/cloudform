@@ -17,16 +17,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface EventStreamProperties {
+export interface Properties {
     ApplicationId: Value<string>
     DestinationStreamArn: Value<string>
     RoleArn: Value<string>
 }
 
-export default class EventStream extends ResourceBase<EventStreamProperties> {
+class EventStream extends ResourceBase<Properties> {
 
 
-    constructor(properties: EventStreamProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::EventStream', properties)
     }
 }
+export { EventStream as R }

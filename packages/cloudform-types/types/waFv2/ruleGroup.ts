@@ -352,7 +352,7 @@ export class SizeConstraintStatement {
     }
 }
 
-export interface RuleGroupProperties {
+export interface Properties {
     Capacity: Value<number>
     Description?: Value<string>
     Name?: Value<string>
@@ -363,7 +363,7 @@ export interface RuleGroupProperties {
     CustomResponseBodies?: {[key: string]: CustomResponseBody}
 }
 
-export default class RuleGroup extends ResourceBase<RuleGroupProperties> {
+class RuleGroup extends ResourceBase<Properties> {
     static JsonMatchPattern = JsonMatchPattern
     static XssMatchStatement = XssMatchStatement
     static LabelMatchStatement = LabelMatchStatement
@@ -398,7 +398,8 @@ export default class RuleGroup extends ResourceBase<RuleGroupProperties> {
     static ForwardedIPConfiguration = ForwardedIPConfiguration
     static SizeConstraintStatement = SizeConstraintStatement
 
-    constructor(properties: RuleGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAFv2::RuleGroup', properties)
     }
 }
+export { RuleGroup as R }

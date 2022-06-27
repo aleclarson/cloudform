@@ -34,16 +34,17 @@ export class FirewallRule {
     }
 }
 
-export interface FirewallRuleGroupProperties {
+export interface Properties {
     Name?: Value<string>
     FirewallRules?: List<FirewallRule>
     Tags?: List<ResourceTag>
 }
 
-export default class FirewallRuleGroup extends ResourceBase<FirewallRuleGroupProperties> {
+class FirewallRuleGroup extends ResourceBase<Properties> {
     static FirewallRule = FirewallRule
 
-    constructor(properties?: FirewallRuleGroupProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Route53Resolver::FirewallRuleGroup', properties || {})
     }
 }
+export { FirewallRuleGroup as R }

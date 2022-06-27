@@ -28,17 +28,18 @@ export class ProvisionedConcurrencyConfiguration {
     }
 }
 
-export interface VersionProperties {
+export interface Properties {
     CodeSha256?: Value<string>
     Description?: Value<string>
     FunctionName: Value<string>
     ProvisionedConcurrencyConfig?: ProvisionedConcurrencyConfiguration
 }
 
-export default class Version extends ResourceBase<VersionProperties> {
+class Version extends ResourceBase<Properties> {
     static ProvisionedConcurrencyConfiguration = ProvisionedConcurrencyConfiguration
 
-    constructor(properties: VersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lambda::Version', properties)
     }
 }
+export { Version as R }

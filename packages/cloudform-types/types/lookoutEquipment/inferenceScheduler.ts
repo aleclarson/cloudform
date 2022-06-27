@@ -9,7 +9,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface InferenceSchedulerProperties {
+export interface Properties {
     DataDelayOffsetInMinutes?: Value<number>
     DataInputConfiguration: {[key: string]: any}
     DataOutputConfiguration: {[key: string]: any}
@@ -21,10 +21,11 @@ export interface InferenceSchedulerProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class InferenceScheduler extends ResourceBase<InferenceSchedulerProperties> {
+class InferenceScheduler extends ResourceBase<Properties> {
 
 
-    constructor(properties: InferenceSchedulerProperties) {
+    constructor(properties: Properties) {
         super('AWS::LookoutEquipment::InferenceScheduler', properties)
     }
 }
+export { InferenceScheduler as R }

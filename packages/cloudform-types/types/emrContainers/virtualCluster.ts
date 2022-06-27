@@ -43,18 +43,19 @@ export class ContainerProvider {
     }
 }
 
-export interface VirtualClusterProperties {
+export interface Properties {
     ContainerProvider: ContainerProvider
     Name: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class VirtualCluster extends ResourceBase<VirtualClusterProperties> {
+class VirtualCluster extends ResourceBase<Properties> {
     static ContainerInfo = ContainerInfo
     static EksInfo = EksInfo
     static ContainerProvider = ContainerProvider
 
-    constructor(properties: VirtualClusterProperties) {
+    constructor(properties: Properties) {
         super('AWS::EMRContainers::VirtualCluster', properties)
     }
 }
+export { VirtualCluster as R }

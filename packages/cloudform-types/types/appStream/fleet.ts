@@ -52,7 +52,7 @@ export class ComputeCapacity {
     }
 }
 
-export interface FleetProperties {
+export interface Properties {
     Description?: Value<string>
     ComputeCapacity?: ComputeCapacity
     Platform?: Value<string>
@@ -76,13 +76,14 @@ export interface FleetProperties {
     ImageArn?: Value<string>
 }
 
-export default class Fleet extends ResourceBase<FleetProperties> {
+class Fleet extends ResourceBase<Properties> {
     static DomainJoinInfo = DomainJoinInfo
     static S3Location = S3Location
     static VpcConfig = VpcConfig
     static ComputeCapacity = ComputeCapacity
 
-    constructor(properties: FleetProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppStream::Fleet', properties)
     }
 }
+export { Fleet as R }

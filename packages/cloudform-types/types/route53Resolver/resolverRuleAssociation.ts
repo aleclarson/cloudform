@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResolverRuleAssociationProperties {
+export interface Properties {
     VPCId: Value<string>
     ResolverRuleId: Value<string>
     Name?: Value<string>
 }
 
-export default class ResolverRuleAssociation extends ResourceBase<ResolverRuleAssociationProperties> {
+class ResolverRuleAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResolverRuleAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53Resolver::ResolverRuleAssociation', properties)
     }
 }
+export { ResolverRuleAssociation as R }

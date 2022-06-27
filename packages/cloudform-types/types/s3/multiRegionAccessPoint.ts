@@ -40,17 +40,18 @@ export class PublicAccessBlockConfiguration {
     }
 }
 
-export interface MultiRegionAccessPointProperties {
+export interface Properties {
     Name?: Value<string>
     PublicAccessBlockConfiguration?: PublicAccessBlockConfiguration
     Regions: List<Region>
 }
 
-export default class MultiRegionAccessPoint extends ResourceBase<MultiRegionAccessPointProperties> {
+class MultiRegionAccessPoint extends ResourceBase<Properties> {
     static Region = Region
     static PublicAccessBlockConfiguration = PublicAccessBlockConfiguration
 
-    constructor(properties: MultiRegionAccessPointProperties) {
+    constructor(properties: Properties) {
         super('AWS::S3::MultiRegionAccessPoint', properties)
     }
 }
+export { MultiRegionAccessPoint as R }

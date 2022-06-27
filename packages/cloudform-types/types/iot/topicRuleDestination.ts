@@ -38,17 +38,18 @@ export class HttpUrlDestinationSummary {
     }
 }
 
-export interface TopicRuleDestinationProperties {
+export interface Properties {
     Status?: Value<string>
     HttpUrlProperties?: HttpUrlDestinationSummary
     VpcProperties?: VpcDestinationProperties
 }
 
-export default class TopicRuleDestination extends ResourceBase<TopicRuleDestinationProperties> {
+class TopicRuleDestination extends ResourceBase<Properties> {
     static VpcDestinationProperties = VpcDestinationProperties
     static HttpUrlDestinationSummary = HttpUrlDestinationSummary
 
-    constructor(properties?: TopicRuleDestinationProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IoT::TopicRuleDestination', properties || {})
     }
 }
+export { TopicRuleDestination as R }

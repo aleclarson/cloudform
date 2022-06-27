@@ -37,7 +37,7 @@ export class PrivateIpAddressSpecification {
     }
 }
 
-export interface NetworkInterfaceProperties {
+export interface Properties {
     Description?: Value<string>
     PrivateIpAddress?: Value<string>
     PrivateIpAddresses?: List<PrivateIpAddressSpecification>
@@ -51,11 +51,12 @@ export interface NetworkInterfaceProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class NetworkInterface extends ResourceBase<NetworkInterfaceProperties> {
+class NetworkInterface extends ResourceBase<Properties> {
     static InstanceIpv6Address = InstanceIpv6Address
     static PrivateIpAddressSpecification = PrivateIpAddressSpecification
 
-    constructor(properties: NetworkInterfaceProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::NetworkInterface', properties)
     }
 }
+export { NetworkInterface as R }

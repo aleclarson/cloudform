@@ -38,16 +38,17 @@ export class SqlInjectionMatchTuple {
     }
 }
 
-export interface SqlInjectionMatchSetProperties {
+export interface Properties {
     SqlInjectionMatchTuples?: List<SqlInjectionMatchTuple>
     Name: Value<string>
 }
 
-export default class SqlInjectionMatchSet extends ResourceBase<SqlInjectionMatchSetProperties> {
+class SqlInjectionMatchSet extends ResourceBase<Properties> {
     static FieldToMatch = FieldToMatch
     static SqlInjectionMatchTuple = SqlInjectionMatchTuple
 
-    constructor(properties: SqlInjectionMatchSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAFRegional::SqlInjectionMatchSet', properties)
     }
 }
+export { SqlInjectionMatchSet as R }

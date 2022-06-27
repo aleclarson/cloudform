@@ -1,1 +1,1 @@
-import Project_ from'./project';export declare namespace LookoutVision{const Project:typeof Project_;type Project=Project_;}
+import*as _0 from'./project';export declare namespace LookoutVision{const Project:typeof _0.R;type Project=_0.R;}

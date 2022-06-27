@@ -59,7 +59,7 @@ export class TaskSchedule {
     }
 }
 
-export interface TaskProperties {
+export interface Properties {
     Excludes?: List<FilterRule>
     Includes?: List<FilterRule>
     Tags?: List<ResourceTag>
@@ -71,12 +71,13 @@ export interface TaskProperties {
     SourceLocationArn: Value<string>
 }
 
-export default class Task extends ResourceBase<TaskProperties> {
+class Task extends ResourceBase<Properties> {
     static FilterRule = FilterRule
     static Options = Options
     static TaskSchedule = TaskSchedule
 
-    constructor(properties: TaskProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataSync::Task', properties)
     }
 }
+export { Task as R }

@@ -64,7 +64,7 @@ export class ProvisionedThroughput {
     }
 }
 
-export interface TableProperties {
+export interface Properties {
     KeyspaceName: Value<string>
     TableName?: Value<string>
     RegularColumns?: List<Column>
@@ -77,14 +77,15 @@ export interface TableProperties {
     EncryptionSpecification?: EncryptionSpecification
 }
 
-export default class Table extends ResourceBase<TableProperties> {
+class Table extends ResourceBase<Properties> {
     static BillingMode = BillingMode
     static EncryptionSpecification = EncryptionSpecification
     static Column = Column
     static ClusteringKeyColumn = ClusteringKeyColumn
     static ProvisionedThroughput = ProvisionedThroughput
 
-    constructor(properties: TableProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cassandra::Table', properties)
     }
 }
+export { Table as R }

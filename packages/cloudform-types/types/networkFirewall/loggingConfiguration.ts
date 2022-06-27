@@ -38,17 +38,18 @@ export class LoggingConfigurationInner {
     }
 }
 
-export interface LoggingConfigurationProperties {
+export interface Properties {
     FirewallName?: Value<string>
     FirewallArn: Value<string>
     LoggingConfiguration: LoggingConfiguration
 }
 
-export default class LoggingConfiguration extends ResourceBase<LoggingConfigurationProperties> {
+class LoggingConfiguration extends ResourceBase<Properties> {
     static LogDestinationConfig = LogDestinationConfig
     static LoggingConfiguration = LoggingConfigurationInner
 
-    constructor(properties: LoggingConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::NetworkFirewall::LoggingConfiguration', properties)
     }
 }
+export { LoggingConfiguration as R }

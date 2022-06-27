@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class ComputeResources {
@@ -73,7 +73,7 @@ export class Ec2ConfigurationObject {
     }
 }
 
-export interface ComputeEnvironmentProperties {
+export interface Properties {
     ComputeEnvironmentName?: Value<string>
     ComputeResources?: ComputeResources
     ReplaceComputeEnvironment?: Value<boolean>
@@ -85,13 +85,14 @@ export interface ComputeEnvironmentProperties {
     UnmanagedvCpus?: Value<number>
 }
 
-export default class ComputeEnvironment extends ResourceBase<ComputeEnvironmentProperties> {
+class ComputeEnvironment extends ResourceBase<Properties> {
     static ComputeResources = ComputeResources
     static LaunchTemplateSpecification = LaunchTemplateSpecification
     static UpdatePolicy = UpdatePolicy
     static Ec2ConfigurationObject = Ec2ConfigurationObject
 
-    constructor(properties: ComputeEnvironmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::Batch::ComputeEnvironment', properties)
     }
 }
+export { ComputeEnvironment as R }

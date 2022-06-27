@@ -48,7 +48,7 @@ export class InsightSelector {
     }
 }
 
-export interface TrailProperties {
+export interface Properties {
     CloudWatchLogsLogGroupArn?: Value<string>
     CloudWatchLogsRoleArn?: Value<string>
     EnableLogFileValidation?: Value<boolean>
@@ -66,12 +66,13 @@ export interface TrailProperties {
     InsightSelectors?: List<InsightSelector>
 }
 
-export default class Trail extends ResourceBase<TrailProperties> {
+class Trail extends ResourceBase<Properties> {
     static EventSelector = EventSelector
     static DataResource = DataResource
     static InsightSelector = InsightSelector
 
-    constructor(properties: TrailProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudTrail::Trail', properties)
     }
 }
+export { Trail as R }

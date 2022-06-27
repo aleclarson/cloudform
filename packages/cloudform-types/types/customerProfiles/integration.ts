@@ -173,7 +173,7 @@ export class SourceFlowConfig {
     }
 }
 
-export interface IntegrationProperties {
+export interface Properties {
     DomainName: Value<string>
     Uri?: Value<string>
     FlowDefinition?: FlowDefinition
@@ -182,7 +182,7 @@ export interface IntegrationProperties {
     ObjectTypeNames?: List<ObjectTypeMapping>
 }
 
-export default class Integration extends ResourceBase<IntegrationProperties> {
+class Integration extends ResourceBase<Properties> {
     static Task = Task
     static TriggerProperties = TriggerProperties
     static ObjectTypeMapping = ObjectTypeMapping
@@ -200,7 +200,8 @@ export default class Integration extends ResourceBase<IntegrationProperties> {
     static TriggerConfig = TriggerConfig
     static SourceFlowConfig = SourceFlowConfig
 
-    constructor(properties: IntegrationProperties) {
+    constructor(properties: Properties) {
         super('AWS::CustomerProfiles::Integration', properties)
     }
 }
+export { Integration as R }

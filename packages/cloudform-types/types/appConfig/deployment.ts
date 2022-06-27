@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Tags {
@@ -29,7 +29,7 @@ export class Tags {
     }
 }
 
-export interface DeploymentProperties {
+export interface Properties {
     DeploymentStrategyId: Value<string>
     ConfigurationProfileId: Value<string>
     EnvironmentId: Value<string>
@@ -39,10 +39,11 @@ export interface DeploymentProperties {
     Tags?: List<Tags>
 }
 
-export default class Deployment extends ResourceBase<DeploymentProperties> {
+class Deployment extends ResourceBase<Properties> {
     static Tags = Tags
 
-    constructor(properties: DeploymentProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppConfig::Deployment', properties)
     }
 }
+export { Deployment as R }

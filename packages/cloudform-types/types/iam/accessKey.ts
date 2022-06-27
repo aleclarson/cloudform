@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AccessKeyProperties {
+export interface Properties {
     Serial?: Value<number>
     Status?: Value<string>
     UserName: Value<string>
 }
 
-export default class AccessKey extends ResourceBase<AccessKeyProperties> {
+class AccessKey extends ResourceBase<Properties> {
 
 
-    constructor(properties: AccessKeyProperties) {
+    constructor(properties: Properties) {
         super('AWS::IAM::AccessKey', properties)
     }
 }
+export { AccessKey as R }

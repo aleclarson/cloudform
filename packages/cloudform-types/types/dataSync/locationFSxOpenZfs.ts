@@ -35,7 +35,7 @@ export class MountOptions {
     }
 }
 
-export interface LocationFSxOpenZFSProperties {
+export interface Properties {
     FsxFilesystemArn: Value<string>
     SecurityGroupArns: List<Value<string>>
     Protocol: Protocol
@@ -43,12 +43,13 @@ export interface LocationFSxOpenZFSProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class LocationFSxOpenZFS extends ResourceBase<LocationFSxOpenZFSProperties> {
+class LocationFSxOpenZFS extends ResourceBase<Properties> {
     static NFS = NFS
     static Protocol = Protocol
     static MountOptions = MountOptions
 
-    constructor(properties: LocationFSxOpenZFSProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataSync::LocationFSxOpenZFS', properties)
     }
 }
+export { LocationFSxOpenZFS as R }

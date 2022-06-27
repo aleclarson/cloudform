@@ -11,7 +11,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NetworkAnalyzerConfigurationProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     TraceContent?: {[key: string]: any}
@@ -20,10 +20,11 @@ export interface NetworkAnalyzerConfigurationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class NetworkAnalyzerConfiguration extends ResourceBase<NetworkAnalyzerConfigurationProperties> {
+class NetworkAnalyzerConfiguration extends ResourceBase<Properties> {
 
 
-    constructor(properties: NetworkAnalyzerConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTWireless::NetworkAnalyzerConfiguration', properties)
     }
 }
+export { NetworkAnalyzerConfiguration as R }

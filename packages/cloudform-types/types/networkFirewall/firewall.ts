@@ -28,7 +28,7 @@ export class SubnetMapping {
     }
 }
 
-export interface FirewallProperties {
+export interface Properties {
     FirewallName: Value<string>
     FirewallPolicyArn: Value<string>
     VpcId: Value<string>
@@ -40,10 +40,11 @@ export interface FirewallProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Firewall extends ResourceBase<FirewallProperties> {
+class Firewall extends ResourceBase<Properties> {
     static SubnetMapping = SubnetMapping
 
-    constructor(properties: FirewallProperties) {
+    constructor(properties: Properties) {
         super('AWS::NetworkFirewall::Firewall', properties)
     }
 }
+export { Firewall as R }

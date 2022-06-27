@@ -317,7 +317,7 @@ export class CatalogConfiguration {
     }
 }
 
-export interface ApplicationProperties {
+export interface Properties {
     ApplicationConfiguration?: ApplicationConfiguration
     ApplicationDescription?: Value<string>
     ApplicationMode?: Value<string>
@@ -327,7 +327,7 @@ export interface ApplicationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Application extends ResourceBase<ApplicationProperties> {
+class Application extends ResourceBase<Properties> {
     static CustomArtifactConfiguration = CustomArtifactConfiguration
     static S3ContentLocation = S3ContentLocation
     static DeployAsApplicationConfiguration = DeployAsApplicationConfiguration
@@ -361,7 +361,8 @@ export default class Application extends ResourceBase<ApplicationProperties> {
     static EnvironmentProperties = EnvironmentProperties
     static CatalogConfiguration = CatalogConfiguration
 
-    constructor(properties: ApplicationProperties) {
+    constructor(properties: Properties) {
         super('AWS::KinesisAnalyticsV2::Application', properties)
     }
 }
+export { Application as R }

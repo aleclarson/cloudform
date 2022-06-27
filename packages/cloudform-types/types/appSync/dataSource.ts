@@ -116,7 +116,7 @@ export class DeltaSyncConfig {
     }
 }
 
-export interface DataSourceProperties {
+export interface Properties {
     Type: Value<string>
     OpenSearchServiceConfig?: OpenSearchServiceConfig
     Description?: Value<string>
@@ -130,7 +130,7 @@ export interface DataSourceProperties {
     ElasticsearchConfig?: ElasticsearchConfig
 }
 
-export default class DataSource extends ResourceBase<DataSourceProperties> {
+class DataSource extends ResourceBase<Properties> {
     static RelationalDatabaseConfig = RelationalDatabaseConfig
     static LambdaConfig = LambdaConfig
     static HttpConfig = HttpConfig
@@ -142,7 +142,8 @@ export default class DataSource extends ResourceBase<DataSourceProperties> {
     static ElasticsearchConfig = ElasticsearchConfig
     static DeltaSyncConfig = DeltaSyncConfig
 
-    constructor(properties: DataSourceProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppSync::DataSource', properties)
     }
 }
+export { DataSource as R }

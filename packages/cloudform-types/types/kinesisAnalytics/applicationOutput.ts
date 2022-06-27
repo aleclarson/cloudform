@@ -66,19 +66,20 @@ export class DestinationSchema {
     }
 }
 
-export interface ApplicationOutputProperties {
+export interface Properties {
     ApplicationName: Value<string>
     Output: Output
 }
 
-export default class ApplicationOutput extends ResourceBase<ApplicationOutputProperties> {
+class ApplicationOutput extends ResourceBase<Properties> {
     static KinesisFirehoseOutput = KinesisFirehoseOutput
     static KinesisStreamsOutput = KinesisStreamsOutput
     static LambdaOutput = LambdaOutput
     static Output = Output
     static DestinationSchema = DestinationSchema
 
-    constructor(properties: ApplicationOutputProperties) {
+    constructor(properties: Properties) {
         super('AWS::KinesisAnalytics::ApplicationOutput', properties)
     }
 }
+export { ApplicationOutput as R }

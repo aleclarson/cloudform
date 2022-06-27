@@ -17,64 +17,124 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import VoiceChannel_ from './voiceChannel'
-import EventStream_ from './eventStream'
-import EmailTemplate_ from './emailTemplate'
-import BaiduChannel_ from './baiduChannel'
-import GCMChannel_ from './gcmChannel'
-import APNSChannel_ from './apnsChannel'
-import InAppTemplate_ from './inAppTemplate'
-import Campaign_ from './campaign'
-import APNSVoipSandboxChannel_ from './apnsVoipSandboxChannel'
-import APNSVoipChannel_ from './apnsVoipChannel'
-import EmailChannel_ from './emailChannel'
-import SMSChannel_ from './smsChannel'
-import SmsTemplate_ from './smsTemplate'
-import Segment_ from './segment'
-import APNSSandboxChannel_ from './apnsSandboxChannel'
-import ADMChannel_ from './admChannel'
-import ApplicationSettings_ from './applicationSettings'
-import PushTemplate_ from './pushTemplate'
-import App_ from './app'
+import * as _0 from './voiceChannel'
+import * as _1 from './eventStream'
+import * as _2 from './emailTemplate'
+import * as _3 from './baiduChannel'
+import * as _4 from './gcmChannel'
+import * as _5 from './apnsChannel'
+import * as _6 from './inAppTemplate'
+import * as _7 from './campaign'
+import * as _8 from './apnsVoipSandboxChannel'
+import * as _9 from './apnsVoipChannel'
+import * as _a from './emailChannel'
+import * as _b from './smsChannel'
+import * as _c from './smsTemplate'
+import * as _d from './segment'
+import * as _e from './apnsSandboxChannel'
+import * as _f from './admChannel'
+import * as _10 from './applicationSettings'
+import * as _11 from './pushTemplate'
+import * as _12 from './app'
 
 export namespace Pinpoint {
-  export const VoiceChannel = VoiceChannel_
-  export const EventStream = EventStream_
-  export const EmailTemplate = EmailTemplate_
-  export const BaiduChannel = BaiduChannel_
-  export const GCMChannel = GCMChannel_
-  export const APNSChannel = APNSChannel_
-  export const InAppTemplate = InAppTemplate_
-  export const Campaign = Campaign_
-  export const APNSVoipSandboxChannel = APNSVoipSandboxChannel_
-  export const APNSVoipChannel = APNSVoipChannel_
-  export const EmailChannel = EmailChannel_
-  export const SMSChannel = SMSChannel_
-  export const SmsTemplate = SmsTemplate_
-  export const Segment = Segment_
-  export const APNSSandboxChannel = APNSSandboxChannel_
-  export const ADMChannel = ADMChannel_
-  export const ApplicationSettings = ApplicationSettings_
-  export const PushTemplate = PushTemplate_
-  export const App = App_
+  export const VoiceChannel = _0.R
+  export const EventStream = _1.R
+  export const EmailTemplate = _2.R
+  export const BaiduChannel = _3.R
+  export const GCMChannel = _4.R
+  export const APNSChannel = _5.R
+  export const InAppTemplate = _6.R
+  export const Campaign = _7.R
+  export const APNSVoipSandboxChannel = _8.R
+  export const APNSVoipChannel = _9.R
+  export const EmailChannel = _a.R
+  export const SMSChannel = _b.R
+  export const SmsTemplate = _c.R
+  export const Segment = _d.R
+  export const APNSSandboxChannel = _e.R
+  export const ADMChannel = _f.R
+  export const ApplicationSettings = _10.R
+  export const PushTemplate = _11.R
+  export const App = _12.R
 
-  export type VoiceChannel = VoiceChannel_
-  export type EventStream = EventStream_
-  export type EmailTemplate = EmailTemplate_
-  export type BaiduChannel = BaiduChannel_
-  export type GCMChannel = GCMChannel_
-  export type APNSChannel = APNSChannel_
-  export type InAppTemplate = InAppTemplate_
-  export type Campaign = Campaign_
-  export type APNSVoipSandboxChannel = APNSVoipSandboxChannel_
-  export type APNSVoipChannel = APNSVoipChannel_
-  export type EmailChannel = EmailChannel_
-  export type SMSChannel = SMSChannel_
-  export type SmsTemplate = SmsTemplate_
-  export type Segment = Segment_
-  export type APNSSandboxChannel = APNSSandboxChannel_
-  export type ADMChannel = ADMChannel_
-  export type ApplicationSettings = ApplicationSettings_
-  export type PushTemplate = PushTemplate_
-  export type App = App_
+  export type VoiceChannel = _0.R
+  export type EventStream = _1.R
+  export type EmailTemplate = _2.R
+  export type BaiduChannel = _3.R
+  export type GCMChannel = _4.R
+  export type APNSChannel = _5.R
+  export type InAppTemplate = _6.R
+  export type Campaign = _7.R
+  export type APNSVoipSandboxChannel = _8.R
+  export type APNSVoipChannel = _9.R
+  export type EmailChannel = _a.R
+  export type SMSChannel = _b.R
+  export type SmsTemplate = _c.R
+  export type Segment = _d.R
+  export type APNSSandboxChannel = _e.R
+  export type ADMChannel = _f.R
+  export type ApplicationSettings = _10.R
+  export type PushTemplate = _11.R
+  export type App = _12.R
+
+  export namespace InAppTemplate {
+    export type DefaultButtonConfiguration = _6.DefaultButtonConfiguration
+    export type ButtonConfig = _6.ButtonConfig
+    export type InAppMessageContent = _6.InAppMessageContent
+    export type BodyConfig = _6.BodyConfig
+    export type HeaderConfig = _6.HeaderConfig
+    export type OverrideButtonConfiguration = _6.OverrideButtonConfiguration
+  }
+  export namespace Campaign {
+    export type MetricDimension = _7.MetricDimension
+    export type InAppMessageButton = _7.InAppMessageButton
+    export type InAppMessageBodyConfig = _7.InAppMessageBodyConfig
+    export type InAppMessageContent = _7.InAppMessageContent
+    export type DefaultButtonConfiguration = _7.DefaultButtonConfiguration
+    export type CampaignCustomMessage = _7.CampaignCustomMessage
+    export type InAppMessageHeaderConfig = _7.InAppMessageHeaderConfig
+    export type Schedule = _7.Schedule
+    export type TemplateConfiguration = _7.TemplateConfiguration
+    export type QuietTime = _7.QuietTime
+    export type Message = _7.Message
+    export type CampaignInAppMessage = _7.CampaignInAppMessage
+    export type CampaignEventFilter = _7.CampaignEventFilter
+    export type Template = _7.Template
+    export type CampaignSmsMessage = _7.CampaignSmsMessage
+    export type WriteTreatmentResource = _7.WriteTreatmentResource
+    export type SetDimension = _7.SetDimension
+    export type EventDimensions = _7.EventDimensions
+    export type CustomDeliveryConfiguration = _7.CustomDeliveryConfiguration
+    export type OverrideButtonConfiguration = _7.OverrideButtonConfiguration
+    export type Limits = _7.Limits
+    export type AttributeDimension = _7.AttributeDimension
+    export type MessageConfiguration = _7.MessageConfiguration
+    export type CampaignHook = _7.CampaignHook
+    export type CampaignEmailMessage = _7.CampaignEmailMessage
+  }
+  export namespace Segment {
+    export type AttributeDimension = _d.AttributeDimension
+    export type Recency = _d.Recency
+    export type Groups = _d.Groups
+    export type Location = _d.Location
+    export type SegmentGroups = _d.SegmentGroups
+    export type Coordinates = _d.Coordinates
+    export type SegmentDimensions = _d.SegmentDimensions
+    export type SourceSegments = _d.SourceSegments
+    export type GPSPoint = _d.GPSPoint
+    export type Demographic = _d.Demographic
+    export type SetDimension = _d.SetDimension
+    export type Behavior = _d.Behavior
+  }
+  export namespace ApplicationSettings {
+    export type CampaignHook = _10.CampaignHook
+    export type Limits = _10.Limits
+    export type QuietTime = _10.QuietTime
+  }
+  export namespace PushTemplate {
+    export type DefaultPushNotificationTemplate = _11.DefaultPushNotificationTemplate
+    export type AndroidPushNotificationTemplate = _11.AndroidPushNotificationTemplate
+    export type APNSPushNotificationTemplate = _11.APNSPushNotificationTemplate
+  }
 }

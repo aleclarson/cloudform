@@ -17,19 +17,20 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface HubProperties {
+export interface Properties {
     Tags?: {[key: string]: any}
 }
 
-export default class Hub extends ResourceBase<HubProperties> {
+class Hub extends ResourceBase<Properties> {
 
 
-    constructor(properties?: HubProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SecurityHub::Hub', properties || {})
     }
 }
+export { Hub as R }

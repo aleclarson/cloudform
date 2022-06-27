@@ -1,1 +1,1 @@
-import Repository_ from'./repository';export declare namespace CodeCommit{const Repository:typeof Repository_;type Repository=Repository_;}
+import*as _0 from'./repository';export declare namespace CodeCommit{const Repository:typeof _0.R;type Repository=_0.R;namespace Repository{type Code=_0.Code;type S3=_0.S3;type RepositoryTrigger=_0.RepositoryTrigger;}}

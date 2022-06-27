@@ -88,7 +88,7 @@ export class UserSettings {
     }
 }
 
-export interface UserProfileProperties {
+export interface Properties {
     DomainId: Value<string>
     SingleSignOnUserIdentifier?: Value<string>
     SingleSignOnUserValue?: Value<string>
@@ -97,7 +97,7 @@ export interface UserProfileProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class UserProfile extends ResourceBase<UserProfileProperties> {
+class UserProfile extends ResourceBase<Properties> {
     static JupyterServerAppSettings = JupyterServerAppSettings
     static ResourceSpec = ResourceSpec
     static RStudioServerProAppSettings = RStudioServerProAppSettings
@@ -106,7 +106,8 @@ export default class UserProfile extends ResourceBase<UserProfileProperties> {
     static SharingSettings = SharingSettings
     static UserSettings = UserSettings
 
-    constructor(properties: UserProfileProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::UserProfile', properties)
     }
 }
+export { UserProfile as R }

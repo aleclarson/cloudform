@@ -46,7 +46,7 @@ export class MetricStreamStatisticsMetric {
     }
 }
 
-export interface MetricStreamProperties {
+export interface Properties {
     ExcludeFilters?: List<MetricStreamFilter>
     FirehoseArn: Value<string>
     IncludeFilters?: List<MetricStreamFilter>
@@ -57,12 +57,13 @@ export interface MetricStreamProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class MetricStream extends ResourceBase<MetricStreamProperties> {
+class MetricStream extends ResourceBase<Properties> {
     static MetricStreamStatisticsConfiguration = MetricStreamStatisticsConfiguration
     static MetricStreamFilter = MetricStreamFilter
     static MetricStreamStatisticsMetric = MetricStreamStatisticsMetric
 
-    constructor(properties: MetricStreamProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudWatch::MetricStream', properties)
     }
 }
+export { MetricStream as R }

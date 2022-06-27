@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const domain_1=require("./domain");var Elasticsearch;!function(Elasticsearch){Elasticsearch.Domain=domain_1.default}(Elasticsearch=exports.Elasticsearch||(exports.Elasticsearch={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Elasticsearch=void 0;const _0=require("./domain");var Elasticsearch;!function(Elasticsearch){Elasticsearch.Domain=_0.R}(Elasticsearch=exports.Elasticsearch||(exports.Elasticsearch={}));

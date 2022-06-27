@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LocalGatewayRouteProperties {
+export interface Properties {
     DestinationCidrBlock: Value<string>
     LocalGatewayRouteTableId: Value<string>
     LocalGatewayVirtualInterfaceGroupId: Value<string>
 }
 
-export default class LocalGatewayRoute extends ResourceBase<LocalGatewayRouteProperties> {
+class LocalGatewayRoute extends ResourceBase<Properties> {
 
 
-    constructor(properties: LocalGatewayRouteProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::LocalGatewayRoute', properties)
     }
 }
+export { LocalGatewayRoute as R }

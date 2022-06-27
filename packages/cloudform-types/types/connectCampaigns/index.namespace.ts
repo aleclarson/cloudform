@@ -17,10 +17,14 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Campaign_ from './campaign'
+import * as _0 from './campaign'
 
 export namespace ConnectCampaigns {
-  export const Campaign = Campaign_
+  export const Campaign = _0.R
 
-  export type Campaign = Campaign_
+  export type Campaign = _0.R
+
+  export namespace Campaign {
+    export type OutboundCallConfig = _0.OutboundCallConfig
+  }
 }

@@ -17,10 +17,19 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Pipeline_ from './pipeline'
+import * as _0 from './pipeline'
 
 export namespace DataPipeline {
-  export const Pipeline = Pipeline_
+  export const Pipeline = _0.R
 
-  export type Pipeline = Pipeline_
+  export type Pipeline = _0.R
+
+  export namespace Pipeline {
+    export type PipelineObject = _0.PipelineObject
+    export type ParameterAttribute = _0.ParameterAttribute
+    export type PipelineTag = _0.PipelineTag
+    export type ParameterObject = _0.ParameterObject
+    export type ParameterValue = _0.ParameterValue
+    export type Field = _0.Field
+  }
 }

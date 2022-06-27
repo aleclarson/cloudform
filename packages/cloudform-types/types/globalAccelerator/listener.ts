@@ -29,17 +29,18 @@ export class PortRange {
     }
 }
 
-export interface ListenerProperties {
+export interface Properties {
     AcceleratorArn: Value<string>
     PortRanges: List<PortRange>
     Protocol: Value<string>
     ClientAffinity?: Value<string>
 }
 
-export default class Listener extends ResourceBase<ListenerProperties> {
+class Listener extends ResourceBase<Properties> {
     static PortRange = PortRange
 
-    constructor(properties: ListenerProperties) {
+    constructor(properties: Properties) {
         super('AWS::GlobalAccelerator::Listener', properties)
     }
 }
+export { Listener as R }

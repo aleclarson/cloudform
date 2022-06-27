@@ -38,7 +38,7 @@ export class ServerCertificateSummary {
     }
 }
 
-export interface DomainConfigurationProperties {
+export interface Properties {
     DomainConfigurationName?: Value<string>
     AuthorizerConfig?: AuthorizerConfig
     DomainName?: Value<string>
@@ -49,11 +49,12 @@ export interface DomainConfigurationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class DomainConfiguration extends ResourceBase<DomainConfigurationProperties> {
+class DomainConfiguration extends ResourceBase<Properties> {
     static AuthorizerConfig = AuthorizerConfig
     static ServerCertificateSummary = ServerCertificateSummary
 
-    constructor(properties?: DomainConfigurationProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IoT::DomainConfiguration', properties || {})
     }
 }
+export { DomainConfiguration as R }

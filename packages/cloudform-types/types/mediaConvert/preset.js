@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class Preset extends resource_1.ResourceBase{constructor(properties){super("AWS::MediaConvert::Preset",properties)}}exports.default=Preset;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class Preset extends resource_1.ResourceBase{constructor(properties){super("AWS::MediaConvert::Preset",properties)}}exports.R=Preset;

@@ -17,28 +17,55 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import UserProfile_ from './userProfile'
-import Volume_ from './volume'
-import App_ from './app'
-import ElasticLoadBalancerAttachment_ from './elasticLoadBalancerAttachment'
-import Instance_ from './instance'
-import Layer_ from './layer'
-import Stack_ from './stack'
+import * as _0 from './userProfile'
+import * as _1 from './volume'
+import * as _2 from './app'
+import * as _3 from './elasticLoadBalancerAttachment'
+import * as _4 from './instance'
+import * as _5 from './layer'
+import * as _6 from './stack'
 
 export namespace OpsWorks {
-  export const UserProfile = UserProfile_
-  export const Volume = Volume_
-  export const App = App_
-  export const ElasticLoadBalancerAttachment = ElasticLoadBalancerAttachment_
-  export const Instance = Instance_
-  export const Layer = Layer_
-  export const Stack = Stack_
+  export const UserProfile = _0.R
+  export const Volume = _1.R
+  export const App = _2.R
+  export const ElasticLoadBalancerAttachment = _3.R
+  export const Instance = _4.R
+  export const Layer = _5.R
+  export const Stack = _6.R
 
-  export type UserProfile = UserProfile_
-  export type Volume = Volume_
-  export type App = App_
-  export type ElasticLoadBalancerAttachment = ElasticLoadBalancerAttachment_
-  export type Instance = Instance_
-  export type Layer = Layer_
-  export type Stack = Stack_
+  export type UserProfile = _0.R
+  export type Volume = _1.R
+  export type App = _2.R
+  export type ElasticLoadBalancerAttachment = _3.R
+  export type Instance = _4.R
+  export type Layer = _5.R
+  export type Stack = _6.R
+
+  export namespace App {
+    export type DataSource = _2.DataSource
+    export type SslConfiguration = _2.SslConfiguration
+    export type EnvironmentVariable = _2.EnvironmentVariable
+    export type Source = _2.Source
+  }
+  export namespace Instance {
+    export type BlockDeviceMapping = _4.BlockDeviceMapping
+    export type TimeBasedAutoScaling = _4.TimeBasedAutoScaling
+    export type EbsBlockDevice = _4.EbsBlockDevice
+  }
+  export namespace Layer {
+    export type ShutdownEventConfiguration = _5.ShutdownEventConfiguration
+    export type VolumeConfiguration = _5.VolumeConfiguration
+    export type Recipes = _5.Recipes
+    export type LifecycleEventConfiguration = _5.LifecycleEventConfiguration
+    export type LoadBasedAutoScaling = _5.LoadBasedAutoScaling
+    export type AutoScalingThresholds = _5.AutoScalingThresholds
+  }
+  export namespace Stack {
+    export type StackConfigurationManager = _6.StackConfigurationManager
+    export type RdsDbInstance = _6.RdsDbInstance
+    export type Source = _6.Source
+    export type ChefConfiguration = _6.ChefConfiguration
+    export type ElasticIp = _6.ElasticIp
+  }
 }

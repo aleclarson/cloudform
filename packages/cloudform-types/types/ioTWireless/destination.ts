@@ -11,7 +11,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DestinationProperties {
+export interface Properties {
     Name: Value<string>
     Expression: Value<string>
     ExpressionType: Value<string>
@@ -20,10 +20,11 @@ export interface DestinationProperties {
     RoleArn: Value<string>
 }
 
-export default class Destination extends ResourceBase<DestinationProperties> {
+class Destination extends ResourceBase<Properties> {
 
 
-    constructor(properties: DestinationProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTWireless::Destination', properties)
     }
 }
+export { Destination as R }

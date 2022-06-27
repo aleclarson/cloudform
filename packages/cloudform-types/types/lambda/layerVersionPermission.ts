@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LayerVersionPermissionProperties {
+export interface Properties {
     Action: Value<string>
     LayerVersionArn: Value<string>
     OrganizationId?: Value<string>
     Principal: Value<string>
 }
 
-export default class LayerVersionPermission extends ResourceBase<LayerVersionPermissionProperties> {
+class LayerVersionPermission extends ResourceBase<Properties> {
 
 
-    constructor(properties: LayerVersionPermissionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lambda::LayerVersionPermission', properties)
     }
 }
+export { LayerVersionPermission as R }

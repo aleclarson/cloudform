@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DBParameterGroupProperties {
+export interface Properties {
     Description: Value<string>
     Family: Value<string>
     Parameters?: {[key: string]: Value<string>}
     Tags?: List<ResourceTag>
 }
 
-export default class DBParameterGroup extends ResourceBase<DBParameterGroupProperties> {
+class DBParameterGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: DBParameterGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::RDS::DBParameterGroup', properties)
     }
 }
+export { DBParameterGroup as R }

@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Cors {
@@ -44,7 +44,7 @@ export class BodyS3Location {
     }
 }
 
-export interface ApiProperties {
+export interface Properties {
     RouteSelectionExpression?: Value<string>
     BodyS3Location?: BodyS3Location
     Description?: Value<string>
@@ -64,11 +64,12 @@ export interface ApiProperties {
     ApiKeySelectionExpression?: Value<string>
 }
 
-export default class Api extends ResourceBase<ApiProperties> {
+class Api extends ResourceBase<Properties> {
     static Cors = Cors
     static BodyS3Location = BodyS3Location
 
-    constructor(properties?: ApiProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ApiGatewayV2::Api', properties || {})
     }
 }
+export { Api as R }

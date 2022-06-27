@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.HealthLake=void 0;const _0=require("./fhirDatastore");var HealthLake;!function(HealthLake){HealthLake.FHIRDatastore=_0.R}(HealthLake=exports.HealthLake||(exports.HealthLake={}));

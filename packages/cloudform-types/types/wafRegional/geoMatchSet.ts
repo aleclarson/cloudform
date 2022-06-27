@@ -29,15 +29,16 @@ export class GeoMatchConstraint {
     }
 }
 
-export interface GeoMatchSetProperties {
+export interface Properties {
     GeoMatchConstraints?: List<GeoMatchConstraint>
     Name: Value<string>
 }
 
-export default class GeoMatchSet extends ResourceBase<GeoMatchSetProperties> {
+class GeoMatchSet extends ResourceBase<Properties> {
     static GeoMatchConstraint = GeoMatchConstraint
 
-    constructor(properties: GeoMatchSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAFRegional::GeoMatchSet', properties)
     }
 }
+export { GeoMatchSet as R }

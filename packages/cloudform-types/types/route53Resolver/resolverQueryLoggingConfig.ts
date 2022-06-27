@@ -21,15 +21,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResolverQueryLoggingConfigProperties {
+export interface Properties {
     Name?: Value<string>
     DestinationArn?: Value<string>
 }
 
-export default class ResolverQueryLoggingConfig extends ResourceBase<ResolverQueryLoggingConfigProperties> {
+class ResolverQueryLoggingConfig extends ResourceBase<Properties> {
 
 
-    constructor(properties?: ResolverQueryLoggingConfigProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Route53Resolver::ResolverQueryLoggingConfig', properties || {})
     }
 }
+export { ResolverQueryLoggingConfig as R }

@@ -28,7 +28,7 @@ export class ProvisioningHook {
     }
 }
 
-export interface ProvisioningTemplateProperties {
+export interface Properties {
     TemplateName?: Value<string>
     Description?: Value<string>
     Enabled?: Value<boolean>
@@ -38,10 +38,11 @@ export interface ProvisioningTemplateProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ProvisioningTemplate extends ResourceBase<ProvisioningTemplateProperties> {
+class ProvisioningTemplate extends ResourceBase<Properties> {
     static ProvisioningHook = ProvisioningHook
 
-    constructor(properties: ProvisioningTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::ProvisioningTemplate', properties)
     }
 }
+export { ProvisioningTemplate as R }

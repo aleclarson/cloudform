@@ -341,7 +341,7 @@ export class HadoopJarStepConfig {
     }
 }
 
-export interface ClusterProperties {
+export interface Properties {
     AdditionalInfo?: {[key: string]: any}
     Applications?: List<Application>
     AutoScalingRole?: Value<string>
@@ -367,7 +367,7 @@ export interface ClusterProperties {
     VisibleToAllUsers?: Value<boolean>
 }
 
-export default class Cluster extends ResourceBase<ClusterProperties> {
+class Cluster extends ResourceBase<Properties> {
     static ComputeLimits = ComputeLimits
     static SpotProvisioningSpecification = SpotProvisioningSpecification
     static BootstrapActionConfig = BootstrapActionConfig
@@ -399,7 +399,8 @@ export default class Cluster extends ResourceBase<ClusterProperties> {
     static AutoScalingPolicy = AutoScalingPolicy
     static HadoopJarStepConfig = HadoopJarStepConfig
 
-    constructor(properties: ClusterProperties) {
+    constructor(properties: Properties) {
         super('AWS::EMR::Cluster', properties)
     }
 }
+export { Cluster as R }

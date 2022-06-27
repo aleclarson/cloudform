@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),queue_1=(exports.default=index_namespace_1.SQS,Object.defineProperty(exports,"__esModule",{value:!0}),require("./queue")),queuePolicy_1=require("./queuePolicy");var SQS;!function(SQS){SQS.Queue=queue_1.default,SQS.QueuePolicy=queuePolicy_1.default}(SQS=exports.SQS||(exports.SQS={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.SQS;

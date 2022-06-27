@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DomainNameApiAssociationProperties {
+export interface Properties {
     DomainName: Value<string>
     ApiId: Value<string>
 }
 
-export default class DomainNameApiAssociation extends ResourceBase<DomainNameApiAssociationProperties> {
+class DomainNameApiAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: DomainNameApiAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppSync::DomainNameApiAssociation', properties)
     }
 }
+export { DomainNameApiAssociation as R }

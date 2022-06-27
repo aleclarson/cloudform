@@ -29,7 +29,7 @@ export class Ec2Config {
     }
 }
 
-export interface LocationEFSProperties {
+export interface Properties {
     Ec2Config: Ec2Config
     EfsFilesystemArn: Value<string>
     AccessPointArn?: Value<string>
@@ -39,10 +39,11 @@ export interface LocationEFSProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class LocationEFS extends ResourceBase<LocationEFSProperties> {
+class LocationEFS extends ResourceBase<Properties> {
     static Ec2Config = Ec2Config
 
-    constructor(properties: LocationEFSProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataSync::LocationEFS', properties)
     }
 }
+export { LocationEFS as R }

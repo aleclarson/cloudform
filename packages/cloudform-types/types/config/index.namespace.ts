@@ -17,37 +17,71 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import DeliveryChannel_ from './deliveryChannel'
-import OrganizationConfigRule_ from './organizationConfigRule'
-import ConfigRule_ from './configRule'
-import StoredQuery_ from './storedQuery'
-import RemediationConfiguration_ from './remediationConfiguration'
-import ConfigurationAggregator_ from './configurationAggregator'
-import AggregationAuthorization_ from './aggregationAuthorization'
-import ConfigurationRecorder_ from './configurationRecorder'
-import OrganizationConformancePack_ from './organizationConformancePack'
-import ConformancePack_ from './conformancePack'
+import * as _0 from './deliveryChannel'
+import * as _1 from './organizationConfigRule'
+import * as _2 from './configRule'
+import * as _3 from './storedQuery'
+import * as _4 from './remediationConfiguration'
+import * as _5 from './configurationAggregator'
+import * as _6 from './aggregationAuthorization'
+import * as _7 from './configurationRecorder'
+import * as _8 from './organizationConformancePack'
+import * as _9 from './conformancePack'
 
 export namespace Config {
-  export const DeliveryChannel = DeliveryChannel_
-  export const OrganizationConfigRule = OrganizationConfigRule_
-  export const ConfigRule = ConfigRule_
-  export const StoredQuery = StoredQuery_
-  export const RemediationConfiguration = RemediationConfiguration_
-  export const ConfigurationAggregator = ConfigurationAggregator_
-  export const AggregationAuthorization = AggregationAuthorization_
-  export const ConfigurationRecorder = ConfigurationRecorder_
-  export const OrganizationConformancePack = OrganizationConformancePack_
-  export const ConformancePack = ConformancePack_
+  export const DeliveryChannel = _0.R
+  export const OrganizationConfigRule = _1.R
+  export const ConfigRule = _2.R
+  export const StoredQuery = _3.R
+  export const RemediationConfiguration = _4.R
+  export const ConfigurationAggregator = _5.R
+  export const AggregationAuthorization = _6.R
+  export const ConfigurationRecorder = _7.R
+  export const OrganizationConformancePack = _8.R
+  export const ConformancePack = _9.R
 
-  export type DeliveryChannel = DeliveryChannel_
-  export type OrganizationConfigRule = OrganizationConfigRule_
-  export type ConfigRule = ConfigRule_
-  export type StoredQuery = StoredQuery_
-  export type RemediationConfiguration = RemediationConfiguration_
-  export type ConfigurationAggregator = ConfigurationAggregator_
-  export type AggregationAuthorization = AggregationAuthorization_
-  export type ConfigurationRecorder = ConfigurationRecorder_
-  export type OrganizationConformancePack = OrganizationConformancePack_
-  export type ConformancePack = ConformancePack_
+  export type DeliveryChannel = _0.R
+  export type OrganizationConfigRule = _1.R
+  export type ConfigRule = _2.R
+  export type StoredQuery = _3.R
+  export type RemediationConfiguration = _4.R
+  export type ConfigurationAggregator = _5.R
+  export type AggregationAuthorization = _6.R
+  export type ConfigurationRecorder = _7.R
+  export type OrganizationConformancePack = _8.R
+  export type ConformancePack = _9.R
+
+  export namespace DeliveryChannel {
+    export type ConfigSnapshotDeliveryProperties = _0.ConfigSnapshotDeliveryProperties
+  }
+  export namespace OrganizationConfigRule {
+    export type OrganizationManagedRuleMetadata = _1.OrganizationManagedRuleMetadata
+    export type OrganizationCustomCodeRuleMetadata = _1.OrganizationCustomCodeRuleMetadata
+    export type OrganizationCustomRuleMetadata = _1.OrganizationCustomRuleMetadata
+  }
+  export namespace ConfigRule {
+    export type Source = _2.Source
+    export type Scope = _2.Scope
+    export type SourceDetail = _2.SourceDetail
+  }
+  export namespace RemediationConfiguration {
+    export type ResourceValue = _4.ResourceValue
+    export type RemediationParameterValue = _4.RemediationParameterValue
+    export type SsmControls = _4.SsmControls
+    export type StaticValue = _4.StaticValue
+    export type ExecutionControls = _4.ExecutionControls
+  }
+  export namespace ConfigurationAggregator {
+    export type OrganizationAggregationSource = _5.OrganizationAggregationSource
+    export type AccountAggregationSource = _5.AccountAggregationSource
+  }
+  export namespace ConfigurationRecorder {
+    export type RecordingGroup = _7.RecordingGroup
+  }
+  export namespace OrganizationConformancePack {
+    export type ConformancePackInputParameter = _8.ConformancePackInputParameter
+  }
+  export namespace ConformancePack {
+    export type ConformancePackInputParameter = _9.ConformancePackInputParameter
+  }
 }

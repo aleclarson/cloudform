@@ -49,18 +49,19 @@ export class AuthenticationConfiguration {
     }
 }
 
-export interface SkillProperties {
+export interface Properties {
     AuthenticationConfiguration: AuthenticationConfiguration
     VendorId: Value<string>
     SkillPackage: SkillPackage
 }
 
-export default class Skill extends ResourceBase<SkillProperties> {
+class Skill extends ResourceBase<Properties> {
     static Overrides = Overrides
     static SkillPackage = SkillPackage
     static AuthenticationConfiguration = AuthenticationConfiguration
 
-    constructor(properties: SkillProperties) {
+    constructor(properties: Properties) {
         super('AWS::ASK::Skill', properties)
     }
 }
+export { Skill as R }

@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ApiKeyProperties {
+export interface Properties {
     Description?: Value<string>
     ApiKeyId?: Value<string>
     Expires?: Value<number>
     ApiId: Value<string>
 }
 
-export default class ApiKey extends ResourceBase<ApiKeyProperties> {
+class ApiKey extends ResourceBase<Properties> {
 
 
-    constructor(properties: ApiKeyProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppSync::ApiKey', properties)
     }
 }
+export { ApiKey as R }

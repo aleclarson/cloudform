@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class TagFormat {
@@ -41,7 +41,7 @@ export class AuthFormat {
     }
 }
 
-export interface DBProxyProperties {
+export interface Properties {
     Auth: List<AuthFormat>
     DBProxyName: Value<string>
     DebugLogging?: Value<boolean>
@@ -54,11 +54,12 @@ export interface DBProxyProperties {
     VpcSubnetIds: List<Value<string>>
 }
 
-export default class DBProxy extends ResourceBase<DBProxyProperties> {
+class DBProxy extends ResourceBase<Properties> {
     static TagFormat = TagFormat
     static AuthFormat = AuthFormat
 
-    constructor(properties: DBProxyProperties) {
+    constructor(properties: Properties) {
         super('AWS::RDS::DBProxy', properties)
     }
 }
+export { DBProxy as R }

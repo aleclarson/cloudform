@@ -32,7 +32,7 @@ export class HoursOfOperationTimeSlice {
     }
 }
 
-export interface HoursOfOperationProperties {
+export interface Properties {
     InstanceArn: Value<string>
     Name: Value<string>
     Description?: Value<string>
@@ -41,11 +41,12 @@ export interface HoursOfOperationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class HoursOfOperation extends ResourceBase<HoursOfOperationProperties> {
+class HoursOfOperation extends ResourceBase<Properties> {
     static HoursOfOperationConfig = HoursOfOperationConfig
     static HoursOfOperationTimeSlice = HoursOfOperationTimeSlice
 
-    constructor(properties: HoursOfOperationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Connect::HoursOfOperation', properties)
     }
 }
+export { HoursOfOperation as R }

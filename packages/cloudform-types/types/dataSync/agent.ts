@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AgentProperties {
+export interface Properties {
     AgentName?: Value<string>
     ActivationKey: Value<string>
     SecurityGroupArns?: List<Value<string>>
@@ -31,10 +31,11 @@ export interface AgentProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Agent extends ResourceBase<AgentProperties> {
+class Agent extends ResourceBase<Properties> {
 
 
-    constructor(properties: AgentProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataSync::Agent', properties)
     }
 }
+export { Agent as R }

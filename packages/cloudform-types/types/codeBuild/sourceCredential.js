@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class SourceCredential extends resource_1.ResourceBase{constructor(properties){super("AWS::CodeBuild::SourceCredential",properties)}}exports.default=SourceCredential;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class SourceCredential extends resource_1.ResourceBase{constructor(properties){super("AWS::CodeBuild::SourceCredential",properties)}}exports.R=SourceCredential;

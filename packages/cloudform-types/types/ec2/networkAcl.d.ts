@@ -1,1 +1,1 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface NetworkAclProperties{Tags?:List<ResourceTag>;VpcId:Value<string>;}export default class NetworkAcl extends ResourceBase<NetworkAclProperties>{constructor(properties:NetworkAclProperties);}
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Tags?:List<ResourceTag>;VpcId:Value<string>;}declare class NetworkAcl extends ResourceBase<Properties>{constructor(properties:Properties);}export{NetworkAcl as R};

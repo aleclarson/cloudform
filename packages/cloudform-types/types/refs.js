@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.URLSuffix = exports.StackName = exports.StackId = exports.Region = exports.Partition = exports.NoValue = exports.NotificationARNs = exports.AccountId = void 0;
 const functions_1 = require("./functions");
 exports.AccountId = functions_1.Ref('AWS::AccountId');
 exports.NotificationARNs = functions_1.Ref("AWS::NotificationARNs");

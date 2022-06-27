@@ -17,13 +17,17 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Stream_ from './stream'
-import Ledger_ from './ledger'
+import * as _0 from './stream'
+import * as _1 from './ledger'
 
 export namespace QLDB {
-  export const Stream = Stream_
-  export const Ledger = Ledger_
+  export const Stream = _0.R
+  export const Ledger = _1.R
 
-  export type Stream = Stream_
-  export type Ledger = Ledger_
+  export type Stream = _0.R
+  export type Ledger = _1.R
+
+  export namespace Stream {
+    export type KinesisConfiguration = _0.KinesisConfiguration
+  }
 }

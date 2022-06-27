@@ -57,7 +57,7 @@ export class ResizeClusterMessage {
     }
 }
 
-export interface ScheduledActionProperties {
+export interface Properties {
     ScheduledActionName: Value<string>
     TargetAction?: ScheduledActionType
     Schedule?: Value<string>
@@ -68,13 +68,14 @@ export interface ScheduledActionProperties {
     Enable?: Value<boolean>
 }
 
-export default class ScheduledAction extends ResourceBase<ScheduledActionProperties> {
+class ScheduledAction extends ResourceBase<Properties> {
     static ResumeClusterMessage = ResumeClusterMessage
     static PauseClusterMessage = PauseClusterMessage
     static ScheduledActionType = ScheduledActionType
     static ResizeClusterMessage = ResizeClusterMessage
 
-    constructor(properties: ScheduledActionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Redshift::ScheduledAction', properties)
     }
 }
+export { ScheduledAction as R }

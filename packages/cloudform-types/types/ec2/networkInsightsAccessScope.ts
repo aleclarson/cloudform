@@ -69,20 +69,21 @@ export class ResourceStatementRequest {
     }
 }
 
-export interface NetworkInsightsAccessScopeProperties {
+export interface Properties {
     Tags?: List<ResourceTag>
     MatchPaths?: List<AccessScopePathRequest>
     ExcludePaths?: List<AccessScopePathRequest>
 }
 
-export default class NetworkInsightsAccessScope extends ResourceBase<NetworkInsightsAccessScopeProperties> {
+class NetworkInsightsAccessScope extends ResourceBase<Properties> {
     static PathStatementRequest = PathStatementRequest
     static AccessScopePathRequest = AccessScopePathRequest
     static ThroughResourcesStatementRequest = ThroughResourcesStatementRequest
     static PacketHeaderStatementRequest = PacketHeaderStatementRequest
     static ResourceStatementRequest = ResourceStatementRequest
 
-    constructor(properties?: NetworkInsightsAccessScopeProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::NetworkInsightsAccessScope', properties || {})
     }
 }
+export { NetworkInsightsAccessScope as R }

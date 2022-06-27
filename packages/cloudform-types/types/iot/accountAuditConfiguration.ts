@@ -65,20 +65,21 @@ export class AuditCheckConfigurations {
     }
 }
 
-export interface AccountAuditConfigurationProperties {
+export interface Properties {
     AccountId: Value<string>
     AuditCheckConfigurations: AuditCheckConfigurations
     AuditNotificationTargetConfigurations?: AuditNotificationTargetConfigurations
     RoleArn: Value<string>
 }
 
-export default class AccountAuditConfiguration extends ResourceBase<AccountAuditConfigurationProperties> {
+class AccountAuditConfiguration extends ResourceBase<Properties> {
     static AuditCheckConfiguration = AuditCheckConfiguration
     static AuditNotificationTargetConfigurations = AuditNotificationTargetConfigurations
     static AuditNotificationTarget = AuditNotificationTarget
     static AuditCheckConfigurations = AuditCheckConfigurations
 
-    constructor(properties: AccountAuditConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::AccountAuditConfiguration', properties)
     }
 }
+export { AccountAuditConfiguration as R }

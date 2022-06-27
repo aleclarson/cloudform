@@ -564,7 +564,7 @@ export class ReplicationRuleFilter {
     }
 }
 
-export interface BucketProperties {
+export interface Properties {
     AccelerateConfiguration?: AccelerateConfiguration
     AccessControl?: Value<string>
     AnalyticsConfigurations?: List<AnalyticsConfiguration>
@@ -587,7 +587,7 @@ export interface BucketProperties {
     WebsiteConfiguration?: WebsiteConfiguration
 }
 
-export default class Bucket extends ResourceBase<BucketProperties> {
+class Bucket extends ResourceBase<Properties> {
     static OwnershipControls = OwnershipControls
     static ReplicaModifications = ReplicaModifications
     static CorsRule = CorsRule
@@ -645,7 +645,8 @@ export default class Bucket extends ResourceBase<BucketProperties> {
     static Transition = Transition
     static ReplicationRuleFilter = ReplicationRuleFilter
 
-    constructor(properties?: BucketProperties) {
+    constructor(properties?: Properties) {
         super('AWS::S3::Bucket', properties || {})
     }
 }
+export { Bucket as R }

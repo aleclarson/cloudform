@@ -288,7 +288,7 @@ export class LogicalTableSource {
     }
 }
 
-export interface DataSetProperties {
+export interface Properties {
     AwsAccountId?: Value<string>
     ColumnGroups?: List<ColumnGroup>
     ColumnLevelPermissionRules?: List<ColumnLevelPermissionRule>
@@ -304,7 +304,7 @@ export interface DataSetProperties {
     IngestionWaitPolicy?: IngestionWaitPolicy
 }
 
-export default class DataSet extends ResourceBase<DataSetProperties> {
+class DataSet extends ResourceBase<Properties> {
     static JoinKeyProperties = JoinKeyProperties
     static UploadSettings = UploadSettings
     static ProjectOperation = ProjectOperation
@@ -334,7 +334,8 @@ export default class DataSet extends ResourceBase<DataSetProperties> {
     static CastColumnTypeOperation = CastColumnTypeOperation
     static LogicalTableSource = LogicalTableSource
 
-    constructor(properties?: DataSetProperties) {
+    constructor(properties?: Properties) {
         super('AWS::QuickSight::DataSet', properties || {})
     }
 }
+export { DataSet as R }

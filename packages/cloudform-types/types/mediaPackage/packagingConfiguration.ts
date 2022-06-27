@@ -152,7 +152,7 @@ export class HlsManifest {
     }
 }
 
-export interface PackagingConfigurationProperties {
+export interface Properties {
     Id: Value<string>
     PackagingGroupId: Value<string>
     CmafPackage?: CmafPackage
@@ -162,7 +162,7 @@ export interface PackagingConfigurationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class PackagingConfiguration extends ResourceBase<PackagingConfigurationProperties> {
+class PackagingConfiguration extends ResourceBase<Properties> {
     static DashEncryption = DashEncryption
     static SpekeKeyProvider = SpekeKeyProvider
     static CmafPackage = CmafPackage
@@ -177,7 +177,8 @@ export default class PackagingConfiguration extends ResourceBase<PackagingConfig
     static HlsPackage = HlsPackage
     static HlsManifest = HlsManifest
 
-    constructor(properties: PackagingConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaPackage::PackagingConfiguration', properties)
     }
 }
+export { PackagingConfiguration as R }

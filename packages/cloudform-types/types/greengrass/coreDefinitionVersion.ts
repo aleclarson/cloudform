@@ -27,15 +27,16 @@ export class Core {
     }
 }
 
-export interface CoreDefinitionVersionProperties {
+export interface Properties {
     Cores: List<Core>
     CoreDefinitionId: Value<string>
 }
 
-export default class CoreDefinitionVersion extends ResourceBase<CoreDefinitionVersionProperties> {
+class CoreDefinitionVersion extends ResourceBase<Properties> {
     static Core = Core
 
-    constructor(properties: CoreDefinitionVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::CoreDefinitionVersion', properties)
     }
 }
+export { CoreDefinitionVersion as R }

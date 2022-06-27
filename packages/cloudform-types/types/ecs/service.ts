@@ -115,7 +115,7 @@ export class ServiceRegistry {
     }
 }
 
-export interface ServiceProperties {
+export interface Properties {
     CapacityProviderStrategy?: List<CapacityProviderStrategyItem>
     Cluster?: Value<string>
     DeploymentConfiguration?: DeploymentConfiguration
@@ -139,7 +139,7 @@ export interface ServiceProperties {
     TaskDefinition?: Value<string>
 }
 
-export default class Service extends ResourceBase<ServiceProperties> {
+class Service extends ResourceBase<Properties> {
     static PlacementStrategy = PlacementStrategy
     static DeploymentController = DeploymentController
     static PlacementConstraint = PlacementConstraint
@@ -151,7 +151,8 @@ export default class Service extends ResourceBase<ServiceProperties> {
     static DeploymentCircuitBreaker = DeploymentCircuitBreaker
     static ServiceRegistry = ServiceRegistry
 
-    constructor(properties?: ServiceProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ECS::Service', properties || {})
     }
 }
+export { Service as R }

@@ -17,16 +17,20 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ParameterGroup_ from './parameterGroup'
-import Cluster_ from './cluster'
-import SubnetGroup_ from './subnetGroup'
+import * as _0 from './parameterGroup'
+import * as _1 from './cluster'
+import * as _2 from './subnetGroup'
 
 export namespace DAX {
-  export const ParameterGroup = ParameterGroup_
-  export const Cluster = Cluster_
-  export const SubnetGroup = SubnetGroup_
+  export const ParameterGroup = _0.R
+  export const Cluster = _1.R
+  export const SubnetGroup = _2.R
 
-  export type ParameterGroup = ParameterGroup_
-  export type Cluster = Cluster_
-  export type SubnetGroup = SubnetGroup_
+  export type ParameterGroup = _0.R
+  export type Cluster = _1.R
+  export type SubnetGroup = _2.R
+
+  export namespace Cluster {
+    export type SSESpecification = _1.SSESpecification
+  }
 }

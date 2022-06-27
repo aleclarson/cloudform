@@ -55,20 +55,21 @@ export class Stage {
     }
 }
 
-export interface ContactProperties {
+export interface Properties {
     Alias: Value<string>
     DisplayName: Value<string>
     Type: Value<string>
     Plan: List<Stage>
 }
 
-export default class Contact extends ResourceBase<ContactProperties> {
+class Contact extends ResourceBase<Properties> {
     static ContactTargetInfo = ContactTargetInfo
     static Targets = Targets
     static ChannelTargetInfo = ChannelTargetInfo
     static Stage = Stage
 
-    constructor(properties: ContactProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSMContacts::Contact', properties)
     }
 }
+export { Contact as R }

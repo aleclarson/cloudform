@@ -17,10 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ReportDefinition_ from './reportDefinition'
+import * as _0 from './reportDefinition'
 
 export namespace CUR {
-  export const ReportDefinition = ReportDefinition_
+  export const ReportDefinition = _0.R
 
-  export type ReportDefinition = ReportDefinition_
+  export type ReportDefinition = _0.R
+
+
 }

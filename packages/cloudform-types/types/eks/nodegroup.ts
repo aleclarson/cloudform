@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Taint {
@@ -68,7 +68,7 @@ export class RemoteAccess {
     }
 }
 
-export interface NodegroupProperties {
+export interface Properties {
     AmiType?: Value<string>
     CapacityType?: Value<string>
     ClusterName: Value<string>
@@ -89,14 +89,15 @@ export interface NodegroupProperties {
     Version?: Value<string>
 }
 
-export default class Nodegroup extends ResourceBase<NodegroupProperties> {
+class Nodegroup extends ResourceBase<Properties> {
     static Taint = Taint
     static LaunchTemplateSpecification = LaunchTemplateSpecification
     static UpdateConfig = UpdateConfig
     static ScalingConfig = ScalingConfig
     static RemoteAccess = RemoteAccess
 
-    constructor(properties: NodegroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::EKS::Nodegroup', properties)
     }
 }
+export { Nodegroup as R }

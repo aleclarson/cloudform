@@ -17,10 +17,14 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import NotificationRule_ from './notificationRule'
+import * as _0 from './notificationRule'
 
 export namespace CodeStarNotifications {
-  export const NotificationRule = NotificationRule_
+  export const NotificationRule = _0.R
 
-  export type NotificationRule = NotificationRule_
+  export type NotificationRule = _0.R
+
+  export namespace NotificationRule {
+    export type Target = _0.Target
+  }
 }

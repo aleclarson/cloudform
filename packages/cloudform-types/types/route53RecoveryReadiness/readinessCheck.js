@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class ReadinessCheck extends resource_1.ResourceBase{constructor(properties){super("AWS::Route53RecoveryReadiness::ReadinessCheck",properties)}}exports.R=ReadinessCheck;

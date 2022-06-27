@@ -17,16 +17,18 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ReplicaKey_ from './replicaKey'
-import Alias_ from './alias'
-import Key_ from './key'
+import * as _0 from './replicaKey'
+import * as _1 from './alias'
+import * as _2 from './key'
 
 export namespace KMS {
-  export const ReplicaKey = ReplicaKey_
-  export const Alias = Alias_
-  export const Key = Key_
+  export const ReplicaKey = _0.R
+  export const Alias = _1.R
+  export const Key = _2.R
 
-  export type ReplicaKey = ReplicaKey_
-  export type Alias = Alias_
-  export type Key = Key_
+  export type ReplicaKey = _0.R
+  export type Alias = _1.R
+  export type Key = _2.R
+
+
 }

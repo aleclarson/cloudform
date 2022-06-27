@@ -65,7 +65,7 @@ export class MetricGoalObject {
     }
 }
 
-export interface ExperimentProperties {
+export interface Properties {
     Name: Value<string>
     Project: Value<string>
     Description?: Value<string>
@@ -78,14 +78,15 @@ export interface ExperimentProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Experiment extends ResourceBase<ExperimentProperties> {
+class Experiment extends ResourceBase<Properties> {
     static OnlineAbConfigObject = OnlineAbConfigObject
     static TreatmentToWeight = TreatmentToWeight
     static RunningStatusObject = RunningStatusObject
     static TreatmentObject = TreatmentObject
     static MetricGoalObject = MetricGoalObject
 
-    constructor(properties: ExperimentProperties) {
+    constructor(properties: Properties) {
         super('AWS::Evidently::Experiment', properties)
     }
 }
+export { Experiment as R }

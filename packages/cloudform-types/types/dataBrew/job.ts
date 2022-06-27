@@ -202,7 +202,7 @@ export class ProfileConfiguration {
     }
 }
 
-export interface JobProperties {
+export interface Properties {
     DatasetName?: Value<string>
     EncryptionKeyArn?: Value<string>
     EncryptionMode?: Value<string>
@@ -225,7 +225,7 @@ export interface JobProperties {
     ValidationConfigurations?: List<ValidationConfiguration>
 }
 
-export default class Job extends ResourceBase<JobProperties> {
+class Job extends ResourceBase<Properties> {
     static EntityDetectorConfiguration = EntityDetectorConfiguration
     static ValidationConfiguration = ValidationConfiguration
     static DataCatalogOutput = DataCatalogOutput
@@ -246,7 +246,8 @@ export default class Job extends ResourceBase<JobProperties> {
     static ColumnStatisticsConfiguration = ColumnStatisticsConfiguration
     static ProfileConfiguration = ProfileConfiguration
 
-    constructor(properties: JobProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataBrew::Job', properties)
     }
 }
+export { Job as R }

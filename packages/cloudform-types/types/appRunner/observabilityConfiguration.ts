@@ -17,16 +17,17 @@ export class TraceConfiguration {
     }
 }
 
-export interface ObservabilityConfigurationProperties {
+export interface Properties {
     ObservabilityConfigurationName?: Value<string>
     TraceConfiguration?: TraceConfiguration
     Tags?: List<ResourceTag>
 }
 
-export default class ObservabilityConfiguration extends ResourceBase<ObservabilityConfigurationProperties> {
+class ObservabilityConfiguration extends ResourceBase<Properties> {
     static TraceConfiguration = TraceConfiguration
 
-    constructor(properties?: ObservabilityConfigurationProperties) {
+    constructor(properties?: Properties) {
         super('AWS::AppRunner::ObservabilityConfiguration', properties || {})
     }
 }
+export { ObservabilityConfiguration as R }

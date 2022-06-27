@@ -22,14 +22,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface WaitConditionHandleProperties {
+export interface Properties {
 
 }
 
-export default class WaitConditionHandle extends ResourceBase<WaitConditionHandleProperties> {
+class WaitConditionHandle extends ResourceBase<Properties> {
 
 
-    constructor(properties?: WaitConditionHandleProperties) {
+    constructor(properties?: Properties) {
         super('AWS::CloudFormation::WaitConditionHandle', properties || {})
     }
 }
+export { WaitConditionHandle as R }

@@ -72,7 +72,7 @@ export class EndpointDetails {
 
 export type Protocol = Value<string>
 
-export interface ServerProperties {
+export interface Properties {
     LoggingRole?: Value<string>
     Protocols?: List<Protocol>
     IdentityProviderDetails?: IdentityProviderDetails
@@ -89,14 +89,15 @@ export interface ServerProperties {
     Certificate?: Value<string>
 }
 
-export default class Server extends ResourceBase<ServerProperties> {
+class Server extends ResourceBase<Properties> {
     static WorkflowDetails = WorkflowDetails
     static ProtocolDetails = ProtocolDetails
     static IdentityProviderDetails = IdentityProviderDetails
     static WorkflowDetail = WorkflowDetail
     static EndpointDetails = EndpointDetails
 
-    constructor(properties?: ServerProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Transfer::Server', properties || {})
     }
 }
+export { Server as R }

@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface IPAMAllocationProperties {
+export interface Properties {
     IpamPoolId: Value<string>
     Cidr?: Value<string>
     NetmaskLength?: Value<number>
     Description?: Value<string>
 }
 
-export default class IPAMAllocation extends ResourceBase<IPAMAllocationProperties> {
+class IPAMAllocation extends ResourceBase<Properties> {
 
 
-    constructor(properties: IPAMAllocationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::IPAMAllocation', properties)
     }
 }
+export { IPAMAllocation as R }

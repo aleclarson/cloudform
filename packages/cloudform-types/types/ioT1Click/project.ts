@@ -29,17 +29,18 @@ export class PlacementTemplate {
     }
 }
 
-export interface ProjectProperties {
+export interface Properties {
     Description?: Value<string>
     PlacementTemplate: PlacementTemplate
     ProjectName?: Value<string>
 }
 
-export default class Project extends ResourceBase<ProjectProperties> {
+class Project extends ResourceBase<Properties> {
     static DeviceTemplate = DeviceTemplate
     static PlacementTemplate = PlacementTemplate
 
-    constructor(properties: ProjectProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT1Click::Project', properties)
     }
 }
+export { Project as R }

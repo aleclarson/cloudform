@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class LaunchTemplateOverrides {
@@ -214,7 +214,7 @@ export class MemoryMiBRequest {
     }
 }
 
-export interface AutoScalingGroupProperties {
+export interface Properties {
     AutoScalingGroupName?: Value<string>
     AvailabilityZones?: List<Value<string>>
     CapacityRebalance?: Value<boolean>
@@ -245,7 +245,7 @@ export interface AutoScalingGroupProperties {
     VPCZoneIdentifier?: List<Value<string>>
 }
 
-export default class AutoScalingGroup extends ResourceBase<AutoScalingGroupProperties> {
+class AutoScalingGroup extends ResourceBase<Properties> {
     static LaunchTemplateOverrides = LaunchTemplateOverrides
     static AcceleratorTotalMemoryMiBRequest = AcceleratorTotalMemoryMiBRequest
     static BaselineEbsBandwidthMbpsRequest = BaselineEbsBandwidthMbpsRequest
@@ -265,7 +265,8 @@ export default class AutoScalingGroup extends ResourceBase<AutoScalingGroupPrope
     static MemoryGiBPerVCpuRequest = MemoryGiBPerVCpuRequest
     static MemoryMiBRequest = MemoryMiBRequest
 
-    constructor(properties: AutoScalingGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::AutoScaling::AutoScalingGroup', properties)
     }
 }
+export { AutoScalingGroup as R }

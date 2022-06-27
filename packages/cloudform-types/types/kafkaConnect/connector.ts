@@ -179,7 +179,7 @@ export class KafkaClusterClientAuthentication {
     }
 }
 
-export interface ConnectorProperties {
+export interface Properties {
     Capacity: Capacity
     ConnectorConfiguration: {[key: string]: Value<string>}
     ConnectorDescription?: Value<string>
@@ -194,7 +194,7 @@ export interface ConnectorProperties {
     WorkerConfiguration?: WorkerConfiguration
 }
 
-export default class Connector extends ResourceBase<ConnectorProperties> {
+class Connector extends ResourceBase<Properties> {
     static FirehoseLogDelivery = FirehoseLogDelivery
     static ApacheKafkaCluster = ApacheKafkaCluster
     static Vpc = Vpc
@@ -214,7 +214,8 @@ export default class Connector extends ResourceBase<ConnectorProperties> {
     static Plugin = Plugin
     static KafkaClusterClientAuthentication = KafkaClusterClientAuthentication
 
-    constructor(properties: ConnectorProperties) {
+    constructor(properties: Properties) {
         super('AWS::KafkaConnect::Connector', properties)
     }
 }
+export { Connector as R }

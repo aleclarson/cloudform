@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TransitGatewayMulticastDomainAssociationProperties {
+export interface Properties {
     TransitGatewayMulticastDomainId: Value<string>
     TransitGatewayAttachmentId: Value<string>
     SubnetId: Value<string>
 }
 
-export default class TransitGatewayMulticastDomainAssociation extends ResourceBase<TransitGatewayMulticastDomainAssociationProperties> {
+class TransitGatewayMulticastDomainAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: TransitGatewayMulticastDomainAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::TransitGatewayMulticastDomainAssociation', properties)
     }
 }
+export { TransitGatewayMulticastDomainAssociation as R }

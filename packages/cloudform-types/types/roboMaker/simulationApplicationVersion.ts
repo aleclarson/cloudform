@@ -16,15 +16,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SimulationApplicationVersionProperties {
+export interface Properties {
     Application: Value<string>
     CurrentRevisionId?: Value<string>
 }
 
-export default class SimulationApplicationVersion extends ResourceBase<SimulationApplicationVersionProperties> {
+class SimulationApplicationVersion extends ResourceBase<Properties> {
 
 
-    constructor(properties: SimulationApplicationVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::RoboMaker::SimulationApplicationVersion', properties)
     }
 }
+export { SimulationApplicationVersion as R }

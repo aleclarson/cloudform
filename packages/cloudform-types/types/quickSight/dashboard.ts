@@ -133,7 +133,7 @@ export class AdHocFilteringOption {
     }
 }
 
-export interface DashboardProperties {
+export interface Properties {
     AwsAccountId: Value<string>
     DashboardId: Value<string>
     DashboardPublishOptions?: DashboardPublishOptions
@@ -146,7 +146,7 @@ export interface DashboardProperties {
     VersionDescription?: Value<string>
 }
 
-export default class Dashboard extends ResourceBase<DashboardProperties> {
+class Dashboard extends ResourceBase<Properties> {
     static SheetControlsOption = SheetControlsOption
     static ResourcePermission = ResourcePermission
     static DashboardSourceEntity = DashboardSourceEntity
@@ -161,7 +161,8 @@ export default class Dashboard extends ResourceBase<DashboardProperties> {
     static DateTimeParameter = DateTimeParameter
     static AdHocFilteringOption = AdHocFilteringOption
 
-    constructor(properties: DashboardProperties) {
+    constructor(properties: Properties) {
         super('AWS::QuickSight::Dashboard', properties)
     }
 }
+export { Dashboard as R }

@@ -38,7 +38,7 @@ export class QopConfiguration {
     }
 }
 
-export interface LocationHDFSProperties {
+export interface Properties {
     NameNodes: List<NameNode>
     BlockSize?: Value<number>
     ReplicationFactor?: Value<number>
@@ -54,11 +54,12 @@ export interface LocationHDFSProperties {
     Subdirectory?: Value<string>
 }
 
-export default class LocationHDFS extends ResourceBase<LocationHDFSProperties> {
+class LocationHDFS extends ResourceBase<Properties> {
     static NameNode = NameNode
     static QopConfiguration = QopConfiguration
 
-    constructor(properties: LocationHDFSProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataSync::LocationHDFS', properties)
     }
 }
+export { LocationHDFS as R }

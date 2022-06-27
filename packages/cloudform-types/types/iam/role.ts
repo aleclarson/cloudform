@@ -29,7 +29,7 @@ export class Policy {
     }
 }
 
-export interface RoleProperties {
+export interface Properties {
     AssumeRolePolicyDocument: {[key: string]: any}
     Description?: Value<string>
     ManagedPolicyArns?: List<Value<string>>
@@ -41,10 +41,11 @@ export interface RoleProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Role extends ResourceBase<RoleProperties> {
+class Role extends ResourceBase<Properties> {
     static Policy = Policy
 
-    constructor(properties: RoleProperties) {
+    constructor(properties: Properties) {
         super('AWS::IAM::Role', properties)
     }
 }
+export { Role as R }

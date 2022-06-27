@@ -17,17 +17,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DomainProperties {
+export interface Properties {
     DomainName: Value<string>
     EncryptionKey?: Value<string>
     PermissionsPolicyDocument?: {[key: string]: any}
     Tags?: List<ResourceTag>
 }
 
-export default class Domain extends ResourceBase<DomainProperties> {
+class Domain extends ResourceBase<Properties> {
 
 
-    constructor(properties: DomainProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodeArtifact::Domain', properties)
     }
 }
+export { Domain as R }

@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface WaitConditionProperties {
+export interface Properties {
     Count?: Value<number>
     Handle?: Value<string>
     Timeout?: Value<string>
 }
 
-export default class WaitCondition extends ResourceBase<WaitConditionProperties> {
+class WaitCondition extends ResourceBase<Properties> {
 
 
-    constructor(properties?: WaitConditionProperties) {
+    constructor(properties?: Properties) {
         super('AWS::CloudFormation::WaitCondition', properties || {})
     }
 }
+export { WaitCondition as R }

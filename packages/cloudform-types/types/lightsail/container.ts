@@ -88,7 +88,7 @@ export class HealthCheckConfig {
     }
 }
 
-export interface ContainerProperties {
+export interface Properties {
     ServiceName: Value<string>
     Power: Value<string>
     Scale: Value<number>
@@ -98,7 +98,7 @@ export interface ContainerProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Container extends ResourceBase<ContainerProperties> {
+class Container extends ResourceBase<Properties> {
     static EnvironmentVariable = EnvironmentVariable
     static Container = ContainerInner
     static PublicEndpoint = PublicEndpoint
@@ -107,7 +107,8 @@ export default class Container extends ResourceBase<ContainerProperties> {
     static PublicDomainName = PublicDomainName
     static HealthCheckConfig = HealthCheckConfig
 
-    constructor(properties: ContainerProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lightsail::Container', properties)
     }
 }
+export { Container as R }

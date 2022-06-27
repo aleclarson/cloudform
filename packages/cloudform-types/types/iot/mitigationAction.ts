@@ -81,14 +81,14 @@ export class PublishFindingToSnsParams {
     }
 }
 
-export interface MitigationActionProperties {
+export interface Properties {
     ActionName?: Value<string>
     RoleArn: Value<string>
     Tags?: List<ResourceTag>
     ActionParams: ActionParams
 }
 
-export default class MitigationAction extends ResourceBase<MitigationActionProperties> {
+class MitigationAction extends ResourceBase<Properties> {
     static AddThingsToThingGroupParams = AddThingsToThingGroupParams
     static UpdateCACertificateParams = UpdateCACertificateParams
     static UpdateDeviceCertificateParams = UpdateDeviceCertificateParams
@@ -97,7 +97,8 @@ export default class MitigationAction extends ResourceBase<MitigationActionPrope
     static ActionParams = ActionParams
     static PublishFindingToSnsParams = PublishFindingToSnsParams
 
-    constructor(properties: MitigationActionProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::MitigationAction', properties)
     }
 }
+export { MitigationAction as R }

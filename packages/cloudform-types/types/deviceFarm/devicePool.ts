@@ -15,7 +15,7 @@ export class Rule {
     }
 }
 
-export interface DevicePoolProperties {
+export interface Properties {
     Description?: Value<string>
     MaxDevices?: Value<number>
     Name: Value<string>
@@ -24,10 +24,11 @@ export interface DevicePoolProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class DevicePool extends ResourceBase<DevicePoolProperties> {
+class DevicePool extends ResourceBase<Properties> {
     static Rule = Rule
 
-    constructor(properties: DevicePoolProperties) {
+    constructor(properties: Properties) {
         super('AWS::DeviceFarm::DevicePool', properties)
     }
 }
+export { DevicePool as R }

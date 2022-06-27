@@ -17,13 +17,23 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import NotificationChannel_ from './notificationChannel'
-import ResourceCollection_ from './resourceCollection'
+import * as _0 from './notificationChannel'
+import * as _1 from './resourceCollection'
 
 export namespace DevOpsGuru {
-  export const NotificationChannel = NotificationChannel_
-  export const ResourceCollection = ResourceCollection_
+  export const NotificationChannel = _0.R
+  export const ResourceCollection = _1.R
 
-  export type NotificationChannel = NotificationChannel_
-  export type ResourceCollection = ResourceCollection_
+  export type NotificationChannel = _0.R
+  export type ResourceCollection = _1.R
+
+  export namespace NotificationChannel {
+    export type NotificationChannelConfig = _0.NotificationChannelConfig
+    export type SnsChannelConfig = _0.SnsChannelConfig
+  }
+  export namespace ResourceCollection {
+    export type ResourceCollectionFilter = _1.ResourceCollectionFilter
+    export type TagCollection = _1.TagCollection
+    export type CloudFormationCollectionFilter = _1.CloudFormationCollectionFilter
+  }
 }

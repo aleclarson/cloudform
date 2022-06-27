@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class DataCatalog extends resource_1.ResourceBase{constructor(properties){super("AWS::Athena::DataCatalog",properties)}}exports.default=DataCatalog;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class DataCatalog extends resource_1.ResourceBase{constructor(properties){super("AWS::Athena::DataCatalog",properties)}}exports.R=DataCatalog;

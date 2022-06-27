@@ -63,7 +63,7 @@ export class GroupToWeight {
     }
 }
 
-export interface LaunchProperties {
+export interface Properties {
     Name: Value<string>
     Project: Value<string>
     Description?: Value<string>
@@ -75,14 +75,15 @@ export interface LaunchProperties {
     ExecutionStatus?: ExecutionStatusObject
 }
 
-export default class Launch extends ResourceBase<LaunchProperties> {
+class Launch extends ResourceBase<Properties> {
     static ExecutionStatusObject = ExecutionStatusObject
     static MetricDefinitionObject = MetricDefinitionObject
     static LaunchGroupObject = LaunchGroupObject
     static StepConfig = StepConfig
     static GroupToWeight = GroupToWeight
 
-    constructor(properties: LaunchProperties) {
+    constructor(properties: Properties) {
         super('AWS::Evidently::Launch', properties)
     }
 }
+export { Launch as R }

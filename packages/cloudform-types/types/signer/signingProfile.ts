@@ -28,16 +28,17 @@ export class SignatureValidityPeriod {
     }
 }
 
-export interface SigningProfileProperties {
+export interface Properties {
     SignatureValidityPeriod?: SignatureValidityPeriod
     PlatformId: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class SigningProfile extends ResourceBase<SigningProfileProperties> {
+class SigningProfile extends ResourceBase<Properties> {
     static SignatureValidityPeriod = SignatureValidityPeriod
 
-    constructor(properties: SigningProfileProperties) {
+    constructor(properties: Properties) {
         super('AWS::Signer::SigningProfile', properties)
     }
 }
+export { SigningProfile as R }

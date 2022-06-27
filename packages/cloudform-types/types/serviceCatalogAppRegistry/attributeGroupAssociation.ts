@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AttributeGroupAssociationProperties {
+export interface Properties {
     Application: Value<string>
     AttributeGroup: Value<string>
 }
 
-export default class AttributeGroupAssociation extends ResourceBase<AttributeGroupAssociationProperties> {
+class AttributeGroupAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: AttributeGroupAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation', properties)
     }
 }
+export { AttributeGroupAssociation as R }

@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LoggingProperties {
+export interface Properties {
     AccountId: Value<string>
     RoleArn: Value<string>
     DefaultLogLevel: Value<string>
 }
 
-export default class Logging extends ResourceBase<LoggingProperties> {
+class Logging extends ResourceBase<Properties> {
 
 
-    constructor(properties: LoggingProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::Logging', properties)
     }
 }
+export { Logging as R }

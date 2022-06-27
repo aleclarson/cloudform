@@ -36,16 +36,17 @@ export class AccessControlAttributeValue {
     }
 }
 
-export interface InstanceAccessControlAttributeConfigurationProperties {
+export interface Properties {
     InstanceArn: Value<string>
     AccessControlAttributes?: List<AccessControlAttribute>
 }
 
-export default class InstanceAccessControlAttributeConfiguration extends ResourceBase<InstanceAccessControlAttributeConfigurationProperties> {
+class InstanceAccessControlAttributeConfiguration extends ResourceBase<Properties> {
     static AccessControlAttribute = AccessControlAttribute
     static AccessControlAttributeValue = AccessControlAttributeValue
 
-    constructor(properties: InstanceAccessControlAttributeConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSO::InstanceAccessControlAttributeConfiguration', properties)
     }
 }
+export { InstanceAccessControlAttributeConfiguration as R }

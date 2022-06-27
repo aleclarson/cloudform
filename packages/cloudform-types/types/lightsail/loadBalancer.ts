@@ -19,7 +19,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LoadBalancerProperties {
+export interface Properties {
     LoadBalancerName: Value<string>
     InstancePort: Value<number>
     IpAddressType?: Value<string>
@@ -31,10 +31,11 @@ export interface LoadBalancerProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class LoadBalancer extends ResourceBase<LoadBalancerProperties> {
+class LoadBalancer extends ResourceBase<Properties> {
 
 
-    constructor(properties: LoadBalancerProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lightsail::LoadBalancer', properties)
     }
 }
+export { LoadBalancer as R }

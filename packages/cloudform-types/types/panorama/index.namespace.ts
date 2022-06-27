@@ -17,16 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Package_ from './package'
-import PackageVersion_ from './packageVersion'
-import ApplicationInstance_ from './applicationInstance'
+import * as _0 from './package'
+import * as _1 from './packageVersion'
+import * as _2 from './applicationInstance'
 
 export namespace Panorama {
-  export const Package = Package_
-  export const PackageVersion = PackageVersion_
-  export const ApplicationInstance = ApplicationInstance_
+  export const Package = _0.R
+  export const PackageVersion = _1.R
+  export const ApplicationInstance = _2.R
 
-  export type Package = Package_
-  export type PackageVersion = PackageVersion_
-  export type ApplicationInstance = ApplicationInstance_
+  export type Package = _0.R
+  export type PackageVersion = _1.R
+  export type ApplicationInstance = _2.R
+
+  export namespace ApplicationInstance {
+    export type ManifestPayload = _2.ManifestPayload
+    export type ManifestOverridesPayload = _2.ManifestOverridesPayload
+  }
 }

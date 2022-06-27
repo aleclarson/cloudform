@@ -42,17 +42,18 @@ export class ManagedScaling {
     }
 }
 
-export interface CapacityProviderProperties {
+export interface Properties {
     AutoScalingGroupProvider: AutoScalingGroupProvider
     Name?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class CapacityProvider extends ResourceBase<CapacityProviderProperties> {
+class CapacityProvider extends ResourceBase<Properties> {
     static AutoScalingGroupProvider = AutoScalingGroupProvider
     static ManagedScaling = ManagedScaling
 
-    constructor(properties: CapacityProviderProperties) {
+    constructor(properties: Properties) {
         super('AWS::ECS::CapacityProvider', properties)
     }
 }
+export { CapacityProvider as R }

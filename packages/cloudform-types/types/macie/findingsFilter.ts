@@ -39,7 +39,7 @@ export class FindingCriteria {
 
 export type Criterion = {[key: string]: any}
 
-export interface FindingsFilterProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     FindingCriteria: FindingCriteria
@@ -47,11 +47,12 @@ export interface FindingsFilterProperties {
     Position?: Value<number>
 }
 
-export default class FindingsFilter extends ResourceBase<FindingsFilterProperties> {
+class FindingsFilter extends ResourceBase<Properties> {
     static FindingsFilterListItem = FindingsFilterListItem
     static FindingCriteria = FindingCriteria
 
-    constructor(properties: FindingsFilterProperties) {
+    constructor(properties: Properties) {
         super('AWS::Macie::FindingsFilter', properties)
     }
 }
+export { FindingsFilter as R }

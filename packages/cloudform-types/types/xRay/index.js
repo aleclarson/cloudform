@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),group_1=(exports.default=index_namespace_1.XRay,Object.defineProperty(exports,"__esModule",{value:!0}),require("./group")),samplingRule_1=require("./samplingRule");var XRay;!function(XRay){XRay.Group=group_1.default,XRay.SamplingRule=samplingRule_1.default}(XRay=exports.XRay||(exports.XRay={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.XRay;

@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Validators {
@@ -38,7 +38,7 @@ export class Tags {
     }
 }
 
-export interface ConfigurationProfileProperties {
+export interface Properties {
     LocationUri: Value<string>
     Type?: Value<string>
     Description?: Value<string>
@@ -49,11 +49,12 @@ export interface ConfigurationProfileProperties {
     Name: Value<string>
 }
 
-export default class ConfigurationProfile extends ResourceBase<ConfigurationProfileProperties> {
+class ConfigurationProfile extends ResourceBase<Properties> {
     static Validators = Validators
     static Tags = Tags
 
-    constructor(properties: ConfigurationProfileProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppConfig::ConfigurationProfile', properties)
     }
 }
+export { ConfigurationProfile as R }

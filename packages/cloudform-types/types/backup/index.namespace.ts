@@ -17,22 +17,42 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import BackupPlan_ from './backupPlan'
-import Framework_ from './framework'
-import BackupVault_ from './backupVault'
-import ReportPlan_ from './reportPlan'
-import BackupSelection_ from './backupSelection'
+import * as _0 from './backupPlan'
+import * as _1 from './framework'
+import * as _2 from './backupVault'
+import * as _3 from './reportPlan'
+import * as _4 from './backupSelection'
 
 export namespace Backup {
-  export const BackupPlan = BackupPlan_
-  export const Framework = Framework_
-  export const BackupVault = BackupVault_
-  export const ReportPlan = ReportPlan_
-  export const BackupSelection = BackupSelection_
+  export const BackupPlan = _0.R
+  export const Framework = _1.R
+  export const BackupVault = _2.R
+  export const ReportPlan = _3.R
+  export const BackupSelection = _4.R
 
-  export type BackupPlan = BackupPlan_
-  export type Framework = Framework_
-  export type BackupVault = BackupVault_
-  export type ReportPlan = ReportPlan_
-  export type BackupSelection = BackupSelection_
+  export type BackupPlan = _0.R
+  export type Framework = _1.R
+  export type BackupVault = _2.R
+  export type ReportPlan = _3.R
+  export type BackupSelection = _4.R
+
+  export namespace BackupPlan {
+    export type CopyActionResourceType = _0.CopyActionResourceType
+    export type BackupPlanResourceType = _0.BackupPlanResourceType
+    export type AdvancedBackupSettingResourceType = _0.AdvancedBackupSettingResourceType
+    export type LifecycleResourceType = _0.LifecycleResourceType
+    export type BackupRuleResourceType = _0.BackupRuleResourceType
+  }
+  export namespace Framework {
+    export type FrameworkControl = _1.FrameworkControl
+    export type ControlInputParameter = _1.ControlInputParameter
+  }
+  export namespace BackupVault {
+    export type NotificationObjectType = _2.NotificationObjectType
+    export type LockConfigurationType = _2.LockConfigurationType
+  }
+  export namespace BackupSelection {
+    export type ConditionResourceType = _4.ConditionResourceType
+    export type BackupSelectionResourceType = _4.BackupSelectionResourceType
+  }
 }

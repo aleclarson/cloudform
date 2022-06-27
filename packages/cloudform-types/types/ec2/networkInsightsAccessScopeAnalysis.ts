@@ -21,15 +21,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NetworkInsightsAccessScopeAnalysisProperties {
+export interface Properties {
     NetworkInsightsAccessScopeId: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class NetworkInsightsAccessScopeAnalysis extends ResourceBase<NetworkInsightsAccessScopeAnalysisProperties> {
+class NetworkInsightsAccessScopeAnalysis extends ResourceBase<Properties> {
 
 
-    constructor(properties: NetworkInsightsAccessScopeAnalysisProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::NetworkInsightsAccessScopeAnalysis', properties)
     }
 }
+export { NetworkInsightsAccessScopeAnalysis as R }

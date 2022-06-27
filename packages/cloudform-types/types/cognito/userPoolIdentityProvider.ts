@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UserPoolIdentityProviderProperties {
+export interface Properties {
     ProviderName: Value<string>
     UserPoolId: Value<string>
     AttributeMapping?: {[key: string]: any}
@@ -30,10 +30,11 @@ export interface UserPoolIdentityProviderProperties {
     IdpIdentifiers?: List<Value<string>>
 }
 
-export default class UserPoolIdentityProvider extends ResourceBase<UserPoolIdentityProviderProperties> {
+class UserPoolIdentityProvider extends ResourceBase<Properties> {
 
 
-    constructor(properties: UserPoolIdentityProviderProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cognito::UserPoolIdentityProvider', properties)
     }
 }
+export { UserPoolIdentityProvider as R }

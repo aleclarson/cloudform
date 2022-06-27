@@ -20,17 +20,18 @@ export class MapConfiguration {
     }
 }
 
-export interface MapProperties {
+export interface Properties {
     Configuration: MapConfiguration
     Description?: Value<string>
     MapName: Value<string>
     PricingPlan?: Value<string>
 }
 
-export default class Map extends ResourceBase<MapProperties> {
+class Map extends ResourceBase<Properties> {
     static MapConfiguration = MapConfiguration
 
-    constructor(properties: MapProperties) {
+    constructor(properties: Properties) {
         super('AWS::Location::Map', properties)
     }
 }
+export { Map as R }

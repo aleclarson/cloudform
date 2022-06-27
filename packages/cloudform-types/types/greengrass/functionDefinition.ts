@@ -13,7 +13,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class FunctionConfiguration {
@@ -95,13 +95,13 @@ export class ResourceAccessPolicy {
     }
 }
 
-export interface FunctionDefinitionProperties {
+export interface Properties {
     InitialVersion?: FunctionDefinitionVersion
     Tags?: {[key: string]: any}
     Name: Value<string>
 }
 
-export default class FunctionDefinition extends ResourceBase<FunctionDefinitionProperties> {
+class FunctionDefinition extends ResourceBase<Properties> {
     static FunctionConfiguration = FunctionConfiguration
     static DefaultConfig = DefaultConfig
     static Execution = Execution
@@ -111,7 +111,8 @@ export default class FunctionDefinition extends ResourceBase<FunctionDefinitionP
     static Function = Function
     static ResourceAccessPolicy = ResourceAccessPolicy
 
-    constructor(properties: FunctionDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::FunctionDefinition', properties)
     }
 }
+export { FunctionDefinition as R }

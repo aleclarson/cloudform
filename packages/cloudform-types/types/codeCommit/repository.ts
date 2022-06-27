@@ -51,7 +51,7 @@ export class RepositoryTrigger {
     }
 }
 
-export interface RepositoryProperties {
+export interface Properties {
     RepositoryName: Value<string>
     Triggers?: List<RepositoryTrigger>
     Code?: Code
@@ -59,12 +59,13 @@ export interface RepositoryProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Repository extends ResourceBase<RepositoryProperties> {
+class Repository extends ResourceBase<Properties> {
     static Code = Code
     static S3 = S3
     static RepositoryTrigger = RepositoryTrigger
 
-    constructor(properties: RepositoryProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodeCommit::Repository', properties)
     }
 }
+export { Repository as R }

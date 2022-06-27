@@ -17,16 +17,41 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Integration_ from './integration'
-import ObjectType_ from './objectType'
-import Domain_ from './domain'
+import * as _0 from './integration'
+import * as _1 from './objectType'
+import * as _2 from './domain'
 
 export namespace CustomerProfiles {
-  export const Integration = Integration_
-  export const ObjectType = ObjectType_
-  export const Domain = Domain_
+  export const Integration = _0.R
+  export const ObjectType = _1.R
+  export const Domain = _2.R
 
-  export type Integration = Integration_
-  export type ObjectType = ObjectType_
-  export type Domain = Domain_
+  export type Integration = _0.R
+  export type ObjectType = _1.R
+  export type Domain = _2.R
+
+  export namespace Integration {
+    export type Task = _0.Task
+    export type TriggerProperties = _0.TriggerProperties
+    export type ObjectTypeMapping = _0.ObjectTypeMapping
+    export type ScheduledTriggerProperties = _0.ScheduledTriggerProperties
+    export type S3SourceProperties = _0.S3SourceProperties
+    export type FlowDefinition = _0.FlowDefinition
+    export type IncrementalPullConfig = _0.IncrementalPullConfig
+    export type MarketoSourceProperties = _0.MarketoSourceProperties
+    export type TaskPropertiesMap = _0.TaskPropertiesMap
+    export type ConnectorOperator = _0.ConnectorOperator
+    export type ZendeskSourceProperties = _0.ZendeskSourceProperties
+    export type SourceConnectorProperties = _0.SourceConnectorProperties
+    export type ServiceNowSourceProperties = _0.ServiceNowSourceProperties
+    export type SalesforceSourceProperties = _0.SalesforceSourceProperties
+    export type TriggerConfig = _0.TriggerConfig
+    export type SourceFlowConfig = _0.SourceFlowConfig
+  }
+  export namespace ObjectType {
+    export type KeyMap = _1.KeyMap
+    export type FieldMap = _1.FieldMap
+    export type ObjectTypeField = _1.ObjectTypeField
+    export type ObjectTypeKey = _1.ObjectTypeKey
+  }
 }

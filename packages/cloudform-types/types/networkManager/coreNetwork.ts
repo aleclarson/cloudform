@@ -33,18 +33,19 @@ export class CoreNetworkEdge {
     }
 }
 
-export interface CoreNetworkProperties {
+export interface Properties {
     GlobalNetworkId: Value<string>
     PolicyDocument?: {[key: string]: any}
     Description?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class CoreNetwork extends ResourceBase<CoreNetworkProperties> {
+class CoreNetwork extends ResourceBase<Properties> {
     static CoreNetworkSegment = CoreNetworkSegment
     static CoreNetworkEdge = CoreNetworkEdge
 
-    constructor(properties: CoreNetworkProperties) {
+    constructor(properties: Properties) {
         super('AWS::NetworkManager::CoreNetwork', properties)
     }
 }
+export { CoreNetwork as R }

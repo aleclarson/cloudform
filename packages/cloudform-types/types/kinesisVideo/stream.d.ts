@@ -1,0 +1,1 @@
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name?:Value<string>;DataRetentionInHours?:Value<number>;DeviceName?:Value<string>;KmsKeyId?:Value<string>;MediaType?:Value<string>;Tags?:List<ResourceTag>;}declare class Stream extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Stream as R};

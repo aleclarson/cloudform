@@ -25,7 +25,7 @@ export class Attribute {
     }
 }
 
-export interface EntitlementProperties {
+export interface Properties {
     Name: Value<string>
     StackName: Value<string>
     Description?: Value<string>
@@ -33,10 +33,11 @@ export interface EntitlementProperties {
     Attributes: List<Attribute>
 }
 
-export default class Entitlement extends ResourceBase<EntitlementProperties> {
+class Entitlement extends ResourceBase<Properties> {
     static Attribute = Attribute
 
-    constructor(properties: EntitlementProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppStream::Entitlement', properties)
     }
 }
+export { Entitlement as R }

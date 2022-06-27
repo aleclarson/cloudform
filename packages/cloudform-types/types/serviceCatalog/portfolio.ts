@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PortfolioProperties {
+export interface Properties {
     ProviderName: Value<string>
     Description?: Value<string>
     DisplayName: Value<string>
@@ -30,10 +30,11 @@ export interface PortfolioProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Portfolio extends ResourceBase<PortfolioProperties> {
+class Portfolio extends ResourceBase<Properties> {
 
 
-    constructor(properties: PortfolioProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::Portfolio', properties)
     }
 }
+export { Portfolio as R }

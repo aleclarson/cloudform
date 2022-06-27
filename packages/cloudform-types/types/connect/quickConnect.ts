@@ -50,7 +50,7 @@ export class PhoneNumberQuickConnectConfig {
     }
 }
 
-export interface QuickConnectProperties {
+export interface Properties {
     InstanceArn: Value<string>
     Name: Value<string>
     Description?: Value<string>
@@ -58,13 +58,14 @@ export interface QuickConnectProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class QuickConnect extends ResourceBase<QuickConnectProperties> {
+class QuickConnect extends ResourceBase<Properties> {
     static QueueQuickConnectConfig = QueueQuickConnectConfig
     static QuickConnectConfig = QuickConnectConfig
     static UserQuickConnectConfig = UserQuickConnectConfig
     static PhoneNumberQuickConnectConfig = PhoneNumberQuickConnectConfig
 
-    constructor(properties: QuickConnectProperties) {
+    constructor(properties: Properties) {
         super('AWS::Connect::QuickConnect', properties)
     }
 }
+export { QuickConnect as R }

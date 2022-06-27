@@ -175,7 +175,7 @@ export class S3Location {
     }
 }
 
-export interface DatasetProperties {
+export interface Properties {
     Name: Value<string>
     Format?: Value<string>
     FormatOptions?: FormatOptions
@@ -184,7 +184,7 @@ export interface DatasetProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Dataset extends ResourceBase<DatasetProperties> {
+class Dataset extends ResourceBase<Properties> {
     static FilterExpression = FilterExpression
     static PathParameter = PathParameter
     static DatabaseInputDefinition = DatabaseInputDefinition
@@ -202,7 +202,8 @@ export default class Dataset extends ResourceBase<DatasetProperties> {
     static Metadata = Metadata
     static S3Location = S3Location
 
-    constructor(properties: DatasetProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataBrew::Dataset', properties)
     }
 }
+export { Dataset as R }

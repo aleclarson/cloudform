@@ -36,7 +36,7 @@ export class ScriptDetails {
     }
 }
 
-export interface AppBlockProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     DisplayName?: Value<string>
@@ -45,11 +45,12 @@ export interface AppBlockProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class AppBlock extends ResourceBase<AppBlockProperties> {
+class AppBlock extends ResourceBase<Properties> {
     static S3Location = S3Location
     static ScriptDetails = ScriptDetails
 
-    constructor(properties: AppBlockProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppStream::AppBlock', properties)
     }
 }
+export { AppBlock as R }

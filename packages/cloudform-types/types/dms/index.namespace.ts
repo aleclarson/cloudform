@@ -17,25 +17,45 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ReplicationSubnetGroup_ from './replicationSubnetGroup'
-import EventSubscription_ from './eventSubscription'
-import Certificate_ from './certificate'
-import Endpoint_ from './endpoint'
-import ReplicationTask_ from './replicationTask'
-import ReplicationInstance_ from './replicationInstance'
+import * as _0 from './replicationSubnetGroup'
+import * as _1 from './eventSubscription'
+import * as _2 from './certificate'
+import * as _3 from './endpoint'
+import * as _4 from './replicationTask'
+import * as _5 from './replicationInstance'
 
 export namespace DMS {
-  export const ReplicationSubnetGroup = ReplicationSubnetGroup_
-  export const EventSubscription = EventSubscription_
-  export const Certificate = Certificate_
-  export const Endpoint = Endpoint_
-  export const ReplicationTask = ReplicationTask_
-  export const ReplicationInstance = ReplicationInstance_
+  export const ReplicationSubnetGroup = _0.R
+  export const EventSubscription = _1.R
+  export const Certificate = _2.R
+  export const Endpoint = _3.R
+  export const ReplicationTask = _4.R
+  export const ReplicationInstance = _5.R
 
-  export type ReplicationSubnetGroup = ReplicationSubnetGroup_
-  export type EventSubscription = EventSubscription_
-  export type Certificate = Certificate_
-  export type Endpoint = Endpoint_
-  export type ReplicationTask = ReplicationTask_
-  export type ReplicationInstance = ReplicationInstance_
+  export type ReplicationSubnetGroup = _0.R
+  export type EventSubscription = _1.R
+  export type Certificate = _2.R
+  export type Endpoint = _3.R
+  export type ReplicationTask = _4.R
+  export type ReplicationInstance = _5.R
+
+  export namespace Endpoint {
+    export type KinesisSettings = _3.KinesisSettings
+    export type S3Settings = _3.S3Settings
+    export type PostgreSqlSettings = _3.PostgreSqlSettings
+    export type MicrosoftSqlServerSettings = _3.MicrosoftSqlServerSettings
+    export type MongoDbSettings = _3.MongoDbSettings
+    export type KafkaSettings = _3.KafkaSettings
+    export type MySqlSettings = _3.MySqlSettings
+    export type NeptuneSettings = _3.NeptuneSettings
+    export type GcpMySQLSettings = _3.GcpMySQLSettings
+    export type IbmDb2Settings = _3.IbmDb2Settings
+    export type ElasticsearchSettings = _3.ElasticsearchSettings
+    export type OracleSettings = _3.OracleSettings
+    export type RedisSettings = _3.RedisSettings
+    export type DynamoDbSettings = _3.DynamoDbSettings
+    export type DocDbSettings = _3.DocDbSettings
+    export type SybaseSettings = _3.SybaseSettings
+    export type RedshiftSettings = _3.RedshiftSettings
+  }
 }

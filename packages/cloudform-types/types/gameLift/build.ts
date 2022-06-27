@@ -31,17 +31,18 @@ export class S3Location {
     }
 }
 
-export interface BuildProperties {
+export interface Properties {
     Name?: Value<string>
     OperatingSystem?: Value<string>
     StorageLocation?: S3Location
     Version?: Value<string>
 }
 
-export default class Build extends ResourceBase<BuildProperties> {
+class Build extends ResourceBase<Properties> {
     static S3Location = S3Location
 
-    constructor(properties?: BuildProperties) {
+    constructor(properties?: Properties) {
         super('AWS::GameLift::Build', properties || {})
     }
 }
+export { Build as R }

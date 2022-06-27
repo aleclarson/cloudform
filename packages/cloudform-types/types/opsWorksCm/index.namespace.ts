@@ -17,10 +17,14 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Server_ from './server'
+import * as _0 from './server'
 
 export namespace OpsWorksCM {
-  export const Server = Server_
+  export const Server = _0.R
 
-  export type Server = Server_
+  export type Server = _0.R
+
+  export namespace Server {
+    export type EngineAttribute = _0.EngineAttribute
+  }
 }

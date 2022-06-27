@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AggregationAuthorizationProperties {
+export interface Properties {
     AuthorizedAccountId: Value<string>
     AuthorizedAwsRegion: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class AggregationAuthorization extends ResourceBase<AggregationAuthorizationProperties> {
+class AggregationAuthorization extends ResourceBase<Properties> {
 
 
-    constructor(properties: AggregationAuthorizationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Config::AggregationAuthorization', properties)
     }
 }
+export { AggregationAuthorization as R }

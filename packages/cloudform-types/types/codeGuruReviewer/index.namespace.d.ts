@@ -1,1 +1,1 @@
-import RepositoryAssociation_ from'./repositoryAssociation';export declare namespace CodeGuruReviewer{const RepositoryAssociation:typeof RepositoryAssociation_;type RepositoryAssociation=RepositoryAssociation_;}
+import*as _0 from'./repositoryAssociation';export declare namespace CodeGuruReviewer{const RepositoryAssociation:typeof _0.R;type RepositoryAssociation=_0.R;}

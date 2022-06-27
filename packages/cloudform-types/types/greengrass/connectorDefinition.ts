@@ -13,7 +13,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class ConnectorDefinitionVersion {
@@ -34,17 +34,18 @@ export class Connector {
     }
 }
 
-export interface ConnectorDefinitionProperties {
+export interface Properties {
     InitialVersion?: ConnectorDefinitionVersion
     Tags?: {[key: string]: any}
     Name: Value<string>
 }
 
-export default class ConnectorDefinition extends ResourceBase<ConnectorDefinitionProperties> {
+class ConnectorDefinition extends ResourceBase<Properties> {
     static ConnectorDefinitionVersion = ConnectorDefinitionVersion
     static Connector = Connector
 
-    constructor(properties: ConnectorDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::ConnectorDefinition', properties)
     }
 }
+export { ConnectorDefinition as R }

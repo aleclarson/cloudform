@@ -308,7 +308,7 @@ export class DriftCheckBias {
     }
 }
 
-export interface ModelPackageProperties {
+export interface Properties {
     Tag?: ResourceTag
     Tags?: List<ResourceTag>
     AdditionalInferenceSpecifications?: List<AdditionalInferenceSpecificationDefinition>
@@ -338,7 +338,7 @@ export interface ModelPackageProperties {
     Environment?: {[key: string]: Value<string>}
 }
 
-export default class ModelPackage extends ResourceBase<ModelPackageProperties> {
+class ModelPackage extends ResourceBase<Properties> {
     static Explainability = Explainability
     static ValidationSpecification = ValidationSpecification
     static TransformJobDefinition = TransformJobDefinition
@@ -368,7 +368,8 @@ export default class ModelPackage extends ResourceBase<ModelPackageProperties> {
     static TransformInput = TransformInput
     static DriftCheckBias = DriftCheckBias
 
-    constructor(properties?: ModelPackageProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SageMaker::ModelPackage', properties || {})
     }
 }
+export { ModelPackage as R }

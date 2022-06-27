@@ -17,46 +17,72 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import DBSubnetGroup_ from './dbSubnetGroup'
-import GlobalCluster_ from './globalCluster'
-import DBSecurityGroupIngress_ from './dbSecurityGroupIngress'
-import DBCluster_ from './dbCluster'
-import EventSubscription_ from './eventSubscription'
-import DBInstance_ from './dbInstance'
-import DBSecurityGroup_ from './dbSecurityGroup'
-import DBClusterParameterGroup_ from './dbClusterParameterGroup'
-import OptionGroup_ from './optionGroup'
-import DBParameterGroup_ from './dbParameterGroup'
-import DBProxy_ from './dbProxy'
-import DBProxyTargetGroup_ from './dbProxyTargetGroup'
-import DBProxyEndpoint_ from './dbProxyEndpoint'
+import * as _0 from './dbSubnetGroup'
+import * as _1 from './globalCluster'
+import * as _2 from './dbSecurityGroupIngress'
+import * as _3 from './dbCluster'
+import * as _4 from './eventSubscription'
+import * as _5 from './dbInstance'
+import * as _6 from './dbSecurityGroup'
+import * as _7 from './dbClusterParameterGroup'
+import * as _8 from './optionGroup'
+import * as _9 from './dbParameterGroup'
+import * as _a from './dbProxy'
+import * as _b from './dbProxyTargetGroup'
+import * as _c from './dbProxyEndpoint'
 
 export namespace RDS {
-  export const DBSubnetGroup = DBSubnetGroup_
-  export const GlobalCluster = GlobalCluster_
-  export const DBSecurityGroupIngress = DBSecurityGroupIngress_
-  export const DBCluster = DBCluster_
-  export const EventSubscription = EventSubscription_
-  export const DBInstance = DBInstance_
-  export const DBSecurityGroup = DBSecurityGroup_
-  export const DBClusterParameterGroup = DBClusterParameterGroup_
-  export const OptionGroup = OptionGroup_
-  export const DBParameterGroup = DBParameterGroup_
-  export const DBProxy = DBProxy_
-  export const DBProxyTargetGroup = DBProxyTargetGroup_
-  export const DBProxyEndpoint = DBProxyEndpoint_
+  export const DBSubnetGroup = _0.R
+  export const GlobalCluster = _1.R
+  export const DBSecurityGroupIngress = _2.R
+  export const DBCluster = _3.R
+  export const EventSubscription = _4.R
+  export const DBInstance = _5.R
+  export const DBSecurityGroup = _6.R
+  export const DBClusterParameterGroup = _7.R
+  export const OptionGroup = _8.R
+  export const DBParameterGroup = _9.R
+  export const DBProxy = _a.R
+  export const DBProxyTargetGroup = _b.R
+  export const DBProxyEndpoint = _c.R
 
-  export type DBSubnetGroup = DBSubnetGroup_
-  export type GlobalCluster = GlobalCluster_
-  export type DBSecurityGroupIngress = DBSecurityGroupIngress_
-  export type DBCluster = DBCluster_
-  export type EventSubscription = EventSubscription_
-  export type DBInstance = DBInstance_
-  export type DBSecurityGroup = DBSecurityGroup_
-  export type DBClusterParameterGroup = DBClusterParameterGroup_
-  export type OptionGroup = OptionGroup_
-  export type DBParameterGroup = DBParameterGroup_
-  export type DBProxy = DBProxy_
-  export type DBProxyTargetGroup = DBProxyTargetGroup_
-  export type DBProxyEndpoint = DBProxyEndpoint_
+  export type DBSubnetGroup = _0.R
+  export type GlobalCluster = _1.R
+  export type DBSecurityGroupIngress = _2.R
+  export type DBCluster = _3.R
+  export type EventSubscription = _4.R
+  export type DBInstance = _5.R
+  export type DBSecurityGroup = _6.R
+  export type DBClusterParameterGroup = _7.R
+  export type OptionGroup = _8.R
+  export type DBParameterGroup = _9.R
+  export type DBProxy = _a.R
+  export type DBProxyTargetGroup = _b.R
+  export type DBProxyEndpoint = _c.R
+
+  export namespace DBCluster {
+    export type ScalingConfiguration = _3.ScalingConfiguration
+    export type DBClusterRole = _3.DBClusterRole
+  }
+  export namespace DBInstance {
+    export type DBInstanceRole = _5.DBInstanceRole
+    export type ProcessorFeature = _5.ProcessorFeature
+  }
+  export namespace DBSecurityGroup {
+    export type Ingress = _6.Ingress
+  }
+  export namespace OptionGroup {
+    export type OptionSetting = _8.OptionSetting
+    export type OptionConfiguration = _8.OptionConfiguration
+  }
+  export namespace DBProxy {
+    export type TagFormat = _a.TagFormat
+    export type AuthFormat = _a.AuthFormat
+  }
+  export namespace DBProxyTargetGroup {
+    export type ConnectionPoolConfigurationInfoFormat = _b.ConnectionPoolConfigurationInfoFormat
+  }
+  export namespace DBProxyEndpoint {
+    export type TagFormat = _c.TagFormat
+  }
 }

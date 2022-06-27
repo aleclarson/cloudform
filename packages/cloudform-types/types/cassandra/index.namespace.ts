@@ -17,13 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Keyspace_ from './keyspace'
-import Table_ from './table'
+import * as _0 from './keyspace'
+import * as _1 from './table'
 
 export namespace Cassandra {
-  export const Keyspace = Keyspace_
-  export const Table = Table_
+  export const Keyspace = _0.R
+  export const Table = _1.R
 
-  export type Keyspace = Keyspace_
-  export type Table = Table_
+  export type Keyspace = _0.R
+  export type Table = _1.R
+
+  export namespace Table {
+    export type BillingMode = _1.BillingMode
+    export type EncryptionSpecification = _1.EncryptionSpecification
+    export type Column = _1.Column
+    export type ClusteringKeyColumn = _1.ClusteringKeyColumn
+    export type ProvisionedThroughput = _1.ProvisionedThroughput
+  }
 }

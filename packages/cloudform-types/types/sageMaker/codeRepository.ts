@@ -30,16 +30,17 @@ export class GitConfig {
     }
 }
 
-export interface CodeRepositoryProperties {
+export interface Properties {
     CodeRepositoryName?: Value<string>
     GitConfig: GitConfig
     Tags?: List<ResourceTag>
 }
 
-export default class CodeRepository extends ResourceBase<CodeRepositoryProperties> {
+class CodeRepository extends ResourceBase<Properties> {
     static GitConfig = GitConfig
 
-    constructor(properties: CodeRepositoryProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::CodeRepository', properties)
     }
 }
+export { CodeRepository as R }

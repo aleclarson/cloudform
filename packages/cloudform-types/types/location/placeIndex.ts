@@ -20,7 +20,7 @@ export class DataSourceConfiguration {
     }
 }
 
-export interface PlaceIndexProperties {
+export interface Properties {
     DataSource: Value<string>
     DataSourceConfiguration?: DataSourceConfiguration
     Description?: Value<string>
@@ -28,10 +28,11 @@ export interface PlaceIndexProperties {
     PricingPlan?: Value<string>
 }
 
-export default class PlaceIndex extends ResourceBase<PlaceIndexProperties> {
+class PlaceIndex extends ResourceBase<Properties> {
     static DataSourceConfiguration = DataSourceConfiguration
 
-    constructor(properties: PlaceIndexProperties) {
+    constructor(properties: Properties) {
         super('AWS::Location::PlaceIndex', properties)
     }
 }
+export { PlaceIndex as R }

@@ -44,18 +44,19 @@ export class EgressFilter {
     }
 }
 
-export interface MeshProperties {
+export interface Properties {
     MeshName?: Value<string>
     Spec?: MeshSpec
     Tags?: List<ResourceTag>
 }
 
-export default class Mesh extends ResourceBase<MeshProperties> {
+class Mesh extends ResourceBase<Properties> {
     static MeshServiceDiscovery = MeshServiceDiscovery
     static MeshSpec = MeshSpec
     static EgressFilter = EgressFilter
 
-    constructor(properties?: MeshProperties) {
+    constructor(properties?: Properties) {
         super('AWS::AppMesh::Mesh', properties || {})
     }
 }
+export { Mesh as R }

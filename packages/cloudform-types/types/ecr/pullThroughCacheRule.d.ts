@@ -1,0 +1,1 @@
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{EcrRepositoryPrefix?:Value<string>;UpstreamRegistryUrl?:Value<string>;}declare class PullThroughCacheRule extends ResourceBase<Properties>{constructor(properties?:Properties);}export{PullThroughCacheRule as R};

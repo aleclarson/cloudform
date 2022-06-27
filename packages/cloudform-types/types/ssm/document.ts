@@ -39,7 +39,7 @@ export class AttachmentsSource {
     }
 }
 
-export interface DocumentProperties {
+export interface Properties {
     Content: {[key: string]: any}
     Attachments?: List<AttachmentsSource>
     Name?: Value<string>
@@ -52,11 +52,12 @@ export interface DocumentProperties {
     UpdateMethod?: Value<string>
 }
 
-export default class Document extends ResourceBase<DocumentProperties> {
+class Document extends ResourceBase<Properties> {
     static DocumentRequires = DocumentRequires
     static AttachmentsSource = AttachmentsSource
 
-    constructor(properties: DocumentProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSM::Document', properties)
     }
 }
+export { Document as R }

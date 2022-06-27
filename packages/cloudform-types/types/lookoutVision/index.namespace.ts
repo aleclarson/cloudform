@@ -17,10 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Project_ from './project'
+import * as _0 from './project'
 
 export namespace LookoutVision {
-  export const Project = Project_
+  export const Project = _0.R
 
-  export type Project = Project_
+  export type Project = _0.R
+
+
 }

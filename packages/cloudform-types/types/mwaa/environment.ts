@@ -15,7 +15,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class NetworkConfiguration {
@@ -49,7 +49,7 @@ export class LoggingConfiguration {
     }
 }
 
-export interface EnvironmentProperties {
+export interface Properties {
     Name: Value<string>
     ExecutionRoleArn?: Value<string>
     KmsKey?: Value<string>
@@ -72,12 +72,13 @@ export interface EnvironmentProperties {
     WebserverAccessMode?: Value<string>
 }
 
-export default class Environment extends ResourceBase<EnvironmentProperties> {
+class Environment extends ResourceBase<Properties> {
     static NetworkConfiguration = NetworkConfiguration
     static ModuleLoggingConfiguration = ModuleLoggingConfiguration
     static LoggingConfiguration = LoggingConfiguration
 
-    constructor(properties: EnvironmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::MWAA::Environment', properties)
     }
 }
+export { Environment as R }

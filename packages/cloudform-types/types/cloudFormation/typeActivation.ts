@@ -29,7 +29,7 @@ export class LoggingConfig {
     }
 }
 
-export interface TypeActivationProperties {
+export interface Properties {
     ExecutionRoleArn?: Value<string>
     PublisherId?: Value<string>
     LoggingConfig?: LoggingConfig
@@ -42,10 +42,11 @@ export interface TypeActivationProperties {
     Type?: Value<string>
 }
 
-export default class TypeActivation extends ResourceBase<TypeActivationProperties> {
+class TypeActivation extends ResourceBase<Properties> {
     static LoggingConfig = LoggingConfig
 
-    constructor(properties?: TypeActivationProperties) {
+    constructor(properties?: Properties) {
         super('AWS::CloudFormation::TypeActivation', properties || {})
     }
 }
+export { TypeActivation as R }

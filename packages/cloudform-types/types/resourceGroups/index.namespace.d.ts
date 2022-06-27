@@ -1,1 +1,1 @@
-import Group_ from'./group';export declare namespace ResourceGroups{const Group:typeof Group_;type Group=Group_;}
+import*as _0 from'./group';export declare namespace ResourceGroups{const Group:typeof _0.R;type Group=_0.R;namespace Group{type TagFilter=_0.TagFilter;type Query=_0.Query;type ConfigurationParameter=_0.ConfigurationParameter;type ConfigurationItem=_0.ConfigurationItem;type ResourceQuery=_0.ResourceQuery;}}

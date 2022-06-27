@@ -43,7 +43,7 @@ export class SourceConfiguration {
     }
 }
 
-export interface KnowledgeBaseProperties {
+export interface Properties {
     Description?: Value<string>
     KnowledgeBaseType: Value<string>
     Name: Value<string>
@@ -53,13 +53,14 @@ export interface KnowledgeBaseProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class KnowledgeBase extends ResourceBase<KnowledgeBaseProperties> {
+class KnowledgeBase extends ResourceBase<Properties> {
     static AppIntegrationsConfiguration = AppIntegrationsConfiguration
     static ServerSideEncryptionConfiguration = ServerSideEncryptionConfiguration
     static RenderingConfiguration = RenderingConfiguration
     static SourceConfiguration = SourceConfiguration
 
-    constructor(properties: KnowledgeBaseProperties) {
+    constructor(properties: Properties) {
         super('AWS::Wisdom::KnowledgeBase', properties)
     }
 }
+export { KnowledgeBase as R }

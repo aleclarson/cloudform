@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AuthorizerProperties {
+export interface Properties {
     AuthorizerFunctionArn: Value<string>
     AuthorizerName?: Value<string>
     SigningDisabled?: Value<boolean>
@@ -32,10 +32,11 @@ export interface AuthorizerProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Authorizer extends ResourceBase<AuthorizerProperties> {
+class Authorizer extends ResourceBase<Properties> {
 
 
-    constructor(properties: AuthorizerProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::Authorizer', properties)
     }
 }
+export { Authorizer as R }

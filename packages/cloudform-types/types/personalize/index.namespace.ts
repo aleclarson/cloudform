@@ -17,19 +17,26 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Solution_ from './solution'
-import Schema_ from './schema'
-import DatasetGroup_ from './datasetGroup'
-import Dataset_ from './dataset'
+import * as _0 from './solution'
+import * as _1 from './schema'
+import * as _2 from './datasetGroup'
+import * as _3 from './dataset'
 
 export namespace Personalize {
-  export const Solution = Solution_
-  export const Schema = Schema_
-  export const DatasetGroup = DatasetGroup_
-  export const Dataset = Dataset_
+  export const Solution = _0.R
+  export const Schema = _1.R
+  export const DatasetGroup = _2.R
+  export const Dataset = _3.R
 
-  export type Solution = Solution_
-  export type Schema = Schema_
-  export type DatasetGroup = DatasetGroup_
-  export type Dataset = Dataset_
+  export type Solution = _0.R
+  export type Schema = _1.R
+  export type DatasetGroup = _2.R
+  export type Dataset = _3.R
+
+  export namespace Solution {
+    export type SolutionConfig = _0.SolutionConfig
+  }
+  export namespace Dataset {
+    export type DatasetImportJob = _3.DatasetImportJob
+  }
 }

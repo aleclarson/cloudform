@@ -17,22 +17,47 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Nodegroup_ from './nodegroup'
-import Cluster_ from './cluster'
-import FargateProfile_ from './fargateProfile'
-import Addon_ from './addon'
-import IdentityProviderConfig_ from './identityProviderConfig'
+import * as _0 from './nodegroup'
+import * as _1 from './cluster'
+import * as _2 from './fargateProfile'
+import * as _3 from './addon'
+import * as _4 from './identityProviderConfig'
 
 export namespace EKS {
-  export const Nodegroup = Nodegroup_
-  export const Cluster = Cluster_
-  export const FargateProfile = FargateProfile_
-  export const Addon = Addon_
-  export const IdentityProviderConfig = IdentityProviderConfig_
+  export const Nodegroup = _0.R
+  export const Cluster = _1.R
+  export const FargateProfile = _2.R
+  export const Addon = _3.R
+  export const IdentityProviderConfig = _4.R
 
-  export type Nodegroup = Nodegroup_
-  export type Cluster = Cluster_
-  export type FargateProfile = FargateProfile_
-  export type Addon = Addon_
-  export type IdentityProviderConfig = IdentityProviderConfig_
+  export type Nodegroup = _0.R
+  export type Cluster = _1.R
+  export type FargateProfile = _2.R
+  export type Addon = _3.R
+  export type IdentityProviderConfig = _4.R
+
+  export namespace Nodegroup {
+    export type Taint = _0.Taint
+    export type LaunchTemplateSpecification = _0.LaunchTemplateSpecification
+    export type UpdateConfig = _0.UpdateConfig
+    export type ScalingConfig = _0.ScalingConfig
+    export type RemoteAccess = _0.RemoteAccess
+  }
+  export namespace Cluster {
+    export type Provider = _1.Provider
+    export type ClusterLogging = _1.ClusterLogging
+    export type EncryptionConfig = _1.EncryptionConfig
+    export type KubernetesNetworkConfig = _1.KubernetesNetworkConfig
+    export type Logging = _1.Logging
+    export type LoggingTypeConfig = _1.LoggingTypeConfig
+    export type ResourcesVpcConfig = _1.ResourcesVpcConfig
+  }
+  export namespace FargateProfile {
+    export type Label = _2.Label
+    export type Selector = _2.Selector
+  }
+  export namespace IdentityProviderConfig {
+    export type OidcIdentityProviderConfig = _4.OidcIdentityProviderConfig
+    export type RequiredClaim = _4.RequiredClaim
+  }
 }

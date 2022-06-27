@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class ImageTestsConfiguration {
@@ -38,7 +38,7 @@ export class Schedule {
     }
 }
 
-export interface ImagePipelineProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     ImageTestsConfiguration?: ImageTestsConfiguration
@@ -52,11 +52,12 @@ export interface ImagePipelineProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class ImagePipeline extends ResourceBase<ImagePipelineProperties> {
+class ImagePipeline extends ResourceBase<Properties> {
     static ImageTestsConfiguration = ImageTestsConfiguration
     static Schedule = Schedule
 
-    constructor(properties: ImagePipelineProperties) {
+    constructor(properties: Properties) {
         super('AWS::ImageBuilder::ImagePipeline', properties)
     }
 }
+export { ImagePipeline as R }

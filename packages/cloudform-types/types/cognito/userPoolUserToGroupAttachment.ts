@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UserPoolUserToGroupAttachmentProperties {
+export interface Properties {
     GroupName: Value<string>
     UserPoolId: Value<string>
     Username: Value<string>
 }
 
-export default class UserPoolUserToGroupAttachment extends ResourceBase<UserPoolUserToGroupAttachmentProperties> {
+class UserPoolUserToGroupAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties: UserPoolUserToGroupAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cognito::UserPoolUserToGroupAttachment', properties)
     }
 }
+export { UserPoolUserToGroupAttachment as R }

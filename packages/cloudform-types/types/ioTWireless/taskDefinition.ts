@@ -49,7 +49,7 @@ export class LoRaWANUpdateGatewayTaskCreate {
     }
 }
 
-export interface TaskDefinitionProperties {
+export interface Properties {
     Name?: Value<string>
     AutoCreateTasks: Value<boolean>
     Update?: UpdateWirelessGatewayTaskCreate
@@ -58,13 +58,14 @@ export interface TaskDefinitionProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class TaskDefinition extends ResourceBase<TaskDefinitionProperties> {
+class TaskDefinition extends ResourceBase<Properties> {
     static UpdateWirelessGatewayTaskCreate = UpdateWirelessGatewayTaskCreate
     static LoRaWANUpdateGatewayTaskEntry = LoRaWANUpdateGatewayTaskEntry
     static LoRaWANGatewayVersion = LoRaWANGatewayVersion
     static LoRaWANUpdateGatewayTaskCreate = LoRaWANUpdateGatewayTaskCreate
 
-    constructor(properties: TaskDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTWireless::TaskDefinition', properties)
     }
 }
+export { TaskDefinition as R }

@@ -28,7 +28,7 @@ export class InstanceReusePolicy {
     }
 }
 
-export interface WarmPoolProperties {
+export interface Properties {
     AutoScalingGroupName: Value<string>
     MaxGroupPreparedCapacity?: Value<number>
     MinSize?: Value<number>
@@ -36,10 +36,11 @@ export interface WarmPoolProperties {
     InstanceReusePolicy?: InstanceReusePolicy
 }
 
-export default class WarmPool extends ResourceBase<WarmPoolProperties> {
+class WarmPool extends ResourceBase<Properties> {
     static InstanceReusePolicy = InstanceReusePolicy
 
-    constructor(properties: WarmPoolProperties) {
+    constructor(properties: Properties) {
         super('AWS::AutoScaling::WarmPool', properties)
     }
 }
+export { WarmPool as R }

@@ -1,1 +1,1 @@
-import Trail_ from'./trail';export declare namespace CloudTrail{const Trail:typeof Trail_;type Trail=Trail_;}
+import*as _0 from'./trail';import*as _1 from'./eventDataStore';export declare namespace CloudTrail{const Trail:typeof _0.R;const EventDataStore:typeof _1.R;type Trail=_0.R;type EventDataStore=_1.R;namespace Trail{type EventSelector=_0.EventSelector;type DataResource=_0.DataResource;type InsightSelector=_0.InsightSelector;}namespace EventDataStore{type AdvancedEventSelector=_1.AdvancedEventSelector;type AdvancedFieldSelector=_1.AdvancedFieldSelector;}}

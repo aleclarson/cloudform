@@ -1,1 +1,1 @@
-import Assessment_ from'./assessment';export declare namespace AuditManager{const Assessment:typeof Assessment_;type Assessment=Assessment_;}
+import*as _0 from'./assessment';export declare namespace AuditManager{const Assessment:typeof _0.R;type Assessment=_0.R;namespace Assessment{type Delegation=_0.Delegation;type AWSAccount=_0.AWSAccount;type Role=_0.Role;type AssessmentReportsDestination=_0.AssessmentReportsDestination;type AWSService=_0.AWSService;type Scope=_0.Scope;}}

@@ -56,7 +56,7 @@ export class DnsRecord {
     }
 }
 
-export interface ServiceProperties {
+export interface Properties {
     Type?: Value<string>
     Description?: Value<string>
     HealthCheckCustomConfig?: HealthCheckCustomConfig
@@ -67,13 +67,14 @@ export interface ServiceProperties {
     Name?: Value<string>
 }
 
-export default class Service extends ResourceBase<ServiceProperties> {
+class Service extends ResourceBase<Properties> {
     static DnsConfig = DnsConfig
     static HealthCheckConfig = HealthCheckConfig
     static HealthCheckCustomConfig = HealthCheckCustomConfig
     static DnsRecord = DnsRecord
 
-    constructor(properties?: ServiceProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ServiceDiscovery::Service', properties || {})
     }
 }
+export { Service as R }

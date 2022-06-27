@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class S3 {
@@ -241,7 +241,7 @@ export class OpenMonitoring {
     }
 }
 
-export interface ClusterProperties {
+export interface Properties {
     BrokerNodeGroupInfo: BrokerNodeGroupInfo
     EnhancedMonitoring?: Value<string>
     KafkaVersion: Value<string>
@@ -256,7 +256,7 @@ export interface ClusterProperties {
     ConfigurationInfo?: ConfigurationInfo
 }
 
-export default class Cluster extends ResourceBase<ClusterProperties> {
+class Cluster extends ResourceBase<Properties> {
     static S3 = S3
     static CloudWatchLogs = CloudWatchLogs
     static PublicAccess = PublicAccess
@@ -283,7 +283,8 @@ export default class Cluster extends ResourceBase<ClusterProperties> {
     static Tls = Tls
     static OpenMonitoring = OpenMonitoring
 
-    constructor(properties: ClusterProperties) {
+    constructor(properties: Properties) {
         super('AWS::MSK::Cluster', properties)
     }
 }
+export { Cluster as R }

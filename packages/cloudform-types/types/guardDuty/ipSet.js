@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class IPSet extends resource_1.ResourceBase{constructor(properties){super("AWS::GuardDuty::IPSet",properties)}}exports.default=IPSet;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class IPSet extends resource_1.ResourceBase{constructor(properties){super("AWS::GuardDuty::IPSet",properties)}}exports.R=IPSet;

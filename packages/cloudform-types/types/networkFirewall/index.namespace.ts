@@ -17,19 +17,57 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import FirewallPolicy_ from './firewallPolicy'
-import Firewall_ from './firewall'
-import LoggingConfiguration_ from './loggingConfiguration'
-import RuleGroup_ from './ruleGroup'
+import * as _0 from './firewallPolicy'
+import * as _1 from './firewall'
+import * as _2 from './loggingConfiguration'
+import * as _3 from './ruleGroup'
 
 export namespace NetworkFirewall {
-  export const FirewallPolicy = FirewallPolicy_
-  export const Firewall = Firewall_
-  export const LoggingConfiguration = LoggingConfiguration_
-  export const RuleGroup = RuleGroup_
+  export const FirewallPolicy = _0.R
+  export const Firewall = _1.R
+  export const LoggingConfiguration = _2.R
+  export const RuleGroup = _3.R
 
-  export type FirewallPolicy = FirewallPolicy_
-  export type Firewall = Firewall_
-  export type LoggingConfiguration = LoggingConfiguration_
-  export type RuleGroup = RuleGroup_
+  export type FirewallPolicy = _0.R
+  export type Firewall = _1.R
+  export type LoggingConfiguration = _2.R
+  export type RuleGroup = _3.R
+
+  export namespace FirewallPolicy {
+    export type CustomAction = _0.CustomAction
+    export type StatelessRuleGroupReference = _0.StatelessRuleGroupReference
+    export type StatefulRuleGroupReference = _0.StatefulRuleGroupReference
+    export type PublishMetricAction = _0.PublishMetricAction
+    export type ActionDefinition = _0.ActionDefinition
+    export type Dimension = _0.Dimension
+    export type StatefulEngineOptions = _0.StatefulEngineOptions
+  }
+  export namespace Firewall {
+    export type SubnetMapping = _1.SubnetMapping
+  }
+  export namespace LoggingConfiguration {
+    export type LogDestinationConfig = _2.LogDestinationConfig
+  }
+  export namespace RuleGroup {
+    export type ActionDefinition = _3.ActionDefinition
+    export type TCPFlagField = _3.TCPFlagField
+    export type Header = _3.Header
+    export type Dimension = _3.Dimension
+    export type StatelessRulesAndCustomActions = _3.StatelessRulesAndCustomActions
+    export type RuleOption = _3.RuleOption
+    export type RuleDefinition = _3.RuleDefinition
+    export type RulesSourceList = _3.RulesSourceList
+    export type StatelessRule = _3.StatelessRule
+    export type PortRange = _3.PortRange
+    export type IPSet = _3.IPSet
+    export type CustomAction = _3.CustomAction
+    export type StatefulRuleOptions = _3.StatefulRuleOptions
+    export type PortSet = _3.PortSet
+    export type MatchAttributes = _3.MatchAttributes
+    export type RuleVariables = _3.RuleVariables
+    export type PublishMetricAction = _3.PublishMetricAction
+    export type Address = _3.Address
+    export type RulesSource = _3.RulesSource
+    export type StatefulRule = _3.StatefulRule
+  }
 }

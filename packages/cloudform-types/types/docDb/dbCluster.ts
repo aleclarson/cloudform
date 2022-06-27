@@ -20,7 +20,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DBClusterProperties {
+export interface Properties {
     StorageEncrypted?: Value<boolean>
     EngineVersion?: Value<string>
     KmsKeyId?: Value<string>
@@ -42,10 +42,11 @@ export interface DBClusterProperties {
     EnableCloudwatchLogsExports?: List<Value<string>>
 }
 
-export default class DBCluster extends ResourceBase<DBClusterProperties> {
+class DBCluster extends ResourceBase<Properties> {
 
 
-    constructor(properties?: DBClusterProperties) {
+    constructor(properties?: Properties) {
         super('AWS::DocDB::DBCluster', properties || {})
     }
 }
+export { DBCluster as R }

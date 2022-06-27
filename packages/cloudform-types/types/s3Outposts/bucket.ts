@@ -49,19 +49,20 @@ export class LifecycleConfiguration {
     }
 }
 
-export interface BucketProperties {
+export interface Properties {
     BucketName: Value<string>
     OutpostId: Value<string>
     Tags?: List<ResourceTag>
     LifecycleConfiguration?: LifecycleConfiguration
 }
 
-export default class Bucket extends ResourceBase<BucketProperties> {
+class Bucket extends ResourceBase<Properties> {
     static AbortIncompleteMultipartUpload = AbortIncompleteMultipartUpload
     static Rule = Rule
     static LifecycleConfiguration = LifecycleConfiguration
 
-    constructor(properties: BucketProperties) {
+    constructor(properties: Properties) {
         super('AWS::S3Outposts::Bucket', properties)
     }
 }
+export { Bucket as R }

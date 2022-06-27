@@ -12,7 +12,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PackageVersionProperties {
+export interface Properties {
     OwnerAccount?: Value<string>
     PackageId: Value<string>
     PackageVersion: Value<string>
@@ -21,10 +21,11 @@ export interface PackageVersionProperties {
     UpdatedLatestPatchVersion?: Value<string>
 }
 
-export default class PackageVersion extends ResourceBase<PackageVersionProperties> {
+class PackageVersion extends ResourceBase<Properties> {
 
 
-    constructor(properties: PackageVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Panorama::PackageVersion', properties)
     }
 }
+export { PackageVersion as R }

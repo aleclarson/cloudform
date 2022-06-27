@@ -39,7 +39,7 @@ export class VpcConfiguration {
     }
 }
 
-export interface AccessPointProperties {
+export interface Properties {
     Name?: Value<string>
     Bucket: Value<string>
     VpcConfiguration?: VpcConfiguration
@@ -48,11 +48,12 @@ export interface AccessPointProperties {
     PolicyStatus?: {[key: string]: any}
 }
 
-export default class AccessPoint extends ResourceBase<AccessPointProperties> {
+class AccessPoint extends ResourceBase<Properties> {
     static PublicAccessBlockConfiguration = PublicAccessBlockConfiguration
     static VpcConfiguration = VpcConfiguration
 
-    constructor(properties: AccessPointProperties) {
+    constructor(properties: Properties) {
         super('AWS::S3::AccessPoint', properties)
     }
 }
+export { AccessPoint as R }

@@ -20,17 +20,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SubnetGroupProperties {
+export interface Properties {
     SubnetGroupName: Value<string>
     Description?: Value<string>
     SubnetIds: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class SubnetGroup extends ResourceBase<SubnetGroupProperties> {
+class SubnetGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: SubnetGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::MemoryDB::SubnetGroup', properties)
     }
 }
+export { SubnetGroup as R }

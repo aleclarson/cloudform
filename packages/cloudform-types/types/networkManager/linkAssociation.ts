@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LinkAssociationProperties {
+export interface Properties {
     GlobalNetworkId: Value<string>
     DeviceId: Value<string>
     LinkId: Value<string>
 }
 
-export default class LinkAssociation extends ResourceBase<LinkAssociationProperties> {
+class LinkAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: LinkAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::NetworkManager::LinkAssociation', properties)
     }
 }
+export { LinkAssociation as R }

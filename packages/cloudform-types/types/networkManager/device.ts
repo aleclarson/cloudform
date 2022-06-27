@@ -30,7 +30,7 @@ export class Location {
     }
 }
 
-export interface DeviceProperties {
+export interface Properties {
     Description?: Value<string>
     Tags?: List<ResourceTag>
     GlobalNetworkId: Value<string>
@@ -42,10 +42,11 @@ export interface DeviceProperties {
     Vendor?: Value<string>
 }
 
-export default class Device extends ResourceBase<DeviceProperties> {
+class Device extends ResourceBase<Properties> {
     static Location = Location
 
-    constructor(properties: DeviceProperties) {
+    constructor(properties: Properties) {
         super('AWS::NetworkManager::Device', properties)
     }
 }
+export { Device as R }

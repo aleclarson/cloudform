@@ -29,7 +29,7 @@ export class IpAddressRequest {
     }
 }
 
-export interface ResolverEndpointProperties {
+export interface Properties {
     IpAddresses: List<IpAddressRequest>
     Direction: Value<string>
     SecurityGroupIds: List<Value<string>>
@@ -37,10 +37,11 @@ export interface ResolverEndpointProperties {
     Name?: Value<string>
 }
 
-export default class ResolverEndpoint extends ResourceBase<ResolverEndpointProperties> {
+class ResolverEndpoint extends ResourceBase<Properties> {
     static IpAddressRequest = IpAddressRequest
 
-    constructor(properties: ResolverEndpointProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53Resolver::ResolverEndpoint', properties)
     }
 }
+export { ResolverEndpoint as R }

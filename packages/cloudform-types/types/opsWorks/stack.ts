@@ -70,7 +70,7 @@ export class ElasticIp {
     }
 }
 
-export interface StackProperties {
+export interface Properties {
     AgentVersion?: Value<string>
     Attributes?: {[key: string]: Value<string>}
     ChefConfiguration?: ChefConfiguration
@@ -98,14 +98,15 @@ export interface StackProperties {
     VpcId?: Value<string>
 }
 
-export default class Stack extends ResourceBase<StackProperties> {
+class Stack extends ResourceBase<Properties> {
     static StackConfigurationManager = StackConfigurationManager
     static RdsDbInstance = RdsDbInstance
     static Source = Source
     static ChefConfiguration = ChefConfiguration
     static ElasticIp = ElasticIp
 
-    constructor(properties: StackProperties) {
+    constructor(properties: Properties) {
         super('AWS::OpsWorks::Stack', properties)
     }
 }
+export { Stack as R }

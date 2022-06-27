@@ -92,7 +92,7 @@ export class ClientLoginBannerOptions {
     }
 }
 
-export interface ClientVpnEndpointProperties {
+export interface Properties {
     ClientCidrBlock: Value<string>
     ClientConnectOptions?: ClientConnectOptions
     Description?: Value<string>
@@ -111,7 +111,7 @@ export interface ClientVpnEndpointProperties {
     VpnPort?: Value<number>
 }
 
-export default class ClientVpnEndpoint extends ResourceBase<ClientVpnEndpointProperties> {
+class ClientVpnEndpoint extends ResourceBase<Properties> {
     static ClientConnectOptions = ClientConnectOptions
     static DirectoryServiceAuthenticationRequest = DirectoryServiceAuthenticationRequest
     static TagSpecification = TagSpecification
@@ -121,7 +121,8 @@ export default class ClientVpnEndpoint extends ResourceBase<ClientVpnEndpointPro
     static CertificateAuthenticationRequest = CertificateAuthenticationRequest
     static ClientLoginBannerOptions = ClientLoginBannerOptions
 
-    constructor(properties: ClientVpnEndpointProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::ClientVpnEndpoint', properties)
     }
 }
+export { ClientVpnEndpoint as R }

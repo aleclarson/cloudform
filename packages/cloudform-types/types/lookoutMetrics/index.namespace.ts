@@ -17,13 +17,35 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Alert_ from './alert'
-import AnomalyDetector_ from './anomalyDetector'
+import * as _0 from './alert'
+import * as _1 from './anomalyDetector'
 
 export namespace LookoutMetrics {
-  export const Alert = Alert_
-  export const AnomalyDetector = AnomalyDetector_
+  export const Alert = _0.R
+  export const AnomalyDetector = _1.R
 
-  export type Alert = Alert_
-  export type AnomalyDetector = AnomalyDetector_
+  export type Alert = _0.R
+  export type AnomalyDetector = _1.R
+
+  export namespace Alert {
+    export type SNSConfiguration = _0.SNSConfiguration
+    export type LambdaConfiguration = _0.LambdaConfiguration
+    export type Action = _0.Action
+  }
+  export namespace AnomalyDetector {
+    export type FileFormatDescriptor = _1.FileFormatDescriptor
+    export type CsvFormatDescriptor = _1.CsvFormatDescriptor
+    export type VpcConfiguration = _1.VpcConfiguration
+    export type RDSSourceConfig = _1.RDSSourceConfig
+    export type TimestampColumn = _1.TimestampColumn
+    export type JsonFormatDescriptor = _1.JsonFormatDescriptor
+    export type AnomalyDetectorConfig = _1.AnomalyDetectorConfig
+    export type AppFlowConfig = _1.AppFlowConfig
+    export type MetricSource = _1.MetricSource
+    export type RedshiftSourceConfig = _1.RedshiftSourceConfig
+    export type Metric = _1.Metric
+    export type MetricSet = _1.MetricSet
+    export type CloudwatchConfig = _1.CloudwatchConfig
+    export type S3SourceConfig = _1.S3SourceConfig
+  }
 }

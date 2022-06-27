@@ -17,16 +17,22 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Session_ from './session'
-import FindingsFilter_ from './findingsFilter'
-import CustomDataIdentifier_ from './customDataIdentifier'
+import * as _0 from './session'
+import * as _1 from './findingsFilter'
+import * as _2 from './customDataIdentifier'
 
 export namespace Macie {
-  export const Session = Session_
-  export const FindingsFilter = FindingsFilter_
-  export const CustomDataIdentifier = CustomDataIdentifier_
+  export const Session = _0.R
+  export const FindingsFilter = _1.R
+  export const CustomDataIdentifier = _2.R
 
-  export type Session = Session_
-  export type FindingsFilter = FindingsFilter_
-  export type CustomDataIdentifier = CustomDataIdentifier_
+  export type Session = _0.R
+  export type FindingsFilter = _1.R
+  export type CustomDataIdentifier = _2.R
+
+  export namespace FindingsFilter {
+    export type FindingsFilterListItem = _1.FindingsFilterListItem
+    export type FindingCriteria = _1.FindingCriteria
+    export type Criterion = _1.Criterion
+  }
 }

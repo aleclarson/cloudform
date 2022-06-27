@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class ComputeEnvironmentOrder {
@@ -29,7 +29,7 @@ export class ComputeEnvironmentOrder {
     }
 }
 
-export interface JobQueueProperties {
+export interface Properties {
     JobQueueName?: Value<string>
     ComputeEnvironmentOrder: List<ComputeEnvironmentOrder>
     Priority: Value<number>
@@ -38,10 +38,11 @@ export interface JobQueueProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class JobQueue extends ResourceBase<JobQueueProperties> {
+class JobQueue extends ResourceBase<Properties> {
     static ComputeEnvironmentOrder = ComputeEnvironmentOrder
 
-    constructor(properties: JobQueueProperties) {
+    constructor(properties: Properties) {
         super('AWS::Batch::JobQueue', properties)
     }
 }
+export { JobQueue as R }

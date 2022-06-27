@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NamedQueryProperties {
+export interface Properties {
     Name?: Value<string>
     Database: Value<string>
     Description?: Value<string>
@@ -30,10 +30,11 @@ export interface NamedQueryProperties {
     WorkGroup?: Value<string>
 }
 
-export default class NamedQuery extends ResourceBase<NamedQueryProperties> {
+class NamedQuery extends ResourceBase<Properties> {
 
 
-    constructor(properties: NamedQueryProperties) {
+    constructor(properties: Properties) {
         super('AWS::Athena::NamedQuery', properties)
     }
 }
+export { NamedQuery as R }

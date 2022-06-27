@@ -27,7 +27,7 @@ export class Endpoint {
     }
 }
 
-export interface ClusterProperties {
+export interface Properties {
     ClusterName: Value<string>
     Description?: Value<string>
     NodeType: Value<string>
@@ -53,10 +53,11 @@ export interface ClusterProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Cluster extends ResourceBase<ClusterProperties> {
+class Cluster extends ResourceBase<Properties> {
     static Endpoint = Endpoint
 
-    constructor(properties: ClusterProperties) {
+    constructor(properties: Properties) {
         super('AWS::MemoryDB::Cluster', properties)
     }
 }
+export { Cluster as R }

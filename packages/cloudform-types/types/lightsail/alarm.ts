@@ -19,7 +19,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AlarmProperties {
+export interface Properties {
     AlarmName: Value<string>
     MonitoredResourceName: Value<string>
     MetricName: Value<string>
@@ -33,10 +33,11 @@ export interface AlarmProperties {
     TreatMissingData?: Value<string>
 }
 
-export default class Alarm extends ResourceBase<AlarmProperties> {
+class Alarm extends ResourceBase<Properties> {
 
 
-    constructor(properties: AlarmProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lightsail::Alarm', properties)
     }
 }
+export { Alarm as R }

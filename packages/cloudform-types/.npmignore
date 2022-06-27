@@ -13,6 +13,7 @@ jspm_packages/
 
 generator/
 example/
+dtsMinify.js
 
 *.ts
 !*.d.ts

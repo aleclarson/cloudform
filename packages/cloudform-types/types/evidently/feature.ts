@@ -33,7 +33,7 @@ export class EntityOverride {
     }
 }
 
-export interface FeatureProperties {
+export interface Properties {
     Project: Value<string>
     Name: Value<string>
     Description?: Value<string>
@@ -44,11 +44,12 @@ export interface FeatureProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Feature extends ResourceBase<FeatureProperties> {
+class Feature extends ResourceBase<Properties> {
     static VariationObject = VariationObject
     static EntityOverride = EntityOverride
 
-    constructor(properties: FeatureProperties) {
+    constructor(properties: Properties) {
         super('AWS::Evidently::Feature', properties)
     }
 }
+export { Feature as R }

@@ -17,17 +17,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SMSChannelProperties {
+export interface Properties {
     ShortCode?: Value<string>
     Enabled?: Value<boolean>
     ApplicationId: Value<string>
     SenderId?: Value<string>
 }
 
-export default class SMSChannel extends ResourceBase<SMSChannelProperties> {
+class SMSChannel extends ResourceBase<Properties> {
 
 
-    constructor(properties: SMSChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::SMSChannel', properties)
     }
 }
+export { SMSChannel as R }

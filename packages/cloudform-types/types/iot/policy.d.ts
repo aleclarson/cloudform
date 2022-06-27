@@ -1,1 +1,1 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface PolicyProperties{PolicyDocument:{[key:string]:any;};PolicyName?:Value<string>;}export default class Policy extends ResourceBase<PolicyProperties>{constructor(properties:PolicyProperties);}
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{PolicyDocument:{[key:string]:any;};PolicyName?:Value<string>;}declare class Policy extends ResourceBase<Properties>{constructor(properties:Properties);}export{Policy as R};

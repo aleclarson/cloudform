@@ -11,12 +11,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface RobotProperties {
+export interface Properties {
     Fleet?: Value<string>
     Architecture: Value<string>
     GreengrassGroupId: Value<string>
@@ -24,10 +24,11 @@ export interface RobotProperties {
     Name?: Value<string>
 }
 
-export default class Robot extends ResourceBase<RobotProperties> {
+class Robot extends ResourceBase<Properties> {
 
 
-    constructor(properties: RobotProperties) {
+    constructor(properties: Properties) {
         super('AWS::RoboMaker::Robot', properties)
     }
 }
+export { Robot as R }

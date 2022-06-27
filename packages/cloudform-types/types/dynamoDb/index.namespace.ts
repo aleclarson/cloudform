@@ -17,13 +17,47 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Table_ from './table'
-import GlobalTable_ from './globalTable'
+import * as _0 from './table'
+import * as _1 from './globalTable'
 
 export namespace DynamoDB {
-  export const Table = Table_
-  export const GlobalTable = GlobalTable_
+  export const Table = _0.R
+  export const GlobalTable = _1.R
 
-  export type Table = Table_
-  export type GlobalTable = GlobalTable_
+  export type Table = _0.R
+  export type GlobalTable = _1.R
+
+  export namespace Table {
+    export type LocalSecondaryIndex = _0.LocalSecondaryIndex
+    export type PointInTimeRecoverySpecification = _0.PointInTimeRecoverySpecification
+    export type KinesisStreamSpecification = _0.KinesisStreamSpecification
+    export type AttributeDefinition = _0.AttributeDefinition
+    export type GlobalSecondaryIndex = _0.GlobalSecondaryIndex
+    export type ContributorInsightsSpecification = _0.ContributorInsightsSpecification
+    export type KeySchema = _0.KeySchema
+    export type SSESpecification = _0.SSESpecification
+    export type TimeToLiveSpecification = _0.TimeToLiveSpecification
+    export type ProvisionedThroughput = _0.ProvisionedThroughput
+    export type Projection = _0.Projection
+    export type StreamSpecification = _0.StreamSpecification
+  }
+  export namespace GlobalTable {
+    export type PointInTimeRecoverySpecification = _1.PointInTimeRecoverySpecification
+    export type ContributorInsightsSpecification = _1.ContributorInsightsSpecification
+    export type CapacityAutoScalingSettings = _1.CapacityAutoScalingSettings
+    export type ReadProvisionedThroughputSettings = _1.ReadProvisionedThroughputSettings
+    export type LocalSecondaryIndex = _1.LocalSecondaryIndex
+    export type TargetTrackingScalingPolicyConfiguration = _1.TargetTrackingScalingPolicyConfiguration
+    export type ReplicaSpecification = _1.ReplicaSpecification
+    export type GlobalSecondaryIndex = _1.GlobalSecondaryIndex
+    export type KeySchema = _1.KeySchema
+    export type StreamSpecification = _1.StreamSpecification
+    export type Projection = _1.Projection
+    export type ReplicaGlobalSecondaryIndexSpecification = _1.ReplicaGlobalSecondaryIndexSpecification
+    export type AttributeDefinition = _1.AttributeDefinition
+    export type SSESpecification = _1.SSESpecification
+    export type WriteProvisionedThroughputSettings = _1.WriteProvisionedThroughputSettings
+    export type TimeToLiveSpecification = _1.TimeToLiveSpecification
+    export type ReplicaSSESpecification = _1.ReplicaSSESpecification
+  }
 }

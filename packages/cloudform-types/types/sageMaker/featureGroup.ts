@@ -29,7 +29,7 @@ export class FeatureDefinition {
     }
 }
 
-export interface FeatureGroupProperties {
+export interface Properties {
     FeatureGroupName: Value<string>
     RecordIdentifierFeatureName: Value<string>
     EventTimeFeatureName: Value<string>
@@ -41,10 +41,11 @@ export interface FeatureGroupProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class FeatureGroup extends ResourceBase<FeatureGroupProperties> {
+class FeatureGroup extends ResourceBase<Properties> {
     static FeatureDefinition = FeatureDefinition
 
-    constructor(properties: FeatureGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::FeatureGroup', properties)
     }
 }
+export { FeatureGroup as R }

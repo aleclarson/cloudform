@@ -18,15 +18,16 @@ export class DefinitionDocument {
     }
 }
 
-export interface FlowTemplateProperties {
+export interface Properties {
     CompatibleNamespaceVersion?: Value<number>
     Definition: DefinitionDocument
 }
 
-export default class FlowTemplate extends ResourceBase<FlowTemplateProperties> {
+class FlowTemplate extends ResourceBase<Properties> {
     static DefinitionDocument = DefinitionDocument
 
-    constructor(properties: FlowTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTThingsGraph::FlowTemplate', properties)
     }
 }
+export { FlowTemplate as R }

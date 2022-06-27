@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SubscriptionFilterProperties {
+export interface Properties {
     DestinationArn: Value<string>
     FilterPattern: Value<string>
     LogGroupName: Value<string>
     RoleArn?: Value<string>
 }
 
-export default class SubscriptionFilter extends ResourceBase<SubscriptionFilterProperties> {
+class SubscriptionFilter extends ResourceBase<Properties> {
 
 
-    constructor(properties: SubscriptionFilterProperties) {
+    constructor(properties: Properties) {
         super('AWS::Logs::SubscriptionFilter', properties)
     }
 }
+export { SubscriptionFilter as R }

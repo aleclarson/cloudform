@@ -15,16 +15,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UserHierarchyGroupProperties {
+export interface Properties {
     InstanceArn: Value<string>
     ParentGroupArn?: Value<string>
     Name: Value<string>
 }
 
-export default class UserHierarchyGroup extends ResourceBase<UserHierarchyGroupProperties> {
+class UserHierarchyGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: UserHierarchyGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::Connect::UserHierarchyGroup', properties)
     }
 }
+export { UserHierarchyGroup as R }

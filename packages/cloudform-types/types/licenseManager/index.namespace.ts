@@ -17,13 +17,23 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import License_ from './license'
-import Grant_ from './grant'
+import * as _0 from './license'
+import * as _1 from './grant'
 
 export namespace LicenseManager {
-  export const License = License_
-  export const Grant = Grant_
+  export const License = _0.R
+  export const Grant = _1.R
 
-  export type License = License_
-  export type Grant = Grant_
+  export type License = _0.R
+  export type Grant = _1.R
+
+  export namespace License {
+    export type ProvisionalConfiguration = _0.ProvisionalConfiguration
+    export type ConsumptionConfiguration = _0.ConsumptionConfiguration
+    export type IssuerData = _0.IssuerData
+    export type BorrowConfiguration = _0.BorrowConfiguration
+    export type Metadata = _0.Metadata
+    export type Entitlement = _0.Entitlement
+    export type ValidityDateFormat = _0.ValidityDateFormat
+  }
 }

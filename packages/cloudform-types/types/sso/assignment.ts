@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AssignmentProperties {
+export interface Properties {
     InstanceArn: Value<string>
     TargetId: Value<string>
     TargetType: Value<string>
@@ -30,10 +30,11 @@ export interface AssignmentProperties {
     PrincipalId: Value<string>
 }
 
-export default class Assignment extends ResourceBase<AssignmentProperties> {
+class Assignment extends ResourceBase<Properties> {
 
 
-    constructor(properties: AssignmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSO::Assignment', properties)
     }
 }
+export { Assignment as R }

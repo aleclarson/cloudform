@@ -32,17 +32,18 @@ export class FieldToMatch {
     }
 }
 
-export interface LoggingConfigurationProperties {
+export interface Properties {
     ResourceArn: Value<string>
     LogDestinationConfigs: List<Value<string>>
     RedactedFields?: List<FieldToMatch>
     LoggingFilter?: {[key: string]: any}
 }
 
-export default class LoggingConfiguration extends ResourceBase<LoggingConfigurationProperties> {
+class LoggingConfiguration extends ResourceBase<Properties> {
     static FieldToMatch = FieldToMatch
 
-    constructor(properties: LoggingConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAFv2::LoggingConfiguration', properties)
     }
 }
+export { LoggingConfiguration as R }

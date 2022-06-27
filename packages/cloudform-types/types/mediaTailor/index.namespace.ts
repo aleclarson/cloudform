@@ -17,10 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import PlaybackConfiguration_ from './playbackConfiguration'
+import * as _0 from './playbackConfiguration'
 
 export namespace MediaTailor {
-  export const PlaybackConfiguration = PlaybackConfiguration_
+  export const PlaybackConfiguration = _0.R
 
-  export type PlaybackConfiguration = PlaybackConfiguration_
+  export type PlaybackConfiguration = _0.R
+
+  export namespace PlaybackConfiguration {
+    export type AdMarkerPassthrough = _0.AdMarkerPassthrough
+    export type CdnConfiguration = _0.CdnConfiguration
+    export type AvailSuppression = _0.AvailSuppression
+    export type ManifestProcessingRules = _0.ManifestProcessingRules
+    export type Bumper = _0.Bumper
+    export type DashConfiguration = _0.DashConfiguration
+    export type HlsConfiguration = _0.HlsConfiguration
+    export type LivePreRollConfiguration = _0.LivePreRollConfiguration
+  }
 }

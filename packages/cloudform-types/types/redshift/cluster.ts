@@ -38,7 +38,7 @@ export class LoggingProperties {
     }
 }
 
-export interface ClusterProperties {
+export interface Properties {
     ClusterIdentifier?: Value<string>
     MasterUsername: Value<string>
     MasterUserPassword: Value<string>
@@ -88,11 +88,12 @@ export interface ClusterProperties {
     RotateEncryptionKey?: Value<boolean>
 }
 
-export default class Cluster extends ResourceBase<ClusterProperties> {
+class Cluster extends ResourceBase<Properties> {
     static Endpoint = Endpoint
     static LoggingProperties = LoggingProperties
 
-    constructor(properties: ClusterProperties) {
+    constructor(properties: Properties) {
         super('AWS::Redshift::Cluster', properties)
     }
 }
+export { Cluster as R }

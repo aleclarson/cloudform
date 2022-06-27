@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DBParameterGroupProperties {
+export interface Properties {
     Description: Value<string>
     Parameters: {[key: string]: any}
     Family: Value<string>
@@ -29,10 +29,11 @@ export interface DBParameterGroupProperties {
     Name?: Value<string>
 }
 
-export default class DBParameterGroup extends ResourceBase<DBParameterGroupProperties> {
+class DBParameterGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: DBParameterGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::Neptune::DBParameterGroup', properties)
     }
 }
+export { DBParameterGroup as R }

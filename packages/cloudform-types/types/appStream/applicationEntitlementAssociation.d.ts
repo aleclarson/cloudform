@@ -1,0 +1,1 @@
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{StackName:Value<string>;EntitlementName:Value<string>;ApplicationIdentifier:Value<string>;}declare class ApplicationEntitlementAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{ApplicationEntitlementAssociation as R};

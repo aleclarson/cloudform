@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ContactChannelProperties {
+export interface Properties {
     ContactId: Value<string>
     ChannelName: Value<string>
     ChannelType: Value<string>
@@ -29,10 +29,11 @@ export interface ContactChannelProperties {
     ChannelAddress: Value<string>
 }
 
-export default class ContactChannel extends ResourceBase<ContactChannelProperties> {
+class ContactChannel extends ResourceBase<Properties> {
 
 
-    constructor(properties: ContactChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSMContacts::ContactChannel', properties)
     }
 }
+export { ContactChannel as R }

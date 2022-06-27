@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class PlaybackKeyPair extends resource_1.ResourceBase{constructor(properties){super("AWS::IVS::PlaybackKeyPair",properties)}}exports.default=PlaybackKeyPair;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class PlaybackKeyPair extends resource_1.ResourceBase{constructor(properties){super("AWS::IVS::PlaybackKeyPair",properties)}}exports.R=PlaybackKeyPair;

@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface BasePathMappingProperties {
+export interface Properties {
     Id?: Value<string>
     BasePath?: Value<string>
     DomainName: Value<string>
@@ -30,10 +30,11 @@ export interface BasePathMappingProperties {
     Stage?: Value<string>
 }
 
-export default class BasePathMapping extends ResourceBase<BasePathMappingProperties> {
+class BasePathMapping extends ResourceBase<Properties> {
 
 
-    constructor(properties: BasePathMappingProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::BasePathMapping', properties)
     }
 }
+export { BasePathMapping as R }

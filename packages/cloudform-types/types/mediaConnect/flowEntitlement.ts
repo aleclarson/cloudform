@@ -34,7 +34,7 @@ export class Encryption {
     }
 }
 
-export interface FlowEntitlementProperties {
+export interface Properties {
     FlowArn: Value<string>
     DataTransferSubscriberFeePercent?: Value<number>
     Description: Value<string>
@@ -44,10 +44,11 @@ export interface FlowEntitlementProperties {
     Subscribers: List<Value<string>>
 }
 
-export default class FlowEntitlement extends ResourceBase<FlowEntitlementProperties> {
+class FlowEntitlement extends ResourceBase<Properties> {
     static Encryption = Encryption
 
-    constructor(properties: FlowEntitlementProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaConnect::FlowEntitlement', properties)
     }
 }
+export { FlowEntitlement as R }

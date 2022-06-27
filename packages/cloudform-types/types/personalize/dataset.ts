@@ -27,7 +27,7 @@ export class DatasetImportJob {
     }
 }
 
-export interface DatasetProperties {
+export interface Properties {
     Name: Value<string>
     DatasetType: Value<string>
     DatasetGroupArn: Value<string>
@@ -35,10 +35,11 @@ export interface DatasetProperties {
     DatasetImportJob?: DatasetImportJob
 }
 
-export default class Dataset extends ResourceBase<DatasetProperties> {
+class Dataset extends ResourceBase<Properties> {
     static DatasetImportJob = DatasetImportJob
 
-    constructor(properties: DatasetProperties) {
+    constructor(properties: Properties) {
         super('AWS::Personalize::Dataset', properties)
     }
 }
+export { Dataset as R }

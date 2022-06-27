@@ -85,7 +85,7 @@ export class TargetTrackingScalingPolicyConfiguration {
     }
 }
 
-export interface ScalingPolicyProperties {
+export interface Properties {
     PolicyName: Value<string>
     PolicyType: Value<string>
     ResourceId?: Value<string>
@@ -96,7 +96,7 @@ export interface ScalingPolicyProperties {
     TargetTrackingScalingPolicyConfiguration?: TargetTrackingScalingPolicyConfiguration
 }
 
-export default class ScalingPolicy extends ResourceBase<ScalingPolicyProperties> {
+class ScalingPolicy extends ResourceBase<Properties> {
     static StepScalingPolicyConfiguration = StepScalingPolicyConfiguration
     static PredefinedMetricSpecification = PredefinedMetricSpecification
     static CustomizedMetricSpecification = CustomizedMetricSpecification
@@ -104,7 +104,8 @@ export default class ScalingPolicy extends ResourceBase<ScalingPolicyProperties>
     static StepAdjustment = StepAdjustment
     static TargetTrackingScalingPolicyConfiguration = TargetTrackingScalingPolicyConfiguration
 
-    constructor(properties: ScalingPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApplicationAutoScaling::ScalingPolicy', properties)
     }
 }
+export { ScalingPolicy as R }

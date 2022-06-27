@@ -17,28 +17,61 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ContactList_ from './contactList'
-import ConfigurationSetEventDestination_ from './configurationSetEventDestination'
-import Template_ from './template'
-import ConfigurationSet_ from './configurationSet'
-import ReceiptRuleSet_ from './receiptRuleSet'
-import ReceiptFilter_ from './receiptFilter'
-import ReceiptRule_ from './receiptRule'
+import * as _0 from './contactList'
+import * as _1 from './configurationSetEventDestination'
+import * as _2 from './template'
+import * as _3 from './configurationSet'
+import * as _4 from './receiptRuleSet'
+import * as _5 from './receiptFilter'
+import * as _6 from './receiptRule'
 
 export namespace SES {
-  export const ContactList = ContactList_
-  export const ConfigurationSetEventDestination = ConfigurationSetEventDestination_
-  export const Template = Template_
-  export const ConfigurationSet = ConfigurationSet_
-  export const ReceiptRuleSet = ReceiptRuleSet_
-  export const ReceiptFilter = ReceiptFilter_
-  export const ReceiptRule = ReceiptRule_
+  export const ContactList = _0.R
+  export const ConfigurationSetEventDestination = _1.R
+  export const Template = _2.R
+  export const ConfigurationSet = _3.R
+  export const ReceiptRuleSet = _4.R
+  export const ReceiptFilter = _5.R
+  export const ReceiptRule = _6.R
 
-  export type ContactList = ContactList_
-  export type ConfigurationSetEventDestination = ConfigurationSetEventDestination_
-  export type Template = Template_
-  export type ConfigurationSet = ConfigurationSet_
-  export type ReceiptRuleSet = ReceiptRuleSet_
-  export type ReceiptFilter = ReceiptFilter_
-  export type ReceiptRule = ReceiptRule_
+  export type ContactList = _0.R
+  export type ConfigurationSetEventDestination = _1.R
+  export type Template = _2.R
+  export type ConfigurationSet = _3.R
+  export type ReceiptRuleSet = _4.R
+  export type ReceiptFilter = _5.R
+  export type ReceiptRule = _6.R
+
+  export namespace ContactList {
+    export type Topic = _0.Topic
+  }
+  export namespace ConfigurationSetEventDestination {
+    export type EventDestination = _1.EventDestination
+    export type DimensionConfiguration = _1.DimensionConfiguration
+    export type KinesisFirehoseDestination = _1.KinesisFirehoseDestination
+    export type SnsDestination = _1.SnsDestination
+    export type CloudWatchDestination = _1.CloudWatchDestination
+  }
+  export namespace ConfigurationSet {
+    export type ReputationOptions = _3.ReputationOptions
+    export type DeliveryOptions = _3.DeliveryOptions
+    export type TrackingOptions = _3.TrackingOptions
+    export type SendingOptions = _3.SendingOptions
+    export type SuppressionOptions = _3.SuppressionOptions
+  }
+  export namespace ReceiptFilter {
+    export type Filter = _5.Filter
+    export type IpFilter = _5.IpFilter
+  }
+  export namespace ReceiptRule {
+    export type BounceAction = _6.BounceAction
+    export type Action = _6.Action
+    export type WorkmailAction = _6.WorkmailAction
+    export type Rule = _6.Rule
+    export type AddHeaderAction = _6.AddHeaderAction
+    export type StopAction = _6.StopAction
+    export type SNSAction = _6.SNSAction
+    export type S3Action = _6.S3Action
+    export type LambdaAction = _6.LambdaAction
+  }
 }

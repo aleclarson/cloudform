@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResourceShareProperties {
+export interface Properties {
     PermissionArns?: List<Value<string>>
     Principals?: List<Value<string>>
     AllowExternalPrincipals?: Value<boolean>
@@ -31,10 +31,11 @@ export interface ResourceShareProperties {
     Name: Value<string>
 }
 
-export default class ResourceShare extends ResourceBase<ResourceShareProperties> {
+class ResourceShare extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResourceShareProperties) {
+    constructor(properties: Properties) {
         super('AWS::RAM::ResourceShare', properties)
     }
 }
+export { ResourceShare as R }

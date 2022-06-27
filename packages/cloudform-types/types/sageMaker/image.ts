@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ImageProperties {
+export interface Properties {
     ImageName: Value<string>
     ImageRoleArn: Value<string>
     ImageDisplayName?: Value<string>
@@ -29,10 +29,11 @@ export interface ImageProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Image extends ResourceBase<ImageProperties> {
+class Image extends ResourceBase<Properties> {
 
 
-    constructor(properties: ImageProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::Image', properties)
     }
 }
+export { Image as R }

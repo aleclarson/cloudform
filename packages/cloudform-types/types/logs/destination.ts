@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DestinationProperties {
+export interface Properties {
     DestinationName: Value<string>
     DestinationPolicy: Value<string>
     RoleArn: Value<string>
     TargetArn: Value<string>
 }
 
-export default class Destination extends ResourceBase<DestinationProperties> {
+class Destination extends ResourceBase<Properties> {
 
 
-    constructor(properties: DestinationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Logs::Destination', properties)
     }
 }
+export { Destination as R }

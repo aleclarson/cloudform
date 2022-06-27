@@ -1,0 +1,1 @@
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{IpamId:Value<string>;Description?:Value<string>;Tags?:List<ResourceTag>;}declare class IPAMScope extends ResourceBase<Properties>{constructor(properties:Properties);}export{IPAMScope as R};

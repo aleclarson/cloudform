@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class JobCommand {
@@ -54,7 +54,7 @@ export class ExecutionProperty {
     }
 }
 
-export interface JobProperties {
+export interface Properties {
     Connections?: ConnectionsList
     MaxRetries?: Value<number>
     Description?: Value<string>
@@ -75,13 +75,14 @@ export interface JobProperties {
     MaxCapacity?: Value<number>
 }
 
-export default class Job extends ResourceBase<JobProperties> {
+class Job extends ResourceBase<Properties> {
     static JobCommand = JobCommand
     static ConnectionsList = ConnectionsList
     static NotificationProperty = NotificationProperty
     static ExecutionProperty = ExecutionProperty
 
-    constructor(properties: JobProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::Job', properties)
     }
 }
+export { Job as R }

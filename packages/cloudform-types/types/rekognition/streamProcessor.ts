@@ -90,7 +90,7 @@ export class BoundingBox {
     }
 }
 
-export interface StreamProcessorProperties {
+export interface Properties {
     Name?: Value<string>
     KmsKeyId?: Value<string>
     RoleArn: Value<string>
@@ -106,7 +106,7 @@ export interface StreamProcessorProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class StreamProcessor extends ResourceBase<StreamProcessorProperties> {
+class StreamProcessor extends ResourceBase<Properties> {
     static ConnectedHomeSettings = ConnectedHomeSettings
     static Point = Point
     static KinesisDataStream = KinesisDataStream
@@ -117,7 +117,8 @@ export default class StreamProcessor extends ResourceBase<StreamProcessorPropert
     static KinesisVideoStream = KinesisVideoStream
     static BoundingBox = BoundingBox
 
-    constructor(properties: StreamProcessorProperties) {
+    constructor(properties: Properties) {
         super('AWS::Rekognition::StreamProcessor', properties)
     }
 }
+export { StreamProcessor as R }

@@ -12,15 +12,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PackageProperties {
+export interface Properties {
     PackageName: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Package extends ResourceBase<PackageProperties> {
+class Package extends ResourceBase<Properties> {
 
 
-    constructor(properties: PackageProperties) {
+    constructor(properties: Properties) {
         super('AWS::Panorama::Package', properties)
     }
 }
+export { Package as R }

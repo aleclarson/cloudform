@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),repository_1=(exports.default=index_namespace_1.CodeCommit,Object.defineProperty(exports,"__esModule",{value:!0}),require("./repository"));var CodeCommit;!function(CodeCommit){CodeCommit.Repository=repository_1.default}(CodeCommit=exports.CodeCommit||(exports.CodeCommit={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.CodeCommit;

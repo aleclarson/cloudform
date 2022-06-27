@@ -17,14 +17,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ProjectProperties {
+export interface Properties {
     ProjectName: Value<string>
 }
 
-export default class Project extends ResourceBase<ProjectProperties> {
+class Project extends ResourceBase<Properties> {
 
 
-    constructor(properties: ProjectProperties) {
+    constructor(properties: Properties) {
         super('AWS::Rekognition::Project', properties)
     }
 }
+export { Project as R }

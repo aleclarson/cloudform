@@ -27,16 +27,17 @@ export class TransitGatewayConnectOptions {
     }
 }
 
-export interface TransitGatewayConnectProperties {
+export interface Properties {
     TransportTransitGatewayAttachmentId: Value<string>
     Tags?: List<ResourceTag>
     Options: TransitGatewayConnectOptions
 }
 
-export default class TransitGatewayConnect extends ResourceBase<TransitGatewayConnectProperties> {
+class TransitGatewayConnect extends ResourceBase<Properties> {
     static TransitGatewayConnectOptions = TransitGatewayConnectOptions
 
-    constructor(properties: TransitGatewayConnectProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::TransitGatewayConnect', properties)
     }
 }
+export { TransitGatewayConnect as R }

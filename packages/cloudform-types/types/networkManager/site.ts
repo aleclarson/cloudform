@@ -30,17 +30,18 @@ export class Location {
     }
 }
 
-export interface SiteProperties {
+export interface Properties {
     Description?: Value<string>
     Tags?: List<ResourceTag>
     GlobalNetworkId: Value<string>
     Location?: Location
 }
 
-export default class Site extends ResourceBase<SiteProperties> {
+class Site extends ResourceBase<Properties> {
     static Location = Location
 
-    constructor(properties: SiteProperties) {
+    constructor(properties: Properties) {
         super('AWS::NetworkManager::Site', properties)
     }
 }
+export { Site as R }

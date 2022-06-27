@@ -7,7 +7,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPCEConfigurationProperties {
+export interface Properties {
     ServiceDnsName: Value<string>
     VpceConfigurationDescription?: Value<string>
     VpceConfigurationName: Value<string>
@@ -15,10 +15,11 @@ export interface VPCEConfigurationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class VPCEConfiguration extends ResourceBase<VPCEConfigurationProperties> {
+class VPCEConfiguration extends ResourceBase<Properties> {
 
 
-    constructor(properties: VPCEConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::DeviceFarm::VPCEConfiguration', properties)
     }
 }
+export { VPCEConfiguration as R }

@@ -46,7 +46,7 @@ export class InstanceMetadataOptions {
     }
 }
 
-export interface InfrastructureConfigurationProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     InstanceTypes?: List<Value<string>>
@@ -62,12 +62,13 @@ export interface InfrastructureConfigurationProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class InfrastructureConfiguration extends ResourceBase<InfrastructureConfigurationProperties> {
+class InfrastructureConfiguration extends ResourceBase<Properties> {
     static Logging = Logging
     static S3Logs = S3Logs
     static InstanceMetadataOptions = InstanceMetadataOptions
 
-    constructor(properties: InfrastructureConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ImageBuilder::InfrastructureConfiguration', properties)
     }
 }
+export { InfrastructureConfiguration as R }

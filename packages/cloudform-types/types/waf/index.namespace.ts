@@ -17,28 +17,55 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import IPSet_ from './ipSet'
-import SizeConstraintSet_ from './sizeConstraintSet'
-import XssMatchSet_ from './xssMatchSet'
-import Rule_ from './rule'
-import SqlInjectionMatchSet_ from './sqlInjectionMatchSet'
-import WebACL_ from './webAcl'
-import ByteMatchSet_ from './byteMatchSet'
+import * as _0 from './ipSet'
+import * as _1 from './sizeConstraintSet'
+import * as _2 from './xssMatchSet'
+import * as _3 from './rule'
+import * as _4 from './sqlInjectionMatchSet'
+import * as _5 from './webAcl'
+import * as _6 from './byteMatchSet'
 
 export namespace WAF {
-  export const IPSet = IPSet_
-  export const SizeConstraintSet = SizeConstraintSet_
-  export const XssMatchSet = XssMatchSet_
-  export const Rule = Rule_
-  export const SqlInjectionMatchSet = SqlInjectionMatchSet_
-  export const WebACL = WebACL_
-  export const ByteMatchSet = ByteMatchSet_
+  export const IPSet = _0.R
+  export const SizeConstraintSet = _1.R
+  export const XssMatchSet = _2.R
+  export const Rule = _3.R
+  export const SqlInjectionMatchSet = _4.R
+  export const WebACL = _5.R
+  export const ByteMatchSet = _6.R
 
-  export type IPSet = IPSet_
-  export type SizeConstraintSet = SizeConstraintSet_
-  export type XssMatchSet = XssMatchSet_
-  export type Rule = Rule_
-  export type SqlInjectionMatchSet = SqlInjectionMatchSet_
-  export type WebACL = WebACL_
-  export type ByteMatchSet = ByteMatchSet_
+  export type IPSet = _0.R
+  export type SizeConstraintSet = _1.R
+  export type XssMatchSet = _2.R
+  export type Rule = _3.R
+  export type SqlInjectionMatchSet = _4.R
+  export type WebACL = _5.R
+  export type ByteMatchSet = _6.R
+
+  export namespace IPSet {
+    export type IPSetDescriptor = _0.IPSetDescriptor
+  }
+  export namespace SizeConstraintSet {
+    export type FieldToMatch = _1.FieldToMatch
+    export type SizeConstraint = _1.SizeConstraint
+  }
+  export namespace XssMatchSet {
+    export type XssMatchTuple = _2.XssMatchTuple
+    export type FieldToMatch = _2.FieldToMatch
+  }
+  export namespace Rule {
+    export type Predicate = _3.Predicate
+  }
+  export namespace SqlInjectionMatchSet {
+    export type FieldToMatch = _4.FieldToMatch
+    export type SqlInjectionMatchTuple = _4.SqlInjectionMatchTuple
+  }
+  export namespace WebACL {
+    export type WafAction = _5.WafAction
+    export type ActivatedRule = _5.ActivatedRule
+  }
+  export namespace ByteMatchSet {
+    export type FieldToMatch = _6.FieldToMatch
+    export type ByteMatchTuple = _6.ByteMatchTuple
+  }
 }

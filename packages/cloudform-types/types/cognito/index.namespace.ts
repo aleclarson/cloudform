@@ -17,43 +17,98 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import UserPoolRiskConfigurationAttachment_ from './userPoolRiskConfigurationAttachment'
-import UserPoolIdentityProvider_ from './userPoolIdentityProvider'
-import IdentityPool_ from './identityPool'
-import UserPool_ from './userPool'
-import UserPoolUserToGroupAttachment_ from './userPoolUserToGroupAttachment'
-import UserPoolUser_ from './userPoolUser'
-import UserPoolUICustomizationAttachment_ from './userPoolUiCustomizationAttachment'
-import UserPoolGroup_ from './userPoolGroup'
-import UserPoolResourceServer_ from './userPoolResourceServer'
-import UserPoolClient_ from './userPoolClient'
-import IdentityPoolRoleAttachment_ from './identityPoolRoleAttachment'
-import UserPoolDomain_ from './userPoolDomain'
+import * as _0 from './userPoolRiskConfigurationAttachment'
+import * as _1 from './userPoolIdentityProvider'
+import * as _2 from './identityPool'
+import * as _3 from './userPool'
+import * as _4 from './userPoolUserToGroupAttachment'
+import * as _5 from './userPoolUser'
+import * as _6 from './userPoolUiCustomizationAttachment'
+import * as _7 from './userPoolGroup'
+import * as _8 from './userPoolResourceServer'
+import * as _9 from './userPoolClient'
+import * as _a from './identityPoolRoleAttachment'
+import * as _b from './userPoolDomain'
 
 export namespace Cognito {
-  export const UserPoolRiskConfigurationAttachment = UserPoolRiskConfigurationAttachment_
-  export const UserPoolIdentityProvider = UserPoolIdentityProvider_
-  export const IdentityPool = IdentityPool_
-  export const UserPool = UserPool_
-  export const UserPoolUserToGroupAttachment = UserPoolUserToGroupAttachment_
-  export const UserPoolUser = UserPoolUser_
-  export const UserPoolUICustomizationAttachment = UserPoolUICustomizationAttachment_
-  export const UserPoolGroup = UserPoolGroup_
-  export const UserPoolResourceServer = UserPoolResourceServer_
-  export const UserPoolClient = UserPoolClient_
-  export const IdentityPoolRoleAttachment = IdentityPoolRoleAttachment_
-  export const UserPoolDomain = UserPoolDomain_
+  export const UserPoolRiskConfigurationAttachment = _0.R
+  export const UserPoolIdentityProvider = _1.R
+  export const IdentityPool = _2.R
+  export const UserPool = _3.R
+  export const UserPoolUserToGroupAttachment = _4.R
+  export const UserPoolUser = _5.R
+  export const UserPoolUICustomizationAttachment = _6.R
+  export const UserPoolGroup = _7.R
+  export const UserPoolResourceServer = _8.R
+  export const UserPoolClient = _9.R
+  export const IdentityPoolRoleAttachment = _a.R
+  export const UserPoolDomain = _b.R
 
-  export type UserPoolRiskConfigurationAttachment = UserPoolRiskConfigurationAttachment_
-  export type UserPoolIdentityProvider = UserPoolIdentityProvider_
-  export type IdentityPool = IdentityPool_
-  export type UserPool = UserPool_
-  export type UserPoolUserToGroupAttachment = UserPoolUserToGroupAttachment_
-  export type UserPoolUser = UserPoolUser_
-  export type UserPoolUICustomizationAttachment = UserPoolUICustomizationAttachment_
-  export type UserPoolGroup = UserPoolGroup_
-  export type UserPoolResourceServer = UserPoolResourceServer_
-  export type UserPoolClient = UserPoolClient_
-  export type IdentityPoolRoleAttachment = IdentityPoolRoleAttachment_
-  export type UserPoolDomain = UserPoolDomain_
+  export type UserPoolRiskConfigurationAttachment = _0.R
+  export type UserPoolIdentityProvider = _1.R
+  export type IdentityPool = _2.R
+  export type UserPool = _3.R
+  export type UserPoolUserToGroupAttachment = _4.R
+  export type UserPoolUser = _5.R
+  export type UserPoolUICustomizationAttachment = _6.R
+  export type UserPoolGroup = _7.R
+  export type UserPoolResourceServer = _8.R
+  export type UserPoolClient = _9.R
+  export type IdentityPoolRoleAttachment = _a.R
+  export type UserPoolDomain = _b.R
+
+  export namespace UserPoolRiskConfigurationAttachment {
+    export type AccountTakeoverActionsType = _0.AccountTakeoverActionsType
+    export type RiskExceptionConfigurationType = _0.RiskExceptionConfigurationType
+    export type AccountTakeoverActionType = _0.AccountTakeoverActionType
+    export type CompromisedCredentialsRiskConfigurationType = _0.CompromisedCredentialsRiskConfigurationType
+    export type NotifyEmailType = _0.NotifyEmailType
+    export type CompromisedCredentialsActionsType = _0.CompromisedCredentialsActionsType
+    export type NotifyConfigurationType = _0.NotifyConfigurationType
+    export type AccountTakeoverRiskConfigurationType = _0.AccountTakeoverRiskConfigurationType
+  }
+  export namespace IdentityPool {
+    export type CognitoStreams = _2.CognitoStreams
+    export type PushSync = _2.PushSync
+    export type CognitoIdentityProvider = _2.CognitoIdentityProvider
+  }
+  export namespace UserPool {
+    export type PasswordPolicy = _3.PasswordPolicy
+    export type RecoveryOption = _3.RecoveryOption
+    export type AdminCreateUserConfig = _3.AdminCreateUserConfig
+    export type SmsConfiguration = _3.SmsConfiguration
+    export type StringAttributeConstraints = _3.StringAttributeConstraints
+    export type VerificationMessageTemplate = _3.VerificationMessageTemplate
+    export type LambdaConfig = _3.LambdaConfig
+    export type InviteMessageTemplate = _3.InviteMessageTemplate
+    export type UserAttributeUpdateSettings = _3.UserAttributeUpdateSettings
+    export type EmailConfiguration = _3.EmailConfiguration
+    export type SchemaAttribute = _3.SchemaAttribute
+    export type NumberAttributeConstraints = _3.NumberAttributeConstraints
+    export type CustomSMSSender = _3.CustomSMSSender
+    export type AccountRecoverySetting = _3.AccountRecoverySetting
+    export type UserPoolAddOns = _3.UserPoolAddOns
+    export type Policies = _3.Policies
+    export type CustomEmailSender = _3.CustomEmailSender
+    export type DeviceConfiguration = _3.DeviceConfiguration
+    export type UsernameConfiguration = _3.UsernameConfiguration
+  }
+  export namespace UserPoolUser {
+    export type AttributeType = _5.AttributeType
+  }
+  export namespace UserPoolResourceServer {
+    export type ResourceServerScopeType = _8.ResourceServerScopeType
+  }
+  export namespace UserPoolClient {
+    export type TokenValidityUnits = _9.TokenValidityUnits
+    export type AnalyticsConfiguration = _9.AnalyticsConfiguration
+  }
+  export namespace IdentityPoolRoleAttachment {
+    export type RoleMapping = _a.RoleMapping
+    export type MappingRule = _a.MappingRule
+    export type RulesConfigurationType = _a.RulesConfigurationType
+  }
+  export namespace UserPoolDomain {
+    export type CustomDomainConfigType = _b.CustomDomainConfigType
+  }
 }

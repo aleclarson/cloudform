@@ -1,1 +1,1 @@
-import Repository_ from'./repository';import Domain_ from'./domain';export declare namespace CodeArtifact{const Repository:typeof Repository_;const Domain:typeof Domain_;type Repository=Repository_;type Domain=Domain_;}
+import*as _0 from'./domain';import*as _1 from'./repository';export declare namespace CodeArtifact{const Domain:typeof _0.R;const Repository:typeof _1.R;type Domain=_0.R;type Repository=_1.R;}

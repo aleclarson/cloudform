@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface KeyPairProperties {
+export interface Properties {
     KeyName: Value<string>
     KeyType?: Value<string>
     PublicKeyMaterial?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class KeyPair extends ResourceBase<KeyPairProperties> {
+class KeyPair extends ResourceBase<Properties> {
 
 
-    constructor(properties: KeyPairProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::KeyPair', properties)
     }
 }
+export { KeyPair as R }

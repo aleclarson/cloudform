@@ -16,7 +16,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NamespaceProperties {
+export interface Properties {
     AdminUserPassword?: Value<string>
     AdminUsername?: Value<string>
     DbName?: Value<string>
@@ -30,10 +30,11 @@ export interface NamespaceProperties {
     FinalSnapshotRetentionPeriod?: Value<number>
 }
 
-export default class Namespace extends ResourceBase<NamespaceProperties> {
+class Namespace extends ResourceBase<Properties> {
 
 
-    constructor(properties: NamespaceProperties) {
+    constructor(properties: Properties) {
         super('AWS::RedshiftServerless::Namespace', properties)
     }
 }
+export { Namespace as R }

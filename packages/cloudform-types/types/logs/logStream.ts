@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LogStreamProperties {
+export interface Properties {
     LogGroupName: Value<string>
     LogStreamName?: Value<string>
 }
 
-export default class LogStream extends ResourceBase<LogStreamProperties> {
+class LogStream extends ResourceBase<Properties> {
 
 
-    constructor(properties: LogStreamProperties) {
+    constructor(properties: Properties) {
         super('AWS::Logs::LogStream', properties)
     }
 }
+export { LogStream as R }

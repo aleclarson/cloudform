@@ -38,16 +38,17 @@ export class FieldToMatch {
     }
 }
 
-export interface XssMatchSetProperties {
+export interface Properties {
     Name: Value<string>
     XssMatchTuples: List<XssMatchTuple>
 }
 
-export default class XssMatchSet extends ResourceBase<XssMatchSetProperties> {
+class XssMatchSet extends ResourceBase<Properties> {
     static XssMatchTuple = XssMatchTuple
     static FieldToMatch = FieldToMatch
 
-    constructor(properties: XssMatchSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAF::XssMatchSet', properties)
     }
 }
+export { XssMatchSet as R }

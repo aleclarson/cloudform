@@ -59,17 +59,18 @@ export class HeadersConfig {
     }
 }
 
-export interface OriginRequestPolicyProperties {
+export interface Properties {
     OriginRequestPolicyConfig: OriginRequestPolicyConfig
 }
 
-export default class OriginRequestPolicy extends ResourceBase<OriginRequestPolicyProperties> {
+class OriginRequestPolicy extends ResourceBase<Properties> {
     static OriginRequestPolicyConfig = OriginRequestPolicyConfig
     static CookiesConfig = CookiesConfig
     static QueryStringsConfig = QueryStringsConfig
     static HeadersConfig = HeadersConfig
 
-    constructor(properties: OriginRequestPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFront::OriginRequestPolicy', properties)
     }
 }
+export { OriginRequestPolicy as R }

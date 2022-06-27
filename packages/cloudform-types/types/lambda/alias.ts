@@ -45,7 +45,7 @@ export class VersionWeight {
     }
 }
 
-export interface AliasProperties {
+export interface Properties {
     Description?: Value<string>
     FunctionName: Value<string>
     FunctionVersion: Value<string>
@@ -54,12 +54,13 @@ export interface AliasProperties {
     RoutingConfig?: AliasRoutingConfiguration
 }
 
-export default class Alias extends ResourceBase<AliasProperties> {
+class Alias extends ResourceBase<Properties> {
     static ProvisionedConcurrencyConfiguration = ProvisionedConcurrencyConfiguration
     static AliasRoutingConfiguration = AliasRoutingConfiguration
     static VersionWeight = VersionWeight
 
-    constructor(properties: AliasProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lambda::Alias', properties)
     }
 }
+export { Alias as R }

@@ -93,14 +93,14 @@ export class StatefulEngineOptions {
     }
 }
 
-export interface FirewallPolicyProperties {
+export interface Properties {
     FirewallPolicyName: Value<string>
     FirewallPolicy: FirewallPolicy
     Description?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class FirewallPolicy extends ResourceBase<FirewallPolicyProperties> {
+class FirewallPolicy extends ResourceBase<Properties> {
     static CustomAction = CustomAction
     static StatelessRuleGroupReference = StatelessRuleGroupReference
     static StatefulRuleGroupReference = StatefulRuleGroupReference
@@ -110,7 +110,8 @@ export default class FirewallPolicy extends ResourceBase<FirewallPolicyPropertie
     static FirewallPolicy = FirewallPolicyInner
     static StatefulEngineOptions = StatefulEngineOptions
 
-    constructor(properties: FirewallPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::NetworkFirewall::FirewallPolicy', properties)
     }
 }
+export { FirewallPolicy as R }

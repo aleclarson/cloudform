@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resourceShare_1=require("./resourceShare");var RAM;!function(RAM){RAM.ResourceShare=resourceShare_1.default}(RAM=exports.RAM||(exports.RAM={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.RAM=void 0;const _0=require("./resourceShare");var RAM;!function(RAM){RAM.ResourceShare=_0.R}(RAM=exports.RAM||(exports.RAM={}));

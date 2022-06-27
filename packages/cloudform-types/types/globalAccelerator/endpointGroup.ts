@@ -39,7 +39,7 @@ export class EndpointConfiguration {
     }
 }
 
-export interface EndpointGroupProperties {
+export interface Properties {
     ListenerArn: Value<string>
     EndpointGroupRegion: Value<string>
     EndpointConfigurations?: List<EndpointConfiguration>
@@ -52,11 +52,12 @@ export interface EndpointGroupProperties {
     PortOverrides?: List<PortOverride>
 }
 
-export default class EndpointGroup extends ResourceBase<EndpointGroupProperties> {
+class EndpointGroup extends ResourceBase<Properties> {
     static PortOverride = PortOverride
     static EndpointConfiguration = EndpointConfiguration
 
-    constructor(properties: EndpointGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::GlobalAccelerator::EndpointGroup', properties)
     }
 }
+export { EndpointGroup as R }

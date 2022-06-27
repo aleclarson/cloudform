@@ -13,16 +13,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PlaybackKeyPairProperties {
+export interface Properties {
     Name?: Value<string>
     PublicKeyMaterial: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class PlaybackKeyPair extends ResourceBase<PlaybackKeyPairProperties> {
+class PlaybackKeyPair extends ResourceBase<Properties> {
 
 
-    constructor(properties: PlaybackKeyPairProperties) {
+    constructor(properties: Properties) {
         super('AWS::IVS::PlaybackKeyPair', properties)
     }
 }
+export { PlaybackKeyPair as R }

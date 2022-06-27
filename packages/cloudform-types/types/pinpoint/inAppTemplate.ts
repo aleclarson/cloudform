@@ -12,7 +12,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class DefaultButtonConfiguration {
@@ -81,7 +81,7 @@ export class OverrideButtonConfiguration {
     }
 }
 
-export interface InAppTemplateProperties {
+export interface Properties {
     Content?: List<InAppMessageContent>
     CustomConfig?: {[key: string]: any}
     Layout?: Value<string>
@@ -90,7 +90,7 @@ export interface InAppTemplateProperties {
     TemplateName: Value<string>
 }
 
-export default class InAppTemplate extends ResourceBase<InAppTemplateProperties> {
+class InAppTemplate extends ResourceBase<Properties> {
     static DefaultButtonConfiguration = DefaultButtonConfiguration
     static ButtonConfig = ButtonConfig
     static InAppMessageContent = InAppMessageContent
@@ -98,7 +98,8 @@ export default class InAppTemplate extends ResourceBase<InAppTemplateProperties>
     static HeaderConfig = HeaderConfig
     static OverrideButtonConfiguration = OverrideButtonConfiguration
 
-    constructor(properties: InAppTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::InAppTemplate', properties)
     }
 }
+export { InAppTemplate as R }

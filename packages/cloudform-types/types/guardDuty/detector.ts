@@ -53,19 +53,20 @@ export class CFNKubernetesConfiguration {
     }
 }
 
-export interface DetectorProperties {
+export interface Properties {
     FindingPublishingFrequency?: Value<string>
     DataSources?: CFNDataSourceConfigurations
     Enable: Value<boolean>
 }
 
-export default class Detector extends ResourceBase<DetectorProperties> {
+class Detector extends ResourceBase<Properties> {
     static CFNKubernetesAuditLogsConfiguration = CFNKubernetesAuditLogsConfiguration
     static CFNDataSourceConfigurations = CFNDataSourceConfigurations
     static CFNS3LogsConfiguration = CFNS3LogsConfiguration
     static CFNKubernetesConfiguration = CFNKubernetesConfiguration
 
-    constructor(properties: DetectorProperties) {
+    constructor(properties: Properties) {
         super('AWS::GuardDuty::Detector', properties)
     }
 }
+export { Detector as R }

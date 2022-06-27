@@ -76,7 +76,7 @@ export class Field {
     }
 }
 
-export interface PipelineProperties {
+export interface Properties {
     Activate?: Value<boolean>
     Description?: Value<string>
     Name: Value<string>
@@ -86,7 +86,7 @@ export interface PipelineProperties {
     PipelineTags?: List<PipelineTag>
 }
 
-export default class Pipeline extends ResourceBase<PipelineProperties> {
+class Pipeline extends ResourceBase<Properties> {
     static PipelineObject = PipelineObject
     static ParameterAttribute = ParameterAttribute
     static PipelineTag = PipelineTag
@@ -94,7 +94,8 @@ export default class Pipeline extends ResourceBase<PipelineProperties> {
     static ParameterValue = ParameterValue
     static Field = Field
 
-    constructor(properties: PipelineProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataPipeline::Pipeline', properties)
     }
 }
+export { Pipeline as R }

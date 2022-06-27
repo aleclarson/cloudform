@@ -211,13 +211,13 @@ export class AnalysisSecurityGroupRule {
     }
 }
 
-export interface NetworkInsightsAnalysisProperties {
+export interface Properties {
     NetworkInsightsPathId: Value<string>
     FilterInArns?: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class NetworkInsightsAnalysis extends ResourceBase<NetworkInsightsAnalysisProperties> {
+class NetworkInsightsAnalysis extends ResourceBase<Properties> {
     static AnalysisAclRule = AnalysisAclRule
     static AlternatePathHint = AlternatePathHint
     static Explanation = Explanation
@@ -231,7 +231,8 @@ export default class NetworkInsightsAnalysis extends ResourceBase<NetworkInsight
     static TransitGatewayRouteTableRoute = TransitGatewayRouteTableRoute
     static AnalysisSecurityGroupRule = AnalysisSecurityGroupRule
 
-    constructor(properties: NetworkInsightsAnalysisProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::NetworkInsightsAnalysis', properties)
     }
 }
+export { NetworkInsightsAnalysis as R }

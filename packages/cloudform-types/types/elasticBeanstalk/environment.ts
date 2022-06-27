@@ -41,7 +41,7 @@ export class Tier {
     }
 }
 
-export interface EnvironmentProperties {
+export interface Properties {
     ApplicationName: Value<string>
     CNAMEPrefix?: Value<string>
     Description?: Value<string>
@@ -56,11 +56,12 @@ export interface EnvironmentProperties {
     VersionLabel?: Value<string>
 }
 
-export default class Environment extends ResourceBase<EnvironmentProperties> {
+class Environment extends ResourceBase<Properties> {
     static OptionSetting = OptionSetting
     static Tier = Tier
 
-    constructor(properties: EnvironmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElasticBeanstalk::Environment', properties)
     }
 }
+export { Environment as R }

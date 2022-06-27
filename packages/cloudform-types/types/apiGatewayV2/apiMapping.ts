@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ApiMappingProperties {
+export interface Properties {
     DomainName: Value<string>
     Stage: Value<string>
     ApiMappingKey?: Value<string>
     ApiId: Value<string>
 }
 
-export default class ApiMapping extends ResourceBase<ApiMappingProperties> {
+class ApiMapping extends ResourceBase<Properties> {
 
 
-    constructor(properties: ApiMappingProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGatewayV2::ApiMapping', properties)
     }
 }
+export { ApiMapping as R }

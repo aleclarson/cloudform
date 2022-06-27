@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface InstanceProperties {
+export interface Properties {
     InstanceAttributes: {[key: string]: any}
     InstanceId?: Value<string>
     ServiceId: Value<string>
 }
 
-export default class Instance extends ResourceBase<InstanceProperties> {
+class Instance extends ResourceBase<Properties> {
 
 
-    constructor(properties: InstanceProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceDiscovery::Instance', properties)
     }
 }
+export { Instance as R }

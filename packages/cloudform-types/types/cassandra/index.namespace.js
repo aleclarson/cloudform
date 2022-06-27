@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const table_1=require("./table"),keyspace_1=require("./keyspace");var Cassandra;!function(Cassandra){Cassandra.Table=table_1.default,Cassandra.Keyspace=keyspace_1.default}(Cassandra=exports.Cassandra||(exports.Cassandra={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Cassandra=void 0;const _0=require("./keyspace"),_1=require("./table");var Cassandra;!function(Cassandra){Cassandra.Keyspace=_0.R,Cassandra.Table=_1.R}(Cassandra=exports.Cassandra||(exports.Cassandra={}));

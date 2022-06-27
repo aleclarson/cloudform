@@ -19,16 +19,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SubnetGroupProperties {
+export interface Properties {
     Description?: Value<string>
     SubnetGroupName?: Value<string>
     SubnetIds: List<Value<string>>
 }
 
-export default class SubnetGroup extends ResourceBase<SubnetGroupProperties> {
+class SubnetGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: SubnetGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::DAX::SubnetGroup', properties)
     }
 }
+export { SubnetGroup as R }

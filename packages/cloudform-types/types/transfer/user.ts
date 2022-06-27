@@ -41,7 +41,7 @@ export class PosixProfile {
     }
 }
 
-export interface UserProperties {
+export interface Properties {
     Policy?: Value<string>
     Role: Value<string>
     HomeDirectory?: Value<string>
@@ -54,11 +54,12 @@ export interface UserProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class User extends ResourceBase<UserProperties> {
+class User extends ResourceBase<Properties> {
     static HomeDirectoryMapEntry = HomeDirectoryMapEntry
     static PosixProfile = PosixProfile
 
-    constructor(properties: UserProperties) {
+    constructor(properties: Properties) {
         super('AWS::Transfer::User', properties)
     }
 }
+export { User as R }

@@ -28,7 +28,7 @@ export class MountOptions {
     }
 }
 
-export interface LocationSMBProperties {
+export interface Properties {
     AgentArns: List<Value<string>>
     Domain?: Value<string>
     MountOptions?: MountOptions
@@ -39,10 +39,11 @@ export interface LocationSMBProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class LocationSMB extends ResourceBase<LocationSMBProperties> {
+class LocationSMB extends ResourceBase<Properties> {
     static MountOptions = MountOptions
 
-    constructor(properties: LocationSMBProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataSync::LocationSMB', properties)
     }
 }
+export { LocationSMB as R }

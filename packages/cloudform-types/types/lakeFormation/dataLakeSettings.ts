@@ -27,15 +27,16 @@ export class DataLakePrincipal {
 
 export type Admins = List<DataLakePrincipal>
 
-export interface DataLakeSettingsProperties {
+export interface Properties {
     Admins?: Admins
     TrustedResourceOwners?: List<Value<string>>
 }
 
-export default class DataLakeSettings extends ResourceBase<DataLakeSettingsProperties> {
+class DataLakeSettings extends ResourceBase<Properties> {
     static DataLakePrincipal = DataLakePrincipal
 
-    constructor(properties?: DataLakeSettingsProperties) {
+    constructor(properties?: Properties) {
         super('AWS::LakeFormation::DataLakeSettings', properties || {})
     }
 }
+export { DataLakeSettings as R }

@@ -17,19 +17,29 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Schema_ from './schema'
-import Discoverer_ from './discoverer'
-import RegistryPolicy_ from './registryPolicy'
-import Registry_ from './registry'
+import * as _0 from './schema'
+import * as _1 from './discoverer'
+import * as _2 from './registryPolicy'
+import * as _3 from './registry'
 
 export namespace EventSchemas {
-  export const Schema = Schema_
-  export const Discoverer = Discoverer_
-  export const RegistryPolicy = RegistryPolicy_
-  export const Registry = Registry_
+  export const Schema = _0.R
+  export const Discoverer = _1.R
+  export const RegistryPolicy = _2.R
+  export const Registry = _3.R
 
-  export type Schema = Schema_
-  export type Discoverer = Discoverer_
-  export type RegistryPolicy = RegistryPolicy_
-  export type Registry = Registry_
+  export type Schema = _0.R
+  export type Discoverer = _1.R
+  export type RegistryPolicy = _2.R
+  export type Registry = _3.R
+
+  export namespace Schema {
+    export type TagsEntry = _0.TagsEntry
+  }
+  export namespace Discoverer {
+    export type TagsEntry = _1.TagsEntry
+  }
+  export namespace Registry {
+    export type TagsEntry = _3.TagsEntry
+  }
 }

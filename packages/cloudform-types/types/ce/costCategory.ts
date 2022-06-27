@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CostCategoryProperties {
+export interface Properties {
     Name: Value<string>
     RuleVersion: Value<string>
     Rules: Value<string>
@@ -30,10 +30,11 @@ export interface CostCategoryProperties {
     DefaultValue?: Value<string>
 }
 
-export default class CostCategory extends ResourceBase<CostCategoryProperties> {
+class CostCategory extends ResourceBase<Properties> {
 
 
-    constructor(properties: CostCategoryProperties) {
+    constructor(properties: Properties) {
         super('AWS::CE::CostCategory', properties)
     }
 }
+export { CostCategory as R }

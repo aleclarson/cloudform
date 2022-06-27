@@ -17,7 +17,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface APNSVoipChannelProperties {
+export interface Properties {
     BundleId?: Value<string>
     PrivateKey?: Value<string>
     Enabled?: Value<boolean>
@@ -29,10 +29,11 @@ export interface APNSVoipChannelProperties {
     TokenKeyId?: Value<string>
 }
 
-export default class APNSVoipChannel extends ResourceBase<APNSVoipChannelProperties> {
+class APNSVoipChannel extends ResourceBase<Properties> {
 
 
-    constructor(properties: APNSVoipChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::APNSVoipChannel', properties)
     }
 }
+export { APNSVoipChannel as R }

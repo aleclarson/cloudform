@@ -17,37 +17,47 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ResolverQueryLoggingConfig_ from './resolverQueryLoggingConfig'
-import FirewallRuleGroupAssociation_ from './firewallRuleGroupAssociation'
-import ResolverQueryLoggingConfigAssociation_ from './resolverQueryLoggingConfigAssociation'
-import ResolverConfig_ from './resolverConfig'
-import ResolverDNSSECConfig_ from './resolverDnssecConfig'
-import FirewallDomainList_ from './firewallDomainList'
-import ResolverRule_ from './resolverRule'
-import FirewallRuleGroup_ from './firewallRuleGroup'
-import ResolverRuleAssociation_ from './resolverRuleAssociation'
-import ResolverEndpoint_ from './resolverEndpoint'
+import * as _0 from './resolverQueryLoggingConfig'
+import * as _1 from './firewallRuleGroupAssociation'
+import * as _2 from './resolverQueryLoggingConfigAssociation'
+import * as _3 from './resolverConfig'
+import * as _4 from './resolverDnssecConfig'
+import * as _5 from './firewallDomainList'
+import * as _6 from './resolverRule'
+import * as _7 from './firewallRuleGroup'
+import * as _8 from './resolverRuleAssociation'
+import * as _9 from './resolverEndpoint'
 
 export namespace Route53Resolver {
-  export const ResolverQueryLoggingConfig = ResolverQueryLoggingConfig_
-  export const FirewallRuleGroupAssociation = FirewallRuleGroupAssociation_
-  export const ResolverQueryLoggingConfigAssociation = ResolverQueryLoggingConfigAssociation_
-  export const ResolverConfig = ResolverConfig_
-  export const ResolverDNSSECConfig = ResolverDNSSECConfig_
-  export const FirewallDomainList = FirewallDomainList_
-  export const ResolverRule = ResolverRule_
-  export const FirewallRuleGroup = FirewallRuleGroup_
-  export const ResolverRuleAssociation = ResolverRuleAssociation_
-  export const ResolverEndpoint = ResolverEndpoint_
+  export const ResolverQueryLoggingConfig = _0.R
+  export const FirewallRuleGroupAssociation = _1.R
+  export const ResolverQueryLoggingConfigAssociation = _2.R
+  export const ResolverConfig = _3.R
+  export const ResolverDNSSECConfig = _4.R
+  export const FirewallDomainList = _5.R
+  export const ResolverRule = _6.R
+  export const FirewallRuleGroup = _7.R
+  export const ResolverRuleAssociation = _8.R
+  export const ResolverEndpoint = _9.R
 
-  export type ResolverQueryLoggingConfig = ResolverQueryLoggingConfig_
-  export type FirewallRuleGroupAssociation = FirewallRuleGroupAssociation_
-  export type ResolverQueryLoggingConfigAssociation = ResolverQueryLoggingConfigAssociation_
-  export type ResolverConfig = ResolverConfig_
-  export type ResolverDNSSECConfig = ResolverDNSSECConfig_
-  export type FirewallDomainList = FirewallDomainList_
-  export type ResolverRule = ResolverRule_
-  export type FirewallRuleGroup = FirewallRuleGroup_
-  export type ResolverRuleAssociation = ResolverRuleAssociation_
-  export type ResolverEndpoint = ResolverEndpoint_
+  export type ResolverQueryLoggingConfig = _0.R
+  export type FirewallRuleGroupAssociation = _1.R
+  export type ResolverQueryLoggingConfigAssociation = _2.R
+  export type ResolverConfig = _3.R
+  export type ResolverDNSSECConfig = _4.R
+  export type FirewallDomainList = _5.R
+  export type ResolverRule = _6.R
+  export type FirewallRuleGroup = _7.R
+  export type ResolverRuleAssociation = _8.R
+  export type ResolverEndpoint = _9.R
+
+  export namespace ResolverRule {
+    export type TargetAddress = _6.TargetAddress
+  }
+  export namespace FirewallRuleGroup {
+    export type FirewallRule = _7.FirewallRule
+  }
+  export namespace ResolverEndpoint {
+    export type IpAddressRequest = _9.IpAddressRequest
+  }
 }

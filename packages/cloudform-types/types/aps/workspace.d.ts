@@ -1,0 +1,1 @@
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Alias?:Value<string>;AlertManagerDefinition?:Value<string>;Tags?:List<ResourceTag>;}declare class Workspace extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Workspace as R};

@@ -47,7 +47,7 @@ export class HostedRotationLambda {
     }
 }
 
-export interface RotationScheduleProperties {
+export interface Properties {
     SecretId: Value<string>
     HostedRotationLambda?: HostedRotationLambda
     RotationLambdaARN?: Value<string>
@@ -55,11 +55,12 @@ export interface RotationScheduleProperties {
     RotateImmediatelyOnUpdate?: Value<boolean>
 }
 
-export default class RotationSchedule extends ResourceBase<RotationScheduleProperties> {
+class RotationSchedule extends ResourceBase<Properties> {
     static RotationRules = RotationRules
     static HostedRotationLambda = HostedRotationLambda
 
-    constructor(properties: RotationScheduleProperties) {
+    constructor(properties: Properties) {
         super('AWS::SecretsManager::RotationSchedule', properties)
     }
 }
+export { RotationSchedule as R }

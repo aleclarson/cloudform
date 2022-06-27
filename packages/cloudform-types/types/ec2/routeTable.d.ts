@@ -1,1 +1,1 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface RouteTableProperties{Tags?:List<ResourceTag>;VpcId:Value<string>;}export default class RouteTable extends ResourceBase<RouteTableProperties>{constructor(properties:RouteTableProperties);}
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Tags?:List<ResourceTag>;VpcId:Value<string>;}declare class RouteTable extends ResourceBase<Properties>{constructor(properties:Properties);}export{RouteTable as R};

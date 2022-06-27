@@ -19,7 +19,7 @@ export class EdgeOutputConfig {
     }
 }
 
-export interface DeviceFleetProperties {
+export interface Properties {
     Description?: Value<string>
     DeviceFleetName: Value<string>
     OutputConfig: EdgeOutputConfig
@@ -27,10 +27,11 @@ export interface DeviceFleetProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class DeviceFleet extends ResourceBase<DeviceFleetProperties> {
+class DeviceFleet extends ResourceBase<Properties> {
     static EdgeOutputConfig = EdgeOutputConfig
 
-    constructor(properties: DeviceFleetProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::DeviceFleet', properties)
     }
 }
+export { DeviceFleet as R }

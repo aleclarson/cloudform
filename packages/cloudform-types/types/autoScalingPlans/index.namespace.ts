@@ -17,10 +17,22 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ScalingPlan_ from './scalingPlan'
+import * as _0 from './scalingPlan'
 
 export namespace AutoScalingPlans {
-  export const ScalingPlan = ScalingPlan_
+  export const ScalingPlan = _0.R
 
-  export type ScalingPlan = ScalingPlan_
+  export type ScalingPlan = _0.R
+
+  export namespace ScalingPlan {
+    export type ScalingInstruction = _0.ScalingInstruction
+    export type MetricDimension = _0.MetricDimension
+    export type PredefinedScalingMetricSpecification = _0.PredefinedScalingMetricSpecification
+    export type CustomizedScalingMetricSpecification = _0.CustomizedScalingMetricSpecification
+    export type TagFilter = _0.TagFilter
+    export type CustomizedLoadMetricSpecification = _0.CustomizedLoadMetricSpecification
+    export type ApplicationSource = _0.ApplicationSource
+    export type TargetTrackingConfiguration = _0.TargetTrackingConfiguration
+    export type PredefinedLoadMetricSpecification = _0.PredefinedLoadMetricSpecification
+  }
 }

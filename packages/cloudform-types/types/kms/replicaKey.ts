@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ReplicaKeyProperties {
+export interface Properties {
     PrimaryKeyArn: Value<string>
     Description?: Value<string>
     Enabled?: Value<boolean>
@@ -31,10 +31,11 @@ export interface ReplicaKeyProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ReplicaKey extends ResourceBase<ReplicaKeyProperties> {
+class ReplicaKey extends ResourceBase<Properties> {
 
 
-    constructor(properties: ReplicaKeyProperties) {
+    constructor(properties: Properties) {
         super('AWS::KMS::ReplicaKey', properties)
     }
 }
+export { ReplicaKey as R }

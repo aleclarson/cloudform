@@ -48,7 +48,7 @@ export class CognitoIdentityProvider {
     }
 }
 
-export interface IdentityPoolProperties {
+export interface Properties {
     PushSync?: PushSync
     CognitoIdentityProviders?: List<CognitoIdentityProvider>
     CognitoEvents?: {[key: string]: any}
@@ -62,12 +62,13 @@ export interface IdentityPoolProperties {
     AllowClassicFlow?: Value<boolean>
 }
 
-export default class IdentityPool extends ResourceBase<IdentityPoolProperties> {
+class IdentityPool extends ResourceBase<Properties> {
     static CognitoStreams = CognitoStreams
     static PushSync = PushSync
     static CognitoIdentityProvider = CognitoIdentityProvider
 
-    constructor(properties: IdentityPoolProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cognito::IdentityPool', properties)
     }
 }
+export { IdentityPool as R }

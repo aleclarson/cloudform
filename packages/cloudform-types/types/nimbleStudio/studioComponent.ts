@@ -7,7 +7,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class LicenseServiceConfiguration {
@@ -89,7 +89,7 @@ export class SharedFileSystemConfiguration {
     }
 }
 
-export interface StudioComponentProperties {
+export interface Properties {
     Configuration?: StudioComponentConfiguration
     Description?: Value<string>
     Ec2SecurityGroupIds?: List<Value<string>>
@@ -102,7 +102,7 @@ export interface StudioComponentProperties {
     Type: Value<string>
 }
 
-export default class StudioComponent extends ResourceBase<StudioComponentProperties> {
+class StudioComponent extends ResourceBase<Properties> {
     static LicenseServiceConfiguration = LicenseServiceConfiguration
     static ScriptParameterKeyValue = ScriptParameterKeyValue
     static ActiveDirectoryConfiguration = ActiveDirectoryConfiguration
@@ -112,7 +112,8 @@ export default class StudioComponent extends ResourceBase<StudioComponentPropert
     static ComputeFarmConfiguration = ComputeFarmConfiguration
     static SharedFileSystemConfiguration = SharedFileSystemConfiguration
 
-    constructor(properties: StudioComponentProperties) {
+    constructor(properties: Properties) {
         super('AWS::NimbleStudio::StudioComponent', properties)
     }
 }
+export { StudioComponent as R }

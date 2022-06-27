@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TransitGatewayRouteProperties {
+export interface Properties {
     TransitGatewayRouteTableId: Value<string>
     DestinationCidrBlock?: Value<string>
     Blackhole?: Value<boolean>
     TransitGatewayAttachmentId?: Value<string>
 }
 
-export default class TransitGatewayRoute extends ResourceBase<TransitGatewayRouteProperties> {
+class TransitGatewayRoute extends ResourceBase<Properties> {
 
 
-    constructor(properties: TransitGatewayRouteProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::TransitGatewayRoute', properties)
     }
 }
+export { TransitGatewayRoute as R }

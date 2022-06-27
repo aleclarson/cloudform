@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SubnetNetworkAclAssociationProperties {
+export interface Properties {
     NetworkAclId: Value<string>
     SubnetId: Value<string>
 }
 
-export default class SubnetNetworkAclAssociation extends ResourceBase<SubnetNetworkAclAssociationProperties> {
+class SubnetNetworkAclAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: SubnetNetworkAclAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::SubnetNetworkAclAssociation', properties)
     }
 }
+export { SubnetNetworkAclAssociation as R }

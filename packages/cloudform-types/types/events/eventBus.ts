@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class TagEntry {
@@ -29,16 +29,17 @@ export class TagEntry {
     }
 }
 
-export interface EventBusProperties {
+export interface Properties {
     EventSourceName?: Value<string>
     Tags?: List<TagEntry>
     Name: Value<string>
 }
 
-export default class EventBus extends ResourceBase<EventBusProperties> {
+class EventBus extends ResourceBase<Properties> {
     static TagEntry = TagEntry
 
-    constructor(properties: EventBusProperties) {
+    constructor(properties: Properties) {
         super('AWS::Events::EventBus', properties)
     }
 }
+export { EventBus as R }

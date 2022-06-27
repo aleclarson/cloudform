@@ -115,7 +115,7 @@ export class MaintenanceWindowLambdaParameters {
     }
 }
 
-export interface MaintenanceWindowTaskProperties {
+export interface Properties {
     MaxErrors?: Value<string>
     Description?: Value<string>
     ServiceRoleArn?: Value<string>
@@ -132,7 +132,7 @@ export interface MaintenanceWindowTaskProperties {
     LoggingInfo?: LoggingInfo
 }
 
-export default class MaintenanceWindowTask extends ResourceBase<MaintenanceWindowTaskProperties> {
+class MaintenanceWindowTask extends ResourceBase<Properties> {
     static LoggingInfo = LoggingInfo
     static Target = Target
     static CloudWatchOutputConfig = CloudWatchOutputConfig
@@ -143,7 +143,8 @@ export default class MaintenanceWindowTask extends ResourceBase<MaintenanceWindo
     static MaintenanceWindowRunCommandParameters = MaintenanceWindowRunCommandParameters
     static MaintenanceWindowLambdaParameters = MaintenanceWindowLambdaParameters
 
-    constructor(properties: MaintenanceWindowTaskProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSM::MaintenanceWindowTask', properties)
     }
 }
+export { MaintenanceWindowTask as R }

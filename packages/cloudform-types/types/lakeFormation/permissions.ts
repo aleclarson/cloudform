@@ -93,14 +93,14 @@ export class TableWithColumnsResource {
     }
 }
 
-export interface PermissionsProperties {
+export interface Properties {
     DataLakePrincipal: DataLakePrincipal
     Resource: Resource
     Permissions?: List<Value<string>>
     PermissionsWithGrantOption?: List<Value<string>>
 }
 
-export default class Permissions extends ResourceBase<PermissionsProperties> {
+class Permissions extends ResourceBase<Properties> {
     static DataLocationResource = DataLocationResource
     static ColumnWildcard = ColumnWildcard
     static DatabaseResource = DatabaseResource
@@ -110,7 +110,8 @@ export default class Permissions extends ResourceBase<PermissionsProperties> {
     static TableResource = TableResource
     static TableWithColumnsResource = TableWithColumnsResource
 
-    constructor(properties: PermissionsProperties) {
+    constructor(properties: Properties) {
         super('AWS::LakeFormation::Permissions', properties)
     }
 }
+export { Permissions as R }

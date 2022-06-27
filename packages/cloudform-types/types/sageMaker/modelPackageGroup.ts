@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ModelPackageGroupProperties {
+export interface Properties {
     Tags?: List<ResourceTag>
     ModelPackageGroupName: Value<string>
     ModelPackageGroupDescription?: Value<string>
     ModelPackageGroupPolicy?: {[key: string]: any}
 }
 
-export default class ModelPackageGroup extends ResourceBase<ModelPackageGroupProperties> {
+class ModelPackageGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: ModelPackageGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::ModelPackageGroup', properties)
     }
 }
+export { ModelPackageGroup as R }

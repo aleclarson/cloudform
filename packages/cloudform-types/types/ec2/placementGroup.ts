@@ -22,14 +22,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PlacementGroupProperties {
+export interface Properties {
     Strategy?: Value<string>
 }
 
-export default class PlacementGroup extends ResourceBase<PlacementGroupProperties> {
+class PlacementGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties?: PlacementGroupProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::PlacementGroup', properties || {})
     }
 }
+export { PlacementGroup as R }

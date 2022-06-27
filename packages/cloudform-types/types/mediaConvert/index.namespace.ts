@@ -17,16 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Queue_ from './queue'
-import JobTemplate_ from './jobTemplate'
-import Preset_ from './preset'
+import * as _0 from './queue'
+import * as _1 from './jobTemplate'
+import * as _2 from './preset'
 
 export namespace MediaConvert {
-  export const Queue = Queue_
-  export const JobTemplate = JobTemplate_
-  export const Preset = Preset_
+  export const Queue = _0.R
+  export const JobTemplate = _1.R
+  export const Preset = _2.R
 
-  export type Queue = Queue_
-  export type JobTemplate = JobTemplate_
-  export type Preset = Preset_
+  export type Queue = _0.R
+  export type JobTemplate = _1.R
+  export type Preset = _2.R
+
+  export namespace JobTemplate {
+    export type HopDestination = _1.HopDestination
+    export type AccelerationSettings = _1.AccelerationSettings
+  }
 }

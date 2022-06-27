@@ -17,15 +17,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AssessmentTargetProperties {
+export interface Properties {
     AssessmentTargetName?: Value<string>
     ResourceGroupArn?: Value<string>
 }
 
-export default class AssessmentTarget extends ResourceBase<AssessmentTargetProperties> {
+class AssessmentTarget extends ResourceBase<Properties> {
 
 
-    constructor(properties?: AssessmentTargetProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Inspector::AssessmentTarget', properties || {})
     }
 }
+export { AssessmentTarget as R }

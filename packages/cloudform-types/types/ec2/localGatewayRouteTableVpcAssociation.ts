@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LocalGatewayRouteTableVPCAssociationProperties {
+export interface Properties {
     LocalGatewayRouteTableId: Value<string>
     VpcId: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class LocalGatewayRouteTableVPCAssociation extends ResourceBase<LocalGatewayRouteTableVPCAssociationProperties> {
+class LocalGatewayRouteTableVPCAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: LocalGatewayRouteTableVPCAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::LocalGatewayRouteTableVPCAssociation', properties)
     }
 }
+export { LocalGatewayRouteTableVPCAssociation as R }

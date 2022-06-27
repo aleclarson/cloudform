@@ -57,7 +57,7 @@ export class EbsBlockDevice {
     }
 }
 
-export interface InstanceProperties {
+export interface Properties {
     AgentVersion?: Value<string>
     AmiId?: Value<string>
     Architecture?: Value<string>
@@ -81,12 +81,13 @@ export interface InstanceProperties {
     Volumes?: List<Value<string>>
 }
 
-export default class Instance extends ResourceBase<InstanceProperties> {
+class Instance extends ResourceBase<Properties> {
     static BlockDeviceMapping = BlockDeviceMapping
     static TimeBasedAutoScaling = TimeBasedAutoScaling
     static EbsBlockDevice = EbsBlockDevice
 
-    constructor(properties: InstanceProperties) {
+    constructor(properties: Properties) {
         super('AWS::OpsWorks::Instance', properties)
     }
 }
+export { Instance as R }

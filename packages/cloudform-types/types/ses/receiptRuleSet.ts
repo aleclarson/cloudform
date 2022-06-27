@@ -9,14 +9,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ReceiptRuleSetProperties {
+export interface Properties {
     RuleSetName?: Value<string>
 }
 
-export default class ReceiptRuleSet extends ResourceBase<ReceiptRuleSetProperties> {
+class ReceiptRuleSet extends ResourceBase<Properties> {
 
 
-    constructor(properties?: ReceiptRuleSetProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SES::ReceiptRuleSet', properties || {})
     }
 }
+export { ReceiptRuleSet as R }

@@ -14,15 +14,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CarrierGatewayProperties {
+export interface Properties {
     VpcId: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class CarrierGateway extends ResourceBase<CarrierGatewayProperties> {
+class CarrierGateway extends ResourceBase<Properties> {
 
 
-    constructor(properties: CarrierGatewayProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::CarrierGateway', properties)
     }
 }
+export { CarrierGateway as R }

@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AliasProperties {
+export interface Properties {
     AliasName: Value<string>
     TargetKeyId: Value<string>
 }
 
-export default class Alias extends ResourceBase<AliasProperties> {
+class Alias extends ResourceBase<Properties> {
 
 
-    constructor(properties: AliasProperties) {
+    constructor(properties: Properties) {
         super('AWS::KMS::Alias', properties)
     }
 }
+export { Alias as R }

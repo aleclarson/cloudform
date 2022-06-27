@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),domain_1=(exports.default=index_namespace_1.SDB,Object.defineProperty(exports,"__esModule",{value:!0}),require("./domain"));var SDB;!function(SDB){SDB.Domain=domain_1.default}(SDB=exports.SDB||(exports.SDB={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.SDB;

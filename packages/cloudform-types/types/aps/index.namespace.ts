@@ -17,13 +17,15 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Workspace_ from './workspace'
-import RuleGroupsNamespace_ from './ruleGroupsNamespace'
+import * as _0 from './workspace'
+import * as _1 from './ruleGroupsNamespace'
 
 export namespace APS {
-  export const Workspace = Workspace_
-  export const RuleGroupsNamespace = RuleGroupsNamespace_
+  export const Workspace = _0.R
+  export const RuleGroupsNamespace = _1.R
 
-  export type Workspace = Workspace_
-  export type RuleGroupsNamespace = RuleGroupsNamespace_
+  export type Workspace = _0.R
+  export type RuleGroupsNamespace = _1.R
+
+
 }

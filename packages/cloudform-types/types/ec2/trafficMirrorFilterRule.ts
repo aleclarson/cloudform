@@ -28,7 +28,7 @@ export class TrafficMirrorPortRange {
     }
 }
 
-export interface TrafficMirrorFilterRuleProperties {
+export interface Properties {
     DestinationPortRange?: TrafficMirrorPortRange
     Description?: Value<string>
     SourcePortRange?: TrafficMirrorPortRange
@@ -41,10 +41,11 @@ export interface TrafficMirrorFilterRuleProperties {
     Protocol?: Value<number>
 }
 
-export default class TrafficMirrorFilterRule extends ResourceBase<TrafficMirrorFilterRuleProperties> {
+class TrafficMirrorFilterRule extends ResourceBase<Properties> {
     static TrafficMirrorPortRange = TrafficMirrorPortRange
 
-    constructor(properties: TrafficMirrorFilterRuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::TrafficMirrorFilterRule', properties)
     }
 }
+export { TrafficMirrorFilterRule as R }

@@ -26,7 +26,7 @@ export class LogConfiguration {
     }
 }
 
-export interface ChannelProperties {
+export interface Properties {
     Id: Value<string>
     Description?: Value<string>
     Tags?: List<ResourceTag>
@@ -34,10 +34,11 @@ export interface ChannelProperties {
     IngressAccessLogs?: LogConfiguration
 }
 
-export default class Channel extends ResourceBase<ChannelProperties> {
+class Channel extends ResourceBase<Properties> {
     static LogConfiguration = LogConfiguration
 
-    constructor(properties: ChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaPackage::Channel', properties)
     }
 }
+export { Channel as R }

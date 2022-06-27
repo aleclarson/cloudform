@@ -7,7 +7,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class PropertyDefinition {
@@ -88,7 +88,7 @@ export class Function {
     }
 }
 
-export interface ComponentTypeProperties {
+export interface Properties {
     WorkspaceId: Value<string>
     ComponentTypeId: Value<string>
     Description?: Value<string>
@@ -99,7 +99,7 @@ export interface ComponentTypeProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class ComponentType extends ResourceBase<ComponentTypeProperties> {
+class ComponentType extends ResourceBase<Properties> {
     static PropertyDefinition = PropertyDefinition
     static DataType = DataType
     static DataConnector = DataConnector
@@ -108,7 +108,8 @@ export default class ComponentType extends ResourceBase<ComponentTypeProperties>
     static DataValue = DataValue
     static Function = Function
 
-    constructor(properties: ComponentTypeProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTTwinMaker::ComponentType', properties)
     }
 }
+export { ComponentType as R }

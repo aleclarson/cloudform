@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResourceUpdateConstraintProperties {
+export interface Properties {
     Description?: Value<string>
     AcceptLanguage?: Value<string>
     TagUpdateOnProvisionedProduct: Value<string>
@@ -30,10 +30,11 @@ export interface ResourceUpdateConstraintProperties {
     ProductId: Value<string>
 }
 
-export default class ResourceUpdateConstraint extends ResourceBase<ResourceUpdateConstraintProperties> {
+class ResourceUpdateConstraint extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResourceUpdateConstraintProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::ResourceUpdateConstraint', properties)
     }
 }
+export { ResourceUpdateConstraint as R }

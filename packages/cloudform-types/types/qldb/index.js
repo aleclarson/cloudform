@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),stream_1=(exports.default=index_namespace_1.QLDB,Object.defineProperty(exports,"__esModule",{value:!0}),require("./stream")),ledger_1=require("./ledger");var QLDB;!function(QLDB){QLDB.Stream=stream_1.default,QLDB.Ledger=ledger_1.default}(QLDB=exports.QLDB||(exports.QLDB={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.QLDB;

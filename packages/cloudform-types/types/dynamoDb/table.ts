@@ -129,7 +129,7 @@ export class StreamSpecification {
     }
 }
 
-export interface TableProperties {
+export interface Properties {
     AttributeDefinitions?: List<AttributeDefinition>
     BillingMode?: Value<string>
     ContributorInsightsSpecification?: ContributorInsightsSpecification
@@ -147,7 +147,7 @@ export interface TableProperties {
     TimeToLiveSpecification?: TimeToLiveSpecification
 }
 
-export default class Table extends ResourceBase<TableProperties> {
+class Table extends ResourceBase<Properties> {
     static LocalSecondaryIndex = LocalSecondaryIndex
     static PointInTimeRecoverySpecification = PointInTimeRecoverySpecification
     static KinesisStreamSpecification = KinesisStreamSpecification
@@ -161,7 +161,8 @@ export default class Table extends ResourceBase<TableProperties> {
     static Projection = Projection
     static StreamSpecification = StreamSpecification
 
-    constructor(properties: TableProperties) {
+    constructor(properties: Properties) {
         super('AWS::DynamoDB::Table', properties)
     }
 }
+export { Table as R }

@@ -43,19 +43,20 @@ export class SOA {
     }
 }
 
-export interface PublicDnsNamespaceProperties {
+export interface Properties {
     Description?: Value<string>
     Properties?: Properties
     Tags?: List<ResourceTag>
     Name: Value<string>
 }
 
-export default class PublicDnsNamespace extends ResourceBase<PublicDnsNamespaceProperties> {
+class PublicDnsNamespace extends ResourceBase<Properties> {
     static Properties = Properties
     static PublicDnsPropertiesMutable = PublicDnsPropertiesMutable
     static SOA = SOA
 
-    constructor(properties: PublicDnsNamespaceProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceDiscovery::PublicDnsNamespace', properties)
     }
 }
+export { PublicDnsNamespace as R }

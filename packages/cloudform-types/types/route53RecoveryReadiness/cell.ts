@@ -8,16 +8,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CellProperties {
+export interface Properties {
     CellName: Value<string>
     Cells?: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class Cell extends ResourceBase<CellProperties> {
+class Cell extends ResourceBase<Properties> {
 
 
-    constructor(properties: CellProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53RecoveryReadiness::Cell', properties)
     }
 }
+export { Cell as R }

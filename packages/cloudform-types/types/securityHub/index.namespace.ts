@@ -17,10 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Hub_ from './hub'
+import * as _0 from './hub'
 
 export namespace SecurityHub {
-  export const Hub = Hub_
+  export const Hub = _0.R
 
-  export type Hub = Hub_
+  export type Hub = _0.R
+
+
 }

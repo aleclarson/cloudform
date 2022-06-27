@@ -29,7 +29,7 @@ export class Repository {
     }
 }
 
-export interface EnvironmentEC2Properties {
+export interface Properties {
     Repositories?: List<Repository>
     OwnerArn?: Value<string>
     Description?: Value<string>
@@ -42,10 +42,11 @@ export interface EnvironmentEC2Properties {
     Name?: Value<string>
 }
 
-export default class EnvironmentEC2 extends ResourceBase<EnvironmentEC2Properties> {
+class EnvironmentEC2 extends ResourceBase<Properties> {
     static Repository = Repository
 
-    constructor(properties: EnvironmentEC2Properties) {
+    constructor(properties: Properties) {
         super('AWS::Cloud9::EnvironmentEC2', properties)
     }
 }
+export { EnvironmentEC2 as R }

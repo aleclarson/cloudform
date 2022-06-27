@@ -22,14 +22,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DomainProperties {
+export interface Properties {
     Description?: Value<string>
 }
 
-export default class Domain extends ResourceBase<DomainProperties> {
+class Domain extends ResourceBase<Properties> {
 
 
-    constructor(properties?: DomainProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SDB::Domain', properties || {})
     }
 }
+export { Domain as R }

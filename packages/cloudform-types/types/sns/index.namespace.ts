@@ -17,16 +17,20 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Topic_ from './topic'
-import Subscription_ from './subscription'
-import TopicPolicy_ from './topicPolicy'
+import * as _0 from './topic'
+import * as _1 from './subscription'
+import * as _2 from './topicPolicy'
 
 export namespace SNS {
-  export const Topic = Topic_
-  export const Subscription = Subscription_
-  export const TopicPolicy = TopicPolicy_
+  export const Topic = _0.R
+  export const Subscription = _1.R
+  export const TopicPolicy = _2.R
 
-  export type Topic = Topic_
-  export type Subscription = Subscription_
-  export type TopicPolicy = TopicPolicy_
+  export type Topic = _0.R
+  export type Subscription = _1.R
+  export type TopicPolicy = _2.R
+
+  export namespace Topic {
+    export type Subscription = _0.Subscription
+  }
 }

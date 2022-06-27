@@ -16,7 +16,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class PhysicalResourceId {
@@ -42,7 +42,7 @@ export class ResourceMapping {
     }
 }
 
-export interface AppProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     ResiliencyPolicyArn?: Value<string>
@@ -52,11 +52,12 @@ export interface AppProperties {
     AppAssessmentSchedule?: Value<string>
 }
 
-export default class App extends ResourceBase<AppProperties> {
+class App extends ResourceBase<Properties> {
     static PhysicalResourceId = PhysicalResourceId
     static ResourceMapping = ResourceMapping
 
-    constructor(properties: AppProperties) {
+    constructor(properties: Properties) {
         super('AWS::ResilienceHub::App', properties)
     }
 }
+export { App as R }

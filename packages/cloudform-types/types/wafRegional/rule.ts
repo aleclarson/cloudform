@@ -30,16 +30,17 @@ export class Predicate {
     }
 }
 
-export interface RuleProperties {
+export interface Properties {
     MetricName: Value<string>
     Predicates?: List<Predicate>
     Name: Value<string>
 }
 
-export default class Rule extends ResourceBase<RuleProperties> {
+class Rule extends ResourceBase<Properties> {
     static Predicate = Predicate
 
-    constructor(properties: RuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAFRegional::Rule', properties)
     }
 }
+export { Rule as R }

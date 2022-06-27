@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Condition {
@@ -62,7 +62,7 @@ export class NotificationProperty {
     }
 }
 
-export interface TriggerProperties {
+export interface Properties {
     Type: Value<string>
     StartOnCreation?: Value<boolean>
     Description?: Value<string>
@@ -74,13 +74,14 @@ export interface TriggerProperties {
     Predicate?: Predicate
 }
 
-export default class Trigger extends ResourceBase<TriggerProperties> {
+class Trigger extends ResourceBase<Properties> {
     static Condition = Condition
     static Predicate = Predicate
     static Action = Action
     static NotificationProperty = NotificationProperty
 
-    constructor(properties: TriggerProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::Trigger', properties)
     }
 }
+export { Trigger as R }

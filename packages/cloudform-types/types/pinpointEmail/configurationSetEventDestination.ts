@@ -66,13 +66,13 @@ export class EventDestination {
     }
 }
 
-export interface ConfigurationSetEventDestinationProperties {
+export interface Properties {
     EventDestinationName: Value<string>
     ConfigurationSetName: Value<string>
     EventDestination?: EventDestination
 }
 
-export default class ConfigurationSetEventDestination extends ResourceBase<ConfigurationSetEventDestinationProperties> {
+class ConfigurationSetEventDestination extends ResourceBase<Properties> {
     static DimensionConfiguration = DimensionConfiguration
     static CloudWatchDestination = CloudWatchDestination
     static SnsDestination = SnsDestination
@@ -80,7 +80,8 @@ export default class ConfigurationSetEventDestination extends ResourceBase<Confi
     static KinesisFirehoseDestination = KinesisFirehoseDestination
     static EventDestination = EventDestination
 
-    constructor(properties: ConfigurationSetEventDestinationProperties) {
+    constructor(properties: Properties) {
         super('AWS::PinpointEmail::ConfigurationSetEventDestination', properties)
     }
 }
+export { ConfigurationSetEventDestination as R }

@@ -69,7 +69,7 @@ export class Primary {
     }
 }
 
-export interface EndpointProperties {
+export interface Properties {
     Name: Value<string>
     RoleArn?: Value<string>
     Description?: Value<string>
@@ -78,7 +78,7 @@ export interface EndpointProperties {
     EventBuses: List<EndpointEventBus>
 }
 
-export default class Endpoint extends ResourceBase<EndpointProperties> {
+class Endpoint extends ResourceBase<Properties> {
     static Secondary = Secondary
     static ReplicationConfig = ReplicationConfig
     static EndpointEventBus = EndpointEventBus
@@ -86,7 +86,8 @@ export default class Endpoint extends ResourceBase<EndpointProperties> {
     static FailoverConfig = FailoverConfig
     static Primary = Primary
 
-    constructor(properties: EndpointProperties) {
+    constructor(properties: Properties) {
         super('AWS::Events::Endpoint', properties)
     }
 }
+export { Endpoint as R }

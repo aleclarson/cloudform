@@ -7,7 +7,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NetworkProfileProperties {
+export interface Properties {
     ProjectArn: Value<string>
     Description?: Value<string>
     DownlinkBandwidthBits?: Value<number>
@@ -22,10 +22,11 @@ export interface NetworkProfileProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class NetworkProfile extends ResourceBase<NetworkProfileProperties> {
+class NetworkProfile extends ResourceBase<Properties> {
 
 
-    constructor(properties: NetworkProfileProperties) {
+    constructor(properties: Properties) {
         super('AWS::DeviceFarm::NetworkProfile', properties)
     }
 }
+export { NetworkProfile as R }

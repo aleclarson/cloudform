@@ -45,7 +45,7 @@ export class QuietTime {
     }
 }
 
-export interface ApplicationSettingsProperties {
+export interface Properties {
     QuietTime?: QuietTime
     Limits?: Limits
     ApplicationId: Value<string>
@@ -53,12 +53,13 @@ export interface ApplicationSettingsProperties {
     CloudWatchMetricsEnabled?: Value<boolean>
 }
 
-export default class ApplicationSettings extends ResourceBase<ApplicationSettingsProperties> {
+class ApplicationSettings extends ResourceBase<Properties> {
     static CampaignHook = CampaignHook
     static Limits = Limits
     static QuietTime = QuietTime
 
-    constructor(properties: ApplicationSettingsProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::ApplicationSettings', properties)
     }
 }
+export { ApplicationSettings as R }

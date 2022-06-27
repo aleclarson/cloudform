@@ -17,10 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ResourceShare_ from './resourceShare'
+import * as _0 from './resourceShare'
 
 export namespace RAM {
-  export const ResourceShare = ResourceShare_
+  export const ResourceShare = _0.R
 
-  export type ResourceShare = ResourceShare_
+  export type ResourceShare = _0.R
+
+
 }

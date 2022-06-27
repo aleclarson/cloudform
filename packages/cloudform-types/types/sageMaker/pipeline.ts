@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PipelineProperties {
+export interface Properties {
     PipelineName: Value<string>
     PipelineDisplayName?: Value<string>
     PipelineDescription?: Value<string>
@@ -31,10 +31,11 @@ export interface PipelineProperties {
     ParallelismConfiguration?: {[key: string]: any}
 }
 
-export default class Pipeline extends ResourceBase<PipelineProperties> {
+class Pipeline extends ResourceBase<Properties> {
 
 
-    constructor(properties: PipelineProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::Pipeline', properties)
     }
 }
+export { Pipeline as R }

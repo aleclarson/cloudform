@@ -87,7 +87,7 @@ export type Tags = List<ResourceTag>
 
 export type AdditionalAuthenticationProviders = List<AdditionalAuthenticationProvider>
 
-export interface GraphQLApiProperties {
+export interface Properties {
     OpenIDConnectConfig?: OpenIDConnectConfig
     LambdaAuthorizerConfig?: LambdaAuthorizerConfig
     XrayEnabled?: Value<boolean>
@@ -99,7 +99,7 @@ export interface GraphQLApiProperties {
     AdditionalAuthenticationProviders?: List<AdditionalAuthenticationProvider>
 }
 
-export default class GraphQLApi extends ResourceBase<GraphQLApiProperties> {
+class GraphQLApi extends ResourceBase<Properties> {
     static LambdaAuthorizerConfig = LambdaAuthorizerConfig
     static OpenIDConnectConfig = OpenIDConnectConfig
     static CognitoUserPoolConfig = CognitoUserPoolConfig
@@ -107,7 +107,8 @@ export default class GraphQLApi extends ResourceBase<GraphQLApiProperties> {
     static LogConfig = LogConfig
     static AdditionalAuthenticationProvider = AdditionalAuthenticationProvider
 
-    constructor(properties: GraphQLApiProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppSync::GraphQLApi', properties)
     }
 }
+export { GraphQLApi as R }

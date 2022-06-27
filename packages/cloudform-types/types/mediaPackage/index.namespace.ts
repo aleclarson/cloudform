@@ -17,22 +17,63 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Channel_ from './channel'
-import PackagingConfiguration_ from './packagingConfiguration'
-import Asset_ from './asset'
-import PackagingGroup_ from './packagingGroup'
-import OriginEndpoint_ from './originEndpoint'
+import * as _0 from './channel'
+import * as _1 from './packagingConfiguration'
+import * as _2 from './asset'
+import * as _3 from './packagingGroup'
+import * as _4 from './originEndpoint'
 
 export namespace MediaPackage {
-  export const Channel = Channel_
-  export const PackagingConfiguration = PackagingConfiguration_
-  export const Asset = Asset_
-  export const PackagingGroup = PackagingGroup_
-  export const OriginEndpoint = OriginEndpoint_
+  export const Channel = _0.R
+  export const PackagingConfiguration = _1.R
+  export const Asset = _2.R
+  export const PackagingGroup = _3.R
+  export const OriginEndpoint = _4.R
 
-  export type Channel = Channel_
-  export type PackagingConfiguration = PackagingConfiguration_
-  export type Asset = Asset_
-  export type PackagingGroup = PackagingGroup_
-  export type OriginEndpoint = OriginEndpoint_
+  export type Channel = _0.R
+  export type PackagingConfiguration = _1.R
+  export type Asset = _2.R
+  export type PackagingGroup = _3.R
+  export type OriginEndpoint = _4.R
+
+  export namespace Channel {
+    export type LogConfiguration = _0.LogConfiguration
+  }
+  export namespace PackagingConfiguration {
+    export type DashEncryption = _1.DashEncryption
+    export type SpekeKeyProvider = _1.SpekeKeyProvider
+    export type CmafPackage = _1.CmafPackage
+    export type DashPackage = _1.DashPackage
+    export type DashManifest = _1.DashManifest
+    export type HlsEncryption = _1.HlsEncryption
+    export type MssManifest = _1.MssManifest
+    export type CmafEncryption = _1.CmafEncryption
+    export type MssEncryption = _1.MssEncryption
+    export type StreamSelection = _1.StreamSelection
+    export type MssPackage = _1.MssPackage
+    export type HlsPackage = _1.HlsPackage
+    export type HlsManifest = _1.HlsManifest
+  }
+  export namespace Asset {
+    export type EgressEndpoint = _2.EgressEndpoint
+  }
+  export namespace PackagingGroup {
+    export type LogConfiguration = _3.LogConfiguration
+    export type Authorization = _3.Authorization
+  }
+  export namespace OriginEndpoint {
+    export type StreamSelection = _4.StreamSelection
+    export type CmafPackage = _4.CmafPackage
+    export type MssEncryption = _4.MssEncryption
+    export type Authorization = _4.Authorization
+    export type DashPackage = _4.DashPackage
+    export type DashEncryption = _4.DashEncryption
+    export type HlsManifest = _4.HlsManifest
+    export type SpekeKeyProvider = _4.SpekeKeyProvider
+    export type CmafEncryption = _4.CmafEncryption
+    export type HlsEncryption = _4.HlsEncryption
+    export type MssPackage = _4.MssPackage
+    export type HlsPackage = _4.HlsPackage
+    export type EncryptionContractConfiguration = _4.EncryptionContractConfiguration
+  }
 }

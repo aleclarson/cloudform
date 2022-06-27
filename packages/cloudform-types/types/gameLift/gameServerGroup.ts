@@ -54,7 +54,7 @@ export class InstanceDefinition {
     }
 }
 
-export interface GameServerGroupProperties {
+export interface Properties {
     AutoScalingPolicy?: AutoScalingPolicy
     BalancingStrategy?: Value<string>
     DeleteOption?: Value<string>
@@ -69,13 +69,14 @@ export interface GameServerGroupProperties {
     VpcSubnets?: List<Value<string>>
 }
 
-export default class GameServerGroup extends ResourceBase<GameServerGroupProperties> {
+class GameServerGroup extends ResourceBase<Properties> {
     static TargetTrackingConfiguration = TargetTrackingConfiguration
     static LaunchTemplate = LaunchTemplate
     static AutoScalingPolicy = AutoScalingPolicy
     static InstanceDefinition = InstanceDefinition
 
-    constructor(properties: GameServerGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::GameLift::GameServerGroup', properties)
     }
 }
+export { GameServerGroup as R }

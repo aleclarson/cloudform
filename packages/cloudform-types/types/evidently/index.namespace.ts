@@ -17,19 +17,42 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Launch_ from './launch'
-import Experiment_ from './experiment'
-import Project_ from './project'
-import Feature_ from './feature'
+import * as _0 from './launch'
+import * as _1 from './experiment'
+import * as _2 from './project'
+import * as _3 from './feature'
 
 export namespace Evidently {
-  export const Launch = Launch_
-  export const Experiment = Experiment_
-  export const Project = Project_
-  export const Feature = Feature_
+  export const Launch = _0.R
+  export const Experiment = _1.R
+  export const Project = _2.R
+  export const Feature = _3.R
 
-  export type Launch = Launch_
-  export type Experiment = Experiment_
-  export type Project = Project_
-  export type Feature = Feature_
+  export type Launch = _0.R
+  export type Experiment = _1.R
+  export type Project = _2.R
+  export type Feature = _3.R
+
+  export namespace Launch {
+    export type ExecutionStatusObject = _0.ExecutionStatusObject
+    export type MetricDefinitionObject = _0.MetricDefinitionObject
+    export type LaunchGroupObject = _0.LaunchGroupObject
+    export type StepConfig = _0.StepConfig
+    export type GroupToWeight = _0.GroupToWeight
+  }
+  export namespace Experiment {
+    export type OnlineAbConfigObject = _1.OnlineAbConfigObject
+    export type TreatmentToWeight = _1.TreatmentToWeight
+    export type RunningStatusObject = _1.RunningStatusObject
+    export type TreatmentObject = _1.TreatmentObject
+    export type MetricGoalObject = _1.MetricGoalObject
+  }
+  export namespace Project {
+    export type S3Destination = _2.S3Destination
+    export type DataDeliveryObject = _2.DataDeliveryObject
+  }
+  export namespace Feature {
+    export type VariationObject = _3.VariationObject
+    export type EntityOverride = _3.EntityOverride
+  }
 }

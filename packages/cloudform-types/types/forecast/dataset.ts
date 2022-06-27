@@ -11,12 +11,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface DatasetProperties {
+export interface Properties {
     DatasetName: Value<string>
     DatasetType: Value<string>
     DataFrequency?: Value<string>
@@ -26,10 +26,11 @@ export interface DatasetProperties {
     Tags?: List<{[key: string]: any}>
 }
 
-export default class Dataset extends ResourceBase<DatasetProperties> {
+class Dataset extends ResourceBase<Properties> {
 
 
-    constructor(properties: DatasetProperties) {
+    constructor(properties: Properties) {
         super('AWS::Forecast::Dataset', properties)
     }
 }
+export { Dataset as R }

@@ -62,7 +62,7 @@ export class StorageConnector {
     }
 }
 
-export interface StackProperties {
+export interface Properties {
     Description?: Value<string>
     StorageConnectors?: List<StorageConnector>
     DeleteStorageConnectors?: Value<boolean>
@@ -79,14 +79,15 @@ export interface StackProperties {
     AccessEndpoints?: List<AccessEndpoint>
 }
 
-export default class Stack extends ResourceBase<StackProperties> {
+class Stack extends ResourceBase<Properties> {
     static AccessEndpoint = AccessEndpoint
     static StreamingExperienceSettings = StreamingExperienceSettings
     static UserSetting = UserSetting
     static ApplicationSettings = ApplicationSettings
     static StorageConnector = StorageConnector
 
-    constructor(properties?: StackProperties) {
+    constructor(properties?: Properties) {
         super('AWS::AppStream::Stack', properties || {})
     }
 }
+export { Stack as R }

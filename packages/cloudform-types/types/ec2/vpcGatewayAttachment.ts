@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPCGatewayAttachmentProperties {
+export interface Properties {
     InternetGatewayId?: Value<string>
     VpcId: Value<string>
     VpnGatewayId?: Value<string>
 }
 
-export default class VPCGatewayAttachment extends ResourceBase<VPCGatewayAttachmentProperties> {
+class VPCGatewayAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties: VPCGatewayAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::VPCGatewayAttachment', properties)
     }
 }
+export { VPCGatewayAttachment as R }

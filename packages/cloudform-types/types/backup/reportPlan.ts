@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ReportPlanProperties {
+export interface Properties {
     ReportPlanName?: Value<string>
     ReportPlanDescription?: Value<string>
     ReportPlanTags?: List<ResourceTag>
@@ -29,10 +29,11 @@ export interface ReportPlanProperties {
     ReportSetting: {[key: string]: any}
 }
 
-export default class ReportPlan extends ResourceBase<ReportPlanProperties> {
+class ReportPlan extends ResourceBase<Properties> {
 
 
-    constructor(properties: ReportPlanProperties) {
+    constructor(properties: Properties) {
         super('AWS::Backup::ReportPlan', properties)
     }
 }
+export { ReportPlan as R }

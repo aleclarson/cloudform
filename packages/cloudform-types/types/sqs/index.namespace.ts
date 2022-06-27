@@ -17,13 +17,15 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import QueuePolicy_ from './queuePolicy'
-import Queue_ from './queue'
+import * as _0 from './queuePolicy'
+import * as _1 from './queue'
 
 export namespace SQS {
-  export const QueuePolicy = QueuePolicy_
-  export const Queue = Queue_
+  export const QueuePolicy = _0.R
+  export const Queue = _1.R
 
-  export type QueuePolicy = QueuePolicy_
-  export type Queue = Queue_
+  export type QueuePolicy = _0.R
+  export type Queue = _1.R
+
+
 }

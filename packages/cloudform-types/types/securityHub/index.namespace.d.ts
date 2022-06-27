@@ -1,1 +1,1 @@
-import Hub_ from'./hub';export declare namespace SecurityHub{const Hub:typeof Hub_;type Hub=Hub_;}
+import*as _0 from'./hub';export declare namespace SecurityHub{const Hub:typeof _0.R;type Hub=_0.R;}

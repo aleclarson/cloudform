@@ -17,13 +17,18 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Stream_ from './stream'
-import StreamConsumer_ from './streamConsumer'
+import * as _0 from './stream'
+import * as _1 from './streamConsumer'
 
 export namespace Kinesis {
-  export const Stream = Stream_
-  export const StreamConsumer = StreamConsumer_
+  export const Stream = _0.R
+  export const StreamConsumer = _1.R
 
-  export type Stream = Stream_
-  export type StreamConsumer = StreamConsumer_
+  export type Stream = _0.R
+  export type StreamConsumer = _1.R
+
+  export namespace Stream {
+    export type StreamEncryption = _0.StreamEncryption
+    export type StreamModeDetails = _0.StreamModeDetails
+  }
 }

@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface StackSetConstraintProperties {
+export interface Properties {
     Description: Value<string>
     StackInstanceControl: Value<string>
     AcceptLanguage?: Value<string>
@@ -34,10 +34,11 @@ export interface StackSetConstraintProperties {
     ExecutionRole: Value<string>
 }
 
-export default class StackSetConstraint extends ResourceBase<StackSetConstraintProperties> {
+class StackSetConstraint extends ResourceBase<Properties> {
 
 
-    constructor(properties: StackSetConstraintProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::StackSetConstraint', properties)
     }
 }
+export { StackSetConstraint as R }

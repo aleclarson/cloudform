@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),trail_1=(exports.default=index_namespace_1.CloudTrail,Object.defineProperty(exports,"__esModule",{value:!0}),require("./trail"));var CloudTrail;!function(CloudTrail){CloudTrail.Trail=trail_1.default}(CloudTrail=exports.CloudTrail||(exports.CloudTrail={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.CloudTrail;

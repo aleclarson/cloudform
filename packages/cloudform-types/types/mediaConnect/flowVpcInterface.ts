@@ -20,7 +20,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface FlowVpcInterfaceProperties {
+export interface Properties {
     FlowArn: Value<string>
     Name: Value<string>
     RoleArn: Value<string>
@@ -28,10 +28,11 @@ export interface FlowVpcInterfaceProperties {
     SubnetId: Value<string>
 }
 
-export default class FlowVpcInterface extends ResourceBase<FlowVpcInterfaceProperties> {
+class FlowVpcInterface extends ResourceBase<Properties> {
 
 
-    constructor(properties: FlowVpcInterfaceProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaConnect::FlowVpcInterface', properties)
     }
 }
+export { FlowVpcInterface as R }

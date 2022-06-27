@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CustomDataIdentifierProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     Regex: Value<string>
@@ -31,10 +31,11 @@ export interface CustomDataIdentifierProperties {
     IgnoreWords?: List<Value<string>>
 }
 
-export default class CustomDataIdentifier extends ResourceBase<CustomDataIdentifierProperties> {
+class CustomDataIdentifier extends ResourceBase<Properties> {
 
 
-    constructor(properties: CustomDataIdentifierProperties) {
+    constructor(properties: Properties) {
         super('AWS::Macie::CustomDataIdentifier', properties)
     }
 }
+export { CustomDataIdentifier as R }

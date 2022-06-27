@@ -14,15 +14,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TrackerConsumerProperties {
+export interface Properties {
     ConsumerArn: Value<string>
     TrackerName: Value<string>
 }
 
-export default class TrackerConsumer extends ResourceBase<TrackerConsumerProperties> {
+class TrackerConsumer extends ResourceBase<Properties> {
 
 
-    constructor(properties: TrackerConsumerProperties) {
+    constructor(properties: Properties) {
         super('AWS::Location::TrackerConsumer', properties)
     }
 }
+export { TrackerConsumer as R }

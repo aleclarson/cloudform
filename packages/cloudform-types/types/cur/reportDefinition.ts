@@ -7,7 +7,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ReportDefinitionProperties {
+export interface Properties {
     ReportName: Value<string>
     TimeUnit: Value<string>
     Format: Value<string>
@@ -22,10 +22,11 @@ export interface ReportDefinitionProperties {
     BillingViewArn?: Value<string>
 }
 
-export default class ReportDefinition extends ResourceBase<ReportDefinitionProperties> {
+class ReportDefinition extends ResourceBase<Properties> {
 
 
-    constructor(properties: ReportDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::CUR::ReportDefinition', properties)
     }
 }
+export { ReportDefinition as R }

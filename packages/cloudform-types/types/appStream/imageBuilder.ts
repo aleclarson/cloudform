@@ -44,7 +44,7 @@ export class DomainJoinInfo {
     }
 }
 
-export interface ImageBuilderProperties {
+export interface Properties {
     Description?: Value<string>
     VpcConfig?: VpcConfig
     EnableDefaultInternetAccess?: Value<boolean>
@@ -60,12 +60,13 @@ export interface ImageBuilderProperties {
     AccessEndpoints?: List<AccessEndpoint>
 }
 
-export default class ImageBuilder extends ResourceBase<ImageBuilderProperties> {
+class ImageBuilder extends ResourceBase<Properties> {
     static VpcConfig = VpcConfig
     static AccessEndpoint = AccessEndpoint
     static DomainJoinInfo = DomainJoinInfo
 
-    constructor(properties: ImageBuilderProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppStream::ImageBuilder', properties)
     }
 }
+export { ImageBuilder as R }

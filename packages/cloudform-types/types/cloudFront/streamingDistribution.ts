@@ -62,18 +62,19 @@ export class TrustedSigners {
     }
 }
 
-export interface StreamingDistributionProperties {
+export interface Properties {
     StreamingDistributionConfig: StreamingDistributionConfig
     Tags: List<ResourceTag>
 }
 
-export default class StreamingDistribution extends ResourceBase<StreamingDistributionProperties> {
+class StreamingDistribution extends ResourceBase<Properties> {
     static S3Origin = S3Origin
     static Logging = Logging
     static StreamingDistributionConfig = StreamingDistributionConfig
     static TrustedSigners = TrustedSigners
 
-    constructor(properties: StreamingDistributionProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFront::StreamingDistribution', properties)
     }
 }
+export { StreamingDistribution as R }

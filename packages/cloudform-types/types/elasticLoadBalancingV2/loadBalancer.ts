@@ -40,7 +40,7 @@ export class SubnetMapping {
     }
 }
 
-export interface LoadBalancerProperties {
+export interface Properties {
     IpAddressType?: Value<string>
     LoadBalancerAttributes?: List<LoadBalancerAttribute>
     Name?: Value<string>
@@ -52,11 +52,12 @@ export interface LoadBalancerProperties {
     Type?: Value<string>
 }
 
-export default class LoadBalancer extends ResourceBase<LoadBalancerProperties> {
+class LoadBalancer extends ResourceBase<Properties> {
     static LoadBalancerAttribute = LoadBalancerAttribute
     static SubnetMapping = SubnetMapping
 
-    constructor(properties?: LoadBalancerProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ElasticLoadBalancingV2::LoadBalancer', properties || {})
     }
 }
+export { LoadBalancer as R }

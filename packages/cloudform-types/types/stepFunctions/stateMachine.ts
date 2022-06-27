@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export type Definition = {[key: string]: any}
@@ -75,7 +75,7 @@ export class TracingConfiguration {
     }
 }
 
-export interface StateMachineProperties {
+export interface Properties {
     DefinitionString?: Value<string>
     RoleArn: Value<string>
     StateMachineName?: Value<string>
@@ -88,7 +88,7 @@ export interface StateMachineProperties {
     Tags?: List<TagsEntry>
 }
 
-export default class StateMachine extends ResourceBase<StateMachineProperties> {
+class StateMachine extends ResourceBase<Properties> {
     static LogDestination = LogDestination
     static TagsEntry = TagsEntry
     static LoggingConfiguration = LoggingConfiguration
@@ -96,7 +96,8 @@ export default class StateMachine extends ResourceBase<StateMachineProperties> {
     static CloudWatchLogsLogGroup = CloudWatchLogsLogGroup
     static TracingConfiguration = TracingConfiguration
 
-    constructor(properties: StateMachineProperties) {
+    constructor(properties: Properties) {
         super('AWS::StepFunctions::StateMachine', properties)
     }
 }
+export { StateMachine as R }

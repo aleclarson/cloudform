@@ -30,14 +30,15 @@ export class KeyGroupConfig {
     }
 }
 
-export interface KeyGroupProperties {
+export interface Properties {
     KeyGroupConfig: KeyGroupConfig
 }
 
-export default class KeyGroup extends ResourceBase<KeyGroupProperties> {
+class KeyGroup extends ResourceBase<Properties> {
     static KeyGroupConfig = KeyGroupConfig
 
-    constructor(properties: KeyGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFront::KeyGroup', properties)
     }
 }
+export { KeyGroup as R }

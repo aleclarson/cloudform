@@ -103,7 +103,7 @@ export class Policies {
     }
 }
 
-export interface LoadBalancerProperties {
+export interface Properties {
     AccessLoggingPolicy?: AccessLoggingPolicy
     AppCookieStickinessPolicy?: List<AppCookieStickinessPolicy>
     AvailabilityZones?: List<Value<string>>
@@ -122,7 +122,7 @@ export interface LoadBalancerProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class LoadBalancer extends ResourceBase<LoadBalancerProperties> {
+class LoadBalancer extends ResourceBase<Properties> {
     static AccessLoggingPolicy = AccessLoggingPolicy
     static HealthCheck = HealthCheck
     static ConnectionSettings = ConnectionSettings
@@ -132,7 +132,8 @@ export default class LoadBalancer extends ResourceBase<LoadBalancerProperties> {
     static Listeners = Listeners
     static Policies = Policies
 
-    constructor(properties: LoadBalancerProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElasticLoadBalancing::LoadBalancer', properties)
     }
 }
+export { LoadBalancer as R }

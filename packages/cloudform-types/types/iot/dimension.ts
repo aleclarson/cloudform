@@ -20,17 +20,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DimensionProperties {
+export interface Properties {
     Name?: Value<string>
     Type: Value<string>
     StringValues: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class Dimension extends ResourceBase<DimensionProperties> {
+class Dimension extends ResourceBase<Properties> {
 
 
-    constructor(properties: DimensionProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::Dimension', properties)
     }
 }
+export { Dimension as R }

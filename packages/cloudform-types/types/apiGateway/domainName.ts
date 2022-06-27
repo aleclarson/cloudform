@@ -37,7 +37,7 @@ export class EndpointConfiguration {
     }
 }
 
-export interface DomainNameProperties {
+export interface Properties {
     DomainName?: Value<string>
     EndpointConfiguration?: EndpointConfiguration
     MutualTlsAuthentication?: MutualTlsAuthentication
@@ -48,11 +48,12 @@ export interface DomainNameProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class DomainName extends ResourceBase<DomainNameProperties> {
+class DomainName extends ResourceBase<Properties> {
     static MutualTlsAuthentication = MutualTlsAuthentication
     static EndpointConfiguration = EndpointConfiguration
 
-    constructor(properties?: DomainNameProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ApiGateway::DomainName', properties || {})
     }
 }
+export { DomainName as R }

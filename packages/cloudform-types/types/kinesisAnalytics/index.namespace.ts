@@ -17,16 +17,48 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ApplicationOutput_ from './applicationOutput'
-import Application_ from './application'
-import ApplicationReferenceDataSource_ from './applicationReferenceDataSource'
+import * as _0 from './applicationOutput'
+import * as _1 from './application'
+import * as _2 from './applicationReferenceDataSource'
 
 export namespace KinesisAnalytics {
-  export const ApplicationOutput = ApplicationOutput_
-  export const Application = Application_
-  export const ApplicationReferenceDataSource = ApplicationReferenceDataSource_
+  export const ApplicationOutput = _0.R
+  export const Application = _1.R
+  export const ApplicationReferenceDataSource = _2.R
 
-  export type ApplicationOutput = ApplicationOutput_
-  export type Application = Application_
-  export type ApplicationReferenceDataSource = ApplicationReferenceDataSource_
+  export type ApplicationOutput = _0.R
+  export type Application = _1.R
+  export type ApplicationReferenceDataSource = _2.R
+
+  export namespace ApplicationOutput {
+    export type KinesisFirehoseOutput = _0.KinesisFirehoseOutput
+    export type KinesisStreamsOutput = _0.KinesisStreamsOutput
+    export type LambdaOutput = _0.LambdaOutput
+    export type Output = _0.Output
+    export type DestinationSchema = _0.DestinationSchema
+  }
+  export namespace Application {
+    export type CSVMappingParameters = _1.CSVMappingParameters
+    export type Input = _1.Input
+    export type JSONMappingParameters = _1.JSONMappingParameters
+    export type KinesisStreamsInput = _1.KinesisStreamsInput
+    export type RecordColumn = _1.RecordColumn
+    export type KinesisFirehoseInput = _1.KinesisFirehoseInput
+    export type InputParallelism = _1.InputParallelism
+    export type InputSchema = _1.InputSchema
+    export type MappingParameters = _1.MappingParameters
+    export type RecordFormat = _1.RecordFormat
+    export type InputProcessingConfiguration = _1.InputProcessingConfiguration
+    export type InputLambdaProcessor = _1.InputLambdaProcessor
+  }
+  export namespace ApplicationReferenceDataSource {
+    export type RecordFormat = _2.RecordFormat
+    export type CSVMappingParameters = _2.CSVMappingParameters
+    export type S3ReferenceDataSource = _2.S3ReferenceDataSource
+    export type RecordColumn = _2.RecordColumn
+    export type ReferenceSchema = _2.ReferenceSchema
+    export type MappingParameters = _2.MappingParameters
+    export type JSONMappingParameters = _2.JSONMappingParameters
+    export type ReferenceDataSource = _2.ReferenceDataSource
+  }
 }

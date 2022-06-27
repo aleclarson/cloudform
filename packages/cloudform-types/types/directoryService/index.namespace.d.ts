@@ -1,1 +1,1 @@
-import MicrosoftAD_ from'./microsoftAd';import SimpleAD_ from'./simpleAd';export declare namespace DirectoryService{const MicrosoftAD:typeof MicrosoftAD_;const SimpleAD:typeof SimpleAD_;type MicrosoftAD=MicrosoftAD_;type SimpleAD=SimpleAD_;}
+import*as _0 from'./microsoftAd';import*as _1 from'./simpleAd';export declare namespace DirectoryService{const MicrosoftAD:typeof _0.R;const SimpleAD:typeof _1.R;type MicrosoftAD=_0.R;type SimpleAD=_1.R;namespace MicrosoftAD{type VpcSettings=_0.VpcSettings;}namespace SimpleAD{type VpcSettings=_1.VpcSettings;}}

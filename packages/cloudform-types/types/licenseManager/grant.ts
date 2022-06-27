@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface GrantProperties {
+export interface Properties {
     GrantName?: Value<string>
     LicenseArn?: Value<string>
     HomeRegion?: Value<string>
@@ -30,10 +30,11 @@ export interface GrantProperties {
     Status?: Value<string>
 }
 
-export default class Grant extends ResourceBase<GrantProperties> {
+class Grant extends ResourceBase<Properties> {
 
 
-    constructor(properties?: GrantProperties) {
+    constructor(properties?: Properties) {
         super('AWS::LicenseManager::Grant', properties || {})
     }
 }
+export { Grant as R }

@@ -17,34 +17,53 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import UserGroup_ from './userGroup'
-import SubnetGroup_ from './subnetGroup'
-import ReplicationGroup_ from './replicationGroup'
-import ParameterGroup_ from './parameterGroup'
-import GlobalReplicationGroup_ from './globalReplicationGroup'
-import CacheCluster_ from './cacheCluster'
-import User_ from './user'
-import SecurityGroup_ from './securityGroup'
-import SecurityGroupIngress_ from './securityGroupIngress'
+import * as _0 from './userGroup'
+import * as _1 from './subnetGroup'
+import * as _2 from './replicationGroup'
+import * as _3 from './parameterGroup'
+import * as _4 from './globalReplicationGroup'
+import * as _5 from './cacheCluster'
+import * as _6 from './user'
+import * as _7 from './securityGroup'
+import * as _8 from './securityGroupIngress'
 
 export namespace ElastiCache {
-  export const UserGroup = UserGroup_
-  export const SubnetGroup = SubnetGroup_
-  export const ReplicationGroup = ReplicationGroup_
-  export const ParameterGroup = ParameterGroup_
-  export const GlobalReplicationGroup = GlobalReplicationGroup_
-  export const CacheCluster = CacheCluster_
-  export const User = User_
-  export const SecurityGroup = SecurityGroup_
-  export const SecurityGroupIngress = SecurityGroupIngress_
+  export const UserGroup = _0.R
+  export const SubnetGroup = _1.R
+  export const ReplicationGroup = _2.R
+  export const ParameterGroup = _3.R
+  export const GlobalReplicationGroup = _4.R
+  export const CacheCluster = _5.R
+  export const User = _6.R
+  export const SecurityGroup = _7.R
+  export const SecurityGroupIngress = _8.R
 
-  export type UserGroup = UserGroup_
-  export type SubnetGroup = SubnetGroup_
-  export type ReplicationGroup = ReplicationGroup_
-  export type ParameterGroup = ParameterGroup_
-  export type GlobalReplicationGroup = GlobalReplicationGroup_
-  export type CacheCluster = CacheCluster_
-  export type User = User_
-  export type SecurityGroup = SecurityGroup_
-  export type SecurityGroupIngress = SecurityGroupIngress_
+  export type UserGroup = _0.R
+  export type SubnetGroup = _1.R
+  export type ReplicationGroup = _2.R
+  export type ParameterGroup = _3.R
+  export type GlobalReplicationGroup = _4.R
+  export type CacheCluster = _5.R
+  export type User = _6.R
+  export type SecurityGroup = _7.R
+  export type SecurityGroupIngress = _8.R
+
+  export namespace ReplicationGroup {
+    export type LogDeliveryConfigurationRequest = _2.LogDeliveryConfigurationRequest
+    export type CloudWatchLogsDestinationDetails = _2.CloudWatchLogsDestinationDetails
+    export type NodeGroupConfiguration = _2.NodeGroupConfiguration
+    export type DestinationDetails = _2.DestinationDetails
+    export type KinesisFirehoseDestinationDetails = _2.KinesisFirehoseDestinationDetails
+  }
+  export namespace GlobalReplicationGroup {
+    export type RegionalConfiguration = _4.RegionalConfiguration
+    export type ReshardingConfiguration = _4.ReshardingConfiguration
+    export type GlobalReplicationGroupMember = _4.GlobalReplicationGroupMember
+  }
+  export namespace CacheCluster {
+    export type KinesisFirehoseDestinationDetails = _5.KinesisFirehoseDestinationDetails
+    export type LogDeliveryConfigurationRequest = _5.LogDeliveryConfigurationRequest
+    export type DestinationDetails = _5.DestinationDetails
+    export type CloudWatchLogsDestinationDetails = _5.CloudWatchLogsDestinationDetails
+  }
 }

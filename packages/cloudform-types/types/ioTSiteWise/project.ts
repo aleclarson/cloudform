@@ -17,7 +17,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ProjectProperties {
+export interface Properties {
     PortalId: Value<string>
     ProjectName: Value<string>
     ProjectDescription?: Value<string>
@@ -25,10 +25,11 @@ export interface ProjectProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Project extends ResourceBase<ProjectProperties> {
+class Project extends ResourceBase<Properties> {
 
 
-    constructor(properties: ProjectProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTSiteWise::Project', properties)
     }
 }
+export { Project as R }

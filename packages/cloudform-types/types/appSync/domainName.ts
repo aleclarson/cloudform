@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DomainNameProperties {
+export interface Properties {
     DomainName: Value<string>
     Description?: Value<string>
     CertificateArn: Value<string>
 }
 
-export default class DomainName extends ResourceBase<DomainNameProperties> {
+class DomainName extends ResourceBase<Properties> {
 
 
-    constructor(properties: DomainNameProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppSync::DomainName', properties)
     }
 }
+export { DomainName as R }

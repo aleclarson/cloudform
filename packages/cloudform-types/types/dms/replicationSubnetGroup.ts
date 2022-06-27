@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ReplicationSubnetGroupProperties {
+export interface Properties {
     ReplicationSubnetGroupDescription: Value<string>
     ReplicationSubnetGroupIdentifier?: Value<string>
     SubnetIds: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class ReplicationSubnetGroup extends ResourceBase<ReplicationSubnetGroupProperties> {
+class ReplicationSubnetGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: ReplicationSubnetGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::DMS::ReplicationSubnetGroup', properties)
     }
 }
+export { ReplicationSubnetGroup as R }

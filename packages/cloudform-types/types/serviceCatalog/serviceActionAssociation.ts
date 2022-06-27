@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ServiceActionAssociationProperties {
+export interface Properties {
     ProductId: Value<string>
     ProvisioningArtifactId: Value<string>
     ServiceActionId: Value<string>
 }
 
-export default class ServiceActionAssociation extends ResourceBase<ServiceActionAssociationProperties> {
+class ServiceActionAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: ServiceActionAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::ServiceActionAssociation', properties)
     }
 }
+export { ServiceActionAssociation as R }

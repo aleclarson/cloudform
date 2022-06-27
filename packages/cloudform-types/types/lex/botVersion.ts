@@ -31,17 +31,18 @@ export class BotVersionLocaleSpecification {
     }
 }
 
-export interface BotVersionProperties {
+export interface Properties {
     BotId: Value<string>
     Description?: Value<string>
     BotVersionLocaleSpecification: List<BotVersionLocaleSpecification>
 }
 
-export default class BotVersion extends ResourceBase<BotVersionProperties> {
+class BotVersion extends ResourceBase<Properties> {
     static BotVersionLocaleDetails = BotVersionLocaleDetails
     static BotVersionLocaleSpecification = BotVersionLocaleSpecification
 
-    constructor(properties: BotVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lex::BotVersion', properties)
     }
 }
+export { BotVersion as R }

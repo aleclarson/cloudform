@@ -1,1 +1,1 @@
-import SlackChannelConfiguration_ from'./slackChannelConfiguration';export declare namespace Chatbot{const SlackChannelConfiguration:typeof SlackChannelConfiguration_;type SlackChannelConfiguration=SlackChannelConfiguration_;}
+import*as _0 from'./slackChannelConfiguration';export declare namespace Chatbot{const SlackChannelConfiguration:typeof _0.R;type SlackChannelConfiguration=_0.R;}

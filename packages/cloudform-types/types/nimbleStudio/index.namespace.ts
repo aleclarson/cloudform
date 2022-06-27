@@ -17,19 +17,38 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import StreamingImage_ from './streamingImage'
-import LaunchProfile_ from './launchProfile'
-import StudioComponent_ from './studioComponent'
-import Studio_ from './studio'
+import * as _0 from './streamingImage'
+import * as _1 from './launchProfile'
+import * as _2 from './studioComponent'
+import * as _3 from './studio'
 
 export namespace NimbleStudio {
-  export const StreamingImage = StreamingImage_
-  export const LaunchProfile = LaunchProfile_
-  export const StudioComponent = StudioComponent_
-  export const Studio = Studio_
+  export const StreamingImage = _0.R
+  export const LaunchProfile = _1.R
+  export const StudioComponent = _2.R
+  export const Studio = _3.R
 
-  export type StreamingImage = StreamingImage_
-  export type LaunchProfile = LaunchProfile_
-  export type StudioComponent = StudioComponent_
-  export type Studio = Studio_
+  export type StreamingImage = _0.R
+  export type LaunchProfile = _1.R
+  export type StudioComponent = _2.R
+  export type Studio = _3.R
+
+  export namespace LaunchProfile {
+    export type StreamingSessionStorageRoot = _1.StreamingSessionStorageRoot
+    export type StreamConfiguration = _1.StreamConfiguration
+    export type StreamConfigurationSessionStorage = _1.StreamConfigurationSessionStorage
+  }
+  export namespace StudioComponent {
+    export type LicenseServiceConfiguration = _2.LicenseServiceConfiguration
+    export type ScriptParameterKeyValue = _2.ScriptParameterKeyValue
+    export type ActiveDirectoryConfiguration = _2.ActiveDirectoryConfiguration
+    export type ActiveDirectoryComputerAttribute = _2.ActiveDirectoryComputerAttribute
+    export type StudioComponentConfiguration = _2.StudioComponentConfiguration
+    export type StudioComponentInitializationScript = _2.StudioComponentInitializationScript
+    export type ComputeFarmConfiguration = _2.ComputeFarmConfiguration
+    export type SharedFileSystemConfiguration = _2.SharedFileSystemConfiguration
+  }
+  export namespace Studio {
+    export type StudioEncryptionConfiguration = _3.StudioEncryptionConfiguration
+  }
 }

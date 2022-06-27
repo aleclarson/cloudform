@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PublisherProperties {
+export interface Properties {
     AcceptTermsAndConditions: Value<boolean>
     ConnectionArn?: Value<string>
 }
 
-export default class Publisher extends ResourceBase<PublisherProperties> {
+class Publisher extends ResourceBase<Properties> {
 
 
-    constructor(properties: PublisherProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFormation::Publisher', properties)
     }
 }
+export { Publisher as R }

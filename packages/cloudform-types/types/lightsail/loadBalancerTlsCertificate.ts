@@ -19,7 +19,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LoadBalancerTlsCertificateProperties {
+export interface Properties {
     LoadBalancerName: Value<string>
     CertificateName: Value<string>
     CertificateDomainName: Value<string>
@@ -28,10 +28,11 @@ export interface LoadBalancerTlsCertificateProperties {
     HttpsRedirectionEnabled?: Value<boolean>
 }
 
-export default class LoadBalancerTlsCertificate extends ResourceBase<LoadBalancerTlsCertificateProperties> {
+class LoadBalancerTlsCertificate extends ResourceBase<Properties> {
 
 
-    constructor(properties: LoadBalancerTlsCertificateProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lightsail::LoadBalancerTlsCertificate', properties)
     }
 }
+export { LoadBalancerTlsCertificate as R }

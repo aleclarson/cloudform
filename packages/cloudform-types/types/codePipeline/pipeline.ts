@@ -119,7 +119,7 @@ export class ActionTypeId {
     }
 }
 
-export interface PipelineProperties {
+export interface Properties {
     ArtifactStore?: ArtifactStore
     ArtifactStores?: List<ArtifactStoreMap>
     DisableInboundStageTransitions?: List<StageTransition>
@@ -130,7 +130,7 @@ export interface PipelineProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Pipeline extends ResourceBase<PipelineProperties> {
+class Pipeline extends ResourceBase<Properties> {
     static OutputArtifact = OutputArtifact
     static StageTransition = StageTransition
     static InputArtifact = InputArtifact
@@ -142,7 +142,8 @@ export default class Pipeline extends ResourceBase<PipelineProperties> {
     static ArtifactStore = ArtifactStore
     static ActionTypeId = ActionTypeId
 
-    constructor(properties: PipelineProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodePipeline::Pipeline', properties)
     }
 }
+export { Pipeline as R }

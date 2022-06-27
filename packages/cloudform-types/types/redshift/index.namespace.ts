@@ -17,34 +17,51 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import EndpointAccess_ from './endpointAccess'
-import Cluster_ from './cluster'
-import ScheduledAction_ from './scheduledAction'
-import ClusterParameterGroup_ from './clusterParameterGroup'
-import ClusterSubnetGroup_ from './clusterSubnetGroup'
-import ClusterSecurityGroup_ from './clusterSecurityGroup'
-import EventSubscription_ from './eventSubscription'
-import ClusterSecurityGroupIngress_ from './clusterSecurityGroupIngress'
-import EndpointAuthorization_ from './endpointAuthorization'
+import * as _0 from './endpointAccess'
+import * as _1 from './cluster'
+import * as _2 from './scheduledAction'
+import * as _3 from './clusterParameterGroup'
+import * as _4 from './clusterSubnetGroup'
+import * as _5 from './clusterSecurityGroup'
+import * as _6 from './eventSubscription'
+import * as _7 from './clusterSecurityGroupIngress'
+import * as _8 from './endpointAuthorization'
 
 export namespace Redshift {
-  export const EndpointAccess = EndpointAccess_
-  export const Cluster = Cluster_
-  export const ScheduledAction = ScheduledAction_
-  export const ClusterParameterGroup = ClusterParameterGroup_
-  export const ClusterSubnetGroup = ClusterSubnetGroup_
-  export const ClusterSecurityGroup = ClusterSecurityGroup_
-  export const EventSubscription = EventSubscription_
-  export const ClusterSecurityGroupIngress = ClusterSecurityGroupIngress_
-  export const EndpointAuthorization = EndpointAuthorization_
+  export const EndpointAccess = _0.R
+  export const Cluster = _1.R
+  export const ScheduledAction = _2.R
+  export const ClusterParameterGroup = _3.R
+  export const ClusterSubnetGroup = _4.R
+  export const ClusterSecurityGroup = _5.R
+  export const EventSubscription = _6.R
+  export const ClusterSecurityGroupIngress = _7.R
+  export const EndpointAuthorization = _8.R
 
-  export type EndpointAccess = EndpointAccess_
-  export type Cluster = Cluster_
-  export type ScheduledAction = ScheduledAction_
-  export type ClusterParameterGroup = ClusterParameterGroup_
-  export type ClusterSubnetGroup = ClusterSubnetGroup_
-  export type ClusterSecurityGroup = ClusterSecurityGroup_
-  export type EventSubscription = EventSubscription_
-  export type ClusterSecurityGroupIngress = ClusterSecurityGroupIngress_
-  export type EndpointAuthorization = EndpointAuthorization_
+  export type EndpointAccess = _0.R
+  export type Cluster = _1.R
+  export type ScheduledAction = _2.R
+  export type ClusterParameterGroup = _3.R
+  export type ClusterSubnetGroup = _4.R
+  export type ClusterSecurityGroup = _5.R
+  export type EventSubscription = _6.R
+  export type ClusterSecurityGroupIngress = _7.R
+  export type EndpointAuthorization = _8.R
+
+  export namespace EndpointAccess {
+    export type VpcSecurityGroup = _0.VpcSecurityGroup
+  }
+  export namespace Cluster {
+    export type Endpoint = _1.Endpoint
+    export type LoggingProperties = _1.LoggingProperties
+  }
+  export namespace ScheduledAction {
+    export type ResumeClusterMessage = _2.ResumeClusterMessage
+    export type PauseClusterMessage = _2.PauseClusterMessage
+    export type ScheduledActionType = _2.ScheduledActionType
+    export type ResizeClusterMessage = _2.ResizeClusterMessage
+  }
+  export namespace ClusterParameterGroup {
+    export type Parameter = _3.Parameter
+  }
 }

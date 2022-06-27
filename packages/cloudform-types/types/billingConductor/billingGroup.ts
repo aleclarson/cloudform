@@ -21,7 +21,7 @@ export class AccountGrouping {
     }
 }
 
-export interface BillingGroupProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     PrimaryAccountId: Value<string>
@@ -30,11 +30,12 @@ export interface BillingGroupProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class BillingGroup extends ResourceBase<BillingGroupProperties> {
+class BillingGroup extends ResourceBase<Properties> {
     static ComputationPreference = ComputationPreference
     static AccountGrouping = AccountGrouping
 
-    constructor(properties: BillingGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::BillingConductor::BillingGroup', properties)
     }
 }
+export { BillingGroup as R }

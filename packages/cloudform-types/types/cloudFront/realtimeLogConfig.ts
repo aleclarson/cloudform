@@ -38,18 +38,19 @@ export class KinesisStreamConfig {
     }
 }
 
-export interface RealtimeLogConfigProperties {
+export interface Properties {
     EndPoints: List<EndPoint>
     Fields: List<Value<string>>
     Name: Value<string>
     SamplingRate: Value<number>
 }
 
-export default class RealtimeLogConfig extends ResourceBase<RealtimeLogConfigProperties> {
+class RealtimeLogConfig extends ResourceBase<Properties> {
     static EndPoint = EndPoint
     static KinesisStreamConfig = KinesisStreamConfig
 
-    constructor(properties: RealtimeLogConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFront::RealtimeLogConfig', properties)
     }
 }
+export { RealtimeLogConfig as R }

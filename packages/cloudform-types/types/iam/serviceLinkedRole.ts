@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ServiceLinkedRoleProperties {
+export interface Properties {
     CustomSuffix?: Value<string>
     Description?: Value<string>
     AWSServiceName: Value<string>
 }
 
-export default class ServiceLinkedRole extends ResourceBase<ServiceLinkedRoleProperties> {
+class ServiceLinkedRole extends ResourceBase<Properties> {
 
 
-    constructor(properties: ServiceLinkedRoleProperties) {
+    constructor(properties: Properties) {
         super('AWS::IAM::ServiceLinkedRole', properties)
     }
 }
+export { ServiceLinkedRole as R }

@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LocationFSxWindowsProperties {
+export interface Properties {
     Domain?: Value<string>
     FsxFilesystemArn: Value<string>
     Password: Value<string>
@@ -32,10 +32,11 @@ export interface LocationFSxWindowsProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class LocationFSxWindows extends ResourceBase<LocationFSxWindowsProperties> {
+class LocationFSxWindows extends ResourceBase<Properties> {
 
 
-    constructor(properties: LocationFSxWindowsProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataSync::LocationFSxWindows', properties)
     }
 }
+export { LocationFSxWindows as R }

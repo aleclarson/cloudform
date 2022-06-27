@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResourceSpecificLoggingProperties {
+export interface Properties {
     TargetType: Value<string>
     TargetName: Value<string>
     LogLevel: Value<string>
 }
 
-export default class ResourceSpecificLogging extends ResourceBase<ResourceSpecificLoggingProperties> {
+class ResourceSpecificLogging extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResourceSpecificLoggingProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::ResourceSpecificLogging', properties)
     }
 }
+export { ResourceSpecificLogging as R }

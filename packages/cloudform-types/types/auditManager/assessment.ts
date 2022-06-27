@@ -79,7 +79,7 @@ export class Scope {
     }
 }
 
-export interface AssessmentProperties {
+export interface Properties {
     FrameworkId?: Value<string>
     AwsAccount?: AWSAccount
     Tags?: List<ResourceTag>
@@ -91,7 +91,7 @@ export interface AssessmentProperties {
     Description?: Value<string>
 }
 
-export default class Assessment extends ResourceBase<AssessmentProperties> {
+class Assessment extends ResourceBase<Properties> {
     static Delegation = Delegation
     static AWSAccount = AWSAccount
     static Role = Role
@@ -99,7 +99,8 @@ export default class Assessment extends ResourceBase<AssessmentProperties> {
     static AWSService = AWSService
     static Scope = Scope
 
-    constructor(properties?: AssessmentProperties) {
+    constructor(properties?: Properties) {
         super('AWS::AuditManager::Assessment', properties || {})
     }
 }
+export { Assessment as R }

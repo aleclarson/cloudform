@@ -68,7 +68,7 @@ export class OrganizationCustomRuleMetadata {
     }
 }
 
-export interface OrganizationConfigRuleProperties {
+export interface Properties {
     OrganizationManagedRuleMetadata?: OrganizationManagedRuleMetadata
     OrganizationConfigRuleName: Value<string>
     OrganizationCustomRuleMetadata?: OrganizationCustomRuleMetadata
@@ -76,12 +76,13 @@ export interface OrganizationConfigRuleProperties {
     OrganizationCustomCodeRuleMetadata?: OrganizationCustomCodeRuleMetadata
 }
 
-export default class OrganizationConfigRule extends ResourceBase<OrganizationConfigRuleProperties> {
+class OrganizationConfigRule extends ResourceBase<Properties> {
     static OrganizationManagedRuleMetadata = OrganizationManagedRuleMetadata
     static OrganizationCustomCodeRuleMetadata = OrganizationCustomCodeRuleMetadata
     static OrganizationCustomRuleMetadata = OrganizationCustomRuleMetadata
 
-    constructor(properties: OrganizationConfigRuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::Config::OrganizationConfigRule', properties)
     }
 }
+export { OrganizationConfigRule as R }

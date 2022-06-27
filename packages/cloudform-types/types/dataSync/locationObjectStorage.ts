@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LocationObjectStorageProperties {
+export interface Properties {
     AccessKey?: Value<string>
     AgentArns: List<Value<string>>
     BucketName: Value<string>
@@ -34,10 +34,11 @@ export interface LocationObjectStorageProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class LocationObjectStorage extends ResourceBase<LocationObjectStorageProperties> {
+class LocationObjectStorage extends ResourceBase<Properties> {
 
 
-    constructor(properties: LocationObjectStorageProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataSync::LocationObjectStorage', properties)
     }
 }
+export { LocationObjectStorage as R }

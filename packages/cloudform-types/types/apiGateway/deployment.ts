@@ -92,7 +92,7 @@ export class CanarySetting {
     }
 }
 
-export interface DeploymentProperties {
+export interface Properties {
     DeploymentCanarySettings?: DeploymentCanarySettings
     Description?: Value<string>
     RestApiId: Value<string>
@@ -100,14 +100,15 @@ export interface DeploymentProperties {
     StageName?: Value<string>
 }
 
-export default class Deployment extends ResourceBase<DeploymentProperties> {
+class Deployment extends ResourceBase<Properties> {
     static MethodSetting = MethodSetting
     static AccessLogSetting = AccessLogSetting
     static DeploymentCanarySettings = DeploymentCanarySettings
     static StageDescription = StageDescription
     static CanarySetting = CanarySetting
 
-    constructor(properties: DeploymentProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::Deployment', properties)
     }
 }
+export { Deployment as R }

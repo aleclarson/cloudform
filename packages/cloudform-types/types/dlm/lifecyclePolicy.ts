@@ -193,7 +193,7 @@ export class ShareRule {
     }
 }
 
-export interface LifecyclePolicyProperties {
+export interface Properties {
     ExecutionRoleArn?: Value<string>
     Description?: Value<string>
     State?: Value<string>
@@ -201,7 +201,7 @@ export interface LifecyclePolicyProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class LifecyclePolicy extends ResourceBase<LifecyclePolicyProperties> {
+class LifecyclePolicy extends ResourceBase<Properties> {
     static FastRestoreRule = FastRestoreRule
     static EventSource = EventSource
     static EventParameters = EventParameters
@@ -219,7 +219,8 @@ export default class LifecyclePolicy extends ResourceBase<LifecyclePolicyPropert
     static CrossRegionCopyDeprecateRule = CrossRegionCopyDeprecateRule
     static ShareRule = ShareRule
 
-    constructor(properties?: LifecyclePolicyProperties) {
+    constructor(properties?: Properties) {
         super('AWS::DLM::LifecyclePolicy', properties || {})
     }
 }
+export { LifecyclePolicy as R }

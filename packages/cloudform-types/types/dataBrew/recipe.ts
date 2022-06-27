@@ -186,14 +186,14 @@ export class DataCatalogInputDefinition {
     }
 }
 
-export interface RecipeProperties {
+export interface Properties {
     Description?: Value<string>
     Name: Value<string>
     Steps: List<RecipeStep>
     Tags?: List<ResourceTag>
 }
 
-export default class Recipe extends ResourceBase<RecipeProperties> {
+class Recipe extends ResourceBase<Properties> {
     static RecipeStep = RecipeStep
     static SecondaryInput = SecondaryInput
     static Action = Action
@@ -202,7 +202,8 @@ export default class Recipe extends ResourceBase<RecipeProperties> {
     static ConditionExpression = ConditionExpression
     static DataCatalogInputDefinition = DataCatalogInputDefinition
 
-    constructor(properties: RecipeProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataBrew::Recipe', properties)
     }
 }
+export { Recipe as R }

@@ -29,7 +29,7 @@ export class TargetAddress {
     }
 }
 
-export interface ResolverRuleProperties {
+export interface Properties {
     ResolverEndpointId?: Value<string>
     DomainName: Value<string>
     Name?: Value<string>
@@ -38,10 +38,11 @@ export interface ResolverRuleProperties {
     TargetIps?: List<TargetAddress>
 }
 
-export default class ResolverRule extends ResourceBase<ResolverRuleProperties> {
+class ResolverRule extends ResourceBase<Properties> {
     static TargetAddress = TargetAddress
 
-    constructor(properties: ResolverRuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53Resolver::ResolverRule', properties)
     }
 }
+export { ResolverRule as R }

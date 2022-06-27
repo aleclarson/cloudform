@@ -59,18 +59,19 @@ export class DataLakePrincipal {
     }
 }
 
-export interface DatabaseProperties {
+export interface Properties {
     DatabaseInput: DatabaseInput
     CatalogId: Value<string>
 }
 
-export default class Database extends ResourceBase<DatabaseProperties> {
+class Database extends ResourceBase<Properties> {
     static DatabaseInput = DatabaseInput
     static PrincipalPrivileges = PrincipalPrivileges
     static DatabaseIdentifier = DatabaseIdentifier
     static DataLakePrincipal = DataLakePrincipal
 
-    constructor(properties: DatabaseProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::Database', properties)
     }
 }
+export { Database as R }

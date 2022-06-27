@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TagOptionAssociationProperties {
+export interface Properties {
     TagOptionId: Value<string>
     ResourceId: Value<string>
 }
 
-export default class TagOptionAssociation extends ResourceBase<TagOptionAssociationProperties> {
+class TagOptionAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: TagOptionAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::TagOptionAssociation', properties)
     }
 }
+export { TagOptionAssociation as R }

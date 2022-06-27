@@ -83,7 +83,7 @@ export class ResourcesVpcConfig {
     }
 }
 
-export interface ClusterProperties {
+export interface Properties {
     EncryptionConfig?: List<EncryptionConfig>
     KubernetesNetworkConfig?: KubernetesNetworkConfig
     Logging?: Logging
@@ -94,7 +94,7 @@ export interface ClusterProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Cluster extends ResourceBase<ClusterProperties> {
+class Cluster extends ResourceBase<Properties> {
     static Provider = Provider
     static ClusterLogging = ClusterLogging
     static EncryptionConfig = EncryptionConfig
@@ -103,7 +103,8 @@ export default class Cluster extends ResourceBase<ClusterProperties> {
     static LoggingTypeConfig = LoggingTypeConfig
     static ResourcesVpcConfig = ResourcesVpcConfig
 
-    constructor(properties: ClusterProperties) {
+    constructor(properties: Properties) {
         super('AWS::EKS::Cluster', properties)
     }
 }
+export { Cluster as R }

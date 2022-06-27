@@ -21,7 +21,7 @@ export class BgpOptions {
     }
 }
 
-export interface ConnectPeerProperties {
+export interface Properties {
     PeerAddress?: Value<string>
     CoreNetworkAddress?: Value<string>
     BgpOptions?: BgpOptions
@@ -30,10 +30,11 @@ export interface ConnectPeerProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ConnectPeer extends ResourceBase<ConnectPeerProperties> {
+class ConnectPeer extends ResourceBase<Properties> {
     static BgpOptions = BgpOptions
 
-    constructor(properties?: ConnectPeerProperties) {
+    constructor(properties?: Properties) {
         super('AWS::NetworkManager::ConnectPeer', properties || {})
     }
 }
+export { ConnectPeer as R }

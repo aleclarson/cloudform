@@ -111,7 +111,7 @@ export class S3BucketLogDestination {
     }
 }
 
-export interface BotAliasProperties {
+export interface Properties {
     BotId: Value<string>
     BotAliasLocaleSettings?: List<BotAliasLocaleSettingsItem>
     BotAliasName: Value<string>
@@ -122,7 +122,7 @@ export interface BotAliasProperties {
     BotAliasTags?: List<ResourceTag>
 }
 
-export default class BotAlias extends ResourceBase<BotAliasProperties> {
+class BotAlias extends ResourceBase<Properties> {
     static CodeHookSpecification = CodeHookSpecification
     static BotAliasLocaleSettings = BotAliasLocaleSettings
     static AudioLogDestination = AudioLogDestination
@@ -135,7 +135,8 @@ export default class BotAlias extends ResourceBase<BotAliasProperties> {
     static BotAliasLocaleSettingsItem = BotAliasLocaleSettingsItem
     static S3BucketLogDestination = S3BucketLogDestination
 
-    constructor(properties: BotAliasProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lex::BotAlias', properties)
     }
 }
+export { BotAlias as R }

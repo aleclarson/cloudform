@@ -21,14 +21,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResolverDNSSECConfigProperties {
+export interface Properties {
     ResourceId?: Value<string>
 }
 
-export default class ResolverDNSSECConfig extends ResourceBase<ResolverDNSSECConfigProperties> {
+class ResolverDNSSECConfig extends ResourceBase<Properties> {
 
 
-    constructor(properties?: ResolverDNSSECConfigProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Route53Resolver::ResolverDNSSECConfig', properties || {})
     }
 }
+export { ResolverDNSSECConfig as R }

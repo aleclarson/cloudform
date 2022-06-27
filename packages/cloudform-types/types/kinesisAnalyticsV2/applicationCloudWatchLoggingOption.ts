@@ -27,15 +27,16 @@ export class CloudWatchLoggingOption {
     }
 }
 
-export interface ApplicationCloudWatchLoggingOptionProperties {
+export interface Properties {
     ApplicationName: Value<string>
     CloudWatchLoggingOption: CloudWatchLoggingOption
 }
 
-export default class ApplicationCloudWatchLoggingOption extends ResourceBase<ApplicationCloudWatchLoggingOptionProperties> {
+class ApplicationCloudWatchLoggingOption extends ResourceBase<Properties> {
     static CloudWatchLoggingOption = CloudWatchLoggingOption
 
-    constructor(properties: ApplicationCloudWatchLoggingOptionProperties) {
+    constructor(properties: Properties) {
         super('AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption', properties)
     }
 }
+export { ApplicationCloudWatchLoggingOption as R }

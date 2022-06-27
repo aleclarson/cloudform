@@ -1,0 +1,1 @@
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{DomainName:Value<string>;Description?:Value<string>;CertificateArn:Value<string>;}declare class DomainName extends ResourceBase<Properties>{constructor(properties:Properties);}export{DomainName as R};

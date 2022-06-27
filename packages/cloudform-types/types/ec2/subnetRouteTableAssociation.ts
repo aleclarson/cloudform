@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SubnetRouteTableAssociationProperties {
+export interface Properties {
     RouteTableId: Value<string>
     SubnetId: Value<string>
 }
 
-export default class SubnetRouteTableAssociation extends ResourceBase<SubnetRouteTableAssociationProperties> {
+class SubnetRouteTableAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: SubnetRouteTableAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::SubnetRouteTableAssociation', properties)
     }
 }
+export { SubnetRouteTableAssociation as R }

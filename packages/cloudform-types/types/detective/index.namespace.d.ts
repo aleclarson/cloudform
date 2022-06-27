@@ -1,1 +1,1 @@
-import MemberInvitation_ from'./memberInvitation';import Graph_ from'./graph';export declare namespace Detective{const MemberInvitation:typeof MemberInvitation_;const Graph:typeof Graph_;type MemberInvitation=MemberInvitation_;type Graph=Graph_;}
+import*as _0 from'./memberInvitation';import*as _1 from'./graph';export declare namespace Detective{const MemberInvitation:typeof _0.R;const Graph:typeof _1.R;type MemberInvitation=_0.R;type Graph=_1.R;}

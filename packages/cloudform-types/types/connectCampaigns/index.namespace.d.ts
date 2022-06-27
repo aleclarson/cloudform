@@ -1,0 +1,1 @@
+import*as _0 from'./campaign';export declare namespace ConnectCampaigns{const Campaign:typeof _0.R;type Campaign=_0.R;namespace Campaign{type OutboundCallConfig=_0.OutboundCallConfig;}}

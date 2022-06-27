@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface MacroProperties {
+export interface Properties {
     Description?: Value<string>
     FunctionName: Value<string>
     LogGroupName?: Value<string>
@@ -30,10 +30,11 @@ export interface MacroProperties {
     Name: Value<string>
 }
 
-export default class Macro extends ResourceBase<MacroProperties> {
+class Macro extends ResourceBase<Properties> {
 
 
-    constructor(properties: MacroProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFormation::Macro', properties)
     }
 }
+export { Macro as R }

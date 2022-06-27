@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.RedshiftServerless=void 0;const _0=require("./namespace");var RedshiftServerless;!function(RedshiftServerless){RedshiftServerless.Namespace=_0.R}(RedshiftServerless=exports.RedshiftServerless||(exports.RedshiftServerless={}));

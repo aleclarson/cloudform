@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LaunchRoleConstraintProperties {
+export interface Properties {
     Description?: Value<string>
     LocalRoleName?: Value<string>
     AcceptLanguage?: Value<string>
@@ -31,10 +31,11 @@ export interface LaunchRoleConstraintProperties {
     RoleArn?: Value<string>
 }
 
-export default class LaunchRoleConstraint extends ResourceBase<LaunchRoleConstraintProperties> {
+class LaunchRoleConstraint extends ResourceBase<Properties> {
 
 
-    constructor(properties: LaunchRoleConstraintProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::LaunchRoleConstraint', properties)
     }
 }
+export { LaunchRoleConstraint as R }

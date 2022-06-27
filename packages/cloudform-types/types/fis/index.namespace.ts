@@ -17,10 +17,18 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ExperimentTemplate_ from './experimentTemplate'
+import * as _0 from './experimentTemplate'
 
 export namespace FIS {
-  export const ExperimentTemplate = ExperimentTemplate_
+  export const ExperimentTemplate = _0.R
 
-  export type ExperimentTemplate = ExperimentTemplate_
+  export type ExperimentTemplate = _0.R
+
+  export namespace ExperimentTemplate {
+    export type ExperimentTemplateStopCondition = _0.ExperimentTemplateStopCondition
+    export type ExperimentTemplateTarget = _0.ExperimentTemplateTarget
+    export type ExperimentTemplateLogConfiguration = _0.ExperimentTemplateLogConfiguration
+    export type ExperimentTemplateAction = _0.ExperimentTemplateAction
+    export type ExperimentTemplateTargetFilter = _0.ExperimentTemplateTargetFilter
+  }
 }

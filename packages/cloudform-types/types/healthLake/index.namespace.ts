@@ -17,10 +17,16 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import FHIRDatastore_ from './fhirDatastore'
+import * as _0 from './fhirDatastore'
 
 export namespace HealthLake {
-  export const FHIRDatastore = FHIRDatastore_
+  export const FHIRDatastore = _0.R
 
-  export type FHIRDatastore = FHIRDatastore_
+  export type FHIRDatastore = _0.R
+
+  export namespace FHIRDatastore {
+    export type SseConfiguration = _0.SseConfiguration
+    export type PreloadDataConfig = _0.PreloadDataConfig
+    export type KmsEncryptionConfig = _0.KmsEncryptionConfig
+  }
 }

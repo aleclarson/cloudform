@@ -47,7 +47,7 @@ export class S3OutputLocation {
     }
 }
 
-export interface AssociationProperties {
+export interface Properties {
     AssociationName?: Value<string>
     DocumentVersion?: Value<string>
     InstanceId?: Value<string>
@@ -67,12 +67,13 @@ export interface AssociationProperties {
     ScheduleOffset?: Value<number>
 }
 
-export default class Association extends ResourceBase<AssociationProperties> {
+class Association extends ResourceBase<Properties> {
     static InstanceAssociationOutputLocation = InstanceAssociationOutputLocation
     static Target = Target
     static S3OutputLocation = S3OutputLocation
 
-    constructor(properties: AssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSM::Association', properties)
     }
 }
+export { Association as R }

@@ -17,28 +17,61 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import AssetModel_ from './assetModel'
-import Asset_ from './asset'
-import Dashboard_ from './dashboard'
-import Portal_ from './portal'
-import AccessPolicy_ from './accessPolicy'
-import Project_ from './project'
-import Gateway_ from './gateway'
+import * as _0 from './assetModel'
+import * as _1 from './asset'
+import * as _2 from './dashboard'
+import * as _3 from './portal'
+import * as _4 from './accessPolicy'
+import * as _5 from './project'
+import * as _6 from './gateway'
 
 export namespace IoTSiteWise {
-  export const AssetModel = AssetModel_
-  export const Asset = Asset_
-  export const Dashboard = Dashboard_
-  export const Portal = Portal_
-  export const AccessPolicy = AccessPolicy_
-  export const Project = Project_
-  export const Gateway = Gateway_
+  export const AssetModel = _0.R
+  export const Asset = _1.R
+  export const Dashboard = _2.R
+  export const Portal = _3.R
+  export const AccessPolicy = _4.R
+  export const Project = _5.R
+  export const Gateway = _6.R
 
-  export type AssetModel = AssetModel_
-  export type Asset = Asset_
-  export type Dashboard = Dashboard_
-  export type Portal = Portal_
-  export type AccessPolicy = AccessPolicy_
-  export type Project = Project_
-  export type Gateway = Gateway_
+  export type AssetModel = _0.R
+  export type Asset = _1.R
+  export type Dashboard = _2.R
+  export type Portal = _3.R
+  export type AccessPolicy = _4.R
+  export type Project = _5.R
+  export type Gateway = _6.R
+
+  export namespace AssetModel {
+    export type AssetModelCompositeModel = _0.AssetModelCompositeModel
+    export type MetricWindow = _0.MetricWindow
+    export type TumblingWindow = _0.TumblingWindow
+    export type Attribute = _0.Attribute
+    export type ExpressionVariable = _0.ExpressionVariable
+    export type VariableValue = _0.VariableValue
+    export type Transform = _0.Transform
+    export type AssetModelHierarchy = _0.AssetModelHierarchy
+    export type Metric = _0.Metric
+    export type AssetModelProperty = _0.AssetModelProperty
+    export type PropertyType = _0.PropertyType
+  }
+  export namespace Asset {
+    export type AssetHierarchy = _1.AssetHierarchy
+    export type AssetProperty = _1.AssetProperty
+  }
+  export namespace AccessPolicy {
+    export type Project = _4.Project
+    export type IamRole = _4.IamRole
+    export type AccessPolicyResource = _4.AccessPolicyResource
+    export type User = _4.User
+    export type IamUser = _4.IamUser
+    export type Portal = _4.Portal
+    export type AccessPolicyIdentity = _4.AccessPolicyIdentity
+  }
+  export namespace Gateway {
+    export type Greengrass = _6.Greengrass
+    export type GreengrassV2 = _6.GreengrassV2
+    export type GatewayCapabilitySummary = _6.GatewayCapabilitySummary
+    export type GatewayPlatform = _6.GatewayPlatform
+  }
 }

@@ -9,7 +9,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class ResourceCollectionFilter {
@@ -38,16 +38,17 @@ export class CloudFormationCollectionFilter {
     }
 }
 
-export interface ResourceCollectionProperties {
+export interface Properties {
     ResourceCollectionFilter: ResourceCollectionFilter
 }
 
-export default class ResourceCollection extends ResourceBase<ResourceCollectionProperties> {
+class ResourceCollection extends ResourceBase<Properties> {
     static ResourceCollectionFilter = ResourceCollectionFilter
     static TagCollection = TagCollection
     static CloudFormationCollectionFilter = CloudFormationCollectionFilter
 
-    constructor(properties: ResourceCollectionProperties) {
+    constructor(properties: Properties) {
         super('AWS::DevOpsGuru::ResourceCollection', properties)
     }
 }
+export { ResourceCollection as R }

@@ -48,7 +48,7 @@ export class Matcher {
     }
 }
 
-export interface TargetGroupProperties {
+export interface Properties {
     HealthCheckEnabled?: Value<boolean>
     HealthCheckIntervalSeconds?: Value<number>
     HealthCheckPath?: Value<string>
@@ -70,12 +70,13 @@ export interface TargetGroupProperties {
     VpcId?: Value<string>
 }
 
-export default class TargetGroup extends ResourceBase<TargetGroupProperties> {
+class TargetGroup extends ResourceBase<Properties> {
     static TargetDescription = TargetDescription
     static TargetGroupAttribute = TargetGroupAttribute
     static Matcher = Matcher
 
-    constructor(properties?: TargetGroupProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ElasticLoadBalancingV2::TargetGroup', properties || {})
     }
 }
+export { TargetGroup as R }

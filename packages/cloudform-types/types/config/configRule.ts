@@ -51,7 +51,7 @@ export class SourceDetail {
     }
 }
 
-export interface ConfigRuleProperties {
+export interface Properties {
     ConfigRuleName?: Value<string>
     Description?: Value<string>
     InputParameters?: {[key: string]: any}
@@ -60,12 +60,13 @@ export interface ConfigRuleProperties {
     Source: Source
 }
 
-export default class ConfigRule extends ResourceBase<ConfigRuleProperties> {
+class ConfigRule extends ResourceBase<Properties> {
     static Source = Source
     static Scope = Scope
     static SourceDetail = SourceDetail
 
-    constructor(properties: ConfigRuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::Config::ConfigRule', properties)
     }
 }
+export { ConfigRule as R }

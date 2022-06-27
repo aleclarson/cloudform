@@ -28,7 +28,7 @@ export class S3Config {
     }
 }
 
-export interface LocationS3Properties {
+export interface Properties {
     S3Config: S3Config
     S3BucketArn: Value<string>
     Subdirectory?: Value<string>
@@ -36,10 +36,11 @@ export interface LocationS3Properties {
     Tags?: List<ResourceTag>
 }
 
-export default class LocationS3 extends ResourceBase<LocationS3Properties> {
+class LocationS3 extends ResourceBase<Properties> {
     static S3Config = S3Config
 
-    constructor(properties: LocationS3Properties) {
+    constructor(properties: Properties) {
         super('AWS::DataSync::LocationS3', properties)
     }
 }
+export { LocationS3 as R }

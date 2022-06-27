@@ -17,7 +17,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RepositoryProperties {
+export interface Properties {
     RepositoryName: Value<string>
     DomainName: Value<string>
     DomainOwner?: Value<string>
@@ -28,10 +28,11 @@ export interface RepositoryProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Repository extends ResourceBase<RepositoryProperties> {
+class Repository extends ResourceBase<Properties> {
 
 
-    constructor(properties: RepositoryProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodeArtifact::Repository', properties)
     }
 }
+export { Repository as R }

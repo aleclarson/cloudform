@@ -45,7 +45,7 @@ export class DestinationConfig {
     }
 }
 
-export interface EventInvokeConfigProperties {
+export interface Properties {
     FunctionName: Value<string>
     MaximumRetryAttempts?: Value<number>
     DestinationConfig?: DestinationConfig
@@ -53,12 +53,13 @@ export interface EventInvokeConfigProperties {
     MaximumEventAgeInSeconds?: Value<number>
 }
 
-export default class EventInvokeConfig extends ResourceBase<EventInvokeConfigProperties> {
+class EventInvokeConfig extends ResourceBase<Properties> {
     static OnFailure = OnFailure
     static OnSuccess = OnSuccess
     static DestinationConfig = DestinationConfig
 
-    constructor(properties: EventInvokeConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lambda::EventInvokeConfig', properties)
     }
 }
+export { EventInvokeConfig as R }

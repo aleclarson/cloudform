@@ -28,7 +28,7 @@ export class AttributeType {
     }
 }
 
-export interface UserPoolUserProperties {
+export interface Properties {
     ValidationData?: List<AttributeType>
     UserPoolId: Value<string>
     Username?: Value<string>
@@ -39,10 +39,11 @@ export interface UserPoolUserProperties {
     UserAttributes?: List<AttributeType>
 }
 
-export default class UserPoolUser extends ResourceBase<UserPoolUserProperties> {
+class UserPoolUser extends ResourceBase<Properties> {
     static AttributeType = AttributeType
 
-    constructor(properties: UserPoolUserProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cognito::UserPoolUser', properties)
     }
 }
+export { UserPoolUser as R }

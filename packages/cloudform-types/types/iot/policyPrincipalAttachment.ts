@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PolicyPrincipalAttachmentProperties {
+export interface Properties {
     PolicyName: Value<string>
     Principal: Value<string>
 }
 
-export default class PolicyPrincipalAttachment extends ResourceBase<PolicyPrincipalAttachmentProperties> {
+class PolicyPrincipalAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties: PolicyPrincipalAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::PolicyPrincipalAttachment', properties)
     }
 }
+export { PolicyPrincipalAttachment as R }

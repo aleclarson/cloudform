@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LogGroupProperties {
+export interface Properties {
     LogGroupName?: Value<string>
     KmsKeyId?: Value<string>
     RetentionInDays?: Value<number>
     Tags?: List<ResourceTag>
 }
 
-export default class LogGroup extends ResourceBase<LogGroupProperties> {
+class LogGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties?: LogGroupProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Logs::LogGroup', properties || {})
     }
 }
+export { LogGroup as R }

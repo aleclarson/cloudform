@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface StudioProperties {
+export interface Properties {
     AuthMode: Value<string>
     DefaultS3Location: Value<string>
     Description?: Value<string>
@@ -37,10 +37,11 @@ export interface StudioProperties {
     IdpRelayStateParameterName?: Value<string>
 }
 
-export default class Studio extends ResourceBase<StudioProperties> {
+class Studio extends ResourceBase<Properties> {
 
 
-    constructor(properties: StudioProperties) {
+    constructor(properties: Properties) {
         super('AWS::EMR::Studio', properties)
     }
 }
+export { Studio as R }

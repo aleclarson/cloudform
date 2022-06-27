@@ -29,7 +29,7 @@ export class VpnTunnelOptionsSpecification {
     }
 }
 
-export interface VPNConnectionProperties {
+export interface Properties {
     CustomerGatewayId: Value<string>
     StaticRoutesOnly?: Value<boolean>
     Tags?: List<ResourceTag>
@@ -39,10 +39,11 @@ export interface VPNConnectionProperties {
     VpnTunnelOptionsSpecifications?: List<VpnTunnelOptionsSpecification>
 }
 
-export default class VPNConnection extends ResourceBase<VPNConnectionProperties> {
+class VPNConnection extends ResourceBase<Properties> {
     static VpnTunnelOptionsSpecification = VpnTunnelOptionsSpecification
 
-    constructor(properties: VPNConnectionProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::VPNConnection', properties)
     }
 }
+export { VPNConnection as R }

@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface HookTypeConfigProperties {
+export interface Properties {
     TypeArn?: Value<string>
     TypeName?: Value<string>
     Configuration: Value<string>
     ConfigurationAlias?: Value<string>
 }
 
-export default class HookTypeConfig extends ResourceBase<HookTypeConfigProperties> {
+class HookTypeConfig extends ResourceBase<Properties> {
 
 
-    constructor(properties: HookTypeConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFormation::HookTypeConfig', properties)
     }
 }
+export { HookTypeConfig as R }

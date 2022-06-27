@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ReplicationInstanceProperties {
+export interface Properties {
     ReplicationInstanceIdentifier?: Value<string>
     EngineVersion?: Value<string>
     KmsKeyId?: Value<string>
@@ -40,10 +40,11 @@ export interface ReplicationInstanceProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ReplicationInstance extends ResourceBase<ReplicationInstanceProperties> {
+class ReplicationInstance extends ResourceBase<Properties> {
 
 
-    constructor(properties: ReplicationInstanceProperties) {
+    constructor(properties: Properties) {
         super('AWS::DMS::ReplicationInstance', properties)
     }
 }
+export { ReplicationInstance as R }

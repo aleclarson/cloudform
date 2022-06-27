@@ -27,15 +27,16 @@ export class Device {
     }
 }
 
-export interface DeviceDefinitionVersionProperties {
+export interface Properties {
     DeviceDefinitionId: Value<string>
     Devices: List<Device>
 }
 
-export default class DeviceDefinitionVersion extends ResourceBase<DeviceDefinitionVersionProperties> {
+class DeviceDefinitionVersion extends ResourceBase<Properties> {
     static Device = Device
 
-    constructor(properties: DeviceDefinitionVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::DeviceDefinitionVersion', properties)
     }
 }
+export { DeviceDefinitionVersion as R }

@@ -43,7 +43,7 @@ export class RequiredClaim {
     }
 }
 
-export interface IdentityProviderConfigProperties {
+export interface Properties {
     ClusterName: Value<string>
     Type: Value<string>
     IdentityProviderConfigName?: Value<string>
@@ -51,11 +51,12 @@ export interface IdentityProviderConfigProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class IdentityProviderConfig extends ResourceBase<IdentityProviderConfigProperties> {
+class IdentityProviderConfig extends ResourceBase<Properties> {
     static OidcIdentityProviderConfig = OidcIdentityProviderConfig
     static RequiredClaim = RequiredClaim
 
-    constructor(properties: IdentityProviderConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::EKS::IdentityProviderConfig', properties)
     }
 }
+export { IdentityProviderConfig as R }

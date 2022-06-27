@@ -248,7 +248,7 @@ export class EC2TagSetListObject {
     }
 }
 
-export interface DeploymentGroupProperties {
+export interface Properties {
     AlarmConfiguration?: AlarmConfiguration
     ApplicationName: Value<string>
     AutoRollbackConfiguration?: AutoRollbackConfiguration
@@ -270,7 +270,7 @@ export interface DeploymentGroupProperties {
     TriggerConfigurations?: List<TriggerConfig>
 }
 
-export default class DeploymentGroup extends ResourceBase<DeploymentGroupProperties> {
+class DeploymentGroup extends ResourceBase<Properties> {
     static TargetGroupInfo = TargetGroupInfo
     static OnPremisesTagSetListObject = OnPremisesTagSetListObject
     static DeploymentStyle = DeploymentStyle
@@ -297,7 +297,8 @@ export default class DeploymentGroup extends ResourceBase<DeploymentGroupPropert
     static TargetGroupPairInfo = TargetGroupPairInfo
     static EC2TagSetListObject = EC2TagSetListObject
 
-    constructor(properties: DeploymentGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodeDeploy::DeploymentGroup', properties)
     }
 }
+export { DeploymentGroup as R }

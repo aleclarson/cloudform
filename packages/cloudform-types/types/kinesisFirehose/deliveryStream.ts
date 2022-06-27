@@ -447,7 +447,7 @@ export class HttpEndpointDestinationConfiguration {
     }
 }
 
-export interface DeliveryStreamProperties {
+export interface Properties {
     DeliveryStreamEncryptionConfigurationInput?: DeliveryStreamEncryptionConfigurationInput
     DeliveryStreamName?: Value<string>
     DeliveryStreamType?: Value<string>
@@ -462,7 +462,7 @@ export interface DeliveryStreamProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class DeliveryStream extends ResourceBase<DeliveryStreamProperties> {
+class DeliveryStream extends ResourceBase<Properties> {
     static EncryptionConfiguration = EncryptionConfiguration
     static InputFormatConfiguration = InputFormatConfiguration
     static AmazonopensearchserviceRetryOptions = AmazonopensearchserviceRetryOptions
@@ -503,7 +503,8 @@ export default class DeliveryStream extends ResourceBase<DeliveryStreamPropertie
     static HttpEndpointCommonAttribute = HttpEndpointCommonAttribute
     static HttpEndpointDestinationConfiguration = HttpEndpointDestinationConfiguration
 
-    constructor(properties?: DeliveryStreamProperties) {
+    constructor(properties?: Properties) {
         super('AWS::KinesisFirehose::DeliveryStream', properties || {})
     }
 }
+export { DeliveryStream as R }

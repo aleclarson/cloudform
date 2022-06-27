@@ -69,7 +69,7 @@ export class CapacityProviderStrategyItem {
     }
 }
 
-export interface ClusterProperties {
+export interface Properties {
     Tags?: List<ResourceTag>
     ClusterName?: Value<string>
     ClusterSettings?: List<ClusterSettings>
@@ -78,14 +78,15 @@ export interface ClusterProperties {
     DefaultCapacityProviderStrategy?: List<CapacityProviderStrategyItem>
 }
 
-export default class Cluster extends ResourceBase<ClusterProperties> {
+class Cluster extends ResourceBase<Properties> {
     static ClusterSettings = ClusterSettings
     static ExecuteCommandLogConfiguration = ExecuteCommandLogConfiguration
     static ExecuteCommandConfiguration = ExecuteCommandConfiguration
     static ClusterConfiguration = ClusterConfiguration
     static CapacityProviderStrategyItem = CapacityProviderStrategyItem
 
-    constructor(properties?: ClusterProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ECS::Cluster', properties || {})
     }
 }
+export { Cluster as R }

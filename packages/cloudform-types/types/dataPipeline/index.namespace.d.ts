@@ -1,1 +1,1 @@
-import Pipeline_ from'./pipeline';export declare namespace DataPipeline{const Pipeline:typeof Pipeline_;type Pipeline=Pipeline_;}
+import*as _0 from'./pipeline';export declare namespace DataPipeline{const Pipeline:typeof _0.R;type Pipeline=_0.R;namespace Pipeline{type PipelineObject=_0.PipelineObject;type ParameterAttribute=_0.ParameterAttribute;type PipelineTag=_0.PipelineTag;type ParameterObject=_0.ParameterObject;type ParameterValue=_0.ParameterValue;type Field=_0.Field;}}

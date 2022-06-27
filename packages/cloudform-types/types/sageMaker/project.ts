@@ -21,17 +21,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ProjectProperties {
+export interface Properties {
     Tags?: List<ResourceTag>
     ProjectName: Value<string>
     ProjectDescription?: Value<string>
     ServiceCatalogProvisioningDetails: {[key: string]: any}
 }
 
-export default class Project extends ResourceBase<ProjectProperties> {
+class Project extends ResourceBase<Properties> {
 
 
-    constructor(properties: ProjectProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::Project', properties)
     }
 }
+export { Project as R }

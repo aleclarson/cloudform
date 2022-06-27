@@ -38,7 +38,7 @@ export class Selector {
     }
 }
 
-export interface FargateProfileProperties {
+export interface Properties {
     ClusterName: Value<string>
     FargateProfileName?: Value<string>
     PodExecutionRoleArn: Value<string>
@@ -47,11 +47,12 @@ export interface FargateProfileProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class FargateProfile extends ResourceBase<FargateProfileProperties> {
+class FargateProfile extends ResourceBase<Properties> {
     static Label = Label
     static Selector = Selector
 
-    constructor(properties: FargateProfileProperties) {
+    constructor(properties: Properties) {
         super('AWS::EKS::FargateProfile', properties)
     }
 }
+export { FargateProfile as R }

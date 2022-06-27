@@ -12,16 +12,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface EntityTypeProperties {
+export interface Properties {
     Name: Value<string>
     Tags?: List<ResourceTag>
     Description?: Value<string>
 }
 
-export default class EntityType extends ResourceBase<EntityTypeProperties> {
+class EntityType extends ResourceBase<Properties> {
 
 
-    constructor(properties: EntityTypeProperties) {
+    constructor(properties: Properties) {
         super('AWS::FraudDetector::EntityType', properties)
     }
 }
+export { EntityType as R }

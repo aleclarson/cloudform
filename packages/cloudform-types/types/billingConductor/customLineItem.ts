@@ -41,7 +41,7 @@ export class CustomLineItemChargeDetails {
     }
 }
 
-export interface CustomLineItemProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     CustomLineItemChargeDetails?: CustomLineItemChargeDetails
@@ -50,13 +50,14 @@ export interface CustomLineItemProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class CustomLineItem extends ResourceBase<CustomLineItemProperties> {
+class CustomLineItem extends ResourceBase<Properties> {
     static CustomLineItemFlatChargeDetails = CustomLineItemFlatChargeDetails
     static CustomLineItemPercentageChargeDetails = CustomLineItemPercentageChargeDetails
     static BillingPeriodRange = BillingPeriodRange
     static CustomLineItemChargeDetails = CustomLineItemChargeDetails
 
-    constructor(properties: CustomLineItemProperties) {
+    constructor(properties: Properties) {
         super('AWS::BillingConductor::CustomLineItem', properties)
     }
 }
+export { CustomLineItem as R }

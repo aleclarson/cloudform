@@ -17,22 +17,26 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import DBSubnetGroup_ from './dbSubnetGroup'
-import DBInstance_ from './dbInstance'
-import DBCluster_ from './dbCluster'
-import DBClusterParameterGroup_ from './dbClusterParameterGroup'
-import DBParameterGroup_ from './dbParameterGroup'
+import * as _0 from './dbSubnetGroup'
+import * as _1 from './dbInstance'
+import * as _2 from './dbCluster'
+import * as _3 from './dbClusterParameterGroup'
+import * as _4 from './dbParameterGroup'
 
 export namespace Neptune {
-  export const DBSubnetGroup = DBSubnetGroup_
-  export const DBInstance = DBInstance_
-  export const DBCluster = DBCluster_
-  export const DBClusterParameterGroup = DBClusterParameterGroup_
-  export const DBParameterGroup = DBParameterGroup_
+  export const DBSubnetGroup = _0.R
+  export const DBInstance = _1.R
+  export const DBCluster = _2.R
+  export const DBClusterParameterGroup = _3.R
+  export const DBParameterGroup = _4.R
 
-  export type DBSubnetGroup = DBSubnetGroup_
-  export type DBInstance = DBInstance_
-  export type DBCluster = DBCluster_
-  export type DBClusterParameterGroup = DBClusterParameterGroup_
-  export type DBParameterGroup = DBParameterGroup_
+  export type DBSubnetGroup = _0.R
+  export type DBInstance = _1.R
+  export type DBCluster = _2.R
+  export type DBClusterParameterGroup = _3.R
+  export type DBParameterGroup = _4.R
+
+  export namespace DBCluster {
+    export type DBClusterRole = _2.DBClusterRole
+  }
 }

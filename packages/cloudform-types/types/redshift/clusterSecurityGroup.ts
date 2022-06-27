@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ClusterSecurityGroupProperties {
+export interface Properties {
     Description: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class ClusterSecurityGroup extends ResourceBase<ClusterSecurityGroupProperties> {
+class ClusterSecurityGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: ClusterSecurityGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::Redshift::ClusterSecurityGroup', properties)
     }
 }
+export { ClusterSecurityGroup as R }

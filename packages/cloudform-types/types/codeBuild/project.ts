@@ -226,7 +226,7 @@ export class EnvironmentVariable {
     }
 }
 
-export interface ProjectProperties {
+export interface Properties {
     Description?: Value<string>
     ResourceAccessRole?: Value<string>
     VpcConfig?: VpcConfig
@@ -253,7 +253,7 @@ export interface ProjectProperties {
     Cache?: ProjectCache
 }
 
-export default class Project extends ResourceBase<ProjectProperties> {
+class Project extends ResourceBase<Properties> {
     static Environment = Environment
     static GitSubmodulesConfig = GitSubmodulesConfig
     static VpcConfig = VpcConfig
@@ -274,7 +274,8 @@ export default class Project extends ResourceBase<ProjectProperties> {
     static BuildStatusConfig = BuildStatusConfig
     static EnvironmentVariable = EnvironmentVariable
 
-    constructor(properties: ProjectProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodeBuild::Project', properties)
     }
 }
+export { Project as R }

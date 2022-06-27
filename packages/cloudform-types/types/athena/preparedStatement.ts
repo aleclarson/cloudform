@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PreparedStatementProperties {
+export interface Properties {
     StatementName: Value<string>
     WorkGroup: Value<string>
     Description?: Value<string>
     QueryStatement: Value<string>
 }
 
-export default class PreparedStatement extends ResourceBase<PreparedStatementProperties> {
+class PreparedStatement extends ResourceBase<Properties> {
 
 
-    constructor(properties: PreparedStatementProperties) {
+    constructor(properties: Properties) {
         super('AWS::Athena::PreparedStatement', properties)
     }
 }
+export { PreparedStatement as R }

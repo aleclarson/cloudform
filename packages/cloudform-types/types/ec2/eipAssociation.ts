@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface EIPAssociationProperties {
+export interface Properties {
     AllocationId?: Value<string>
     EIP?: Value<string>
     InstanceId?: Value<string>
@@ -30,10 +30,11 @@ export interface EIPAssociationProperties {
     PrivateIpAddress?: Value<string>
 }
 
-export default class EIPAssociation extends ResourceBase<EIPAssociationProperties> {
+class EIPAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties?: EIPAssociationProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::EIPAssociation', properties || {})
     }
 }
+export { EIPAssociation as R }

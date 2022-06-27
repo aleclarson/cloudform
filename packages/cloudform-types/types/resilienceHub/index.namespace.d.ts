@@ -1,0 +1,1 @@
+import*as _0 from'./app';import*as _1 from'./resiliencyPolicy';export declare namespace ResilienceHub{const App:typeof _0.R;const ResiliencyPolicy:typeof _1.R;type App=_0.R;type ResiliencyPolicy=_1.R;namespace App{type PhysicalResourceId=_0.PhysicalResourceId;type ResourceMapping=_0.ResourceMapping;}namespace ResiliencyPolicy{type FailurePolicy=_1.FailurePolicy;}}

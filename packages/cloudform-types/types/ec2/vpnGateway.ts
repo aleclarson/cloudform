@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPNGatewayProperties {
+export interface Properties {
     AmazonSideAsn?: Value<number>
     Tags?: List<ResourceTag>
     Type: Value<string>
 }
 
-export default class VPNGateway extends ResourceBase<VPNGatewayProperties> {
+class VPNGateway extends ResourceBase<Properties> {
 
 
-    constructor(properties: VPNGatewayProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::VPNGateway', properties)
     }
 }
+export { VPNGateway as R }

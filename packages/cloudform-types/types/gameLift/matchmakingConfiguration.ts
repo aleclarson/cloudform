@@ -27,7 +27,7 @@ export class GameProperty {
     }
 }
 
-export interface MatchmakingConfigurationProperties {
+export interface Properties {
     GameProperties?: List<GameProperty>
     GameSessionData?: Value<string>
     Description?: Value<string>
@@ -45,10 +45,11 @@ export interface MatchmakingConfigurationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class MatchmakingConfiguration extends ResourceBase<MatchmakingConfigurationProperties> {
+class MatchmakingConfiguration extends ResourceBase<Properties> {
     static GameProperty = GameProperty
 
-    constructor(properties: MatchmakingConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::GameLift::MatchmakingConfiguration', properties)
     }
 }
+export { MatchmakingConfiguration as R }

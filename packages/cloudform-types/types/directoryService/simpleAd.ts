@@ -29,7 +29,7 @@ export class VpcSettings {
     }
 }
 
-export interface SimpleADProperties {
+export interface Properties {
     CreateAlias?: Value<boolean>
     Description?: Value<string>
     EnableSso?: Value<boolean>
@@ -40,10 +40,11 @@ export interface SimpleADProperties {
     VpcSettings: VpcSettings
 }
 
-export default class SimpleAD extends ResourceBase<SimpleADProperties> {
+class SimpleAD extends ResourceBase<Properties> {
     static VpcSettings = VpcSettings
 
-    constructor(properties: SimpleADProperties) {
+    constructor(properties: Properties) {
         super('AWS::DirectoryService::SimpleAD', properties)
     }
 }
+export { SimpleAD as R }

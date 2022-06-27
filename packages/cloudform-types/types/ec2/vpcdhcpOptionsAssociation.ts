@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPCDHCPOptionsAssociationProperties {
+export interface Properties {
     DhcpOptionsId: Value<string>
     VpcId: Value<string>
 }
 
-export default class VPCDHCPOptionsAssociation extends ResourceBase<VPCDHCPOptionsAssociationProperties> {
+class VPCDHCPOptionsAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: VPCDHCPOptionsAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::VPCDHCPOptionsAssociation', properties)
     }
 }
+export { VPCDHCPOptionsAssociation as R }

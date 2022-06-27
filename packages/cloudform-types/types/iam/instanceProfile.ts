@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface InstanceProfileProperties {
+export interface Properties {
     Path?: Value<string>
     Roles: List<Value<string>>
     InstanceProfileName?: Value<string>
 }
 
-export default class InstanceProfile extends ResourceBase<InstanceProfileProperties> {
+class InstanceProfile extends ResourceBase<Properties> {
 
 
-    constructor(properties: InstanceProfileProperties) {
+    constructor(properties: Properties) {
         super('AWS::IAM::InstanceProfile', properties)
     }
 }
+export { InstanceProfile as R }

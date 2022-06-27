@@ -38,7 +38,7 @@ export class Policy {
     }
 }
 
-export interface UserProperties {
+export interface Properties {
     Groups?: List<Value<string>>
     LoginProfile?: LoginProfile
     ManagedPolicyArns?: List<Value<string>>
@@ -49,11 +49,12 @@ export interface UserProperties {
     UserName?: Value<string>
 }
 
-export default class User extends ResourceBase<UserProperties> {
+class User extends ResourceBase<Properties> {
     static LoginProfile = LoginProfile
     static Policy = Policy
 
-    constructor(properties?: UserProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IAM::User', properties || {})
     }
 }
+export { User as R }

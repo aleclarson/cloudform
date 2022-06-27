@@ -15,17 +15,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface EnvironmentProperties {
+export interface Properties {
     Description?: Value<string>
     Name?: Value<string>
     NetworkFabricType?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Environment extends ResourceBase<EnvironmentProperties> {
+class Environment extends ResourceBase<Properties> {
 
 
-    constructor(properties?: EnvironmentProperties) {
+    constructor(properties?: Properties) {
         super('AWS::RefactorSpaces::Environment', properties || {})
     }
 }
+export { Environment as R }

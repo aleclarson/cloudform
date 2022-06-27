@@ -17,21 +17,22 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface ApplicationProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class Application extends ResourceBase<ApplicationProperties> {
+class Application extends ResourceBase<Properties> {
 
 
-    constructor(properties: ApplicationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalogAppRegistry::Application', properties)
     }
 }
+export { Application as R }

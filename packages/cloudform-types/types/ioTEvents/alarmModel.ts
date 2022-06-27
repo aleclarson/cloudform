@@ -216,7 +216,7 @@ export class AlarmEventActions {
     }
 }
 
-export interface AlarmModelProperties {
+export interface Properties {
     AlarmModelName?: Value<string>
     AlarmModelDescription?: Value<string>
     RoleArn: Value<string>
@@ -228,7 +228,7 @@ export interface AlarmModelProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class AlarmModel extends ResourceBase<AlarmModelProperties> {
+class AlarmModel extends ResourceBase<Properties> {
     static AlarmRule = AlarmRule
     static DynamoDBv2 = DynamoDBv2
     static AssetPropertyTimestamp = AssetPropertyTimestamp
@@ -250,7 +250,8 @@ export default class AlarmModel extends ResourceBase<AlarmModelProperties> {
     static IotSiteWise = IotSiteWise
     static AlarmEventActions = AlarmEventActions
 
-    constructor(properties: AlarmModelProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTEvents::AlarmModel', properties)
     }
 }
+export { AlarmModel as R }

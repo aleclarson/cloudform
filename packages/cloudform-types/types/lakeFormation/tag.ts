@@ -7,16 +7,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TagProperties {
+export interface Properties {
     CatalogId?: Value<string>
     TagKey: Value<string>
     TagValues: List<Value<string>>
 }
 
-export default class Tag extends ResourceBase<TagProperties> {
+class Tag extends ResourceBase<Properties> {
 
 
-    constructor(properties: TagProperties) {
+    constructor(properties: Properties) {
         super('AWS::LakeFormation::Tag', properties)
     }
 }
+export { Tag as R }

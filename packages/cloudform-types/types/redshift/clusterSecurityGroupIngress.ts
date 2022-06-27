@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ClusterSecurityGroupIngressProperties {
+export interface Properties {
     CIDRIP?: Value<string>
     ClusterSecurityGroupName: Value<string>
     EC2SecurityGroupName?: Value<string>
     EC2SecurityGroupOwnerId?: Value<string>
 }
 
-export default class ClusterSecurityGroupIngress extends ResourceBase<ClusterSecurityGroupIngressProperties> {
+class ClusterSecurityGroupIngress extends ResourceBase<Properties> {
 
 
-    constructor(properties: ClusterSecurityGroupIngressProperties) {
+    constructor(properties: Properties) {
         super('AWS::Redshift::ClusterSecurityGroupIngress', properties)
     }
 }
+export { ClusterSecurityGroupIngress as R }

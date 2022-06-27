@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPCEndpointProperties {
+export interface Properties {
     PolicyDocument?: {[key: string]: any}
     PrivateDnsEnabled?: Value<boolean>
     RouteTableIds?: List<Value<string>>
@@ -33,10 +33,11 @@ export interface VPCEndpointProperties {
     VpcId: Value<string>
 }
 
-export default class VPCEndpoint extends ResourceBase<VPCEndpointProperties> {
+class VPCEndpoint extends ResourceBase<Properties> {
 
 
-    constructor(properties: VPCEndpointProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::VPCEndpoint', properties)
     }
 }
+export { VPCEndpoint as R }

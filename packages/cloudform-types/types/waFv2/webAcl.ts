@@ -473,7 +473,7 @@ export class Cookies {
     }
 }
 
-export interface WebACLProperties {
+export interface Properties {
     DefaultAction: DefaultAction
     Description?: Value<string>
     Name?: Value<string>
@@ -485,7 +485,7 @@ export interface WebACLProperties {
     CaptchaConfig?: CaptchaConfig
 }
 
-export default class WebACL extends ResourceBase<WebACLProperties> {
+class WebACL extends ResourceBase<Properties> {
     static CustomRequestHandling = CustomRequestHandling
     static ManagedRuleGroupStatement = ManagedRuleGroupStatement
     static FieldIdentifier = FieldIdentifier
@@ -533,7 +533,8 @@ export default class WebACL extends ResourceBase<WebACLProperties> {
     static CaptchaAction = CaptchaAction
     static Cookies = Cookies
 
-    constructor(properties: WebACLProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAFv2::WebACL', properties)
     }
 }
+export { WebACL as R }

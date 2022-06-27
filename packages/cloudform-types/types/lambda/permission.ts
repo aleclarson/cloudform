@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PermissionProperties {
+export interface Properties {
     Action: Value<string>
     EventSourceToken?: Value<string>
     FunctionName: Value<string>
@@ -33,10 +33,11 @@ export interface PermissionProperties {
     SourceArn?: Value<string>
 }
 
-export default class Permission extends ResourceBase<PermissionProperties> {
+class Permission extends ResourceBase<Properties> {
 
 
-    constructor(properties: PermissionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lambda::Permission', properties)
     }
 }
+export { Permission as R }

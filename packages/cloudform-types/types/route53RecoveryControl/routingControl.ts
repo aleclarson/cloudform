@@ -8,16 +8,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RoutingControlProperties {
+export interface Properties {
     ControlPanelArn?: Value<string>
     Name: Value<string>
     ClusterArn?: Value<string>
 }
 
-export default class RoutingControl extends ResourceBase<RoutingControlProperties> {
+class RoutingControl extends ResourceBase<Properties> {
 
 
-    constructor(properties: RoutingControlProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53RecoveryControl::RoutingControl', properties)
     }
 }
+export { RoutingControl as R }

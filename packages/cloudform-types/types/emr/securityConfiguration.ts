@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SecurityConfigurationProperties {
+export interface Properties {
     Name?: Value<string>
     SecurityConfiguration: {[key: string]: any}
 }
 
-export default class SecurityConfiguration extends ResourceBase<SecurityConfigurationProperties> {
+class SecurityConfiguration extends ResourceBase<Properties> {
 
 
-    constructor(properties: SecurityConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EMR::SecurityConfiguration', properties)
     }
 }
+export { SecurityConfiguration as R }

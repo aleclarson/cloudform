@@ -17,28 +17,32 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import MetricFilter_ from './metricFilter'
-import Destination_ from './destination'
-import LogGroup_ from './logGroup'
-import ResourcePolicy_ from './resourcePolicy'
-import LogStream_ from './logStream'
-import SubscriptionFilter_ from './subscriptionFilter'
-import QueryDefinition_ from './queryDefinition'
+import * as _0 from './metricFilter'
+import * as _1 from './destination'
+import * as _2 from './logGroup'
+import * as _3 from './resourcePolicy'
+import * as _4 from './logStream'
+import * as _5 from './subscriptionFilter'
+import * as _6 from './queryDefinition'
 
 export namespace Logs {
-  export const MetricFilter = MetricFilter_
-  export const Destination = Destination_
-  export const LogGroup = LogGroup_
-  export const ResourcePolicy = ResourcePolicy_
-  export const LogStream = LogStream_
-  export const SubscriptionFilter = SubscriptionFilter_
-  export const QueryDefinition = QueryDefinition_
+  export const MetricFilter = _0.R
+  export const Destination = _1.R
+  export const LogGroup = _2.R
+  export const ResourcePolicy = _3.R
+  export const LogStream = _4.R
+  export const SubscriptionFilter = _5.R
+  export const QueryDefinition = _6.R
 
-  export type MetricFilter = MetricFilter_
-  export type Destination = Destination_
-  export type LogGroup = LogGroup_
-  export type ResourcePolicy = ResourcePolicy_
-  export type LogStream = LogStream_
-  export type SubscriptionFilter = SubscriptionFilter_
-  export type QueryDefinition = QueryDefinition_
+  export type MetricFilter = _0.R
+  export type Destination = _1.R
+  export type LogGroup = _2.R
+  export type ResourcePolicy = _3.R
+  export type LogStream = _4.R
+  export type SubscriptionFilter = _5.R
+  export type QueryDefinition = _6.R
+
+  export namespace MetricFilter {
+    export type MetricTransformation = _0.MetricTransformation
+  }
 }

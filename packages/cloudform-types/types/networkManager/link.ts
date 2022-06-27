@@ -29,7 +29,7 @@ export class Bandwidth {
     }
 }
 
-export interface LinkProperties {
+export interface Properties {
     GlobalNetworkId: Value<string>
     SiteId: Value<string>
     Bandwidth: Bandwidth
@@ -39,10 +39,11 @@ export interface LinkProperties {
     Type?: Value<string>
 }
 
-export default class Link extends ResourceBase<LinkProperties> {
+class Link extends ResourceBase<Properties> {
     static Bandwidth = Bandwidth
 
-    constructor(properties: LinkProperties) {
+    constructor(properties: Properties) {
         super('AWS::NetworkManager::Link', properties)
     }
 }
+export { Link as R }

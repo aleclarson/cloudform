@@ -17,10 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import LoadBalancer_ from './loadBalancer'
+import * as _0 from './loadBalancer'
 
 export namespace ElasticLoadBalancing {
-  export const LoadBalancer = LoadBalancer_
+  export const LoadBalancer = _0.R
 
-  export type LoadBalancer = LoadBalancer_
+  export type LoadBalancer = _0.R
+
+  export namespace LoadBalancer {
+    export type AccessLoggingPolicy = _0.AccessLoggingPolicy
+    export type HealthCheck = _0.HealthCheck
+    export type ConnectionSettings = _0.ConnectionSettings
+    export type ConnectionDrainingPolicy = _0.ConnectionDrainingPolicy
+    export type AppCookieStickinessPolicy = _0.AppCookieStickinessPolicy
+    export type LBCookieStickinessPolicy = _0.LBCookieStickinessPolicy
+    export type Listeners = _0.Listeners
+    export type Policies = _0.Policies
+  }
 }

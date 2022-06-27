@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LaunchNotificationConstraintProperties {
+export interface Properties {
     Description?: Value<string>
     NotificationArns: List<Value<string>>
     AcceptLanguage?: Value<string>
@@ -30,10 +30,11 @@ export interface LaunchNotificationConstraintProperties {
     ProductId: Value<string>
 }
 
-export default class LaunchNotificationConstraint extends ResourceBase<LaunchNotificationConstraintProperties> {
+class LaunchNotificationConstraint extends ResourceBase<Properties> {
 
 
-    constructor(properties: LaunchNotificationConstraintProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::LaunchNotificationConstraint', properties)
     }
 }
+export { LaunchNotificationConstraint as R }

@@ -1,1 +1,1 @@
-import Stream_ from'./stream';import Ledger_ from'./ledger';export declare namespace QLDB{const Stream:typeof Stream_;const Ledger:typeof Ledger_;type Stream=Stream_;type Ledger=Ledger_;}
+import*as _0 from'./stream';import*as _1 from'./ledger';export declare namespace QLDB{const Stream:typeof _0.R;const Ledger:typeof _1.R;type Stream=_0.R;type Ledger=_1.R;namespace Stream{type KinesisConfiguration=_0.KinesisConfiguration;}}

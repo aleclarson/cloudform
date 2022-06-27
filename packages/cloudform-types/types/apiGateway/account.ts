@@ -22,14 +22,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AccountProperties {
+export interface Properties {
     CloudWatchRoleArn?: Value<string>
 }
 
-export default class Account extends ResourceBase<AccountProperties> {
+class Account extends ResourceBase<Properties> {
 
 
-    constructor(properties?: AccountProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ApiGateway::Account', properties || {})
     }
 }
+export { Account as R }

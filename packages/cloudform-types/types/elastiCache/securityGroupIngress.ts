@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SecurityGroupIngressProperties {
+export interface Properties {
     CacheSecurityGroupName: Value<string>
     EC2SecurityGroupName: Value<string>
     EC2SecurityGroupOwnerId?: Value<string>
 }
 
-export default class SecurityGroupIngress extends ResourceBase<SecurityGroupIngressProperties> {
+class SecurityGroupIngress extends ResourceBase<Properties> {
 
 
-    constructor(properties: SecurityGroupIngressProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElastiCache::SecurityGroupIngress', properties)
     }
 }
+export { SecurityGroupIngress as R }

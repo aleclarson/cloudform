@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DeploymentProperties {
+export interface Properties {
     Description?: Value<string>
     StageName?: Value<string>
     ApiId: Value<string>
 }
 
-export default class Deployment extends ResourceBase<DeploymentProperties> {
+class Deployment extends ResourceBase<Properties> {
 
 
-    constructor(properties: DeploymentProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGatewayV2::Deployment', properties)
     }
 }
+export { Deployment as R }

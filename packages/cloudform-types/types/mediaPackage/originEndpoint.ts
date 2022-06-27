@@ -178,7 +178,7 @@ export class EncryptionContractConfiguration {
     }
 }
 
-export interface OriginEndpointProperties {
+export interface Properties {
     Id: Value<string>
     ChannelId: Value<string>
     Description?: Value<string>
@@ -195,7 +195,7 @@ export interface OriginEndpointProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class OriginEndpoint extends ResourceBase<OriginEndpointProperties> {
+class OriginEndpoint extends ResourceBase<Properties> {
     static StreamSelection = StreamSelection
     static CmafPackage = CmafPackage
     static MssEncryption = MssEncryption
@@ -210,7 +210,8 @@ export default class OriginEndpoint extends ResourceBase<OriginEndpointPropertie
     static HlsPackage = HlsPackage
     static EncryptionContractConfiguration = EncryptionContractConfiguration
 
-    constructor(properties: OriginEndpointProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaPackage::OriginEndpoint', properties)
     }
 }
+export { OriginEndpoint as R }

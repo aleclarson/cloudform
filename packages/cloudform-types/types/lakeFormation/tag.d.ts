@@ -1,0 +1,1 @@
+import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{CatalogId?:Value<string>;TagKey:Value<string>;TagValues:List<Value<string>>;}declare class Tag extends ResourceBase<Properties>{constructor(properties:Properties);}export{Tag as R};

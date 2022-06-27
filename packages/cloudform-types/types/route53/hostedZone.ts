@@ -54,7 +54,7 @@ export class VPC {
     }
 }
 
-export interface HostedZoneProperties {
+export interface Properties {
     HostedZoneConfig?: HostedZoneConfig
     HostedZoneTags?: List<HostedZoneTag>
     Name?: Value<string>
@@ -62,13 +62,14 @@ export interface HostedZoneProperties {
     VPCs?: List<VPC>
 }
 
-export default class HostedZone extends ResourceBase<HostedZoneProperties> {
+class HostedZone extends ResourceBase<Properties> {
     static HostedZoneTag = HostedZoneTag
     static HostedZoneConfig = HostedZoneConfig
     static QueryLoggingConfig = QueryLoggingConfig
     static VPC = VPC
 
-    constructor(properties?: HostedZoneProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Route53::HostedZone', properties || {})
     }
 }
+export { HostedZone as R }

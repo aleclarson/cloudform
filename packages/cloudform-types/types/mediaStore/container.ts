@@ -44,7 +44,7 @@ export class CorsRule {
     }
 }
 
-export interface ContainerProperties {
+export interface Properties {
     Policy?: Value<string>
     MetricPolicy?: MetricPolicy
     ContainerName: Value<string>
@@ -54,12 +54,13 @@ export interface ContainerProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Container extends ResourceBase<ContainerProperties> {
+class Container extends ResourceBase<Properties> {
     static MetricPolicy = MetricPolicy
     static MetricPolicyRule = MetricPolicyRule
     static CorsRule = CorsRule
 
-    constructor(properties: ContainerProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaStore::Container', properties)
     }
 }
+export { Container as R }

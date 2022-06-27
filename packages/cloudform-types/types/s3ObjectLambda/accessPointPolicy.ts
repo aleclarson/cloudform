@@ -21,15 +21,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AccessPointPolicyProperties {
+export interface Properties {
     ObjectLambdaAccessPoint: Value<string>
     PolicyDocument: {[key: string]: any}
 }
 
-export default class AccessPointPolicy extends ResourceBase<AccessPointPolicyProperties> {
+class AccessPointPolicy extends ResourceBase<Properties> {
 
 
-    constructor(properties: AccessPointPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::S3ObjectLambda::AccessPointPolicy', properties)
     }
 }
+export { AccessPointPolicy as R }

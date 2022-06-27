@@ -13,15 +13,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface StreamKeyProperties {
+export interface Properties {
     ChannelArn: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class StreamKey extends ResourceBase<StreamKeyProperties> {
+class StreamKey extends ResourceBase<Properties> {
 
 
-    constructor(properties: StreamKeyProperties) {
+    constructor(properties: Properties) {
         super('AWS::IVS::StreamKey', properties)
     }
 }
+export { StreamKey as R }

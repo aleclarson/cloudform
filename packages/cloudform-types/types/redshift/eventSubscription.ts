@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface EventSubscriptionProperties {
+export interface Properties {
     SubscriptionName: Value<string>
     SnsTopicArn?: Value<string>
     SourceType?: Value<string>
@@ -33,10 +33,11 @@ export interface EventSubscriptionProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class EventSubscription extends ResourceBase<EventSubscriptionProperties> {
+class EventSubscription extends ResourceBase<Properties> {
 
 
-    constructor(properties: EventSubscriptionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Redshift::EventSubscription', properties)
     }
 }
+export { EventSubscription as R }

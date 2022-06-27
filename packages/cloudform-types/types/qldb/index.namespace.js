@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const stream_1=require("./stream"),ledger_1=require("./ledger");var QLDB;!function(QLDB){QLDB.Stream=stream_1.default,QLDB.Ledger=ledger_1.default}(QLDB=exports.QLDB||(exports.QLDB={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.QLDB=void 0;const _0=require("./stream"),_1=require("./ledger");var QLDB;!function(QLDB){QLDB.Stream=_0.R,QLDB.Ledger=_1.R}(QLDB=exports.QLDB||(exports.QLDB={}));

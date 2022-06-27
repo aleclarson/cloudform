@@ -78,7 +78,7 @@ export class RepositoryAuthConfig {
     }
 }
 
-export interface ModelProperties {
+export interface Properties {
     ExecutionRoleArn: Value<string>
     EnableNetworkIsolation?: Value<boolean>
     PrimaryContainer?: ContainerDefinition
@@ -89,7 +89,7 @@ export interface ModelProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Model extends ResourceBase<ModelProperties> {
+class Model extends ResourceBase<Properties> {
     static MultiModelConfig = MultiModelConfig
     static VpcConfig = VpcConfig
     static ContainerDefinition = ContainerDefinition
@@ -97,7 +97,8 @@ export default class Model extends ResourceBase<ModelProperties> {
     static InferenceExecutionConfig = InferenceExecutionConfig
     static RepositoryAuthConfig = RepositoryAuthConfig
 
-    constructor(properties: ModelProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::Model', properties)
     }
 }
+export { Model as R }

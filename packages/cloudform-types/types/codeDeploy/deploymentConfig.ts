@@ -57,20 +57,21 @@ export class TimeBasedLinear {
     }
 }
 
-export interface DeploymentConfigProperties {
+export interface Properties {
     ComputePlatform?: Value<string>
     DeploymentConfigName?: Value<string>
     MinimumHealthyHosts?: MinimumHealthyHosts
     TrafficRoutingConfig?: TrafficRoutingConfig
 }
 
-export default class DeploymentConfig extends ResourceBase<DeploymentConfigProperties> {
+class DeploymentConfig extends ResourceBase<Properties> {
     static TimeBasedCanary = TimeBasedCanary
     static MinimumHealthyHosts = MinimumHealthyHosts
     static TrafficRoutingConfig = TrafficRoutingConfig
     static TimeBasedLinear = TimeBasedLinear
 
-    constructor(properties?: DeploymentConfigProperties) {
+    constructor(properties?: Properties) {
         super('AWS::CodeDeploy::DeploymentConfig', properties || {})
     }
 }
+export { DeploymentConfig as R }

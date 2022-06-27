@@ -28,15 +28,16 @@ export class AttributePayload {
     }
 }
 
-export interface ThingProperties {
+export interface Properties {
     AttributePayload?: AttributePayload
     ThingName?: Value<string>
 }
 
-export default class Thing extends ResourceBase<ThingProperties> {
+class Thing extends ResourceBase<Properties> {
     static AttributePayload = AttributePayload
 
-    constructor(properties?: ThingProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IoT::Thing', properties || {})
     }
 }
+export { Thing as R }

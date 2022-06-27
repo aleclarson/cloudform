@@ -41,7 +41,7 @@ export class AnalyticsConfiguration {
     }
 }
 
-export interface UserPoolClientProperties {
+export interface Properties {
     AnalyticsConfiguration?: AnalyticsConfiguration
     GenerateSecret?: Value<boolean>
     CallbackURLs?: List<Value<string>>
@@ -65,11 +65,12 @@ export interface UserPoolClientProperties {
     EnableTokenRevocation?: Value<boolean>
 }
 
-export default class UserPoolClient extends ResourceBase<UserPoolClientProperties> {
+class UserPoolClient extends ResourceBase<Properties> {
     static TokenValidityUnits = TokenValidityUnits
     static AnalyticsConfiguration = AnalyticsConfiguration
 
-    constructor(properties: UserPoolClientProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cognito::UserPoolClient', properties)
     }
 }
+export { UserPoolClient as R }

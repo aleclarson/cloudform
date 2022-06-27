@@ -17,16 +17,50 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import DeploymentConfig_ from './deploymentConfig'
-import Application_ from './application'
-import DeploymentGroup_ from './deploymentGroup'
+import * as _0 from './deploymentConfig'
+import * as _1 from './application'
+import * as _2 from './deploymentGroup'
 
 export namespace CodeDeploy {
-  export const DeploymentConfig = DeploymentConfig_
-  export const Application = Application_
-  export const DeploymentGroup = DeploymentGroup_
+  export const DeploymentConfig = _0.R
+  export const Application = _1.R
+  export const DeploymentGroup = _2.R
 
-  export type DeploymentConfig = DeploymentConfig_
-  export type Application = Application_
-  export type DeploymentGroup = DeploymentGroup_
+  export type DeploymentConfig = _0.R
+  export type Application = _1.R
+  export type DeploymentGroup = _2.R
+
+  export namespace DeploymentConfig {
+    export type TimeBasedCanary = _0.TimeBasedCanary
+    export type MinimumHealthyHosts = _0.MinimumHealthyHosts
+    export type TrafficRoutingConfig = _0.TrafficRoutingConfig
+    export type TimeBasedLinear = _0.TimeBasedLinear
+  }
+  export namespace DeploymentGroup {
+    export type TargetGroupInfo = _2.TargetGroupInfo
+    export type OnPremisesTagSetListObject = _2.OnPremisesTagSetListObject
+    export type DeploymentStyle = _2.DeploymentStyle
+    export type EC2TagFilter = _2.EC2TagFilter
+    export type OnPremisesTagSet = _2.OnPremisesTagSet
+    export type LoadBalancerInfo = _2.LoadBalancerInfo
+    export type RevisionLocation = _2.RevisionLocation
+    export type TriggerConfig = _2.TriggerConfig
+    export type EC2TagSet = _2.EC2TagSet
+    export type AlarmConfiguration = _2.AlarmConfiguration
+    export type BlueGreenDeploymentConfiguration = _2.BlueGreenDeploymentConfiguration
+    export type DeploymentReadyOption = _2.DeploymentReadyOption
+    export type AutoRollbackConfiguration = _2.AutoRollbackConfiguration
+    export type S3Location = _2.S3Location
+    export type BlueInstanceTerminationOption = _2.BlueInstanceTerminationOption
+    export type TagFilter = _2.TagFilter
+    export type GitHubLocation = _2.GitHubLocation
+    export type TrafficRoute = _2.TrafficRoute
+    export type ELBInfo = _2.ELBInfo
+    export type Alarm = _2.Alarm
+    export type GreenFleetProvisioningOption = _2.GreenFleetProvisioningOption
+    export type Deployment = _2.Deployment
+    export type ECSService = _2.ECSService
+    export type TargetGroupPairInfo = _2.TargetGroupPairInfo
+    export type EC2TagSetListObject = _2.EC2TagSetListObject
+  }
 }

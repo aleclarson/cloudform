@@ -172,7 +172,7 @@ export class DataCaptureConfig {
     }
 }
 
-export interface EndpointConfigProperties {
+export interface Properties {
     DataCaptureConfig?: DataCaptureConfig
     ProductionVariants: List<ProductionVariant>
     KmsKeyId?: Value<string>
@@ -181,7 +181,7 @@ export interface EndpointConfigProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class EndpointConfig extends ResourceBase<EndpointConfigProperties> {
+class EndpointConfig extends ResourceBase<Properties> {
     static AsyncInferenceNotificationConfig = AsyncInferenceNotificationConfig
     static AsyncInferenceConfig = AsyncInferenceConfig
     static CaptureOption = CaptureOption
@@ -197,7 +197,8 @@ export default class EndpointConfig extends ResourceBase<EndpointConfigPropertie
     static AsyncInferenceClientConfig = AsyncInferenceClientConfig
     static DataCaptureConfig = DataCaptureConfig
 
-    constructor(properties: EndpointConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::EndpointConfig', properties)
     }
 }
+export { EndpointConfig as R }

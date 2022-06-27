@@ -26,7 +26,7 @@ export class AccessRules {
     }
 }
 
-export interface BucketProperties {
+export interface Properties {
     BucketName: Value<string>
     BundleId: Value<string>
     ObjectVersioning?: Value<boolean>
@@ -36,10 +36,11 @@ export interface BucketProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Bucket extends ResourceBase<BucketProperties> {
+class Bucket extends ResourceBase<Properties> {
     static AccessRules = AccessRules
 
-    constructor(properties: BucketProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lightsail::Bucket', properties)
     }
 }
+export { Bucket as R }

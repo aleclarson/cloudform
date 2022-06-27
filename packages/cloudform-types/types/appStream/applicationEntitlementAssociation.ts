@@ -18,16 +18,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ApplicationEntitlementAssociationProperties {
+export interface Properties {
     StackName: Value<string>
     EntitlementName: Value<string>
     ApplicationIdentifier: Value<string>
 }
 
-export default class ApplicationEntitlementAssociation extends ResourceBase<ApplicationEntitlementAssociationProperties> {
+class ApplicationEntitlementAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: ApplicationEntitlementAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppStream::ApplicationEntitlementAssociation', properties)
     }
 }
+export { ApplicationEntitlementAssociation as R }

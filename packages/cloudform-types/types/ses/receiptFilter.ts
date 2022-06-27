@@ -25,15 +25,16 @@ export class IpFilter {
     }
 }
 
-export interface ReceiptFilterProperties {
+export interface Properties {
     Filter: Filter
 }
 
-export default class ReceiptFilter extends ResourceBase<ReceiptFilterProperties> {
+class ReceiptFilter extends ResourceBase<Properties> {
     static Filter = Filter
     static IpFilter = IpFilter
 
-    constructor(properties: ReceiptFilterProperties) {
+    constructor(properties: Properties) {
         super('AWS::SES::ReceiptFilter', properties)
     }
 }
+export { ReceiptFilter as R }

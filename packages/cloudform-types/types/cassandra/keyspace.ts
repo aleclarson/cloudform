@@ -21,15 +21,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface KeyspaceProperties {
+export interface Properties {
     KeyspaceName?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Keyspace extends ResourceBase<KeyspaceProperties> {
+class Keyspace extends ResourceBase<Properties> {
 
 
-    constructor(properties?: KeyspaceProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Cassandra::Keyspace', properties || {})
     }
 }
+export { Keyspace as R }

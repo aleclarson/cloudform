@@ -64,7 +64,7 @@ export class Metric {
     }
 }
 
-export interface AlarmProperties {
+export interface Properties {
     ActionsEnabled?: Value<boolean>
     AlarmActions?: List<Value<string>>
     AlarmDescription?: Value<string>
@@ -88,13 +88,14 @@ export interface AlarmProperties {
     Unit?: Value<string>
 }
 
-export default class Alarm extends ResourceBase<AlarmProperties> {
+class Alarm extends ResourceBase<Properties> {
     static MetricStat = MetricStat
     static MetricDataQuery = MetricDataQuery
     static Dimension = Dimension
     static Metric = Metric
 
-    constructor(properties: AlarmProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudWatch::Alarm', properties)
     }
 }
+export { Alarm as R }

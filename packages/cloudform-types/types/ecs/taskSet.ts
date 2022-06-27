@@ -69,7 +69,7 @@ export class Scale {
     }
 }
 
-export interface TaskSetProperties {
+export interface Properties {
     Cluster: Value<string>
     ExternalId?: Value<string>
     LaunchType?: Value<string>
@@ -82,14 +82,15 @@ export interface TaskSetProperties {
     TaskDefinition: Value<string>
 }
 
-export default class TaskSet extends ResourceBase<TaskSetProperties> {
+class TaskSet extends ResourceBase<Properties> {
     static NetworkConfiguration = NetworkConfiguration
     static ServiceRegistry = ServiceRegistry
     static LoadBalancer = LoadBalancer
     static AwsVpcConfiguration = AwsVpcConfiguration
     static Scale = Scale
 
-    constructor(properties: TaskSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::ECS::TaskSet', properties)
     }
 }
+export { TaskSet as R }

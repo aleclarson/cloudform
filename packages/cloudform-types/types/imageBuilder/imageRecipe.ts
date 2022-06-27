@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class InstanceBlockDeviceMapping {
@@ -81,7 +81,7 @@ export class EbsInstanceBlockDeviceSpecification {
     }
 }
 
-export interface ImageRecipeProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     Version: Value<string>
@@ -93,7 +93,7 @@ export interface ImageRecipeProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class ImageRecipe extends ResourceBase<ImageRecipeProperties> {
+class ImageRecipe extends ResourceBase<Properties> {
     static InstanceBlockDeviceMapping = InstanceBlockDeviceMapping
     static SystemsManagerAgent = SystemsManagerAgent
     static ComponentConfiguration = ComponentConfiguration
@@ -101,7 +101,8 @@ export default class ImageRecipe extends ResourceBase<ImageRecipeProperties> {
     static AdditionalInstanceConfiguration = AdditionalInstanceConfiguration
     static EbsInstanceBlockDeviceSpecification = EbsInstanceBlockDeviceSpecification
 
-    constructor(properties: ImageRecipeProperties) {
+    constructor(properties: Properties) {
         super('AWS::ImageBuilder::ImageRecipe', properties)
     }
 }
+export { ImageRecipe as R }

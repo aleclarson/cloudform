@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPCProperties {
+export interface Properties {
     CidrBlock?: Value<string>
     EnableDnsHostnames?: Value<boolean>
     EnableDnsSupport?: Value<boolean>
@@ -32,10 +32,11 @@ export interface VPCProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class VPC extends ResourceBase<VPCProperties> {
+class VPC extends ResourceBase<Properties> {
 
 
-    constructor(properties?: VPCProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::VPC', properties || {})
     }
 }
+export { VPC as R }

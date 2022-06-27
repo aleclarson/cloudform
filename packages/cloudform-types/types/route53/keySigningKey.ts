@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface KeySigningKeyProperties {
+export interface Properties {
     HostedZoneId: Value<string>
     Status: Value<string>
     Name: Value<string>
     KeyManagementServiceArn: Value<string>
 }
 
-export default class KeySigningKey extends ResourceBase<KeySigningKeyProperties> {
+class KeySigningKey extends ResourceBase<Properties> {
 
 
-    constructor(properties: KeySigningKeyProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53::KeySigningKey', properties)
     }
 }
+export { KeySigningKey as R }

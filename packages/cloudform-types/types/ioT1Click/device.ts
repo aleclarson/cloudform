@@ -13,15 +13,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DeviceProperties {
+export interface Properties {
     DeviceId: Value<string>
     Enabled: Value<boolean>
 }
 
-export default class Device extends ResourceBase<DeviceProperties> {
+class Device extends ResourceBase<Properties> {
 
 
-    constructor(properties: DeviceProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT1Click::Device', properties)
     }
 }
+export { Device as R }

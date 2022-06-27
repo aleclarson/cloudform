@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class AccessLogSettings {
@@ -41,7 +41,7 @@ export class RouteSettings {
     }
 }
 
-export interface StageProperties {
+export interface Properties {
     ClientCertificateId?: Value<string>
     DeploymentId?: Value<string>
     Description?: Value<string>
@@ -56,11 +56,12 @@ export interface StageProperties {
     Tags?: {[key: string]: any}
 }
 
-export default class Stage extends ResourceBase<StageProperties> {
+class Stage extends ResourceBase<Properties> {
     static AccessLogSettings = AccessLogSettings
     static RouteSettings = RouteSettings
 
-    constructor(properties: StageProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGatewayV2::Stage', properties)
     }
 }
+export { Stage as R }

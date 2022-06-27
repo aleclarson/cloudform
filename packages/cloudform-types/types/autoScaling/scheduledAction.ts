@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ScheduledActionProperties {
+export interface Properties {
     AutoScalingGroupName: Value<string>
     DesiredCapacity?: Value<number>
     EndTime?: Value<string>
@@ -33,10 +33,11 @@ export interface ScheduledActionProperties {
     TimeZone?: Value<string>
 }
 
-export default class ScheduledAction extends ResourceBase<ScheduledActionProperties> {
+class ScheduledAction extends ResourceBase<Properties> {
 
 
-    constructor(properties: ScheduledActionProperties) {
+    constructor(properties: Properties) {
         super('AWS::AutoScaling::ScheduledAction', properties)
     }
 }
+export { ScheduledAction as R }

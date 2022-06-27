@@ -21,17 +21,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface StoredQueryProperties {
+export interface Properties {
     QueryName: Value<string>
     QueryDescription?: Value<string>
     QueryExpression: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class StoredQuery extends ResourceBase<StoredQueryProperties> {
+class StoredQuery extends ResourceBase<Properties> {
 
 
-    constructor(properties: StoredQueryProperties) {
+    constructor(properties: Properties) {
         super('AWS::Config::StoredQuery', properties)
     }
 }
+export { StoredQuery as R }

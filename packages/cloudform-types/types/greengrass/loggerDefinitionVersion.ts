@@ -28,15 +28,16 @@ export class Logger {
     }
 }
 
-export interface LoggerDefinitionVersionProperties {
+export interface Properties {
     LoggerDefinitionId: Value<string>
     Loggers: List<Logger>
 }
 
-export default class LoggerDefinitionVersion extends ResourceBase<LoggerDefinitionVersionProperties> {
+class LoggerDefinitionVersion extends ResourceBase<Properties> {
     static Logger = Logger
 
-    constructor(properties: LoggerDefinitionVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::LoggerDefinitionVersion', properties)
     }
 }
+export { LoggerDefinitionVersion as R }

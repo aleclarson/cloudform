@@ -61,7 +61,7 @@ export class ExecutionControls {
     }
 }
 
-export interface RemediationConfigurationProperties {
+export interface Properties {
     TargetVersion?: Value<string>
     ExecutionControls?: ExecutionControls
     Parameters?: {[key: string]: any}
@@ -74,14 +74,15 @@ export interface RemediationConfigurationProperties {
     Automatic?: Value<boolean>
 }
 
-export default class RemediationConfiguration extends ResourceBase<RemediationConfigurationProperties> {
+class RemediationConfiguration extends ResourceBase<Properties> {
     static ResourceValue = ResourceValue
     static RemediationParameterValue = RemediationParameterValue
     static SsmControls = SsmControls
     static StaticValue = StaticValue
     static ExecutionControls = ExecutionControls
 
-    constructor(properties: RemediationConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Config::RemediationConfiguration', properties)
     }
 }
+export { RemediationConfiguration as R }

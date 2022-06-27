@@ -17,19 +17,37 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ConfigurationTemplate_ from './configurationTemplate'
-import Environment_ from './environment'
-import Application_ from './application'
-import ApplicationVersion_ from './applicationVersion'
+import * as _0 from './configurationTemplate'
+import * as _1 from './environment'
+import * as _2 from './application'
+import * as _3 from './applicationVersion'
 
 export namespace ElasticBeanstalk {
-  export const ConfigurationTemplate = ConfigurationTemplate_
-  export const Environment = Environment_
-  export const Application = Application_
-  export const ApplicationVersion = ApplicationVersion_
+  export const ConfigurationTemplate = _0.R
+  export const Environment = _1.R
+  export const Application = _2.R
+  export const ApplicationVersion = _3.R
 
-  export type ConfigurationTemplate = ConfigurationTemplate_
-  export type Environment = Environment_
-  export type Application = Application_
-  export type ApplicationVersion = ApplicationVersion_
+  export type ConfigurationTemplate = _0.R
+  export type Environment = _1.R
+  export type Application = _2.R
+  export type ApplicationVersion = _3.R
+
+  export namespace ConfigurationTemplate {
+    export type SourceConfiguration = _0.SourceConfiguration
+    export type ConfigurationOptionSetting = _0.ConfigurationOptionSetting
+  }
+  export namespace Environment {
+    export type OptionSetting = _1.OptionSetting
+    export type Tier = _1.Tier
+  }
+  export namespace Application {
+    export type MaxAgeRule = _2.MaxAgeRule
+    export type ApplicationResourceLifecycleConfig = _2.ApplicationResourceLifecycleConfig
+    export type ApplicationVersionLifecycleConfig = _2.ApplicationVersionLifecycleConfig
+    export type MaxCountRule = _2.MaxCountRule
+  }
+  export namespace ApplicationVersion {
+    export type SourceBundle = _3.SourceBundle
+  }
 }

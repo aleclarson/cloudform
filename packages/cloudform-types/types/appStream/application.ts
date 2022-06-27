@@ -25,7 +25,7 @@ export class S3Location {
     }
 }
 
-export interface ApplicationProperties {
+export interface Properties {
     Name: Value<string>
     DisplayName?: Value<string>
     Description?: Value<string>
@@ -40,10 +40,11 @@ export interface ApplicationProperties {
     AttributesToDelete?: List<Value<string>>
 }
 
-export default class Application extends ResourceBase<ApplicationProperties> {
+class Application extends ResourceBase<Properties> {
     static S3Location = S3Location
 
-    constructor(properties: ApplicationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppStream::Application', properties)
     }
 }
+export { Application as R }

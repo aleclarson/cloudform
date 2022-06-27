@@ -49,7 +49,7 @@ export class QuotaSettings {
     }
 }
 
-export interface UsagePlanProperties {
+export interface Properties {
     ApiStages?: List<ApiStage>
     Description?: Value<string>
     Quota?: QuotaSettings
@@ -58,12 +58,13 @@ export interface UsagePlanProperties {
     UsagePlanName?: Value<string>
 }
 
-export default class UsagePlan extends ResourceBase<UsagePlanProperties> {
+class UsagePlan extends ResourceBase<Properties> {
     static ApiStage = ApiStage
     static ThrottleSettings = ThrottleSettings
     static QuotaSettings = QuotaSettings
 
-    constructor(properties?: UsagePlanProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ApiGateway::UsagePlan', properties || {})
     }
 }
+export { UsagePlan as R }

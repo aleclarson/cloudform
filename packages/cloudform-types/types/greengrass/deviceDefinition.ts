@@ -13,7 +13,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Device {
@@ -35,17 +35,18 @@ export class DeviceDefinitionVersion {
     }
 }
 
-export interface DeviceDefinitionProperties {
+export interface Properties {
     InitialVersion?: DeviceDefinitionVersion
     Tags?: {[key: string]: any}
     Name: Value<string>
 }
 
-export default class DeviceDefinition extends ResourceBase<DeviceDefinitionProperties> {
+class DeviceDefinition extends ResourceBase<Properties> {
     static Device = Device
     static DeviceDefinitionVersion = DeviceDefinitionVersion
 
-    constructor(properties: DeviceDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::DeviceDefinition', properties)
     }
 }
+export { DeviceDefinition as R }

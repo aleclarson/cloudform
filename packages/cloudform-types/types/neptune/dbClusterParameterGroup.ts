@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DBClusterParameterGroupProperties {
+export interface Properties {
     Description: Value<string>
     Parameters: {[key: string]: any}
     Family: Value<string>
@@ -29,10 +29,11 @@ export interface DBClusterParameterGroupProperties {
     Name?: Value<string>
 }
 
-export default class DBClusterParameterGroup extends ResourceBase<DBClusterParameterGroupProperties> {
+class DBClusterParameterGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: DBClusterParameterGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::Neptune::DBClusterParameterGroup', properties)
     }
 }
+export { DBClusterParameterGroup as R }

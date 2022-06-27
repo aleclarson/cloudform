@@ -18,7 +18,7 @@ export class LoRaWANGateway {
     }
 }
 
-export interface WirelessGatewayProperties {
+export interface Properties {
     Name?: Value<string>
     Description?: Value<string>
     Tags?: List<ResourceTag>
@@ -27,10 +27,11 @@ export interface WirelessGatewayProperties {
     LastUplinkReceivedAt?: Value<string>
 }
 
-export default class WirelessGateway extends ResourceBase<WirelessGatewayProperties> {
+class WirelessGateway extends ResourceBase<Properties> {
     static LoRaWANGateway = LoRaWANGateway
 
-    constructor(properties: WirelessGatewayProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTWireless::WirelessGateway', properties)
     }
 }
+export { WirelessGateway as R }

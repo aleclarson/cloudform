@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class ComponentConfiguration {
@@ -72,7 +72,7 @@ export class TargetContainerRepository {
     }
 }
 
-export interface ContainerRecipeProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     Version: Value<string>
@@ -90,14 +90,15 @@ export interface ContainerRecipeProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class ContainerRecipe extends ResourceBase<ContainerRecipeProperties> {
+class ContainerRecipe extends ResourceBase<Properties> {
     static ComponentConfiguration = ComponentConfiguration
     static EbsInstanceBlockDeviceSpecification = EbsInstanceBlockDeviceSpecification
     static InstanceBlockDeviceMapping = InstanceBlockDeviceMapping
     static InstanceConfiguration = InstanceConfiguration
     static TargetContainerRepository = TargetContainerRepository
 
-    constructor(properties: ContainerRecipeProperties) {
+    constructor(properties: Properties) {
         super('AWS::ImageBuilder::ContainerRecipe', properties)
     }
 }
+export { ContainerRecipe as R }

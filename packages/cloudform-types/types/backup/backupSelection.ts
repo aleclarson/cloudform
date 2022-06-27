@@ -43,16 +43,17 @@ export class BackupSelectionResourceType {
     }
 }
 
-export interface BackupSelectionProperties {
+export interface Properties {
     BackupPlanId: Value<string>
     BackupSelection: BackupSelectionResourceType
 }
 
-export default class BackupSelection extends ResourceBase<BackupSelectionProperties> {
+class BackupSelection extends ResourceBase<Properties> {
     static ConditionResourceType = ConditionResourceType
     static BackupSelectionResourceType = BackupSelectionResourceType
 
-    constructor(properties: BackupSelectionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Backup::BackupSelection', properties)
     }
 }
+export { BackupSelection as R }

@@ -40,7 +40,7 @@ export class SelfManagedActiveDirectoryConfiguration {
     }
 }
 
-export interface StorageVirtualMachineProperties {
+export interface Properties {
     SvmAdminPassword?: Value<string>
     ActiveDirectoryConfiguration?: ActiveDirectoryConfiguration
     RootVolumeSecurityStyle?: Value<string>
@@ -49,11 +49,12 @@ export interface StorageVirtualMachineProperties {
     Name: Value<string>
 }
 
-export default class StorageVirtualMachine extends ResourceBase<StorageVirtualMachineProperties> {
+class StorageVirtualMachine extends ResourceBase<Properties> {
     static ActiveDirectoryConfiguration = ActiveDirectoryConfiguration
     static SelfManagedActiveDirectoryConfiguration = SelfManagedActiveDirectoryConfiguration
 
-    constructor(properties: StorageVirtualMachineProperties) {
+    constructor(properties: Properties) {
         super('AWS::FSx::StorageVirtualMachine', properties)
     }
 }
+export { StorageVirtualMachine as R }

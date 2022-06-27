@@ -1,0 +1,1 @@
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{DatasetArns?:List<Value<string>>;DatasetGroupName:Value<string>;Domain:Value<string>;Tags?:List<ResourceTag>;}declare class DatasetGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{DatasetGroup as R};

@@ -12,7 +12,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VariableProperties {
+export interface Properties {
     Name: Value<string>
     DataSource: Value<string>
     DataType: Value<string>
@@ -22,10 +22,11 @@ export interface VariableProperties {
     VariableType?: Value<string>
 }
 
-export default class Variable extends ResourceBase<VariableProperties> {
+class Variable extends ResourceBase<Properties> {
 
 
-    constructor(properties: VariableProperties) {
+    constructor(properties: Properties) {
         super('AWS::FraudDetector::Variable', properties)
     }
 }
+export { Variable as R }

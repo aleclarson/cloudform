@@ -40,18 +40,19 @@ export class KeyValue {
     }
 }
 
-export interface StepProperties {
+export interface Properties {
     ActionOnFailure: Value<string>
     HadoopJarStep: HadoopJarStepConfig
     JobFlowId: Value<string>
     Name: Value<string>
 }
 
-export default class Step extends ResourceBase<StepProperties> {
+class Step extends ResourceBase<Properties> {
     static HadoopJarStepConfig = HadoopJarStepConfig
     static KeyValue = KeyValue
 
-    constructor(properties: StepProperties) {
+    constructor(properties: Properties) {
         super('AWS::EMR::Step', properties)
     }
 }
+export { Step as R }

@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface MemberInvitationProperties {
+export interface Properties {
     GraphArn: Value<string>
     MemberId: Value<string>
     MemberEmailAddress: Value<string>
@@ -29,10 +29,11 @@ export interface MemberInvitationProperties {
     Message?: Value<string>
 }
 
-export default class MemberInvitation extends ResourceBase<MemberInvitationProperties> {
+class MemberInvitation extends ResourceBase<Properties> {
 
 
-    constructor(properties: MemberInvitationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Detective::MemberInvitation', properties)
     }
 }
+export { MemberInvitation as R }

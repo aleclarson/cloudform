@@ -14,7 +14,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class HlsInputSettings {
@@ -1736,7 +1736,7 @@ export class HlsAkamaiSettings {
     }
 }
 
-export interface ChannelProperties {
+export interface Properties {
     InputAttachments?: List<InputAttachment>
     InputSpecification?: InputSpecification
     ChannelClass?: Value<string>
@@ -1750,7 +1750,7 @@ export interface ChannelProperties {
     Name?: Value<string>
 }
 
-export default class Channel extends ResourceBase<ChannelProperties> {
+class Channel extends ResourceBase<Properties> {
     static HlsInputSettings = HlsInputSettings
     static DvbSubDestinationSettings = DvbSubDestinationSettings
     static Rec709Settings = Rec709Settings
@@ -1902,7 +1902,8 @@ export default class Channel extends ResourceBase<ChannelProperties> {
     static TemporalFilterSettings = TemporalFilterSettings
     static HlsAkamaiSettings = HlsAkamaiSettings
 
-    constructor(properties?: ChannelProperties) {
+    constructor(properties?: Properties) {
         super('AWS::MediaLive::Channel', properties || {})
     }
 }
+export { Channel as R }

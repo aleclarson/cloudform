@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RouteProperties {
+export interface Properties {
     CarrierGatewayId?: Value<string>
     DestinationCidrBlock?: Value<string>
     DestinationIpv6CidrBlock?: Value<string>
@@ -38,10 +38,11 @@ export interface RouteProperties {
     VpcPeeringConnectionId?: Value<string>
 }
 
-export default class Route extends ResourceBase<RouteProperties> {
+class Route extends ResourceBase<Properties> {
 
 
-    constructor(properties: RouteProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::Route', properties)
     }
 }
+export { Route as R }

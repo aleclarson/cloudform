@@ -31,17 +31,18 @@ export class Ingress {
     }
 }
 
-export interface DBSecurityGroupProperties {
+export interface Properties {
     DBSecurityGroupIngress: List<Ingress>
     EC2VpcId?: Value<string>
     GroupDescription: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class DBSecurityGroup extends ResourceBase<DBSecurityGroupProperties> {
+class DBSecurityGroup extends ResourceBase<Properties> {
     static Ingress = Ingress
 
-    constructor(properties: DBSecurityGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::RDS::DBSecurityGroup', properties)
     }
 }
+export { DBSecurityGroup as R }

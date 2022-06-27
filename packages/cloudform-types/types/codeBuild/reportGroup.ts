@@ -42,7 +42,7 @@ export class S3ReportExportConfig {
     }
 }
 
-export interface ReportGroupProperties {
+export interface Properties {
     Type: Value<string>
     ExportConfig: ReportExportConfig
     DeleteReports?: Value<boolean>
@@ -50,11 +50,12 @@ export interface ReportGroupProperties {
     Name?: Value<string>
 }
 
-export default class ReportGroup extends ResourceBase<ReportGroupProperties> {
+class ReportGroup extends ResourceBase<Properties> {
     static ReportExportConfig = ReportExportConfig
     static S3ReportExportConfig = S3ReportExportConfig
 
-    constructor(properties: ReportGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodeBuild::ReportGroup', properties)
     }
 }
+export { ReportGroup as R }

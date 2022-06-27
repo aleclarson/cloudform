@@ -28,17 +28,18 @@ export class VpcConfiguration {
     }
 }
 
-export interface AccessPointProperties {
+export interface Properties {
     Bucket: Value<string>
     Name: Value<string>
     VpcConfiguration: VpcConfiguration
     Policy?: {[key: string]: any}
 }
 
-export default class AccessPoint extends ResourceBase<AccessPointProperties> {
+class AccessPoint extends ResourceBase<Properties> {
     static VpcConfiguration = VpcConfiguration
 
-    constructor(properties: AccessPointProperties) {
+    constructor(properties: Properties) {
         super('AWS::S3Outposts::AccessPoint', properties)
     }
 }
+export { AccessPoint as R }

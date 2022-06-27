@@ -31,14 +31,15 @@ export class TemplateInner {
     }
 }
 
-export interface TemplateProperties {
+export interface Properties {
     Template?: Template
 }
 
-export default class Template extends ResourceBase<TemplateProperties> {
+class Template extends ResourceBase<Properties> {
     static Template = TemplateInner
 
-    constructor(properties?: TemplateProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SES::Template', properties || {})
     }
 }
+export { Template as R }

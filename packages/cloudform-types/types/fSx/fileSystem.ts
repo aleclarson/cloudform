@@ -163,7 +163,7 @@ export class ClientConfigurations {
     }
 }
 
-export interface FileSystemProperties {
+export interface Properties {
     StorageType?: Value<string>
     KmsKeyId?: Value<string>
     StorageCapacity?: Value<number>
@@ -179,7 +179,7 @@ export interface FileSystemProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class FileSystem extends ResourceBase<FileSystemProperties> {
+class FileSystem extends ResourceBase<Properties> {
     static NfsExports = NfsExports
     static OpenZFSConfiguration = OpenZFSConfiguration
     static UserAndGroupQuotas = UserAndGroupQuotas
@@ -192,7 +192,8 @@ export default class FileSystem extends ResourceBase<FileSystemProperties> {
     static AuditLogConfiguration = AuditLogConfiguration
     static ClientConfigurations = ClientConfigurations
 
-    constructor(properties: FileSystemProperties) {
+    constructor(properties: Properties) {
         super('AWS::FSx::FileSystem', properties)
     }
 }
+export { FileSystem as R }

@@ -17,19 +17,25 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Channel_ from './channel'
-import PlaybackKeyPair_ from './playbackKeyPair'
-import RecordingConfiguration_ from './recordingConfiguration'
-import StreamKey_ from './streamKey'
+import * as _0 from './channel'
+import * as _1 from './playbackKeyPair'
+import * as _2 from './recordingConfiguration'
+import * as _3 from './streamKey'
 
 export namespace IVS {
-  export const Channel = Channel_
-  export const PlaybackKeyPair = PlaybackKeyPair_
-  export const RecordingConfiguration = RecordingConfiguration_
-  export const StreamKey = StreamKey_
+  export const Channel = _0.R
+  export const PlaybackKeyPair = _1.R
+  export const RecordingConfiguration = _2.R
+  export const StreamKey = _3.R
 
-  export type Channel = Channel_
-  export type PlaybackKeyPair = PlaybackKeyPair_
-  export type RecordingConfiguration = RecordingConfiguration_
-  export type StreamKey = StreamKey_
+  export type Channel = _0.R
+  export type PlaybackKeyPair = _1.R
+  export type RecordingConfiguration = _2.R
+  export type StreamKey = _3.R
+
+  export namespace RecordingConfiguration {
+    export type DestinationConfiguration = _2.DestinationConfiguration
+    export type S3DestinationConfiguration = _2.S3DestinationConfiguration
+    export type ThumbnailConfiguration = _2.ThumbnailConfiguration
+  }
 }

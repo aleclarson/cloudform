@@ -13,7 +13,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class S3MachineLearningModelResourceData {
@@ -112,13 +112,13 @@ export class ResourceDataContainer {
     }
 }
 
-export interface ResourceDefinitionProperties {
+export interface Properties {
     InitialVersion?: ResourceDefinitionVersion
     Tags?: {[key: string]: any}
     Name: Value<string>
 }
 
-export default class ResourceDefinition extends ResourceBase<ResourceDefinitionProperties> {
+class ResourceDefinition extends ResourceBase<Properties> {
     static S3MachineLearningModelResourceData = S3MachineLearningModelResourceData
     static SecretsManagerSecretResourceData = SecretsManagerSecretResourceData
     static ResourceDownloadOwnerSetting = ResourceDownloadOwnerSetting
@@ -130,7 +130,8 @@ export default class ResourceDefinition extends ResourceBase<ResourceDefinitionP
     static ResourceInstance = ResourceInstance
     static ResourceDataContainer = ResourceDataContainer
 
-    constructor(properties: ResourceDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::ResourceDefinition', properties)
     }
 }
+export { ResourceDefinition as R }

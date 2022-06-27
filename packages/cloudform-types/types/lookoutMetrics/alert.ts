@@ -39,7 +39,7 @@ export class Action {
     }
 }
 
-export interface AlertProperties {
+export interface Properties {
     AlertName?: Value<string>
     AlertDescription?: Value<string>
     AnomalyDetectorArn: Value<string>
@@ -47,12 +47,13 @@ export interface AlertProperties {
     Action: Action
 }
 
-export default class Alert extends ResourceBase<AlertProperties> {
+class Alert extends ResourceBase<Properties> {
     static SNSConfiguration = SNSConfiguration
     static LambdaConfiguration = LambdaConfiguration
     static Action = Action
 
-    constructor(properties: AlertProperties) {
+    constructor(properties: Properties) {
         super('AWS::LookoutMetrics::Alert', properties)
     }
 }
+export { Alert as R }

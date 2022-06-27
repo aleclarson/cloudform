@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ModelProperties {
+export interface Properties {
     ContentType?: Value<string>
     Description?: Value<string>
     Name?: Value<string>
@@ -30,10 +30,11 @@ export interface ModelProperties {
     Schema?: {[key: string]: any}
 }
 
-export default class Model extends ResourceBase<ModelProperties> {
+class Model extends ResourceBase<Properties> {
 
 
-    constructor(properties: ModelProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::Model', properties)
     }
 }
+export { Model as R }

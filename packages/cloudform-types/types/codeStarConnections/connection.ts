@@ -21,17 +21,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ConnectionProperties {
+export interface Properties {
     ConnectionName: Value<string>
     ProviderType?: Value<string>
     HostArn?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Connection extends ResourceBase<ConnectionProperties> {
+class Connection extends ResourceBase<Properties> {
 
 
-    constructor(properties: ConnectionProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodeStarConnections::Connection', properties)
     }
 }
+export { Connection as R }

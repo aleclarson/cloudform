@@ -12,12 +12,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface SmsTemplateProperties {
+export interface Properties {
     TemplateName: Value<string>
     TemplateDescription?: Value<string>
     DefaultSubstitutions?: Value<string>
@@ -25,10 +25,11 @@ export interface SmsTemplateProperties {
     Tags?: {[key: string]: any}
 }
 
-export default class SmsTemplate extends ResourceBase<SmsTemplateProperties> {
+class SmsTemplate extends ResourceBase<Properties> {
 
 
-    constructor(properties: SmsTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::SmsTemplate', properties)
     }
 }
+export { SmsTemplate as R }

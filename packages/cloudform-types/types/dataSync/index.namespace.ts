@@ -17,40 +17,68 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import LocationNFS_ from './locationNfs'
-import LocationHDFS_ from './locationHdfs'
-import Agent_ from './agent'
-import LocationEFS_ from './locationEfs'
-import LocationFSxLustre_ from './locationFSxLustre'
-import LocationFSxWindows_ from './locationFSxWindows'
-import LocationS3_ from './locationS3'
-import Task_ from './task'
-import LocationObjectStorage_ from './locationObjectStorage'
-import LocationFSxOpenZFS_ from './locationFSxOpenZfs'
-import LocationSMB_ from './locationSmb'
+import * as _0 from './locationNfs'
+import * as _1 from './locationHdfs'
+import * as _2 from './agent'
+import * as _3 from './locationEfs'
+import * as _4 from './locationFSxLustre'
+import * as _5 from './locationFSxWindows'
+import * as _6 from './locationS3'
+import * as _7 from './task'
+import * as _8 from './locationObjectStorage'
+import * as _9 from './locationFSxOpenZfs'
+import * as _a from './locationSmb'
 
 export namespace DataSync {
-  export const LocationNFS = LocationNFS_
-  export const LocationHDFS = LocationHDFS_
-  export const Agent = Agent_
-  export const LocationEFS = LocationEFS_
-  export const LocationFSxLustre = LocationFSxLustre_
-  export const LocationFSxWindows = LocationFSxWindows_
-  export const LocationS3 = LocationS3_
-  export const Task = Task_
-  export const LocationObjectStorage = LocationObjectStorage_
-  export const LocationFSxOpenZFS = LocationFSxOpenZFS_
-  export const LocationSMB = LocationSMB_
+  export const LocationNFS = _0.R
+  export const LocationHDFS = _1.R
+  export const Agent = _2.R
+  export const LocationEFS = _3.R
+  export const LocationFSxLustre = _4.R
+  export const LocationFSxWindows = _5.R
+  export const LocationS3 = _6.R
+  export const Task = _7.R
+  export const LocationObjectStorage = _8.R
+  export const LocationFSxOpenZFS = _9.R
+  export const LocationSMB = _a.R
 
-  export type LocationNFS = LocationNFS_
-  export type LocationHDFS = LocationHDFS_
-  export type Agent = Agent_
-  export type LocationEFS = LocationEFS_
-  export type LocationFSxLustre = LocationFSxLustre_
-  export type LocationFSxWindows = LocationFSxWindows_
-  export type LocationS3 = LocationS3_
-  export type Task = Task_
-  export type LocationObjectStorage = LocationObjectStorage_
-  export type LocationFSxOpenZFS = LocationFSxOpenZFS_
-  export type LocationSMB = LocationSMB_
+  export type LocationNFS = _0.R
+  export type LocationHDFS = _1.R
+  export type Agent = _2.R
+  export type LocationEFS = _3.R
+  export type LocationFSxLustre = _4.R
+  export type LocationFSxWindows = _5.R
+  export type LocationS3 = _6.R
+  export type Task = _7.R
+  export type LocationObjectStorage = _8.R
+  export type LocationFSxOpenZFS = _9.R
+  export type LocationSMB = _a.R
+
+  export namespace LocationNFS {
+    export type OnPremConfig = _0.OnPremConfig
+    export type MountOptions = _0.MountOptions
+  }
+  export namespace LocationHDFS {
+    export type NameNode = _1.NameNode
+    export type QopConfiguration = _1.QopConfiguration
+  }
+  export namespace LocationEFS {
+    export type Ec2Config = _3.Ec2Config
+  }
+  export namespace LocationS3 {
+    export type S3Config = _6.S3Config
+  }
+  export namespace Task {
+    export type FilterRule = _7.FilterRule
+    export type Options = _7.Options
+    export type TaskSchedule = _7.TaskSchedule
+  }
+  export namespace LocationFSxOpenZFS {
+    export type NFS = _9.NFS
+    export type Protocol = _9.Protocol
+    export type MountOptions = _9.MountOptions
+  }
+  export namespace LocationSMB {
+    export type MountOptions = _a.MountOptions
+  }
 }

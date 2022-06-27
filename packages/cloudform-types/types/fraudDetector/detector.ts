@@ -113,7 +113,7 @@ export class EventType {
     }
 }
 
-export interface DetectorProperties {
+export interface Properties {
     DetectorId: Value<string>
     DetectorVersionStatus?: Value<string>
     RuleExecutionMode?: Value<string>
@@ -124,7 +124,7 @@ export interface DetectorProperties {
     AssociatedModels?: List<Model>
 }
 
-export default class Detector extends ResourceBase<DetectorProperties> {
+class Detector extends ResourceBase<Properties> {
     static Label = Label
     static EntityType = EntityType
     static Model = Model
@@ -133,7 +133,8 @@ export default class Detector extends ResourceBase<DetectorProperties> {
     static Rule = Rule
     static EventType = EventType
 
-    constructor(properties: DetectorProperties) {
+    constructor(properties: Properties) {
         super('AWS::FraudDetector::Detector', properties)
     }
 }
+export { Detector as R }

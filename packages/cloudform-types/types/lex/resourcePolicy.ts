@@ -16,15 +16,16 @@ import {Value, List} from '../dataTypes'
 
 export type Policy = {[key: string]: any}
 
-export interface ResourcePolicyProperties {
+export interface Properties {
     ResourceArn: Value<string>
     Policy: Policy
 }
 
-export default class ResourcePolicy extends ResourceBase<ResourcePolicyProperties> {
+class ResourcePolicy extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResourcePolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lex::ResourcePolicy', properties)
     }
 }
+export { ResourcePolicy as R }

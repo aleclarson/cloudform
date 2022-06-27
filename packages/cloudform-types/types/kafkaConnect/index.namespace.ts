@@ -17,10 +17,31 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Connector_ from './connector'
+import * as _0 from './connector'
 
 export namespace KafkaConnect {
-  export const Connector = Connector_
+  export const Connector = _0.R
 
-  export type Connector = Connector_
+  export type Connector = _0.R
+
+  export namespace Connector {
+    export type FirehoseLogDelivery = _0.FirehoseLogDelivery
+    export type ApacheKafkaCluster = _0.ApacheKafkaCluster
+    export type Vpc = _0.Vpc
+    export type S3LogDelivery = _0.S3LogDelivery
+    export type AutoScaling = _0.AutoScaling
+    export type WorkerConfiguration = _0.WorkerConfiguration
+    export type ScaleInPolicy = _0.ScaleInPolicy
+    export type Capacity = _0.Capacity
+    export type LogDelivery = _0.LogDelivery
+    export type KafkaClusterEncryptionInTransit = _0.KafkaClusterEncryptionInTransit
+    export type WorkerLogDelivery = _0.WorkerLogDelivery
+    export type ScaleOutPolicy = _0.ScaleOutPolicy
+    export type KafkaCluster = _0.KafkaCluster
+    export type ProvisionedCapacity = _0.ProvisionedCapacity
+    export type CloudWatchLogsLogDelivery = _0.CloudWatchLogsLogDelivery
+    export type CustomPlugin = _0.CustomPlugin
+    export type Plugin = _0.Plugin
+    export type KafkaClusterClientAuthentication = _0.KafkaClusterClientAuthentication
+  }
 }

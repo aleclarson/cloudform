@@ -29,17 +29,18 @@ export class S3Location {
     }
 }
 
-export interface ScriptProperties {
+export interface Properties {
     Version?: Value<string>
     StorageLocation: S3Location
     Tags?: List<ResourceTag>
     Name?: Value<string>
 }
 
-export default class Script extends ResourceBase<ScriptProperties> {
+class Script extends ResourceBase<Properties> {
     static S3Location = S3Location
 
-    constructor(properties: ScriptProperties) {
+    constructor(properties: Properties) {
         super('AWS::GameLift::Script', properties)
     }
 }
+export { Script as R }

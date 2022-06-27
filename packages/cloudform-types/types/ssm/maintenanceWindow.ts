@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface MaintenanceWindowProperties {
+export interface Properties {
     StartDate?: Value<string>
     Description?: Value<string>
     AllowUnassociatedTargets: Value<boolean>
@@ -36,10 +36,11 @@ export interface MaintenanceWindowProperties {
     ScheduleTimezone?: Value<string>
 }
 
-export default class MaintenanceWindow extends ResourceBase<MaintenanceWindowProperties> {
+class MaintenanceWindow extends ResourceBase<Properties> {
 
 
-    constructor(properties: MaintenanceWindowProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSM::MaintenanceWindow', properties)
     }
 }
+export { MaintenanceWindow as R }

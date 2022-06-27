@@ -69,7 +69,7 @@ export class RuleGroup {
     }
 }
 
-export interface PatchBaselineProperties {
+export interface Properties {
     OperatingSystem?: Value<string>
     Description?: Value<string>
     ApprovalRules?: RuleGroup
@@ -85,14 +85,15 @@ export interface PatchBaselineProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class PatchBaseline extends ResourceBase<PatchBaselineProperties> {
+class PatchBaseline extends ResourceBase<Properties> {
     static PatchFilter = PatchFilter
     static Rule = Rule
     static PatchFilterGroup = PatchFilterGroup
     static PatchSource = PatchSource
     static RuleGroup = RuleGroup
 
-    constructor(properties: PatchBaselineProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSM::PatchBaseline', properties)
     }
 }
+export { PatchBaseline as R }

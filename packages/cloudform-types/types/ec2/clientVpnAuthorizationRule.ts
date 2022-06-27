@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ClientVpnAuthorizationRuleProperties {
+export interface Properties {
     ClientVpnEndpointId: Value<string>
     Description?: Value<string>
     AccessGroupId?: Value<string>
@@ -29,10 +29,11 @@ export interface ClientVpnAuthorizationRuleProperties {
     AuthorizeAllGroups?: Value<boolean>
 }
 
-export default class ClientVpnAuthorizationRule extends ResourceBase<ClientVpnAuthorizationRuleProperties> {
+class ClientVpnAuthorizationRule extends ResourceBase<Properties> {
 
 
-    constructor(properties: ClientVpnAuthorizationRuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::ClientVpnAuthorizationRule', properties)
     }
 }
+export { ClientVpnAuthorizationRule as R }

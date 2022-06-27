@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RegistryProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Registry extends ResourceBase<RegistryProperties> {
+class Registry extends ResourceBase<Properties> {
 
 
-    constructor(properties: RegistryProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::Registry', properties)
     }
 }
+export { Registry as R }

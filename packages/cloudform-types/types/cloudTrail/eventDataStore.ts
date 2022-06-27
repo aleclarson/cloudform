@@ -28,7 +28,7 @@ export class AdvancedFieldSelector {
     }
 }
 
-export interface EventDataStoreProperties {
+export interface Properties {
     AdvancedEventSelectors?: List<AdvancedEventSelector>
     MultiRegionEnabled?: Value<boolean>
     Name?: Value<string>
@@ -38,11 +38,12 @@ export interface EventDataStoreProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class EventDataStore extends ResourceBase<EventDataStoreProperties> {
+class EventDataStore extends ResourceBase<Properties> {
     static AdvancedEventSelector = AdvancedEventSelector
     static AdvancedFieldSelector = AdvancedFieldSelector
 
-    constructor(properties?: EventDataStoreProperties) {
+    constructor(properties?: Properties) {
         super('AWS::CloudTrail::EventDataStore', properties || {})
     }
 }
+export { EventDataStore as R }

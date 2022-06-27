@@ -1,1 +1,1 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface SessionProperties{Status?:Value<string>;FindingPublishingFrequency?:Value<string>;}export default class Session extends ResourceBase<SessionProperties>{constructor(properties?:SessionProperties);}
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Status?:Value<string>;FindingPublishingFrequency?:Value<string>;}declare class Session extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Session as R};

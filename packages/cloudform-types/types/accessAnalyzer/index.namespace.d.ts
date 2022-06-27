@@ -1,1 +1,1 @@
-import Analyzer_ from'./analyzer';export declare namespace AccessAnalyzer{const Analyzer:typeof Analyzer_;type Analyzer=Analyzer_;}
+import*as _0 from'./analyzer';export declare namespace AccessAnalyzer{const Analyzer:typeof _0.R;type Analyzer=_0.R;namespace Analyzer{type ArchiveRule=_0.ArchiveRule;type Filter=_0.Filter;}}

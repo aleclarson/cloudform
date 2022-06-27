@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CustomerGatewayAssociationProperties {
+export interface Properties {
     GlobalNetworkId: Value<string>
     CustomerGatewayArn: Value<string>
     DeviceId: Value<string>
     LinkId?: Value<string>
 }
 
-export default class CustomerGatewayAssociation extends ResourceBase<CustomerGatewayAssociationProperties> {
+class CustomerGatewayAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: CustomerGatewayAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::NetworkManager::CustomerGatewayAssociation', properties)
     }
 }
+export { CustomerGatewayAssociation as R }

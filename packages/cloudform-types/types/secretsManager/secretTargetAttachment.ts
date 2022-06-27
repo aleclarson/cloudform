@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SecretTargetAttachmentProperties {
+export interface Properties {
     SecretId: Value<string>
     TargetType: Value<string>
     TargetId: Value<string>
 }
 
-export default class SecretTargetAttachment extends ResourceBase<SecretTargetAttachmentProperties> {
+class SecretTargetAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties: SecretTargetAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::SecretsManager::SecretTargetAttachment', properties)
     }
 }
+export { SecretTargetAttachment as R }

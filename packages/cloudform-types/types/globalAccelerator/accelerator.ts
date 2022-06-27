@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AcceleratorProperties {
+export interface Properties {
     Name: Value<string>
     IpAddressType?: Value<string>
     IpAddresses?: List<Value<string>>
@@ -30,10 +30,11 @@ export interface AcceleratorProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Accelerator extends ResourceBase<AcceleratorProperties> {
+class Accelerator extends ResourceBase<Properties> {
 
 
-    constructor(properties: AcceleratorProperties) {
+    constructor(properties: Properties) {
         super('AWS::GlobalAccelerator::Accelerator', properties)
     }
 }
+export { Accelerator as R }

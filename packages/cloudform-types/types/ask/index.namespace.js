@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const skill_1=require("./skill");var ASK;!function(ASK){ASK.Skill=skill_1.default}(ASK=exports.ASK||(exports.ASK={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.ASK=void 0;const _0=require("./skill");var ASK;!function(ASK){ASK.Skill=_0.R}(ASK=exports.ASK||(exports.ASK={}));

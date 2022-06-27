@@ -17,14 +17,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResourceGroupProperties {
+export interface Properties {
     ResourceGroupTags: List<ResourceTag>
 }
 
-export default class ResourceGroup extends ResourceBase<ResourceGroupProperties> {
+class ResourceGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResourceGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::Inspector::ResourceGroup', properties)
     }
 }
+export { ResourceGroup as R }

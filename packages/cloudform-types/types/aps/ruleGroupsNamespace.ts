@@ -15,17 +15,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RuleGroupsNamespaceProperties {
+export interface Properties {
     Workspace: Value<string>
     Name: Value<string>
     Data: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class RuleGroupsNamespace extends ResourceBase<RuleGroupsNamespaceProperties> {
+class RuleGroupsNamespace extends ResourceBase<Properties> {
 
 
-    constructor(properties: RuleGroupsNamespaceProperties) {
+    constructor(properties: Properties) {
         super('AWS::APS::RuleGroupsNamespace', properties)
     }
 }
+export { RuleGroupsNamespace as R }

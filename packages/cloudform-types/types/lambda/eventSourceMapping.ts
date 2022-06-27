@@ -77,7 +77,7 @@ export class DestinationConfig {
     }
 }
 
-export interface EventSourceMappingProperties {
+export interface Properties {
     BatchSize?: Value<number>
     BisectBatchOnFunctionError?: Value<boolean>
     DestinationConfig?: DestinationConfig
@@ -99,7 +99,7 @@ export interface EventSourceMappingProperties {
     SelfManagedEventSource?: SelfManagedEventSource
 }
 
-export default class EventSourceMapping extends ResourceBase<EventSourceMappingProperties> {
+class EventSourceMapping extends ResourceBase<Properties> {
     static SelfManagedEventSource = SelfManagedEventSource
     static Filter = Filter
     static FilterCriteria = FilterCriteria
@@ -108,7 +108,8 @@ export default class EventSourceMapping extends ResourceBase<EventSourceMappingP
     static Endpoints = Endpoints
     static DestinationConfig = DestinationConfig
 
-    constructor(properties: EventSourceMappingProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lambda::EventSourceMapping', properties)
     }
 }
+export { EventSourceMapping as R }

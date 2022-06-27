@@ -37,18 +37,19 @@ export class FunctionMetadata {
     }
 }
 
-export interface FunctionProperties {
+export interface Properties {
     AutoPublish?: Value<boolean>
     FunctionCode?: Value<string>
     FunctionConfig?: FunctionConfig
     Name: Value<string>
 }
 
-export default class Function extends ResourceBase<FunctionProperties> {
+class Function extends ResourceBase<Properties> {
     static FunctionConfig = FunctionConfig
     static FunctionMetadata = FunctionMetadata
 
-    constructor(properties: FunctionProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFront::Function', properties)
     }
 }
+export { Function as R }

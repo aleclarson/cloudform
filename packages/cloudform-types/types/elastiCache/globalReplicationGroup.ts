@@ -48,7 +48,7 @@ export class GlobalReplicationGroupMember {
     }
 }
 
-export interface GlobalReplicationGroupProperties {
+export interface Properties {
     GlobalReplicationGroupIdSuffix?: Value<string>
     AutomaticFailoverEnabled?: Value<boolean>
     CacheNodeType?: Value<string>
@@ -60,12 +60,13 @@ export interface GlobalReplicationGroupProperties {
     RegionalConfigurations?: List<RegionalConfiguration>
 }
 
-export default class GlobalReplicationGroup extends ResourceBase<GlobalReplicationGroupProperties> {
+class GlobalReplicationGroup extends ResourceBase<Properties> {
     static RegionalConfiguration = RegionalConfiguration
     static ReshardingConfiguration = ReshardingConfiguration
     static GlobalReplicationGroupMember = GlobalReplicationGroupMember
 
-    constructor(properties: GlobalReplicationGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElastiCache::GlobalReplicationGroup', properties)
     }
 }
+export { GlobalReplicationGroup as R }

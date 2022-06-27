@@ -29,7 +29,7 @@ export class TagSpecification {
     }
 }
 
-export interface CapacityReservationProperties {
+export interface Properties {
     Tenancy?: Value<string>
     EndDateType?: Value<string>
     TagSpecifications?: List<TagSpecification>
@@ -45,10 +45,11 @@ export interface CapacityReservationProperties {
     InstanceMatchCriteria?: Value<string>
 }
 
-export default class CapacityReservation extends ResourceBase<CapacityReservationProperties> {
+class CapacityReservation extends ResourceBase<Properties> {
     static TagSpecification = TagSpecification
 
-    constructor(properties: CapacityReservationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::CapacityReservation', properties)
     }
 }
+export { CapacityReservation as R }

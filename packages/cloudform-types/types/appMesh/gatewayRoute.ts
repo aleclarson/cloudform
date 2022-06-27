@@ -236,7 +236,7 @@ export class HttpGatewayRoute {
     }
 }
 
-export interface GatewayRouteProperties {
+export interface Properties {
     MeshName: Value<string>
     VirtualGatewayName: Value<string>
     MeshOwner?: Value<string>
@@ -245,7 +245,7 @@ export interface GatewayRouteProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class GatewayRoute extends ResourceBase<GatewayRouteProperties> {
+class GatewayRoute extends ResourceBase<Properties> {
     static HttpQueryParameterMatch = HttpQueryParameterMatch
     static HttpGatewayRoutePrefixRewrite = HttpGatewayRoutePrefixRewrite
     static HttpGatewayRouteHeaderMatch = HttpGatewayRouteHeaderMatch
@@ -270,7 +270,8 @@ export default class GatewayRoute extends ResourceBase<GatewayRouteProperties> {
     static HttpPathMatch = HttpPathMatch
     static HttpGatewayRoute = HttpGatewayRoute
 
-    constructor(properties: GatewayRouteProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppMesh::GatewayRoute', properties)
     }
 }
+export { GatewayRoute as R }

@@ -40,7 +40,7 @@ export class ConfigurationOptionSetting {
     }
 }
 
-export interface ConfigurationTemplateProperties {
+export interface Properties {
     ApplicationName: Value<string>
     Description?: Value<string>
     EnvironmentId?: Value<string>
@@ -50,11 +50,12 @@ export interface ConfigurationTemplateProperties {
     SourceConfiguration?: SourceConfiguration
 }
 
-export default class ConfigurationTemplate extends ResourceBase<ConfigurationTemplateProperties> {
+class ConfigurationTemplate extends ResourceBase<Properties> {
     static SourceConfiguration = SourceConfiguration
     static ConfigurationOptionSetting = ConfigurationOptionSetting
 
-    constructor(properties: ConfigurationTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElasticBeanstalk::ConfigurationTemplate', properties)
     }
 }
+export { ConfigurationTemplate as R }

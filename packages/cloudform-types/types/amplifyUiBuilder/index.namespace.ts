@@ -17,13 +17,39 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Component_ from './component'
-import Theme_ from './theme'
+import * as _0 from './component'
+import * as _1 from './theme'
 
 export namespace AmplifyUIBuilder {
-  export const Component = Component_
-  export const Theme = Theme_
+  export const Component = _0.R
+  export const Theme = _1.R
 
-  export type Component = Component_
-  export type Theme = Theme_
+  export type Component = _0.R
+  export type Theme = _1.R
+
+  export namespace Component {
+    export type Predicate = _0.Predicate
+    export type ComponentOverrides = _0.ComponentOverrides
+    export type ComponentOverridesValue = _0.ComponentOverridesValue
+    export type ComponentVariantValues = _0.ComponentVariantValues
+    export type ComponentEvents = _0.ComponentEvents
+    export type ComponentBindingPropertiesValueProperties = _0.ComponentBindingPropertiesValueProperties
+    export type SortProperty = _0.SortProperty
+    export type ComponentDataConfiguration = _0.ComponentDataConfiguration
+    export type ActionParameters = _0.ActionParameters
+    export type ComponentChild = _0.ComponentChild
+    export type ComponentBindingPropertiesValue = _0.ComponentBindingPropertiesValue
+    export type ComponentConditionProperty = _0.ComponentConditionProperty
+    export type MutationActionSetStateParameter = _0.MutationActionSetStateParameter
+    export type ComponentVariant = _0.ComponentVariant
+    export type ComponentProperties = _0.ComponentProperties
+    export type ComponentProperty = _0.ComponentProperty
+    export type FormBindings = _0.FormBindings
+    export type ComponentEvent = _0.ComponentEvent
+    export type ComponentPropertyBindingProperties = _0.ComponentPropertyBindingProperties
+  }
+  export namespace Theme {
+    export type ThemeValues = _1.ThemeValues
+    export type ThemeValue = _1.ThemeValue
+  }
 }

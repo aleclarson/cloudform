@@ -17,13 +17,31 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import BudgetsAction_ from './budgetsAction'
-import Budget_ from './budget'
+import * as _0 from './budgetsAction'
+import * as _1 from './budget'
 
 export namespace Budgets {
-  export const BudgetsAction = BudgetsAction_
-  export const Budget = Budget_
+  export const BudgetsAction = _0.R
+  export const Budget = _1.R
 
-  export type BudgetsAction = BudgetsAction_
-  export type Budget = Budget_
+  export type BudgetsAction = _0.R
+  export type Budget = _1.R
+
+  export namespace BudgetsAction {
+    export type IamActionDefinition = _0.IamActionDefinition
+    export type Definition = _0.Definition
+    export type ScpActionDefinition = _0.ScpActionDefinition
+    export type SsmActionDefinition = _0.SsmActionDefinition
+    export type ActionThreshold = _0.ActionThreshold
+    export type Subscriber = _0.Subscriber
+  }
+  export namespace Budget {
+    export type BudgetData = _1.BudgetData
+    export type Subscriber = _1.Subscriber
+    export type TimePeriod = _1.TimePeriod
+    export type CostTypes = _1.CostTypes
+    export type NotificationWithSubscribers = _1.NotificationWithSubscribers
+    export type Notification = _1.Notification
+    export type Spend = _1.Spend
+  }
 }

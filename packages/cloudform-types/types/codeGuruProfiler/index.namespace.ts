@@ -17,10 +17,14 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ProfilingGroup_ from './profilingGroup'
+import * as _0 from './profilingGroup'
 
 export namespace CodeGuruProfiler {
-  export const ProfilingGroup = ProfilingGroup_
+  export const ProfilingGroup = _0.R
 
-  export type ProfilingGroup = ProfilingGroup_
+  export type ProfilingGroup = _0.R
+
+  export namespace ProfilingGroup {
+    export type Channel = _0.Channel
+  }
 }

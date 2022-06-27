@@ -29,7 +29,7 @@ export class DefinitionParameter {
     }
 }
 
-export interface ServiceActionProperties {
+export interface Properties {
     AcceptLanguage?: Value<string>
     Name: Value<string>
     DefinitionType: Value<string>
@@ -37,10 +37,11 @@ export interface ServiceActionProperties {
     Description?: Value<string>
 }
 
-export default class ServiceAction extends ResourceBase<ServiceActionProperties> {
+class ServiceAction extends ResourceBase<Properties> {
     static DefinitionParameter = DefinitionParameter
 
-    constructor(properties: ServiceActionProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::ServiceAction', properties)
     }
 }
+export { ServiceAction as R }

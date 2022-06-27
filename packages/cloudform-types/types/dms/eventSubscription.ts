@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface EventSubscriptionProperties {
+export interface Properties {
     SourceType?: Value<string>
     EventCategories?: List<Value<string>>
     Enabled?: Value<boolean>
@@ -32,10 +32,11 @@ export interface EventSubscriptionProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class EventSubscription extends ResourceBase<EventSubscriptionProperties> {
+class EventSubscription extends ResourceBase<Properties> {
 
 
-    constructor(properties: EventSubscriptionProperties) {
+    constructor(properties: Properties) {
         super('AWS::DMS::EventSubscription', properties)
     }
 }
+export { EventSubscription as R }

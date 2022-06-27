@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPCPeeringConnectionProperties {
+export interface Properties {
     PeerOwnerId?: Value<string>
     PeerRegion?: Value<string>
     PeerRoleArn?: Value<string>
@@ -31,10 +31,11 @@ export interface VPCPeeringConnectionProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class VPCPeeringConnection extends ResourceBase<VPCPeeringConnectionProperties> {
+class VPCPeeringConnection extends ResourceBase<Properties> {
 
 
-    constructor(properties: VPCPeeringConnectionProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::VPCPeeringConnection', properties)
     }
 }
+export { VPCPeeringConnection as R }

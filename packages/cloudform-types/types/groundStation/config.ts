@@ -152,13 +152,13 @@ export class Eirp {
     }
 }
 
-export interface ConfigProperties {
+export interface Properties {
     Name: Value<string>
     Tags?: List<ResourceTag>
     ConfigData: ConfigData
 }
 
-export default class Config extends ResourceBase<ConfigProperties> {
+class Config extends ResourceBase<Properties> {
     static S3RecordingConfig = S3RecordingConfig
     static UplinkEchoConfig = UplinkEchoConfig
     static DataflowEndpointConfig = DataflowEndpointConfig
@@ -175,7 +175,8 @@ export default class Config extends ResourceBase<ConfigProperties> {
     static DecodeConfig = DecodeConfig
     static Eirp = Eirp
 
-    constructor(properties: ConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::GroundStation::Config', properties)
     }
 }
+export { Config as R }

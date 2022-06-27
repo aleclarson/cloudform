@@ -17,16 +17,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface GCMChannelProperties {
+export interface Properties {
     ApiKey: Value<string>
     Enabled?: Value<boolean>
     ApplicationId: Value<string>
 }
 
-export default class GCMChannel extends ResourceBase<GCMChannelProperties> {
+class GCMChannel extends ResourceBase<Properties> {
 
 
-    constructor(properties: GCMChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::GCMChannel', properties)
     }
 }
+export { GCMChannel as R }

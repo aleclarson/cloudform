@@ -17,10 +17,15 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import GitHubRepository_ from './gitHubRepository'
+import * as _0 from './gitHubRepository'
 
 export namespace CodeStar {
-  export const GitHubRepository = GitHubRepository_
+  export const GitHubRepository = _0.R
 
-  export type GitHubRepository = GitHubRepository_
+  export type GitHubRepository = _0.R
+
+  export namespace GitHubRepository {
+    export type Code = _0.Code
+    export type S3 = _0.S3
+  }
 }

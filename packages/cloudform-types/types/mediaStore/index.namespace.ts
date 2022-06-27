@@ -17,10 +17,16 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Container_ from './container'
+import * as _0 from './container'
 
 export namespace MediaStore {
-  export const Container = Container_
+  export const Container = _0.R
 
-  export type Container = Container_
+  export type Container = _0.R
+
+  export namespace Container {
+    export type MetricPolicy = _0.MetricPolicy
+    export type MetricPolicyRule = _0.MetricPolicyRule
+    export type CorsRule = _0.CorsRule
+  }
 }

@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DashboardProperties {
+export interface Properties {
     DashboardName?: Value<string>
     DashboardBody: Value<string>
 }
 
-export default class Dashboard extends ResourceBase<DashboardProperties> {
+class Dashboard extends ResourceBase<Properties> {
 
 
-    constructor(properties: DashboardProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudWatch::Dashboard', properties)
     }
 }
+export { Dashboard as R }

@@ -17,28 +17,76 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Endpoint_ from './endpoint'
-import ApiDestination_ from './apiDestination'
-import Rule_ from './rule'
-import Archive_ from './archive'
-import Connection_ from './connection'
-import EventBusPolicy_ from './eventBusPolicy'
-import EventBus_ from './eventBus'
+import * as _0 from './endpoint'
+import * as _1 from './apiDestination'
+import * as _2 from './rule'
+import * as _3 from './archive'
+import * as _4 from './connection'
+import * as _5 from './eventBusPolicy'
+import * as _6 from './eventBus'
 
 export namespace Events {
-  export const Endpoint = Endpoint_
-  export const ApiDestination = ApiDestination_
-  export const Rule = Rule_
-  export const Archive = Archive_
-  export const Connection = Connection_
-  export const EventBusPolicy = EventBusPolicy_
-  export const EventBus = EventBus_
+  export const Endpoint = _0.R
+  export const ApiDestination = _1.R
+  export const Rule = _2.R
+  export const Archive = _3.R
+  export const Connection = _4.R
+  export const EventBusPolicy = _5.R
+  export const EventBus = _6.R
 
-  export type Endpoint = Endpoint_
-  export type ApiDestination = ApiDestination_
-  export type Rule = Rule_
-  export type Archive = Archive_
-  export type Connection = Connection_
-  export type EventBusPolicy = EventBusPolicy_
-  export type EventBus = EventBus_
+  export type Endpoint = _0.R
+  export type ApiDestination = _1.R
+  export type Rule = _2.R
+  export type Archive = _3.R
+  export type Connection = _4.R
+  export type EventBusPolicy = _5.R
+  export type EventBus = _6.R
+
+  export namespace Endpoint {
+    export type Secondary = _0.Secondary
+    export type ReplicationConfig = _0.ReplicationConfig
+    export type EndpointEventBus = _0.EndpointEventBus
+    export type RoutingConfig = _0.RoutingConfig
+    export type FailoverConfig = _0.FailoverConfig
+    export type Primary = _0.Primary
+  }
+  export namespace Rule {
+    export type SageMakerPipelineParameter = _2.SageMakerPipelineParameter
+    export type BatchRetryStrategy = _2.BatchRetryStrategy
+    export type PlacementConstraint = _2.PlacementConstraint
+    export type HttpParameters = _2.HttpParameters
+    export type BatchArrayProperties = _2.BatchArrayProperties
+    export type BatchParameters = _2.BatchParameters
+    export type RunCommandParameters = _2.RunCommandParameters
+    export type DeadLetterConfig = _2.DeadLetterConfig
+    export type NetworkConfiguration = _2.NetworkConfiguration
+    export type RunCommandTarget = _2.RunCommandTarget
+    export type CapacityProviderStrategyItem = _2.CapacityProviderStrategyItem
+    export type InputTransformer = _2.InputTransformer
+    export type SqsParameters = _2.SqsParameters
+    export type RetryPolicy = _2.RetryPolicy
+    export type PlacementStrategy = _2.PlacementStrategy
+    export type Target = _2.Target
+    export type KinesisParameters = _2.KinesisParameters
+    export type SageMakerPipelineParameters = _2.SageMakerPipelineParameters
+    export type Tag = _2.Tag
+    export type RedshiftDataParameters = _2.RedshiftDataParameters
+    export type EcsParameters = _2.EcsParameters
+    export type AwsVpcConfiguration = _2.AwsVpcConfiguration
+  }
+  export namespace Connection {
+    export type ConnectionHttpParameters = _4.ConnectionHttpParameters
+    export type ApiKeyAuthParameters = _4.ApiKeyAuthParameters
+    export type AuthParameters = _4.AuthParameters
+    export type BasicAuthParameters = _4.BasicAuthParameters
+    export type Parameter = _4.Parameter
+    export type OAuthParameters = _4.OAuthParameters
+    export type ClientParameters = _4.ClientParameters
+  }
+  export namespace EventBusPolicy {
+    export type Condition = _5.Condition
+  }
+  export namespace EventBus {
+    export type TagEntry = _6.TagEntry
+  }
 }

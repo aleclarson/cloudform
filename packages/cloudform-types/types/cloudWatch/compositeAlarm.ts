@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CompositeAlarmProperties {
+export interface Properties {
     AlarmActions?: List<Value<string>>
     ActionsEnabled?: Value<boolean>
     AlarmName: Value<string>
@@ -32,10 +32,11 @@ export interface CompositeAlarmProperties {
     OKActions?: List<Value<string>>
 }
 
-export default class CompositeAlarm extends ResourceBase<CompositeAlarmProperties> {
+class CompositeAlarm extends ResourceBase<Properties> {
 
 
-    constructor(properties: CompositeAlarmProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudWatch::CompositeAlarm', properties)
     }
 }
+export { CompositeAlarm as R }

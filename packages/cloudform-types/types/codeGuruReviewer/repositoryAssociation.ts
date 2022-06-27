@@ -15,7 +15,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RepositoryAssociationProperties {
+export interface Properties {
     Name: Value<string>
     Type: Value<string>
     Owner?: Value<string>
@@ -24,10 +24,11 @@ export interface RepositoryAssociationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class RepositoryAssociation extends ResourceBase<RepositoryAssociationProperties> {
+class RepositoryAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: RepositoryAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodeGuruReviewer::RepositoryAssociation', properties)
     }
 }
+export { RepositoryAssociation as R }

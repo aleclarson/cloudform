@@ -26,7 +26,7 @@ export class ManifestOverridesPayload {
     }
 }
 
-export interface ApplicationInstanceProperties {
+export interface Properties {
     Name?: Value<string>
     Description?: Value<string>
     ManifestPayload: ManifestPayload
@@ -39,11 +39,12 @@ export interface ApplicationInstanceProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ApplicationInstance extends ResourceBase<ApplicationInstanceProperties> {
+class ApplicationInstance extends ResourceBase<Properties> {
     static ManifestPayload = ManifestPayload
     static ManifestOverridesPayload = ManifestOverridesPayload
 
-    constructor(properties: ApplicationInstanceProperties) {
+    constructor(properties: Properties) {
         super('AWS::Panorama::ApplicationInstance', properties)
     }
 }
+export { ApplicationInstance as R }

@@ -22,16 +22,17 @@ export class NodeConfiguration {
     }
 }
 
-export interface NodeProperties {
+export interface Properties {
     MemberId: Value<string>
     NetworkId: Value<string>
     NodeConfiguration: NodeConfiguration
 }
 
-export default class Node extends ResourceBase<NodeProperties> {
+class Node extends ResourceBase<Properties> {
     static NodeConfiguration = NodeConfiguration
 
-    constructor(properties: NodeProperties) {
+    constructor(properties: Properties) {
         super('AWS::ManagedBlockchain::Node', properties)
     }
 }
+export { Node as R }

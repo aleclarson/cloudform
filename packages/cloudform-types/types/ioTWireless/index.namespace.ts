@@ -17,37 +17,72 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ServiceProfile_ from './serviceProfile'
-import WirelessDevice_ from './wirelessDevice'
-import DeviceProfile_ from './deviceProfile'
-import MulticastGroup_ from './multicastGroup'
-import NetworkAnalyzerConfiguration_ from './networkAnalyzerConfiguration'
-import WirelessGateway_ from './wirelessGateway'
-import FuotaTask_ from './fuotaTask'
-import Destination_ from './destination'
-import TaskDefinition_ from './taskDefinition'
-import PartnerAccount_ from './partnerAccount'
+import * as _0 from './serviceProfile'
+import * as _1 from './wirelessDevice'
+import * as _2 from './deviceProfile'
+import * as _3 from './multicastGroup'
+import * as _4 from './networkAnalyzerConfiguration'
+import * as _5 from './wirelessGateway'
+import * as _6 from './fuotaTask'
+import * as _7 from './destination'
+import * as _8 from './taskDefinition'
+import * as _9 from './partnerAccount'
 
 export namespace IoTWireless {
-  export const ServiceProfile = ServiceProfile_
-  export const WirelessDevice = WirelessDevice_
-  export const DeviceProfile = DeviceProfile_
-  export const MulticastGroup = MulticastGroup_
-  export const NetworkAnalyzerConfiguration = NetworkAnalyzerConfiguration_
-  export const WirelessGateway = WirelessGateway_
-  export const FuotaTask = FuotaTask_
-  export const Destination = Destination_
-  export const TaskDefinition = TaskDefinition_
-  export const PartnerAccount = PartnerAccount_
+  export const ServiceProfile = _0.R
+  export const WirelessDevice = _1.R
+  export const DeviceProfile = _2.R
+  export const MulticastGroup = _3.R
+  export const NetworkAnalyzerConfiguration = _4.R
+  export const WirelessGateway = _5.R
+  export const FuotaTask = _6.R
+  export const Destination = _7.R
+  export const TaskDefinition = _8.R
+  export const PartnerAccount = _9.R
 
-  export type ServiceProfile = ServiceProfile_
-  export type WirelessDevice = WirelessDevice_
-  export type DeviceProfile = DeviceProfile_
-  export type MulticastGroup = MulticastGroup_
-  export type NetworkAnalyzerConfiguration = NetworkAnalyzerConfiguration_
-  export type WirelessGateway = WirelessGateway_
-  export type FuotaTask = FuotaTask_
-  export type Destination = Destination_
-  export type TaskDefinition = TaskDefinition_
-  export type PartnerAccount = PartnerAccount_
+  export type ServiceProfile = _0.R
+  export type WirelessDevice = _1.R
+  export type DeviceProfile = _2.R
+  export type MulticastGroup = _3.R
+  export type NetworkAnalyzerConfiguration = _4.R
+  export type WirelessGateway = _5.R
+  export type FuotaTask = _6.R
+  export type Destination = _7.R
+  export type TaskDefinition = _8.R
+  export type PartnerAccount = _9.R
+
+  export namespace ServiceProfile {
+    export type LoRaWANServiceProfile = _0.LoRaWANServiceProfile
+  }
+  export namespace WirelessDevice {
+    export type AbpV11 = _1.AbpV11
+    export type LoRaWANDevice = _1.LoRaWANDevice
+    export type SessionKeysAbpV11 = _1.SessionKeysAbpV11
+    export type AbpV10x = _1.AbpV10x
+    export type OtaaV11 = _1.OtaaV11
+    export type SessionKeysAbpV10x = _1.SessionKeysAbpV10x
+    export type OtaaV10x = _1.OtaaV10x
+  }
+  export namespace DeviceProfile {
+    export type LoRaWANDeviceProfile = _2.LoRaWANDeviceProfile
+  }
+  export namespace MulticastGroup {
+    export type LoRaWAN = _3.LoRaWAN
+  }
+  export namespace WirelessGateway {
+    export type LoRaWANGateway = _5.LoRaWANGateway
+  }
+  export namespace FuotaTask {
+    export type LoRaWAN = _6.LoRaWAN
+  }
+  export namespace TaskDefinition {
+    export type UpdateWirelessGatewayTaskCreate = _8.UpdateWirelessGatewayTaskCreate
+    export type LoRaWANUpdateGatewayTaskEntry = _8.LoRaWANUpdateGatewayTaskEntry
+    export type LoRaWANGatewayVersion = _8.LoRaWANGatewayVersion
+    export type LoRaWANUpdateGatewayTaskCreate = _8.LoRaWANUpdateGatewayTaskCreate
+  }
+  export namespace PartnerAccount {
+    export type SidewalkAccountInfo = _9.SidewalkAccountInfo
+    export type SidewalkUpdateAccount = _9.SidewalkUpdateAccount
+  }
 }

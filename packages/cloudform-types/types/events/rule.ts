@@ -245,7 +245,7 @@ export class AwsVpcConfiguration {
     }
 }
 
-export interface RuleProperties {
+export interface Properties {
     Description?: Value<string>
     EventBusName?: Value<string>
     EventPattern?: {[key: string]: any}
@@ -256,7 +256,7 @@ export interface RuleProperties {
     Targets?: List<Target>
 }
 
-export default class Rule extends ResourceBase<RuleProperties> {
+class Rule extends ResourceBase<Properties> {
     static SageMakerPipelineParameter = SageMakerPipelineParameter
     static BatchRetryStrategy = BatchRetryStrategy
     static PlacementConstraint = PlacementConstraint
@@ -280,7 +280,8 @@ export default class Rule extends ResourceBase<RuleProperties> {
     static EcsParameters = EcsParameters
     static AwsVpcConfiguration = AwsVpcConfiguration
 
-    constructor(properties?: RuleProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Events::Rule', properties || {})
     }
 }
+export { Rule as R }

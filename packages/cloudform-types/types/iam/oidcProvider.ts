@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface OIDCProviderProperties {
+export interface Properties {
     ClientIdList?: List<Value<string>>
     Url?: Value<string>
     ThumbprintList: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class OIDCProvider extends ResourceBase<OIDCProviderProperties> {
+class OIDCProvider extends ResourceBase<Properties> {
 
 
-    constructor(properties: OIDCProviderProperties) {
+    constructor(properties: Properties) {
         super('AWS::IAM::OIDCProvider', properties)
     }
 }
+export { OIDCProvider as R }

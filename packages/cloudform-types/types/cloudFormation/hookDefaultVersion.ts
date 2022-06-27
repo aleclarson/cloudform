@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface HookDefaultVersionProperties {
+export interface Properties {
     TypeVersionArn?: Value<string>
     TypeName?: Value<string>
     VersionId?: Value<string>
 }
 
-export default class HookDefaultVersion extends ResourceBase<HookDefaultVersionProperties> {
+class HookDefaultVersion extends ResourceBase<Properties> {
 
 
-    constructor(properties?: HookDefaultVersionProperties) {
+    constructor(properties?: Properties) {
         super('AWS::CloudFormation::HookDefaultVersion', properties || {})
     }
 }
+export { HookDefaultVersion as R }

@@ -17,16 +17,20 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import CostCategory_ from './costCategory'
-import AnomalyMonitor_ from './anomalyMonitor'
-import AnomalySubscription_ from './anomalySubscription'
+import * as _0 from './costCategory'
+import * as _1 from './anomalyMonitor'
+import * as _2 from './anomalySubscription'
 
 export namespace CE {
-  export const CostCategory = CostCategory_
-  export const AnomalyMonitor = AnomalyMonitor_
-  export const AnomalySubscription = AnomalySubscription_
+  export const CostCategory = _0.R
+  export const AnomalyMonitor = _1.R
+  export const AnomalySubscription = _2.R
 
-  export type CostCategory = CostCategory_
-  export type AnomalyMonitor = AnomalyMonitor_
-  export type AnomalySubscription = AnomalySubscription_
+  export type CostCategory = _0.R
+  export type AnomalyMonitor = _1.R
+  export type AnomalySubscription = _2.R
+
+  export namespace AnomalySubscription {
+    export type Subscriber = _2.Subscriber
+  }
 }

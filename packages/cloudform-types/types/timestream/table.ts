@@ -13,7 +13,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TableProperties {
+export interface Properties {
     DatabaseName: Value<string>
     TableName?: Value<string>
     RetentionProperties?: {[key: string]: any}
@@ -21,10 +21,11 @@ export interface TableProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Table extends ResourceBase<TableProperties> {
+class Table extends ResourceBase<Properties> {
 
 
-    constructor(properties: TableProperties) {
+    constructor(properties: Properties) {
         super('AWS::Timestream::Table', properties)
     }
 }
+export { Table as R }

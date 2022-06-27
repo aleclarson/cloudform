@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NotificationChannelProperties {
+export interface Properties {
     SnsRoleName: Value<string>
     SnsTopicArn: Value<string>
 }
 
-export default class NotificationChannel extends ResourceBase<NotificationChannelProperties> {
+class NotificationChannel extends ResourceBase<Properties> {
 
 
-    constructor(properties: NotificationChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::FMS::NotificationChannel', properties)
     }
 }
+export { NotificationChannel as R }

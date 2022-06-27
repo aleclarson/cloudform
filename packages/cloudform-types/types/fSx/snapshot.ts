@@ -20,16 +20,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SnapshotProperties {
+export interface Properties {
     VolumeId: Value<string>
     Tags?: List<ResourceTag>
     Name: Value<string>
 }
 
-export default class Snapshot extends ResourceBase<SnapshotProperties> {
+class Snapshot extends ResourceBase<Properties> {
 
 
-    constructor(properties: SnapshotProperties) {
+    constructor(properties: Properties) {
         super('AWS::FSx::Snapshot', properties)
     }
 }
+export { Snapshot as R }

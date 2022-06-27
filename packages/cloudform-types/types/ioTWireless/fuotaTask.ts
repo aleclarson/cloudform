@@ -18,7 +18,7 @@ export class LoRaWAN {
     }
 }
 
-export interface FuotaTaskProperties {
+export interface Properties {
     Name?: Value<string>
     Description?: Value<string>
     LoRaWAN: LoRaWAN
@@ -31,10 +31,11 @@ export interface FuotaTaskProperties {
     DisassociateMulticastGroup?: Value<string>
 }
 
-export default class FuotaTask extends ResourceBase<FuotaTaskProperties> {
+class FuotaTask extends ResourceBase<Properties> {
     static LoRaWAN = LoRaWAN
 
-    constructor(properties: FuotaTaskProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTWireless::FuotaTask', properties)
     }
 }
+export { FuotaTask as R }

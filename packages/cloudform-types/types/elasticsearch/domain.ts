@@ -152,7 +152,7 @@ export class EncryptionAtRestOptions {
     }
 }
 
-export interface DomainProperties {
+export interface Properties {
     AccessPolicies?: {[key: string]: any}
     AdvancedOptions?: {[key: string]: Value<string>}
     AdvancedSecurityOptions?: AdvancedSecurityOptionsInput
@@ -170,7 +170,7 @@ export interface DomainProperties {
     VPCOptions?: VPCOptions
 }
 
-export default class Domain extends ResourceBase<DomainProperties> {
+class Domain extends ResourceBase<Properties> {
     static DomainEndpointOptions = DomainEndpointOptions
     static NodeToNodeEncryptionOptions = NodeToNodeEncryptionOptions
     static ElasticsearchClusterConfig = ElasticsearchClusterConfig
@@ -185,7 +185,8 @@ export default class Domain extends ResourceBase<DomainProperties> {
     static EBSOptions = EBSOptions
     static EncryptionAtRestOptions = EncryptionAtRestOptions
 
-    constructor(properties?: DomainProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Elasticsearch::Domain', properties || {})
     }
 }
+export { Domain as R }

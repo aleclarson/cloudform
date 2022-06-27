@@ -58,7 +58,7 @@ export class PosixUser {
     }
 }
 
-export interface AccessPointProperties {
+export interface Properties {
     ClientToken?: Value<string>
     AccessPointTags?: List<AccessPointTag>
     FileSystemId: Value<string>
@@ -66,13 +66,14 @@ export interface AccessPointProperties {
     RootDirectory?: RootDirectory
 }
 
-export default class AccessPoint extends ResourceBase<AccessPointProperties> {
+class AccessPoint extends ResourceBase<Properties> {
     static AccessPointTag = AccessPointTag
     static RootDirectory = RootDirectory
     static CreationInfo = CreationInfo
     static PosixUser = PosixUser
 
-    constructor(properties: AccessPointProperties) {
+    constructor(properties: Properties) {
         super('AWS::EFS::AccessPoint', properties)
     }
 }
+export { AccessPoint as R }

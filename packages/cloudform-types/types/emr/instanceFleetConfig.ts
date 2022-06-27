@@ -100,7 +100,7 @@ export class EbsBlockDeviceConfig {
     }
 }
 
-export interface InstanceFleetConfigProperties {
+export interface Properties {
     ClusterId: Value<string>
     InstanceFleetType: Value<string>
     InstanceTypeConfigs?: List<InstanceTypeConfig>
@@ -110,7 +110,7 @@ export interface InstanceFleetConfigProperties {
     TargetSpotCapacity?: Value<number>
 }
 
-export default class InstanceFleetConfig extends ResourceBase<InstanceFleetConfigProperties> {
+class InstanceFleetConfig extends ResourceBase<Properties> {
     static Configuration = Configuration
     static InstanceTypeConfig = InstanceTypeConfig
     static SpotProvisioningSpecification = SpotProvisioningSpecification
@@ -120,7 +120,8 @@ export default class InstanceFleetConfig extends ResourceBase<InstanceFleetConfi
     static InstanceFleetProvisioningSpecifications = InstanceFleetProvisioningSpecifications
     static EbsBlockDeviceConfig = EbsBlockDeviceConfig
 
-    constructor(properties: InstanceFleetConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::EMR::InstanceFleetConfig', properties)
     }
 }
+export { InstanceFleetConfig as R }

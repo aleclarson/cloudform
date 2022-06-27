@@ -2,7 +2,7 @@
  * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase} from '../resource'
+import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Subscriber {
@@ -15,16 +15,7 @@ export class Subscriber {
     }
 }
 
-export class ResourceTag {
-    Key!: Value<string>
-    Value!: Value<string>
-
-    constructor(properties: ResourceTag) {
-        Object.assign(this, properties)
-    }
-}
-
-export interface AnomalySubscriptionProperties {
+export interface Properties {
     SubscriptionName: Value<string>
     MonitorArnList: List<Value<string>>
     Subscribers: List<Subscriber>
@@ -33,11 +24,12 @@ export interface AnomalySubscriptionProperties {
     ResourceTags?: List<ResourceTag>
 }
 
-export default class AnomalySubscription extends ResourceBase<AnomalySubscriptionProperties> {
+class AnomalySubscription extends ResourceBase<Properties> {
     static Subscriber = Subscriber
     static ResourceTag = ResourceTag
 
-    constructor(properties: AnomalySubscriptionProperties) {
+    constructor(properties: Properties) {
         super('AWS::CE::AnomalySubscription', properties)
     }
 }
+export { AnomalySubscription as R }

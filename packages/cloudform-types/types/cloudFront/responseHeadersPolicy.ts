@@ -166,11 +166,11 @@ export class CustomHeadersConfig {
     }
 }
 
-export interface ResponseHeadersPolicyProperties {
+export interface Properties {
     ResponseHeadersPolicyConfig: ResponseHeadersPolicyConfig
 }
 
-export default class ResponseHeadersPolicy extends ResourceBase<ResponseHeadersPolicyProperties> {
+class ResponseHeadersPolicy extends ResourceBase<Properties> {
     static XSSProtection = XSSProtection
     static ResponseHeadersPolicyConfig = ResponseHeadersPolicyConfig
     static AccessControlExposeHeaders = AccessControlExposeHeaders
@@ -187,7 +187,8 @@ export default class ResponseHeadersPolicy extends ResourceBase<ResponseHeadersP
     static ContentTypeOptions = ContentTypeOptions
     static CustomHeadersConfig = CustomHeadersConfig
 
-    constructor(properties: ResponseHeadersPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFront::ResponseHeadersPolicy', properties)
     }
 }
+export { ResponseHeadersPolicy as R }

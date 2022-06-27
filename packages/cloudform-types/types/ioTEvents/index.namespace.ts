@@ -17,16 +17,70 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Input_ from './input'
-import AlarmModel_ from './alarmModel'
-import DetectorModel_ from './detectorModel'
+import * as _0 from './input'
+import * as _1 from './alarmModel'
+import * as _2 from './detectorModel'
 
 export namespace IoTEvents {
-  export const Input = Input_
-  export const AlarmModel = AlarmModel_
-  export const DetectorModel = DetectorModel_
+  export const Input = _0.R
+  export const AlarmModel = _1.R
+  export const DetectorModel = _2.R
 
-  export type Input = Input_
-  export type AlarmModel = AlarmModel_
-  export type DetectorModel = DetectorModel_
+  export type Input = _0.R
+  export type AlarmModel = _1.R
+  export type DetectorModel = _2.R
+
+  export namespace Input {
+    export type Attribute = _0.Attribute
+    export type InputDefinition = _0.InputDefinition
+  }
+  export namespace AlarmModel {
+    export type AlarmRule = _1.AlarmRule
+    export type DynamoDBv2 = _1.DynamoDBv2
+    export type AssetPropertyTimestamp = _1.AssetPropertyTimestamp
+    export type IotTopicPublish = _1.IotTopicPublish
+    export type AssetPropertyValue = _1.AssetPropertyValue
+    export type IotEvents = _1.IotEvents
+    export type Payload = _1.Payload
+    export type InitializationConfiguration = _1.InitializationConfiguration
+    export type Sns = _1.Sns
+    export type AlarmCapabilities = _1.AlarmCapabilities
+    export type Sqs = _1.Sqs
+    export type AlarmAction = _1.AlarmAction
+    export type Firehose = _1.Firehose
+    export type SimpleRule = _1.SimpleRule
+    export type AcknowledgeFlow = _1.AcknowledgeFlow
+    export type DynamoDB = _1.DynamoDB
+    export type Lambda = _1.Lambda
+    export type AssetPropertyVariant = _1.AssetPropertyVariant
+    export type IotSiteWise = _1.IotSiteWise
+    export type AlarmEventActions = _1.AlarmEventActions
+  }
+  export namespace DetectorModel {
+    export type SetTimer = _2.SetTimer
+    export type ResetTimer = _2.ResetTimer
+    export type IotEvents = _2.IotEvents
+    export type TransitionEvent = _2.TransitionEvent
+    export type IotSiteWise = _2.IotSiteWise
+    export type DynamoDB = _2.DynamoDB
+    export type Firehose = _2.Firehose
+    export type ClearTimer = _2.ClearTimer
+    export type State = _2.State
+    export type Event = _2.Event
+    export type Sns = _2.Sns
+    export type OnExit = _2.OnExit
+    export type Sqs = _2.Sqs
+    export type DetectorModelDefinition = _2.DetectorModelDefinition
+    export type IotTopicPublish = _2.IotTopicPublish
+    export type Action = _2.Action
+    export type AssetPropertyTimestamp = _2.AssetPropertyTimestamp
+    export type DynamoDBv2 = _2.DynamoDBv2
+    export type OnInput = _2.OnInput
+    export type AssetPropertyVariant = _2.AssetPropertyVariant
+    export type SetVariable = _2.SetVariable
+    export type Payload = _2.Payload
+    export type OnEnter = _2.OnEnter
+    export type AssetPropertyValue = _2.AssetPropertyValue
+    export type Lambda = _2.Lambda
+  }
 }

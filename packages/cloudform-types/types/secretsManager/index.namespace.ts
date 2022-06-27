@@ -17,19 +17,28 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import RotationSchedule_ from './rotationSchedule'
-import Secret_ from './secret'
-import ResourcePolicy_ from './resourcePolicy'
-import SecretTargetAttachment_ from './secretTargetAttachment'
+import * as _0 from './rotationSchedule'
+import * as _1 from './secret'
+import * as _2 from './resourcePolicy'
+import * as _3 from './secretTargetAttachment'
 
 export namespace SecretsManager {
-  export const RotationSchedule = RotationSchedule_
-  export const Secret = Secret_
-  export const ResourcePolicy = ResourcePolicy_
-  export const SecretTargetAttachment = SecretTargetAttachment_
+  export const RotationSchedule = _0.R
+  export const Secret = _1.R
+  export const ResourcePolicy = _2.R
+  export const SecretTargetAttachment = _3.R
 
-  export type RotationSchedule = RotationSchedule_
-  export type Secret = Secret_
-  export type ResourcePolicy = ResourcePolicy_
-  export type SecretTargetAttachment = SecretTargetAttachment_
+  export type RotationSchedule = _0.R
+  export type Secret = _1.R
+  export type ResourcePolicy = _2.R
+  export type SecretTargetAttachment = _3.R
+
+  export namespace RotationSchedule {
+    export type RotationRules = _0.RotationRules
+    export type HostedRotationLambda = _0.HostedRotationLambda
+  }
+  export namespace Secret {
+    export type ReplicaRegion = _1.ReplicaRegion
+    export type GenerateSecretString = _1.GenerateSecretString
+  }
 }

@@ -42,7 +42,7 @@ export class EventIntegrationAssociation {
     }
 }
 
-export interface EventIntegrationProperties {
+export interface Properties {
     Description?: Value<string>
     Name: Value<string>
     EventBridgeBus: Value<string>
@@ -50,12 +50,13 @@ export interface EventIntegrationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class EventIntegration extends ResourceBase<EventIntegrationProperties> {
+class EventIntegration extends ResourceBase<Properties> {
     static Metadata = Metadata
     static EventFilter = EventFilter
     static EventIntegrationAssociation = EventIntegrationAssociation
 
-    constructor(properties: EventIntegrationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppIntegrations::EventIntegration', properties)
     }
 }
+export { EventIntegration as R }

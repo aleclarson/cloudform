@@ -127,13 +127,13 @@ export class TableIdentifier {
     }
 }
 
-export interface TableProperties {
+export interface Properties {
     TableInput: TableInput
     DatabaseName: Value<string>
     CatalogId: Value<string>
 }
 
-export default class Table extends ResourceBase<TableProperties> {
+class Table extends ResourceBase<Properties> {
     static Column = Column
     static TableInput = TableInput
     static SerdeInfo = SerdeInfo
@@ -144,7 +144,8 @@ export default class Table extends ResourceBase<TableProperties> {
     static SchemaReference = SchemaReference
     static TableIdentifier = TableIdentifier
 
-    constructor(properties: TableProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::Table', properties)
     }
 }
+export { Table as R }

@@ -39,16 +39,17 @@ export class TransformationConfiguration {
     }
 }
 
-export interface AccessPointProperties {
+export interface Properties {
     Name?: Value<string>
     ObjectLambdaConfiguration: ObjectLambdaConfiguration
 }
 
-export default class AccessPoint extends ResourceBase<AccessPointProperties> {
+class AccessPoint extends ResourceBase<Properties> {
     static ObjectLambdaConfiguration = ObjectLambdaConfiguration
     static TransformationConfiguration = TransformationConfiguration
 
-    constructor(properties: AccessPointProperties) {
+    constructor(properties: Properties) {
         super('AWS::S3ObjectLambda::AccessPoint', properties)
     }
 }
+export { AccessPoint as R }

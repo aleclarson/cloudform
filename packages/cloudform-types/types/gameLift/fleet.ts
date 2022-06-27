@@ -87,7 +87,7 @@ export class RuntimeConfiguration {
     }
 }
 
-export interface FleetProperties {
+export interface Properties {
     CertificateConfiguration?: CertificateConfiguration
     Description?: Value<string>
     DesiredEC2Instances?: Value<number>
@@ -112,7 +112,7 @@ export interface FleetProperties {
     ServerLaunchPath?: Value<string>
 }
 
-export default class Fleet extends ResourceBase<FleetProperties> {
+class Fleet extends ResourceBase<Properties> {
     static LocationCapacity = LocationCapacity
     static CertificateConfiguration = CertificateConfiguration
     static LocationConfiguration = LocationConfiguration
@@ -121,7 +121,8 @@ export default class Fleet extends ResourceBase<FleetProperties> {
     static ResourceCreationLimitPolicy = ResourceCreationLimitPolicy
     static RuntimeConfiguration = RuntimeConfiguration
 
-    constructor(properties?: FleetProperties) {
+    constructor(properties?: Properties) {
         super('AWS::GameLift::Fleet', properties || {})
     }
 }
+export { Fleet as R }

@@ -22,14 +22,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DNSSECProperties {
+export interface Properties {
     HostedZoneId: Value<string>
 }
 
-export default class DNSSEC extends ResourceBase<DNSSECProperties> {
+class DNSSEC extends ResourceBase<Properties> {
 
 
-    constructor(properties: DNSSECProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53::DNSSEC', properties)
     }
 }
+export { DNSSEC as R }

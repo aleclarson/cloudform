@@ -353,7 +353,7 @@ export class RedshiftSettings {
     }
 }
 
-export interface EndpointProperties {
+export interface Properties {
     SybaseSettings?: SybaseSettings
     RedisSettings?: RedisSettings
     OracleSettings?: OracleSettings
@@ -387,7 +387,7 @@ export interface EndpointProperties {
     PostgreSqlSettings?: PostgreSqlSettings
 }
 
-export default class Endpoint extends ResourceBase<EndpointProperties> {
+class Endpoint extends ResourceBase<Properties> {
     static KinesisSettings = KinesisSettings
     static S3Settings = S3Settings
     static PostgreSqlSettings = PostgreSqlSettings
@@ -406,7 +406,8 @@ export default class Endpoint extends ResourceBase<EndpointProperties> {
     static SybaseSettings = SybaseSettings
     static RedshiftSettings = RedshiftSettings
 
-    constructor(properties: EndpointProperties) {
+    constructor(properties: Properties) {
         super('AWS::DMS::Endpoint', properties)
     }
 }
+export { Endpoint as R }

@@ -49,20 +49,21 @@ export class GatewayPlatform {
     }
 }
 
-export interface GatewayProperties {
+export interface Properties {
     GatewayName: Value<string>
     GatewayPlatform: GatewayPlatform
     Tags?: List<ResourceTag>
     GatewayCapabilitySummaries?: List<GatewayCapabilitySummary>
 }
 
-export default class Gateway extends ResourceBase<GatewayProperties> {
+class Gateway extends ResourceBase<Properties> {
     static Greengrass = Greengrass
     static GreengrassV2 = GreengrassV2
     static GatewayCapabilitySummary = GatewayCapabilitySummary
     static GatewayPlatform = GatewayPlatform
 
-    constructor(properties: GatewayProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTSiteWise::Gateway', properties)
     }
 }
+export { Gateway as R }

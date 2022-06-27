@@ -28,7 +28,7 @@ export class ConformancePackInputParameter {
     }
 }
 
-export interface OrganizationConformancePackProperties {
+export interface Properties {
     OrganizationConformancePackName: Value<string>
     TemplateS3Uri?: Value<string>
     TemplateBody?: Value<string>
@@ -38,10 +38,11 @@ export interface OrganizationConformancePackProperties {
     ExcludedAccounts?: List<Value<string>>
 }
 
-export default class OrganizationConformancePack extends ResourceBase<OrganizationConformancePackProperties> {
+class OrganizationConformancePack extends ResourceBase<Properties> {
     static ConformancePackInputParameter = ConformancePackInputParameter
 
-    constructor(properties: OrganizationConformancePackProperties) {
+    constructor(properties: Properties) {
         super('AWS::Config::OrganizationConformancePack', properties)
     }
 }
+export { OrganizationConformancePack as R }

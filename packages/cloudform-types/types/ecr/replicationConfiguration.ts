@@ -55,17 +55,18 @@ export class RepositoryFilter {
     }
 }
 
-export interface ReplicationConfigurationProperties {
+export interface Properties {
     ReplicationConfiguration: ReplicationConfiguration
 }
 
-export default class ReplicationConfiguration extends ResourceBase<ReplicationConfigurationProperties> {
+class ReplicationConfiguration extends ResourceBase<Properties> {
     static ReplicationConfiguration = ReplicationConfigurationInner
     static ReplicationDestination = ReplicationDestination
     static ReplicationRule = ReplicationRule
     static RepositoryFilter = RepositoryFilter
 
-    constructor(properties: ReplicationConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ECR::ReplicationConfiguration', properties)
     }
 }
+export { ReplicationConfiguration as R }

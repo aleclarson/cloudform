@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface FlowLogProperties {
+export interface Properties {
     DeliverLogsPermissionArn?: Value<string>
     LogDestination?: Value<string>
     LogDestinationType?: Value<string>
@@ -36,10 +36,11 @@ export interface FlowLogProperties {
     DestinationOptions?: {[key: string]: any}
 }
 
-export default class FlowLog extends ResourceBase<FlowLogProperties> {
+class FlowLog extends ResourceBase<Properties> {
 
 
-    constructor(properties: FlowLogProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::FlowLog', properties)
     }
 }
+export { FlowLog as R }

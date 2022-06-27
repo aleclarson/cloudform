@@ -22,7 +22,7 @@ export class ApiGatewayProxyInput {
     }
 }
 
-export interface ApplicationProperties {
+export interface Properties {
     ApiGatewayProxy?: ApiGatewayProxyInput
     EnvironmentIdentifier?: Value<string>
     Name?: Value<string>
@@ -31,10 +31,11 @@ export interface ApplicationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Application extends ResourceBase<ApplicationProperties> {
+class Application extends ResourceBase<Properties> {
     static ApiGatewayProxyInput = ApiGatewayProxyInput
 
-    constructor(properties?: ApplicationProperties) {
+    constructor(properties?: Properties) {
         super('AWS::RefactorSpaces::Application', properties || {})
     }
 }
+export { Application as R }

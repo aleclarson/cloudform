@@ -243,7 +243,7 @@ export class AcceleratorCountRequest {
     }
 }
 
-export interface EC2FleetProperties {
+export interface Properties {
     TargetCapacitySpecification: TargetCapacitySpecificationRequest
     OnDemandOptions?: OnDemandOptionsRequest
     Type?: Value<string>
@@ -258,7 +258,7 @@ export interface EC2FleetProperties {
     Context?: Value<string>
 }
 
-export default class EC2Fleet extends ResourceBase<EC2FleetProperties> {
+class EC2Fleet extends ResourceBase<Properties> {
     static FleetLaunchTemplateSpecificationRequest = FleetLaunchTemplateSpecificationRequest
     static NetworkInterfaceCountRequest = NetworkInterfaceCountRequest
     static TargetCapacitySpecificationRequest = TargetCapacitySpecificationRequest
@@ -280,7 +280,8 @@ export default class EC2Fleet extends ResourceBase<EC2FleetProperties> {
     static VCpuCountRangeRequest = VCpuCountRangeRequest
     static AcceleratorCountRequest = AcceleratorCountRequest
 
-    constructor(properties: EC2FleetProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::EC2Fleet', properties)
     }
 }
+export { EC2Fleet as R }

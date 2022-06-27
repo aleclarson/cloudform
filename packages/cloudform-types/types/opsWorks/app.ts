@@ -63,7 +63,7 @@ export class Source {
     }
 }
 
-export interface AppProperties {
+export interface Properties {
     AppSource?: Source
     Attributes?: {[key: string]: Value<string>}
     DataSources?: List<DataSource>
@@ -78,13 +78,14 @@ export interface AppProperties {
     Type: Value<string>
 }
 
-export default class App extends ResourceBase<AppProperties> {
+class App extends ResourceBase<Properties> {
     static DataSource = DataSource
     static SslConfiguration = SslConfiguration
     static EnvironmentVariable = EnvironmentVariable
     static Source = Source
 
-    constructor(properties: AppProperties) {
+    constructor(properties: Properties) {
         super('AWS::OpsWorks::App', properties)
     }
 }
+export { App as R }

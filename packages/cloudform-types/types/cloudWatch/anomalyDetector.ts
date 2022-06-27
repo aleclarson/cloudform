@@ -103,7 +103,7 @@ export class Configuration {
     }
 }
 
-export interface AnomalyDetectorProperties {
+export interface Properties {
     MetricName?: Value<string>
     Stat?: Value<string>
     Configuration?: Configuration
@@ -113,7 +113,7 @@ export interface AnomalyDetectorProperties {
     SingleMetricAnomalyDetector?: SingleMetricAnomalyDetector
 }
 
-export default class AnomalyDetector extends ResourceBase<AnomalyDetectorProperties> {
+class AnomalyDetector extends ResourceBase<Properties> {
     static MetricDataQuery = MetricDataQuery
     static SingleMetricAnomalyDetector = SingleMetricAnomalyDetector
     static Range = Range
@@ -123,7 +123,8 @@ export default class AnomalyDetector extends ResourceBase<AnomalyDetectorPropert
     static MetricStat = MetricStat
     static Configuration = Configuration
 
-    constructor(properties?: AnomalyDetectorProperties) {
+    constructor(properties?: Properties) {
         super('AWS::CloudWatch::AnomalyDetector', properties || {})
     }
 }
+export { AnomalyDetector as R }

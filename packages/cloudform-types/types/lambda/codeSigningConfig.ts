@@ -35,17 +35,18 @@ export class AllowedPublishers {
     }
 }
 
-export interface CodeSigningConfigProperties {
+export interface Properties {
     Description?: Value<string>
     AllowedPublishers: AllowedPublishers
     CodeSigningPolicies?: CodeSigningPolicies
 }
 
-export default class CodeSigningConfig extends ResourceBase<CodeSigningConfigProperties> {
+class CodeSigningConfig extends ResourceBase<Properties> {
     static CodeSigningPolicies = CodeSigningPolicies
     static AllowedPublishers = AllowedPublishers
 
-    constructor(properties: CodeSigningConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lambda::CodeSigningConfig', properties)
     }
 }
+export { CodeSigningConfig as R }

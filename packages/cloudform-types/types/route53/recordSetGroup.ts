@@ -71,20 +71,21 @@ export class AliasTarget {
     }
 }
 
-export interface RecordSetGroupProperties {
+export interface Properties {
     Comment?: Value<string>
     HostedZoneId?: Value<string>
     HostedZoneName?: Value<string>
     RecordSets?: List<RecordSet>
 }
 
-export default class RecordSetGroup extends ResourceBase<RecordSetGroupProperties> {
+class RecordSetGroup extends ResourceBase<Properties> {
     static GeoLocation = GeoLocation
     static RecordSet = RecordSet
     static CidrRoutingConfig = CidrRoutingConfig
     static AliasTarget = AliasTarget
 
-    constructor(properties?: RecordSetGroupProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Route53::RecordSetGroup', properties || {})
     }
 }
+export { RecordSetGroup as R }

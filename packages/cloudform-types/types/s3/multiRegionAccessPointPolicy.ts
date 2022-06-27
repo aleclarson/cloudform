@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface MultiRegionAccessPointPolicyProperties {
+export interface Properties {
     MrapName: Value<string>
     Policy: {[key: string]: any}
 }
 
-export default class MultiRegionAccessPointPolicy extends ResourceBase<MultiRegionAccessPointPolicyProperties> {
+class MultiRegionAccessPointPolicy extends ResourceBase<Properties> {
 
 
-    constructor(properties: MultiRegionAccessPointPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::S3::MultiRegionAccessPointPolicy', properties)
     }
 }
+export { MultiRegionAccessPointPolicy as R }

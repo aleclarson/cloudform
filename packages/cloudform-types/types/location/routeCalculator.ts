@@ -14,17 +14,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RouteCalculatorProperties {
+export interface Properties {
     CalculatorName: Value<string>
     DataSource: Value<string>
     Description?: Value<string>
     PricingPlan?: Value<string>
 }
 
-export default class RouteCalculator extends ResourceBase<RouteCalculatorProperties> {
+class RouteCalculator extends ResourceBase<Properties> {
 
 
-    constructor(properties: RouteCalculatorProperties) {
+    constructor(properties: Properties) {
         super('AWS::Location::RouteCalculator', properties)
     }
 }
+export { RouteCalculator as R }

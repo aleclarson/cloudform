@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UserPoolUICustomizationAttachmentProperties {
+export interface Properties {
     CSS?: Value<string>
     UserPoolId: Value<string>
     ClientId: Value<string>
 }
 
-export default class UserPoolUICustomizationAttachment extends ResourceBase<UserPoolUICustomizationAttachmentProperties> {
+class UserPoolUICustomizationAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties: UserPoolUICustomizationAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cognito::UserPoolUICustomizationAttachment', properties)
     }
 }
+export { UserPoolUICustomizationAttachment as R }

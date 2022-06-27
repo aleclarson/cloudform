@@ -49,18 +49,19 @@ export class RulesConfigurationType {
     }
 }
 
-export interface IdentityPoolRoleAttachmentProperties {
+export interface Properties {
     RoleMappings?: {[key: string]: any}
     IdentityPoolId: Value<string>
     Roles?: {[key: string]: any}
 }
 
-export default class IdentityPoolRoleAttachment extends ResourceBase<IdentityPoolRoleAttachmentProperties> {
+class IdentityPoolRoleAttachment extends ResourceBase<Properties> {
     static RoleMapping = RoleMapping
     static MappingRule = MappingRule
     static RulesConfigurationType = RulesConfigurationType
 
-    constructor(properties: IdentityPoolRoleAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cognito::IdentityPoolRoleAttachment', properties)
     }
 }
+export { IdentityPoolRoleAttachment as R }

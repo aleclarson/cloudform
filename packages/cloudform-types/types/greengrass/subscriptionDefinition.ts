@@ -13,7 +13,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class SubscriptionDefinitionVersion {
@@ -35,17 +35,18 @@ export class Subscription {
     }
 }
 
-export interface SubscriptionDefinitionProperties {
+export interface Properties {
     InitialVersion?: SubscriptionDefinitionVersion
     Tags?: {[key: string]: any}
     Name: Value<string>
 }
 
-export default class SubscriptionDefinition extends ResourceBase<SubscriptionDefinitionProperties> {
+class SubscriptionDefinition extends ResourceBase<Properties> {
     static SubscriptionDefinitionVersion = SubscriptionDefinitionVersion
     static Subscription = Subscription
 
-    constructor(properties: SubscriptionDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::SubscriptionDefinition', properties)
     }
 }
+export { SubscriptionDefinition as R }

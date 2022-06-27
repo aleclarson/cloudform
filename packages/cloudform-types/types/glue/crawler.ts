@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class CatalogTarget {
@@ -106,7 +106,7 @@ export class RecrawlPolicy {
     }
 }
 
-export interface CrawlerProperties {
+export interface Properties {
     Classifiers?: List<Value<string>>
     Description?: Value<string>
     SchemaChangePolicy?: SchemaChangePolicy
@@ -122,7 +122,7 @@ export interface CrawlerProperties {
     Tags?: {[key: string]: any}
 }
 
-export default class Crawler extends ResourceBase<CrawlerProperties> {
+class Crawler extends ResourceBase<Properties> {
     static CatalogTarget = CatalogTarget
     static Schedule = Schedule
     static SchemaChangePolicy = SchemaChangePolicy
@@ -133,7 +133,8 @@ export default class Crawler extends ResourceBase<CrawlerProperties> {
     static S3Target = S3Target
     static RecrawlPolicy = RecrawlPolicy
 
-    constructor(properties: CrawlerProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::Crawler', properties)
     }
 }
+export { Crawler as R }

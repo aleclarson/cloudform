@@ -1,0 +1,1 @@
+import*as _0 from'./namespace';export declare namespace RedshiftServerless{const Namespace:typeof _0.R;type Namespace=_0.R;}

@@ -1,0 +1,1 @@
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{AcceptTermsAndConditions:Value<boolean>;ConnectionArn?:Value<string>;}declare class Publisher extends ResourceBase<Properties>{constructor(properties:Properties);}export{Publisher as R};

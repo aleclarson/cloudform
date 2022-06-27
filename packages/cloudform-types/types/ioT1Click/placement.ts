@@ -13,17 +13,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PlacementProperties {
+export interface Properties {
     PlacementName?: Value<string>
     ProjectName: Value<string>
     AssociatedDevices?: {[key: string]: any}
     Attributes?: {[key: string]: any}
 }
 
-export default class Placement extends ResourceBase<PlacementProperties> {
+class Placement extends ResourceBase<Properties> {
 
 
-    constructor(properties: PlacementProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT1Click::Placement', properties)
     }
 }
+export { Placement as R }

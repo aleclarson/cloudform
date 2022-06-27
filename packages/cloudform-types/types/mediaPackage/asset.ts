@@ -27,7 +27,7 @@ export class EgressEndpoint {
     }
 }
 
-export interface AssetProperties {
+export interface Properties {
     Id: Value<string>
     PackagingGroupId: Value<string>
     ResourceId?: Value<string>
@@ -36,10 +36,11 @@ export interface AssetProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Asset extends ResourceBase<AssetProperties> {
+class Asset extends ResourceBase<Properties> {
     static EgressEndpoint = EgressEndpoint
 
-    constructor(properties: AssetProperties) {
+    constructor(properties: Properties) {
         super('AWS::MediaPackage::Asset', properties)
     }
 }
+export { Asset as R }

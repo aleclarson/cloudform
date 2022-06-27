@@ -73,19 +73,20 @@ export class BackupRuleResourceType {
     }
 }
 
-export interface BackupPlanProperties {
+export interface Properties {
     BackupPlan: BackupPlanResourceType
     BackupPlanTags?: {[key: string]: Value<string>}
 }
 
-export default class BackupPlan extends ResourceBase<BackupPlanProperties> {
+class BackupPlan extends ResourceBase<Properties> {
     static CopyActionResourceType = CopyActionResourceType
     static BackupPlanResourceType = BackupPlanResourceType
     static AdvancedBackupSettingResourceType = AdvancedBackupSettingResourceType
     static LifecycleResourceType = LifecycleResourceType
     static BackupRuleResourceType = BackupRuleResourceType
 
-    constructor(properties: BackupPlanProperties) {
+    constructor(properties: Properties) {
         super('AWS::Backup::BackupPlan', properties)
     }
 }
+export { BackupPlan as R }

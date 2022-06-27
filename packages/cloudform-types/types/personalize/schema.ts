@@ -17,16 +17,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SchemaProperties {
+export interface Properties {
     Name: Value<string>
     Schema: Value<string>
     Domain?: Value<string>
 }
 
-export default class Schema extends ResourceBase<SchemaProperties> {
+class Schema extends ResourceBase<Properties> {
 
 
-    constructor(properties: SchemaProperties) {
+    constructor(properties: Properties) {
         super('AWS::Personalize::Schema', properties)
     }
 }
+export { Schema as R }

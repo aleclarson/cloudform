@@ -42,7 +42,7 @@ export class Field {
     }
 }
 
-export interface TaskTemplateProperties {
+export interface Properties {
     InstanceArn: Value<string>
     Name?: Value<string>
     Description?: Value<string>
@@ -55,12 +55,13 @@ export interface TaskTemplateProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class TaskTemplate extends ResourceBase<TaskTemplateProperties> {
+class TaskTemplate extends ResourceBase<Properties> {
     static DefaultFieldValue = DefaultFieldValue
     static FieldIdentifier = FieldIdentifier
     static Field = Field
 
-    constructor(properties: TaskTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::Connect::TaskTemplate', properties)
     }
 }
+export { TaskTemplate as R }

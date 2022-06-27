@@ -18,7 +18,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface GroupVersionProperties {
+export interface Properties {
     LoggerDefinitionVersionArn?: Value<string>
     DeviceDefinitionVersionArn?: Value<string>
     FunctionDefinitionVersionArn?: Value<string>
@@ -29,10 +29,11 @@ export interface GroupVersionProperties {
     GroupId: Value<string>
 }
 
-export default class GroupVersion extends ResourceBase<GroupVersionProperties> {
+class GroupVersion extends ResourceBase<Properties> {
 
 
-    constructor(properties: GroupVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::GroupVersion', properties)
     }
 }
+export { GroupVersion as R }

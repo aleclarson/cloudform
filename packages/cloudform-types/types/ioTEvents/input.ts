@@ -32,18 +32,19 @@ export class InputDefinition {
     }
 }
 
-export interface InputProperties {
+export interface Properties {
     InputDefinition: InputDefinition
     InputDescription?: Value<string>
     InputName?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Input extends ResourceBase<InputProperties> {
+class Input extends ResourceBase<Properties> {
     static Attribute = Attribute
     static InputDefinition = InputDefinition
 
-    constructor(properties: InputProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTEvents::Input', properties)
     }
 }
+export { Input as R }

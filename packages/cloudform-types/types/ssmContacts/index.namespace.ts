@@ -17,13 +17,20 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Contact_ from './contact'
-import ContactChannel_ from './contactChannel'
+import * as _0 from './contact'
+import * as _1 from './contactChannel'
 
 export namespace SSMContacts {
-  export const Contact = Contact_
-  export const ContactChannel = ContactChannel_
+  export const Contact = _0.R
+  export const ContactChannel = _1.R
 
-  export type Contact = Contact_
-  export type ContactChannel = ContactChannel_
+  export type Contact = _0.R
+  export type ContactChannel = _1.R
+
+  export namespace Contact {
+    export type ContactTargetInfo = _0.ContactTargetInfo
+    export type Targets = _0.Targets
+    export type ChannelTargetInfo = _0.ChannelTargetInfo
+    export type Stage = _0.Stage
+  }
 }

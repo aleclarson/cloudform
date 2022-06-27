@@ -94,7 +94,7 @@ export class UserAndGroupQuotas {
     }
 }
 
-export interface VolumeProperties {
+export interface Properties {
     OpenZFSConfiguration?: OpenZFSConfiguration
     VolumeType?: Value<string>
     BackupId?: Value<string>
@@ -103,7 +103,7 @@ export interface VolumeProperties {
     Name: Value<string>
 }
 
-export default class Volume extends ResourceBase<VolumeProperties> {
+class Volume extends ResourceBase<Properties> {
     static TieringPolicy = TieringPolicy
     static ClientConfigurations = ClientConfigurations
     static OriginSnapshot = OriginSnapshot
@@ -112,7 +112,8 @@ export default class Volume extends ResourceBase<VolumeProperties> {
     static NfsExports = NfsExports
     static UserAndGroupQuotas = UserAndGroupQuotas
 
-    constructor(properties: VolumeProperties) {
+    constructor(properties: Properties) {
         super('AWS::FSx::Volume', properties)
     }
 }
+export { Volume as R }

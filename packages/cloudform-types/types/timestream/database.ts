@@ -13,16 +13,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DatabaseProperties {
+export interface Properties {
     DatabaseName?: Value<string>
     KmsKeyId?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Database extends ResourceBase<DatabaseProperties> {
+class Database extends ResourceBase<Properties> {
 
 
-    constructor(properties?: DatabaseProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Timestream::Database', properties || {})
     }
 }
+export { Database as R }

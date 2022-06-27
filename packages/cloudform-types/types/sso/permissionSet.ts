@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PermissionSetProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     InstanceArn: Value<string>
@@ -32,10 +32,11 @@ export interface PermissionSetProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class PermissionSet extends ResourceBase<PermissionSetProperties> {
+class PermissionSet extends ResourceBase<Properties> {
 
 
-    constructor(properties: PermissionSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSO::PermissionSet', properties)
     }
 }
+export { PermissionSet as R }

@@ -17,19 +17,31 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Endpoint_ from './endpoint'
-import AccessPoint_ from './accessPoint'
-import Bucket_ from './bucket'
-import BucketPolicy_ from './bucketPolicy'
+import * as _0 from './endpoint'
+import * as _1 from './accessPoint'
+import * as _2 from './bucket'
+import * as _3 from './bucketPolicy'
 
 export namespace S3Outposts {
-  export const Endpoint = Endpoint_
-  export const AccessPoint = AccessPoint_
-  export const Bucket = Bucket_
-  export const BucketPolicy = BucketPolicy_
+  export const Endpoint = _0.R
+  export const AccessPoint = _1.R
+  export const Bucket = _2.R
+  export const BucketPolicy = _3.R
 
-  export type Endpoint = Endpoint_
-  export type AccessPoint = AccessPoint_
-  export type Bucket = Bucket_
-  export type BucketPolicy = BucketPolicy_
+  export type Endpoint = _0.R
+  export type AccessPoint = _1.R
+  export type Bucket = _2.R
+  export type BucketPolicy = _3.R
+
+  export namespace Endpoint {
+    export type NetworkInterface = _0.NetworkInterface
+  }
+  export namespace AccessPoint {
+    export type VpcConfiguration = _1.VpcConfiguration
+  }
+  export namespace Bucket {
+    export type AbortIncompleteMultipartUpload = _2.AbortIncompleteMultipartUpload
+    export type Rule = _2.Rule
+    export type LifecycleConfiguration = _2.LifecycleConfiguration
+  }
 }

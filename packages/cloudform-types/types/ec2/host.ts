@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface HostProperties {
+export interface Properties {
     AutoPlacement?: Value<string>
     AvailabilityZone: Value<string>
     HostRecovery?: Value<string>
     InstanceType: Value<string>
 }
 
-export default class Host extends ResourceBase<HostProperties> {
+class Host extends ResourceBase<Properties> {
 
 
-    constructor(properties: HostProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::Host', properties)
     }
 }
+export { Host as R }

@@ -1,1 +1,1 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface LogStreamProperties{LogGroupName:Value<string>;LogStreamName?:Value<string>;}export default class LogStream extends ResourceBase<LogStreamProperties>{constructor(properties:LogStreamProperties);}
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{LogGroupName:Value<string>;LogStreamName?:Value<string>;}declare class LogStream extends ResourceBase<Properties>{constructor(properties:Properties);}export{LogStream as R};

@@ -86,7 +86,7 @@ export class ValidityDateFormat {
     }
 }
 
-export interface LicenseProperties {
+export interface Properties {
     ProductSKU?: Value<string>
     Issuer: IssuerData
     LicenseName: Value<string>
@@ -100,7 +100,7 @@ export interface LicenseProperties {
     Status?: Value<string>
 }
 
-export default class License extends ResourceBase<LicenseProperties> {
+class License extends ResourceBase<Properties> {
     static ProvisionalConfiguration = ProvisionalConfiguration
     static ConsumptionConfiguration = ConsumptionConfiguration
     static IssuerData = IssuerData
@@ -109,7 +109,8 @@ export default class License extends ResourceBase<LicenseProperties> {
     static Entitlement = Entitlement
     static ValidityDateFormat = ValidityDateFormat
 
-    constructor(properties: LicenseProperties) {
+    constructor(properties: Properties) {
         super('AWS::LicenseManager::License', properties)
     }
 }
+export { License as R }

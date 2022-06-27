@@ -31,14 +31,15 @@ export class PublicKeyConfig {
     }
 }
 
-export interface PublicKeyProperties {
+export interface Properties {
     PublicKeyConfig: PublicKeyConfig
 }
 
-export default class PublicKey extends ResourceBase<PublicKeyProperties> {
+class PublicKey extends ResourceBase<Properties> {
     static PublicKeyConfig = PublicKeyConfig
 
-    constructor(properties: PublicKeyProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFront::PublicKey', properties)
     }
 }
+export { PublicKey as R }

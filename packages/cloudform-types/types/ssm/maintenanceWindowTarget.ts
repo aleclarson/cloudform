@@ -29,7 +29,7 @@ export class Targets {
     }
 }
 
-export interface MaintenanceWindowTargetProperties {
+export interface Properties {
     OwnerInformation?: Value<string>
     Description?: Value<string>
     WindowId: Value<string>
@@ -38,10 +38,11 @@ export interface MaintenanceWindowTargetProperties {
     Name?: Value<string>
 }
 
-export default class MaintenanceWindowTarget extends ResourceBase<MaintenanceWindowTargetProperties> {
+class MaintenanceWindowTarget extends ResourceBase<Properties> {
     static Targets = Targets
 
-    constructor(properties: MaintenanceWindowTargetProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSM::MaintenanceWindowTarget', properties)
     }
 }
+export { MaintenanceWindowTarget as R }

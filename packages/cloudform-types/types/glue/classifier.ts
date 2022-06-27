@@ -64,20 +64,21 @@ export class XMLClassifier {
     }
 }
 
-export interface ClassifierProperties {
+export interface Properties {
     XMLClassifier?: XMLClassifier
     JsonClassifier?: JsonClassifier
     CsvClassifier?: CsvClassifier
     GrokClassifier?: GrokClassifier
 }
 
-export default class Classifier extends ResourceBase<ClassifierProperties> {
+class Classifier extends ResourceBase<Properties> {
     static CsvClassifier = CsvClassifier
     static GrokClassifier = GrokClassifier
     static JsonClassifier = JsonClassifier
     static XMLClassifier = XMLClassifier
 
-    constructor(properties?: ClassifierProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Glue::Classifier', properties || {})
     }
 }
+export { Classifier as R }

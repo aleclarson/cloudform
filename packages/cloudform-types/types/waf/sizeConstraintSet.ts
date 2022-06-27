@@ -40,16 +40,17 @@ export class SizeConstraint {
     }
 }
 
-export interface SizeConstraintSetProperties {
+export interface Properties {
     Name: Value<string>
     SizeConstraints: List<SizeConstraint>
 }
 
-export default class SizeConstraintSet extends ResourceBase<SizeConstraintSetProperties> {
+class SizeConstraintSet extends ResourceBase<Properties> {
     static FieldToMatch = FieldToMatch
     static SizeConstraint = SizeConstraint
 
-    constructor(properties: SizeConstraintSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAF::SizeConstraintSet', properties)
     }
 }
+export { SizeConstraintSet as R }

@@ -1,1 +1,1 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface ResolverDNSSECConfigProperties{ResourceId?:Value<string>;}export default class ResolverDNSSECConfig extends ResourceBase<ResolverDNSSECConfigProperties>{constructor(properties?:ResolverDNSSECConfigProperties);}
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ResourceId?:Value<string>;}declare class ResolverDNSSECConfig extends ResourceBase<Properties>{constructor(properties?:Properties);}export{ResolverDNSSECConfig as R};

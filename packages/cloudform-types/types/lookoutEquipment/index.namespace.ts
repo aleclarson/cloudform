@@ -17,10 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import InferenceScheduler_ from './inferenceScheduler'
+import * as _0 from './inferenceScheduler'
 
 export namespace LookoutEquipment {
-  export const InferenceScheduler = InferenceScheduler_
+  export const InferenceScheduler = _0.R
 
-  export type InferenceScheduler = InferenceScheduler_
+  export type InferenceScheduler = _0.R
+
+
 }

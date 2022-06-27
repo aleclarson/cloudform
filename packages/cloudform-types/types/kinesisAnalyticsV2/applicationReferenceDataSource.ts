@@ -93,12 +93,12 @@ export class CSVMappingParameters {
     }
 }
 
-export interface ApplicationReferenceDataSourceProperties {
+export interface Properties {
     ApplicationName: Value<string>
     ReferenceDataSource: ReferenceDataSource
 }
 
-export default class ApplicationReferenceDataSource extends ResourceBase<ApplicationReferenceDataSourceProperties> {
+class ApplicationReferenceDataSource extends ResourceBase<Properties> {
     static RecordColumn = RecordColumn
     static RecordFormat = RecordFormat
     static JSONMappingParameters = JSONMappingParameters
@@ -108,7 +108,8 @@ export default class ApplicationReferenceDataSource extends ResourceBase<Applica
     static ReferenceSchema = ReferenceSchema
     static CSVMappingParameters = CSVMappingParameters
 
-    constructor(properties: ApplicationReferenceDataSourceProperties) {
+    constructor(properties: Properties) {
         super('AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource', properties)
     }
 }
+export { ApplicationReferenceDataSource as R }

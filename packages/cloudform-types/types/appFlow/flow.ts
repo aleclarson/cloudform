@@ -476,7 +476,7 @@ export class CustomConnectorDestinationProperties {
     }
 }
 
-export interface FlowProperties {
+export interface Properties {
     FlowName: Value<string>
     Description?: Value<string>
     KMSArn?: Value<string>
@@ -487,7 +487,7 @@ export interface FlowProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Flow extends ResourceBase<FlowProperties> {
+class Flow extends ResourceBase<Properties> {
     static IncrementalPullConfig = IncrementalPullConfig
     static PrefixConfig = PrefixConfig
     static S3OutputFormatConfig = S3OutputFormatConfig
@@ -533,7 +533,8 @@ export default class Flow extends ResourceBase<FlowProperties> {
     static CustomConnectorSourceProperties = CustomConnectorSourceProperties
     static CustomConnectorDestinationProperties = CustomConnectorDestinationProperties
 
-    constructor(properties: FlowProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppFlow::Flow', properties)
     }
 }
+export { Flow as R }

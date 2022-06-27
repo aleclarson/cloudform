@@ -99,12 +99,12 @@ export class Spend {
     }
 }
 
-export interface BudgetProperties {
+export interface Properties {
     NotificationsWithSubscribers?: List<NotificationWithSubscribers>
     Budget: BudgetData
 }
 
-export default class Budget extends ResourceBase<BudgetProperties> {
+class Budget extends ResourceBase<Properties> {
     static BudgetData = BudgetData
     static Subscriber = Subscriber
     static TimePeriod = TimePeriod
@@ -113,7 +113,8 @@ export default class Budget extends ResourceBase<BudgetProperties> {
     static Notification = Notification
     static Spend = Spend
 
-    constructor(properties: BudgetProperties) {
+    constructor(properties: Properties) {
         super('AWS::Budgets::Budget', properties)
     }
 }
+export { Budget as R }

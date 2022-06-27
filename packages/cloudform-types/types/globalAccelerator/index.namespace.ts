@@ -17,16 +17,24 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Accelerator_ from './accelerator'
-import Listener_ from './listener'
-import EndpointGroup_ from './endpointGroup'
+import * as _0 from './accelerator'
+import * as _1 from './listener'
+import * as _2 from './endpointGroup'
 
 export namespace GlobalAccelerator {
-  export const Accelerator = Accelerator_
-  export const Listener = Listener_
-  export const EndpointGroup = EndpointGroup_
+  export const Accelerator = _0.R
+  export const Listener = _1.R
+  export const EndpointGroup = _2.R
 
-  export type Accelerator = Accelerator_
-  export type Listener = Listener_
-  export type EndpointGroup = EndpointGroup_
+  export type Accelerator = _0.R
+  export type Listener = _1.R
+  export type EndpointGroup = _2.R
+
+  export namespace Listener {
+    export type PortRange = _1.PortRange
+  }
+  export namespace EndpointGroup {
+    export type PortOverride = _2.PortOverride
+    export type EndpointConfiguration = _2.EndpointConfiguration
+  }
 }

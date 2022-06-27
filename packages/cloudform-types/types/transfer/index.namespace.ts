@@ -17,16 +17,33 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Workflow_ from './workflow'
-import Server_ from './server'
-import User_ from './user'
+import * as _0 from './workflow'
+import * as _1 from './server'
+import * as _2 from './user'
 
 export namespace Transfer {
-  export const Workflow = Workflow_
-  export const Server = Server_
-  export const User = User_
+  export const Workflow = _0.R
+  export const Server = _1.R
+  export const User = _2.R
 
-  export type Workflow = Workflow_
-  export type Server = Server_
-  export type User = User_
+  export type Workflow = _0.R
+  export type Server = _1.R
+  export type User = _2.R
+
+  export namespace Workflow {
+    export type WorkflowStep = _0.WorkflowStep
+  }
+  export namespace Server {
+    export type WorkflowDetails = _1.WorkflowDetails
+    export type ProtocolDetails = _1.ProtocolDetails
+    export type IdentityProviderDetails = _1.IdentityProviderDetails
+    export type WorkflowDetail = _1.WorkflowDetail
+    export type EndpointDetails = _1.EndpointDetails
+    export type Protocol = _1.Protocol
+  }
+  export namespace User {
+    export type HomeDirectoryMapEntry = _2.HomeDirectoryMapEntry
+    export type SshPublicKey = _2.SshPublicKey
+    export type PosixProfile = _2.PosixProfile
+  }
 }

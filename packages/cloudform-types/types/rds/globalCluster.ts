@@ -20,7 +20,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface GlobalClusterProperties {
+export interface Properties {
     Engine?: Value<string>
     EngineVersion?: Value<string>
     DeletionProtection?: Value<boolean>
@@ -29,10 +29,11 @@ export interface GlobalClusterProperties {
     StorageEncrypted?: Value<boolean>
 }
 
-export default class GlobalCluster extends ResourceBase<GlobalClusterProperties> {
+class GlobalCluster extends ResourceBase<Properties> {
 
 
-    constructor(properties?: GlobalClusterProperties) {
+    constructor(properties?: Properties) {
         super('AWS::RDS::GlobalCluster', properties || {})
     }
 }
+export { GlobalCluster as R }

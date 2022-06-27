@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Forecast=void 0;const _0=require("./datasetGroup"),_1=require("./dataset");var Forecast;!function(Forecast){Forecast.DatasetGroup=_0.R,Forecast.Dataset=_1.R}(Forecast=exports.Forecast||(exports.Forecast={}));

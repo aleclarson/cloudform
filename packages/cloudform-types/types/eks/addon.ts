@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AddonProperties {
+export interface Properties {
     ClusterName: Value<string>
     AddonName: Value<string>
     AddonVersion?: Value<string>
@@ -31,10 +31,11 @@ export interface AddonProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Addon extends ResourceBase<AddonProperties> {
+class Addon extends ResourceBase<Properties> {
 
 
-    constructor(properties: AddonProperties) {
+    constructor(properties: Properties) {
         super('AWS::EKS::Addon', properties)
     }
 }
+export { Addon as R }

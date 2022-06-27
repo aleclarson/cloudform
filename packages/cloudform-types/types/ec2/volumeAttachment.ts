@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VolumeAttachmentProperties {
+export interface Properties {
     Device: Value<string>
     InstanceId: Value<string>
     VolumeId: Value<string>
 }
 
-export default class VolumeAttachment extends ResourceBase<VolumeAttachmentProperties> {
+class VolumeAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties: VolumeAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::VolumeAttachment', properties)
     }
 }
+export { VolumeAttachment as R }

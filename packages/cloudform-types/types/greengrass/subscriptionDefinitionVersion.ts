@@ -27,15 +27,16 @@ export class Subscription {
     }
 }
 
-export interface SubscriptionDefinitionVersionProperties {
+export interface Properties {
     SubscriptionDefinitionId: Value<string>
     Subscriptions: List<Subscription>
 }
 
-export default class SubscriptionDefinitionVersion extends ResourceBase<SubscriptionDefinitionVersionProperties> {
+class SubscriptionDefinitionVersion extends ResourceBase<Properties> {
     static Subscription = Subscription
 
-    constructor(properties: SubscriptionDefinitionVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::SubscriptionDefinitionVersion', properties)
     }
 }
+export { SubscriptionDefinitionVersion as R }

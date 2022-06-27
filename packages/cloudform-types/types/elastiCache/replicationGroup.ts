@@ -68,7 +68,7 @@ export class KinesisFirehoseDestinationDetails {
     }
 }
 
-export interface ReplicationGroupProperties {
+export interface Properties {
     AtRestEncryptionEnabled?: Value<boolean>
     AuthToken?: Value<string>
     AutoMinorVersionUpgrade?: Value<boolean>
@@ -106,14 +106,15 @@ export interface ReplicationGroupProperties {
     UserGroupIds?: List<Value<string>>
 }
 
-export default class ReplicationGroup extends ResourceBase<ReplicationGroupProperties> {
+class ReplicationGroup extends ResourceBase<Properties> {
     static LogDeliveryConfigurationRequest = LogDeliveryConfigurationRequest
     static CloudWatchLogsDestinationDetails = CloudWatchLogsDestinationDetails
     static NodeGroupConfiguration = NodeGroupConfiguration
     static DestinationDetails = DestinationDetails
     static KinesisFirehoseDestinationDetails = KinesisFirehoseDestinationDetails
 
-    constructor(properties: ReplicationGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElastiCache::ReplicationGroup', properties)
     }
 }
+export { ReplicationGroup as R }

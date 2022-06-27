@@ -28,7 +28,7 @@ export class ParameterConstraints {
     }
 }
 
-export interface RouteProperties {
+export interface Properties {
     Target?: Value<string>
     RouteResponseSelectionExpression?: Value<string>
     AuthorizerId?: Value<string>
@@ -43,10 +43,11 @@ export interface RouteProperties {
     RequestParameters?: {[key: string]: any}
 }
 
-export default class Route extends ResourceBase<RouteProperties> {
+class Route extends ResourceBase<Properties> {
     static ParameterConstraints = ParameterConstraints
 
-    constructor(properties: RouteProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGatewayV2::Route', properties)
     }
 }
+export { Route as R }

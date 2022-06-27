@@ -38,18 +38,19 @@ export class ControlInputParameter {
     }
 }
 
-export interface FrameworkProperties {
+export interface Properties {
     FrameworkName?: Value<string>
     FrameworkDescription?: Value<string>
     FrameworkControls: List<FrameworkControl>
     FrameworkTags?: List<ResourceTag>
 }
 
-export default class Framework extends ResourceBase<FrameworkProperties> {
+class Framework extends ResourceBase<Properties> {
     static FrameworkControl = FrameworkControl
     static ControlInputParameter = ControlInputParameter
 
-    constructor(properties: FrameworkProperties) {
+    constructor(properties: Properties) {
         super('AWS::Backup::Framework', properties)
     }
 }
+export { Framework as R }

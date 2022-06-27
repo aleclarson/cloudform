@@ -1,0 +1,1 @@
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{ResourceSetName?:Value<string>;ReadinessCheckName:Value<string>;Tags?:List<ResourceTag>;}declare class ReadinessCheck extends ResourceBase<Properties>{constructor(properties:Properties);}export{ReadinessCheck as R};

@@ -19,7 +19,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UserProperties {
+export interface Properties {
     UserName: Value<string>
     FirstName?: Value<string>
     MessageAction?: Value<string>
@@ -27,10 +27,11 @@ export interface UserProperties {
     AuthenticationType: Value<string>
 }
 
-export default class User extends ResourceBase<UserProperties> {
+class User extends ResourceBase<Properties> {
 
 
-    constructor(properties: UserProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppStream::User', properties)
     }
 }
+export { User as R }

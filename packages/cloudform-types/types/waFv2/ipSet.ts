@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface IPSetProperties {
+export interface Properties {
     Description?: Value<string>
     Name?: Value<string>
     Scope: Value<string>
@@ -31,10 +31,11 @@ export interface IPSetProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class IPSet extends ResourceBase<IPSetProperties> {
+class IPSet extends ResourceBase<Properties> {
 
 
-    constructor(properties: IPSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAFv2::IPSet', properties)
     }
 }
+export { IPSet as R }

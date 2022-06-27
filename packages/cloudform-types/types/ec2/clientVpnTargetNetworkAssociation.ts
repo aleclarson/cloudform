@@ -21,15 +21,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ClientVpnTargetNetworkAssociationProperties {
+export interface Properties {
     ClientVpnEndpointId: Value<string>
     SubnetId: Value<string>
 }
 
-export default class ClientVpnTargetNetworkAssociation extends ResourceBase<ClientVpnTargetNetworkAssociationProperties> {
+class ClientVpnTargetNetworkAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: ClientVpnTargetNetworkAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::ClientVpnTargetNetworkAssociation', properties)
     }
 }
+export { ClientVpnTargetNetworkAssociation as R }

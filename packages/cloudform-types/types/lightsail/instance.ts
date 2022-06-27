@@ -111,7 +111,7 @@ export class State {
     }
 }
 
-export interface InstanceProperties {
+export interface Properties {
     Hardware?: Hardware
     Networking?: Networking
     InstanceName: Value<string>
@@ -124,7 +124,7 @@ export interface InstanceProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Instance extends ResourceBase<InstanceProperties> {
+class Instance extends ResourceBase<Properties> {
     static MonthlyTransfer = MonthlyTransfer
     static Port = Port
     static AddOn = AddOn
@@ -135,7 +135,8 @@ export default class Instance extends ResourceBase<InstanceProperties> {
     static Networking = Networking
     static State = State
 
-    constructor(properties: InstanceProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lightsail::Instance', properties)
     }
 }
+export { Instance as R }

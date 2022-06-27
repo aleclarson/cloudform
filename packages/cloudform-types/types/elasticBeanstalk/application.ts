@@ -58,19 +58,20 @@ export class MaxCountRule {
     }
 }
 
-export interface ApplicationProperties {
+export interface Properties {
     ApplicationName?: Value<string>
     Description?: Value<string>
     ResourceLifecycleConfig?: ApplicationResourceLifecycleConfig
 }
 
-export default class Application extends ResourceBase<ApplicationProperties> {
+class Application extends ResourceBase<Properties> {
     static MaxAgeRule = MaxAgeRule
     static ApplicationResourceLifecycleConfig = ApplicationResourceLifecycleConfig
     static ApplicationVersionLifecycleConfig = ApplicationVersionLifecycleConfig
     static MaxCountRule = MaxCountRule
 
-    constructor(properties?: ApplicationProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ElasticBeanstalk::Application', properties || {})
     }
 }
+export { Application as R }

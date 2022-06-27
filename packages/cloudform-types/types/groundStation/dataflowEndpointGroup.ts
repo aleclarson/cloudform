@@ -50,18 +50,19 @@ export class EndpointDetails {
     }
 }
 
-export interface DataflowEndpointGroupProperties {
+export interface Properties {
     EndpointDetails: List<EndpointDetails>
     Tags?: List<ResourceTag>
 }
 
-export default class DataflowEndpointGroup extends ResourceBase<DataflowEndpointGroupProperties> {
+class DataflowEndpointGroup extends ResourceBase<Properties> {
     static DataflowEndpoint = DataflowEndpoint
     static SecurityDetails = SecurityDetails
     static SocketAddress = SocketAddress
     static EndpointDetails = EndpointDetails
 
-    constructor(properties: DataflowEndpointGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::GroundStation::DataflowEndpointGroup', properties)
     }
 }
+export { DataflowEndpointGroup as R }

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const reportDefinition_1=require("./reportDefinition");var CUR;!function(CUR){CUR.ReportDefinition=reportDefinition_1.default}(CUR=exports.CUR||(exports.CUR={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.CUR=void 0;const _0=require("./reportDefinition");var CUR;!function(CUR){CUR.ReportDefinition=_0.R}(CUR=exports.CUR||(exports.CUR={}));

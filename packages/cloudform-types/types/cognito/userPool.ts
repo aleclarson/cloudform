@@ -215,7 +215,7 @@ export class UsernameConfiguration {
     }
 }
 
-export interface UserPoolProperties {
+export interface Properties {
     UserPoolTags?: {[key: string]: any}
     Policies?: Policies
     VerificationMessageTemplate?: VerificationMessageTemplate
@@ -241,7 +241,7 @@ export interface UserPoolProperties {
     AccountRecoverySetting?: AccountRecoverySetting
 }
 
-export default class UserPool extends ResourceBase<UserPoolProperties> {
+class UserPool extends ResourceBase<Properties> {
     static PasswordPolicy = PasswordPolicy
     static RecoveryOption = RecoveryOption
     static AdminCreateUserConfig = AdminCreateUserConfig
@@ -262,7 +262,8 @@ export default class UserPool extends ResourceBase<UserPoolProperties> {
     static DeviceConfiguration = DeviceConfiguration
     static UsernameConfiguration = UsernameConfiguration
 
-    constructor(properties?: UserPoolProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Cognito::UserPool', properties || {})
     }
 }
+export { UserPool as R }

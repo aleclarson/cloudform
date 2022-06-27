@@ -7,17 +7,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PublicRepositoryProperties {
+export interface Properties {
     RepositoryName?: Value<string>
     RepositoryPolicyText?: {[key: string]: any}
     RepositoryCatalogData?: {[key: string]: any}
     Tags?: List<ResourceTag>
 }
 
-export default class PublicRepository extends ResourceBase<PublicRepositoryProperties> {
+class PublicRepository extends ResourceBase<Properties> {
 
 
-    constructor(properties?: PublicRepositoryProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ECR::PublicRepository', properties || {})
     }
 }
+export { PublicRepository as R }

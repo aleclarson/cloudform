@@ -56,7 +56,7 @@ export class Label {
     }
 }
 
-export interface EventTypeProperties {
+export interface Properties {
     Name: Value<string>
     Tags?: List<ResourceTag>
     Description?: Value<string>
@@ -65,12 +65,13 @@ export interface EventTypeProperties {
     EntityTypes: List<EntityType>
 }
 
-export default class EventType extends ResourceBase<EventTypeProperties> {
+class EventType extends ResourceBase<Properties> {
     static EntityType = EntityType
     static EventVariable = EventVariable
     static Label = Label
 
-    constructor(properties: EventTypeProperties) {
+    constructor(properties: Properties) {
         super('AWS::FraudDetector::EventType', properties)
     }
 }
+export { EventType as R }

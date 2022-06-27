@@ -28,7 +28,7 @@ export class AggregationType {
     }
 }
 
-export interface FleetMetricProperties {
+export interface Properties {
     MetricName: Value<string>
     Description?: Value<string>
     QueryString?: Value<string>
@@ -41,10 +41,11 @@ export interface FleetMetricProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class FleetMetric extends ResourceBase<FleetMetricProperties> {
+class FleetMetric extends ResourceBase<Properties> {
     static AggregationType = AggregationType
 
-    constructor(properties: FleetMetricProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::FleetMetric', properties)
     }
 }
+export { FleetMetric as R }

@@ -8,16 +8,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ReadinessCheckProperties {
+export interface Properties {
     ResourceSetName?: Value<string>
     ReadinessCheckName: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class ReadinessCheck extends ResourceBase<ReadinessCheckProperties> {
+class ReadinessCheck extends ResourceBase<Properties> {
 
 
-    constructor(properties: ReadinessCheckProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53RecoveryReadiness::ReadinessCheck', properties)
     }
 }
+export { ReadinessCheck as R }

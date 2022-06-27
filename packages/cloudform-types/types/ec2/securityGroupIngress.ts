@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SecurityGroupIngressProperties {
+export interface Properties {
     CidrIp?: Value<string>
     CidrIpv6?: Value<string>
     Description?: Value<string>
@@ -37,10 +37,11 @@ export interface SecurityGroupIngressProperties {
     ToPort?: Value<number>
 }
 
-export default class SecurityGroupIngress extends ResourceBase<SecurityGroupIngressProperties> {
+class SecurityGroupIngress extends ResourceBase<Properties> {
 
 
-    constructor(properties: SecurityGroupIngressProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::SecurityGroupIngress', properties)
     }
 }
+export { SecurityGroupIngress as R }

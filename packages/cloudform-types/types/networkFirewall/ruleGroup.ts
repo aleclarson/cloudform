@@ -215,7 +215,7 @@ export class StatefulRule {
     }
 }
 
-export interface RuleGroupProperties {
+export interface Properties {
     RuleGroupName: Value<string>
     RuleGroup?: RuleGroup
     Type: Value<string>
@@ -224,7 +224,7 @@ export interface RuleGroupProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class RuleGroup extends ResourceBase<RuleGroupProperties> {
+class RuleGroup extends ResourceBase<Properties> {
     static ActionDefinition = ActionDefinition
     static TCPFlagField = TCPFlagField
     static Header = Header
@@ -247,7 +247,8 @@ export default class RuleGroup extends ResourceBase<RuleGroupProperties> {
     static RulesSource = RulesSource
     static StatefulRule = StatefulRule
 
-    constructor(properties: RuleGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::NetworkFirewall::RuleGroup', properties)
     }
 }
+export { RuleGroup as R }

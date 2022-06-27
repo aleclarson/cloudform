@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResourcePolicyProperties {
+export interface Properties {
     BlockPublicPolicy?: Value<boolean>
     SecretId: Value<string>
     ResourcePolicy: {[key: string]: any}
 }
 
-export default class ResourcePolicy extends ResourceBase<ResourcePolicyProperties> {
+class ResourcePolicy extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResourcePolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::SecretsManager::ResourcePolicy', properties)
     }
 }
+export { ResourcePolicy as R }

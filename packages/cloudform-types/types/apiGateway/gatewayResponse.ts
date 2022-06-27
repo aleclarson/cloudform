@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface GatewayResponseProperties {
+export interface Properties {
     RestApiId: Value<string>
     ResponseType: Value<string>
     StatusCode?: Value<string>
@@ -30,10 +30,11 @@ export interface GatewayResponseProperties {
     ResponseTemplates?: {[key: string]: Value<string>}
 }
 
-export default class GatewayResponse extends ResourceBase<GatewayResponseProperties> {
+class GatewayResponse extends ResourceBase<Properties> {
 
 
-    constructor(properties: GatewayResponseProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::GatewayResponse', properties)
     }
 }
+export { GatewayResponse as R }

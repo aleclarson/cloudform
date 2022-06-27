@@ -32,7 +32,7 @@ export class WorkspaceProperties {
     }
 }
 
-export interface WorkspaceProperties {
+export interface Properties {
     BundleId: Value<string>
     DirectoryId: Value<string>
     RootVolumeEncryptionEnabled?: Value<boolean>
@@ -43,10 +43,11 @@ export interface WorkspaceProperties {
     WorkspaceProperties?: WorkspaceProperties
 }
 
-export default class Workspace extends ResourceBase<WorkspaceProperties> {
+class Workspace extends ResourceBase<Properties> {
     static WorkspaceProperties = WorkspaceProperties
 
-    constructor(properties: WorkspaceProperties) {
+    constructor(properties: Properties) {
         super('AWS::WorkSpaces::Workspace', properties)
     }
 }
+export { Workspace as R }

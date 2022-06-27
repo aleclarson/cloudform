@@ -21,15 +21,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface EnclaveCertificateIamRoleAssociationProperties {
+export interface Properties {
     CertificateArn: Value<string>
     RoleArn: Value<string>
 }
 
-export default class EnclaveCertificateIamRoleAssociation extends ResourceBase<EnclaveCertificateIamRoleAssociationProperties> {
+class EnclaveCertificateIamRoleAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: EnclaveCertificateIamRoleAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::EnclaveCertificateIamRoleAssociation', properties)
     }
 }
+export { EnclaveCertificateIamRoleAssociation as R }

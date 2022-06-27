@@ -16,12 +16,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface QueueProperties {
+export interface Properties {
     Status?: Value<string>
     Description?: Value<string>
     PricingPlan?: Value<string>
@@ -29,10 +29,11 @@ export interface QueueProperties {
     Name?: Value<string>
 }
 
-export default class Queue extends ResourceBase<QueueProperties> {
+class Queue extends ResourceBase<Properties> {
 
 
-    constructor(properties?: QueueProperties) {
+    constructor(properties?: Properties) {
         super('AWS::MediaConvert::Queue', properties || {})
     }
 }
+export { Queue as R }

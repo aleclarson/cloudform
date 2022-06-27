@@ -19,17 +19,18 @@ export class ServerSideEncryptionConfiguration {
     }
 }
 
-export interface DomainProperties {
+export interface Properties {
     Description?: Value<string>
     Name: Value<string>
     ServerSideEncryptionConfiguration: ServerSideEncryptionConfiguration
     Tags?: List<ResourceTag>
 }
 
-export default class Domain extends ResourceBase<DomainProperties> {
+class Domain extends ResourceBase<Properties> {
     static ServerSideEncryptionConfiguration = ServerSideEncryptionConfiguration
 
-    constructor(properties: DomainProperties) {
+    constructor(properties: Properties) {
         super('AWS::VoiceID::Domain', properties)
     }
 }
+export { Domain as R }

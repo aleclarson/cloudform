@@ -32,7 +32,7 @@ export class SuperuserParameters {
     }
 }
 
-export interface EnvironmentProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     KmsKeyId?: Value<string>
@@ -42,11 +42,12 @@ export interface EnvironmentProperties {
     DataBundles?: List<Value<string>>
 }
 
-export default class Environment extends ResourceBase<EnvironmentProperties> {
+class Environment extends ResourceBase<Properties> {
     static FederationParameters = FederationParameters
     static SuperuserParameters = SuperuserParameters
 
-    constructor(properties: EnvironmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::FinSpace::Environment', properties)
     }
 }
+export { Environment as R }

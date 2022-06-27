@@ -1,1 +1,1 @@
-import Key_ from'./key';import ReplicaKey_ from'./replicaKey';import Alias_ from'./alias';export declare namespace KMS{const Key:typeof Key_;const ReplicaKey:typeof ReplicaKey_;const Alias:typeof Alias_;type Key=Key_;type ReplicaKey=ReplicaKey_;type Alias=Alias_;}
+import*as _0 from'./replicaKey';import*as _1 from'./alias';import*as _2 from'./key';export declare namespace KMS{const ReplicaKey:typeof _0.R;const Alias:typeof _1.R;const Key:typeof _2.R;type ReplicaKey=_0.R;type Alias=_1.R;type Key=_2.R;}

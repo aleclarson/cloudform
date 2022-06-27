@@ -17,19 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import DBCluster_ from './dbCluster'
-import DBSubnetGroup_ from './dbSubnetGroup'
-import DBInstance_ from './dbInstance'
-import DBClusterParameterGroup_ from './dbClusterParameterGroup'
+import * as _0 from './dbCluster'
+import * as _1 from './dbSubnetGroup'
+import * as _2 from './dbInstance'
+import * as _3 from './dbClusterParameterGroup'
 
 export namespace DocDB {
-  export const DBCluster = DBCluster_
-  export const DBSubnetGroup = DBSubnetGroup_
-  export const DBInstance = DBInstance_
-  export const DBClusterParameterGroup = DBClusterParameterGroup_
+  export const DBCluster = _0.R
+  export const DBSubnetGroup = _1.R
+  export const DBInstance = _2.R
+  export const DBClusterParameterGroup = _3.R
 
-  export type DBCluster = DBCluster_
-  export type DBSubnetGroup = DBSubnetGroup_
-  export type DBInstance = DBInstance_
-  export type DBClusterParameterGroup = DBClusterParameterGroup_
+  export type DBCluster = _0.R
+  export type DBSubnetGroup = _1.R
+  export type DBInstance = _2.R
+  export type DBClusterParameterGroup = _3.R
+
+
 }

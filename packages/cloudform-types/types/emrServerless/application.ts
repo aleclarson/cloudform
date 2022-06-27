@@ -72,7 +72,7 @@ export class AutoStopConfiguration {
     }
 }
 
-export interface ApplicationProperties {
+export interface Properties {
     Name?: Value<string>
     ReleaseLabel: Value<string>
     Type: Value<string>
@@ -84,7 +84,7 @@ export interface ApplicationProperties {
     NetworkConfiguration?: NetworkConfiguration
 }
 
-export default class Application extends ResourceBase<ApplicationProperties> {
+class Application extends ResourceBase<Properties> {
     static InitialCapacityConfigKeyValuePair = InitialCapacityConfigKeyValuePair
     static NetworkConfiguration = NetworkConfiguration
     static MaximumAllowedResources = MaximumAllowedResources
@@ -93,7 +93,8 @@ export default class Application extends ResourceBase<ApplicationProperties> {
     static InitialCapacityConfig = InitialCapacityConfig
     static AutoStopConfiguration = AutoStopConfiguration
 
-    constructor(properties: ApplicationProperties) {
+    constructor(properties: Properties) {
         super('AWS::EMRServerless::Application', properties)
     }
 }
+export { Application as R }

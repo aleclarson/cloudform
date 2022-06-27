@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class TagFormat {
@@ -29,7 +29,7 @@ export class TagFormat {
     }
 }
 
-export interface DBProxyEndpointProperties {
+export interface Properties {
     DBProxyEndpointName: Value<string>
     DBProxyName: Value<string>
     VpcSecurityGroupIds?: List<Value<string>>
@@ -38,10 +38,11 @@ export interface DBProxyEndpointProperties {
     Tags?: List<TagFormat>
 }
 
-export default class DBProxyEndpoint extends ResourceBase<DBProxyEndpointProperties> {
+class DBProxyEndpoint extends ResourceBase<Properties> {
     static TagFormat = TagFormat
 
-    constructor(properties: DBProxyEndpointProperties) {
+    constructor(properties: Properties) {
         super('AWS::RDS::DBProxyEndpoint', properties)
     }
 }
+export { DBProxyEndpoint as R }

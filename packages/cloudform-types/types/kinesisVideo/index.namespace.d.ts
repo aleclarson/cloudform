@@ -1,0 +1,1 @@
+import*as _0 from'./stream';import*as _1 from'./signalingChannel';export declare namespace KinesisVideo{const Stream:typeof _0.R;const SignalingChannel:typeof _1.R;type Stream=_0.R;type SignalingChannel=_1.R;}

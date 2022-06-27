@@ -20,7 +20,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ScheduledAuditProperties {
+export interface Properties {
     ScheduledAuditName?: Value<string>
     Frequency: Value<string>
     DayOfMonth?: Value<string>
@@ -29,10 +29,11 @@ export interface ScheduledAuditProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ScheduledAudit extends ResourceBase<ScheduledAuditProperties> {
+class ScheduledAudit extends ResourceBase<Properties> {
 
 
-    constructor(properties: ScheduledAuditProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::ScheduledAudit', properties)
     }
 }
+export { ScheduledAudit as R }

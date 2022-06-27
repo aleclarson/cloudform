@@ -20,7 +20,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CACertificateProperties {
+export interface Properties {
     CACertificatePem?: Value<string>
     VerificationCertificatePem?: Value<string>
     Status: Value<string>
@@ -29,10 +29,11 @@ export interface CACertificateProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class CACertificate extends ResourceBase<CACertificateProperties> {
+class CACertificate extends ResourceBase<Properties> {
 
 
-    constructor(properties: CACertificateProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::CACertificate', properties)
     }
 }
+export { CACertificate as R }

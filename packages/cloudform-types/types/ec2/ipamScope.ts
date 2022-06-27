@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface IPAMScopeProperties {
+export interface Properties {
     IpamId: Value<string>
     Description?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class IPAMScope extends ResourceBase<IPAMScopeProperties> {
+class IPAMScope extends ResourceBase<Properties> {
 
 
-    constructor(properties: IPAMScopeProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::IPAMScope', properties)
     }
 }
+export { IPAMScope as R }

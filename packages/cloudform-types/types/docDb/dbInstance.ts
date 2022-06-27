@@ -20,7 +20,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DBInstanceProperties {
+export interface Properties {
     DBInstanceClass: Value<string>
     DBClusterIdentifier: Value<string>
     AvailabilityZone?: Value<string>
@@ -31,10 +31,11 @@ export interface DBInstanceProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class DBInstance extends ResourceBase<DBInstanceProperties> {
+class DBInstance extends ResourceBase<Properties> {
 
 
-    constructor(properties: DBInstanceProperties) {
+    constructor(properties: Properties) {
         super('AWS::DocDB::DBInstance', properties)
     }
 }
+export { DBInstance as R }

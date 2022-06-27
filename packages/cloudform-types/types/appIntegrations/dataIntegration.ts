@@ -24,7 +24,7 @@ export class ScheduleConfig {
     }
 }
 
-export interface DataIntegrationProperties {
+export interface Properties {
     Description?: Value<string>
     Name: Value<string>
     KmsKey: Value<string>
@@ -33,10 +33,11 @@ export interface DataIntegrationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class DataIntegration extends ResourceBase<DataIntegrationProperties> {
+class DataIntegration extends ResourceBase<Properties> {
     static ScheduleConfig = ScheduleConfig
 
-    constructor(properties: DataIntegrationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppIntegrations::DataIntegration', properties)
     }
 }
+export { DataIntegration as R }

@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface JobTemplateProperties {
+export interface Properties {
     JobArn?: Value<string>
     TimeoutConfig?: {[key: string]: any}
     JobExecutionsRolloutConfig?: {[key: string]: any}
@@ -35,10 +35,11 @@ export interface JobTemplateProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class JobTemplate extends ResourceBase<JobTemplateProperties> {
+class JobTemplate extends ResourceBase<Properties> {
 
 
-    constructor(properties: JobTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::JobTemplate', properties)
     }
 }
+export { JobTemplate as R }

@@ -17,10 +17,22 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ComponentVersion_ from './componentVersion'
+import * as _0 from './componentVersion'
 
 export namespace GreengrassV2 {
-  export const ComponentVersion = ComponentVersion_
+  export const ComponentVersion = _0.R
 
-  export type ComponentVersion = ComponentVersion_
+  export type ComponentVersion = _0.R
+
+  export namespace ComponentVersion {
+    export type ComponentPlatform = _0.ComponentPlatform
+    export type LambdaContainerParams = _0.LambdaContainerParams
+    export type LambdaVolumeMount = _0.LambdaVolumeMount
+    export type LambdaFunctionRecipeSource = _0.LambdaFunctionRecipeSource
+    export type ComponentDependencyRequirement = _0.ComponentDependencyRequirement
+    export type LambdaDeviceMount = _0.LambdaDeviceMount
+    export type LambdaLinuxProcessParams = _0.LambdaLinuxProcessParams
+    export type LambdaEventSource = _0.LambdaEventSource
+    export type LambdaExecutionParameters = _0.LambdaExecutionParameters
+  }
 }

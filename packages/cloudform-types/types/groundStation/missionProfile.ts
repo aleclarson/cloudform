@@ -21,7 +21,7 @@ export class DataflowEdge {
     }
 }
 
-export interface MissionProfileProperties {
+export interface Properties {
     Name: Value<string>
     ContactPrePassDurationSeconds?: Value<number>
     ContactPostPassDurationSeconds?: Value<number>
@@ -31,10 +31,11 @@ export interface MissionProfileProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class MissionProfile extends ResourceBase<MissionProfileProperties> {
+class MissionProfile extends ResourceBase<Properties> {
     static DataflowEdge = DataflowEdge
 
-    constructor(properties: MissionProfileProperties) {
+    constructor(properties: Properties) {
         super('AWS::GroundStation::MissionProfile', properties)
     }
 }
+export { MissionProfile as R }

@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface StreamConsumerProperties {
+export interface Properties {
     ConsumerName: Value<string>
     StreamARN: Value<string>
 }
 
-export default class StreamConsumer extends ResourceBase<StreamConsumerProperties> {
+class StreamConsumer extends ResourceBase<Properties> {
 
 
-    constructor(properties: StreamConsumerProperties) {
+    constructor(properties: Properties) {
         super('AWS::Kinesis::StreamConsumer', properties)
     }
 }
+export { StreamConsumer as R }

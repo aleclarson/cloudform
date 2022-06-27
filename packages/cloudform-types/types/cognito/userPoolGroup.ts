@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UserPoolGroupProperties {
+export interface Properties {
     GroupName?: Value<string>
     Description?: Value<string>
     UserPoolId: Value<string>
@@ -29,10 +29,11 @@ export interface UserPoolGroupProperties {
     RoleArn?: Value<string>
 }
 
-export default class UserPoolGroup extends ResourceBase<UserPoolGroupProperties> {
+class UserPoolGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: UserPoolGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cognito::UserPoolGroup', properties)
     }
 }
+export { UserPoolGroup as R }

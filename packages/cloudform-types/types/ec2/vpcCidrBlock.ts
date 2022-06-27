@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPCCidrBlockProperties {
+export interface Properties {
     AmazonProvidedIpv6CidrBlock?: Value<boolean>
     CidrBlock?: Value<string>
     Ipv4IpamPoolId?: Value<string>
@@ -34,10 +34,11 @@ export interface VPCCidrBlockProperties {
     VpcId: Value<string>
 }
 
-export default class VPCCidrBlock extends ResourceBase<VPCCidrBlockProperties> {
+class VPCCidrBlock extends ResourceBase<Properties> {
 
 
-    constructor(properties: VPCCidrBlockProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::VPCCidrBlock', properties)
     }
 }
+export { VPCCidrBlock as R }

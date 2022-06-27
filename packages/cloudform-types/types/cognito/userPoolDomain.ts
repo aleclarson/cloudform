@@ -27,16 +27,17 @@ export class CustomDomainConfigType {
     }
 }
 
-export interface UserPoolDomainProperties {
+export interface Properties {
     UserPoolId: Value<string>
     CustomDomainConfig?: CustomDomainConfigType
     Domain: Value<string>
 }
 
-export default class UserPoolDomain extends ResourceBase<UserPoolDomainProperties> {
+class UserPoolDomain extends ResourceBase<Properties> {
     static CustomDomainConfigType = CustomDomainConfigType
 
-    constructor(properties: UserPoolDomainProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cognito::UserPoolDomain', properties)
     }
 }
+export { UserPoolDomain as R }

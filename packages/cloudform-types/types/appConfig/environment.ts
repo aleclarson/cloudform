@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Monitors {
@@ -38,7 +38,7 @@ export class Tags {
     }
 }
 
-export interface EnvironmentProperties {
+export interface Properties {
     Description?: Value<string>
     Monitors?: List<Monitors>
     ApplicationId: Value<string>
@@ -46,11 +46,12 @@ export interface EnvironmentProperties {
     Name: Value<string>
 }
 
-export default class Environment extends ResourceBase<EnvironmentProperties> {
+class Environment extends ResourceBase<Properties> {
     static Monitors = Monitors
     static Tags = Tags
 
-    constructor(properties: EnvironmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppConfig::Environment', properties)
     }
 }
+export { Environment as R }

@@ -55,7 +55,7 @@ export class BlockDevice {
     }
 }
 
-export interface LaunchConfigurationProperties {
+export interface Properties {
     AssociatePublicIpAddress?: Value<boolean>
     BlockDeviceMappings?: List<BlockDeviceMapping>
     ClassicLinkVPCId?: Value<string>
@@ -77,12 +77,13 @@ export interface LaunchConfigurationProperties {
     UserData?: Value<string>
 }
 
-export default class LaunchConfiguration extends ResourceBase<LaunchConfigurationProperties> {
+class LaunchConfiguration extends ResourceBase<Properties> {
     static BlockDeviceMapping = BlockDeviceMapping
     static MetadataOptions = MetadataOptions
     static BlockDevice = BlockDevice
 
-    constructor(properties: LaunchConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AutoScaling::LaunchConfiguration', properties)
     }
 }
+export { LaunchConfiguration as R }

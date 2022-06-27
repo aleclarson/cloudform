@@ -41,18 +41,19 @@ export class Filter {
     }
 }
 
-export interface AnalyzerProperties {
+export interface Properties {
     AnalyzerName?: Value<string>
     ArchiveRules?: List<ArchiveRule>
     Tags?: List<ResourceTag>
     Type: Value<string>
 }
 
-export default class Analyzer extends ResourceBase<AnalyzerProperties> {
+class Analyzer extends ResourceBase<Properties> {
     static ArchiveRule = ArchiveRule
     static Filter = Filter
 
-    constructor(properties: AnalyzerProperties) {
+    constructor(properties: Properties) {
         super('AWS::AccessAnalyzer::Analyzer', properties)
     }
 }
+export { Analyzer as R }

@@ -61,7 +61,7 @@ export class SuppressionOptions {
     }
 }
 
-export interface ConfigurationSetProperties {
+export interface Properties {
     Name?: Value<string>
     TrackingOptions?: TrackingOptions
     DeliveryOptions?: DeliveryOptions
@@ -70,14 +70,15 @@ export interface ConfigurationSetProperties {
     SuppressionOptions?: SuppressionOptions
 }
 
-export default class ConfigurationSet extends ResourceBase<ConfigurationSetProperties> {
+class ConfigurationSet extends ResourceBase<Properties> {
     static ReputationOptions = ReputationOptions
     static DeliveryOptions = DeliveryOptions
     static TrackingOptions = TrackingOptions
     static SendingOptions = SendingOptions
     static SuppressionOptions = SuppressionOptions
 
-    constructor(properties?: ConfigurationSetProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SES::ConfigurationSet', properties || {})
     }
 }
+export { ConfigurationSet as R }

@@ -17,16 +17,18 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ResourceGroup_ from './resourceGroup'
-import AssessmentTemplate_ from './assessmentTemplate'
-import AssessmentTarget_ from './assessmentTarget'
+import * as _0 from './resourceGroup'
+import * as _1 from './assessmentTemplate'
+import * as _2 from './assessmentTarget'
 
 export namespace Inspector {
-  export const ResourceGroup = ResourceGroup_
-  export const AssessmentTemplate = AssessmentTemplate_
-  export const AssessmentTarget = AssessmentTarget_
+  export const ResourceGroup = _0.R
+  export const AssessmentTemplate = _1.R
+  export const AssessmentTarget = _2.R
 
-  export type ResourceGroup = ResourceGroup_
-  export type AssessmentTemplate = AssessmentTemplate_
-  export type AssessmentTarget = AssessmentTarget_
+  export type ResourceGroup = _0.R
+  export type AssessmentTemplate = _1.R
+  export type AssessmentTarget = _2.R
+
+
 }

@@ -17,13 +17,22 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import EventIntegration_ from './eventIntegration'
-import DataIntegration_ from './dataIntegration'
+import * as _0 from './eventIntegration'
+import * as _1 from './dataIntegration'
 
 export namespace AppIntegrations {
-  export const EventIntegration = EventIntegration_
-  export const DataIntegration = DataIntegration_
+  export const EventIntegration = _0.R
+  export const DataIntegration = _1.R
 
-  export type EventIntegration = EventIntegration_
-  export type DataIntegration = DataIntegration_
+  export type EventIntegration = _0.R
+  export type DataIntegration = _1.R
+
+  export namespace EventIntegration {
+    export type Metadata = _0.Metadata
+    export type EventFilter = _0.EventFilter
+    export type EventIntegrationAssociation = _0.EventIntegrationAssociation
+  }
+  export namespace DataIntegration {
+    export type ScheduleConfig = _1.ScheduleConfig
+  }
 }

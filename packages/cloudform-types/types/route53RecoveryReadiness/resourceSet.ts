@@ -55,21 +55,22 @@ export class R53ResourceRecord {
     }
 }
 
-export interface ResourceSetProperties {
+export interface Properties {
     ResourceSetName: Value<string>
     Resources: List<Resource>
     ResourceSetType: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class ResourceSet extends ResourceBase<ResourceSetProperties> {
+class ResourceSet extends ResourceBase<Properties> {
     static TargetResource = TargetResource
     static Resource = Resource
     static DNSTargetResource = DNSTargetResource
     static NLBResource = NLBResource
     static R53ResourceRecord = R53ResourceRecord
 
-    constructor(properties: ResourceSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53RecoveryReadiness::ResourceSet', properties)
     }
 }
+export { ResourceSet as R }

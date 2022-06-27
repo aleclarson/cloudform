@@ -50,7 +50,7 @@ export class ObjectTypeKey {
     }
 }
 
-export interface ObjectTypeProperties {
+export interface Properties {
     DomainName: Value<string>
     ObjectTypeName?: Value<string>
     AllowProfileCreation?: Value<boolean>
@@ -63,13 +63,14 @@ export interface ObjectTypeProperties {
     TemplateId?: Value<string>
 }
 
-export default class ObjectType extends ResourceBase<ObjectTypeProperties> {
+class ObjectType extends ResourceBase<Properties> {
     static KeyMap = KeyMap
     static FieldMap = FieldMap
     static ObjectTypeField = ObjectTypeField
     static ObjectTypeKey = ObjectTypeKey
 
-    constructor(properties: ObjectTypeProperties) {
+    constructor(properties: Properties) {
         super('AWS::CustomerProfiles::ObjectType', properties)
     }
 }
+export { ObjectType as R }

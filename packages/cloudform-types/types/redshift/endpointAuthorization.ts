@@ -21,17 +21,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface EndpointAuthorizationProperties {
+export interface Properties {
     ClusterIdentifier: Value<string>
     Account: Value<string>
     VpcIds?: List<Value<string>>
     Force?: Value<boolean>
 }
 
-export default class EndpointAuthorization extends ResourceBase<EndpointAuthorizationProperties> {
+class EndpointAuthorization extends ResourceBase<Properties> {
 
 
-    constructor(properties: EndpointAuthorizationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Redshift::EndpointAuthorization', properties)
     }
 }
+export { EndpointAuthorization as R }

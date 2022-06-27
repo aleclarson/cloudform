@@ -433,7 +433,7 @@ export class OAuth2Properties {
     }
 }
 
-export interface ConnectorProfileProperties {
+export interface Properties {
     ConnectorProfileName: Value<string>
     KMSArn?: Value<string>
     ConnectorType: Value<string>
@@ -442,7 +442,7 @@ export interface ConnectorProfileProperties {
     ConnectorLabel?: Value<string>
 }
 
-export default class ConnectorProfile extends ResourceBase<ConnectorProfileProperties> {
+class ConnectorProfile extends ResourceBase<Properties> {
     static InforNexusConnectorProfileProperties = InforNexusConnectorProfileProperties
     static DynatraceConnectorProfileCredentials = DynatraceConnectorProfileCredentials
     static MarketoConnectorProfileCredentials = MarketoConnectorProfileCredentials
@@ -484,7 +484,8 @@ export default class ConnectorProfile extends ResourceBase<ConnectorProfilePrope
     static ApiKeyCredentials = ApiKeyCredentials
     static OAuth2Properties = OAuth2Properties
 
-    constructor(properties: ConnectorProfileProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppFlow::ConnectorProfile', properties)
     }
 }
+export { ConnectorProfile as R }

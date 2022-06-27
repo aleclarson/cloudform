@@ -30,18 +30,19 @@ export class DataDeliveryObject {
     }
 }
 
-export interface ProjectProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     DataDelivery?: DataDeliveryObject
     Tags?: List<ResourceTag>
 }
 
-export default class Project extends ResourceBase<ProjectProperties> {
+class Project extends ResourceBase<Properties> {
     static S3Destination = S3Destination
     static DataDeliveryObject = DataDeliveryObject
 
-    constructor(properties: ProjectProperties) {
+    constructor(properties: Properties) {
         super('AWS::Evidently::Project', properties)
     }
 }
+export { Project as R }

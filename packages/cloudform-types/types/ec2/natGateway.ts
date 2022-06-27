@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NatGatewayProperties {
+export interface Properties {
     SubnetId: Value<string>
     ConnectivityType?: Value<string>
     Tags?: List<ResourceTag>
     AllocationId?: Value<string>
 }
 
-export default class NatGateway extends ResourceBase<NatGatewayProperties> {
+class NatGateway extends ResourceBase<Properties> {
 
 
-    constructor(properties: NatGatewayProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::NatGateway', properties)
     }
 }
+export { NatGateway as R }

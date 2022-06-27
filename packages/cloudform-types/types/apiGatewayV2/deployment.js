@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class Deployment extends resource_1.ResourceBase{constructor(properties){super("AWS::ApiGatewayV2::Deployment",properties)}}exports.default=Deployment;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class Deployment extends resource_1.ResourceBase{constructor(properties){super("AWS::ApiGatewayV2::Deployment",properties)}}exports.R=Deployment;

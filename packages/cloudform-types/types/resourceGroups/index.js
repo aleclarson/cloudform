@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),group_1=(exports.default=index_namespace_1.ResourceGroups,Object.defineProperty(exports,"__esModule",{value:!0}),require("./group"));var ResourceGroups;!function(ResourceGroups){ResourceGroups.Group=group_1.default}(ResourceGroups=exports.ResourceGroups||(exports.ResourceGroups={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.ResourceGroups;

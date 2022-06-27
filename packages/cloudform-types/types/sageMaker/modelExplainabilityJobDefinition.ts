@@ -142,7 +142,7 @@ export class EndpointInput {
     }
 }
 
-export interface ModelExplainabilityJobDefinitionProperties {
+export interface Properties {
     JobDefinitionName?: Value<string>
     ModelExplainabilityBaselineConfig?: ModelExplainabilityBaselineConfig
     ModelExplainabilityAppSpecification: ModelExplainabilityAppSpecification
@@ -156,7 +156,7 @@ export interface ModelExplainabilityJobDefinitionProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ModelExplainabilityJobDefinition extends ResourceBase<ModelExplainabilityJobDefinitionProperties> {
+class ModelExplainabilityJobDefinition extends ResourceBase<Properties> {
     static ModelExplainabilityAppSpecification = ModelExplainabilityAppSpecification
     static ModelExplainabilityJobInput = ModelExplainabilityJobInput
     static ClusterConfig = ClusterConfig
@@ -171,7 +171,8 @@ export default class ModelExplainabilityJobDefinition extends ResourceBase<Model
     static VpcConfig = VpcConfig
     static EndpointInput = EndpointInput
 
-    constructor(properties: ModelExplainabilityJobDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::ModelExplainabilityJobDefinition', properties)
     }
 }
+export { ModelExplainabilityJobDefinition as R }

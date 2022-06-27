@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RequestValidatorProperties {
+export interface Properties {
     Name?: Value<string>
     RestApiId: Value<string>
     ValidateRequestBody?: Value<boolean>
     ValidateRequestParameters?: Value<boolean>
 }
 
-export default class RequestValidator extends ResourceBase<RequestValidatorProperties> {
+class RequestValidator extends ResourceBase<Properties> {
 
 
-    constructor(properties: RequestValidatorProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::RequestValidator', properties)
     }
 }
+export { RequestValidator as R }

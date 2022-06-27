@@ -14,7 +14,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface GeofenceCollectionProperties {
+export interface Properties {
     CollectionName: Value<string>
     Description?: Value<string>
     KmsKeyId?: Value<string>
@@ -22,10 +22,11 @@ export interface GeofenceCollectionProperties {
     PricingPlanDataSource?: Value<string>
 }
 
-export default class GeofenceCollection extends ResourceBase<GeofenceCollectionProperties> {
+class GeofenceCollection extends ResourceBase<Properties> {
 
 
-    constructor(properties: GeofenceCollectionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Location::GeofenceCollection', properties)
     }
 }
+export { GeofenceCollection as R }

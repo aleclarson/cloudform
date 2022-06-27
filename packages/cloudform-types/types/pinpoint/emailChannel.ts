@@ -17,7 +17,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface EmailChannelProperties {
+export interface Properties {
     ConfigurationSet?: Value<string>
     FromAddress: Value<string>
     Enabled?: Value<boolean>
@@ -26,10 +26,11 @@ export interface EmailChannelProperties {
     RoleArn?: Value<string>
 }
 
-export default class EmailChannel extends ResourceBase<EmailChannelProperties> {
+class EmailChannel extends ResourceBase<Properties> {
 
 
-    constructor(properties: EmailChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::EmailChannel', properties)
     }
 }
+export { EmailChannel as R }

@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface NetworkInterfaceAttachmentProperties {
+export interface Properties {
     DeleteOnTermination?: Value<boolean>
     DeviceIndex: Value<string>
     InstanceId: Value<string>
     NetworkInterfaceId: Value<string>
 }
 
-export default class NetworkInterfaceAttachment extends ResourceBase<NetworkInterfaceAttachmentProperties> {
+class NetworkInterfaceAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties: NetworkInterfaceAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::NetworkInterfaceAttachment', properties)
     }
 }
+export { NetworkInterfaceAttachment as R }

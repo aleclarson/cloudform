@@ -17,10 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import SuiteDefinition_ from './suiteDefinition'
+import * as _0 from './suiteDefinition'
 
 export namespace IoTCoreDeviceAdvisor {
-  export const SuiteDefinition = SuiteDefinition_
+  export const SuiteDefinition = _0.R
 
-  export type SuiteDefinition = SuiteDefinition_
+  export type SuiteDefinition = _0.R
+
+
 }

@@ -31,16 +31,17 @@ export class MetricTransformation {
     }
 }
 
-export interface MetricFilterProperties {
+export interface Properties {
     FilterPattern: Value<string>
     LogGroupName: Value<string>
     MetricTransformations: List<MetricTransformation>
 }
 
-export default class MetricFilter extends ResourceBase<MetricFilterProperties> {
+class MetricFilter extends ResourceBase<Properties> {
     static MetricTransformation = MetricTransformation
 
-    constructor(properties: MetricFilterProperties) {
+    constructor(properties: Properties) {
         super('AWS::Logs::MetricFilter', properties)
     }
 }
+export { MetricFilter as R }

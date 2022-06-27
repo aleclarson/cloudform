@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TopicPolicyProperties {
+export interface Properties {
     PolicyDocument: {[key: string]: any}
     Topics: List<Value<string>>
 }
 
-export default class TopicPolicy extends ResourceBase<TopicPolicyProperties> {
+class TopicPolicy extends ResourceBase<Properties> {
 
 
-    constructor(properties: TopicPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::SNS::TopicPolicy', properties)
     }
 }
+export { TopicPolicy as R }

@@ -66,7 +66,7 @@ export class ResourceQuery {
     }
 }
 
-export interface GroupProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     ResourceQuery?: ResourceQuery
@@ -75,14 +75,15 @@ export interface GroupProperties {
     Resources?: List<Value<string>>
 }
 
-export default class Group extends ResourceBase<GroupProperties> {
+class Group extends ResourceBase<Properties> {
     static TagFilter = TagFilter
     static Query = Query
     static ConfigurationParameter = ConfigurationParameter
     static ConfigurationItem = ConfigurationItem
     static ResourceQuery = ResourceQuery
 
-    constructor(properties: GroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::ResourceGroups::Group', properties)
     }
 }
+export { Group as R }

@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PortfolioShareProperties {
+export interface Properties {
     AccountId: Value<string>
     AcceptLanguage?: Value<string>
     PortfolioId: Value<string>
     ShareTagOptions?: Value<boolean>
 }
 
-export default class PortfolioShare extends ResourceBase<PortfolioShareProperties> {
+class PortfolioShare extends ResourceBase<Properties> {
 
 
-    constructor(properties: PortfolioShareProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::PortfolioShare', properties)
     }
 }
+export { PortfolioShare as R }

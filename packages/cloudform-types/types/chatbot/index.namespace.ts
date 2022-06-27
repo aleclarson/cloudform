@@ -17,10 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import SlackChannelConfiguration_ from './slackChannelConfiguration'
+import * as _0 from './slackChannelConfiguration'
 
 export namespace Chatbot {
-  export const SlackChannelConfiguration = SlackChannelConfiguration_
+  export const SlackChannelConfiguration = _0.R
 
-  export type SlackChannelConfiguration = SlackChannelConfiguration_
+  export type SlackChannelConfiguration = _0.R
+
+
 }

@@ -46,7 +46,7 @@ export class EncryptionConfiguration {
     }
 }
 
-export interface RepositoryProperties {
+export interface Properties {
     LifecyclePolicy?: LifecyclePolicy
     RepositoryName?: Value<string>
     RepositoryPolicyText?: {[key: string]: any}
@@ -56,12 +56,13 @@ export interface RepositoryProperties {
     EncryptionConfiguration?: EncryptionConfiguration
 }
 
-export default class Repository extends ResourceBase<RepositoryProperties> {
+class Repository extends ResourceBase<Properties> {
     static LifecyclePolicy = LifecyclePolicy
     static ImageScanningConfiguration = ImageScanningConfiguration
     static EncryptionConfiguration = EncryptionConfiguration
 
-    constructor(properties?: RepositoryProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ECR::Repository', properties || {})
     }
 }
+export { Repository as R }

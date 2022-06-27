@@ -17,10 +17,14 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import EnvironmentEC2_ from './environmentEc2'
+import * as _0 from './environmentEc2'
 
 export namespace Cloud9 {
-  export const EnvironmentEC2 = EnvironmentEC2_
+  export const EnvironmentEC2 = _0.R
 
-  export type EnvironmentEC2 = EnvironmentEC2_
+  export type EnvironmentEC2 = _0.R
+
+  export namespace EnvironmentEC2 {
+    export type Repository = _0.Repository
+  }
 }

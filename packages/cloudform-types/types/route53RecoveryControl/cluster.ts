@@ -15,15 +15,16 @@ export class ClusterEndpoint {
     }
 }
 
-export interface ClusterProperties {
+export interface Properties {
     Name?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Cluster extends ResourceBase<ClusterProperties> {
+class Cluster extends ResourceBase<Properties> {
     static ClusterEndpoint = ClusterEndpoint
 
-    constructor(properties?: ClusterProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Route53RecoveryControl::Cluster', properties || {})
     }
 }
+export { Cluster as R }

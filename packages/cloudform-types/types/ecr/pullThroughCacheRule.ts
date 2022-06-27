@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PullThroughCacheRuleProperties {
+export interface Properties {
     EcrRepositoryPrefix?: Value<string>
     UpstreamRegistryUrl?: Value<string>
 }
 
-export default class PullThroughCacheRule extends ResourceBase<PullThroughCacheRuleProperties> {
+class PullThroughCacheRule extends ResourceBase<Properties> {
 
 
-    constructor(properties?: PullThroughCacheRuleProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ECR::PullThroughCacheRule', properties || {})
     }
 }
+export { PullThroughCacheRule as R }

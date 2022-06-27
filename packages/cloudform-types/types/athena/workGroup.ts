@@ -60,7 +60,7 @@ export class EngineVersion {
     }
 }
 
-export interface WorkGroupProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     Tags?: List<ResourceTag>
@@ -69,13 +69,14 @@ export interface WorkGroupProperties {
     RecursiveDeleteOption?: Value<boolean>
 }
 
-export default class WorkGroup extends ResourceBase<WorkGroupProperties> {
+class WorkGroup extends ResourceBase<Properties> {
     static ResultConfiguration = ResultConfiguration
     static WorkGroupConfiguration = WorkGroupConfiguration
     static EncryptionConfiguration = EncryptionConfiguration
     static EngineVersion = EngineVersion
 
-    constructor(properties: WorkGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::Athena::WorkGroup', properties)
     }
 }
+export { WorkGroup as R }

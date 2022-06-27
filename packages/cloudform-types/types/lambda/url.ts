@@ -33,7 +33,7 @@ export class Cors {
     }
 }
 
-export interface UrlProperties {
+export interface Properties {
     TargetFunctionArn: Value<string>
     Qualifier?: Value<string>
     AuthType: Value<string>
@@ -41,10 +41,11 @@ export interface UrlProperties {
     Cors?: Cors
 }
 
-export default class Url extends ResourceBase<UrlProperties> {
+class Url extends ResourceBase<Properties> {
     static Cors = Cors
 
-    constructor(properties: UrlProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lambda::Url', properties)
     }
 }
+export { Url as R }

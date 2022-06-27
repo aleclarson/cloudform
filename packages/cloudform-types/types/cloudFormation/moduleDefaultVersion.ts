@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ModuleDefaultVersionProperties {
+export interface Properties {
     Arn?: Value<string>
     ModuleName?: Value<string>
     VersionId?: Value<string>
 }
 
-export default class ModuleDefaultVersion extends ResourceBase<ModuleDefaultVersionProperties> {
+class ModuleDefaultVersion extends ResourceBase<Properties> {
 
 
-    constructor(properties?: ModuleDefaultVersionProperties) {
+    constructor(properties?: Properties) {
         super('AWS::CloudFormation::ModuleDefaultVersion', properties || {})
     }
 }
+export { ModuleDefaultVersion as R }

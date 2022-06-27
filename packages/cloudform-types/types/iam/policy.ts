@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PolicyProperties {
+export interface Properties {
     Groups?: List<Value<string>>
     PolicyDocument: {[key: string]: any}
     PolicyName: Value<string>
@@ -30,10 +30,11 @@ export interface PolicyProperties {
     Users?: List<Value<string>>
 }
 
-export default class Policy extends ResourceBase<PolicyProperties> {
+class Policy extends ResourceBase<Properties> {
 
 
-    constructor(properties: PolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::IAM::Policy', properties)
     }
 }
+export { Policy as R }

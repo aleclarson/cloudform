@@ -96,7 +96,7 @@ export class AccountTakeoverRiskConfigurationType {
     }
 }
 
-export interface UserPoolRiskConfigurationAttachmentProperties {
+export interface Properties {
     CompromisedCredentialsRiskConfiguration?: CompromisedCredentialsRiskConfigurationType
     UserPoolId: Value<string>
     ClientId: Value<string>
@@ -104,7 +104,7 @@ export interface UserPoolRiskConfigurationAttachmentProperties {
     RiskExceptionConfiguration?: RiskExceptionConfigurationType
 }
 
-export default class UserPoolRiskConfigurationAttachment extends ResourceBase<UserPoolRiskConfigurationAttachmentProperties> {
+class UserPoolRiskConfigurationAttachment extends ResourceBase<Properties> {
     static AccountTakeoverActionsType = AccountTakeoverActionsType
     static RiskExceptionConfigurationType = RiskExceptionConfigurationType
     static AccountTakeoverActionType = AccountTakeoverActionType
@@ -114,7 +114,8 @@ export default class UserPoolRiskConfigurationAttachment extends ResourceBase<Us
     static NotifyConfigurationType = NotifyConfigurationType
     static AccountTakeoverRiskConfigurationType = AccountTakeoverRiskConfigurationType
 
-    constructor(properties: UserPoolRiskConfigurationAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cognito::UserPoolRiskConfigurationAttachment', properties)
     }
 }
+export { UserPoolRiskConfigurationAttachment as R }

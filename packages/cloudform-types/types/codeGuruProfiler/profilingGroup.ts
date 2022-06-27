@@ -22,7 +22,7 @@ export class Channel {
     }
 }
 
-export interface ProfilingGroupProperties {
+export interface Properties {
     ProfilingGroupName: Value<string>
     ComputePlatform?: Value<string>
     AgentPermissions?: {[key: string]: any}
@@ -30,10 +30,11 @@ export interface ProfilingGroupProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ProfilingGroup extends ResourceBase<ProfilingGroupProperties> {
+class ProfilingGroup extends ResourceBase<Properties> {
     static Channel = Channel
 
-    constructor(properties: ProfilingGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodeGuruProfiler::ProfilingGroup', properties)
     }
 }
+export { ProfilingGroup as R }

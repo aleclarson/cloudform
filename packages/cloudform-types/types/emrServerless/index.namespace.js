@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.EMRServerless=void 0;const _0=require("./application");var EMRServerless;!function(EMRServerless){EMRServerless.Application=_0.R}(EMRServerless=exports.EMRServerless||(exports.EMRServerless={}));

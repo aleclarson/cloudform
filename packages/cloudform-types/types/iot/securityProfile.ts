@@ -100,7 +100,7 @@ export class StatisticalThreshold {
     }
 }
 
-export interface SecurityProfileProperties {
+export interface Properties {
     SecurityProfileName?: Value<string>
     SecurityProfileDescription?: Value<string>
     Behaviors?: List<Behavior>
@@ -110,7 +110,7 @@ export interface SecurityProfileProperties {
     TargetArns?: List<Value<string>>
 }
 
-export default class SecurityProfile extends ResourceBase<SecurityProfileProperties> {
+class SecurityProfile extends ResourceBase<Properties> {
     static MetricToRetain = MetricToRetain
     static MachineLearningDetectionConfig = MachineLearningDetectionConfig
     static MetricDimension = MetricDimension
@@ -120,7 +120,8 @@ export default class SecurityProfile extends ResourceBase<SecurityProfilePropert
     static BehaviorCriteria = BehaviorCriteria
     static StatisticalThreshold = StatisticalThreshold
 
-    constructor(properties?: SecurityProfileProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IoT::SecurityProfile', properties || {})
     }
 }
+export { SecurityProfile as R }

@@ -28,17 +28,18 @@ export class ResourceServerScopeType {
     }
 }
 
-export interface UserPoolResourceServerProperties {
+export interface Properties {
     UserPoolId: Value<string>
     Identifier: Value<string>
     Scopes?: List<ResourceServerScopeType>
     Name: Value<string>
 }
 
-export default class UserPoolResourceServer extends ResourceBase<UserPoolResourceServerProperties> {
+class UserPoolResourceServer extends ResourceBase<Properties> {
     static ResourceServerScopeType = ResourceServerScopeType
 
-    constructor(properties: UserPoolResourceServerProperties) {
+    constructor(properties: Properties) {
         super('AWS::Cognito::UserPoolResourceServer', properties)
     }
 }
+export { UserPoolResourceServer as R }

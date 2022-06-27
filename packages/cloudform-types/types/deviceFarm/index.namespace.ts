@@ -17,25 +17,32 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import TestGridProject_ from './testGridProject'
-import VPCEConfiguration_ from './vpceConfiguration'
-import NetworkProfile_ from './networkProfile'
-import DevicePool_ from './devicePool'
-import Project_ from './project'
-import InstanceProfile_ from './instanceProfile'
+import * as _0 from './testGridProject'
+import * as _1 from './vpceConfiguration'
+import * as _2 from './networkProfile'
+import * as _3 from './devicePool'
+import * as _4 from './project'
+import * as _5 from './instanceProfile'
 
 export namespace DeviceFarm {
-  export const TestGridProject = TestGridProject_
-  export const VPCEConfiguration = VPCEConfiguration_
-  export const NetworkProfile = NetworkProfile_
-  export const DevicePool = DevicePool_
-  export const Project = Project_
-  export const InstanceProfile = InstanceProfile_
+  export const TestGridProject = _0.R
+  export const VPCEConfiguration = _1.R
+  export const NetworkProfile = _2.R
+  export const DevicePool = _3.R
+  export const Project = _4.R
+  export const InstanceProfile = _5.R
 
-  export type TestGridProject = TestGridProject_
-  export type VPCEConfiguration = VPCEConfiguration_
-  export type NetworkProfile = NetworkProfile_
-  export type DevicePool = DevicePool_
-  export type Project = Project_
-  export type InstanceProfile = InstanceProfile_
+  export type TestGridProject = _0.R
+  export type VPCEConfiguration = _1.R
+  export type NetworkProfile = _2.R
+  export type DevicePool = _3.R
+  export type Project = _4.R
+  export type InstanceProfile = _5.R
+
+  export namespace TestGridProject {
+    export type VpcConfig = _0.VpcConfig
+  }
+  export namespace DevicePool {
+    export type Rule = _3.Rule
+  }
 }

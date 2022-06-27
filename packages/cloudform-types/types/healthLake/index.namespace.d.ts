@@ -1,0 +1,1 @@
+import*as _0 from'./fhirDatastore';export declare namespace HealthLake{const FHIRDatastore:typeof _0.R;type FHIRDatastore=_0.R;namespace FHIRDatastore{type SseConfiguration=_0.SseConfiguration;type PreloadDataConfig=_0.PreloadDataConfig;type KmsEncryptionConfig=_0.KmsEncryptionConfig;}}

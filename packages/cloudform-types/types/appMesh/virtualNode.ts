@@ -406,7 +406,7 @@ export class VirtualNodeGrpcConnectionPool {
     }
 }
 
-export interface VirtualNodeProperties {
+export interface Properties {
     MeshName: Value<string>
     MeshOwner?: Value<string>
     Spec: VirtualNodeSpec
@@ -414,7 +414,7 @@ export interface VirtualNodeProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class VirtualNode extends ResourceBase<VirtualNodeProperties> {
+class VirtualNode extends ResourceBase<Properties> {
     static TlsValidationContextSdsTrust = TlsValidationContextSdsTrust
     static ClientPolicyTls = ClientPolicyTls
     static FileAccessLog = FileAccessLog
@@ -458,7 +458,8 @@ export default class VirtualNode extends ResourceBase<VirtualNodeProperties> {
     static SubjectAlternativeNames = SubjectAlternativeNames
     static VirtualNodeGrpcConnectionPool = VirtualNodeGrpcConnectionPool
 
-    constructor(properties: VirtualNodeProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppMesh::VirtualNode', properties)
     }
 }
+export { VirtualNode as R }

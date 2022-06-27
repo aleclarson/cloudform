@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CertificateProperties {
+export interface Properties {
     CertificateIdentifier?: Value<string>
     CertificatePem?: Value<string>
     CertificateWallet?: Value<string>
 }
 
-export default class Certificate extends ResourceBase<CertificateProperties> {
+class Certificate extends ResourceBase<Properties> {
 
 
-    constructor(properties?: CertificateProperties) {
+    constructor(properties?: Properties) {
         super('AWS::DMS::Certificate', properties || {})
     }
 }
+export { Certificate as R }

@@ -7,12 +7,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface SceneProperties {
+export interface Properties {
     SceneId: Value<string>
     Description?: Value<string>
     ContentLocation: Value<string>
@@ -21,10 +21,11 @@ export interface SceneProperties {
     Capabilities?: List<Value<string>>
 }
 
-export default class Scene extends ResourceBase<SceneProperties> {
+class Scene extends ResourceBase<Properties> {
 
 
-    constructor(properties: SceneProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTTwinMaker::Scene', properties)
     }
 }
+export { Scene as R }

@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface QueuePolicyProperties {
+export interface Properties {
     PolicyDocument: {[key: string]: any}
     Queues: List<Value<string>>
 }
 
-export default class QueuePolicy extends ResourceBase<QueuePolicyProperties> {
+class QueuePolicy extends ResourceBase<Properties> {
 
 
-    constructor(properties: QueuePolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::SQS::QueuePolicy', properties)
     }
 }
+export { QueuePolicy as R }

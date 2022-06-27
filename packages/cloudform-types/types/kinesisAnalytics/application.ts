@@ -130,14 +130,14 @@ export class InputLambdaProcessor {
     }
 }
 
-export interface ApplicationProperties {
+export interface Properties {
     ApplicationName?: Value<string>
     Inputs: List<Input>
     ApplicationDescription?: Value<string>
     ApplicationCode?: Value<string>
 }
 
-export default class Application extends ResourceBase<ApplicationProperties> {
+class Application extends ResourceBase<Properties> {
     static CSVMappingParameters = CSVMappingParameters
     static Input = Input
     static JSONMappingParameters = JSONMappingParameters
@@ -151,7 +151,8 @@ export default class Application extends ResourceBase<ApplicationProperties> {
     static InputProcessingConfiguration = InputProcessingConfiguration
     static InputLambdaProcessor = InputLambdaProcessor
 
-    constructor(properties: ApplicationProperties) {
+    constructor(properties: Properties) {
         super('AWS::KinesisAnalytics::Application', properties)
     }
 }
+export { Application as R }

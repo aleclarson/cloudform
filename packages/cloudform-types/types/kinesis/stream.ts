@@ -37,7 +37,7 @@ export class StreamModeDetails {
     }
 }
 
-export interface StreamProperties {
+export interface Properties {
     Name?: Value<string>
     RetentionPeriodHours?: Value<number>
     ShardCount?: Value<number>
@@ -46,11 +46,12 @@ export interface StreamProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Stream extends ResourceBase<StreamProperties> {
+class Stream extends ResourceBase<Properties> {
     static StreamEncryption = StreamEncryption
     static StreamModeDetails = StreamModeDetails
 
-    constructor(properties?: StreamProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Kinesis::Stream', properties || {})
     }
 }
+export { Stream as R }

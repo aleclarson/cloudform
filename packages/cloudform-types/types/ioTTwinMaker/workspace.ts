@@ -7,12 +7,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface WorkspaceProperties {
+export interface Properties {
     WorkspaceId: Value<string>
     Description?: Value<string>
     Role: Value<string>
@@ -20,10 +20,11 @@ export interface WorkspaceProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class Workspace extends ResourceBase<WorkspaceProperties> {
+class Workspace extends ResourceBase<Properties> {
 
 
-    constructor(properties: WorkspaceProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTTwinMaker::Workspace', properties)
     }
 }
+export { Workspace as R }

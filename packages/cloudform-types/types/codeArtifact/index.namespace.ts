@@ -17,13 +17,15 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Domain_ from './domain'
-import Repository_ from './repository'
+import * as _0 from './domain'
+import * as _1 from './repository'
 
 export namespace CodeArtifact {
-  export const Domain = Domain_
-  export const Repository = Repository_
+  export const Domain = _0.R
+  export const Repository = _1.R
 
-  export type Domain = Domain_
-  export type Repository = Repository_
+  export type Domain = _0.R
+  export type Repository = _1.R
+
+
 }

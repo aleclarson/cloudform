@@ -40,7 +40,7 @@ export class EndpointConfiguration {
     }
 }
 
-export interface RestApiProperties {
+export interface Properties {
     ApiKeySourceType?: Value<string>
     BinaryMediaTypes?: List<Value<string>>
     Body?: {[key: string]: any}
@@ -58,11 +58,12 @@ export interface RestApiProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class RestApi extends ResourceBase<RestApiProperties> {
+class RestApi extends ResourceBase<Properties> {
     static S3Location = S3Location
     static EndpointConfiguration = EndpointConfiguration
 
-    constructor(properties?: RestApiProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ApiGateway::RestApi', properties || {})
     }
 }
+export { RestApi as R }

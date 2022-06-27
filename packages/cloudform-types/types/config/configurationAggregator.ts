@@ -39,18 +39,19 @@ export class AccountAggregationSource {
     }
 }
 
-export interface ConfigurationAggregatorProperties {
+export interface Properties {
     AccountAggregationSources?: List<AccountAggregationSource>
     ConfigurationAggregatorName?: Value<string>
     OrganizationAggregationSource?: OrganizationAggregationSource
     Tags?: List<ResourceTag>
 }
 
-export default class ConfigurationAggregator extends ResourceBase<ConfigurationAggregatorProperties> {
+class ConfigurationAggregator extends ResourceBase<Properties> {
     static OrganizationAggregationSource = OrganizationAggregationSource
     static AccountAggregationSource = AccountAggregationSource
 
-    constructor(properties?: ConfigurationAggregatorProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Config::ConfigurationAggregator', properties || {})
     }
 }
+export { ConfigurationAggregator as R }

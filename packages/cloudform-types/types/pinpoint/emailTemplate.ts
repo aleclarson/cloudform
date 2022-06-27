@@ -12,12 +12,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface EmailTemplateProperties {
+export interface Properties {
     HtmlPart?: Value<string>
     TextPart?: Value<string>
     TemplateName: Value<string>
@@ -27,10 +27,11 @@ export interface EmailTemplateProperties {
     Tags?: {[key: string]: any}
 }
 
-export default class EmailTemplate extends ResourceBase<EmailTemplateProperties> {
+class EmailTemplate extends ResourceBase<Properties> {
 
 
-    constructor(properties: EmailTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::EmailTemplate', properties)
     }
 }
+export { EmailTemplate as R }

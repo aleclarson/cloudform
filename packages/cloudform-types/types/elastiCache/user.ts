@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UserProperties {
+export interface Properties {
     UserId: Value<string>
     UserName: Value<string>
     Engine: Value<string>
@@ -31,10 +31,11 @@ export interface UserProperties {
     Passwords?: List<Value<string>>
 }
 
-export default class User extends ResourceBase<UserProperties> {
+class User extends ResourceBase<Properties> {
 
 
-    constructor(properties: UserProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElastiCache::User', properties)
     }
 }
+export { User as R }

@@ -17,37 +17,80 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import LayerVersion_ from './layerVersion'
-import Alias_ from './alias'
-import LayerVersionPermission_ from './layerVersionPermission'
-import Url_ from './url'
-import EventInvokeConfig_ from './eventInvokeConfig'
-import Function_ from './function'
-import Permission_ from './permission'
-import EventSourceMapping_ from './eventSourceMapping'
-import Version_ from './version'
-import CodeSigningConfig_ from './codeSigningConfig'
+import * as _0 from './layerVersion'
+import * as _1 from './alias'
+import * as _2 from './layerVersionPermission'
+import * as _3 from './url'
+import * as _4 from './eventInvokeConfig'
+import * as _5 from './function'
+import * as _6 from './permission'
+import * as _7 from './eventSourceMapping'
+import * as _8 from './version'
+import * as _9 from './codeSigningConfig'
 
 export namespace Lambda {
-  export const LayerVersion = LayerVersion_
-  export const Alias = Alias_
-  export const LayerVersionPermission = LayerVersionPermission_
-  export const Url = Url_
-  export const EventInvokeConfig = EventInvokeConfig_
-  export const Function = Function_
-  export const Permission = Permission_
-  export const EventSourceMapping = EventSourceMapping_
-  export const Version = Version_
-  export const CodeSigningConfig = CodeSigningConfig_
+  export const LayerVersion = _0.R
+  export const Alias = _1.R
+  export const LayerVersionPermission = _2.R
+  export const Url = _3.R
+  export const EventInvokeConfig = _4.R
+  export const Function = _5.R
+  export const Permission = _6.R
+  export const EventSourceMapping = _7.R
+  export const Version = _8.R
+  export const CodeSigningConfig = _9.R
 
-  export type LayerVersion = LayerVersion_
-  export type Alias = Alias_
-  export type LayerVersionPermission = LayerVersionPermission_
-  export type Url = Url_
-  export type EventInvokeConfig = EventInvokeConfig_
-  export type Function = Function_
-  export type Permission = Permission_
-  export type EventSourceMapping = EventSourceMapping_
-  export type Version = Version_
-  export type CodeSigningConfig = CodeSigningConfig_
+  export type LayerVersion = _0.R
+  export type Alias = _1.R
+  export type LayerVersionPermission = _2.R
+  export type Url = _3.R
+  export type EventInvokeConfig = _4.R
+  export type Function = _5.R
+  export type Permission = _6.R
+  export type EventSourceMapping = _7.R
+  export type Version = _8.R
+  export type CodeSigningConfig = _9.R
+
+  export namespace LayerVersion {
+    export type Content = _0.Content
+  }
+  export namespace Alias {
+    export type ProvisionedConcurrencyConfiguration = _1.ProvisionedConcurrencyConfiguration
+    export type AliasRoutingConfiguration = _1.AliasRoutingConfiguration
+    export type VersionWeight = _1.VersionWeight
+  }
+  export namespace Url {
+    export type Cors = _3.Cors
+  }
+  export namespace EventInvokeConfig {
+    export type OnFailure = _4.OnFailure
+    export type OnSuccess = _4.OnSuccess
+    export type DestinationConfig = _4.DestinationConfig
+  }
+  export namespace Function {
+    export type VpcConfig = _5.VpcConfig
+    export type DeadLetterConfig = _5.DeadLetterConfig
+    export type FileSystemConfig = _5.FileSystemConfig
+    export type Code = _5.Code
+    export type EphemeralStorage = _5.EphemeralStorage
+    export type TracingConfig = _5.TracingConfig
+    export type Environment = _5.Environment
+    export type ImageConfig = _5.ImageConfig
+  }
+  export namespace EventSourceMapping {
+    export type SelfManagedEventSource = _7.SelfManagedEventSource
+    export type Filter = _7.Filter
+    export type FilterCriteria = _7.FilterCriteria
+    export type OnFailure = _7.OnFailure
+    export type SourceAccessConfiguration = _7.SourceAccessConfiguration
+    export type Endpoints = _7.Endpoints
+    export type DestinationConfig = _7.DestinationConfig
+  }
+  export namespace Version {
+    export type ProvisionedConcurrencyConfiguration = _8.ProvisionedConcurrencyConfiguration
+  }
+  export namespace CodeSigningConfig {
+    export type CodeSigningPolicies = _9.CodeSigningPolicies
+    export type AllowedPublishers = _9.AllowedPublishers
+  }
 }

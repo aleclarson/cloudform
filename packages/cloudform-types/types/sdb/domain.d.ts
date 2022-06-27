@@ -1,1 +1,1 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface DomainProperties{Description?:Value<string>;}export default class Domain extends ResourceBase<DomainProperties>{constructor(properties?:DomainProperties);}
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Description?:Value<string>;}declare class Domain extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Domain as R};

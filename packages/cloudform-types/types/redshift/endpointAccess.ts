@@ -28,7 +28,7 @@ export class VpcSecurityGroup {
     }
 }
 
-export interface EndpointAccessProperties {
+export interface Properties {
     ClusterIdentifier?: Value<string>
     ResourceOwner?: Value<string>
     EndpointName: Value<string>
@@ -36,10 +36,11 @@ export interface EndpointAccessProperties {
     VpcSecurityGroupIds: List<Value<string>>
 }
 
-export default class EndpointAccess extends ResourceBase<EndpointAccessProperties> {
+class EndpointAccess extends ResourceBase<Properties> {
     static VpcSecurityGroup = VpcSecurityGroup
 
-    constructor(properties: EndpointAccessProperties) {
+    constructor(properties: Properties) {
         super('AWS::Redshift::EndpointAccess', properties)
     }
 }
+export { EndpointAccess as R }

@@ -17,16 +17,43 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Config_ from './config'
-import DataflowEndpointGroup_ from './dataflowEndpointGroup'
-import MissionProfile_ from './missionProfile'
+import * as _0 from './config'
+import * as _1 from './dataflowEndpointGroup'
+import * as _2 from './missionProfile'
 
 export namespace GroundStation {
-  export const Config = Config_
-  export const DataflowEndpointGroup = DataflowEndpointGroup_
-  export const MissionProfile = MissionProfile_
+  export const Config = _0.R
+  export const DataflowEndpointGroup = _1.R
+  export const MissionProfile = _2.R
 
-  export type Config = Config_
-  export type DataflowEndpointGroup = DataflowEndpointGroup_
-  export type MissionProfile = MissionProfile_
+  export type Config = _0.R
+  export type DataflowEndpointGroup = _1.R
+  export type MissionProfile = _2.R
+
+  export namespace Config {
+    export type S3RecordingConfig = _0.S3RecordingConfig
+    export type UplinkEchoConfig = _0.UplinkEchoConfig
+    export type DataflowEndpointConfig = _0.DataflowEndpointConfig
+    export type AntennaDownlinkConfig = _0.AntennaDownlinkConfig
+    export type DemodulationConfig = _0.DemodulationConfig
+    export type AntennaDownlinkDemodDecodeConfig = _0.AntennaDownlinkDemodDecodeConfig
+    export type UplinkSpectrumConfig = _0.UplinkSpectrumConfig
+    export type Frequency = _0.Frequency
+    export type SpectrumConfig = _0.SpectrumConfig
+    export type FrequencyBandwidth = _0.FrequencyBandwidth
+    export type TrackingConfig = _0.TrackingConfig
+    export type ConfigData = _0.ConfigData
+    export type AntennaUplinkConfig = _0.AntennaUplinkConfig
+    export type DecodeConfig = _0.DecodeConfig
+    export type Eirp = _0.Eirp
+  }
+  export namespace DataflowEndpointGroup {
+    export type DataflowEndpoint = _1.DataflowEndpoint
+    export type SecurityDetails = _1.SecurityDetails
+    export type SocketAddress = _1.SocketAddress
+    export type EndpointDetails = _1.EndpointDetails
+  }
+  export namespace MissionProfile {
+    export type DataflowEdge = _2.DataflowEdge
+  }
 }

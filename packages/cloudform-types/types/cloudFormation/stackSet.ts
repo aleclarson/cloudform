@@ -70,7 +70,7 @@ export class Parameter {
     }
 }
 
-export interface StackSetProperties {
+export interface Properties {
     StackSetName: Value<string>
     AdministrationRoleARN?: Value<string>
     AutoDeployment?: AutoDeployment
@@ -88,14 +88,15 @@ export interface StackSetProperties {
     ManagedExecution?: {[key: string]: any}
 }
 
-export default class StackSet extends ResourceBase<StackSetProperties> {
+class StackSet extends ResourceBase<Properties> {
     static StackInstances = StackInstances
     static AutoDeployment = AutoDeployment
     static DeploymentTargets = DeploymentTargets
     static OperationPreferences = OperationPreferences
     static Parameter = Parameter
 
-    constructor(properties: StackSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFormation::StackSet', properties)
     }
 }
+export { StackSet as R }

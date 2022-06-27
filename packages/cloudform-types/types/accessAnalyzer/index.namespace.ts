@@ -17,10 +17,15 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Analyzer_ from './analyzer'
+import * as _0 from './analyzer'
 
 export namespace AccessAnalyzer {
-  export const Analyzer = Analyzer_
+  export const Analyzer = _0.R
 
-  export type Analyzer = Analyzer_
+  export type Analyzer = _0.R
+
+  export namespace Analyzer {
+    export type ArchiveRule = _0.ArchiveRule
+    export type Filter = _0.Filter
+  }
 }

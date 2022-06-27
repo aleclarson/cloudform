@@ -17,46 +17,80 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Api_ from './api'
-import RouteResponse_ from './routeResponse'
-import DomainName_ from './domainName'
-import Integration_ from './integration'
-import Deployment_ from './deployment'
-import Model_ from './model'
-import IntegrationResponse_ from './integrationResponse'
-import Route_ from './route'
-import ApiGatewayManagedOverrides_ from './apiGatewayManagedOverrides'
-import Stage_ from './stage'
-import VpcLink_ from './vpcLink'
-import Authorizer_ from './authorizer'
-import ApiMapping_ from './apiMapping'
+import * as _0 from './api'
+import * as _1 from './routeResponse'
+import * as _2 from './domainName'
+import * as _3 from './integration'
+import * as _4 from './deployment'
+import * as _5 from './model'
+import * as _6 from './integrationResponse'
+import * as _7 from './route'
+import * as _8 from './apiGatewayManagedOverrides'
+import * as _9 from './stage'
+import * as _a from './vpcLink'
+import * as _b from './authorizer'
+import * as _c from './apiMapping'
 
 export namespace ApiGatewayV2 {
-  export const Api = Api_
-  export const RouteResponse = RouteResponse_
-  export const DomainName = DomainName_
-  export const Integration = Integration_
-  export const Deployment = Deployment_
-  export const Model = Model_
-  export const IntegrationResponse = IntegrationResponse_
-  export const Route = Route_
-  export const ApiGatewayManagedOverrides = ApiGatewayManagedOverrides_
-  export const Stage = Stage_
-  export const VpcLink = VpcLink_
-  export const Authorizer = Authorizer_
-  export const ApiMapping = ApiMapping_
+  export const Api = _0.R
+  export const RouteResponse = _1.R
+  export const DomainName = _2.R
+  export const Integration = _3.R
+  export const Deployment = _4.R
+  export const Model = _5.R
+  export const IntegrationResponse = _6.R
+  export const Route = _7.R
+  export const ApiGatewayManagedOverrides = _8.R
+  export const Stage = _9.R
+  export const VpcLink = _a.R
+  export const Authorizer = _b.R
+  export const ApiMapping = _c.R
 
-  export type Api = Api_
-  export type RouteResponse = RouteResponse_
-  export type DomainName = DomainName_
-  export type Integration = Integration_
-  export type Deployment = Deployment_
-  export type Model = Model_
-  export type IntegrationResponse = IntegrationResponse_
-  export type Route = Route_
-  export type ApiGatewayManagedOverrides = ApiGatewayManagedOverrides_
-  export type Stage = Stage_
-  export type VpcLink = VpcLink_
-  export type Authorizer = Authorizer_
-  export type ApiMapping = ApiMapping_
+  export type Api = _0.R
+  export type RouteResponse = _1.R
+  export type DomainName = _2.R
+  export type Integration = _3.R
+  export type Deployment = _4.R
+  export type Model = _5.R
+  export type IntegrationResponse = _6.R
+  export type Route = _7.R
+  export type ApiGatewayManagedOverrides = _8.R
+  export type Stage = _9.R
+  export type VpcLink = _a.R
+  export type Authorizer = _b.R
+  export type ApiMapping = _c.R
+
+  export namespace Api {
+    export type Cors = _0.Cors
+    export type BodyS3Location = _0.BodyS3Location
+  }
+  export namespace RouteResponse {
+    export type ParameterConstraints = _1.ParameterConstraints
+  }
+  export namespace DomainName {
+    export type MutualTlsAuthentication = _2.MutualTlsAuthentication
+    export type DomainNameConfiguration = _2.DomainNameConfiguration
+  }
+  export namespace Integration {
+    export type ResponseParameterList = _3.ResponseParameterList
+    export type TlsConfig = _3.TlsConfig
+    export type ResponseParameter = _3.ResponseParameter
+  }
+  export namespace Route {
+    export type ParameterConstraints = _7.ParameterConstraints
+  }
+  export namespace ApiGatewayManagedOverrides {
+    export type AccessLogSettings = _8.AccessLogSettings
+    export type RouteOverrides = _8.RouteOverrides
+    export type StageOverrides = _8.StageOverrides
+    export type RouteSettings = _8.RouteSettings
+    export type IntegrationOverrides = _8.IntegrationOverrides
+  }
+  export namespace Stage {
+    export type AccessLogSettings = _9.AccessLogSettings
+    export type RouteSettings = _9.RouteSettings
+  }
+  export namespace Authorizer {
+    export type JWTConfiguration = _b.JWTConfiguration
+  }
 }

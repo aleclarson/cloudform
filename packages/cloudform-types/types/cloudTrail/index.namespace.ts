@@ -17,13 +17,23 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Trail_ from './trail'
-import EventDataStore_ from './eventDataStore'
+import * as _0 from './trail'
+import * as _1 from './eventDataStore'
 
 export namespace CloudTrail {
-  export const Trail = Trail_
-  export const EventDataStore = EventDataStore_
+  export const Trail = _0.R
+  export const EventDataStore = _1.R
 
-  export type Trail = Trail_
-  export type EventDataStore = EventDataStore_
+  export type Trail = _0.R
+  export type EventDataStore = _1.R
+
+  export namespace Trail {
+    export type EventSelector = _0.EventSelector
+    export type DataResource = _0.DataResource
+    export type InsightSelector = _0.InsightSelector
+  }
+  export namespace EventDataStore {
+    export type AdvancedEventSelector = _1.AdvancedEventSelector
+    export type AdvancedFieldSelector = _1.AdvancedFieldSelector
+  }
 }

@@ -104,12 +104,12 @@ export class GroupOwnerSetting {
     }
 }
 
-export interface ResourceDefinitionVersionProperties {
+export interface Properties {
     Resources: List<ResourceInstance>
     ResourceDefinitionId: Value<string>
 }
 
-export default class ResourceDefinitionVersion extends ResourceBase<ResourceDefinitionVersionProperties> {
+class ResourceDefinitionVersion extends ResourceBase<Properties> {
     static ResourceInstance = ResourceInstance
     static LocalDeviceResourceData = LocalDeviceResourceData
     static LocalVolumeResourceData = LocalVolumeResourceData
@@ -120,7 +120,8 @@ export default class ResourceDefinitionVersion extends ResourceBase<ResourceDefi
     static ResourceDataContainer = ResourceDataContainer
     static GroupOwnerSetting = GroupOwnerSetting
 
-    constructor(properties: ResourceDefinitionVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::ResourceDefinitionVersion', properties)
     }
 }
+export { ResourceDefinitionVersion as R }

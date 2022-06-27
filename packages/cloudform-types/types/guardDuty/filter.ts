@@ -48,7 +48,7 @@ export class Condition {
     }
 }
 
-export interface FilterProperties {
+export interface Properties {
     Action: Value<string>
     Description: Value<string>
     DetectorId: Value<string>
@@ -57,11 +57,12 @@ export interface FilterProperties {
     Name: Value<string>
 }
 
-export default class Filter extends ResourceBase<FilterProperties> {
+class Filter extends ResourceBase<Properties> {
     static FindingCriteria = FindingCriteria
     static Condition = Condition
 
-    constructor(properties: FilterProperties) {
+    constructor(properties: Properties) {
         super('AWS::GuardDuty::Filter', properties)
     }
 }
+export { Filter as R }

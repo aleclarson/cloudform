@@ -83,7 +83,7 @@ export class BlueGreenUpdatePolicy {
     }
 }
 
-export interface EndpointProperties {
+export interface Properties {
     RetainAllVariantProperties?: Value<boolean>
     EndpointName?: Value<string>
     ExcludeRetainedVariantProperties?: List<VariantProperty>
@@ -93,7 +93,7 @@ export interface EndpointProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Endpoint extends ResourceBase<EndpointProperties> {
+class Endpoint extends ResourceBase<Properties> {
     static Alarm = Alarm
     static AutoRollbackConfig = AutoRollbackConfig
     static TrafficRoutingConfig = TrafficRoutingConfig
@@ -102,7 +102,8 @@ export default class Endpoint extends ResourceBase<EndpointProperties> {
     static VariantProperty = VariantProperty
     static BlueGreenUpdatePolicy = BlueGreenUpdatePolicy
 
-    constructor(properties: EndpointProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::Endpoint', properties)
     }
 }
+export { Endpoint as R }

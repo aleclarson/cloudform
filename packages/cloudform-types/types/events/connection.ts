@@ -88,14 +88,14 @@ export class ClientParameters {
     }
 }
 
-export interface ConnectionProperties {
+export interface Properties {
     Name?: Value<string>
     Description?: Value<string>
     AuthorizationType: Value<string>
     AuthParameters: AuthParameters
 }
 
-export default class Connection extends ResourceBase<ConnectionProperties> {
+class Connection extends ResourceBase<Properties> {
     static ConnectionHttpParameters = ConnectionHttpParameters
     static ApiKeyAuthParameters = ApiKeyAuthParameters
     static AuthParameters = AuthParameters
@@ -104,7 +104,8 @@ export default class Connection extends ResourceBase<ConnectionProperties> {
     static OAuthParameters = OAuthParameters
     static ClientParameters = ClientParameters
 
-    constructor(properties: ConnectionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Events::Connection', properties)
     }
 }
+export { Connection as R }

@@ -30,7 +30,7 @@ export class Content {
     }
 }
 
-export interface LayerVersionProperties {
+export interface Properties {
     CompatibleRuntimes?: List<Value<string>>
     LicenseInfo?: Value<string>
     Description?: Value<string>
@@ -39,10 +39,11 @@ export interface LayerVersionProperties {
     CompatibleArchitectures?: List<Value<string>>
 }
 
-export default class LayerVersion extends ResourceBase<LayerVersionProperties> {
+class LayerVersion extends ResourceBase<Properties> {
     static Content = Content
 
-    constructor(properties: LayerVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lambda::LayerVersion', properties)
     }
 }
+export { LayerVersion as R }

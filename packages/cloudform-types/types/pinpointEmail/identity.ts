@@ -7,7 +7,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Tags {
@@ -28,7 +28,7 @@ export class MailFromAttributes {
     }
 }
 
-export interface IdentityProperties {
+export interface Properties {
     FeedbackForwardingEnabled?: Value<boolean>
     DkimSigningEnabled?: Value<boolean>
     Tags?: List<Tags>
@@ -36,11 +36,12 @@ export interface IdentityProperties {
     MailFromAttributes?: MailFromAttributes
 }
 
-export default class Identity extends ResourceBase<IdentityProperties> {
+class Identity extends ResourceBase<Properties> {
     static Tags = Tags
     static MailFromAttributes = MailFromAttributes
 
-    constructor(properties: IdentityProperties) {
+    constructor(properties: Properties) {
         super('AWS::PinpointEmail::Identity', properties)
     }
 }
+export { Identity as R }

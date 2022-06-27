@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),canary_1=(exports.default=index_namespace_1.Synthetics,Object.defineProperty(exports,"__esModule",{value:!0}),require("./canary"));var Synthetics;!function(Synthetics){Synthetics.Canary=canary_1.default}(Synthetics=exports.Synthetics||(exports.Synthetics={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.Synthetics;

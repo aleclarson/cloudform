@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),resourceShare_1=(exports.default=index_namespace_1.RAM,Object.defineProperty(exports,"__esModule",{value:!0}),require("./resourceShare"));var RAM;!function(RAM){RAM.ResourceShare=resourceShare_1.default}(RAM=exports.RAM||(exports.RAM={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.RAM;

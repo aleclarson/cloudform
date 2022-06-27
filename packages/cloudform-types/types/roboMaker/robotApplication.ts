@@ -11,7 +11,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class RobotSoftwareSuite {
@@ -33,7 +33,7 @@ export class SourceConfig {
     }
 }
 
-export interface RobotApplicationProperties {
+export interface Properties {
     Name?: Value<string>
     Sources?: List<SourceConfig>
     Environment?: Value<string>
@@ -42,11 +42,12 @@ export interface RobotApplicationProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class RobotApplication extends ResourceBase<RobotApplicationProperties> {
+class RobotApplication extends ResourceBase<Properties> {
     static RobotSoftwareSuite = RobotSoftwareSuite
     static SourceConfig = SourceConfig
 
-    constructor(properties: RobotApplicationProperties) {
+    constructor(properties: Properties) {
         super('AWS::RoboMaker::RobotApplication', properties)
     }
 }
+export { RobotApplication as R }

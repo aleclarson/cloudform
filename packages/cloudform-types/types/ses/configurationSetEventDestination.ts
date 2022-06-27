@@ -68,19 +68,20 @@ export class CloudWatchDestination {
     }
 }
 
-export interface ConfigurationSetEventDestinationProperties {
+export interface Properties {
     ConfigurationSetName: Value<string>
     EventDestination: EventDestination
 }
 
-export default class ConfigurationSetEventDestination extends ResourceBase<ConfigurationSetEventDestinationProperties> {
+class ConfigurationSetEventDestination extends ResourceBase<Properties> {
     static EventDestination = EventDestination
     static DimensionConfiguration = DimensionConfiguration
     static KinesisFirehoseDestination = KinesisFirehoseDestination
     static SnsDestination = SnsDestination
     static CloudWatchDestination = CloudWatchDestination
 
-    constructor(properties: ConfigurationSetEventDestinationProperties) {
+    constructor(properties: Properties) {
         super('AWS::SES::ConfigurationSetEventDestination', properties)
     }
 }
+export { ConfigurationSetEventDestination as R }

@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ThreatIntelSetProperties {
+export interface Properties {
     Format: Value<string>
     Activate: Value<boolean>
     DetectorId: Value<string>
@@ -30,10 +30,11 @@ export interface ThreatIntelSetProperties {
     Location: Value<string>
 }
 
-export default class ThreatIntelSet extends ResourceBase<ThreatIntelSetProperties> {
+class ThreatIntelSet extends ResourceBase<Properties> {
 
 
-    constructor(properties: ThreatIntelSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::GuardDuty::ThreatIntelSet', properties)
     }
 }
+export { ThreatIntelSet as R }

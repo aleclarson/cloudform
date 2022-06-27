@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LaunchTemplateConstraintProperties {
+export interface Properties {
     Description?: Value<string>
     AcceptLanguage?: Value<string>
     PortfolioId: Value<string>
@@ -30,10 +30,11 @@ export interface LaunchTemplateConstraintProperties {
     Rules: Value<string>
 }
 
-export default class LaunchTemplateConstraint extends ResourceBase<LaunchTemplateConstraintProperties> {
+class LaunchTemplateConstraint extends ResourceBase<Properties> {
 
 
-    constructor(properties: LaunchTemplateConstraintProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::LaunchTemplateConstraint', properties)
     }
 }
+export { LaunchTemplateConstraint as R }

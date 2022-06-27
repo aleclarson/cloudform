@@ -1,0 +1,1 @@
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Arn?:Value<string>;PublicVersionNumber?:Value<string>;TypeName?:Value<string>;LogDeliveryBucket?:Value<string>;Type?:Value<string>;}declare class PublicTypeVersion extends ResourceBase<Properties>{constructor(properties?:Properties);}export{PublicTypeVersion as R};

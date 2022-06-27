@@ -199,7 +199,7 @@ export class MonitoringInput {
     }
 }
 
-export interface MonitoringScheduleProperties {
+export interface Properties {
     MonitoringScheduleName: Value<string>
     MonitoringScheduleConfig: MonitoringScheduleConfig
     Tags?: List<ResourceTag>
@@ -209,7 +209,7 @@ export interface MonitoringScheduleProperties {
     MonitoringScheduleStatus?: Value<string>
 }
 
-export default class MonitoringSchedule extends ResourceBase<MonitoringScheduleProperties> {
+class MonitoringSchedule extends ResourceBase<Properties> {
     static ConstraintsResource = ConstraintsResource
     static MonitoringExecutionSummary = MonitoringExecutionSummary
     static MonitoringOutputConfig = MonitoringOutputConfig
@@ -229,7 +229,8 @@ export default class MonitoringSchedule extends ResourceBase<MonitoringScheduleP
     static StoppingCondition = StoppingCondition
     static MonitoringInput = MonitoringInput
 
-    constructor(properties: MonitoringScheduleProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::MonitoringSchedule', properties)
     }
 }
+export { MonitoringSchedule as R }

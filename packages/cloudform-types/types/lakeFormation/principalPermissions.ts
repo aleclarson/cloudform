@@ -121,7 +121,7 @@ export class DataCellsFilterResource {
     }
 }
 
-export interface PrincipalPermissionsProperties {
+export interface Properties {
     Catalog?: Value<string>
     Principal: DataLakePrincipal
     Resource: Resource
@@ -129,7 +129,7 @@ export interface PrincipalPermissionsProperties {
     PermissionsWithGrantOption: List<Value<string>>
 }
 
-export default class PrincipalPermissions extends ResourceBase<PrincipalPermissionsProperties> {
+class PrincipalPermissions extends ResourceBase<Properties> {
     static DataLocationResource = DataLocationResource
     static LFTagKeyResource = LFTagKeyResource
     static TableResource = TableResource
@@ -142,7 +142,8 @@ export default class PrincipalPermissions extends ResourceBase<PrincipalPermissi
     static LFTagPolicyResource = LFTagPolicyResource
     static DataCellsFilterResource = DataCellsFilterResource
 
-    constructor(properties: PrincipalPermissionsProperties) {
+    constructor(properties: Properties) {
         super('AWS::LakeFormation::PrincipalPermissions', properties)
     }
 }
+export { PrincipalPermissions as R }

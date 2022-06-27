@@ -17,13 +17,20 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import MicrosoftAD_ from './microsoftAd'
-import SimpleAD_ from './simpleAd'
+import * as _0 from './microsoftAd'
+import * as _1 from './simpleAd'
 
 export namespace DirectoryService {
-  export const MicrosoftAD = MicrosoftAD_
-  export const SimpleAD = SimpleAD_
+  export const MicrosoftAD = _0.R
+  export const SimpleAD = _1.R
 
-  export type MicrosoftAD = MicrosoftAD_
-  export type SimpleAD = SimpleAD_
+  export type MicrosoftAD = _0.R
+  export type SimpleAD = _1.R
+
+  export namespace MicrosoftAD {
+    export type VpcSettings = _0.VpcSettings
+  }
+  export namespace SimpleAD {
+    export type VpcSettings = _1.VpcSettings
+  }
 }

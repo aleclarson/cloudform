@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CustomerGatewayProperties {
+export interface Properties {
     BgpAsn: Value<number>
     IpAddress: Value<string>
     Tags?: List<ResourceTag>
     Type: Value<string>
 }
 
-export default class CustomerGateway extends ResourceBase<CustomerGatewayProperties> {
+class CustomerGateway extends ResourceBase<Properties> {
 
 
-    constructor(properties: CustomerGatewayProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::CustomerGateway', properties)
     }
 }
+export { CustomerGateway as R }

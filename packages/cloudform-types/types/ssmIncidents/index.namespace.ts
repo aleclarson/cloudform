@@ -17,13 +17,28 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ReplicationSet_ from './replicationSet'
-import ResponsePlan_ from './responsePlan'
+import * as _0 from './replicationSet'
+import * as _1 from './responsePlan'
 
 export namespace SSMIncidents {
-  export const ReplicationSet = ReplicationSet_
-  export const ResponsePlan = ResponsePlan_
+  export const ReplicationSet = _0.R
+  export const ResponsePlan = _1.R
 
-  export type ReplicationSet = ReplicationSet_
-  export type ResponsePlan = ResponsePlan_
+  export type ReplicationSet = _0.R
+  export type ResponsePlan = _1.R
+
+  export namespace ReplicationSet {
+    export type RegionConfiguration = _0.RegionConfiguration
+    export type ReplicationRegion = _0.ReplicationRegion
+  }
+  export namespace ResponsePlan {
+    export type SsmParameter = _1.SsmParameter
+    export type SsmAutomation = _1.SsmAutomation
+    export type DynamicSsmParameter = _1.DynamicSsmParameter
+    export type DynamicSsmParameterValue = _1.DynamicSsmParameterValue
+    export type Action = _1.Action
+    export type NotificationTargetItem = _1.NotificationTargetItem
+    export type ChatChannel = _1.ChatChannel
+    export type IncidentTemplate = _1.IncidentTemplate
+  }
 }

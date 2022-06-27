@@ -52,7 +52,7 @@ export class PriorityConfiguration {
     }
 }
 
-export interface GameSessionQueueProperties {
+export interface Properties {
     TimeoutInSeconds?: Value<number>
     PlayerLatencyPolicies?: List<PlayerLatencyPolicy>
     Destinations?: List<Destination>
@@ -64,13 +64,14 @@ export interface GameSessionQueueProperties {
     PriorityConfiguration?: PriorityConfiguration
 }
 
-export default class GameSessionQueue extends ResourceBase<GameSessionQueueProperties> {
+class GameSessionQueue extends ResourceBase<Properties> {
     static PlayerLatencyPolicy = PlayerLatencyPolicy
     static Destination = Destination
     static FilterConfiguration = FilterConfiguration
     static PriorityConfiguration = PriorityConfiguration
 
-    constructor(properties: GameSessionQueueProperties) {
+    constructor(properties: Properties) {
         super('AWS::GameLift::GameSessionQueue', properties)
     }
 }
+export { GameSessionQueue as R }

@@ -127,7 +127,7 @@ export class TargetGroupTuple {
     }
 }
 
-export interface ListenerProperties {
+export interface Properties {
     SslPolicy?: Value<string>
     LoadBalancerArn: Value<string>
     DefaultActions: List<Action>
@@ -137,7 +137,7 @@ export interface ListenerProperties {
     AlpnPolicy?: List<Value<string>>
 }
 
-export default class Listener extends ResourceBase<ListenerProperties> {
+class Listener extends ResourceBase<Properties> {
     static ForwardConfig = ForwardConfig
     static AuthenticateOidcConfig = AuthenticateOidcConfig
     static Certificate = Certificate
@@ -148,7 +148,8 @@ export default class Listener extends ResourceBase<ListenerProperties> {
     static FixedResponseConfig = FixedResponseConfig
     static TargetGroupTuple = TargetGroupTuple
 
-    constructor(properties: ListenerProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElasticLoadBalancingV2::Listener', properties)
     }
 }
+export { Listener as R }

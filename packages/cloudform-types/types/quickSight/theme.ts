@@ -136,7 +136,7 @@ export class Typography {
     }
 }
 
-export interface ThemeProperties {
+export interface Properties {
     AwsAccountId: Value<string>
     BaseThemeId?: Value<string>
     Configuration?: ThemeConfiguration
@@ -147,7 +147,7 @@ export interface ThemeProperties {
     VersionDescription?: Value<string>
 }
 
-export default class Theme extends ResourceBase<ThemeProperties> {
+class Theme extends ResourceBase<Properties> {
     static Font = Font
     static BorderStyle = BorderStyle
     static TileStyle = TileStyle
@@ -161,7 +161,8 @@ export default class Theme extends ResourceBase<ThemeProperties> {
     static TileLayoutStyle = TileLayoutStyle
     static Typography = Typography
 
-    constructor(properties: ThemeProperties) {
+    constructor(properties: Properties) {
         super('AWS::QuickSight::Theme', properties)
     }
 }
+export { Theme as R }

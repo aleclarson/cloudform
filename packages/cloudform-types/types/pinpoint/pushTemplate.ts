@@ -12,7 +12,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class DefaultPushNotificationTemplate {
@@ -55,7 +55,7 @@ export class APNSPushNotificationTemplate {
     }
 }
 
-export interface PushTemplateProperties {
+export interface Properties {
     GCM?: AndroidPushNotificationTemplate
     Baidu?: AndroidPushNotificationTemplate
     TemplateName: Value<string>
@@ -67,12 +67,13 @@ export interface PushTemplateProperties {
     Tags?: {[key: string]: any}
 }
 
-export default class PushTemplate extends ResourceBase<PushTemplateProperties> {
+class PushTemplate extends ResourceBase<Properties> {
     static DefaultPushNotificationTemplate = DefaultPushNotificationTemplate
     static AndroidPushNotificationTemplate = AndroidPushNotificationTemplate
     static APNSPushNotificationTemplate = APNSPushNotificationTemplate
 
-    constructor(properties: PushTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::PushTemplate', properties)
     }
 }
+export { PushTemplate as R }

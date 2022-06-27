@@ -32,16 +32,17 @@ export class Location {
     }
 }
 
-export interface DocumentationPartProperties {
+export interface Properties {
     Location: Location
     Properties: Value<string>
     RestApiId: Value<string>
 }
 
-export default class DocumentationPart extends ResourceBase<DocumentationPartProperties> {
+class DocumentationPart extends ResourceBase<Properties> {
     static Location = Location
 
-    constructor(properties: DocumentationPartProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::DocumentationPart', properties)
     }
 }
+export { DocumentationPart as R }

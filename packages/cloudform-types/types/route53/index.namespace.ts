@@ -17,28 +17,52 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import RecordSet_ from './recordSet'
-import DNSSEC_ from './dnssec'
-import HostedZone_ from './hostedZone'
-import RecordSetGroup_ from './recordSetGroup'
-import CidrCollection_ from './cidrCollection'
-import HealthCheck_ from './healthCheck'
-import KeySigningKey_ from './keySigningKey'
+import * as _0 from './recordSet'
+import * as _1 from './dnssec'
+import * as _2 from './hostedZone'
+import * as _3 from './recordSetGroup'
+import * as _4 from './cidrCollection'
+import * as _5 from './healthCheck'
+import * as _6 from './keySigningKey'
 
 export namespace Route53 {
-  export const RecordSet = RecordSet_
-  export const DNSSEC = DNSSEC_
-  export const HostedZone = HostedZone_
-  export const RecordSetGroup = RecordSetGroup_
-  export const CidrCollection = CidrCollection_
-  export const HealthCheck = HealthCheck_
-  export const KeySigningKey = KeySigningKey_
+  export const RecordSet = _0.R
+  export const DNSSEC = _1.R
+  export const HostedZone = _2.R
+  export const RecordSetGroup = _3.R
+  export const CidrCollection = _4.R
+  export const HealthCheck = _5.R
+  export const KeySigningKey = _6.R
 
-  export type RecordSet = RecordSet_
-  export type DNSSEC = DNSSEC_
-  export type HostedZone = HostedZone_
-  export type RecordSetGroup = RecordSetGroup_
-  export type CidrCollection = CidrCollection_
-  export type HealthCheck = HealthCheck_
-  export type KeySigningKey = KeySigningKey_
+  export type RecordSet = _0.R
+  export type DNSSEC = _1.R
+  export type HostedZone = _2.R
+  export type RecordSetGroup = _3.R
+  export type CidrCollection = _4.R
+  export type HealthCheck = _5.R
+  export type KeySigningKey = _6.R
+
+  export namespace RecordSet {
+    export type GeoLocation = _0.GeoLocation
+    export type CidrRoutingConfig = _0.CidrRoutingConfig
+    export type AliasTarget = _0.AliasTarget
+  }
+  export namespace HostedZone {
+    export type HostedZoneTag = _2.HostedZoneTag
+    export type HostedZoneConfig = _2.HostedZoneConfig
+    export type QueryLoggingConfig = _2.QueryLoggingConfig
+    export type VPC = _2.VPC
+  }
+  export namespace RecordSetGroup {
+    export type GeoLocation = _3.GeoLocation
+    export type RecordSet = _3.RecordSet
+    export type CidrRoutingConfig = _3.CidrRoutingConfig
+    export type AliasTarget = _3.AliasTarget
+  }
+  export namespace CidrCollection {
+    export type Location = _4.Location
+  }
+  export namespace HealthCheck {
+    export type HealthCheckTag = _5.HealthCheckTag
+  }
 }

@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResolverConfigProperties {
+export interface Properties {
     ResourceId: Value<string>
     AutodefinedReverseFlag: Value<string>
 }
 
-export default class ResolverConfig extends ResourceBase<ResolverConfigProperties> {
+class ResolverConfig extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResolverConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53Resolver::ResolverConfig', properties)
     }
 }
+export { ResolverConfig as R }

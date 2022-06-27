@@ -31,7 +31,7 @@ export class ProvisioningArtifactProperties {
     }
 }
 
-export interface CloudFormationProductProperties {
+export interface Properties {
     ReplaceProvisioningArtifacts?: Value<boolean>
     Owner: Value<string>
     SupportDescription?: Value<string>
@@ -45,10 +45,11 @@ export interface CloudFormationProductProperties {
     ProvisioningArtifactParameters: List<ProvisioningArtifactProperties>
 }
 
-export default class CloudFormationProduct extends ResourceBase<CloudFormationProductProperties> {
+class CloudFormationProduct extends ResourceBase<Properties> {
     static ProvisioningArtifactProperties = ProvisioningArtifactProperties
 
-    constructor(properties: CloudFormationProductProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalog::CloudFormationProduct', properties)
     }
 }
+export { CloudFormationProduct as R }

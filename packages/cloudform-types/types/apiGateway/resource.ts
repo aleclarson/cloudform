@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResourceProperties {
+export interface Properties {
     RestApiId: Value<string>
     ParentId: Value<string>
     PathPart: Value<string>
 }
 
-export default class Resource extends ResourceBase<ResourceProperties> {
+class Resource extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResourceProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::Resource', properties)
     }
 }
+export { Resource as R }

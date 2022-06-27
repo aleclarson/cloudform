@@ -1,0 +1,1 @@
+import*as _0 from'./workspace';import*as _1 from'./ruleGroupsNamespace';export declare namespace APS{const Workspace:typeof _0.R;const RuleGroupsNamespace:typeof _1.R;type Workspace=_0.R;type RuleGroupsNamespace=_1.R;}

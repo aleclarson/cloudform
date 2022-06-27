@@ -26,15 +26,16 @@ export class Connector {
     }
 }
 
-export interface ConnectorDefinitionVersionProperties {
+export interface Properties {
     Connectors: List<Connector>
     ConnectorDefinitionId: Value<string>
 }
 
-export default class ConnectorDefinitionVersion extends ResourceBase<ConnectorDefinitionVersionProperties> {
+class ConnectorDefinitionVersion extends ResourceBase<Properties> {
     static Connector = Connector
 
-    constructor(properties: ConnectorDefinitionVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::ConnectorDefinitionVersion', properties)
     }
 }
+export { ConnectorDefinitionVersion as R }

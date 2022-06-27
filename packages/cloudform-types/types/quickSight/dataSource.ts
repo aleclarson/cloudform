@@ -264,7 +264,7 @@ export class SqlServerParameters {
     }
 }
 
-export interface DataSourceProperties {
+export interface Properties {
     AlternateDataSourceParameters?: List<DataSourceParameters>
     AwsAccountId?: Value<string>
     Credentials?: DataSourceCredentials
@@ -279,7 +279,7 @@ export interface DataSourceProperties {
     VpcConnectionProperties?: VpcConnectionProperties
 }
 
-export default class DataSource extends ResourceBase<DataSourceProperties> {
+class DataSource extends ResourceBase<Properties> {
     static DataSourceParameters = DataSourceParameters
     static AuroraPostgreSqlParameters = AuroraPostgreSqlParameters
     static DataSourceCredentials = DataSourceCredentials
@@ -306,7 +306,8 @@ export default class DataSource extends ResourceBase<DataSourceProperties> {
     static RdsParameters = RdsParameters
     static SqlServerParameters = SqlServerParameters
 
-    constructor(properties?: DataSourceProperties) {
+    constructor(properties?: Properties) {
         super('AWS::QuickSight::DataSource', properties || {})
     }
 }
+export { DataSource as R }

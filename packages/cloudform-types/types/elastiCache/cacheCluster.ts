@@ -56,7 +56,7 @@ export class CloudWatchLogsDestinationDetails {
     }
 }
 
-export interface CacheClusterProperties {
+export interface Properties {
     AZMode?: Value<string>
     AutoMinorVersionUpgrade?: Value<boolean>
     CacheNodeType: Value<string>
@@ -81,13 +81,14 @@ export interface CacheClusterProperties {
     VpcSecurityGroupIds?: List<Value<string>>
 }
 
-export default class CacheCluster extends ResourceBase<CacheClusterProperties> {
+class CacheCluster extends ResourceBase<Properties> {
     static KinesisFirehoseDestinationDetails = KinesisFirehoseDestinationDetails
     static LogDeliveryConfigurationRequest = LogDeliveryConfigurationRequest
     static DestinationDetails = DestinationDetails
     static CloudWatchLogsDestinationDetails = CloudWatchLogsDestinationDetails
 
-    constructor(properties: CacheClusterProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElastiCache::CacheCluster', properties)
     }
 }
+export { CacheCluster as R }

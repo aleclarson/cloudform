@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface QueueProperties {
+export interface Properties {
     ContentBasedDeduplication?: Value<boolean>
     DeduplicationScope?: Value<string>
     DelaySeconds?: Value<number>
@@ -41,10 +41,11 @@ export interface QueueProperties {
     VisibilityTimeout?: Value<number>
 }
 
-export default class Queue extends ResourceBase<QueueProperties> {
+class Queue extends ResourceBase<Properties> {
 
 
-    constructor(properties?: QueueProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SQS::Queue', properties || {})
     }
 }
+export { Queue as R }

@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface AuthorizerProperties {
+export interface Properties {
     RestApiId: Value<string>
     AuthType?: Value<string>
     AuthorizerCredentials?: Value<string>
@@ -35,10 +35,11 @@ export interface AuthorizerProperties {
     Type: Value<string>
 }
 
-export default class Authorizer extends ResourceBase<AuthorizerProperties> {
+class Authorizer extends ResourceBase<Properties> {
 
 
-    constructor(properties: AuthorizerProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::Authorizer', properties)
     }
 }
+export { Authorizer as R }

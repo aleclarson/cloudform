@@ -17,22 +17,38 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import FlowEntitlement_ from './flowEntitlement'
-import FlowSource_ from './flowSource'
-import FlowVpcInterface_ from './flowVpcInterface'
-import FlowOutput_ from './flowOutput'
-import Flow_ from './flow'
+import * as _0 from './flowEntitlement'
+import * as _1 from './flowSource'
+import * as _2 from './flowVpcInterface'
+import * as _3 from './flowOutput'
+import * as _4 from './flow'
 
 export namespace MediaConnect {
-  export const FlowEntitlement = FlowEntitlement_
-  export const FlowSource = FlowSource_
-  export const FlowVpcInterface = FlowVpcInterface_
-  export const FlowOutput = FlowOutput_
-  export const Flow = Flow_
+  export const FlowEntitlement = _0.R
+  export const FlowSource = _1.R
+  export const FlowVpcInterface = _2.R
+  export const FlowOutput = _3.R
+  export const Flow = _4.R
 
-  export type FlowEntitlement = FlowEntitlement_
-  export type FlowSource = FlowSource_
-  export type FlowVpcInterface = FlowVpcInterface_
-  export type FlowOutput = FlowOutput_
-  export type Flow = Flow_
+  export type FlowEntitlement = _0.R
+  export type FlowSource = _1.R
+  export type FlowVpcInterface = _2.R
+  export type FlowOutput = _3.R
+  export type Flow = _4.R
+
+  export namespace FlowEntitlement {
+    export type Encryption = _0.Encryption
+  }
+  export namespace FlowSource {
+    export type Encryption = _1.Encryption
+  }
+  export namespace FlowOutput {
+    export type Encryption = _3.Encryption
+    export type VpcInterfaceAttachment = _3.VpcInterfaceAttachment
+  }
+  export namespace Flow {
+    export type Encryption = _4.Encryption
+    export type Source = _4.Source
+    export type FailoverConfig = _4.FailoverConfig
+  }
 }

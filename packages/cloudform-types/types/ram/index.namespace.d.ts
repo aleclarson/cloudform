@@ -1,1 +1,1 @@
-import ResourceShare_ from'./resourceShare';export declare namespace RAM{const ResourceShare:typeof ResourceShare_;type ResourceShare=ResourceShare_;}
+import*as _0 from'./resourceShare';export declare namespace RAM{const ResourceShare:typeof _0.R;type ResourceShare=_0.R;}

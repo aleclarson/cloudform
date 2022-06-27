@@ -1,1 +1,1 @@
-import ProfilingGroup_ from'./profilingGroup';export declare namespace CodeGuruProfiler{const ProfilingGroup:typeof ProfilingGroup_;type ProfilingGroup=ProfilingGroup_;}
+import*as _0 from'./profilingGroup';export declare namespace CodeGuruProfiler{const ProfilingGroup:typeof _0.R;type ProfilingGroup=_0.R;namespace ProfilingGroup{type Channel=_0.Channel;}}

@@ -97,7 +97,7 @@ export class RunConfig {
     }
 }
 
-export interface CanaryProperties {
+export interface Properties {
     Name: Value<string>
     Code: Code
     ArtifactS3Location: Value<string>
@@ -115,7 +115,7 @@ export interface CanaryProperties {
     DeleteLambdaResourcesOnCanaryDeletion?: Value<boolean>
 }
 
-export default class Canary extends ResourceBase<CanaryProperties> {
+class Canary extends ResourceBase<Properties> {
     static ArtifactConfig = ArtifactConfig
     static S3Encryption = S3Encryption
     static VPCConfig = VPCConfig
@@ -125,7 +125,8 @@ export default class Canary extends ResourceBase<CanaryProperties> {
     static BaseScreenshot = BaseScreenshot
     static RunConfig = RunConfig
 
-    constructor(properties: CanaryProperties) {
+    constructor(properties: Properties) {
         super('AWS::Synthetics::Canary', properties)
     }
 }
+export { Canary as R }

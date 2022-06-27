@@ -1,1 +1,1 @@
-import{ResourceBase}from'../resource';export interface WaitConditionHandleProperties{}export default class WaitConditionHandle extends ResourceBase<WaitConditionHandleProperties>{constructor(properties?:WaitConditionHandleProperties);}
+import{ResourceBase}from'../resource';export interface Properties{}declare class WaitConditionHandle extends ResourceBase<Properties>{constructor(properties?:Properties);}export{WaitConditionHandle as R};

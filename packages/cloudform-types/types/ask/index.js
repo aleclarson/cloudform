@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),skill_1=(exports.default=index_namespace_1.ASK,Object.defineProperty(exports,"__esModule",{value:!0}),require("./skill"));var ASK;!function(ASK){ASK.Skill=skill_1.default}(ASK=exports.ASK||(exports.ASK={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.ASK;

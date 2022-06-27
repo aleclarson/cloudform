@@ -17,10 +17,19 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Assessment_ from './assessment'
+import * as _0 from './assessment'
 
 export namespace AuditManager {
-  export const Assessment = Assessment_
+  export const Assessment = _0.R
 
-  export type Assessment = Assessment_
+  export type Assessment = _0.R
+
+  export namespace Assessment {
+    export type Delegation = _0.Delegation
+    export type AWSAccount = _0.AWSAccount
+    export type Role = _0.Role
+    export type AssessmentReportsDestination = _0.AssessmentReportsDestination
+    export type AWSService = _0.AWSService
+    export type Scope = _0.Scope
+  }
 }

@@ -20,17 +20,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SignalingChannelProperties {
+export interface Properties {
     Name?: Value<string>
     Type?: Value<string>
     MessageTtlSeconds?: Value<number>
     Tags?: List<ResourceTag>
 }
 
-export default class SignalingChannel extends ResourceBase<SignalingChannelProperties> {
+class SignalingChannel extends ResourceBase<Properties> {
 
 
-    constructor(properties?: SignalingChannelProperties) {
+    constructor(properties?: Properties) {
         super('AWS::KinesisVideo::SignalingChannel', properties || {})
     }
 }
+export { SignalingChannel as R }

@@ -30,7 +30,7 @@ export class UrlEndpointInput {
     }
 }
 
-export interface ServiceProperties {
+export interface Properties {
     ApplicationIdentifier: Value<string>
     Description?: Value<string>
     EndpointType?: Value<string>
@@ -42,11 +42,12 @@ export interface ServiceProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Service extends ResourceBase<ServiceProperties> {
+class Service extends ResourceBase<Properties> {
     static LambdaEndpointInput = LambdaEndpointInput
     static UrlEndpointInput = UrlEndpointInput
 
-    constructor(properties: ServiceProperties) {
+    constructor(properties: Properties) {
         super('AWS::RefactorSpaces::Service', properties)
     }
 }
+export { Service as R }

@@ -29,7 +29,7 @@ export class VpcSettings {
     }
 }
 
-export interface MicrosoftADProperties {
+export interface Properties {
     CreateAlias?: Value<boolean>
     Edition?: Value<string>
     EnableSso?: Value<boolean>
@@ -39,10 +39,11 @@ export interface MicrosoftADProperties {
     VpcSettings: VpcSettings
 }
 
-export default class MicrosoftAD extends ResourceBase<MicrosoftADProperties> {
+class MicrosoftAD extends ResourceBase<Properties> {
     static VpcSettings = VpcSettings
 
-    constructor(properties: MicrosoftADProperties) {
+    constructor(properties: Properties) {
         super('AWS::DirectoryService::MicrosoftAD', properties)
     }
 }
+export { MicrosoftAD as R }

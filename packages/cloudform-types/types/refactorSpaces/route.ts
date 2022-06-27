@@ -24,7 +24,7 @@ export class UriPathRouteInput {
     }
 }
 
-export interface RouteProperties {
+export interface Properties {
     ApplicationIdentifier: Value<string>
     EnvironmentIdentifier: Value<string>
     RouteType?: Value<string>
@@ -33,10 +33,11 @@ export interface RouteProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Route extends ResourceBase<RouteProperties> {
+class Route extends ResourceBase<Properties> {
     static UriPathRouteInput = UriPathRouteInput
 
-    constructor(properties: RouteProperties) {
+    constructor(properties: Properties) {
         super('AWS::RefactorSpaces::Route', properties)
     }
 }
+export { Route as R }

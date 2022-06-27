@@ -17,13 +17,17 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import SigningProfile_ from './signingProfile'
-import ProfilePermission_ from './profilePermission'
+import * as _0 from './signingProfile'
+import * as _1 from './profilePermission'
 
 export namespace Signer {
-  export const SigningProfile = SigningProfile_
-  export const ProfilePermission = ProfilePermission_
+  export const SigningProfile = _0.R
+  export const ProfilePermission = _1.R
 
-  export type SigningProfile = SigningProfile_
-  export type ProfilePermission = ProfilePermission_
+  export type SigningProfile = _0.R
+  export type ProfilePermission = _1.R
+
+  export namespace SigningProfile {
+    export type SignatureValidityPeriod = _0.SignatureValidityPeriod
+  }
 }

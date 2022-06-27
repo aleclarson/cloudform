@@ -17,16 +17,30 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ScheduledQuery_ from './scheduledQuery'
-import Database_ from './database'
-import Table_ from './table'
+import * as _0 from './scheduledQuery'
+import * as _1 from './database'
+import * as _2 from './table'
 
 export namespace Timestream {
-  export const ScheduledQuery = ScheduledQuery_
-  export const Database = Database_
-  export const Table = Table_
+  export const ScheduledQuery = _0.R
+  export const Database = _1.R
+  export const Table = _2.R
 
-  export type ScheduledQuery = ScheduledQuery_
-  export type Database = Database_
-  export type Table = Table_
+  export type ScheduledQuery = _0.R
+  export type Database = _1.R
+  export type Table = _2.R
+
+  export namespace ScheduledQuery {
+    export type NotificationConfiguration = _0.NotificationConfiguration
+    export type SnsConfiguration = _0.SnsConfiguration
+    export type TimestreamConfiguration = _0.TimestreamConfiguration
+    export type S3Configuration = _0.S3Configuration
+    export type TargetConfiguration = _0.TargetConfiguration
+    export type ScheduleConfiguration = _0.ScheduleConfiguration
+    export type ErrorReportConfiguration = _0.ErrorReportConfiguration
+    export type MultiMeasureMappings = _0.MultiMeasureMappings
+    export type DimensionMapping = _0.DimensionMapping
+    export type MultiMeasureAttributeMapping = _0.MultiMeasureAttributeMapping
+    export type MixedMeasureMapping = _0.MixedMeasureMapping
+  }
 }

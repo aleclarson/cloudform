@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface FirewallRuleGroupAssociationProperties {
+export interface Properties {
     FirewallRuleGroupId: Value<string>
     VpcId: Value<string>
     Name?: Value<string>
@@ -31,10 +31,11 @@ export interface FirewallRuleGroupAssociationProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class FirewallRuleGroupAssociation extends ResourceBase<FirewallRuleGroupAssociationProperties> {
+class FirewallRuleGroupAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: FirewallRuleGroupAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53Resolver::FirewallRuleGroupAssociation', properties)
     }
 }
+export { FirewallRuleGroupAssociation as R }

@@ -17,16 +17,28 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Collection_ from './collection'
-import Project_ from './project'
-import StreamProcessor_ from './streamProcessor'
+import * as _0 from './collection'
+import * as _1 from './project'
+import * as _2 from './streamProcessor'
 
 export namespace Rekognition {
-  export const Collection = Collection_
-  export const Project = Project_
-  export const StreamProcessor = StreamProcessor_
+  export const Collection = _0.R
+  export const Project = _1.R
+  export const StreamProcessor = _2.R
 
-  export type Collection = Collection_
-  export type Project = Project_
-  export type StreamProcessor = StreamProcessor_
+  export type Collection = _0.R
+  export type Project = _1.R
+  export type StreamProcessor = _2.R
+
+  export namespace StreamProcessor {
+    export type ConnectedHomeSettings = _2.ConnectedHomeSettings
+    export type Point = _2.Point
+    export type KinesisDataStream = _2.KinesisDataStream
+    export type FaceSearchSettings = _2.FaceSearchSettings
+    export type S3Destination = _2.S3Destination
+    export type DataSharingPreference = _2.DataSharingPreference
+    export type NotificationChannel = _2.NotificationChannel
+    export type KinesisVideoStream = _2.KinesisVideoStream
+    export type BoundingBox = _2.BoundingBox
+  }
 }

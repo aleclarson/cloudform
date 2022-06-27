@@ -38,7 +38,7 @@ export class EnvironmentVariable {
     }
 }
 
-export interface BranchProperties {
+export interface Properties {
     AppId: Value<string>
     BasicAuthConfig?: BasicAuthConfig
     BranchName: Value<string>
@@ -53,11 +53,12 @@ export interface BranchProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Branch extends ResourceBase<BranchProperties> {
+class Branch extends ResourceBase<Properties> {
     static BasicAuthConfig = BasicAuthConfig
     static EnvironmentVariable = EnvironmentVariable
 
-    constructor(properties: BranchProperties) {
+    constructor(properties: Properties) {
         super('AWS::Amplify::Branch', properties)
     }
 }
+export { Branch as R }

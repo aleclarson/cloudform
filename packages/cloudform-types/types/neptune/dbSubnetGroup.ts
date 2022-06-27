@@ -21,17 +21,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DBSubnetGroupProperties {
+export interface Properties {
     DBSubnetGroupName?: Value<string>
     DBSubnetGroupDescription: Value<string>
     SubnetIds: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class DBSubnetGroup extends ResourceBase<DBSubnetGroupProperties> {
+class DBSubnetGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: DBSubnetGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::Neptune::DBSubnetGroup', properties)
     }
 }
+export { DBSubnetGroup as R }

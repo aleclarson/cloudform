@@ -52,7 +52,7 @@ export class VirtualServiceSpec {
     }
 }
 
-export interface VirtualServiceProperties {
+export interface Properties {
     MeshName: Value<string>
     MeshOwner?: Value<string>
     VirtualServiceName: Value<string>
@@ -60,13 +60,14 @@ export interface VirtualServiceProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class VirtualService extends ResourceBase<VirtualServiceProperties> {
+class VirtualService extends ResourceBase<Properties> {
     static VirtualRouterServiceProvider = VirtualRouterServiceProvider
     static VirtualNodeServiceProvider = VirtualNodeServiceProvider
     static VirtualServiceProvider = VirtualServiceProvider
     static VirtualServiceSpec = VirtualServiceSpec
 
-    constructor(properties: VirtualServiceProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppMesh::VirtualService', properties)
     }
 }
+export { VirtualService as R }

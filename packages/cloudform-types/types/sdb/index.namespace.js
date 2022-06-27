@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const domain_1=require("./domain");var SDB;!function(SDB){SDB.Domain=domain_1.default}(SDB=exports.SDB||(exports.SDB={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.SDB=void 0;const _0=require("./domain");var SDB;!function(SDB){SDB.Domain=_0.R}(SDB=exports.SDB||(exports.SDB={}));

@@ -30,16 +30,17 @@ export class RecordingGroup {
     }
 }
 
-export interface ConfigurationRecorderProperties {
+export interface Properties {
     Name?: Value<string>
     RecordingGroup?: RecordingGroup
     RoleARN: Value<string>
 }
 
-export default class ConfigurationRecorder extends ResourceBase<ConfigurationRecorderProperties> {
+class ConfigurationRecorder extends ResourceBase<Properties> {
     static RecordingGroup = RecordingGroup
 
-    constructor(properties: ConfigurationRecorderProperties) {
+    constructor(properties: Properties) {
         super('AWS::Config::ConfigurationRecorder', properties)
     }
 }
+export { ConfigurationRecorder as R }

@@ -26,16 +26,17 @@ export class ServiceAccountCredentials {
     }
 }
 
-export interface DirectoryConfigProperties {
+export interface Properties {
     OrganizationalUnitDistinguishedNames: List<Value<string>>
     ServiceAccountCredentials: ServiceAccountCredentials
     DirectoryName: Value<string>
 }
 
-export default class DirectoryConfig extends ResourceBase<DirectoryConfigProperties> {
+class DirectoryConfig extends ResourceBase<Properties> {
     static ServiceAccountCredentials = ServiceAccountCredentials
 
-    constructor(properties: DirectoryConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppStream::DirectoryConfig', properties)
     }
 }
+export { DirectoryConfig as R }

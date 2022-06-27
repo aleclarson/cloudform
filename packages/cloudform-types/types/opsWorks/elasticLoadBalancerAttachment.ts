@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ElasticLoadBalancerAttachmentProperties {
+export interface Properties {
     ElasticLoadBalancerName: Value<string>
     LayerId: Value<string>
 }
 
-export default class ElasticLoadBalancerAttachment extends ResourceBase<ElasticLoadBalancerAttachmentProperties> {
+class ElasticLoadBalancerAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties: ElasticLoadBalancerAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::OpsWorks::ElasticLoadBalancerAttachment', properties)
     }
 }
+export { ElasticLoadBalancerAttachment as R }

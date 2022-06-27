@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class LogList {
@@ -95,7 +95,7 @@ export class ConfigurationId {
     }
 }
 
-export interface BrokerProperties {
+export interface Properties {
     SecurityGroups?: List<Value<string>>
     StorageType?: Value<string>
     EngineVersion: Value<string>
@@ -116,7 +116,7 @@ export interface BrokerProperties {
     Tags?: List<TagsEntry>
 }
 
-export default class Broker extends ResourceBase<BrokerProperties> {
+class Broker extends ResourceBase<Properties> {
     static LogList = LogList
     static User = User
     static LdapServerMetadata = LdapServerMetadata
@@ -125,7 +125,8 @@ export default class Broker extends ResourceBase<BrokerProperties> {
     static TagsEntry = TagsEntry
     static ConfigurationId = ConfigurationId
 
-    constructor(properties: BrokerProperties) {
+    constructor(properties: Properties) {
         super('AWS::AmazonMQ::Broker', properties)
     }
 }
+export { Broker as R }

@@ -17,19 +17,30 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import PricingPlan_ from './pricingPlan'
-import CustomLineItem_ from './customLineItem'
-import BillingGroup_ from './billingGroup'
-import PricingRule_ from './pricingRule'
+import * as _0 from './pricingPlan'
+import * as _1 from './customLineItem'
+import * as _2 from './billingGroup'
+import * as _3 from './pricingRule'
 
 export namespace BillingConductor {
-  export const PricingPlan = PricingPlan_
-  export const CustomLineItem = CustomLineItem_
-  export const BillingGroup = BillingGroup_
-  export const PricingRule = PricingRule_
+  export const PricingPlan = _0.R
+  export const CustomLineItem = _1.R
+  export const BillingGroup = _2.R
+  export const PricingRule = _3.R
 
-  export type PricingPlan = PricingPlan_
-  export type CustomLineItem = CustomLineItem_
-  export type BillingGroup = BillingGroup_
-  export type PricingRule = PricingRule_
+  export type PricingPlan = _0.R
+  export type CustomLineItem = _1.R
+  export type BillingGroup = _2.R
+  export type PricingRule = _3.R
+
+  export namespace CustomLineItem {
+    export type CustomLineItemFlatChargeDetails = _1.CustomLineItemFlatChargeDetails
+    export type CustomLineItemPercentageChargeDetails = _1.CustomLineItemPercentageChargeDetails
+    export type BillingPeriodRange = _1.BillingPeriodRange
+    export type CustomLineItemChargeDetails = _1.CustomLineItemChargeDetails
+  }
+  export namespace BillingGroup {
+    export type ComputationPreference = _2.ComputationPreference
+    export type AccountGrouping = _2.AccountGrouping
+  }
 }

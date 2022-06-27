@@ -192,14 +192,14 @@ export class TargetGroupStickinessConfig {
     }
 }
 
-export interface ListenerRuleProperties {
+export interface Properties {
     ListenerArn: Value<string>
     Actions: List<Action>
     Priority: Value<number>
     Conditions: List<RuleCondition>
 }
 
-export default class ListenerRule extends ResourceBase<ListenerRuleProperties> {
+class ListenerRule extends ResourceBase<Properties> {
     static SourceIpConfig = SourceIpConfig
     static AuthenticateOidcConfig = AuthenticateOidcConfig
     static AuthenticateCognitoConfig = AuthenticateCognitoConfig
@@ -217,7 +217,8 @@ export default class ListenerRule extends ResourceBase<ListenerRuleProperties> {
     static HttpRequestMethodConfig = HttpRequestMethodConfig
     static TargetGroupStickinessConfig = TargetGroupStickinessConfig
 
-    constructor(properties: ListenerRuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElasticLoadBalancingV2::ListenerRule', properties)
     }
 }
+export { ListenerRule as R }

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class UserProfile extends resource_1.ResourceBase{constructor(properties){super("AWS::OpsWorks::UserProfile",properties)}}exports.default=UserProfile;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class UserProfile extends resource_1.ResourceBase{constructor(properties){super("AWS::OpsWorks::UserProfile",properties)}}exports.R=UserProfile;

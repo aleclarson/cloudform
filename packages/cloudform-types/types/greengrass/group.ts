@@ -13,7 +13,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class GroupVersion {
@@ -30,17 +30,18 @@ export class GroupVersion {
     }
 }
 
-export interface GroupProperties {
+export interface Properties {
     InitialVersion?: GroupVersion
     RoleArn?: Value<string>
     Tags?: {[key: string]: any}
     Name: Value<string>
 }
 
-export default class Group extends ResourceBase<GroupProperties> {
+class Group extends ResourceBase<Properties> {
     static GroupVersion = GroupVersion
 
-    constructor(properties: GroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::Group', properties)
     }
 }
+export { Group as R }

@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TransitGatewayRegistrationProperties {
+export interface Properties {
     GlobalNetworkId: Value<string>
     TransitGatewayArn: Value<string>
 }
 
-export default class TransitGatewayRegistration extends ResourceBase<TransitGatewayRegistrationProperties> {
+class TransitGatewayRegistration extends ResourceBase<Properties> {
 
 
-    constructor(properties: TransitGatewayRegistrationProperties) {
+    constructor(properties: Properties) {
         super('AWS::NetworkManager::TransitGatewayRegistration', properties)
     }
 }
+export { TransitGatewayRegistration as R }

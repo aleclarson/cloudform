@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VpcLinkProperties {
+export interface Properties {
     Description?: Value<string>
     TargetArns: List<Value<string>>
     Tags?: List<ResourceTag>
     Name: Value<string>
 }
 
-export default class VpcLink extends ResourceBase<VpcLinkProperties> {
+class VpcLink extends ResourceBase<Properties> {
 
 
-    constructor(properties: VpcLinkProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::VpcLink', properties)
     }
 }
+export { VpcLink as R }

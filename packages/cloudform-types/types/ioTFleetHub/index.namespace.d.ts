@@ -1,1 +1,1 @@
-import Application_ from'./application';export declare namespace IoTFleetHub{const Application:typeof Application_;type Application=Application_;}
+import*as _0 from'./application';export declare namespace IoTFleetHub{const Application:typeof _0.R;type Application=_0.R;}

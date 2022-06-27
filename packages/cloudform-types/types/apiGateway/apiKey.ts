@@ -29,7 +29,7 @@ export class StageKey {
     }
 }
 
-export interface ApiKeyProperties {
+export interface Properties {
     CustomerId?: Value<string>
     Description?: Value<string>
     Enabled?: Value<boolean>
@@ -40,10 +40,11 @@ export interface ApiKeyProperties {
     Value?: Value<string>
 }
 
-export default class ApiKey extends ResourceBase<ApiKeyProperties> {
+class ApiKey extends ResourceBase<Properties> {
     static StageKey = StageKey
 
-    constructor(properties?: ApiKeyProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ApiGateway::ApiKey', properties || {})
     }
 }
+export { ApiKey as R }

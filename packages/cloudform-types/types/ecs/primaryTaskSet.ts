@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PrimaryTaskSetProperties {
+export interface Properties {
     Cluster: Value<string>
     TaskSetId: Value<string>
     Service: Value<string>
 }
 
-export default class PrimaryTaskSet extends ResourceBase<PrimaryTaskSetProperties> {
+class PrimaryTaskSet extends ResourceBase<Properties> {
 
 
-    constructor(properties: PrimaryTaskSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::ECS::PrimaryTaskSet', properties)
     }
 }
+export { PrimaryTaskSet as R }

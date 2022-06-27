@@ -17,22 +17,64 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import LoadBalancer_ from './loadBalancer'
-import ListenerRule_ from './listenerRule'
-import TargetGroup_ from './targetGroup'
-import Listener_ from './listener'
-import ListenerCertificate_ from './listenerCertificate'
+import * as _0 from './loadBalancer'
+import * as _1 from './listenerRule'
+import * as _2 from './targetGroup'
+import * as _3 from './listener'
+import * as _4 from './listenerCertificate'
 
 export namespace ElasticLoadBalancingV2 {
-  export const LoadBalancer = LoadBalancer_
-  export const ListenerRule = ListenerRule_
-  export const TargetGroup = TargetGroup_
-  export const Listener = Listener_
-  export const ListenerCertificate = ListenerCertificate_
+  export const LoadBalancer = _0.R
+  export const ListenerRule = _1.R
+  export const TargetGroup = _2.R
+  export const Listener = _3.R
+  export const ListenerCertificate = _4.R
 
-  export type LoadBalancer = LoadBalancer_
-  export type ListenerRule = ListenerRule_
-  export type TargetGroup = TargetGroup_
-  export type Listener = Listener_
-  export type ListenerCertificate = ListenerCertificate_
+  export type LoadBalancer = _0.R
+  export type ListenerRule = _1.R
+  export type TargetGroup = _2.R
+  export type Listener = _3.R
+  export type ListenerCertificate = _4.R
+
+  export namespace LoadBalancer {
+    export type LoadBalancerAttribute = _0.LoadBalancerAttribute
+    export type SubnetMapping = _0.SubnetMapping
+  }
+  export namespace ListenerRule {
+    export type SourceIpConfig = _1.SourceIpConfig
+    export type AuthenticateOidcConfig = _1.AuthenticateOidcConfig
+    export type AuthenticateCognitoConfig = _1.AuthenticateCognitoConfig
+    export type QueryStringKeyValue = _1.QueryStringKeyValue
+    export type QueryStringConfig = _1.QueryStringConfig
+    export type PathPatternConfig = _1.PathPatternConfig
+    export type RuleCondition = _1.RuleCondition
+    export type RedirectConfig = _1.RedirectConfig
+    export type HostHeaderConfig = _1.HostHeaderConfig
+    export type FixedResponseConfig = _1.FixedResponseConfig
+    export type Action = _1.Action
+    export type HttpHeaderConfig = _1.HttpHeaderConfig
+    export type ForwardConfig = _1.ForwardConfig
+    export type TargetGroupTuple = _1.TargetGroupTuple
+    export type HttpRequestMethodConfig = _1.HttpRequestMethodConfig
+    export type TargetGroupStickinessConfig = _1.TargetGroupStickinessConfig
+  }
+  export namespace TargetGroup {
+    export type TargetDescription = _2.TargetDescription
+    export type TargetGroupAttribute = _2.TargetGroupAttribute
+    export type Matcher = _2.Matcher
+  }
+  export namespace Listener {
+    export type ForwardConfig = _3.ForwardConfig
+    export type AuthenticateOidcConfig = _3.AuthenticateOidcConfig
+    export type Certificate = _3.Certificate
+    export type TargetGroupStickinessConfig = _3.TargetGroupStickinessConfig
+    export type AuthenticateCognitoConfig = _3.AuthenticateCognitoConfig
+    export type Action = _3.Action
+    export type RedirectConfig = _3.RedirectConfig
+    export type FixedResponseConfig = _3.FixedResponseConfig
+    export type TargetGroupTuple = _3.TargetGroupTuple
+  }
+  export namespace ListenerCertificate {
+    export type Certificate = _4.Certificate
+  }
 }

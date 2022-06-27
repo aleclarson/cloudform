@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ServerCertificateProperties {
+export interface Properties {
     CertificateBody?: Value<string>
     CertificateChain?: Value<string>
     ServerCertificateName?: Value<string>
@@ -30,10 +30,11 @@ export interface ServerCertificateProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ServerCertificate extends ResourceBase<ServerCertificateProperties> {
+class ServerCertificate extends ResourceBase<Properties> {
 
 
-    constructor(properties?: ServerCertificateProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IAM::ServerCertificate', properties || {})
     }
 }
+export { ServerCertificate as R }

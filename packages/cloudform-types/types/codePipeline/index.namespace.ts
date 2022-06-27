@@ -17,16 +17,38 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Pipeline_ from './pipeline'
-import CustomActionType_ from './customActionType'
-import Webhook_ from './webhook'
+import * as _0 from './pipeline'
+import * as _1 from './customActionType'
+import * as _2 from './webhook'
 
 export namespace CodePipeline {
-  export const Pipeline = Pipeline_
-  export const CustomActionType = CustomActionType_
-  export const Webhook = Webhook_
+  export const Pipeline = _0.R
+  export const CustomActionType = _1.R
+  export const Webhook = _2.R
 
-  export type Pipeline = Pipeline_
-  export type CustomActionType = CustomActionType_
-  export type Webhook = Webhook_
+  export type Pipeline = _0.R
+  export type CustomActionType = _1.R
+  export type Webhook = _2.R
+
+  export namespace Pipeline {
+    export type OutputArtifact = _0.OutputArtifact
+    export type StageTransition = _0.StageTransition
+    export type InputArtifact = _0.InputArtifact
+    export type BlockerDeclaration = _0.BlockerDeclaration
+    export type ArtifactStoreMap = _0.ArtifactStoreMap
+    export type EncryptionKey = _0.EncryptionKey
+    export type ActionDeclaration = _0.ActionDeclaration
+    export type StageDeclaration = _0.StageDeclaration
+    export type ArtifactStore = _0.ArtifactStore
+    export type ActionTypeId = _0.ActionTypeId
+  }
+  export namespace CustomActionType {
+    export type ArtifactDetails = _1.ArtifactDetails
+    export type ConfigurationProperties = _1.ConfigurationProperties
+    export type Settings = _1.Settings
+  }
+  export namespace Webhook {
+    export type WebhookFilterRule = _2.WebhookFilterRule
+    export type WebhookAuthConfiguration = _2.WebhookAuthConfiguration
+  }
 }

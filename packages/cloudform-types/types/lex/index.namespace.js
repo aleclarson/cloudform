@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Lex=void 0;const _0=require("./bot"),_1=require("./botAlias"),_2=require("./resourcePolicy"),_3=require("./botVersion");var Lex;!function(Lex){Lex.Bot=_0.R,Lex.BotAlias=_1.R,Lex.ResourcePolicy=_2.R,Lex.BotVersion=_3.R}(Lex=exports.Lex||(exports.Lex={}));

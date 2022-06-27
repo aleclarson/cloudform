@@ -130,7 +130,7 @@ export class TimestampPartition {
 
 export type JsonConfiguration = {[key: string]: any}
 
-export interface DatastoreProperties {
+export interface Properties {
     DatastoreStorage?: DatastoreStorage
     DatastoreName?: Value<string>
     DatastorePartitions?: DatastorePartitions
@@ -139,7 +139,7 @@ export interface DatastoreProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Datastore extends ResourceBase<DatastoreProperties> {
+class Datastore extends ResourceBase<Properties> {
     static IotSiteWiseMultiLayerStorage = IotSiteWiseMultiLayerStorage
     static FileFormatConfiguration = FileFormatConfiguration
     static RetentionPeriod = RetentionPeriod
@@ -154,7 +154,8 @@ export default class Datastore extends ResourceBase<DatastoreProperties> {
     static DatastorePartition = DatastorePartition
     static TimestampPartition = TimestampPartition
 
-    constructor(properties?: DatastoreProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IoTAnalytics::Datastore', properties || {})
     }
 }
+export { Datastore as R }

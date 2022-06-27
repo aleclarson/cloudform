@@ -16,7 +16,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class TagsEntry {
@@ -28,16 +28,17 @@ export class TagsEntry {
     }
 }
 
-export interface RegistryProperties {
+export interface Properties {
     Description?: Value<string>
     RegistryName?: Value<string>
     Tags?: List<TagsEntry>
 }
 
-export default class Registry extends ResourceBase<RegistryProperties> {
+class Registry extends ResourceBase<Properties> {
     static TagsEntry = TagsEntry
 
-    constructor(properties?: RegistryProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EventSchemas::Registry', properties || {})
     }
 }
+export { Registry as R }

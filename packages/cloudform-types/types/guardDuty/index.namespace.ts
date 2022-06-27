@@ -17,25 +17,36 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ThreatIntelSet_ from './threatIntelSet'
-import Member_ from './member'
-import Master_ from './master'
-import Filter_ from './filter'
-import Detector_ from './detector'
-import IPSet_ from './ipSet'
+import * as _0 from './threatIntelSet'
+import * as _1 from './member'
+import * as _2 from './master'
+import * as _3 from './filter'
+import * as _4 from './detector'
+import * as _5 from './ipSet'
 
 export namespace GuardDuty {
-  export const ThreatIntelSet = ThreatIntelSet_
-  export const Member = Member_
-  export const Master = Master_
-  export const Filter = Filter_
-  export const Detector = Detector_
-  export const IPSet = IPSet_
+  export const ThreatIntelSet = _0.R
+  export const Member = _1.R
+  export const Master = _2.R
+  export const Filter = _3.R
+  export const Detector = _4.R
+  export const IPSet = _5.R
 
-  export type ThreatIntelSet = ThreatIntelSet_
-  export type Member = Member_
-  export type Master = Master_
-  export type Filter = Filter_
-  export type Detector = Detector_
-  export type IPSet = IPSet_
+  export type ThreatIntelSet = _0.R
+  export type Member = _1.R
+  export type Master = _2.R
+  export type Filter = _3.R
+  export type Detector = _4.R
+  export type IPSet = _5.R
+
+  export namespace Filter {
+    export type FindingCriteria = _3.FindingCriteria
+    export type Condition = _3.Condition
+  }
+  export namespace Detector {
+    export type CFNKubernetesAuditLogsConfiguration = _4.CFNKubernetesAuditLogsConfiguration
+    export type CFNDataSourceConfigurations = _4.CFNDataSourceConfigurations
+    export type CFNS3LogsConfiguration = _4.CFNS3LogsConfiguration
+    export type CFNKubernetesConfiguration = _4.CFNKubernetesConfiguration
+  }
 }

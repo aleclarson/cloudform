@@ -52,7 +52,7 @@ export class S3Destination {
     }
 }
 
-export interface ResourceDataSyncProperties {
+export interface Properties {
     S3Destination?: S3Destination
     KMSKeyArn?: Value<string>
     SyncSource?: SyncSource
@@ -64,12 +64,13 @@ export interface ResourceDataSyncProperties {
     BucketPrefix?: Value<string>
 }
 
-export default class ResourceDataSync extends ResourceBase<ResourceDataSyncProperties> {
+class ResourceDataSync extends ResourceBase<Properties> {
     static AwsOrganizationsSource = AwsOrganizationsSource
     static SyncSource = SyncSource
     static S3Destination = S3Destination
 
-    constructor(properties: ResourceDataSyncProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSM::ResourceDataSync', properties)
     }
 }
+export { ResourceDataSync as R }

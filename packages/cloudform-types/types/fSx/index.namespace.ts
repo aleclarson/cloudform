@@ -17,19 +17,46 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import FileSystem_ from './fileSystem'
-import Volume_ from './volume'
-import StorageVirtualMachine_ from './storageVirtualMachine'
-import Snapshot_ from './snapshot'
+import * as _0 from './fileSystem'
+import * as _1 from './volume'
+import * as _2 from './storageVirtualMachine'
+import * as _3 from './snapshot'
 
 export namespace FSx {
-  export const FileSystem = FileSystem_
-  export const Volume = Volume_
-  export const StorageVirtualMachine = StorageVirtualMachine_
-  export const Snapshot = Snapshot_
+  export const FileSystem = _0.R
+  export const Volume = _1.R
+  export const StorageVirtualMachine = _2.R
+  export const Snapshot = _3.R
 
-  export type FileSystem = FileSystem_
-  export type Volume = Volume_
-  export type StorageVirtualMachine = StorageVirtualMachine_
-  export type Snapshot = Snapshot_
+  export type FileSystem = _0.R
+  export type Volume = _1.R
+  export type StorageVirtualMachine = _2.R
+  export type Snapshot = _3.R
+
+  export namespace FileSystem {
+    export type NfsExports = _0.NfsExports
+    export type OpenZFSConfiguration = _0.OpenZFSConfiguration
+    export type UserAndGroupQuotas = _0.UserAndGroupQuotas
+    export type OntapConfiguration = _0.OntapConfiguration
+    export type RootVolumeConfiguration = _0.RootVolumeConfiguration
+    export type LustreConfiguration = _0.LustreConfiguration
+    export type SelfManagedActiveDirectoryConfiguration = _0.SelfManagedActiveDirectoryConfiguration
+    export type DiskIopsConfiguration = _0.DiskIopsConfiguration
+    export type WindowsConfiguration = _0.WindowsConfiguration
+    export type AuditLogConfiguration = _0.AuditLogConfiguration
+    export type ClientConfigurations = _0.ClientConfigurations
+  }
+  export namespace Volume {
+    export type TieringPolicy = _1.TieringPolicy
+    export type ClientConfigurations = _1.ClientConfigurations
+    export type OriginSnapshot = _1.OriginSnapshot
+    export type OpenZFSConfiguration = _1.OpenZFSConfiguration
+    export type OntapConfiguration = _1.OntapConfiguration
+    export type NfsExports = _1.NfsExports
+    export type UserAndGroupQuotas = _1.UserAndGroupQuotas
+  }
+  export namespace StorageVirtualMachine {
+    export type ActiveDirectoryConfiguration = _2.ActiveDirectoryConfiguration
+    export type SelfManagedActiveDirectoryConfiguration = _2.SelfManagedActiveDirectoryConfiguration
+  }
 }

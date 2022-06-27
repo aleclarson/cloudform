@@ -29,17 +29,18 @@ export class LoggingConfig {
     }
 }
 
-export interface HookVersionProperties {
+export interface Properties {
     ExecutionRoleArn?: Value<string>
     LoggingConfig?: LoggingConfig
     SchemaHandlerPackage: Value<string>
     TypeName: Value<string>
 }
 
-export default class HookVersion extends ResourceBase<HookVersionProperties> {
+class HookVersion extends ResourceBase<Properties> {
     static LoggingConfig = LoggingConfig
 
-    constructor(properties: HookVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFormation::HookVersion', properties)
     }
 }
+export { HookVersion as R }

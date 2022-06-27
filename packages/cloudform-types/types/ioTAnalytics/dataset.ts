@@ -211,7 +211,7 @@ export class TriggeringDataset {
     }
 }
 
-export interface DatasetProperties {
+export interface Properties {
     Actions: List<Action>
     LateDataRules?: List<LateDataRule>
     DatasetName?: Value<string>
@@ -222,7 +222,7 @@ export interface DatasetProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Dataset extends ResourceBase<DatasetProperties> {
+class Dataset extends ResourceBase<Properties> {
     static DatasetContentVersionValue = DatasetContentVersionValue
     static GlueConfiguration = GlueConfiguration
     static DeltaTimeSessionWindowConfiguration = DeltaTimeSessionWindowConfiguration
@@ -246,7 +246,8 @@ export default class Dataset extends ResourceBase<DatasetProperties> {
     static ResourceConfiguration = ResourceConfiguration
     static TriggeringDataset = TriggeringDataset
 
-    constructor(properties: DatasetProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTAnalytics::Dataset', properties)
     }
 }
+export { Dataset as R }

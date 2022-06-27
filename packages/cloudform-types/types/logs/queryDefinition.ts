@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface QueryDefinitionProperties {
+export interface Properties {
     Name: Value<string>
     QueryString: Value<string>
     LogGroupNames?: List<Value<string>>
 }
 
-export default class QueryDefinition extends ResourceBase<QueryDefinitionProperties> {
+class QueryDefinition extends ResourceBase<Properties> {
 
 
-    constructor(properties: QueryDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Logs::QueryDefinition', properties)
     }
 }
+export { QueryDefinition as R }

@@ -28,7 +28,7 @@ export class ProvisionedCidr {
     }
 }
 
-export interface IPAMPoolProperties {
+export interface Properties {
     SourceIpamPoolId?: Value<string>
     IpamScopeId: Value<string>
     Locale?: Value<string>
@@ -44,10 +44,11 @@ export interface IPAMPoolProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class IPAMPool extends ResourceBase<IPAMPoolProperties> {
+class IPAMPool extends ResourceBase<Properties> {
     static ProvisionedCidr = ProvisionedCidr
 
-    constructor(properties: IPAMPoolProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::IPAMPool', properties)
     }
 }
+export { IPAMPool as R }

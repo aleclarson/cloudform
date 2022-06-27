@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ApiCacheProperties {
+export interface Properties {
     Type: Value<string>
     TransitEncryptionEnabled?: Value<boolean>
     AtRestEncryptionEnabled?: Value<boolean>
@@ -31,10 +31,11 @@ export interface ApiCacheProperties {
     Ttl: Value<number>
 }
 
-export default class ApiCache extends ResourceBase<ApiCacheProperties> {
+class ApiCache extends ResourceBase<Properties> {
 
 
-    constructor(properties: ApiCacheProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppSync::ApiCache', properties)
     }
 }
+export { ApiCache as R }

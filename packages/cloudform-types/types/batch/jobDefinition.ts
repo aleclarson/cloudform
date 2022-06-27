@@ -17,7 +17,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Volumes {
@@ -239,7 +239,7 @@ export class Device {
     }
 }
 
-export interface JobDefinitionProperties {
+export interface Properties {
     Type: Value<string>
     Parameters?: {[key: string]: any}
     NodeProperties?: NodeProperties
@@ -253,7 +253,7 @@ export interface JobDefinitionProperties {
     Tags?: {[key: string]: any}
 }
 
-export default class JobDefinition extends ResourceBase<JobDefinitionProperties> {
+class JobDefinition extends ResourceBase<Properties> {
     static Volumes = Volumes
     static AuthorizationConfig = AuthorizationConfig
     static ResourceRequirement = ResourceRequirement
@@ -276,7 +276,8 @@ export default class JobDefinition extends ResourceBase<JobDefinitionProperties>
     static EfsVolumeConfiguration = EfsVolumeConfiguration
     static Device = Device
 
-    constructor(properties: JobDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Batch::JobDefinition', properties)
     }
 }
+export { JobDefinition as R }

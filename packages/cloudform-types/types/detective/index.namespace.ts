@@ -17,13 +17,15 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import MemberInvitation_ from './memberInvitation'
-import Graph_ from './graph'
+import * as _0 from './memberInvitation'
+import * as _1 from './graph'
 
 export namespace Detective {
-  export const MemberInvitation = MemberInvitation_
-  export const Graph = Graph_
+  export const MemberInvitation = _0.R
+  export const Graph = _1.R
 
-  export type MemberInvitation = MemberInvitation_
-  export type Graph = Graph_
+  export type MemberInvitation = _0.R
+  export type Graph = _1.R
+
+
 }

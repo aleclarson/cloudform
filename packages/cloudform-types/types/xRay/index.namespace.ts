@@ -17,13 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Group_ from './group'
-import SamplingRule_ from './samplingRule'
+import * as _0 from './group'
+import * as _1 from './samplingRule'
 
 export namespace XRay {
-  export const Group = Group_
-  export const SamplingRule = SamplingRule_
+  export const Group = _0.R
+  export const SamplingRule = _1.R
 
-  export type Group = Group_
-  export type SamplingRule = SamplingRule_
+  export type Group = _0.R
+  export type SamplingRule = _1.R
+
+  export namespace Group {
+    export type InsightsConfiguration = _0.InsightsConfiguration
+  }
+  export namespace SamplingRule {
+    export type SamplingRuleUpdate = _1.SamplingRuleUpdate
+    export type SamplingRuleRecord = _1.SamplingRuleRecord
+  }
 }

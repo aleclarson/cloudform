@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PublicTypeVersionProperties {
+export interface Properties {
     Arn?: Value<string>
     PublicVersionNumber?: Value<string>
     TypeName?: Value<string>
@@ -30,10 +30,11 @@ export interface PublicTypeVersionProperties {
     Type?: Value<string>
 }
 
-export default class PublicTypeVersion extends ResourceBase<PublicTypeVersionProperties> {
+class PublicTypeVersion extends ResourceBase<Properties> {
 
 
-    constructor(properties?: PublicTypeVersionProperties) {
+    constructor(properties?: Properties) {
         super('AWS::CloudFormation::PublicTypeVersion', properties || {})
     }
 }
+export { PublicTypeVersion as R }

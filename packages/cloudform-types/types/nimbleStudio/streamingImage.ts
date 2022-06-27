@@ -7,12 +7,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface StreamingImageProperties {
+export interface Properties {
     Description?: Value<string>
     Ec2ImageId: Value<string>
     Name: Value<string>
@@ -20,10 +20,11 @@ export interface StreamingImageProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class StreamingImage extends ResourceBase<StreamingImageProperties> {
+class StreamingImage extends ResourceBase<Properties> {
 
 
-    constructor(properties: StreamingImageProperties) {
+    constructor(properties: Properties) {
         super('AWS::NimbleStudio::StreamingImage', properties)
     }
 }
+export { StreamingImage as R }

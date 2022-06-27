@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),service_1=(exports.default=index_namespace_1.AppRunner,Object.defineProperty(exports,"__esModule",{value:!0}),require("./service"));var AppRunner;!function(AppRunner){AppRunner.Service=service_1.default}(AppRunner=exports.AppRunner||(exports.AppRunner={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.AppRunner;

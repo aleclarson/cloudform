@@ -17,16 +17,32 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ConfigurationAssociation_ from './configurationAssociation'
-import Configuration_ from './configuration'
-import Broker_ from './broker'
+import * as _0 from './configurationAssociation'
+import * as _1 from './configuration'
+import * as _2 from './broker'
 
 export namespace AmazonMQ {
-  export const ConfigurationAssociation = ConfigurationAssociation_
-  export const Configuration = Configuration_
-  export const Broker = Broker_
+  export const ConfigurationAssociation = _0.R
+  export const Configuration = _1.R
+  export const Broker = _2.R
 
-  export type ConfigurationAssociation = ConfigurationAssociation_
-  export type Configuration = Configuration_
-  export type Broker = Broker_
+  export type ConfigurationAssociation = _0.R
+  export type Configuration = _1.R
+  export type Broker = _2.R
+
+  export namespace ConfigurationAssociation {
+    export type ConfigurationId = _0.ConfigurationId
+  }
+  export namespace Configuration {
+    export type TagsEntry = _1.TagsEntry
+  }
+  export namespace Broker {
+    export type LogList = _2.LogList
+    export type User = _2.User
+    export type LdapServerMetadata = _2.LdapServerMetadata
+    export type EncryptionOptions = _2.EncryptionOptions
+    export type MaintenanceWindow = _2.MaintenanceWindow
+    export type TagsEntry = _2.TagsEntry
+    export type ConfigurationId = _2.ConfigurationId
+  }
 }

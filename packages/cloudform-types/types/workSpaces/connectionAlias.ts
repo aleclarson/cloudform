@@ -26,15 +26,16 @@ export class ConnectionAliasAssociation {
     }
 }
 
-export interface ConnectionAliasProperties {
+export interface Properties {
     ConnectionString: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class ConnectionAlias extends ResourceBase<ConnectionAliasProperties> {
+class ConnectionAlias extends ResourceBase<Properties> {
     static ConnectionAliasAssociation = ConnectionAliasAssociation
 
-    constructor(properties: ConnectionAliasProperties) {
+    constructor(properties: Properties) {
         super('AWS::WorkSpaces::ConnectionAlias', properties)
     }
 }
+export { ConnectionAlias as R }

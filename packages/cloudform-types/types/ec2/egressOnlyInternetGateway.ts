@@ -22,14 +22,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface EgressOnlyInternetGatewayProperties {
+export interface Properties {
     VpcId: Value<string>
 }
 
-export default class EgressOnlyInternetGateway extends ResourceBase<EgressOnlyInternetGatewayProperties> {
+class EgressOnlyInternetGateway extends ResourceBase<Properties> {
 
 
-    constructor(properties: EgressOnlyInternetGatewayProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::EgressOnlyInternetGateway', properties)
     }
 }
+export { EgressOnlyInternetGateway as R }

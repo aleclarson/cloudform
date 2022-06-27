@@ -17,10 +17,28 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Application_ from './application'
+import * as _0 from './application'
 
 export namespace ApplicationInsights {
-  export const Application = Application_
+  export const Application = _0.R
 
-  export type Application = Application_
+  export type Application = _0.R
+
+  export namespace Application {
+    export type SubComponentConfigurationDetails = _0.SubComponentConfigurationDetails
+    export type ComponentMonitoringSetting = _0.ComponentMonitoringSetting
+    export type LogPattern = _0.LogPattern
+    export type LogPatternSet = _0.LogPatternSet
+    export type Alarm = _0.Alarm
+    export type HAClusterPrometheusExporter = _0.HAClusterPrometheusExporter
+    export type WindowsEvent = _0.WindowsEvent
+    export type ComponentConfiguration = _0.ComponentConfiguration
+    export type CustomComponent = _0.CustomComponent
+    export type JMXPrometheusExporter = _0.JMXPrometheusExporter
+    export type AlarmMetric = _0.AlarmMetric
+    export type HANAPrometheusExporter = _0.HANAPrometheusExporter
+    export type ConfigurationDetails = _0.ConfigurationDetails
+    export type Log = _0.Log
+    export type SubComponentTypeConfiguration = _0.SubComponentTypeConfiguration
+  }
 }

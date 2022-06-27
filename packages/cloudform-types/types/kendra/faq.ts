@@ -20,7 +20,7 @@ export class S3Path {
     }
 }
 
-export interface FaqProperties {
+export interface Properties {
     IndexId: Value<string>
     Name: Value<string>
     Description?: Value<string>
@@ -30,10 +30,11 @@ export interface FaqProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Faq extends ResourceBase<FaqProperties> {
+class Faq extends ResourceBase<Properties> {
     static S3Path = S3Path
 
-    constructor(properties: FaqProperties) {
+    constructor(properties: Properties) {
         super('AWS::Kendra::Faq', properties)
     }
 }
+export { Faq as R }

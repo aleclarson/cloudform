@@ -22,14 +22,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CustomResourceProperties {
+export interface Properties {
     ServiceToken: Value<string>
 }
 
-export default class CustomResource extends ResourceBase<CustomResourceProperties> {
+class CustomResource extends ResourceBase<Properties> {
 
 
-    constructor(properties: CustomResourceProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFormation::CustomResource', properties)
     }
 }
+export { CustomResource as R }

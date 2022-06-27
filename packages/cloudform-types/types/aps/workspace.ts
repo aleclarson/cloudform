@@ -15,16 +15,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface WorkspaceProperties {
+export interface Properties {
     Alias?: Value<string>
     AlertManagerDefinition?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Workspace extends ResourceBase<WorkspaceProperties> {
+class Workspace extends ResourceBase<Properties> {
 
 
-    constructor(properties?: WorkspaceProperties) {
+    constructor(properties?: Properties) {
         super('AWS::APS::Workspace', properties || {})
     }
 }
+export { Workspace as R }

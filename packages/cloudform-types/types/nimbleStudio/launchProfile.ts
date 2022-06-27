@@ -7,7 +7,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class StreamingSessionStorageRoot {
@@ -41,7 +41,7 @@ export class StreamConfigurationSessionStorage {
     }
 }
 
-export interface LaunchProfileProperties {
+export interface Properties {
     Description?: Value<string>
     Ec2SubnetIds: List<Value<string>>
     LaunchProfileProtocolVersions: List<Value<string>>
@@ -52,12 +52,13 @@ export interface LaunchProfileProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class LaunchProfile extends ResourceBase<LaunchProfileProperties> {
+class LaunchProfile extends ResourceBase<Properties> {
     static StreamingSessionStorageRoot = StreamingSessionStorageRoot
     static StreamConfiguration = StreamConfiguration
     static StreamConfigurationSessionStorage = StreamConfigurationSessionStorage
 
-    constructor(properties: LaunchProfileProperties) {
+    constructor(properties: Properties) {
         super('AWS::NimbleStudio::LaunchProfile', properties)
     }
 }
+export { LaunchProfile as R }

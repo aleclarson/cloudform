@@ -36,7 +36,7 @@ export class MountOptions {
     }
 }
 
-export interface LocationNFSProperties {
+export interface Properties {
     MountOptions?: MountOptions
     OnPremConfig: OnPremConfig
     ServerHostname: Value<string>
@@ -44,11 +44,12 @@ export interface LocationNFSProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class LocationNFS extends ResourceBase<LocationNFSProperties> {
+class LocationNFS extends ResourceBase<Properties> {
     static OnPremConfig = OnPremConfig
     static MountOptions = MountOptions
 
-    constructor(properties: LocationNFSProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataSync::LocationNFS', properties)
     }
 }
+export { LocationNFS as R }

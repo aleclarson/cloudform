@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface FirewallDomainListProperties {
+export interface Properties {
     Name?: Value<string>
     Domains?: List<Value<string>>
     DomainFileUrl?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class FirewallDomainList extends ResourceBase<FirewallDomainListProperties> {
+class FirewallDomainList extends ResourceBase<Properties> {
 
 
-    constructor(properties?: FirewallDomainListProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Route53Resolver::FirewallDomainList', properties || {})
     }
 }
+export { FirewallDomainList as R }

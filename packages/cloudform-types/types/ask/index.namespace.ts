@@ -17,10 +17,16 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Skill_ from './skill'
+import * as _0 from './skill'
 
 export namespace ASK {
-  export const Skill = Skill_
+  export const Skill = _0.R
 
-  export type Skill = Skill_
+  export type Skill = _0.R
+
+  export namespace Skill {
+    export type Overrides = _0.Overrides
+    export type SkillPackage = _0.SkillPackage
+    export type AuthenticationConfiguration = _0.AuthenticationConfiguration
+  }
 }

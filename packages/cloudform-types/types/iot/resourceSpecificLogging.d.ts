@@ -1,0 +1,1 @@
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{TargetType:Value<string>;TargetName:Value<string>;LogLevel:Value<string>;}declare class ResourceSpecificLogging extends ResourceBase<Properties>{constructor(properties:Properties);}export{ResourceSpecificLogging as R};

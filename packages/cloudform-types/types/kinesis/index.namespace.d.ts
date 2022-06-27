@@ -1,1 +1,1 @@
-import Stream_ from'./stream';import StreamConsumer_ from'./streamConsumer';export declare namespace Kinesis{const Stream:typeof Stream_;const StreamConsumer:typeof StreamConsumer_;type Stream=Stream_;type StreamConsumer=StreamConsumer_;}
+import*as _0 from'./stream';import*as _1 from'./streamConsumer';export declare namespace Kinesis{const Stream:typeof _0.R;const StreamConsumer:typeof _1.R;type Stream=_0.R;type StreamConsumer=_1.R;namespace Stream{type StreamEncryption=_0.StreamEncryption;type StreamModeDetails=_0.StreamModeDetails;}}

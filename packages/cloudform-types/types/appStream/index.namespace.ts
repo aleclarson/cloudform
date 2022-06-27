@@ -17,43 +17,75 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Stack_ from './stack'
-import User_ from './user'
-import StackUserAssociation_ from './stackUserAssociation'
-import AppBlock_ from './appBlock'
-import ApplicationFleetAssociation_ from './applicationFleetAssociation'
-import ApplicationEntitlementAssociation_ from './applicationEntitlementAssociation'
-import Application_ from './application'
-import Fleet_ from './fleet'
-import ImageBuilder_ from './imageBuilder'
-import DirectoryConfig_ from './directoryConfig'
-import Entitlement_ from './entitlement'
-import StackFleetAssociation_ from './stackFleetAssociation'
+import * as _0 from './stack'
+import * as _1 from './user'
+import * as _2 from './stackUserAssociation'
+import * as _3 from './appBlock'
+import * as _4 from './applicationFleetAssociation'
+import * as _5 from './applicationEntitlementAssociation'
+import * as _6 from './application'
+import * as _7 from './fleet'
+import * as _8 from './imageBuilder'
+import * as _9 from './directoryConfig'
+import * as _a from './entitlement'
+import * as _b from './stackFleetAssociation'
 
 export namespace AppStream {
-  export const Stack = Stack_
-  export const User = User_
-  export const StackUserAssociation = StackUserAssociation_
-  export const AppBlock = AppBlock_
-  export const ApplicationFleetAssociation = ApplicationFleetAssociation_
-  export const ApplicationEntitlementAssociation = ApplicationEntitlementAssociation_
-  export const Application = Application_
-  export const Fleet = Fleet_
-  export const ImageBuilder = ImageBuilder_
-  export const DirectoryConfig = DirectoryConfig_
-  export const Entitlement = Entitlement_
-  export const StackFleetAssociation = StackFleetAssociation_
+  export const Stack = _0.R
+  export const User = _1.R
+  export const StackUserAssociation = _2.R
+  export const AppBlock = _3.R
+  export const ApplicationFleetAssociation = _4.R
+  export const ApplicationEntitlementAssociation = _5.R
+  export const Application = _6.R
+  export const Fleet = _7.R
+  export const ImageBuilder = _8.R
+  export const DirectoryConfig = _9.R
+  export const Entitlement = _a.R
+  export const StackFleetAssociation = _b.R
 
-  export type Stack = Stack_
-  export type User = User_
-  export type StackUserAssociation = StackUserAssociation_
-  export type AppBlock = AppBlock_
-  export type ApplicationFleetAssociation = ApplicationFleetAssociation_
-  export type ApplicationEntitlementAssociation = ApplicationEntitlementAssociation_
-  export type Application = Application_
-  export type Fleet = Fleet_
-  export type ImageBuilder = ImageBuilder_
-  export type DirectoryConfig = DirectoryConfig_
-  export type Entitlement = Entitlement_
-  export type StackFleetAssociation = StackFleetAssociation_
+  export type Stack = _0.R
+  export type User = _1.R
+  export type StackUserAssociation = _2.R
+  export type AppBlock = _3.R
+  export type ApplicationFleetAssociation = _4.R
+  export type ApplicationEntitlementAssociation = _5.R
+  export type Application = _6.R
+  export type Fleet = _7.R
+  export type ImageBuilder = _8.R
+  export type DirectoryConfig = _9.R
+  export type Entitlement = _a.R
+  export type StackFleetAssociation = _b.R
+
+  export namespace Stack {
+    export type AccessEndpoint = _0.AccessEndpoint
+    export type StreamingExperienceSettings = _0.StreamingExperienceSettings
+    export type UserSetting = _0.UserSetting
+    export type ApplicationSettings = _0.ApplicationSettings
+    export type StorageConnector = _0.StorageConnector
+  }
+  export namespace AppBlock {
+    export type S3Location = _3.S3Location
+    export type ScriptDetails = _3.ScriptDetails
+  }
+  export namespace Application {
+    export type S3Location = _6.S3Location
+  }
+  export namespace Fleet {
+    export type DomainJoinInfo = _7.DomainJoinInfo
+    export type S3Location = _7.S3Location
+    export type VpcConfig = _7.VpcConfig
+    export type ComputeCapacity = _7.ComputeCapacity
+  }
+  export namespace ImageBuilder {
+    export type VpcConfig = _8.VpcConfig
+    export type AccessEndpoint = _8.AccessEndpoint
+    export type DomainJoinInfo = _8.DomainJoinInfo
+  }
+  export namespace DirectoryConfig {
+    export type ServiceAccountCredentials = _9.ServiceAccountCredentials
+  }
+  export namespace Entitlement {
+    export type Attribute = _a.Attribute
+  }
 }

@@ -17,10 +17,16 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import VirtualCluster_ from './virtualCluster'
+import * as _0 from './virtualCluster'
 
 export namespace EMRContainers {
-  export const VirtualCluster = VirtualCluster_
+  export const VirtualCluster = _0.R
 
-  export type VirtualCluster = VirtualCluster_
+  export type VirtualCluster = _0.R
+
+  export namespace VirtualCluster {
+    export type ContainerInfo = _0.ContainerInfo
+    export type EksInfo = _0.EksInfo
+    export type ContainerProvider = _0.ContainerProvider
+  }
 }

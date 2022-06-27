@@ -17,13 +17,18 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import AccessPoint_ from './accessPoint'
-import AccessPointPolicy_ from './accessPointPolicy'
+import * as _0 from './accessPoint'
+import * as _1 from './accessPointPolicy'
 
 export namespace S3ObjectLambda {
-  export const AccessPoint = AccessPoint_
-  export const AccessPointPolicy = AccessPointPolicy_
+  export const AccessPoint = _0.R
+  export const AccessPointPolicy = _1.R
 
-  export type AccessPoint = AccessPoint_
-  export type AccessPointPolicy = AccessPointPolicy_
+  export type AccessPoint = _0.R
+  export type AccessPointPolicy = _1.R
+
+  export namespace AccessPoint {
+    export type ObjectLambdaConfiguration = _0.ObjectLambdaConfiguration
+    export type TransformationConfiguration = _0.TransformationConfiguration
+  }
 }

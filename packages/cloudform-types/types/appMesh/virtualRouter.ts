@@ -44,7 +44,7 @@ export class VirtualRouterListener {
     }
 }
 
-export interface VirtualRouterProperties {
+export interface Properties {
     MeshName: Value<string>
     VirtualRouterName?: Value<string>
     MeshOwner?: Value<string>
@@ -52,12 +52,13 @@ export interface VirtualRouterProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class VirtualRouter extends ResourceBase<VirtualRouterProperties> {
+class VirtualRouter extends ResourceBase<Properties> {
     static PortMapping = PortMapping
     static VirtualRouterSpec = VirtualRouterSpec
     static VirtualRouterListener = VirtualRouterListener
 
-    constructor(properties: VirtualRouterProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppMesh::VirtualRouter', properties)
     }
 }
+export { VirtualRouter as R }

@@ -29,15 +29,16 @@ export class IPSetDescriptor {
     }
 }
 
-export interface IPSetProperties {
+export interface Properties {
     IPSetDescriptors?: List<IPSetDescriptor>
     Name: Value<string>
 }
 
-export default class IPSet extends ResourceBase<IPSetProperties> {
+class IPSet extends ResourceBase<Properties> {
     static IPSetDescriptor = IPSetDescriptor
 
-    constructor(properties: IPSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAF::IPSet', properties)
     }
 }
+export { IPSet as R }

@@ -17,10 +17,16 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Environment_ from './environment'
+import * as _0 from './environment'
 
 export namespace MWAA {
-  export const Environment = Environment_
+  export const Environment = _0.R
 
-  export type Environment = Environment_
+  export type Environment = _0.R
+
+  export namespace Environment {
+    export type NetworkConfiguration = _0.NetworkConfiguration
+    export type ModuleLoggingConfiguration = _0.ModuleLoggingConfiguration
+    export type LoggingConfiguration = _0.LoggingConfiguration
+  }
 }

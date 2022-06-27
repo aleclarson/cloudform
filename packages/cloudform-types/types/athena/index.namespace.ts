@@ -17,19 +17,26 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import DataCatalog_ from './dataCatalog'
-import WorkGroup_ from './workGroup'
-import PreparedStatement_ from './preparedStatement'
-import NamedQuery_ from './namedQuery'
+import * as _0 from './dataCatalog'
+import * as _1 from './workGroup'
+import * as _2 from './preparedStatement'
+import * as _3 from './namedQuery'
 
 export namespace Athena {
-  export const DataCatalog = DataCatalog_
-  export const WorkGroup = WorkGroup_
-  export const PreparedStatement = PreparedStatement_
-  export const NamedQuery = NamedQuery_
+  export const DataCatalog = _0.R
+  export const WorkGroup = _1.R
+  export const PreparedStatement = _2.R
+  export const NamedQuery = _3.R
 
-  export type DataCatalog = DataCatalog_
-  export type WorkGroup = WorkGroup_
-  export type PreparedStatement = PreparedStatement_
-  export type NamedQuery = NamedQuery_
+  export type DataCatalog = _0.R
+  export type WorkGroup = _1.R
+  export type PreparedStatement = _2.R
+  export type NamedQuery = _3.R
+
+  export namespace WorkGroup {
+    export type ResultConfiguration = _1.ResultConfiguration
+    export type WorkGroupConfiguration = _1.WorkGroupConfiguration
+    export type EncryptionConfiguration = _1.EncryptionConfiguration
+    export type EngineVersion = _1.EngineVersion
+  }
 }

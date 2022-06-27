@@ -38,7 +38,7 @@ export class Icmp {
     }
 }
 
-export interface NetworkAclEntryProperties {
+export interface Properties {
     PortRange?: PortRange
     NetworkAclId: Value<string>
     RuleAction: Value<string>
@@ -50,11 +50,12 @@ export interface NetworkAclEntryProperties {
     Icmp?: Icmp
 }
 
-export default class NetworkAclEntry extends ResourceBase<NetworkAclEntryProperties> {
+class NetworkAclEntry extends ResourceBase<Properties> {
     static PortRange = PortRange
     static Icmp = Icmp
 
-    constructor(properties: NetworkAclEntryProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::NetworkAclEntry', properties)
     }
 }
+export { NetworkAclEntry as R }

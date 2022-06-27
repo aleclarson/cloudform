@@ -37,7 +37,7 @@ export class S3 {
     }
 }
 
-export interface GitHubRepositoryProperties {
+export interface Properties {
     EnableIssues?: Value<boolean>
     ConnectionArn?: Value<string>
     RepositoryName: Value<string>
@@ -48,11 +48,12 @@ export interface GitHubRepositoryProperties {
     RepositoryDescription?: Value<string>
 }
 
-export default class GitHubRepository extends ResourceBase<GitHubRepositoryProperties> {
+class GitHubRepository extends ResourceBase<Properties> {
     static Code = Code
     static S3 = S3
 
-    constructor(properties: GitHubRepositoryProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodeStar::GitHubRepository', properties)
     }
 }
+export { GitHubRepository as R }

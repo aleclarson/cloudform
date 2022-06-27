@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace"),gitHubRepository_1=(exports.default=index_namespace_1.CodeStar,Object.defineProperty(exports,"__esModule",{value:!0}),require("./gitHubRepository"));var CodeStar;!function(CodeStar){CodeStar.GitHubRepository=gitHubRepository_1.default}(CodeStar=exports.CodeStar||(exports.CodeStar={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const index_namespace_1=require("./index.namespace");exports.default=index_namespace_1.CodeStar;

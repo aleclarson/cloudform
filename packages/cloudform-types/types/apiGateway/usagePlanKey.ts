@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UsagePlanKeyProperties {
+export interface Properties {
     KeyId: Value<string>
     KeyType: Value<string>
     UsagePlanId: Value<string>
 }
 
-export default class UsagePlanKey extends ResourceBase<UsagePlanKeyProperties> {
+class UsagePlanKey extends ResourceBase<Properties> {
 
 
-    constructor(properties: UsagePlanKeyProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::UsagePlanKey', properties)
     }
 }
+export { UsagePlanKey as R }

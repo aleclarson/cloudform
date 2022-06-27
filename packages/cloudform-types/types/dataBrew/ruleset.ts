@@ -60,7 +60,7 @@ export class Rule {
     }
 }
 
-export interface RulesetProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     TargetArn: Value<string>
@@ -68,13 +68,14 @@ export interface RulesetProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Ruleset extends ResourceBase<RulesetProperties> {
+class Ruleset extends ResourceBase<Properties> {
     static Threshold = Threshold
     static SubstitutionValue = SubstitutionValue
     static ColumnSelector = ColumnSelector
     static Rule = Rule
 
-    constructor(properties: RulesetProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataBrew::Ruleset', properties)
     }
 }
+export { Ruleset as R }

@@ -17,10 +17,25 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Domain_ from './domain'
+import * as _0 from './domain'
 
 export namespace OpenSearchService {
-  export const Domain = Domain_
+  export const Domain = _0.R
 
-  export type Domain = Domain_
+  export type Domain = _0.R
+
+  export namespace Domain {
+    export type ZoneAwarenessConfig = _0.ZoneAwarenessConfig
+    export type NodeToNodeEncryptionOptions = _0.NodeToNodeEncryptionOptions
+    export type SnapshotOptions = _0.SnapshotOptions
+    export type EBSOptions = _0.EBSOptions
+    export type LogPublishingOption = _0.LogPublishingOption
+    export type EncryptionAtRestOptions = _0.EncryptionAtRestOptions
+    export type DomainEndpointOptions = _0.DomainEndpointOptions
+    export type CognitoOptions = _0.CognitoOptions
+    export type VPCOptions = _0.VPCOptions
+    export type AdvancedSecurityOptionsInput = _0.AdvancedSecurityOptionsInput
+    export type MasterUserOptions = _0.MasterUserOptions
+    export type ClusterConfig = _0.ClusterConfig
+  }
 }

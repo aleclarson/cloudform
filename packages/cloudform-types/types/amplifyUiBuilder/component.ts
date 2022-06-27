@@ -16,7 +16,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Predicate {
@@ -188,7 +188,7 @@ export class ComponentPropertyBindingProperties {
     }
 }
 
-export interface ComponentProperties {
+export interface Properties {
     BindingProperties: {[key: string]: ComponentBindingPropertiesValue}
     Children?: List<ComponentChild>
     CollectionProperties?: {[key: string]: ComponentDataConfiguration}
@@ -203,7 +203,7 @@ export interface ComponentProperties {
     Variants: List<ComponentVariant>
 }
 
-export default class Component extends ResourceBase<ComponentProperties> {
+class Component extends ResourceBase<Properties> {
     static Predicate = Predicate
     static ComponentBindingPropertiesValueProperties = ComponentBindingPropertiesValueProperties
     static SortProperty = SortProperty
@@ -218,7 +218,8 @@ export default class Component extends ResourceBase<ComponentProperties> {
     static ComponentEvent = ComponentEvent
     static ComponentPropertyBindingProperties = ComponentPropertyBindingProperties
 
-    constructor(properties: ComponentProperties) {
+    constructor(properties: Properties) {
         super('AWS::AmplifyUIBuilder::Component', properties)
     }
 }
+export { Component as R }

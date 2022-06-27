@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResourcePolicyProperties {
+export interface Properties {
     PolicyName: Value<string>
     PolicyDocument: Value<string>
 }
 
-export default class ResourcePolicy extends ResourceBase<ResourcePolicyProperties> {
+class ResourcePolicy extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResourcePolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::Logs::ResourcePolicy', properties)
     }
 }
+export { ResourcePolicy as R }

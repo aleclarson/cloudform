@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RouteTableProperties {
+export interface Properties {
     Tags?: List<ResourceTag>
     VpcId: Value<string>
 }
 
-export default class RouteTable extends ResourceBase<RouteTableProperties> {
+class RouteTable extends ResourceBase<Properties> {
 
 
-    constructor(properties: RouteTableProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::RouteTable', properties)
     }
 }
+export { RouteTable as R }

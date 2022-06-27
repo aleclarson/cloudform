@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ProfilePermissionProperties {
+export interface Properties {
     ProfileName: Value<string>
     ProfileVersion?: Value<string>
     Action: Value<string>
@@ -29,10 +29,11 @@ export interface ProfilePermissionProperties {
     StatementId: Value<string>
 }
 
-export default class ProfilePermission extends ResourceBase<ProfilePermissionProperties> {
+class ProfilePermission extends ResourceBase<Properties> {
 
 
-    constructor(properties: ProfilePermissionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Signer::ProfilePermission', properties)
     }
 }
+export { ProfilePermission as R }

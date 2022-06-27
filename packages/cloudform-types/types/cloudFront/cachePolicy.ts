@@ -72,18 +72,19 @@ export class CookiesConfig {
     }
 }
 
-export interface CachePolicyProperties {
+export interface Properties {
     CachePolicyConfig: CachePolicyConfig
 }
 
-export default class CachePolicy extends ResourceBase<CachePolicyProperties> {
+class CachePolicy extends ResourceBase<Properties> {
     static HeadersConfig = HeadersConfig
     static CachePolicyConfig = CachePolicyConfig
     static ParametersInCacheKeyAndForwardedToOrigin = ParametersInCacheKeyAndForwardedToOrigin
     static QueryStringsConfig = QueryStringsConfig
     static CookiesConfig = CookiesConfig
 
-    constructor(properties: CachePolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFront::CachePolicy', properties)
     }
 }
+export { CachePolicy as R }

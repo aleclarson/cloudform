@@ -55,7 +55,7 @@ export class CachingConfig {
     }
 }
 
-export interface ResolverProperties {
+export interface Properties {
     TypeName: Value<string>
     PipelineConfig?: PipelineConfig
     RequestMappingTemplate?: Value<string>
@@ -71,13 +71,14 @@ export interface ResolverProperties {
     FieldName: Value<string>
 }
 
-export default class Resolver extends ResourceBase<ResolverProperties> {
+class Resolver extends ResourceBase<Properties> {
     static LambdaConflictHandlerConfig = LambdaConflictHandlerConfig
     static PipelineConfig = PipelineConfig
     static SyncConfig = SyncConfig
     static CachingConfig = CachingConfig
 
-    constructor(properties: ResolverProperties) {
+    constructor(properties: Properties) {
         super('AWS::AppSync::Resolver', properties)
     }
 }
+export { Resolver as R }

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.APS=void 0;const _0=require("./workspace"),_1=require("./ruleGroupsNamespace");var APS;!function(APS){APS.Workspace=_0.R,APS.RuleGroupsNamespace=_1.R}(APS=exports.APS||(exports.APS={}));

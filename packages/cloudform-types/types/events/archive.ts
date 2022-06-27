@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ArchiveProperties {
+export interface Properties {
     ArchiveName?: Value<string>
     SourceArn: Value<string>
     Description?: Value<string>
@@ -29,10 +29,11 @@ export interface ArchiveProperties {
     RetentionDays?: Value<number>
 }
 
-export default class Archive extends ResourceBase<ArchiveProperties> {
+class Archive extends ResourceBase<Properties> {
 
 
-    constructor(properties: ArchiveProperties) {
+    constructor(properties: Properties) {
         super('AWS::Events::Archive', properties)
     }
 }
+export { Archive as R }

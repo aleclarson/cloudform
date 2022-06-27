@@ -17,16 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Assignment_ from './assignment'
-import InstanceAccessControlAttributeConfiguration_ from './instanceAccessControlAttributeConfiguration'
-import PermissionSet_ from './permissionSet'
+import * as _0 from './assignment'
+import * as _1 from './instanceAccessControlAttributeConfiguration'
+import * as _2 from './permissionSet'
 
 export namespace SSO {
-  export const Assignment = Assignment_
-  export const InstanceAccessControlAttributeConfiguration = InstanceAccessControlAttributeConfiguration_
-  export const PermissionSet = PermissionSet_
+  export const Assignment = _0.R
+  export const InstanceAccessControlAttributeConfiguration = _1.R
+  export const PermissionSet = _2.R
 
-  export type Assignment = Assignment_
-  export type InstanceAccessControlAttributeConfiguration = InstanceAccessControlAttributeConfiguration_
-  export type PermissionSet = PermissionSet_
+  export type Assignment = _0.R
+  export type InstanceAccessControlAttributeConfiguration = _1.R
+  export type PermissionSet = _2.R
+
+  export namespace InstanceAccessControlAttributeConfiguration {
+    export type AccessControlAttribute = _1.AccessControlAttribute
+    export type AccessControlAttributeValue = _1.AccessControlAttributeValue
+  }
 }

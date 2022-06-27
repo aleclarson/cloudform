@@ -21,16 +21,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface HttpNamespaceProperties {
+export interface Properties {
     Description?: Value<string>
     Tags?: List<ResourceTag>
     Name: Value<string>
 }
 
-export default class HttpNamespace extends ResourceBase<HttpNamespaceProperties> {
+class HttpNamespace extends ResourceBase<Properties> {
 
 
-    constructor(properties: HttpNamespaceProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceDiscovery::HttpNamespace', properties)
     }
 }
+export { HttpNamespace as R }

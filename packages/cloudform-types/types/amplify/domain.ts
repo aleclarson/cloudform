@@ -28,7 +28,7 @@ export class SubDomainSetting {
     }
 }
 
-export interface DomainProperties {
+export interface Properties {
     AppId: Value<string>
     AutoSubDomainCreationPatterns?: List<Value<string>>
     AutoSubDomainIAMRole?: Value<string>
@@ -37,10 +37,11 @@ export interface DomainProperties {
     SubDomainSettings: List<SubDomainSetting>
 }
 
-export default class Domain extends ResourceBase<DomainProperties> {
+class Domain extends ResourceBase<Properties> {
     static SubDomainSetting = SubDomainSetting
 
-    constructor(properties: DomainProperties) {
+    constructor(properties: Properties) {
         super('AWS::Amplify::Domain', properties)
     }
 }
+export { Domain as R }

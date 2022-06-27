@@ -21,7 +21,7 @@ export class ConnectAttachmentOptions {
     }
 }
 
-export interface ConnectAttachmentProperties {
+export interface Properties {
     CoreNetworkId?: Value<string>
     EdgeLocation?: Value<string>
     Tags?: List<ResourceTag>
@@ -29,10 +29,11 @@ export interface ConnectAttachmentProperties {
     Options?: ConnectAttachmentOptions
 }
 
-export default class ConnectAttachment extends ResourceBase<ConnectAttachmentProperties> {
+class ConnectAttachment extends ResourceBase<Properties> {
     static ConnectAttachmentOptions = ConnectAttachmentOptions
 
-    constructor(properties?: ConnectAttachmentProperties) {
+    constructor(properties?: Properties) {
         super('AWS::NetworkManager::ConnectAttachment', properties || {})
     }
 }
+export { ConnectAttachment as R }

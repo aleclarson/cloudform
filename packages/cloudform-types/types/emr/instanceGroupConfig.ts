@@ -139,7 +139,7 @@ export class ScalingConstraints {
     }
 }
 
-export interface InstanceGroupConfigProperties {
+export interface Properties {
     AutoScalingPolicy?: AutoScalingPolicy
     BidPrice?: Value<string>
     Configurations?: List<Configuration>
@@ -153,7 +153,7 @@ export interface InstanceGroupConfigProperties {
     Name?: Value<string>
 }
 
-export default class InstanceGroupConfig extends ResourceBase<InstanceGroupConfigProperties> {
+class InstanceGroupConfig extends ResourceBase<Properties> {
     static AutoScalingPolicy = AutoScalingPolicy
     static Configuration = Configuration
     static MetricDimension = MetricDimension
@@ -167,7 +167,8 @@ export default class InstanceGroupConfig extends ResourceBase<InstanceGroupConfi
     static EbsConfiguration = EbsConfiguration
     static ScalingConstraints = ScalingConstraints
 
-    constructor(properties: InstanceGroupConfigProperties) {
+    constructor(properties: Properties) {
         super('AWS::EMR::InstanceGroupConfig', properties)
     }
 }
+export { InstanceGroupConfig as R }

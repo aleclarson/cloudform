@@ -122,7 +122,7 @@ export class PropertyType {
     }
 }
 
-export interface AssetModelProperties {
+export interface Properties {
     AssetModelName: Value<string>
     AssetModelDescription?: Value<string>
     AssetModelProperties?: List<AssetModelProperty>
@@ -131,7 +131,7 @@ export interface AssetModelProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class AssetModel extends ResourceBase<AssetModelProperties> {
+class AssetModel extends ResourceBase<Properties> {
     static AssetModelCompositeModel = AssetModelCompositeModel
     static MetricWindow = MetricWindow
     static TumblingWindow = TumblingWindow
@@ -144,7 +144,8 @@ export default class AssetModel extends ResourceBase<AssetModelProperties> {
     static AssetModelProperty = AssetModelProperty
     static PropertyType = PropertyType
 
-    constructor(properties: AssetModelProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTSiteWise::AssetModel', properties)
     }
 }
+export { AssetModel as R }

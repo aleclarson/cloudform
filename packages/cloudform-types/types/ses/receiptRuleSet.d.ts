@@ -1,1 +1,1 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface ReceiptRuleSetProperties{RuleSetName?:Value<string>;}export default class ReceiptRuleSet extends ResourceBase<ReceiptRuleSetProperties>{constructor(properties?:ReceiptRuleSetProperties);}
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{RuleSetName?:Value<string>;}declare class ReceiptRuleSet extends ResourceBase<Properties>{constructor(properties?:Properties);}export{ReceiptRuleSet as R};

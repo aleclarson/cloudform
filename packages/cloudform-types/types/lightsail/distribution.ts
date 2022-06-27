@@ -74,7 +74,7 @@ export class CookieObject {
     }
 }
 
-export interface DistributionProperties {
+export interface Properties {
     DistributionName: Value<string>
     BundleId: Value<string>
     IpAddressType?: Value<string>
@@ -87,7 +87,7 @@ export interface DistributionProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Distribution extends ResourceBase<DistributionProperties> {
+class Distribution extends ResourceBase<Properties> {
     static HeaderObject = HeaderObject
     static CacheSettings = CacheSettings
     static InputOrigin = InputOrigin
@@ -96,7 +96,8 @@ export default class Distribution extends ResourceBase<DistributionProperties> {
     static CacheBehaviorPerPath = CacheBehaviorPerPath
     static CookieObject = CookieObject
 
-    constructor(properties: DistributionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lightsail::Distribution', properties)
     }
 }
+export { Distribution as R }

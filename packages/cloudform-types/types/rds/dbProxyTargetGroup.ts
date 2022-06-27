@@ -32,7 +32,7 @@ export class ConnectionPoolConfigurationInfoFormat {
     }
 }
 
-export interface DBProxyTargetGroupProperties {
+export interface Properties {
     DBProxyName: Value<string>
     TargetGroupName: Value<string>
     ConnectionPoolConfigurationInfo?: ConnectionPoolConfigurationInfoFormat
@@ -40,10 +40,11 @@ export interface DBProxyTargetGroupProperties {
     DBClusterIdentifiers?: List<Value<string>>
 }
 
-export default class DBProxyTargetGroup extends ResourceBase<DBProxyTargetGroupProperties> {
+class DBProxyTargetGroup extends ResourceBase<Properties> {
     static ConnectionPoolConfigurationInfoFormat = ConnectionPoolConfigurationInfoFormat
 
-    constructor(properties: DBProxyTargetGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::RDS::DBProxyTargetGroup', properties)
     }
 }
+export { DBProxyTargetGroup as R }

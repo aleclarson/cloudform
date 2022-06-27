@@ -16,7 +16,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase} from '../resource'
+import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class NumberFilter {
@@ -116,14 +116,14 @@ export class FilterCriteria {
     }
 }
 
-export interface FilterProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     FilterCriteria: FilterCriteria
     FilterAction: Value<string>
 }
 
-export default class Filter extends ResourceBase<FilterProperties> {
+class Filter extends ResourceBase<Properties> {
     static NumberFilter = NumberFilter
     static PortRangeFilter = PortRangeFilter
     static DateFilter = DateFilter
@@ -132,7 +132,8 @@ export default class Filter extends ResourceBase<FilterProperties> {
     static StringFilter = StringFilter
     static FilterCriteria = FilterCriteria
 
-    constructor(properties: FilterProperties) {
+    constructor(properties: Properties) {
         super('AWS::InspectorV2::Filter', properties)
     }
 }
+export { Filter as R }

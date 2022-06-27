@@ -17,13 +17,15 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import DatasetGroup_ from './datasetGroup'
-import Dataset_ from './dataset'
+import * as _0 from './datasetGroup'
+import * as _1 from './dataset'
 
 export namespace Forecast {
-  export const DatasetGroup = DatasetGroup_
-  export const Dataset = Dataset_
+  export const DatasetGroup = _0.R
+  export const Dataset = _1.R
 
-  export type DatasetGroup = DatasetGroup_
-  export type Dataset = Dataset_
+  export type DatasetGroup = _0.R
+  export type Dataset = _1.R
+
+
 }

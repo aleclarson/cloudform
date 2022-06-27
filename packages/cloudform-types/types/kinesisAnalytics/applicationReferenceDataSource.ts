@@ -94,12 +94,12 @@ export class ReferenceDataSource {
     }
 }
 
-export interface ApplicationReferenceDataSourceProperties {
+export interface Properties {
     ApplicationName: Value<string>
     ReferenceDataSource: ReferenceDataSource
 }
 
-export default class ApplicationReferenceDataSource extends ResourceBase<ApplicationReferenceDataSourceProperties> {
+class ApplicationReferenceDataSource extends ResourceBase<Properties> {
     static RecordFormat = RecordFormat
     static CSVMappingParameters = CSVMappingParameters
     static S3ReferenceDataSource = S3ReferenceDataSource
@@ -109,7 +109,8 @@ export default class ApplicationReferenceDataSource extends ResourceBase<Applica
     static JSONMappingParameters = JSONMappingParameters
     static ReferenceDataSource = ReferenceDataSource
 
-    constructor(properties: ApplicationReferenceDataSourceProperties) {
+    constructor(properties: Properties) {
         super('AWS::KinesisAnalytics::ApplicationReferenceDataSource', properties)
     }
 }
+export { ApplicationReferenceDataSource as R }

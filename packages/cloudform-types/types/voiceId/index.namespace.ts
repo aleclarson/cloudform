@@ -17,10 +17,14 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Domain_ from './domain'
+import * as _0 from './domain'
 
 export namespace VoiceID {
-  export const Domain = Domain_
+  export const Domain = _0.R
 
-  export type Domain = Domain_
+  export type Domain = _0.R
+
+  export namespace Domain {
+    export type ServerSideEncryptionConfiguration = _0.ServerSideEncryptionConfiguration
+  }
 }

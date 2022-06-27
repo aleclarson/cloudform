@@ -18,17 +18,18 @@ export class AssociationData {
     }
 }
 
-export interface AssistantAssociationProperties {
+export interface Properties {
     AssistantId: Value<string>
     Association: AssociationData
     AssociationType: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class AssistantAssociation extends ResourceBase<AssistantAssociationProperties> {
+class AssistantAssociation extends ResourceBase<Properties> {
     static AssociationData = AssociationData
 
-    constructor(properties: AssistantAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Wisdom::AssistantAssociation', properties)
     }
 }
+export { AssistantAssociation as R }

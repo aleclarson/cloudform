@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TransitGatewayRouteTableProperties {
+export interface Properties {
     TransitGatewayId: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class TransitGatewayRouteTable extends ResourceBase<TransitGatewayRouteTableProperties> {
+class TransitGatewayRouteTable extends ResourceBase<Properties> {
 
 
-    constructor(properties: TransitGatewayRouteTableProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::TransitGatewayRouteTable', properties)
     }
 }
+export { TransitGatewayRouteTable as R }

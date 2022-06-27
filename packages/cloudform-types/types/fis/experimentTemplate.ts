@@ -72,7 +72,7 @@ export class ExperimentTemplateTargetFilter {
     }
 }
 
-export interface ExperimentTemplateProperties {
+export interface Properties {
     Description: Value<string>
     Targets: {[key: string]: ExperimentTemplateTarget}
     Actions?: {[key: string]: ExperimentTemplateAction}
@@ -82,14 +82,15 @@ export interface ExperimentTemplateProperties {
     Tags: {[key: string]: Value<string>}
 }
 
-export default class ExperimentTemplate extends ResourceBase<ExperimentTemplateProperties> {
+class ExperimentTemplate extends ResourceBase<Properties> {
     static ExperimentTemplateStopCondition = ExperimentTemplateStopCondition
     static ExperimentTemplateTarget = ExperimentTemplateTarget
     static ExperimentTemplateLogConfiguration = ExperimentTemplateLogConfiguration
     static ExperimentTemplateAction = ExperimentTemplateAction
     static ExperimentTemplateTargetFilter = ExperimentTemplateTargetFilter
 
-    constructor(properties: ExperimentTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::FIS::ExperimentTemplate', properties)
     }
 }
+export { ExperimentTemplate as R }

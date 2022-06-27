@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CertificateProperties {
+export interface Properties {
     CACertificatePem?: Value<string>
     CertificatePem?: Value<string>
     CertificateSigningRequest?: Value<string>
@@ -30,10 +30,11 @@ export interface CertificateProperties {
     Status: Value<string>
 }
 
-export default class Certificate extends ResourceBase<CertificateProperties> {
+class Certificate extends ResourceBase<Properties> {
 
 
-    constructor(properties: CertificateProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::Certificate', properties)
     }
 }
+export { Certificate as R }

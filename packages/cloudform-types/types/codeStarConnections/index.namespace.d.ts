@@ -1,1 +1,1 @@
-import Connection_ from'./connection';export declare namespace CodeStarConnections{const Connection:typeof Connection_;type Connection=Connection_;}
+import*as _0 from'./connection';export declare namespace CodeStarConnections{const Connection:typeof _0.R;type Connection=_0.R;}

@@ -54,7 +54,7 @@ export class Settings {
     }
 }
 
-export interface CustomActionTypeProperties {
+export interface Properties {
     Category: Value<string>
     ConfigurationProperties?: List<ConfigurationProperties>
     InputArtifactDetails: ArtifactDetails
@@ -65,12 +65,13 @@ export interface CustomActionTypeProperties {
     Version: Value<string>
 }
 
-export default class CustomActionType extends ResourceBase<CustomActionTypeProperties> {
+class CustomActionType extends ResourceBase<Properties> {
     static ArtifactDetails = ArtifactDetails
     static ConfigurationProperties = ConfigurationProperties
     static Settings = Settings
 
-    constructor(properties: CustomActionTypeProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodePipeline::CustomActionType', properties)
     }
 }
+export { CustomActionType as R }

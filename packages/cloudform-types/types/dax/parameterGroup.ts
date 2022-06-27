@@ -19,16 +19,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ParameterGroupProperties {
+export interface Properties {
     ParameterNameValues?: {[key: string]: any}
     Description?: Value<string>
     ParameterGroupName?: Value<string>
 }
 
-export default class ParameterGroup extends ResourceBase<ParameterGroupProperties> {
+class ParameterGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties?: ParameterGroupProperties) {
+    constructor(properties?: Properties) {
         super('AWS::DAX::ParameterGroup', properties || {})
     }
 }
+export { ParameterGroup as R }

@@ -17,31 +17,51 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import QuickConnect_ from './quickConnect'
-import HoursOfOperation_ from './hoursOfOperation'
-import PhoneNumber_ from './phoneNumber'
-import ContactFlow_ from './contactFlow'
-import UserHierarchyGroup_ from './userHierarchyGroup'
-import TaskTemplate_ from './taskTemplate'
-import User_ from './user'
-import ContactFlowModule_ from './contactFlowModule'
+import * as _0 from './quickConnect'
+import * as _1 from './hoursOfOperation'
+import * as _2 from './phoneNumber'
+import * as _3 from './contactFlow'
+import * as _4 from './userHierarchyGroup'
+import * as _5 from './taskTemplate'
+import * as _6 from './user'
+import * as _7 from './contactFlowModule'
 
 export namespace Connect {
-  export const QuickConnect = QuickConnect_
-  export const HoursOfOperation = HoursOfOperation_
-  export const PhoneNumber = PhoneNumber_
-  export const ContactFlow = ContactFlow_
-  export const UserHierarchyGroup = UserHierarchyGroup_
-  export const TaskTemplate = TaskTemplate_
-  export const User = User_
-  export const ContactFlowModule = ContactFlowModule_
+  export const QuickConnect = _0.R
+  export const HoursOfOperation = _1.R
+  export const PhoneNumber = _2.R
+  export const ContactFlow = _3.R
+  export const UserHierarchyGroup = _4.R
+  export const TaskTemplate = _5.R
+  export const User = _6.R
+  export const ContactFlowModule = _7.R
 
-  export type QuickConnect = QuickConnect_
-  export type HoursOfOperation = HoursOfOperation_
-  export type PhoneNumber = PhoneNumber_
-  export type ContactFlow = ContactFlow_
-  export type UserHierarchyGroup = UserHierarchyGroup_
-  export type TaskTemplate = TaskTemplate_
-  export type User = User_
-  export type ContactFlowModule = ContactFlowModule_
+  export type QuickConnect = _0.R
+  export type HoursOfOperation = _1.R
+  export type PhoneNumber = _2.R
+  export type ContactFlow = _3.R
+  export type UserHierarchyGroup = _4.R
+  export type TaskTemplate = _5.R
+  export type User = _6.R
+  export type ContactFlowModule = _7.R
+
+  export namespace QuickConnect {
+    export type QueueQuickConnectConfig = _0.QueueQuickConnectConfig
+    export type QuickConnectConfig = _0.QuickConnectConfig
+    export type UserQuickConnectConfig = _0.UserQuickConnectConfig
+    export type PhoneNumberQuickConnectConfig = _0.PhoneNumberQuickConnectConfig
+  }
+  export namespace HoursOfOperation {
+    export type HoursOfOperationConfig = _1.HoursOfOperationConfig
+    export type HoursOfOperationTimeSlice = _1.HoursOfOperationTimeSlice
+  }
+  export namespace TaskTemplate {
+    export type DefaultFieldValue = _5.DefaultFieldValue
+    export type FieldIdentifier = _5.FieldIdentifier
+    export type Field = _5.Field
+  }
+  export namespace User {
+    export type UserIdentityInfo = _6.UserIdentityInfo
+    export type UserPhoneConfig = _6.UserPhoneConfig
+  }
 }

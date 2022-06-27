@@ -16,7 +16,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class InsightsConfiguration {
@@ -28,17 +28,18 @@ export class InsightsConfiguration {
     }
 }
 
-export interface GroupProperties {
+export interface Properties {
     FilterExpression?: Value<string>
     GroupName?: Value<string>
     InsightsConfiguration?: InsightsConfiguration
     Tags?: List<{[key: string]: any}>
 }
 
-export default class Group extends ResourceBase<GroupProperties> {
+class Group extends ResourceBase<Properties> {
     static InsightsConfiguration = InsightsConfiguration
 
-    constructor(properties?: GroupProperties) {
+    constructor(properties?: Properties) {
         super('AWS::XRay::Group', properties || {})
     }
 }
+export { Group as R }

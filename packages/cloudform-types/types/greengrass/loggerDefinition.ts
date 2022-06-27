@@ -13,7 +13,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Logger {
@@ -36,17 +36,18 @@ export class LoggerDefinitionVersion {
     }
 }
 
-export interface LoggerDefinitionProperties {
+export interface Properties {
     InitialVersion?: LoggerDefinitionVersion
     Tags?: {[key: string]: any}
     Name: Value<string>
 }
 
-export default class LoggerDefinition extends ResourceBase<LoggerDefinitionProperties> {
+class LoggerDefinition extends ResourceBase<Properties> {
     static Logger = Logger
     static LoggerDefinitionVersion = LoggerDefinitionVersion
 
-    constructor(properties: LoggerDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::LoggerDefinition', properties)
     }
 }
+export { LoggerDefinition as R }

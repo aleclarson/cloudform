@@ -46,7 +46,7 @@ export class GenerateSecretString {
     }
 }
 
-export interface SecretProperties {
+export interface Properties {
     Description?: Value<string>
     KmsKeyId?: Value<string>
     SecretString?: Value<string>
@@ -56,11 +56,12 @@ export interface SecretProperties {
     Name?: Value<string>
 }
 
-export default class Secret extends ResourceBase<SecretProperties> {
+class Secret extends ResourceBase<Properties> {
     static ReplicaRegion = ReplicaRegion
     static GenerateSecretString = GenerateSecretString
 
-    constructor(properties?: SecretProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SecretsManager::Secret', properties || {})
     }
 }
+export { Secret as R }

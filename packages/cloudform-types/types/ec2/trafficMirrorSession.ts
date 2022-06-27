@@ -21,7 +21,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TrafficMirrorSessionProperties {
+export interface Properties {
     TrafficMirrorTargetId: Value<string>
     Description?: Value<string>
     SessionNumber: Value<number>
@@ -32,10 +32,11 @@ export interface TrafficMirrorSessionProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class TrafficMirrorSession extends ResourceBase<TrafficMirrorSessionProperties> {
+class TrafficMirrorSession extends ResourceBase<Properties> {
 
 
-    constructor(properties: TrafficMirrorSessionProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::TrafficMirrorSession', properties)
     }
 }
+export { TrafficMirrorSession as R }

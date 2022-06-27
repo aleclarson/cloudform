@@ -17,7 +17,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface APNSSandboxChannelProperties {
+export interface Properties {
     BundleId?: Value<string>
     PrivateKey?: Value<string>
     Enabled?: Value<boolean>
@@ -29,10 +29,11 @@ export interface APNSSandboxChannelProperties {
     TokenKeyId?: Value<string>
 }
 
-export default class APNSSandboxChannel extends ResourceBase<APNSSandboxChannelProperties> {
+class APNSSandboxChannel extends ResourceBase<Properties> {
 
 
-    constructor(properties: APNSSandboxChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::APNSSandboxChannel', properties)
     }
 }
+export { APNSSandboxChannel as R }

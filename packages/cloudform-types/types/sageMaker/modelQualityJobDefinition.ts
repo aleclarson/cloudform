@@ -157,7 +157,7 @@ export class MonitoringOutputConfig {
     }
 }
 
-export interface ModelQualityJobDefinitionProperties {
+export interface Properties {
     JobDefinitionName?: Value<string>
     ModelQualityBaselineConfig?: ModelQualityBaselineConfig
     ModelQualityAppSpecification: ModelQualityAppSpecification
@@ -171,7 +171,7 @@ export interface ModelQualityJobDefinitionProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ModelQualityJobDefinition extends ResourceBase<ModelQualityJobDefinitionProperties> {
+class ModelQualityJobDefinition extends ResourceBase<Properties> {
     static ModelQualityJobInput = ModelQualityJobInput
     static MonitoringResources = MonitoringResources
     static EndpointInput = EndpointInput
@@ -187,7 +187,8 @@ export default class ModelQualityJobDefinition extends ResourceBase<ModelQuality
     static StoppingCondition = StoppingCondition
     static MonitoringOutputConfig = MonitoringOutputConfig
 
-    constructor(properties: ModelQualityJobDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::ModelQualityJobDefinition', properties)
     }
 }
+export { ModelQualityJobDefinition as R }

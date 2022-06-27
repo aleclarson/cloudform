@@ -17,10 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Canary_ from './canary'
+import * as _0 from './canary'
 
 export namespace Synthetics {
-  export const Canary = Canary_
+  export const Canary = _0.R
 
-  export type Canary = Canary_
+  export type Canary = _0.R
+
+  export namespace Canary {
+    export type ArtifactConfig = _0.ArtifactConfig
+    export type S3Encryption = _0.S3Encryption
+    export type VPCConfig = _0.VPCConfig
+    export type VisualReference = _0.VisualReference
+    export type Schedule = _0.Schedule
+    export type Code = _0.Code
+    export type BaseScreenshot = _0.BaseScreenshot
+    export type RunConfig = _0.RunConfig
+  }
 }

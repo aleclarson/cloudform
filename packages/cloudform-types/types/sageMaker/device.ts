@@ -20,16 +20,17 @@ export class DeviceInner {
     }
 }
 
-export interface DeviceProperties {
+export interface Properties {
     DeviceFleetName: Value<string>
     Device?: Device
     Tags?: List<ResourceTag>
 }
 
-export default class Device extends ResourceBase<DeviceProperties> {
+class Device extends ResourceBase<Properties> {
     static Device = DeviceInner
 
-    constructor(properties: DeviceProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::Device', properties)
     }
 }
+export { Device as R }

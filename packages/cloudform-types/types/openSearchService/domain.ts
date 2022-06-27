@@ -142,7 +142,7 @@ export class ClusterConfig {
     }
 }
 
-export interface DomainProperties {
+export interface Properties {
     ClusterConfig?: ClusterConfig
     DomainName?: Value<string>
     AccessPolicies?: {[key: string]: any}
@@ -160,7 +160,7 @@ export interface DomainProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Domain extends ResourceBase<DomainProperties> {
+class Domain extends ResourceBase<Properties> {
     static ZoneAwarenessConfig = ZoneAwarenessConfig
     static NodeToNodeEncryptionOptions = NodeToNodeEncryptionOptions
     static SnapshotOptions = SnapshotOptions
@@ -174,7 +174,8 @@ export default class Domain extends ResourceBase<DomainProperties> {
     static MasterUserOptions = MasterUserOptions
     static ClusterConfig = ClusterConfig
 
-    constructor(properties?: DomainProperties) {
+    constructor(properties?: Properties) {
         super('AWS::OpenSearchService::Domain', properties || {})
     }
 }
+export { Domain as R }

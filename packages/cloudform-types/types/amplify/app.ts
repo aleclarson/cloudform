@@ -66,7 +66,7 @@ export class CustomRule {
     }
 }
 
-export interface AppProperties {
+export interface Properties {
     AccessToken?: Value<string>
     AutoBranchCreationConfig?: AutoBranchCreationConfig
     BasicAuthConfig?: BasicAuthConfig
@@ -83,13 +83,14 @@ export interface AppProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class App extends ResourceBase<AppProperties> {
+class App extends ResourceBase<Properties> {
     static EnvironmentVariable = EnvironmentVariable
     static AutoBranchCreationConfig = AutoBranchCreationConfig
     static BasicAuthConfig = BasicAuthConfig
     static CustomRule = CustomRule
 
-    constructor(properties: AppProperties) {
+    constructor(properties: Properties) {
         super('AWS::Amplify::App', properties)
     }
 }
+export { App as R }

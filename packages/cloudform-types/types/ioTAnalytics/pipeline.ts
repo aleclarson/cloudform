@@ -134,13 +134,13 @@ export class AddAttributes {
     }
 }
 
-export interface PipelineProperties {
+export interface Properties {
     PipelineName?: Value<string>
     Tags?: List<ResourceTag>
     PipelineActivities: List<Activity>
 }
 
-export default class Pipeline extends ResourceBase<PipelineProperties> {
+class Pipeline extends ResourceBase<Properties> {
     static DeviceShadowEnrich = DeviceShadowEnrich
     static SelectAttributes = SelectAttributes
     static RemoveAttributes = RemoveAttributes
@@ -153,7 +153,8 @@ export default class Pipeline extends ResourceBase<PipelineProperties> {
     static Math = Math
     static AddAttributes = AddAttributes
 
-    constructor(properties: PipelineProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTAnalytics::Pipeline', properties)
     }
 }
+export { Pipeline as R }

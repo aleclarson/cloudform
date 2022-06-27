@@ -17,22 +17,33 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Repository_ from './repository'
-import ReplicationConfiguration_ from './replicationConfiguration'
-import RegistryPolicy_ from './registryPolicy'
-import PullThroughCacheRule_ from './pullThroughCacheRule'
-import PublicRepository_ from './publicRepository'
+import * as _0 from './repository'
+import * as _1 from './replicationConfiguration'
+import * as _2 from './registryPolicy'
+import * as _3 from './pullThroughCacheRule'
+import * as _4 from './publicRepository'
 
 export namespace ECR {
-  export const Repository = Repository_
-  export const ReplicationConfiguration = ReplicationConfiguration_
-  export const RegistryPolicy = RegistryPolicy_
-  export const PullThroughCacheRule = PullThroughCacheRule_
-  export const PublicRepository = PublicRepository_
+  export const Repository = _0.R
+  export const ReplicationConfiguration = _1.R
+  export const RegistryPolicy = _2.R
+  export const PullThroughCacheRule = _3.R
+  export const PublicRepository = _4.R
 
-  export type Repository = Repository_
-  export type ReplicationConfiguration = ReplicationConfiguration_
-  export type RegistryPolicy = RegistryPolicy_
-  export type PullThroughCacheRule = PullThroughCacheRule_
-  export type PublicRepository = PublicRepository_
+  export type Repository = _0.R
+  export type ReplicationConfiguration = _1.R
+  export type RegistryPolicy = _2.R
+  export type PullThroughCacheRule = _3.R
+  export type PublicRepository = _4.R
+
+  export namespace Repository {
+    export type LifecyclePolicy = _0.LifecyclePolicy
+    export type ImageScanningConfiguration = _0.ImageScanningConfiguration
+    export type EncryptionConfiguration = _0.EncryptionConfiguration
+  }
+  export namespace ReplicationConfiguration {
+    export type ReplicationDestination = _1.ReplicationDestination
+    export type ReplicationRule = _1.ReplicationRule
+    export type RepositoryFilter = _1.RepositoryFilter
+  }
 }

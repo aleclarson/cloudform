@@ -11,7 +11,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class SimulationSoftwareSuite {
@@ -51,7 +51,7 @@ export class RenderingEngine {
     }
 }
 
-export interface SimulationApplicationProperties {
+export interface Properties {
     Name?: Value<string>
     CurrentRevisionId?: Value<string>
     RenderingEngine?: RenderingEngine
@@ -62,13 +62,14 @@ export interface SimulationApplicationProperties {
     Tags?: {[key: string]: Value<string>}
 }
 
-export default class SimulationApplication extends ResourceBase<SimulationApplicationProperties> {
+class SimulationApplication extends ResourceBase<Properties> {
     static SimulationSoftwareSuite = SimulationSoftwareSuite
     static RobotSoftwareSuite = RobotSoftwareSuite
     static SourceConfig = SourceConfig
     static RenderingEngine = RenderingEngine
 
-    constructor(properties: SimulationApplicationProperties) {
+    constructor(properties: Properties) {
         super('AWS::RoboMaker::SimulationApplication', properties)
     }
 }
+export { SimulationApplication as R }

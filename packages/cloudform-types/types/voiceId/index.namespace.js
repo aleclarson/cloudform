@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.VoiceID=void 0;const _0=require("./domain");var VoiceID;!function(VoiceID){VoiceID.Domain=_0.R}(VoiceID=exports.VoiceID||(exports.VoiceID={}));

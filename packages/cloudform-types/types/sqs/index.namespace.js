@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const queue_1=require("./queue"),queuePolicy_1=require("./queuePolicy");var SQS;!function(SQS){SQS.Queue=queue_1.default,SQS.QueuePolicy=queuePolicy_1.default}(SQS=exports.SQS||(exports.SQS={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.SQS=void 0;const _0=require("./queuePolicy"),_1=require("./queue");var SQS;!function(SQS){SQS.QueuePolicy=_0.R,SQS.Queue=_1.R}(SQS=exports.SQS||(exports.SQS={}));

@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SecurityGroupProperties {
+export interface Properties {
     Description: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class SecurityGroup extends ResourceBase<SecurityGroupProperties> {
+class SecurityGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: SecurityGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElastiCache::SecurityGroup', properties)
     }
 }
+export { SecurityGroup as R }

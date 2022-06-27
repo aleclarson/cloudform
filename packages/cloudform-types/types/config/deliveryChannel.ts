@@ -28,7 +28,7 @@ export class ConfigSnapshotDeliveryProperties {
     }
 }
 
-export interface DeliveryChannelProperties {
+export interface Properties {
     ConfigSnapshotDeliveryProperties?: ConfigSnapshotDeliveryProperties
     Name?: Value<string>
     S3BucketName: Value<string>
@@ -37,10 +37,11 @@ export interface DeliveryChannelProperties {
     SnsTopicARN?: Value<string>
 }
 
-export default class DeliveryChannel extends ResourceBase<DeliveryChannelProperties> {
+class DeliveryChannel extends ResourceBase<Properties> {
     static ConfigSnapshotDeliveryProperties = ConfigSnapshotDeliveryProperties
 
-    constructor(properties: DeliveryChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::Config::DeliveryChannel', properties)
     }
 }
+export { DeliveryChannel as R }

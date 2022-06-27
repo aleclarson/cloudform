@@ -420,13 +420,13 @@ export class LaunchTemplateTagSpecification {
     }
 }
 
-export interface LaunchTemplateProperties {
+export interface Properties {
     LaunchTemplateName?: Value<string>
     LaunchTemplateData: LaunchTemplateData
     TagSpecifications?: List<LaunchTemplateTagSpecification>
 }
 
-export default class LaunchTemplate extends ResourceBase<LaunchTemplateProperties> {
+class LaunchTemplate extends ResourceBase<Properties> {
     static BlockDeviceMapping = BlockDeviceMapping
     static SpotOptions = SpotOptions
     static AcceleratorTotalMemoryMiB = AcceleratorTotalMemoryMiB
@@ -464,7 +464,8 @@ export default class LaunchTemplate extends ResourceBase<LaunchTemplatePropertie
     static LaunchTemplateElasticInferenceAccelerator = LaunchTemplateElasticInferenceAccelerator
     static LaunchTemplateTagSpecification = LaunchTemplateTagSpecification
 
-    constructor(properties: LaunchTemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::LaunchTemplate', properties)
     }
 }
+export { LaunchTemplate as R }

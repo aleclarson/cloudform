@@ -17,17 +17,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface BaiduChannelProperties {
+export interface Properties {
     SecretKey: Value<string>
     ApiKey: Value<string>
     Enabled?: Value<boolean>
     ApplicationId: Value<string>
 }
 
-export default class BaiduChannel extends ResourceBase<BaiduChannelProperties> {
+class BaiduChannel extends ResourceBase<Properties> {
 
 
-    constructor(properties: BaiduChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::BaiduChannel', properties)
     }
 }
+export { BaiduChannel as R }

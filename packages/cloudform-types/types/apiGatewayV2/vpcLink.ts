@@ -17,22 +17,23 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface VpcLinkProperties {
+export interface Properties {
     SubnetIds: List<Value<string>>
     SecurityGroupIds?: List<Value<string>>
     Tags?: {[key: string]: Value<string>}
     Name: Value<string>
 }
 
-export default class VpcLink extends ResourceBase<VpcLinkProperties> {
+class VpcLink extends ResourceBase<Properties> {
 
 
-    constructor(properties: VpcLinkProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGatewayV2::VpcLink', properties)
     }
 }
+export { VpcLink as R }

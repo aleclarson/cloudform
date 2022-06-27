@@ -49,7 +49,7 @@ export class AliasTarget {
     }
 }
 
-export interface RecordSetProperties {
+export interface Properties {
     AliasTarget?: AliasTarget
     CidrRoutingConfig?: CidrRoutingConfig
     Comment?: Value<string>
@@ -68,12 +68,13 @@ export interface RecordSetProperties {
     Weight?: Value<number>
 }
 
-export default class RecordSet extends ResourceBase<RecordSetProperties> {
+class RecordSet extends ResourceBase<Properties> {
     static GeoLocation = GeoLocation
     static CidrRoutingConfig = CidrRoutingConfig
     static AliasTarget = AliasTarget
 
-    constructor(properties: RecordSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53::RecordSet', properties)
     }
 }
+export { RecordSet as R }

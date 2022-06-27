@@ -86,13 +86,13 @@ export class ResourceAccessPolicy {
     }
 }
 
-export interface FunctionDefinitionVersionProperties {
+export interface Properties {
     DefaultConfig?: DefaultConfig
     Functions: List<Function>
     FunctionDefinitionId: Value<string>
 }
 
-export default class FunctionDefinitionVersion extends ResourceBase<FunctionDefinitionVersionProperties> {
+class FunctionDefinitionVersion extends ResourceBase<Properties> {
     static FunctionConfiguration = FunctionConfiguration
     static Execution = Execution
     static DefaultConfig = DefaultConfig
@@ -101,7 +101,8 @@ export default class FunctionDefinitionVersion extends ResourceBase<FunctionDefi
     static Environment = Environment
     static ResourceAccessPolicy = ResourceAccessPolicy
 
-    constructor(properties: FunctionDefinitionVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::FunctionDefinitionVersion', properties)
     }
 }
+export { FunctionDefinitionVersion as R }

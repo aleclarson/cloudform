@@ -17,12 +17,12 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface DevEndpointProperties {
+export interface Properties {
     ExtraJarsS3Path?: Value<string>
     PublicKey?: Value<string>
     NumberOfNodes?: Value<number>
@@ -40,10 +40,11 @@ export interface DevEndpointProperties {
     Tags?: {[key: string]: any}
 }
 
-export default class DevEndpoint extends ResourceBase<DevEndpointProperties> {
+class DevEndpoint extends ResourceBase<Properties> {
 
 
-    constructor(properties: DevEndpointProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::DevEndpoint', properties)
     }
 }
+export { DevEndpoint as R }

@@ -1,1 +1,1 @@
-import Canary_ from'./canary';export declare namespace Synthetics{const Canary:typeof Canary_;type Canary=Canary_;}
+import*as _0 from'./canary';export declare namespace Synthetics{const Canary:typeof _0.R;type Canary=_0.R;namespace Canary{type ArtifactConfig=_0.ArtifactConfig;type S3Encryption=_0.S3Encryption;type VPCConfig=_0.VPCConfig;type VisualReference=_0.VisualReference;type Schedule=_0.Schedule;type Code=_0.Code;type BaseScreenshot=_0.BaseScreenshot;type RunConfig=_0.RunConfig;}}

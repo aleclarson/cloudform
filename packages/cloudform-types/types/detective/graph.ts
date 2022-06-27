@@ -21,14 +21,15 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface GraphProperties {
+export interface Properties {
     Tags?: List<ResourceTag>
 }
 
-export default class Graph extends ResourceBase<GraphProperties> {
+class Graph extends ResourceBase<Properties> {
 
 
-    constructor(properties?: GraphProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Detective::Graph', properties || {})
     }
 }
+export { Graph as R }

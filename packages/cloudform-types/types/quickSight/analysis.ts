@@ -117,7 +117,7 @@ export class AnalysisError {
     }
 }
 
-export interface AnalysisProperties {
+export interface Properties {
     AnalysisId: Value<string>
     AwsAccountId: Value<string>
     Errors?: List<AnalysisError>
@@ -129,7 +129,7 @@ export interface AnalysisProperties {
     ThemeArn?: Value<string>
 }
 
-export default class Analysis extends ResourceBase<AnalysisProperties> {
+class Analysis extends ResourceBase<Properties> {
     static DecimalParameter = DecimalParameter
     static ResourcePermission = ResourcePermission
     static AnalysisSourceTemplate = AnalysisSourceTemplate
@@ -142,7 +142,8 @@ export default class Analysis extends ResourceBase<AnalysisProperties> {
     static StringParameter = StringParameter
     static AnalysisError = AnalysisError
 
-    constructor(properties: AnalysisProperties) {
+    constructor(properties: Properties) {
         super('AWS::QuickSight::Analysis', properties)
     }
 }
+export { Analysis as R }

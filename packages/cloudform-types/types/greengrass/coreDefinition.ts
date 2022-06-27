@@ -13,7 +13,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class Core {
@@ -35,17 +35,18 @@ export class CoreDefinitionVersion {
     }
 }
 
-export interface CoreDefinitionProperties {
+export interface Properties {
     InitialVersion?: CoreDefinitionVersion
     Tags?: {[key: string]: any}
     Name: Value<string>
 }
 
-export default class CoreDefinition extends ResourceBase<CoreDefinitionProperties> {
+class CoreDefinition extends ResourceBase<Properties> {
     static Core = Core
     static CoreDefinitionVersion = CoreDefinitionVersion
 
-    constructor(properties: CoreDefinitionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Greengrass::CoreDefinition', properties)
     }
 }
+export { CoreDefinition as R }

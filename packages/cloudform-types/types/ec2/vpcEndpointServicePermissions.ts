@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VPCEndpointServicePermissionsProperties {
+export interface Properties {
     AllowedPrincipals?: List<Value<string>>
     ServiceId: Value<string>
 }
 
-export default class VPCEndpointServicePermissions extends ResourceBase<VPCEndpointServicePermissionsProperties> {
+class VPCEndpointServicePermissions extends ResourceBase<Properties> {
 
 
-    constructor(properties: VPCEndpointServicePermissionsProperties) {
+    constructor(properties: Properties) {
         super('AWS::EC2::VPCEndpointServicePermissions', properties)
     }
 }
+export { VPCEndpointServicePermissions as R }

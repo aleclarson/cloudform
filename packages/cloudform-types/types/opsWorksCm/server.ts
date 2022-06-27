@@ -22,7 +22,7 @@ export class EngineAttribute {
     }
 }
 
-export interface ServerProperties {
+export interface Properties {
     KeyPair?: Value<string>
     EngineVersion?: Value<string>
     ServiceRoleArn: Value<string>
@@ -46,10 +46,11 @@ export interface ServerProperties {
     Engine?: Value<string>
 }
 
-export default class Server extends ResourceBase<ServerProperties> {
+class Server extends ResourceBase<Properties> {
     static EngineAttribute = EngineAttribute
 
-    constructor(properties: ServerProperties) {
+    constructor(properties: Properties) {
         super('AWS::OpsWorksCM::Server', properties)
     }
 }
+export { Server as R }

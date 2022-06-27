@@ -17,25 +17,36 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import SimulationApplicationVersion_ from './simulationApplicationVersion'
-import RobotApplication_ from './robotApplication'
-import Fleet_ from './fleet'
-import RobotApplicationVersion_ from './robotApplicationVersion'
-import Robot_ from './robot'
-import SimulationApplication_ from './simulationApplication'
+import * as _0 from './simulationApplicationVersion'
+import * as _1 from './robotApplication'
+import * as _2 from './fleet'
+import * as _3 from './robotApplicationVersion'
+import * as _4 from './robot'
+import * as _5 from './simulationApplication'
 
 export namespace RoboMaker {
-  export const SimulationApplicationVersion = SimulationApplicationVersion_
-  export const RobotApplication = RobotApplication_
-  export const Fleet = Fleet_
-  export const RobotApplicationVersion = RobotApplicationVersion_
-  export const Robot = Robot_
-  export const SimulationApplication = SimulationApplication_
+  export const SimulationApplicationVersion = _0.R
+  export const RobotApplication = _1.R
+  export const Fleet = _2.R
+  export const RobotApplicationVersion = _3.R
+  export const Robot = _4.R
+  export const SimulationApplication = _5.R
 
-  export type SimulationApplicationVersion = SimulationApplicationVersion_
-  export type RobotApplication = RobotApplication_
-  export type Fleet = Fleet_
-  export type RobotApplicationVersion = RobotApplicationVersion_
-  export type Robot = Robot_
-  export type SimulationApplication = SimulationApplication_
+  export type SimulationApplicationVersion = _0.R
+  export type RobotApplication = _1.R
+  export type Fleet = _2.R
+  export type RobotApplicationVersion = _3.R
+  export type Robot = _4.R
+  export type SimulationApplication = _5.R
+
+  export namespace RobotApplication {
+    export type RobotSoftwareSuite = _1.RobotSoftwareSuite
+    export type SourceConfig = _1.SourceConfig
+  }
+  export namespace SimulationApplication {
+    export type SimulationSoftwareSuite = _5.SimulationSoftwareSuite
+    export type RobotSoftwareSuite = _5.RobotSoftwareSuite
+    export type SourceConfig = _5.SourceConfig
+    export type RenderingEngine = _5.RenderingEngine
+  }
 }

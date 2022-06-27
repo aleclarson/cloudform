@@ -11,20 +11,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 
 
-export interface FleetProperties {
+export interface Properties {
     Tags?: {[key: string]: Value<string>}
     Name?: Value<string>
 }
 
-export default class Fleet extends ResourceBase<FleetProperties> {
+class Fleet extends ResourceBase<Properties> {
 
 
-    constructor(properties?: FleetProperties) {
+    constructor(properties?: Properties) {
         super('AWS::RoboMaker::Fleet', properties || {})
     }
 }
+export { Fleet as R }

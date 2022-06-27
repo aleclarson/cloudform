@@ -21,17 +21,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RoleAliasProperties {
+export interface Properties {
     RoleAlias?: Value<string>
     RoleArn: Value<string>
     CredentialDurationSeconds?: Value<number>
     Tags?: List<ResourceTag>
 }
 
-export default class RoleAlias extends ResourceBase<RoleAliasProperties> {
+class RoleAlias extends ResourceBase<Properties> {
 
 
-    constructor(properties: RoleAliasProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::RoleAlias', properties)
     }
 }
+export { RoleAlias as R }

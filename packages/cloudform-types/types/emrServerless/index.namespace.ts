@@ -17,10 +17,20 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Application_ from './application'
+import * as _0 from './application'
 
 export namespace EMRServerless {
-  export const Application = Application_
+  export const Application = _0.R
 
-  export type Application = Application_
+  export type Application = _0.R
+
+  export namespace Application {
+    export type InitialCapacityConfigKeyValuePair = _0.InitialCapacityConfigKeyValuePair
+    export type NetworkConfiguration = _0.NetworkConfiguration
+    export type MaximumAllowedResources = _0.MaximumAllowedResources
+    export type AutoStartConfiguration = _0.AutoStartConfiguration
+    export type WorkerConfiguration = _0.WorkerConfiguration
+    export type InitialCapacityConfig = _0.InitialCapacityConfig
+    export type AutoStopConfiguration = _0.AutoStopConfiguration
+  }
 }

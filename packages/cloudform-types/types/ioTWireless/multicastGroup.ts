@@ -20,7 +20,7 @@ export class LoRaWAN {
     }
 }
 
-export interface MulticastGroupProperties {
+export interface Properties {
     Name?: Value<string>
     Description?: Value<string>
     LoRaWAN: LoRaWAN
@@ -29,10 +29,11 @@ export interface MulticastGroupProperties {
     DisassociateWirelessDevice?: Value<string>
 }
 
-export default class MulticastGroup extends ResourceBase<MulticastGroupProperties> {
+class MulticastGroup extends ResourceBase<Properties> {
     static LoRaWAN = LoRaWAN
 
-    constructor(properties: MulticastGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTWireless::MulticastGroup', properties)
     }
 }
+export { MulticastGroup as R }

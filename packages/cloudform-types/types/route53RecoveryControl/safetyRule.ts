@@ -35,7 +35,7 @@ export class GatingRule {
     }
 }
 
-export interface SafetyRuleProperties {
+export interface Properties {
     AssertionRule?: AssertionRule
     GatingRule?: GatingRule
     Name: Value<string>
@@ -44,12 +44,13 @@ export interface SafetyRuleProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class SafetyRule extends ResourceBase<SafetyRuleProperties> {
+class SafetyRule extends ResourceBase<Properties> {
     static AssertionRule = AssertionRule
     static RuleConfig = RuleConfig
     static GatingRule = GatingRule
 
-    constructor(properties: SafetyRuleProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53RecoveryControl::SafetyRule', properties)
     }
 }
+export { SafetyRule as R }

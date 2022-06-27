@@ -15,16 +15,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SiteToSiteVpnAttachmentProperties {
+export interface Properties {
     CoreNetworkId?: Value<string>
     Tags?: List<ResourceTag>
     VpnConnectionArn?: Value<string>
 }
 
-export default class SiteToSiteVpnAttachment extends ResourceBase<SiteToSiteVpnAttachmentProperties> {
+class SiteToSiteVpnAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties?: SiteToSiteVpnAttachmentProperties) {
+    constructor(properties?: Properties) {
         super('AWS::NetworkManager::SiteToSiteVpnAttachment', properties || {})
     }
 }
+export { SiteToSiteVpnAttachment as R }

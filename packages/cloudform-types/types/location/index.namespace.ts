@@ -17,25 +17,32 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Tracker_ from './tracker'
-import GeofenceCollection_ from './geofenceCollection'
-import TrackerConsumer_ from './trackerConsumer'
-import RouteCalculator_ from './routeCalculator'
-import Map_ from './map'
-import PlaceIndex_ from './placeIndex'
+import * as _0 from './tracker'
+import * as _1 from './geofenceCollection'
+import * as _2 from './trackerConsumer'
+import * as _3 from './routeCalculator'
+import * as _4 from './map'
+import * as _5 from './placeIndex'
 
 export namespace Location {
-  export const Tracker = Tracker_
-  export const GeofenceCollection = GeofenceCollection_
-  export const TrackerConsumer = TrackerConsumer_
-  export const RouteCalculator = RouteCalculator_
-  export const Map = Map_
-  export const PlaceIndex = PlaceIndex_
+  export const Tracker = _0.R
+  export const GeofenceCollection = _1.R
+  export const TrackerConsumer = _2.R
+  export const RouteCalculator = _3.R
+  export const Map = _4.R
+  export const PlaceIndex = _5.R
 
-  export type Tracker = Tracker_
-  export type GeofenceCollection = GeofenceCollection_
-  export type TrackerConsumer = TrackerConsumer_
-  export type RouteCalculator = RouteCalculator_
-  export type Map = Map_
-  export type PlaceIndex = PlaceIndex_
+  export type Tracker = _0.R
+  export type GeofenceCollection = _1.R
+  export type TrackerConsumer = _2.R
+  export type RouteCalculator = _3.R
+  export type Map = _4.R
+  export type PlaceIndex = _5.R
+
+  export namespace Map {
+    export type MapConfiguration = _4.MapConfiguration
+  }
+  export namespace PlaceIndex {
+    export type DataSourceConfiguration = _5.DataSourceConfiguration
+  }
 }

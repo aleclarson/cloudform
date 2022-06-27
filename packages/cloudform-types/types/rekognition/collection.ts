@@ -19,15 +19,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CollectionProperties {
+export interface Properties {
     CollectionId: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Collection extends ResourceBase<CollectionProperties> {
+class Collection extends ResourceBase<Properties> {
 
 
-    constructor(properties: CollectionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Rekognition::Collection', properties)
     }
 }
+export { Collection as R }

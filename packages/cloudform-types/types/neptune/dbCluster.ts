@@ -28,7 +28,7 @@ export class DBClusterRole {
     }
 }
 
-export interface DBClusterProperties {
+export interface Properties {
     StorageEncrypted?: Value<boolean>
     RestoreToTime?: Value<string>
     EngineVersion?: Value<string>
@@ -53,10 +53,11 @@ export interface DBClusterProperties {
     EnableCloudwatchLogsExports?: List<Value<string>>
 }
 
-export default class DBCluster extends ResourceBase<DBClusterProperties> {
+class DBCluster extends ResourceBase<Properties> {
     static DBClusterRole = DBClusterRole
 
-    constructor(properties?: DBClusterProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Neptune::DBCluster', properties || {})
     }
 }
+export { DBCluster as R }

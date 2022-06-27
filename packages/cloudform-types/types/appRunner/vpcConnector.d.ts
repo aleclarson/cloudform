@@ -1,0 +1,1 @@
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{VpcConnectorName?:Value<string>;Subnets:List<Value<string>>;SecurityGroups?:List<Value<string>>;Tags?:List<ResourceTag>;}declare class VpcConnector extends ResourceBase<Properties>{constructor(properties:Properties);}export{VpcConnector as R};

@@ -77,7 +77,7 @@ export class Subscriber {
     }
 }
 
-export interface BudgetsActionProperties {
+export interface Properties {
     BudgetName: Value<string>
     NotificationType: Value<string>
     ActionType: Value<string>
@@ -88,7 +88,7 @@ export interface BudgetsActionProperties {
     Definition: Definition
 }
 
-export default class BudgetsAction extends ResourceBase<BudgetsActionProperties> {
+class BudgetsAction extends ResourceBase<Properties> {
     static IamActionDefinition = IamActionDefinition
     static Definition = Definition
     static ScpActionDefinition = ScpActionDefinition
@@ -96,7 +96,8 @@ export default class BudgetsAction extends ResourceBase<BudgetsActionProperties>
     static ActionThreshold = ActionThreshold
     static Subscriber = Subscriber
 
-    constructor(properties: BudgetsActionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Budgets::BudgetsAction', properties)
     }
 }
+export { BudgetsAction as R }

@@ -270,7 +270,7 @@ export class Lambda {
     }
 }
 
-export interface DetectorModelProperties {
+export interface Properties {
     DetectorModelDefinition: DetectorModelDefinition
     DetectorModelDescription?: Value<string>
     DetectorModelName?: Value<string>
@@ -280,7 +280,7 @@ export interface DetectorModelProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class DetectorModel extends ResourceBase<DetectorModelProperties> {
+class DetectorModel extends ResourceBase<Properties> {
     static SetTimer = SetTimer
     static ResetTimer = ResetTimer
     static IotEvents = IotEvents
@@ -307,7 +307,8 @@ export default class DetectorModel extends ResourceBase<DetectorModelProperties>
     static AssetPropertyValue = AssetPropertyValue
     static Lambda = Lambda
 
-    constructor(properties: DetectorModelProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTEvents::DetectorModel', properties)
     }
 }
+export { DetectorModel as R }

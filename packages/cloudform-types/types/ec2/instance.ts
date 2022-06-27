@@ -195,7 +195,7 @@ export class ElasticInferenceAccelerator {
     }
 }
 
-export interface InstanceProperties {
+export interface Properties {
     AdditionalInfo?: Value<string>
     Affinity?: Value<string>
     AvailabilityZone?: Value<string>
@@ -238,7 +238,7 @@ export interface InstanceProperties {
     Volumes?: List<Volume>
 }
 
-export default class Instance extends ResourceBase<InstanceProperties> {
+class Instance extends ResourceBase<Properties> {
     static HibernationOptions = HibernationOptions
     static Ebs = Ebs
     static NoDevice = NoDevice
@@ -258,7 +258,8 @@ export default class Instance extends ResourceBase<InstanceProperties> {
     static SsmAssociation = SsmAssociation
     static ElasticInferenceAccelerator = ElasticInferenceAccelerator
 
-    constructor(properties?: InstanceProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::Instance', properties || {})
     }
 }
+export { Instance as R }

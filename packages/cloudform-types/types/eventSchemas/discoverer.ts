@@ -16,7 +16,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class TagsEntry {
@@ -28,17 +28,18 @@ export class TagsEntry {
     }
 }
 
-export interface DiscovererProperties {
+export interface Properties {
     CrossAccount?: Value<boolean>
     Description?: Value<string>
     SourceArn: Value<string>
     Tags?: List<TagsEntry>
 }
 
-export default class Discoverer extends ResourceBase<DiscovererProperties> {
+class Discoverer extends ResourceBase<Properties> {
     static TagsEntry = TagsEntry
 
-    constructor(properties: DiscovererProperties) {
+    constructor(properties: Properties) {
         super('AWS::EventSchemas::Discoverer', properties)
     }
 }
+export { Discoverer as R }

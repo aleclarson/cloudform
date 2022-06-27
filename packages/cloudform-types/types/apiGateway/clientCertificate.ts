@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ClientCertificateProperties {
+export interface Properties {
     Description?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class ClientCertificate extends ResourceBase<ClientCertificateProperties> {
+class ClientCertificate extends ResourceBase<Properties> {
 
 
-    constructor(properties?: ClientCertificateProperties) {
+    constructor(properties?: Properties) {
         super('AWS::ApiGateway::ClientCertificate', properties || {})
     }
 }
+export { ClientCertificate as R }

@@ -29,15 +29,6 @@ export class PolicyTag {
     }
 }
 
-export class ResourceTag {
-    Key!: Value<string>
-    Value?: Value<string>
-
-    constructor(properties: ResourceTag) {
-        Object.assign(this, properties)
-    }
-}
-
 export class IEMap {
     ACCOUNT?: List<Value<string>>
     ORGUNIT?: List<Value<string>>
@@ -47,7 +38,7 @@ export class IEMap {
     }
 }
 
-export interface PolicyProperties {
+export interface Properties {
     ExcludeMap?: IEMap
     ExcludeResourceTags: Value<boolean>
     IncludeMap?: IEMap
@@ -62,12 +53,13 @@ export interface PolicyProperties {
     Tags?: List<PolicyTag>
 }
 
-export default class Policy extends ResourceBase<PolicyProperties> {
+class Policy extends ResourceBase<Properties> {
     static PolicyTag = PolicyTag
     static ResourceTag = ResourceTag
     static IEMap = IEMap
 
-    constructor(properties: PolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::FMS::Policy', properties)
     }
 }
+export { Policy as R }

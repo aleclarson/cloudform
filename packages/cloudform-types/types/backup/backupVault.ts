@@ -39,7 +39,7 @@ export class LockConfigurationType {
     }
 }
 
-export interface BackupVaultProperties {
+export interface Properties {
     AccessPolicy?: {[key: string]: any}
     BackupVaultName: Value<string>
     BackupVaultTags?: {[key: string]: Value<string>}
@@ -48,11 +48,12 @@ export interface BackupVaultProperties {
     LockConfiguration?: LockConfigurationType
 }
 
-export default class BackupVault extends ResourceBase<BackupVaultProperties> {
+class BackupVault extends ResourceBase<Properties> {
     static NotificationObjectType = NotificationObjectType
     static LockConfigurationType = LockConfigurationType
 
-    constructor(properties: BackupVaultProperties) {
+    constructor(properties: Properties) {
         super('AWS::Backup::BackupVault', properties)
     }
 }
+export { BackupVault as R }

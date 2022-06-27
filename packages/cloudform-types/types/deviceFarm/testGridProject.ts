@@ -15,17 +15,18 @@ export class VpcConfig {
     }
 }
 
-export interface TestGridProjectProperties {
+export interface Properties {
     Description?: Value<string>
     Name: Value<string>
     VpcConfig?: VpcConfig
     Tags?: List<ResourceTag>
 }
 
-export default class TestGridProject extends ResourceBase<TestGridProjectProperties> {
+class TestGridProject extends ResourceBase<Properties> {
     static VpcConfig = VpcConfig
 
-    constructor(properties: TestGridProjectProperties) {
+    constructor(properties: Properties) {
         super('AWS::DeviceFarm::TestGridProject', properties)
     }
 }
+export { TestGridProject as R }

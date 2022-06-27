@@ -47,17 +47,18 @@ export class ConnectionPasswordEncryption {
     }
 }
 
-export interface DataCatalogEncryptionSettingsProperties {
+export interface Properties {
     DataCatalogEncryptionSettings: DataCatalogEncryptionSettings
     CatalogId: Value<string>
 }
 
-export default class DataCatalogEncryptionSettings extends ResourceBase<DataCatalogEncryptionSettingsProperties> {
+class DataCatalogEncryptionSettings extends ResourceBase<Properties> {
     static DataCatalogEncryptionSettings = DataCatalogEncryptionSettingsInner
     static EncryptionAtRest = EncryptionAtRest
     static ConnectionPasswordEncryption = ConnectionPasswordEncryption
 
-    constructor(properties: DataCatalogEncryptionSettingsProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::DataCatalogEncryptionSettings', properties)
     }
 }
+export { DataCatalogEncryptionSettings as R }

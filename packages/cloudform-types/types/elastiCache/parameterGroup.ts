@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ParameterGroupProperties {
+export interface Properties {
     CacheParameterGroupFamily: Value<string>
     Description: Value<string>
     Properties?: {[key: string]: Value<string>}
     Tags?: List<ResourceTag>
 }
 
-export default class ParameterGroup extends ResourceBase<ParameterGroupProperties> {
+class ParameterGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: ParameterGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElastiCache::ParameterGroup', properties)
     }
 }
+export { ParameterGroup as R }

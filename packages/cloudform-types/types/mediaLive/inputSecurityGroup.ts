@@ -14,7 +14,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class InputWhitelistRuleCidr {
@@ -25,15 +25,16 @@ export class InputWhitelistRuleCidr {
     }
 }
 
-export interface InputSecurityGroupProperties {
+export interface Properties {
     WhitelistRules?: List<InputWhitelistRuleCidr>
     Tags?: {[key: string]: any}
 }
 
-export default class InputSecurityGroup extends ResourceBase<InputSecurityGroupProperties> {
+class InputSecurityGroup extends ResourceBase<Properties> {
     static InputWhitelistRuleCidr = InputWhitelistRuleCidr
 
-    constructor(properties?: InputSecurityGroupProperties) {
+    constructor(properties?: Properties) {
         super('AWS::MediaLive::InputSecurityGroup', properties || {})
     }
 }
+export { InputSecurityGroup as R }

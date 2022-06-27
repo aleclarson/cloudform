@@ -17,25 +17,51 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import AnomalyDetector_ from './anomalyDetector'
-import CompositeAlarm_ from './compositeAlarm'
-import InsightRule_ from './insightRule'
-import Dashboard_ from './dashboard'
-import MetricStream_ from './metricStream'
-import Alarm_ from './alarm'
+import * as _0 from './anomalyDetector'
+import * as _1 from './compositeAlarm'
+import * as _2 from './insightRule'
+import * as _3 from './dashboard'
+import * as _4 from './metricStream'
+import * as _5 from './alarm'
 
 export namespace CloudWatch {
-  export const AnomalyDetector = AnomalyDetector_
-  export const CompositeAlarm = CompositeAlarm_
-  export const InsightRule = InsightRule_
-  export const Dashboard = Dashboard_
-  export const MetricStream = MetricStream_
-  export const Alarm = Alarm_
+  export const AnomalyDetector = _0.R
+  export const CompositeAlarm = _1.R
+  export const InsightRule = _2.R
+  export const Dashboard = _3.R
+  export const MetricStream = _4.R
+  export const Alarm = _5.R
 
-  export type AnomalyDetector = AnomalyDetector_
-  export type CompositeAlarm = CompositeAlarm_
-  export type InsightRule = InsightRule_
-  export type Dashboard = Dashboard_
-  export type MetricStream = MetricStream_
-  export type Alarm = Alarm_
+  export type AnomalyDetector = _0.R
+  export type CompositeAlarm = _1.R
+  export type InsightRule = _2.R
+  export type Dashboard = _3.R
+  export type MetricStream = _4.R
+  export type Alarm = _5.R
+
+  export namespace AnomalyDetector {
+    export type MetricDataQuery = _0.MetricDataQuery
+    export type SingleMetricAnomalyDetector = _0.SingleMetricAnomalyDetector
+    export type MetricDataQueries = _0.MetricDataQueries
+    export type Range = _0.Range
+    export type Dimension = _0.Dimension
+    export type MetricMathAnomalyDetector = _0.MetricMathAnomalyDetector
+    export type Metric = _0.Metric
+    export type MetricStat = _0.MetricStat
+    export type Configuration = _0.Configuration
+  }
+  export namespace InsightRule {
+    export type Tags = _2.Tags
+  }
+  export namespace MetricStream {
+    export type MetricStreamStatisticsConfiguration = _4.MetricStreamStatisticsConfiguration
+    export type MetricStreamFilter = _4.MetricStreamFilter
+    export type MetricStreamStatisticsMetric = _4.MetricStreamStatisticsMetric
+  }
+  export namespace Alarm {
+    export type MetricStat = _5.MetricStat
+    export type MetricDataQuery = _5.MetricDataQuery
+    export type Dimension = _5.Dimension
+    export type Metric = _5.Metric
+  }
 }

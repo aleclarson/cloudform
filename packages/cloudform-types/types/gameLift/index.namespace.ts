@@ -17,31 +17,65 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Alias_ from './alias'
-import Build_ from './build'
-import Script_ from './script'
-import GameServerGroup_ from './gameServerGroup'
-import Fleet_ from './fleet'
-import MatchmakingConfiguration_ from './matchmakingConfiguration'
-import MatchmakingRuleSet_ from './matchmakingRuleSet'
-import GameSessionQueue_ from './gameSessionQueue'
+import * as _0 from './alias'
+import * as _1 from './build'
+import * as _2 from './script'
+import * as _3 from './gameServerGroup'
+import * as _4 from './fleet'
+import * as _5 from './matchmakingConfiguration'
+import * as _6 from './matchmakingRuleSet'
+import * as _7 from './gameSessionQueue'
 
 export namespace GameLift {
-  export const Alias = Alias_
-  export const Build = Build_
-  export const Script = Script_
-  export const GameServerGroup = GameServerGroup_
-  export const Fleet = Fleet_
-  export const MatchmakingConfiguration = MatchmakingConfiguration_
-  export const MatchmakingRuleSet = MatchmakingRuleSet_
-  export const GameSessionQueue = GameSessionQueue_
+  export const Alias = _0.R
+  export const Build = _1.R
+  export const Script = _2.R
+  export const GameServerGroup = _3.R
+  export const Fleet = _4.R
+  export const MatchmakingConfiguration = _5.R
+  export const MatchmakingRuleSet = _6.R
+  export const GameSessionQueue = _7.R
 
-  export type Alias = Alias_
-  export type Build = Build_
-  export type Script = Script_
-  export type GameServerGroup = GameServerGroup_
-  export type Fleet = Fleet_
-  export type MatchmakingConfiguration = MatchmakingConfiguration_
-  export type MatchmakingRuleSet = MatchmakingRuleSet_
-  export type GameSessionQueue = GameSessionQueue_
+  export type Alias = _0.R
+  export type Build = _1.R
+  export type Script = _2.R
+  export type GameServerGroup = _3.R
+  export type Fleet = _4.R
+  export type MatchmakingConfiguration = _5.R
+  export type MatchmakingRuleSet = _6.R
+  export type GameSessionQueue = _7.R
+
+  export namespace Alias {
+    export type RoutingStrategy = _0.RoutingStrategy
+  }
+  export namespace Build {
+    export type S3Location = _1.S3Location
+  }
+  export namespace Script {
+    export type S3Location = _2.S3Location
+  }
+  export namespace GameServerGroup {
+    export type TargetTrackingConfiguration = _3.TargetTrackingConfiguration
+    export type LaunchTemplate = _3.LaunchTemplate
+    export type AutoScalingPolicy = _3.AutoScalingPolicy
+    export type InstanceDefinition = _3.InstanceDefinition
+  }
+  export namespace Fleet {
+    export type LocationCapacity = _4.LocationCapacity
+    export type CertificateConfiguration = _4.CertificateConfiguration
+    export type LocationConfiguration = _4.LocationConfiguration
+    export type IpPermission = _4.IpPermission
+    export type ServerProcess = _4.ServerProcess
+    export type ResourceCreationLimitPolicy = _4.ResourceCreationLimitPolicy
+    export type RuntimeConfiguration = _4.RuntimeConfiguration
+  }
+  export namespace MatchmakingConfiguration {
+    export type GameProperty = _5.GameProperty
+  }
+  export namespace GameSessionQueue {
+    export type PlayerLatencyPolicy = _7.PlayerLatencyPolicy
+    export type Destination = _7.Destination
+    export type FilterConfiguration = _7.FilterConfiguration
+    export type PriorityConfiguration = _7.PriorityConfiguration
+  }
 }

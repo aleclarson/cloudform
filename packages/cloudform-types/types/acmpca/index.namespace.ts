@@ -17,19 +17,50 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import CertificateAuthority_ from './certificateAuthority'
-import CertificateAuthorityActivation_ from './certificateAuthorityActivation'
-import Certificate_ from './certificate'
-import Permission_ from './permission'
+import * as _0 from './certificateAuthority'
+import * as _1 from './certificateAuthorityActivation'
+import * as _2 from './certificate'
+import * as _3 from './permission'
 
 export namespace ACMPCA {
-  export const CertificateAuthority = CertificateAuthority_
-  export const CertificateAuthorityActivation = CertificateAuthorityActivation_
-  export const Certificate = Certificate_
-  export const Permission = Permission_
+  export const CertificateAuthority = _0.R
+  export const CertificateAuthorityActivation = _1.R
+  export const Certificate = _2.R
+  export const Permission = _3.R
 
-  export type CertificateAuthority = CertificateAuthority_
-  export type CertificateAuthorityActivation = CertificateAuthorityActivation_
-  export type Certificate = Certificate_
-  export type Permission = Permission_
+  export type CertificateAuthority = _0.R
+  export type CertificateAuthorityActivation = _1.R
+  export type Certificate = _2.R
+  export type Permission = _3.R
+
+  export namespace CertificateAuthority {
+    export type RevocationConfiguration = _0.RevocationConfiguration
+    export type KeyUsage = _0.KeyUsage
+    export type CsrExtensions = _0.CsrExtensions
+    export type AccessDescription = _0.AccessDescription
+    export type CustomAttribute = _0.CustomAttribute
+    export type OcspConfiguration = _0.OcspConfiguration
+    export type EdiPartyName = _0.EdiPartyName
+    export type Subject = _0.Subject
+    export type AccessMethod = _0.AccessMethod
+    export type OtherName = _0.OtherName
+    export type CrlConfiguration = _0.CrlConfiguration
+    export type GeneralName = _0.GeneralName
+  }
+  export namespace Certificate {
+    export type Extensions = _2.Extensions
+    export type Subject = _2.Subject
+    export type PolicyInformation = _2.PolicyInformation
+    export type PolicyQualifierInfo = _2.PolicyQualifierInfo
+    export type Qualifier = _2.Qualifier
+    export type GeneralName = _2.GeneralName
+    export type ApiPassthrough = _2.ApiPassthrough
+    export type EdiPartyName = _2.EdiPartyName
+    export type CustomExtension = _2.CustomExtension
+    export type OtherName = _2.OtherName
+    export type CustomAttribute = _2.CustomAttribute
+    export type Validity = _2.Validity
+    export type ExtendedKeyUsage = _2.ExtendedKeyUsage
+    export type KeyUsage = _2.KeyUsage
+  }
 }

@@ -1,1 +1,1 @@
-import EnvironmentEC2_ from'./environmentEc2';export declare namespace Cloud9{const EnvironmentEC2:typeof EnvironmentEC2_;type EnvironmentEC2=EnvironmentEC2_;}
+import*as _0 from'./environmentEc2';export declare namespace Cloud9{const EnvironmentEC2:typeof _0.R;type EnvironmentEC2=_0.R;namespace EnvironmentEC2{type Repository=_0.Repository;}}

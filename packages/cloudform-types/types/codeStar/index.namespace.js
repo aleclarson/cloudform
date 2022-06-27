@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const gitHubRepository_1=require("./gitHubRepository");var CodeStar;!function(CodeStar){CodeStar.GitHubRepository=gitHubRepository_1.default}(CodeStar=exports.CodeStar||(exports.CodeStar={}));
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.CodeStar=void 0;const _0=require("./gitHubRepository");var CodeStar;!function(CodeStar){CodeStar.GitHubRepository=_0.R}(CodeStar=exports.CodeStar||(exports.CodeStar={}));

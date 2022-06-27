@@ -29,15 +29,16 @@ export class Location {
     }
 }
 
-export interface CidrCollectionProperties {
+export interface Properties {
     Name: Value<string>
     Locations?: List<Location>
 }
 
-export default class CidrCollection extends ResourceBase<CidrCollectionProperties> {
+class CidrCollection extends ResourceBase<Properties> {
     static Location = Location
 
-    constructor(properties: CidrCollectionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53::CidrCollection', properties)
     }
 }
+export { CidrCollection as R }

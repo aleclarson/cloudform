@@ -8,16 +8,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RecoveryGroupProperties {
+export interface Properties {
     RecoveryGroupName: Value<string>
     Cells?: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class RecoveryGroup extends ResourceBase<RecoveryGroupProperties> {
+class RecoveryGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: RecoveryGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::Route53RecoveryReadiness::RecoveryGroup', properties)
     }
 }
+export { RecoveryGroup as R }

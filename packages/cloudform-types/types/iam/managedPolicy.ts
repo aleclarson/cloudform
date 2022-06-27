@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ManagedPolicyProperties {
+export interface Properties {
     Description?: Value<string>
     Groups?: List<Value<string>>
     ManagedPolicyName?: Value<string>
@@ -32,10 +32,11 @@ export interface ManagedPolicyProperties {
     Users?: List<Value<string>>
 }
 
-export default class ManagedPolicy extends ResourceBase<ManagedPolicyProperties> {
+class ManagedPolicy extends ResourceBase<Properties> {
 
 
-    constructor(properties: ManagedPolicyProperties) {
+    constructor(properties: Properties) {
         super('AWS::IAM::ManagedPolicy', properties)
     }
 }
+export { ManagedPolicy as R }

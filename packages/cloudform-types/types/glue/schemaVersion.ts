@@ -29,15 +29,16 @@ export class Schema {
     }
 }
 
-export interface SchemaVersionProperties {
+export interface Properties {
     Schema: Schema
     SchemaDefinition: Value<string>
 }
 
-export default class SchemaVersion extends ResourceBase<SchemaVersionProperties> {
+class SchemaVersion extends ResourceBase<Properties> {
     static Schema = Schema
 
-    constructor(properties: SchemaVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::Glue::SchemaVersion', properties)
     }
 }
+export { SchemaVersion as R }

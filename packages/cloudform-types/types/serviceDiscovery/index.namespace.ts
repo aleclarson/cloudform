@@ -17,22 +17,39 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Service_ from './service'
-import PublicDnsNamespace_ from './publicDnsNamespace'
-import Instance_ from './instance'
-import HttpNamespace_ from './httpNamespace'
-import PrivateDnsNamespace_ from './privateDnsNamespace'
+import * as _0 from './service'
+import * as _1 from './publicDnsNamespace'
+import * as _2 from './instance'
+import * as _3 from './httpNamespace'
+import * as _4 from './privateDnsNamespace'
 
 export namespace ServiceDiscovery {
-  export const Service = Service_
-  export const PublicDnsNamespace = PublicDnsNamespace_
-  export const Instance = Instance_
-  export const HttpNamespace = HttpNamespace_
-  export const PrivateDnsNamespace = PrivateDnsNamespace_
+  export const Service = _0.R
+  export const PublicDnsNamespace = _1.R
+  export const Instance = _2.R
+  export const HttpNamespace = _3.R
+  export const PrivateDnsNamespace = _4.R
 
-  export type Service = Service_
-  export type PublicDnsNamespace = PublicDnsNamespace_
-  export type Instance = Instance_
-  export type HttpNamespace = HttpNamespace_
-  export type PrivateDnsNamespace = PrivateDnsNamespace_
+  export type Service = _0.R
+  export type PublicDnsNamespace = _1.R
+  export type Instance = _2.R
+  export type HttpNamespace = _3.R
+  export type PrivateDnsNamespace = _4.R
+
+  export namespace Service {
+    export type DnsConfig = _0.DnsConfig
+    export type HealthCheckConfig = _0.HealthCheckConfig
+    export type HealthCheckCustomConfig = _0.HealthCheckCustomConfig
+    export type DnsRecord = _0.DnsRecord
+  }
+  export namespace PublicDnsNamespace {
+    export type Properties = _1.Properties
+    export type PublicDnsPropertiesMutable = _1.PublicDnsPropertiesMutable
+    export type SOA = _1.SOA
+  }
+  export namespace PrivateDnsNamespace {
+    export type Properties = _4.Properties
+    export type SOA = _4.SOA
+    export type PrivateDnsPropertiesMutable = _4.PrivateDnsPropertiesMutable
+  }
 }

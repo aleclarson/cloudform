@@ -317,12 +317,12 @@ export class FunctionAssociation {
     }
 }
 
-export interface DistributionProperties {
+export interface Properties {
     DistributionConfig: DistributionConfig
     Tags?: List<ResourceTag>
 }
 
-export default class Distribution extends ResourceBase<DistributionProperties> {
+class Distribution extends ResourceBase<Properties> {
     static Cookies = Cookies
     static DistributionConfig = DistributionConfig
     static LegacyS3Origin = LegacyS3Origin
@@ -349,7 +349,8 @@ export default class Distribution extends ResourceBase<DistributionProperties> {
     static Logging = Logging
     static FunctionAssociation = FunctionAssociation
 
-    constructor(properties: DistributionProperties) {
+    constructor(properties: Properties) {
         super('AWS::CloudFront::Distribution', properties)
     }
 }
+export { Distribution as R }

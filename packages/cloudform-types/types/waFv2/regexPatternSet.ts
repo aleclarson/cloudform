@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface RegexPatternSetProperties {
+export interface Properties {
     Description?: Value<string>
     Name?: Value<string>
     RegularExpressionList: List<Value<string>>
@@ -30,10 +30,11 @@ export interface RegexPatternSetProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class RegexPatternSet extends ResourceBase<RegexPatternSetProperties> {
+class RegexPatternSet extends ResourceBase<Properties> {
 
 
-    constructor(properties: RegexPatternSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAFv2::RegexPatternSet', properties)
     }
 }
+export { RegexPatternSet as R }

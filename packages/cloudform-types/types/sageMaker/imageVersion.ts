@@ -21,15 +21,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ImageVersionProperties {
+export interface Properties {
     ImageName: Value<string>
     BaseImage: Value<string>
 }
 
-export default class ImageVersion extends ResourceBase<ImageVersionProperties> {
+class ImageVersion extends ResourceBase<Properties> {
 
 
-    constructor(properties: ImageVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::ImageVersion', properties)
     }
 }
+export { ImageVersion as R }

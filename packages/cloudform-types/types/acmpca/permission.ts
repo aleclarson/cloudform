@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PermissionProperties {
+export interface Properties {
     Actions: List<Value<string>>
     CertificateAuthorityArn: Value<string>
     Principal: Value<string>
     SourceAccount?: Value<string>
 }
 
-export default class Permission extends ResourceBase<PermissionProperties> {
+class Permission extends ResourceBase<Properties> {
 
 
-    constructor(properties: PermissionProperties) {
+    constructor(properties: Properties) {
         super('AWS::ACMPCA::Permission', properties)
     }
 }
+export { Permission as R }

@@ -41,16 +41,17 @@ export class ByteMatchTuple {
     }
 }
 
-export interface ByteMatchSetProperties {
+export interface Properties {
     ByteMatchTuples?: List<ByteMatchTuple>
     Name: Value<string>
 }
 
-export default class ByteMatchSet extends ResourceBase<ByteMatchSetProperties> {
+class ByteMatchSet extends ResourceBase<Properties> {
     static FieldToMatch = FieldToMatch
     static ByteMatchTuple = ByteMatchTuple
 
-    constructor(properties: ByteMatchSetProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAF::ByteMatchSet', properties)
     }
 }
+export { ByteMatchSet as R }

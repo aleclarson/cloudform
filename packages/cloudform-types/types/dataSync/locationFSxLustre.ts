@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LocationFSxLustreProperties {
+export interface Properties {
     FsxFilesystemArn: Value<string>
     SecurityGroupArns: List<Value<string>>
     Subdirectory?: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class LocationFSxLustre extends ResourceBase<LocationFSxLustreProperties> {
+class LocationFSxLustre extends ResourceBase<Properties> {
 
 
-    constructor(properties: LocationFSxLustreProperties) {
+    constructor(properties: Properties) {
         super('AWS::DataSync::LocationFSxLustre', properties)
     }
 }
+export { LocationFSxLustre as R }

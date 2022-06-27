@@ -28,7 +28,7 @@ export class NetworkInterface {
     }
 }
 
-export interface EndpointProperties {
+export interface Properties {
     OutpostId: Value<string>
     SecurityGroupId: Value<string>
     SubnetId: Value<string>
@@ -36,10 +36,11 @@ export interface EndpointProperties {
     CustomerOwnedIpv4Pool?: Value<string>
 }
 
-export default class Endpoint extends ResourceBase<EndpointProperties> {
+class Endpoint extends ResourceBase<Properties> {
     static NetworkInterface = NetworkInterface
 
-    constructor(properties: EndpointProperties) {
+    constructor(properties: Properties) {
         super('AWS::S3Outposts::Endpoint', properties)
     }
 }
+export { Endpoint as R }

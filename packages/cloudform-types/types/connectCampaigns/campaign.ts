@@ -18,17 +18,18 @@ export class OutboundCallConfig {
     }
 }
 
-export interface CampaignProperties {
+export interface Properties {
     ConnectInstanceArn: Value<string>
     Name: Value<string>
     OutboundCallConfig: OutboundCallConfig
     Tags?: List<ResourceTag>
 }
 
-export default class Campaign extends ResourceBase<CampaignProperties> {
+class Campaign extends ResourceBase<Properties> {
     static OutboundCallConfig = OutboundCallConfig
 
-    constructor(properties: CampaignProperties) {
+    constructor(properties: Properties) {
         super('AWS::ConnectCampaigns::Campaign', properties)
     }
 }
+export { Campaign as R }

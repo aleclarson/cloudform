@@ -17,13 +17,27 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Member_ from './member'
-import Node_ from './node'
+import * as _0 from './member'
+import * as _1 from './node'
 
 export namespace ManagedBlockchain {
-  export const Member = Member_
-  export const Node = Node_
+  export const Member = _0.R
+  export const Node = _1.R
 
-  export type Member = Member_
-  export type Node = Node_
+  export type Member = _0.R
+  export type Node = _1.R
+
+  export namespace Member {
+    export type NetworkFrameworkConfiguration = _0.NetworkFrameworkConfiguration
+    export type NetworkConfiguration = _0.NetworkConfiguration
+    export type NetworkFabricConfiguration = _0.NetworkFabricConfiguration
+    export type MemberConfiguration = _0.MemberConfiguration
+    export type ApprovalThresholdPolicy = _0.ApprovalThresholdPolicy
+    export type MemberFrameworkConfiguration = _0.MemberFrameworkConfiguration
+    export type VotingPolicy = _0.VotingPolicy
+    export type MemberFabricConfiguration = _0.MemberFabricConfiguration
+  }
+  export namespace Node {
+    export type NodeConfiguration = _1.NodeConfiguration
+  }
 }

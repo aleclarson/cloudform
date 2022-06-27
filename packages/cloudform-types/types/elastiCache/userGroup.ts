@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UserGroupProperties {
+export interface Properties {
     UserGroupId: Value<string>
     Engine: Value<string>
     UserIds?: List<Value<string>>
 }
 
-export default class UserGroup extends ResourceBase<UserGroupProperties> {
+class UserGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: UserGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::ElastiCache::UserGroup', properties)
     }
 }
+export { UserGroup as R }

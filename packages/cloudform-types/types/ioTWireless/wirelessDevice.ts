@@ -80,7 +80,7 @@ export class OtaaV10x {
     }
 }
 
-export interface WirelessDeviceProperties {
+export interface Properties {
     Type: Value<string>
     Name?: Value<string>
     Description?: Value<string>
@@ -91,7 +91,7 @@ export interface WirelessDeviceProperties {
     LastUplinkReceivedAt?: Value<string>
 }
 
-export default class WirelessDevice extends ResourceBase<WirelessDeviceProperties> {
+class WirelessDevice extends ResourceBase<Properties> {
     static AbpV11 = AbpV11
     static LoRaWANDevice = LoRaWANDevice
     static SessionKeysAbpV11 = SessionKeysAbpV11
@@ -100,7 +100,8 @@ export default class WirelessDevice extends ResourceBase<WirelessDevicePropertie
     static SessionKeysAbpV10x = SessionKeysAbpV10x
     static OtaaV10x = OtaaV10x
 
-    constructor(properties: WirelessDeviceProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTWireless::WirelessDevice', properties)
     }
 }
+export { WirelessDevice as R }

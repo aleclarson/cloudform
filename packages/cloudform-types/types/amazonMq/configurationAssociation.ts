@@ -29,15 +29,16 @@ export class ConfigurationId {
     }
 }
 
-export interface ConfigurationAssociationProperties {
+export interface Properties {
     Broker: Value<string>
     Configuration: ConfigurationId
 }
 
-export default class ConfigurationAssociation extends ResourceBase<ConfigurationAssociationProperties> {
+class ConfigurationAssociation extends ResourceBase<Properties> {
     static ConfigurationId = ConfigurationId
 
-    constructor(properties: ConfigurationAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::AmazonMQ::ConfigurationAssociation', properties)
     }
 }
+export { ConfigurationAssociation as R }

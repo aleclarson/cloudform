@@ -124,12 +124,12 @@ export class PredefinedLoadMetricSpecification {
     }
 }
 
-export interface ScalingPlanProperties {
+export interface Properties {
     ApplicationSource: ApplicationSource
     ScalingInstructions: List<ScalingInstruction>
 }
 
-export default class ScalingPlan extends ResourceBase<ScalingPlanProperties> {
+class ScalingPlan extends ResourceBase<Properties> {
     static ScalingInstruction = ScalingInstruction
     static MetricDimension = MetricDimension
     static PredefinedScalingMetricSpecification = PredefinedScalingMetricSpecification
@@ -140,7 +140,8 @@ export default class ScalingPlan extends ResourceBase<ScalingPlanProperties> {
     static TargetTrackingConfiguration = TargetTrackingConfiguration
     static PredefinedLoadMetricSpecification = PredefinedLoadMetricSpecification
 
-    constructor(properties: ScalingPlanProperties) {
+    constructor(properties: Properties) {
         super('AWS::AutoScalingPlans::ScalingPlan', properties)
     }
 }
+export { ScalingPlan as R }

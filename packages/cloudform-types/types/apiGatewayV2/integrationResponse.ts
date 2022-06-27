@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface IntegrationResponseProperties {
+export interface Properties {
     ResponseTemplates?: {[key: string]: any}
     TemplateSelectionExpression?: Value<string>
     ResponseParameters?: {[key: string]: any}
@@ -32,10 +32,11 @@ export interface IntegrationResponseProperties {
     ApiId: Value<string>
 }
 
-export default class IntegrationResponse extends ResourceBase<IntegrationResponseProperties> {
+class IntegrationResponse extends ResourceBase<Properties> {
 
 
-    constructor(properties: IntegrationResponseProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGatewayV2::IntegrationResponse', properties)
     }
 }
+export { IntegrationResponse as R }

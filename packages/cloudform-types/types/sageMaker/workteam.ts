@@ -45,7 +45,7 @@ export class MemberDefinition {
     }
 }
 
-export interface WorkteamProperties {
+export interface Properties {
     Description?: Value<string>
     NotificationConfiguration?: NotificationConfiguration
     WorkteamName?: Value<string>
@@ -53,12 +53,13 @@ export interface WorkteamProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Workteam extends ResourceBase<WorkteamProperties> {
+class Workteam extends ResourceBase<Properties> {
     static NotificationConfiguration = NotificationConfiguration
     static CognitoMemberDefinition = CognitoMemberDefinition
     static MemberDefinition = MemberDefinition
 
-    constructor(properties?: WorkteamProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SageMaker::Workteam', properties || {})
     }
 }
+export { Workteam as R }

@@ -31,17 +31,18 @@ export class Topic {
     }
 }
 
-export interface ContactListProperties {
+export interface Properties {
     ContactListName?: Value<string>
     Description?: Value<string>
     Topics?: List<Topic>
     Tags?: List<ResourceTag>
 }
 
-export default class ContactList extends ResourceBase<ContactListProperties> {
+class ContactList extends ResourceBase<Properties> {
     static Topic = Topic
 
-    constructor(properties?: ContactListProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SES::ContactList', properties || {})
     }
 }
+export { ContactList as R }

@@ -1,1 +1,1 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface MasterProperties{DetectorId:Value<string>;MasterId:Value<string>;InvitationId?:Value<string>;}export default class Master extends ResourceBase<MasterProperties>{constructor(properties:MasterProperties);}
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{DetectorId:Value<string>;MasterId:Value<string>;InvitationId?:Value<string>;}declare class Master extends ResourceBase<Properties>{constructor(properties:Properties);}export{Master as R};

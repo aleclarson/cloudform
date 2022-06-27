@@ -17,22 +17,26 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ParameterGroup_ from './parameterGroup'
-import ACL_ from './acl'
-import User_ from './user'
-import SubnetGroup_ from './subnetGroup'
-import Cluster_ from './cluster'
+import * as _0 from './parameterGroup'
+import * as _1 from './acl'
+import * as _2 from './user'
+import * as _3 from './subnetGroup'
+import * as _4 from './cluster'
 
 export namespace MemoryDB {
-  export const ParameterGroup = ParameterGroup_
-  export const ACL = ACL_
-  export const User = User_
-  export const SubnetGroup = SubnetGroup_
-  export const Cluster = Cluster_
+  export const ParameterGroup = _0.R
+  export const ACL = _1.R
+  export const User = _2.R
+  export const SubnetGroup = _3.R
+  export const Cluster = _4.R
 
-  export type ParameterGroup = ParameterGroup_
-  export type ACL = ACL_
-  export type User = User_
-  export type SubnetGroup = SubnetGroup_
-  export type Cluster = Cluster_
+  export type ParameterGroup = _0.R
+  export type ACL = _1.R
+  export type User = _2.R
+  export type SubnetGroup = _3.R
+  export type Cluster = _4.R
+
+  export namespace Cluster {
+    export type Endpoint = _4.Endpoint
+  }
 }

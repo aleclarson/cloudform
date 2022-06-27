@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ReplicationTaskProperties {
+export interface Properties {
     ReplicationTaskSettings?: Value<string>
     CdcStartPosition?: Value<string>
     CdcStopPosition?: Value<string>
@@ -38,10 +38,11 @@ export interface ReplicationTaskProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ReplicationTask extends ResourceBase<ReplicationTaskProperties> {
+class ReplicationTask extends ResourceBase<Properties> {
 
 
-    constructor(properties: ReplicationTaskProperties) {
+    constructor(properties: Properties) {
         super('AWS::DMS::ReplicationTask', properties)
     }
 }
+export { ReplicationTask as R }

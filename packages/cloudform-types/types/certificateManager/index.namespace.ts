@@ -17,13 +17,20 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Account_ from './account'
-import Certificate_ from './certificate'
+import * as _0 from './account'
+import * as _1 from './certificate'
 
 export namespace CertificateManager {
-  export const Account = Account_
-  export const Certificate = Certificate_
+  export const Account = _0.R
+  export const Certificate = _1.R
 
-  export type Account = Account_
-  export type Certificate = Certificate_
+  export type Account = _0.R
+  export type Certificate = _1.R
+
+  export namespace Account {
+    export type ExpiryEventsConfiguration = _0.ExpiryEventsConfiguration
+  }
+  export namespace Certificate {
+    export type DomainValidationOption = _1.DomainValidationOption
+  }
 }

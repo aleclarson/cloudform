@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface TransitGatewayProperties {
+export interface Properties {
     DefaultRouteTablePropagation?: Value<string>
     Description?: Value<string>
     AutoAcceptSharedAttachments?: Value<string>
@@ -37,10 +37,11 @@ export interface TransitGatewayProperties {
     PropagationDefaultRouteTableId?: Value<string>
 }
 
-export default class TransitGateway extends ResourceBase<TransitGatewayProperties> {
+class TransitGateway extends ResourceBase<Properties> {
 
 
-    constructor(properties?: TransitGatewayProperties) {
+    constructor(properties?: Properties) {
         super('AWS::EC2::TransitGateway', properties || {})
     }
 }
+export { TransitGateway as R }

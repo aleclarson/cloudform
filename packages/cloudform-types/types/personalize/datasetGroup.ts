@@ -17,17 +17,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DatasetGroupProperties {
+export interface Properties {
     Name: Value<string>
     KmsKeyArn?: Value<string>
     RoleArn?: Value<string>
     Domain?: Value<string>
 }
 
-export default class DatasetGroup extends ResourceBase<DatasetGroupProperties> {
+class DatasetGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: DatasetGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::Personalize::DatasetGroup', properties)
     }
 }
+export { DatasetGroup as R }

@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface UserProfileProperties {
+export interface Properties {
     AllowSelfManagement?: Value<boolean>
     IamUserArn: Value<string>
     SshPublicKey?: Value<string>
     SshUsername?: Value<string>
 }
 
-export default class UserProfile extends ResourceBase<UserProfileProperties> {
+class UserProfile extends ResourceBase<Properties> {
 
 
-    constructor(properties: UserProfileProperties) {
+    constructor(properties: Properties) {
         super('AWS::OpsWorks::UserProfile', properties)
     }
 }
+export { UserProfile as R }

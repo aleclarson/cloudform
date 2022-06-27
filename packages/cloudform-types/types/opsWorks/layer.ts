@@ -86,7 +86,7 @@ export class AutoScalingThresholds {
     }
 }
 
-export interface LayerProperties {
+export interface Properties {
     Attributes?: {[key: string]: Value<string>}
     AutoAssignElasticIps: Value<boolean>
     AutoAssignPublicIps: Value<boolean>
@@ -108,7 +108,7 @@ export interface LayerProperties {
     VolumeConfigurations?: List<VolumeConfiguration>
 }
 
-export default class Layer extends ResourceBase<LayerProperties> {
+class Layer extends ResourceBase<Properties> {
     static ShutdownEventConfiguration = ShutdownEventConfiguration
     static VolumeConfiguration = VolumeConfiguration
     static Recipes = Recipes
@@ -116,7 +116,8 @@ export default class Layer extends ResourceBase<LayerProperties> {
     static LoadBasedAutoScaling = LoadBasedAutoScaling
     static AutoScalingThresholds = AutoScalingThresholds
 
-    constructor(properties: LayerProperties) {
+    constructor(properties: Properties) {
         super('AWS::OpsWorks::Layer', properties)
     }
 }
+export { Layer as R }

@@ -28,16 +28,17 @@ export class NotebookInstanceLifecycleHook {
     }
 }
 
-export interface NotebookInstanceLifecycleConfigProperties {
+export interface Properties {
     OnStart?: List<NotebookInstanceLifecycleHook>
     NotebookInstanceLifecycleConfigName?: Value<string>
     OnCreate?: List<NotebookInstanceLifecycleHook>
 }
 
-export default class NotebookInstanceLifecycleConfig extends ResourceBase<NotebookInstanceLifecycleConfigProperties> {
+class NotebookInstanceLifecycleConfig extends ResourceBase<Properties> {
     static NotebookInstanceLifecycleHook = NotebookInstanceLifecycleHook
 
-    constructor(properties?: NotebookInstanceLifecycleConfigProperties) {
+    constructor(properties?: Properties) {
         super('AWS::SageMaker::NotebookInstanceLifecycleConfig', properties || {})
     }
 }
+export { NotebookInstanceLifecycleConfig as R }

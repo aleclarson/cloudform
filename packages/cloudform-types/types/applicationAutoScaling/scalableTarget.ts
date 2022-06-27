@@ -52,7 +52,7 @@ export class ScalableTargetAction {
     }
 }
 
-export interface ScalableTargetProperties {
+export interface Properties {
     MaxCapacity: Value<number>
     MinCapacity: Value<number>
     ResourceId: Value<string>
@@ -63,12 +63,13 @@ export interface ScalableTargetProperties {
     SuspendedState?: SuspendedState
 }
 
-export default class ScalableTarget extends ResourceBase<ScalableTargetProperties> {
+class ScalableTarget extends ResourceBase<Properties> {
     static SuspendedState = SuspendedState
     static ScheduledAction = ScheduledAction
     static ScalableTargetAction = ScalableTargetAction
 
-    constructor(properties: ScalableTargetProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApplicationAutoScaling::ScalableTarget', properties)
     }
 }
+export { ScalableTarget as R }

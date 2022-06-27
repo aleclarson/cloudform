@@ -115,7 +115,7 @@ export class MixedMeasureMapping {
     }
 }
 
-export interface ScheduledQueryProperties {
+export interface Properties {
     ScheduledQueryName?: Value<string>
     QueryString: Value<string>
     ScheduleConfiguration: ScheduleConfiguration
@@ -128,7 +128,7 @@ export interface ScheduledQueryProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ScheduledQuery extends ResourceBase<ScheduledQueryProperties> {
+class ScheduledQuery extends ResourceBase<Properties> {
     static NotificationConfiguration = NotificationConfiguration
     static SnsConfiguration = SnsConfiguration
     static TimestreamConfiguration = TimestreamConfiguration
@@ -141,7 +141,8 @@ export default class ScheduledQuery extends ResourceBase<ScheduledQueryPropertie
     static MultiMeasureAttributeMapping = MultiMeasureAttributeMapping
     static MixedMeasureMapping = MixedMeasureMapping
 
-    constructor(properties: ScheduledQueryProperties) {
+    constructor(properties: Properties) {
         super('AWS::Timestream::ScheduledQuery', properties)
     }
 }
+export { ScheduledQuery as R }

@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DataCatalogProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     Parameters?: {[key: string]: Value<string>}
@@ -30,10 +30,11 @@ export interface DataCatalogProperties {
     Type: Value<string>
 }
 
-export default class DataCatalog extends ResourceBase<DataCatalogProperties> {
+class DataCatalog extends ResourceBase<Properties> {
 
 
-    constructor(properties: DataCatalogProperties) {
+    constructor(properties: Properties) {
         super('AWS::Athena::DataCatalog', properties)
     }
 }
+export { DataCatalog as R }

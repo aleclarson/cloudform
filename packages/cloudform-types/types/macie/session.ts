@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SessionProperties {
+export interface Properties {
     Status?: Value<string>
     FindingPublishingFrequency?: Value<string>
 }
 
-export default class Session extends ResourceBase<SessionProperties> {
+class Session extends ResourceBase<Properties> {
 
 
-    constructor(properties?: SessionProperties) {
+    constructor(properties?: Properties) {
         super('AWS::Macie::Session', properties || {})
     }
 }
+export { Session as R }

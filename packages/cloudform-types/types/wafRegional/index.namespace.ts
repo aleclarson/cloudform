@@ -17,40 +17,73 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import SqlInjectionMatchSet_ from './sqlInjectionMatchSet'
-import RegexPatternSet_ from './regexPatternSet'
-import WebACLAssociation_ from './webAclAssociation'
-import SizeConstraintSet_ from './sizeConstraintSet'
-import XssMatchSet_ from './xssMatchSet'
-import RateBasedRule_ from './rateBasedRule'
-import GeoMatchSet_ from './geoMatchSet'
-import WebACL_ from './webAcl'
-import IPSet_ from './ipSet'
-import ByteMatchSet_ from './byteMatchSet'
-import Rule_ from './rule'
+import * as _0 from './sqlInjectionMatchSet'
+import * as _1 from './regexPatternSet'
+import * as _2 from './webAclAssociation'
+import * as _3 from './sizeConstraintSet'
+import * as _4 from './xssMatchSet'
+import * as _5 from './rateBasedRule'
+import * as _6 from './geoMatchSet'
+import * as _7 from './webAcl'
+import * as _8 from './ipSet'
+import * as _9 from './byteMatchSet'
+import * as _a from './rule'
 
 export namespace WAFRegional {
-  export const SqlInjectionMatchSet = SqlInjectionMatchSet_
-  export const RegexPatternSet = RegexPatternSet_
-  export const WebACLAssociation = WebACLAssociation_
-  export const SizeConstraintSet = SizeConstraintSet_
-  export const XssMatchSet = XssMatchSet_
-  export const RateBasedRule = RateBasedRule_
-  export const GeoMatchSet = GeoMatchSet_
-  export const WebACL = WebACL_
-  export const IPSet = IPSet_
-  export const ByteMatchSet = ByteMatchSet_
-  export const Rule = Rule_
+  export const SqlInjectionMatchSet = _0.R
+  export const RegexPatternSet = _1.R
+  export const WebACLAssociation = _2.R
+  export const SizeConstraintSet = _3.R
+  export const XssMatchSet = _4.R
+  export const RateBasedRule = _5.R
+  export const GeoMatchSet = _6.R
+  export const WebACL = _7.R
+  export const IPSet = _8.R
+  export const ByteMatchSet = _9.R
+  export const Rule = _a.R
 
-  export type SqlInjectionMatchSet = SqlInjectionMatchSet_
-  export type RegexPatternSet = RegexPatternSet_
-  export type WebACLAssociation = WebACLAssociation_
-  export type SizeConstraintSet = SizeConstraintSet_
-  export type XssMatchSet = XssMatchSet_
-  export type RateBasedRule = RateBasedRule_
-  export type GeoMatchSet = GeoMatchSet_
-  export type WebACL = WebACL_
-  export type IPSet = IPSet_
-  export type ByteMatchSet = ByteMatchSet_
-  export type Rule = Rule_
+  export type SqlInjectionMatchSet = _0.R
+  export type RegexPatternSet = _1.R
+  export type WebACLAssociation = _2.R
+  export type SizeConstraintSet = _3.R
+  export type XssMatchSet = _4.R
+  export type RateBasedRule = _5.R
+  export type GeoMatchSet = _6.R
+  export type WebACL = _7.R
+  export type IPSet = _8.R
+  export type ByteMatchSet = _9.R
+  export type Rule = _a.R
+
+  export namespace SqlInjectionMatchSet {
+    export type FieldToMatch = _0.FieldToMatch
+    export type SqlInjectionMatchTuple = _0.SqlInjectionMatchTuple
+  }
+  export namespace SizeConstraintSet {
+    export type SizeConstraint = _3.SizeConstraint
+    export type FieldToMatch = _3.FieldToMatch
+  }
+  export namespace XssMatchSet {
+    export type XssMatchTuple = _4.XssMatchTuple
+    export type FieldToMatch = _4.FieldToMatch
+  }
+  export namespace RateBasedRule {
+    export type Predicate = _5.Predicate
+  }
+  export namespace GeoMatchSet {
+    export type GeoMatchConstraint = _6.GeoMatchConstraint
+  }
+  export namespace WebACL {
+    export type Action = _7.Action
+    export type Rule = _7.Rule
+  }
+  export namespace IPSet {
+    export type IPSetDescriptor = _8.IPSetDescriptor
+  }
+  export namespace ByteMatchSet {
+    export type ByteMatchTuple = _9.ByteMatchTuple
+    export type FieldToMatch = _9.FieldToMatch
+  }
+  export namespace Rule {
+    export type Predicate = _a.Predicate
+  }
 }

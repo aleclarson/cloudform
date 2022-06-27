@@ -19,15 +19,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface StaticIpProperties {
+export interface Properties {
     StaticIpName: Value<string>
     AttachedTo?: Value<string>
 }
 
-export default class StaticIp extends ResourceBase<StaticIpProperties> {
+class StaticIp extends ResourceBase<Properties> {
 
 
-    constructor(properties: StaticIpProperties) {
+    constructor(properties: Properties) {
         super('AWS::Lightsail::StaticIp', properties)
     }
 }
+export { StaticIp as R }

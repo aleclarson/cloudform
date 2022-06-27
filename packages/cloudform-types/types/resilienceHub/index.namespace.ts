@@ -17,13 +17,21 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import App_ from './app'
-import ResiliencyPolicy_ from './resiliencyPolicy'
+import * as _0 from './app'
+import * as _1 from './resiliencyPolicy'
 
 export namespace ResilienceHub {
-  export const App = App_
-  export const ResiliencyPolicy = ResiliencyPolicy_
+  export const App = _0.R
+  export const ResiliencyPolicy = _1.R
 
-  export type App = App_
-  export type ResiliencyPolicy = ResiliencyPolicy_
+  export type App = _0.R
+  export type ResiliencyPolicy = _1.R
+
+  export namespace App {
+    export type PhysicalResourceId = _0.PhysicalResourceId
+    export type ResourceMapping = _0.ResourceMapping
+  }
+  export namespace ResiliencyPolicy {
+    export type FailurePolicy = _1.FailurePolicy
+  }
 }

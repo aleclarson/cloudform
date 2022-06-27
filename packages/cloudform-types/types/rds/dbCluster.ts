@@ -40,7 +40,7 @@ export class DBClusterRole {
     }
 }
 
-export interface DBClusterProperties {
+export interface Properties {
     AssociatedRoles?: List<DBClusterRole>
     AvailabilityZones?: List<Value<string>>
     BacktrackWindow?: Value<number>
@@ -76,11 +76,12 @@ export interface DBClusterProperties {
     VpcSecurityGroupIds?: List<Value<string>>
 }
 
-export default class DBCluster extends ResourceBase<DBClusterProperties> {
+class DBCluster extends ResourceBase<Properties> {
     static ScalingConfiguration = ScalingConfiguration
     static DBClusterRole = DBClusterRole
 
-    constructor(properties: DBClusterProperties) {
+    constructor(properties: Properties) {
         super('AWS::RDS::DBCluster', properties)
     }
 }
+export { DBCluster as R }

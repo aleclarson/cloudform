@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DocumentationVersionProperties {
+export interface Properties {
     Description?: Value<string>
     DocumentationVersion: Value<string>
     RestApiId: Value<string>
 }
 
-export default class DocumentationVersion extends ResourceBase<DocumentationVersionProperties> {
+class DocumentationVersion extends ResourceBase<Properties> {
 
 
-    constructor(properties: DocumentationVersionProperties) {
+    constructor(properties: Properties) {
         super('AWS::ApiGateway::DocumentationVersion', properties)
     }
 }
+export { DocumentationVersion as R }

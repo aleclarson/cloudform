@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface CertificateAuthorityActivationProperties {
+export interface Properties {
     CertificateAuthorityArn: Value<string>
     Certificate: Value<string>
     CertificateChain?: Value<string>
     Status?: Value<string>
 }
 
-export default class CertificateAuthorityActivation extends ResourceBase<CertificateAuthorityActivationProperties> {
+class CertificateAuthorityActivation extends ResourceBase<Properties> {
 
 
-    constructor(properties: CertificateAuthorityActivationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ACMPCA::CertificateAuthorityActivation', properties)
     }
 }
+export { CertificateAuthorityActivation as R }

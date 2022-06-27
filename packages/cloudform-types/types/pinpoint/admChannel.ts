@@ -17,17 +17,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ADMChannelProperties {
+export interface Properties {
     ClientSecret: Value<string>
     Enabled?: Value<boolean>
     ClientId: Value<string>
     ApplicationId: Value<string>
 }
 
-export default class ADMChannel extends ResourceBase<ADMChannelProperties> {
+class ADMChannel extends ResourceBase<Properties> {
 
 
-    constructor(properties: ADMChannelProperties) {
+    constructor(properties: Properties) {
         super('AWS::Pinpoint::ADMChannel', properties)
     }
 }
+export { ADMChannel as R }

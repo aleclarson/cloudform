@@ -20,7 +20,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface StreamProperties {
+export interface Properties {
     Name?: Value<string>
     DataRetentionInHours?: Value<number>
     DeviceName?: Value<string>
@@ -29,10 +29,11 @@ export interface StreamProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Stream extends ResourceBase<StreamProperties> {
+class Stream extends ResourceBase<Properties> {
 
 
-    constructor(properties?: StreamProperties) {
+    constructor(properties?: Properties) {
         super('AWS::KinesisVideo::Stream', properties || {})
     }
 }
+export { Stream as R }

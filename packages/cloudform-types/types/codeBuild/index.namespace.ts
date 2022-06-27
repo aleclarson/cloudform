@@ -17,16 +17,43 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import SourceCredential_ from './sourceCredential'
-import ReportGroup_ from './reportGroup'
-import Project_ from './project'
+import * as _0 from './sourceCredential'
+import * as _1 from './reportGroup'
+import * as _2 from './project'
 
 export namespace CodeBuild {
-  export const SourceCredential = SourceCredential_
-  export const ReportGroup = ReportGroup_
-  export const Project = Project_
+  export const SourceCredential = _0.R
+  export const ReportGroup = _1.R
+  export const Project = _2.R
 
-  export type SourceCredential = SourceCredential_
-  export type ReportGroup = ReportGroup_
-  export type Project = Project_
+  export type SourceCredential = _0.R
+  export type ReportGroup = _1.R
+  export type Project = _2.R
+
+  export namespace ReportGroup {
+    export type ReportExportConfig = _1.ReportExportConfig
+    export type S3ReportExportConfig = _1.S3ReportExportConfig
+  }
+  export namespace Project {
+    export type Environment = _2.Environment
+    export type GitSubmodulesConfig = _2.GitSubmodulesConfig
+    export type VpcConfig = _2.VpcConfig
+    export type Artifacts = _2.Artifacts
+    export type RegistryCredential = _2.RegistryCredential
+    export type CloudWatchLogsConfig = _2.CloudWatchLogsConfig
+    export type ProjectCache = _2.ProjectCache
+    export type ProjectBuildBatchConfig = _2.ProjectBuildBatchConfig
+    export type FilterGroup = _2.FilterGroup
+    export type BatchRestrictions = _2.BatchRestrictions
+    export type ProjectTriggers = _2.ProjectTriggers
+    export type Source = _2.Source
+    export type ProjectSourceVersion = _2.ProjectSourceVersion
+    export type LogsConfig = _2.LogsConfig
+    export type SourceAuth = _2.SourceAuth
+    export type ProjectFileSystemLocation = _2.ProjectFileSystemLocation
+    export type S3LogsConfig = _2.S3LogsConfig
+    export type WebhookFilter = _2.WebhookFilter
+    export type BuildStatusConfig = _2.BuildStatusConfig
+    export type EnvironmentVariable = _2.EnvironmentVariable
+  }
 }

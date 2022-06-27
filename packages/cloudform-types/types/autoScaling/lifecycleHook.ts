@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LifecycleHookProperties {
+export interface Properties {
     AutoScalingGroupName: Value<string>
     DefaultResult?: Value<string>
     HeartbeatTimeout?: Value<number>
@@ -33,10 +33,11 @@ export interface LifecycleHookProperties {
     RoleARN?: Value<string>
 }
 
-export default class LifecycleHook extends ResourceBase<LifecycleHookProperties> {
+class LifecycleHook extends ResourceBase<Properties> {
 
 
-    constructor(properties: LifecycleHookProperties) {
+    constructor(properties: Properties) {
         super('AWS::AutoScaling::LifecycleHook', properties)
     }
 }
+export { LifecycleHook as R }

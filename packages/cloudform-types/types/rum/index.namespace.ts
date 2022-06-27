@@ -17,10 +17,14 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import AppMonitor_ from './appMonitor'
+import * as _0 from './appMonitor'
 
 export namespace RUM {
-  export const AppMonitor = AppMonitor_
+  export const AppMonitor = _0.R
 
-  export type AppMonitor = AppMonitor_
+  export type AppMonitor = _0.R
+
+  export namespace AppMonitor {
+    export type AppMonitorConfiguration = _0.AppMonitorConfiguration
+  }
 }

@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DBSubnetGroupProperties {
+export interface Properties {
     DBSubnetGroupDescription: Value<string>
     DBSubnetGroupName?: Value<string>
     SubnetIds: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class DBSubnetGroup extends ResourceBase<DBSubnetGroupProperties> {
+class DBSubnetGroup extends ResourceBase<Properties> {
 
 
-    constructor(properties: DBSubnetGroupProperties) {
+    constructor(properties: Properties) {
         super('AWS::RDS::DBSubnetGroup', properties)
     }
 }
+export { DBSubnetGroup as R }

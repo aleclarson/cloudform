@@ -17,10 +17,14 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import FlowTemplate_ from './flowTemplate'
+import * as _0 from './flowTemplate'
 
 export namespace IoTThingsGraph {
-  export const FlowTemplate = FlowTemplate_
+  export const FlowTemplate = _0.R
 
-  export type FlowTemplate = FlowTemplate_
+  export type FlowTemplate = _0.R
+
+  export namespace FlowTemplate {
+    export type DefinitionDocument = _0.DefinitionDocument
+  }
 }

@@ -17,19 +17,42 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import ConfigurationSetEventDestination_ from './configurationSetEventDestination'
-import DedicatedIpPool_ from './dedicatedIpPool'
-import Identity_ from './identity'
-import ConfigurationSet_ from './configurationSet'
+import * as _0 from './configurationSetEventDestination'
+import * as _1 from './dedicatedIpPool'
+import * as _2 from './identity'
+import * as _3 from './configurationSet'
 
 export namespace PinpointEmail {
-  export const ConfigurationSetEventDestination = ConfigurationSetEventDestination_
-  export const DedicatedIpPool = DedicatedIpPool_
-  export const Identity = Identity_
-  export const ConfigurationSet = ConfigurationSet_
+  export const ConfigurationSetEventDestination = _0.R
+  export const DedicatedIpPool = _1.R
+  export const Identity = _2.R
+  export const ConfigurationSet = _3.R
 
-  export type ConfigurationSetEventDestination = ConfigurationSetEventDestination_
-  export type DedicatedIpPool = DedicatedIpPool_
-  export type Identity = Identity_
-  export type ConfigurationSet = ConfigurationSet_
+  export type ConfigurationSetEventDestination = _0.R
+  export type DedicatedIpPool = _1.R
+  export type Identity = _2.R
+  export type ConfigurationSet = _3.R
+
+  export namespace ConfigurationSetEventDestination {
+    export type DimensionConfiguration = _0.DimensionConfiguration
+    export type CloudWatchDestination = _0.CloudWatchDestination
+    export type SnsDestination = _0.SnsDestination
+    export type PinpointDestination = _0.PinpointDestination
+    export type KinesisFirehoseDestination = _0.KinesisFirehoseDestination
+    export type EventDestination = _0.EventDestination
+  }
+  export namespace DedicatedIpPool {
+    export type Tags = _1.Tags
+  }
+  export namespace Identity {
+    export type Tags = _2.Tags
+    export type MailFromAttributes = _2.MailFromAttributes
+  }
+  export namespace ConfigurationSet {
+    export type SendingOptions = _3.SendingOptions
+    export type ReputationOptions = _3.ReputationOptions
+    export type TrackingOptions = _3.TrackingOptions
+    export type Tags = _3.Tags
+    export type DeliveryOptions = _3.DeliveryOptions
+  }
 }

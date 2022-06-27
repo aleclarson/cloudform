@@ -17,55 +17,66 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import PortfolioShare_ from './portfolioShare'
-import ResourceUpdateConstraint_ from './resourceUpdateConstraint'
-import TagOption_ from './tagOption'
-import CloudFormationProduct_ from './cloudFormationProduct'
-import PortfolioProductAssociation_ from './portfolioProductAssociation'
-import AcceptedPortfolioShare_ from './acceptedPortfolioShare'
-import ServiceAction_ from './serviceAction'
-import LaunchTemplateConstraint_ from './launchTemplateConstraint'
-import CloudFormationProvisionedProduct_ from './cloudFormationProvisionedProduct'
-import Portfolio_ from './portfolio'
-import LaunchNotificationConstraint_ from './launchNotificationConstraint'
-import ServiceActionAssociation_ from './serviceActionAssociation'
-import StackSetConstraint_ from './stackSetConstraint'
-import TagOptionAssociation_ from './tagOptionAssociation'
-import PortfolioPrincipalAssociation_ from './portfolioPrincipalAssociation'
-import LaunchRoleConstraint_ from './launchRoleConstraint'
+import * as _0 from './portfolioShare'
+import * as _1 from './resourceUpdateConstraint'
+import * as _2 from './tagOption'
+import * as _3 from './cloudFormationProduct'
+import * as _4 from './portfolioProductAssociation'
+import * as _5 from './acceptedPortfolioShare'
+import * as _6 from './serviceAction'
+import * as _7 from './launchTemplateConstraint'
+import * as _8 from './cloudFormationProvisionedProduct'
+import * as _9 from './portfolio'
+import * as _a from './launchNotificationConstraint'
+import * as _b from './serviceActionAssociation'
+import * as _c from './stackSetConstraint'
+import * as _d from './tagOptionAssociation'
+import * as _e from './portfolioPrincipalAssociation'
+import * as _f from './launchRoleConstraint'
 
 export namespace ServiceCatalog {
-  export const PortfolioShare = PortfolioShare_
-  export const ResourceUpdateConstraint = ResourceUpdateConstraint_
-  export const TagOption = TagOption_
-  export const CloudFormationProduct = CloudFormationProduct_
-  export const PortfolioProductAssociation = PortfolioProductAssociation_
-  export const AcceptedPortfolioShare = AcceptedPortfolioShare_
-  export const ServiceAction = ServiceAction_
-  export const LaunchTemplateConstraint = LaunchTemplateConstraint_
-  export const CloudFormationProvisionedProduct = CloudFormationProvisionedProduct_
-  export const Portfolio = Portfolio_
-  export const LaunchNotificationConstraint = LaunchNotificationConstraint_
-  export const ServiceActionAssociation = ServiceActionAssociation_
-  export const StackSetConstraint = StackSetConstraint_
-  export const TagOptionAssociation = TagOptionAssociation_
-  export const PortfolioPrincipalAssociation = PortfolioPrincipalAssociation_
-  export const LaunchRoleConstraint = LaunchRoleConstraint_
+  export const PortfolioShare = _0.R
+  export const ResourceUpdateConstraint = _1.R
+  export const TagOption = _2.R
+  export const CloudFormationProduct = _3.R
+  export const PortfolioProductAssociation = _4.R
+  export const AcceptedPortfolioShare = _5.R
+  export const ServiceAction = _6.R
+  export const LaunchTemplateConstraint = _7.R
+  export const CloudFormationProvisionedProduct = _8.R
+  export const Portfolio = _9.R
+  export const LaunchNotificationConstraint = _a.R
+  export const ServiceActionAssociation = _b.R
+  export const StackSetConstraint = _c.R
+  export const TagOptionAssociation = _d.R
+  export const PortfolioPrincipalAssociation = _e.R
+  export const LaunchRoleConstraint = _f.R
 
-  export type PortfolioShare = PortfolioShare_
-  export type ResourceUpdateConstraint = ResourceUpdateConstraint_
-  export type TagOption = TagOption_
-  export type CloudFormationProduct = CloudFormationProduct_
-  export type PortfolioProductAssociation = PortfolioProductAssociation_
-  export type AcceptedPortfolioShare = AcceptedPortfolioShare_
-  export type ServiceAction = ServiceAction_
-  export type LaunchTemplateConstraint = LaunchTemplateConstraint_
-  export type CloudFormationProvisionedProduct = CloudFormationProvisionedProduct_
-  export type Portfolio = Portfolio_
-  export type LaunchNotificationConstraint = LaunchNotificationConstraint_
-  export type ServiceActionAssociation = ServiceActionAssociation_
-  export type StackSetConstraint = StackSetConstraint_
-  export type TagOptionAssociation = TagOptionAssociation_
-  export type PortfolioPrincipalAssociation = PortfolioPrincipalAssociation_
-  export type LaunchRoleConstraint = LaunchRoleConstraint_
+  export type PortfolioShare = _0.R
+  export type ResourceUpdateConstraint = _1.R
+  export type TagOption = _2.R
+  export type CloudFormationProduct = _3.R
+  export type PortfolioProductAssociation = _4.R
+  export type AcceptedPortfolioShare = _5.R
+  export type ServiceAction = _6.R
+  export type LaunchTemplateConstraint = _7.R
+  export type CloudFormationProvisionedProduct = _8.R
+  export type Portfolio = _9.R
+  export type LaunchNotificationConstraint = _a.R
+  export type ServiceActionAssociation = _b.R
+  export type StackSetConstraint = _c.R
+  export type TagOptionAssociation = _d.R
+  export type PortfolioPrincipalAssociation = _e.R
+  export type LaunchRoleConstraint = _f.R
+
+  export namespace CloudFormationProduct {
+    export type ProvisioningArtifactProperties = _3.ProvisioningArtifactProperties
+  }
+  export namespace ServiceAction {
+    export type DefinitionParameter = _6.DefinitionParameter
+  }
+  export namespace CloudFormationProvisionedProduct {
+    export type ProvisioningParameter = _8.ProvisioningParameter
+    export type ProvisioningPreferences = _8.ProvisioningPreferences
+  }
 }

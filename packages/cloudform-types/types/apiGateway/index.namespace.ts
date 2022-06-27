@@ -17,64 +17,101 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import DomainName_ from './domainName'
-import DocumentationPart_ from './documentationPart'
-import UsagePlan_ from './usagePlan'
-import GatewayResponse_ from './gatewayResponse'
-import UsagePlanKey_ from './usagePlanKey'
-import RequestValidator_ from './requestValidator'
-import ApiKey_ from './apiKey'
-import Resource_ from './resource'
-import Account_ from './account'
-import Method_ from './method'
-import Deployment_ from './deployment'
-import Authorizer_ from './authorizer'
-import Model_ from './model'
-import BasePathMapping_ from './basePathMapping'
-import Stage_ from './stage'
-import ClientCertificate_ from './clientCertificate'
-import DocumentationVersion_ from './documentationVersion'
-import RestApi_ from './restApi'
-import VpcLink_ from './vpcLink'
+import * as _0 from './domainName'
+import * as _1 from './documentationPart'
+import * as _2 from './usagePlan'
+import * as _3 from './gatewayResponse'
+import * as _4 from './usagePlanKey'
+import * as _5 from './requestValidator'
+import * as _6 from './apiKey'
+import * as _7 from './resource'
+import * as _8 from './account'
+import * as _9 from './method'
+import * as _a from './deployment'
+import * as _b from './authorizer'
+import * as _c from './model'
+import * as _d from './basePathMapping'
+import * as _e from './stage'
+import * as _f from './clientCertificate'
+import * as _10 from './documentationVersion'
+import * as _11 from './restApi'
+import * as _12 from './vpcLink'
 
 export namespace ApiGateway {
-  export const DomainName = DomainName_
-  export const DocumentationPart = DocumentationPart_
-  export const UsagePlan = UsagePlan_
-  export const GatewayResponse = GatewayResponse_
-  export const UsagePlanKey = UsagePlanKey_
-  export const RequestValidator = RequestValidator_
-  export const ApiKey = ApiKey_
-  export const Resource = Resource_
-  export const Account = Account_
-  export const Method = Method_
-  export const Deployment = Deployment_
-  export const Authorizer = Authorizer_
-  export const Model = Model_
-  export const BasePathMapping = BasePathMapping_
-  export const Stage = Stage_
-  export const ClientCertificate = ClientCertificate_
-  export const DocumentationVersion = DocumentationVersion_
-  export const RestApi = RestApi_
-  export const VpcLink = VpcLink_
+  export const DomainName = _0.R
+  export const DocumentationPart = _1.R
+  export const UsagePlan = _2.R
+  export const GatewayResponse = _3.R
+  export const UsagePlanKey = _4.R
+  export const RequestValidator = _5.R
+  export const ApiKey = _6.R
+  export const Resource = _7.R
+  export const Account = _8.R
+  export const Method = _9.R
+  export const Deployment = _a.R
+  export const Authorizer = _b.R
+  export const Model = _c.R
+  export const BasePathMapping = _d.R
+  export const Stage = _e.R
+  export const ClientCertificate = _f.R
+  export const DocumentationVersion = _10.R
+  export const RestApi = _11.R
+  export const VpcLink = _12.R
 
-  export type DomainName = DomainName_
-  export type DocumentationPart = DocumentationPart_
-  export type UsagePlan = UsagePlan_
-  export type GatewayResponse = GatewayResponse_
-  export type UsagePlanKey = UsagePlanKey_
-  export type RequestValidator = RequestValidator_
-  export type ApiKey = ApiKey_
-  export type Resource = Resource_
-  export type Account = Account_
-  export type Method = Method_
-  export type Deployment = Deployment_
-  export type Authorizer = Authorizer_
-  export type Model = Model_
-  export type BasePathMapping = BasePathMapping_
-  export type Stage = Stage_
-  export type ClientCertificate = ClientCertificate_
-  export type DocumentationVersion = DocumentationVersion_
-  export type RestApi = RestApi_
-  export type VpcLink = VpcLink_
+  export type DomainName = _0.R
+  export type DocumentationPart = _1.R
+  export type UsagePlan = _2.R
+  export type GatewayResponse = _3.R
+  export type UsagePlanKey = _4.R
+  export type RequestValidator = _5.R
+  export type ApiKey = _6.R
+  export type Resource = _7.R
+  export type Account = _8.R
+  export type Method = _9.R
+  export type Deployment = _a.R
+  export type Authorizer = _b.R
+  export type Model = _c.R
+  export type BasePathMapping = _d.R
+  export type Stage = _e.R
+  export type ClientCertificate = _f.R
+  export type DocumentationVersion = _10.R
+  export type RestApi = _11.R
+  export type VpcLink = _12.R
+
+  export namespace DomainName {
+    export type MutualTlsAuthentication = _0.MutualTlsAuthentication
+    export type EndpointConfiguration = _0.EndpointConfiguration
+  }
+  export namespace DocumentationPart {
+    export type Location = _1.Location
+  }
+  export namespace UsagePlan {
+    export type ApiStage = _2.ApiStage
+    export type ThrottleSettings = _2.ThrottleSettings
+    export type QuotaSettings = _2.QuotaSettings
+  }
+  export namespace ApiKey {
+    export type StageKey = _6.StageKey
+  }
+  export namespace Method {
+    export type MethodResponse = _9.MethodResponse
+    export type Integration = _9.Integration
+    export type IntegrationResponse = _9.IntegrationResponse
+  }
+  export namespace Deployment {
+    export type MethodSetting = _a.MethodSetting
+    export type AccessLogSetting = _a.AccessLogSetting
+    export type DeploymentCanarySettings = _a.DeploymentCanarySettings
+    export type StageDescription = _a.StageDescription
+    export type CanarySetting = _a.CanarySetting
+  }
+  export namespace Stage {
+    export type CanarySetting = _e.CanarySetting
+    export type AccessLogSetting = _e.AccessLogSetting
+    export type MethodSetting = _e.MethodSetting
+  }
+  export namespace RestApi {
+    export type S3Location = _11.S3Location
+    export type EndpointConfiguration = _11.EndpointConfiguration
+  }
 }

@@ -17,43 +17,66 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import Link_ from './link'
-import CustomerGatewayAssociation_ from './customerGatewayAssociation'
-import ConnectAttachment_ from './connectAttachment'
-import LinkAssociation_ from './linkAssociation'
-import ConnectPeer_ from './connectPeer'
-import SiteToSiteVpnAttachment_ from './siteToSiteVpnAttachment'
-import Device_ from './device'
-import VpcAttachment_ from './vpcAttachment'
-import CoreNetwork_ from './coreNetwork'
-import GlobalNetwork_ from './globalNetwork'
-import TransitGatewayRegistration_ from './transitGatewayRegistration'
-import Site_ from './site'
+import * as _0 from './link'
+import * as _1 from './customerGatewayAssociation'
+import * as _2 from './connectAttachment'
+import * as _3 from './linkAssociation'
+import * as _4 from './connectPeer'
+import * as _5 from './siteToSiteVpnAttachment'
+import * as _6 from './device'
+import * as _7 from './vpcAttachment'
+import * as _8 from './coreNetwork'
+import * as _9 from './globalNetwork'
+import * as _a from './transitGatewayRegistration'
+import * as _b from './site'
 
 export namespace NetworkManager {
-  export const Link = Link_
-  export const CustomerGatewayAssociation = CustomerGatewayAssociation_
-  export const ConnectAttachment = ConnectAttachment_
-  export const LinkAssociation = LinkAssociation_
-  export const ConnectPeer = ConnectPeer_
-  export const SiteToSiteVpnAttachment = SiteToSiteVpnAttachment_
-  export const Device = Device_
-  export const VpcAttachment = VpcAttachment_
-  export const CoreNetwork = CoreNetwork_
-  export const GlobalNetwork = GlobalNetwork_
-  export const TransitGatewayRegistration = TransitGatewayRegistration_
-  export const Site = Site_
+  export const Link = _0.R
+  export const CustomerGatewayAssociation = _1.R
+  export const ConnectAttachment = _2.R
+  export const LinkAssociation = _3.R
+  export const ConnectPeer = _4.R
+  export const SiteToSiteVpnAttachment = _5.R
+  export const Device = _6.R
+  export const VpcAttachment = _7.R
+  export const CoreNetwork = _8.R
+  export const GlobalNetwork = _9.R
+  export const TransitGatewayRegistration = _a.R
+  export const Site = _b.R
 
-  export type Link = Link_
-  export type CustomerGatewayAssociation = CustomerGatewayAssociation_
-  export type ConnectAttachment = ConnectAttachment_
-  export type LinkAssociation = LinkAssociation_
-  export type ConnectPeer = ConnectPeer_
-  export type SiteToSiteVpnAttachment = SiteToSiteVpnAttachment_
-  export type Device = Device_
-  export type VpcAttachment = VpcAttachment_
-  export type CoreNetwork = CoreNetwork_
-  export type GlobalNetwork = GlobalNetwork_
-  export type TransitGatewayRegistration = TransitGatewayRegistration_
-  export type Site = Site_
+  export type Link = _0.R
+  export type CustomerGatewayAssociation = _1.R
+  export type ConnectAttachment = _2.R
+  export type LinkAssociation = _3.R
+  export type ConnectPeer = _4.R
+  export type SiteToSiteVpnAttachment = _5.R
+  export type Device = _6.R
+  export type VpcAttachment = _7.R
+  export type CoreNetwork = _8.R
+  export type GlobalNetwork = _9.R
+  export type TransitGatewayRegistration = _a.R
+  export type Site = _b.R
+
+  export namespace Link {
+    export type Bandwidth = _0.Bandwidth
+  }
+  export namespace ConnectAttachment {
+    export type ConnectAttachmentOptions = _2.ConnectAttachmentOptions
+  }
+  export namespace ConnectPeer {
+    export type BgpOptions = _4.BgpOptions
+  }
+  export namespace Device {
+    export type Location = _6.Location
+  }
+  export namespace VpcAttachment {
+    export type VpcOptions = _7.VpcOptions
+  }
+  export namespace CoreNetwork {
+    export type CoreNetworkSegment = _8.CoreNetworkSegment
+    export type CoreNetworkEdge = _8.CoreNetworkEdge
+  }
+  export namespace Site {
+    export type Location = _b.Location
+  }
 }

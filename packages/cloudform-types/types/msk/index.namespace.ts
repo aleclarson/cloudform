@@ -17,16 +17,44 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import BatchScramSecret_ from './batchScramSecret'
-import Cluster_ from './cluster'
-import Configuration_ from './configuration'
+import * as _0 from './batchScramSecret'
+import * as _1 from './cluster'
+import * as _2 from './configuration'
 
 export namespace MSK {
-  export const BatchScramSecret = BatchScramSecret_
-  export const Cluster = Cluster_
-  export const Configuration = Configuration_
+  export const BatchScramSecret = _0.R
+  export const Cluster = _1.R
+  export const Configuration = _2.R
 
-  export type BatchScramSecret = BatchScramSecret_
-  export type Cluster = Cluster_
-  export type Configuration = Configuration_
+  export type BatchScramSecret = _0.R
+  export type Cluster = _1.R
+  export type Configuration = _2.R
+
+  export namespace Cluster {
+    export type S3 = _1.S3
+    export type CloudWatchLogs = _1.CloudWatchLogs
+    export type PublicAccess = _1.PublicAccess
+    export type EncryptionAtRest = _1.EncryptionAtRest
+    export type Unauthenticated = _1.Unauthenticated
+    export type BrokerLogs = _1.BrokerLogs
+    export type EncryptionInTransit = _1.EncryptionInTransit
+    export type Prometheus = _1.Prometheus
+    export type LoggingInfo = _1.LoggingInfo
+    export type ProvisionedThroughput = _1.ProvisionedThroughput
+    export type EncryptionInfo = _1.EncryptionInfo
+    export type Iam = _1.Iam
+    export type Sasl = _1.Sasl
+    export type ConfigurationInfo = _1.ConfigurationInfo
+    export type BrokerNodeGroupInfo = _1.BrokerNodeGroupInfo
+    export type Scram = _1.Scram
+    export type JmxExporter = _1.JmxExporter
+    export type ConnectivityInfo = _1.ConnectivityInfo
+    export type StorageInfo = _1.StorageInfo
+    export type NodeExporter = _1.NodeExporter
+    export type EBSStorageInfo = _1.EBSStorageInfo
+    export type Firehose = _1.Firehose
+    export type ClientAuthentication = _1.ClientAuthentication
+    export type Tls = _1.Tls
+    export type OpenMonitoring = _1.OpenMonitoring
+  }
 }

@@ -29,7 +29,7 @@ export class ResourceSpec {
     }
 }
 
-export interface AppProperties {
+export interface Properties {
     AppName: Value<string>
     AppType: Value<string>
     DomainId: Value<string>
@@ -38,10 +38,11 @@ export interface AppProperties {
     UserProfileName: Value<string>
 }
 
-export default class App extends ResourceBase<AppProperties> {
+class App extends ResourceBase<Properties> {
     static ResourceSpec = ResourceSpec
 
-    constructor(properties: AppProperties) {
+    constructor(properties: Properties) {
         super('AWS::SageMaker::App', properties)
     }
 }
+export { App as R }

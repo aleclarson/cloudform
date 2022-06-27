@@ -16,7 +16,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ContactFlowProperties {
+export interface Properties {
     InstanceArn: Value<string>
     Name: Value<string>
     Content: Value<string>
@@ -26,10 +26,11 @@ export interface ContactFlowProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class ContactFlow extends ResourceBase<ContactFlowProperties> {
+class ContactFlow extends ResourceBase<Properties> {
 
 
-    constructor(properties: ContactFlowProperties) {
+    constructor(properties: Properties) {
         super('AWS::Connect::ContactFlow', properties)
     }
 }
+export { ContactFlow as R }

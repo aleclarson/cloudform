@@ -7,16 +7,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ProjectProperties {
+export interface Properties {
     DefaultJobTimeoutMinutes?: Value<number>
     Name: Value<string>
     Tags?: List<ResourceTag>
 }
 
-export default class Project extends ResourceBase<ProjectProperties> {
+class Project extends ResourceBase<Properties> {
 
 
-    constructor(properties: ProjectProperties) {
+    constructor(properties: Properties) {
         super('AWS::DeviceFarm::Project', properties)
     }
 }
+export { Project as R }

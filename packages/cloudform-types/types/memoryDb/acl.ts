@@ -20,16 +20,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ACLProperties {
+export interface Properties {
     ACLName: Value<string>
     UserNames?: List<Value<string>>
     Tags?: List<ResourceTag>
 }
 
-export default class ACL extends ResourceBase<ACLProperties> {
+class ACL extends ResourceBase<Properties> {
 
 
-    constructor(properties: ACLProperties) {
+    constructor(properties: Properties) {
         super('AWS::MemoryDB::ACL', properties)
     }
 }
+export { ACL as R }

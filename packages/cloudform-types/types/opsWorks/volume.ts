@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface VolumeProperties {
+export interface Properties {
     Ec2VolumeId: Value<string>
     MountPoint?: Value<string>
     Name?: Value<string>
     StackId: Value<string>
 }
 
-export default class Volume extends ResourceBase<VolumeProperties> {
+class Volume extends ResourceBase<Properties> {
 
 
-    constructor(properties: VolumeProperties) {
+    constructor(properties: Properties) {
         super('AWS::OpsWorks::Volume', properties)
     }
 }
+export { Volume as R }

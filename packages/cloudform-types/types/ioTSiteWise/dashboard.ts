@@ -17,7 +17,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface DashboardProperties {
+export interface Properties {
     ProjectId?: Value<string>
     DashboardName: Value<string>
     DashboardDescription: Value<string>
@@ -25,10 +25,11 @@ export interface DashboardProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class Dashboard extends ResourceBase<DashboardProperties> {
+class Dashboard extends ResourceBase<Properties> {
 
 
-    constructor(properties: DashboardProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoTSiteWise::Dashboard', properties)
     }
 }
+export { Dashboard as R }

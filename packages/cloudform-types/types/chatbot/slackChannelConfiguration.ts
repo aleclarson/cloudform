@@ -22,7 +22,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface SlackChannelConfigurationProperties {
+export interface Properties {
     SlackWorkspaceId: Value<string>
     SlackChannelId: Value<string>
     ConfigurationName: Value<string>
@@ -33,10 +33,11 @@ export interface SlackChannelConfigurationProperties {
     UserRoleRequired?: Value<boolean>
 }
 
-export default class SlackChannelConfiguration extends ResourceBase<SlackChannelConfigurationProperties> {
+class SlackChannelConfiguration extends ResourceBase<Properties> {
 
 
-    constructor(properties: SlackChannelConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::Chatbot::SlackChannelConfiguration', properties)
     }
 }
+export { SlackChannelConfiguration as R }

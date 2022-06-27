@@ -21,7 +21,7 @@ export class SidewalkUpdateAccount {
     }
 }
 
-export interface PartnerAccountProperties {
+export interface Properties {
     Sidewalk?: SidewalkAccountInfo
     PartnerAccountId?: Value<string>
     PartnerType?: Value<string>
@@ -31,11 +31,12 @@ export interface PartnerAccountProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class PartnerAccount extends ResourceBase<PartnerAccountProperties> {
+class PartnerAccount extends ResourceBase<Properties> {
     static SidewalkAccountInfo = SidewalkAccountInfo
     static SidewalkUpdateAccount = SidewalkUpdateAccount
 
-    constructor(properties?: PartnerAccountProperties) {
+    constructor(properties?: Properties) {
         super('AWS::IoTWireless::PartnerAccount', properties || {})
     }
 }
+export { PartnerAccount as R }

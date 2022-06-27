@@ -17,13 +17,26 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import StateMachine_ from './stateMachine'
-import Activity_ from './activity'
+import * as _0 from './stateMachine'
+import * as _1 from './activity'
 
 export namespace StepFunctions {
-  export const StateMachine = StateMachine_
-  export const Activity = Activity_
+  export const StateMachine = _0.R
+  export const Activity = _1.R
 
-  export type StateMachine = StateMachine_
-  export type Activity = Activity_
+  export type StateMachine = _0.R
+  export type Activity = _1.R
+
+  export namespace StateMachine {
+    export type Definition = _0.Definition
+    export type LogDestination = _0.LogDestination
+    export type TagsEntry = _0.TagsEntry
+    export type LoggingConfiguration = _0.LoggingConfiguration
+    export type S3Location = _0.S3Location
+    export type CloudWatchLogsLogGroup = _0.CloudWatchLogsLogGroup
+    export type TracingConfiguration = _0.TracingConfiguration
+  }
+  export namespace Activity {
+    export type TagsEntry = _1.TagsEntry
+  }
 }

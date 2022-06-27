@@ -1,1 +1,1 @@
-import NotificationRule_ from'./notificationRule';export declare namespace CodeStarNotifications{const NotificationRule:typeof NotificationRule_;type NotificationRule=NotificationRule_;}
+import*as _0 from'./notificationRule';export declare namespace CodeStarNotifications{const NotificationRule:typeof _0.R;type NotificationRule=_0.R;namespace NotificationRule{type Target=_0.Target;}}

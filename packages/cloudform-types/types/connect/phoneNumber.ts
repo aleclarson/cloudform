@@ -16,7 +16,7 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface PhoneNumberProperties {
+export interface Properties {
     TargetArn: Value<string>
     Description?: Value<string>
     Type: Value<string>
@@ -25,10 +25,11 @@ export interface PhoneNumberProperties {
     Tags?: List<ResourceTag>
 }
 
-export default class PhoneNumber extends ResourceBase<PhoneNumberProperties> {
+class PhoneNumber extends ResourceBase<Properties> {
 
 
-    constructor(properties: PhoneNumberProperties) {
+    constructor(properties: Properties) {
         super('AWS::Connect::PhoneNumber', properties)
     }
 }
+export { PhoneNumber as R }

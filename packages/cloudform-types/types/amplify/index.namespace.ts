@@ -17,16 +17,30 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import App_ from './app'
-import Domain_ from './domain'
-import Branch_ from './branch'
+import * as _0 from './app'
+import * as _1 from './domain'
+import * as _2 from './branch'
 
 export namespace Amplify {
-  export const App = App_
-  export const Domain = Domain_
-  export const Branch = Branch_
+  export const App = _0.R
+  export const Domain = _1.R
+  export const Branch = _2.R
 
-  export type App = App_
-  export type Domain = Domain_
-  export type Branch = Branch_
+  export type App = _0.R
+  export type Domain = _1.R
+  export type Branch = _2.R
+
+  export namespace App {
+    export type EnvironmentVariable = _0.EnvironmentVariable
+    export type AutoBranchCreationConfig = _0.AutoBranchCreationConfig
+    export type BasicAuthConfig = _0.BasicAuthConfig
+    export type CustomRule = _0.CustomRule
+  }
+  export namespace Domain {
+    export type SubDomainSetting = _1.SubDomainSetting
+  }
+  export namespace Branch {
+    export type BasicAuthConfig = _2.BasicAuthConfig
+    export type EnvironmentVariable = _2.EnvironmentVariable
+  }
 }

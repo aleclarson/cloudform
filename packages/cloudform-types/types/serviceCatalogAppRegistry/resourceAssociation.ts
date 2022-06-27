@@ -22,16 +22,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ResourceAssociationProperties {
+export interface Properties {
     Application: Value<string>
     Resource: Value<string>
     ResourceType: Value<string>
 }
 
-export default class ResourceAssociation extends ResourceBase<ResourceAssociationProperties> {
+class ResourceAssociation extends ResourceBase<Properties> {
 
 
-    constructor(properties: ResourceAssociationProperties) {
+    constructor(properties: Properties) {
         super('AWS::ServiceCatalogAppRegistry::ResourceAssociation', properties)
     }
 }
+export { ResourceAssociation as R }

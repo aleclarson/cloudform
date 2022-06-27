@@ -12,16 +12,17 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface LabelProperties {
+export interface Properties {
     Name: Value<string>
     Tags?: List<ResourceTag>
     Description?: Value<string>
 }
 
-export default class Label extends ResourceBase<LabelProperties> {
+class Label extends ResourceBase<Properties> {
 
 
-    constructor(properties: LabelProperties) {
+    constructor(properties: Properties) {
         super('AWS::FraudDetector::Label', properties)
     }
 }
+export { Label as R }

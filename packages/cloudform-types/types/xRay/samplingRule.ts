@@ -16,7 +16,7 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import {ResourceBase, ResourceTag} from '../resource'
+import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class SamplingRuleUpdate {
@@ -68,7 +68,7 @@ export class SamplingRuleInner {
     }
 }
 
-export interface SamplingRuleProperties {
+export interface Properties {
     SamplingRule?: SamplingRule
     SamplingRuleRecord?: SamplingRuleRecord
     SamplingRuleUpdate?: SamplingRuleUpdate
@@ -76,12 +76,13 @@ export interface SamplingRuleProperties {
     Tags?: List<{[key: string]: any}>
 }
 
-export default class SamplingRule extends ResourceBase<SamplingRuleProperties> {
+class SamplingRule extends ResourceBase<Properties> {
     static SamplingRuleUpdate = SamplingRuleUpdate
     static SamplingRuleRecord = SamplingRuleRecord
     static SamplingRule = SamplingRuleInner
 
-    constructor(properties?: SamplingRuleProperties) {
+    constructor(properties?: Properties) {
         super('AWS::XRay::SamplingRule', properties || {})
     }
 }
+export { SamplingRule as R }

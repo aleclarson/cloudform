@@ -94,7 +94,7 @@ export class IncidentTemplate {
     }
 }
 
-export interface ResponsePlanProperties {
+export interface Properties {
     Name: Value<string>
     DisplayName?: Value<string>
     ChatChannel?: ChatChannel
@@ -104,7 +104,7 @@ export interface ResponsePlanProperties {
     IncidentTemplate: IncidentTemplate
 }
 
-export default class ResponsePlan extends ResourceBase<ResponsePlanProperties> {
+class ResponsePlan extends ResourceBase<Properties> {
     static SsmParameter = SsmParameter
     static SsmAutomation = SsmAutomation
     static DynamicSsmParameter = DynamicSsmParameter
@@ -114,7 +114,8 @@ export default class ResponsePlan extends ResourceBase<ResponsePlanProperties> {
     static ChatChannel = ChatChannel
     static IncidentTemplate = IncidentTemplate
 
-    constructor(properties: ResponsePlanProperties) {
+    constructor(properties: Properties) {
         super('AWS::SSMIncidents::ResponsePlan', properties)
     }
 }
+export { ResponsePlan as R }

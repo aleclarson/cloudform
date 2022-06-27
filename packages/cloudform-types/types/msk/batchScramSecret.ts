@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface BatchScramSecretProperties {
+export interface Properties {
     ClusterArn: Value<string>
     SecretArnList?: List<Value<string>>
 }
 
-export default class BatchScramSecret extends ResourceBase<BatchScramSecretProperties> {
+class BatchScramSecret extends ResourceBase<Properties> {
 
 
-    constructor(properties: BatchScramSecretProperties) {
+    constructor(properties: Properties) {
         super('AWS::MSK::BatchScramSecret', properties)
     }
 }
+export { BatchScramSecret as R }

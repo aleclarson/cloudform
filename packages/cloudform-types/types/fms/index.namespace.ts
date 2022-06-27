@@ -17,13 +17,18 @@
  * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
 
-import NotificationChannel_ from './notificationChannel'
-import Policy_ from './policy'
+import * as _0 from './notificationChannel'
+import * as _1 from './policy'
 
 export namespace FMS {
-  export const NotificationChannel = NotificationChannel_
-  export const Policy = Policy_
+  export const NotificationChannel = _0.R
+  export const Policy = _1.R
 
-  export type NotificationChannel = NotificationChannel_
-  export type Policy = Policy_
+  export type NotificationChannel = _0.R
+  export type Policy = _1.R
+
+  export namespace Policy {
+    export type PolicyTag = _1.PolicyTag
+    export type IEMap = _1.IEMap
+  }
 }

@@ -38,18 +38,19 @@ export class ActivatedRule {
     }
 }
 
-export interface WebACLProperties {
+export interface Properties {
     DefaultAction: WafAction
     MetricName: Value<string>
     Name: Value<string>
     Rules?: List<ActivatedRule>
 }
 
-export default class WebACL extends ResourceBase<WebACLProperties> {
+class WebACL extends ResourceBase<Properties> {
     static WafAction = WafAction
     static ActivatedRule = ActivatedRule
 
-    constructor(properties: WebACLProperties) {
+    constructor(properties: Properties) {
         super('AWS::WAF::WebACL', properties)
     }
 }
+export { WebACL as R }

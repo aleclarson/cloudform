@@ -61,7 +61,7 @@ export class TemplateSourceAnalysis {
     }
 }
 
-export interface TemplateProperties {
+export interface Properties {
     AwsAccountId: Value<string>
     Name?: Value<string>
     Permissions?: List<ResourcePermission>
@@ -71,14 +71,15 @@ export interface TemplateProperties {
     VersionDescription?: Value<string>
 }
 
-export default class Template extends ResourceBase<TemplateProperties> {
+class Template extends ResourceBase<Properties> {
     static ResourcePermission = ResourcePermission
     static TemplateSourceTemplate = TemplateSourceTemplate
     static DataSetReference = DataSetReference
     static TemplateSourceEntity = TemplateSourceEntity
     static TemplateSourceAnalysis = TemplateSourceAnalysis
 
-    constructor(properties: TemplateProperties) {
+    constructor(properties: Properties) {
         super('AWS::QuickSight::Template', properties)
     }
 }
+export { Template as R }

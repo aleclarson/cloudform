@@ -22,15 +22,16 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ThingPrincipalAttachmentProperties {
+export interface Properties {
     Principal: Value<string>
     ThingName: Value<string>
 }
 
-export default class ThingPrincipalAttachment extends ResourceBase<ThingPrincipalAttachmentProperties> {
+class ThingPrincipalAttachment extends ResourceBase<Properties> {
 
 
-    constructor(properties: ThingPrincipalAttachmentProperties) {
+    constructor(properties: Properties) {
         super('AWS::IoT::ThingPrincipalAttachment', properties)
     }
 }
+export { ThingPrincipalAttachment as R }

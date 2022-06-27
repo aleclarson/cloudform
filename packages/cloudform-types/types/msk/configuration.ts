@@ -22,17 +22,18 @@ import {Value, List} from '../dataTypes'
 
 
 
-export interface ConfigurationProperties {
+export interface Properties {
     Name: Value<string>
     Description?: Value<string>
     ServerProperties: Value<string>
     KafkaVersionsList?: List<Value<string>>
 }
 
-export default class Configuration extends ResourceBase<ConfigurationProperties> {
+class Configuration extends ResourceBase<Properties> {
 
 
-    constructor(properties: ConfigurationProperties) {
+    constructor(properties: Properties) {
         super('AWS::MSK::Configuration', properties)
     }
 }
+export { Configuration as R }

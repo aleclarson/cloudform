@@ -37,7 +37,7 @@ export class WebhookAuthConfiguration {
     }
 }
 
-export interface WebhookProperties {
+export interface Properties {
     AuthenticationConfiguration: WebhookAuthConfiguration
     Filters: List<WebhookFilterRule>
     Authentication: Value<string>
@@ -48,11 +48,12 @@ export interface WebhookProperties {
     RegisterWithThirdParty?: Value<boolean>
 }
 
-export default class Webhook extends ResourceBase<WebhookProperties> {
+class Webhook extends ResourceBase<Properties> {
     static WebhookFilterRule = WebhookFilterRule
     static WebhookAuthConfiguration = WebhookAuthConfiguration
 
-    constructor(properties: WebhookProperties) {
+    constructor(properties: Properties) {
         super('AWS::CodePipeline::Webhook', properties)
     }
 }
+export { Webhook as R }

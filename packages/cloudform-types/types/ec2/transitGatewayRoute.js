@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class TransitGatewayRoute extends resource_1.ResourceBase{constructor(properties){super("AWS::EC2::TransitGatewayRoute",properties)}}exports.default=TransitGatewayRoute;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class TransitGatewayRoute extends resource_1.ResourceBase{constructor(properties){super("AWS::EC2::TransitGatewayRoute",properties)}}exports.R=TransitGatewayRoute;

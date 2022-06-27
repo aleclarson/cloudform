@@ -1,0 +1,1 @@
+import*as _0 from'./datasetGroup';import*as _1 from'./dataset';export declare namespace Forecast{const DatasetGroup:typeof _0.R;const Dataset:typeof _1.R;type DatasetGroup=_0.R;type Dataset=_1.R;}
