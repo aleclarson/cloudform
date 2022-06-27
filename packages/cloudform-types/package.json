@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "tsc --declaration",
-    "generate": "ts-node --project tsconfig.json generator/generator.ts"
+    "generate": "ts-node --project tsconfig.json generator/generator.ts",
+    "minify": "bucket-runner types/**/*.js -- uglifyjs {files} -c -o {files} && node ./dtsMinify types/**/*.d.ts"
   },
   "keywords": [
     "cloudformation",
