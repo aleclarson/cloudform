@@ -7,9 +7,9 @@
     "url": "git+https://github.com/bright/cloudform.git"
   },
   "scripts": {
-    "build": "tsc --declaration",
-    "generate": "ts-node --project tsconfig.json generator/generator.ts",
-    "minify": "bucket-runner --partition-size 1 --concurrency 1 --no-resolve-files types/**/*.js -- uglifyjs {files} -c -o {files} && node ./dtsMinify types/**/*.d.ts"
+    "build": "tsup index.ts -d . --minify && tsc && npm run minify:dts",
+    "generate": "rm -rf types/*/* && ts-node --project tsconfig.json generator/generator.ts",
+    "minify:dts": "node ./dtsMinify types/**/*.d.ts"
   },
   "keywords": [
     "cloudformation",

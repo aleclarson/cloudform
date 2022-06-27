@@ -2,20 +2,14 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es6",
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "strict": true,
     "sourceMap": false,
     "watch": false,
     "rootDir": "./",
-    "types": [
-      "node"
-    ],
-    "lib": [
-      "es2015",
-      "es2016.array.include"
-    ]
+    "types": ["node"],
+    "lib": ["es2015", "es2016.array.include"]
   },
-  "exclude": [
-    "node_modules",
-    "generator"
-  ]
+  "exclude": ["node_modules", "generator"]
 }
