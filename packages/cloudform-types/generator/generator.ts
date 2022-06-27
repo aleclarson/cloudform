@@ -54,10 +54,10 @@ function adjustedCamelCase(input: string): string {
 
 function determineTypeScriptType(property: TypeProperties, propertyName: string, typeSuffix: BasicTypeSuffix): string | undefined {
     if (property[typeSuffix] === 'List') {
-        return `List<${determineTypeScriptType(property, propertyName, 'ItemType')}>`
+        return `List<${property.ItemType === 'List' ? 'List<any>' : determineTypeScriptType(property, propertyName, 'ItemType')}>`
     }
     if (property[typeSuffix] === 'Map') {
-        return `{[key: string]: ${determineTypeScriptType(property, propertyName, 'ItemType')}}`
+        return `{[key: string]: ${property.ItemType === 'Map' ? 'Record<string, any>' : determineTypeScriptType(property, propertyName, 'ItemType')}}`
     }
     if (property[typeSuffix] === 'Tag') {
         return 'ResourceTag'
