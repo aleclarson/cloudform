@@ -299,6 +299,14 @@ function generateIndexNamespaceFile(
     (r, i) => `import * as ${ident(i)} from './${toFileName(r.typeName)}'`
   )
 
+  const innerTypes: Record<string, string[]> = {}
+  resources.forEach((r, i) => {
+    if (r.innerTypes.length)
+      innerTypes[r.typeName] = r.innerTypes.map(
+        typeName => `export type ${typeName} = ${ident(i)}.${typeName}`
+      )
+  })
+
   const template = `${fileHeader}
 
 ${imports.join('\n')}
@@ -312,13 +320,10 @@ ${resources
   .map((r, i) => `  export type ${r.typeName} = ${ident(i)}.R`)
   .join('\n')}
 
-${resources
-  .filter(r => r.innerTypes.length)
+${Object.entries(innerTypes)
   .map(
-    (r, i) =>
-      `  export namespace ${r.typeName} {\n    ${r.innerTypes
-        .map(typeName => `export type ${typeName} = ${ident(i)}.${typeName}`)
-        .join('\n    ')}\n  }`
+    ([typeName, innerTypes]) =>
+      `  export namespace ${typeName} {\n    ${innerTypes.join('\n    ')}\n  }`
   )
   .join('\n')}
 }
