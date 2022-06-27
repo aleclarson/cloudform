@@ -188,13 +188,13 @@ function generateTopLevelClass(
     prop => !properties[prop].Required
   )
 
-  return `export interface ${typeName}Properties {
+  return `export interface Properties {
 ${propertiesEntries(properties)
   .map(e => `    ${e}`)
   .join('\n')}
 }
 
-export default class ${typeName} extends ResourceBase<${typeName}Properties> {
+export default class ${typeName} extends ResourceBase<Properties> {
 ${Object.keys(innerTypes)
   .filter(innerType => !!innerTypes[innerType].Properties)
   .map(innerTypeFullName => {
@@ -204,9 +204,7 @@ ${Object.keys(innerTypes)
   })
   .join('\n')}
 
-    constructor(properties${
-      canOmitProperties ? '?' : ''
-    }: ${typeName}Properties) {
+    constructor(properties${canOmitProperties ? '?' : ''}: Properties) {
         super('AWS::${namespace}::${typeName}', properties${
     canOmitProperties ? ' || {}' : ''
   })
