@@ -3,7 +3,12 @@ lockfileVersion: 5.4
 importers:
 
   .:
-    specifiers: {}
+    specifiers:
+      '@alloc/prettier-config': ^1.0.0
+      prettier: ^2.7.1
+    devDependencies:
+      '@alloc/prettier-config': 1.0.0
+      prettier: 2.7.1
 
   packages/cloudform:
     specifiers:
@@ -49,6 +54,10 @@ importers:
       typescript: 3.9.10
 
 packages:
+
+  /@alloc/prettier-config/1.0.0:
+    resolution: {integrity: sha512-xm50V1qxSdTh1O1fKA+gqcU605YSnxfq6HwtYSFU3fRsKMFnUSuSOxqSAPI7y2sRxqPed2EIuGmNn107LVQM6g==}
+    dev: true
 
   /@types/jsonminify/0.4.1:
     resolution: {integrity: sha512-CkbsT83tCMuFefGh+aXlsunetd66yN62QxtjBfk4lX4zMVBPRlWyHQvZvIPOMUznVA7MXdt6RtqHa9fra1PlCw==}
@@ -138,6 +147,12 @@ packages:
         optional: true
     dependencies:
       whatwg-url: 5.0.0
+    dev: true
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /source-map-support/0.5.21:

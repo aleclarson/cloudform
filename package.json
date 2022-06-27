@@ -7,5 +7,10 @@
     "type": "git",
     "url": "git+https://github.com/bright/cloudform.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "prettier": "@alloc/prettier-config",
+  "devDependencies": {
+    "@alloc/prettier-config": "^1.0.0",
+    "prettier": "^2.7.1"
+  }
 }
