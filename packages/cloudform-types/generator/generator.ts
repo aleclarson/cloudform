@@ -68,6 +68,10 @@ function adjustedCamelCase(input: string): string {
   return input === 'IoT' ? 'iot' : camelCase(input)
 }
 
+function toFileName(input: string): string {
+  return input === 'Index' ? 'indexResource' : camelCase(input)
+}
+
 function determineTypeScriptType(
   property: TypeProperties,
   propertyName: string,
@@ -274,7 +278,7 @@ export { ${resourceName} as R }
   }
 
   fs.writeFileSync(
-    `./types/${adjustedCamelCase(namespace)}/${camelCase(resourceName)}.ts`,
+    `./types/${adjustedCamelCase(namespace)}/${toFileName(resourceName)}.ts`,
     template,
     { encoding: 'utf8' }
   )
@@ -292,7 +296,7 @@ function generateIndexNamespaceFile(
 ): void {
   const ident = (i: number) => `_${i.toString(16)}`
   const imports = resources.map(
-    (r, i) => `import * as ${ident(i)} from './${camelCase(r.typeName)}'`
+    (r, i) => `import * as ${ident(i)} from './${toFileName(r.typeName)}'`
   )
 
   const template = `${fileHeader}
