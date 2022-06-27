@@ -1,2 +1,1 @@
-import { CloudFront } from './index.namespace';
-export default CloudFront;
+import{CloudFront}from'./index.namespace';export default CloudFront;

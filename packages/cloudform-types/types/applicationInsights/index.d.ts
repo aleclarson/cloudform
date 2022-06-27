@@ -1,2 +1,1 @@
-import { ApplicationInsights } from './index.namespace';
-export default ApplicationInsights;
+import{ApplicationInsights}from'./index.namespace';export default ApplicationInsights;

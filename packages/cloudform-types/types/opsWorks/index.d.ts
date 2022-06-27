@@ -1,2 +1,1 @@
-import { OpsWorks } from './index.namespace';
-export default OpsWorks;
+import{OpsWorks}from'./index.namespace';export default OpsWorks;

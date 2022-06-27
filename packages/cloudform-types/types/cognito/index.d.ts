@@ -1,2 +1,1 @@
-import { Cognito } from './index.namespace';
-export default Cognito;
+import{Cognito}from'./index.namespace';export default Cognito;

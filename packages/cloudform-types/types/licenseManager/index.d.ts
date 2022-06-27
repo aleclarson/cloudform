@@ -1,2 +1,1 @@
-import { LicenseManager } from './index.namespace';
-export default LicenseManager;
+import{LicenseManager}from'./index.namespace';export default LicenseManager;

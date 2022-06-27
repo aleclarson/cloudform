@@ -1,2 +1,1 @@
-import { Kendra } from './index.namespace';
-export default Kendra;
+import{Kendra}from'./index.namespace';export default Kendra;

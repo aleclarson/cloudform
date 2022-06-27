@@ -1,11 +1,1 @@
-import { ResourceBase, ResourceTag } from '../resource';
-import { Value, List } from '../dataTypes';
-export interface ApplicationProperties {
-    ApplicationName: Value<string>;
-    ApplicationDescription?: Value<string>;
-    RoleArn: Value<string>;
-    Tags?: List<ResourceTag>;
-}
-export default class Application extends ResourceBase<ApplicationProperties> {
-    constructor(properties: ApplicationProperties);
-}
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface ApplicationProperties{ApplicationName:Value<string>;ApplicationDescription?:Value<string>;RoleArn:Value<string>;Tags?:List<ResourceTag>;}export default class Application extends ResourceBase<ApplicationProperties>{constructor(properties:ApplicationProperties);}

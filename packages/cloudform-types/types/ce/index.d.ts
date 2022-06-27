@@ -1,2 +1,1 @@
-import { CE } from './index.namespace';
-export default CE;
+import{CE}from'./index.namespace';export default CE;

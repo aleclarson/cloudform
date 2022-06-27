@@ -1,2 +1,1 @@
-import { IoT } from './index.namespace';
-export default IoT;
+import{IoT}from'./index.namespace';export default IoT;

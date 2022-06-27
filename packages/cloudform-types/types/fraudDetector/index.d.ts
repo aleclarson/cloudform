@@ -1,2 +1,1 @@
-import { FraudDetector } from './index.namespace';
-export default FraudDetector;
+import{FraudDetector}from'./index.namespace';export default FraudDetector;

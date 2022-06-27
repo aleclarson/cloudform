@@ -1,2 +1,1 @@
-import { SDB } from './index.namespace';
-export default SDB;
+import{SDB}from'./index.namespace';export default SDB;

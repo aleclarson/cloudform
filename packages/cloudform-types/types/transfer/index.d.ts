@@ -1,2 +1,1 @@
-import { Transfer } from './index.namespace';
-export default Transfer;
+import{Transfer}from'./index.namespace';export default Transfer;

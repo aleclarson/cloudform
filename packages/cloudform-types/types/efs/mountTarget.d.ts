@@ -1,11 +1,1 @@
-import { ResourceBase } from '../resource';
-import { Value, List } from '../dataTypes';
-export interface MountTargetProperties {
-    FileSystemId: Value<string>;
-    IpAddress?: Value<string>;
-    SecurityGroups: List<Value<string>>;
-    SubnetId: Value<string>;
-}
-export default class MountTarget extends ResourceBase<MountTargetProperties> {
-    constructor(properties: MountTargetProperties);
-}
+import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface MountTargetProperties{FileSystemId:Value<string>;IpAddress?:Value<string>;SecurityGroups:List<Value<string>>;SubnetId:Value<string>;}export default class MountTarget extends ResourceBase<MountTargetProperties>{constructor(properties:MountTargetProperties);}

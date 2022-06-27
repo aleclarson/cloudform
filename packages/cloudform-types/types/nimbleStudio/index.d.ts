@@ -1,2 +1,1 @@
-import { NimbleStudio } from './index.namespace';
-export default NimbleStudio;
+import{NimbleStudio}from'./index.namespace';export default NimbleStudio;

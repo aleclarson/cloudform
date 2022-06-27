@@ -1,2 +1,1 @@
-import { ManagedBlockchain } from './index.namespace';
-export default ManagedBlockchain;
+import{ManagedBlockchain}from'./index.namespace';export default ManagedBlockchain;

@@ -1,2 +1,1 @@
-import { ElasticLoadBalancing } from './index.namespace';
-export default ElasticLoadBalancing;
+import{ElasticLoadBalancing}from'./index.namespace';export default ElasticLoadBalancing;

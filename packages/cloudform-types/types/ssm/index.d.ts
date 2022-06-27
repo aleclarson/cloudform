@@ -1,2 +1,1 @@
-import { SSM } from './index.namespace';
-export default SSM;
+import{SSM}from'./index.namespace';export default SSM;

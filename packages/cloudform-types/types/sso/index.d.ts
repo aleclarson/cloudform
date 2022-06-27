@@ -1,2 +1,1 @@
-import { SSO } from './index.namespace';
-export default SSO;
+import{SSO}from'./index.namespace';export default SSO;

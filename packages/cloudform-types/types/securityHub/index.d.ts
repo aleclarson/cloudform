@@ -1,2 +1,1 @@
-import { SecurityHub } from './index.namespace';
-export default SecurityHub;
+import{SecurityHub}from'./index.namespace';export default SecurityHub;

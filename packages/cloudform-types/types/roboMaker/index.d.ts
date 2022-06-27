@@ -1,2 +1,1 @@
-import { RoboMaker } from './index.namespace';
-export default RoboMaker;
+import{RoboMaker}from'./index.namespace';export default RoboMaker;

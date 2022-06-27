@@ -1,2 +1,1 @@
-import { IVS } from './index.namespace';
-export default IVS;
+import{IVS}from'./index.namespace';export default IVS;

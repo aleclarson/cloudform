@@ -1,2 +1,1 @@
-import { WAFRegional } from './index.namespace';
-export default WAFRegional;
+import{WAFRegional}from'./index.namespace';export default WAFRegional;

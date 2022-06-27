@@ -1,2 +1,1 @@
-import { EMRContainers } from './index.namespace';
-export default EMRContainers;
+import{EMRContainers}from'./index.namespace';export default EMRContainers;

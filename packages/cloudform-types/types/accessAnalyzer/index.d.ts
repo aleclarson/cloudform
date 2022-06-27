@@ -1,2 +1,1 @@
-import { AccessAnalyzer } from './index.namespace';
-export default AccessAnalyzer;
+import{AccessAnalyzer}from'./index.namespace';export default AccessAnalyzer;

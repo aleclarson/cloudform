@@ -1,2 +1,1 @@
-import { LookoutVision } from './index.namespace';
-export default LookoutVision;
+import{LookoutVision}from'./index.namespace';export default LookoutVision;

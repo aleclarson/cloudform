@@ -1,2 +1,1 @@
-import { CustomerProfiles } from './index.namespace';
-export default CustomerProfiles;
+import{CustomerProfiles}from'./index.namespace';export default CustomerProfiles;

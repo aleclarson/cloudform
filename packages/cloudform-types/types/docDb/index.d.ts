@@ -1,2 +1,1 @@
-import { DocDB } from './index.namespace';
-export default DocDB;
+import{DocDB}from'./index.namespace';export default DocDB;

@@ -1,2 +1,1 @@
-import { DataBrew } from './index.namespace';
-export default DataBrew;
+import{DataBrew}from'./index.namespace';export default DataBrew;

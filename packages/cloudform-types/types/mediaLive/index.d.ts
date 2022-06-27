@@ -1,2 +1,1 @@
-import { MediaLive } from './index.namespace';
-export default MediaLive;
+import{MediaLive}from'./index.namespace';export default MediaLive;

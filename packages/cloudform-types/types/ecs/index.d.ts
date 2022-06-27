@@ -1,2 +1,1 @@
-import { ECS } from './index.namespace';
-export default ECS;
+import{ECS}from'./index.namespace';export default ECS;

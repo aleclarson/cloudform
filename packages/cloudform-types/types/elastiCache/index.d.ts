@@ -1,2 +1,1 @@
-import { ElastiCache } from './index.namespace';
-export default ElastiCache;
+import{ElastiCache}from'./index.namespace';export default ElastiCache;

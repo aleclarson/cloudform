@@ -1,2 +1,1 @@
-import { GlobalAccelerator } from './index.namespace';
-export default GlobalAccelerator;
+import{GlobalAccelerator}from'./index.namespace';export default GlobalAccelerator;

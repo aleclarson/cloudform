@@ -1,2 +1,1 @@
-import { Batch } from './index.namespace';
-export default Batch;
+import{Batch}from'./index.namespace';export default Batch;

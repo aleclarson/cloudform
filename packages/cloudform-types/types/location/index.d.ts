@@ -1,2 +1,1 @@
-import { Location } from './index.namespace';
-export default Location;
+import{Location}from'./index.namespace';export default Location;

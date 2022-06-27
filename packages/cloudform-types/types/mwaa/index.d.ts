@@ -1,2 +1,1 @@
-import { MWAA } from './index.namespace';
-export default MWAA;
+import{MWAA}from'./index.namespace';export default MWAA;

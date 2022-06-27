@@ -1,2 +1,1 @@
-import { StepFunctions } from './index.namespace';
-export default StepFunctions;
+import{StepFunctions}from'./index.namespace';export default StepFunctions;

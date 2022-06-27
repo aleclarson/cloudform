@@ -1,2 +1,1 @@
-import { AutoScaling } from './index.namespace';
-export default AutoScaling;
+import{AutoScaling}from'./index.namespace';export default AutoScaling;

@@ -1,2 +1,1 @@
-import { CUR } from './index.namespace';
-export default CUR;
+import{CUR}from'./index.namespace';export default CUR;

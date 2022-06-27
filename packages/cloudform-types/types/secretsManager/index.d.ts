@@ -1,2 +1,1 @@
-import { SecretsManager } from './index.namespace';
-export default SecretsManager;
+import{SecretsManager}from'./index.namespace';export default SecretsManager;

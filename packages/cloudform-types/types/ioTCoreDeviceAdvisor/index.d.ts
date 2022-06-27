@@ -1,2 +1,1 @@
-import { IoTCoreDeviceAdvisor } from './index.namespace';
-export default IoTCoreDeviceAdvisor;
+import{IoTCoreDeviceAdvisor}from'./index.namespace';export default IoTCoreDeviceAdvisor;

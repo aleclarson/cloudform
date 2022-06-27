@@ -1,2 +1,1 @@
-import { AuditManager } from './index.namespace';
-export default AuditManager;
+import{AuditManager}from'./index.namespace';export default AuditManager;

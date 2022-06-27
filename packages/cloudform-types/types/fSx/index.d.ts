@@ -1,2 +1,1 @@
-import { FSx } from './index.namespace';
-export default FSx;
+import{FSx}from'./index.namespace';export default FSx;

@@ -1,15 +1,1 @@
-import { ResourceBase, ResourceTag } from '../resource';
-import { Value, List } from '../dataTypes';
-export interface SubnetProperties {
-    AssignIpv6AddressOnCreation?: Value<boolean>;
-    AvailabilityZone?: Value<string>;
-    CidrBlock: Value<string>;
-    Ipv6CidrBlock?: Value<string>;
-    MapPublicIpOnLaunch?: Value<boolean>;
-    OutpostArn?: Value<string>;
-    Tags?: List<ResourceTag>;
-    VpcId: Value<string>;
-}
-export default class Subnet extends ResourceBase<SubnetProperties> {
-    constructor(properties: SubnetProperties);
-}
+import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface SubnetProperties{AssignIpv6AddressOnCreation?:Value<boolean>;AvailabilityZone?:Value<string>;CidrBlock:Value<string>;Ipv6CidrBlock?:Value<string>;MapPublicIpOnLaunch?:Value<boolean>;OutpostArn?:Value<string>;Tags?:List<ResourceTag>;VpcId:Value<string>;}export default class Subnet extends ResourceBase<SubnetProperties>{constructor(properties:SubnetProperties);}

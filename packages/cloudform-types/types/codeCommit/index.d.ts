@@ -1,2 +1,1 @@
-import { CodeCommit } from './index.namespace';
-export default CodeCommit;
+import{CodeCommit}from'./index.namespace';export default CodeCommit;

@@ -1,2 +1,1 @@
-import { AppConfig } from './index.namespace';
-export default AppConfig;
+import{AppConfig}from'./index.namespace';export default AppConfig;

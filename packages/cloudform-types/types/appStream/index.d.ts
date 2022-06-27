@@ -1,2 +1,1 @@
-import { AppStream } from './index.namespace';
-export default AppStream;
+import{AppStream}from'./index.namespace';export default AppStream;

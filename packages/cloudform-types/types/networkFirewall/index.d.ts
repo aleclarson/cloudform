@@ -1,2 +1,1 @@
-import { NetworkFirewall } from './index.namespace';
-export default NetworkFirewall;
+import{NetworkFirewall}from'./index.namespace';export default NetworkFirewall;

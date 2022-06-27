@@ -1,2 +1,1 @@
-import { Macie } from './index.namespace';
-export default Macie;
+import{Macie}from'./index.namespace';export default Macie;

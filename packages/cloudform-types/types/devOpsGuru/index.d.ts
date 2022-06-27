@@ -1,2 +1,1 @@
-import { DevOpsGuru } from './index.namespace';
-export default DevOpsGuru;
+import{DevOpsGuru}from'./index.namespace';export default DevOpsGuru;

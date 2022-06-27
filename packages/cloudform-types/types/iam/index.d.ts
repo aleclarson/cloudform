@@ -1,2 +1,1 @@
-import { IAM } from './index.namespace';
-export default IAM;
+import{IAM}from'./index.namespace';export default IAM;

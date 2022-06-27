@@ -1,2 +1,1 @@
-import { ImageBuilder } from './index.namespace';
-export default ImageBuilder;
+import{ImageBuilder}from'./index.namespace';export default ImageBuilder;

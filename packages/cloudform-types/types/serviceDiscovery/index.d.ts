@@ -1,2 +1,1 @@
-import { ServiceDiscovery } from './index.namespace';
-export default ServiceDiscovery;
+import{ServiceDiscovery}from'./index.namespace';export default ServiceDiscovery;

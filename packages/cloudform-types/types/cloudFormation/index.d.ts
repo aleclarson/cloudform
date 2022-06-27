@@ -1,2 +1,1 @@
-import { CloudFormation } from './index.namespace';
-export default CloudFormation;
+import{CloudFormation}from'./index.namespace';export default CloudFormation;

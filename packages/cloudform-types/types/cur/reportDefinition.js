@@ -1,12 +1,1 @@
-"use strict";
-/* Generated from:
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-const resource_1 = require("../resource");
-class ReportDefinition extends resource_1.ResourceBase {
-    constructor(properties) {
-        super('AWS::CUR::ReportDefinition', properties);
-    }
-}
-exports.default = ReportDefinition;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class ReportDefinition extends resource_1.ResourceBase{constructor(properties){super("AWS::CUR::ReportDefinition",properties)}}exports.default=ReportDefinition,Object.defineProperty(exports,"__esModule",{value:!0});const resource_1=require("../resource");class Domain extends resource_1.ResourceBase{constructor(properties){super("AWS::CustomerProfiles::Domain",properties)}}exports.default=Domain;

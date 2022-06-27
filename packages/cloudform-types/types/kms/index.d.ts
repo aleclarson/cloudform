@@ -1,2 +1,1 @@
-import { KMS } from './index.namespace';
-export default KMS;
+import{KMS}from'./index.namespace';export default KMS;

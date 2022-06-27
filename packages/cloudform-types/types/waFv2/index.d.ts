@@ -1,2 +1,1 @@
-import { WAFv2 } from './index.namespace';
-export default WAFv2;
+import{WAFv2}from'./index.namespace';export default WAFv2;

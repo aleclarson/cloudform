@@ -1,2 +1,1 @@
-import { FIS } from './index.namespace';
-export default FIS;
+import{FIS}from'./index.namespace';export default FIS;

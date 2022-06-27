@@ -1,2 +1,1 @@
-import { IoTAnalytics } from './index.namespace';
-export default IoTAnalytics;
+import{IoTAnalytics}from'./index.namespace';export default IoTAnalytics;

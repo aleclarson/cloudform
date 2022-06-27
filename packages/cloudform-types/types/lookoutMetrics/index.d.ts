@@ -1,2 +1,1 @@
-import { LookoutMetrics } from './index.namespace';
-export default LookoutMetrics;
+import{LookoutMetrics}from'./index.namespace';export default LookoutMetrics;

@@ -1,2 +1,1 @@
-import { CodeStarNotifications } from './index.namespace';
-export default CodeStarNotifications;
+import{CodeStarNotifications}from'./index.namespace';export default CodeStarNotifications;

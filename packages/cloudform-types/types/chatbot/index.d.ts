@@ -1,2 +1,1 @@
-import { Chatbot } from './index.namespace';
-export default Chatbot;
+import{Chatbot}from'./index.namespace';export default Chatbot;

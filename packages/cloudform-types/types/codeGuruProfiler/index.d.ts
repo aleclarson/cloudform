@@ -1,2 +1,1 @@
-import { CodeGuruProfiler } from './index.namespace';
-export default CodeGuruProfiler;
+import{CodeGuruProfiler}from'./index.namespace';export default CodeGuruProfiler;

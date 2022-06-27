@@ -1,2 +1,1 @@
-import { Kinesis } from './index.namespace';
-export default Kinesis;
+import{Kinesis}from'./index.namespace';export default Kinesis;

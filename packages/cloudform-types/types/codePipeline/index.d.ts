@@ -1,2 +1,1 @@
-import { CodePipeline } from './index.namespace';
-export default CodePipeline;
+import{CodePipeline}from'./index.namespace';export default CodePipeline;

@@ -1,2 +1,1 @@
-import { ApiGatewayV2 } from './index.namespace';
-export default ApiGatewayV2;
+import{ApiGatewayV2}from'./index.namespace';export default ApiGatewayV2;

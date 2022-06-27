@@ -1,2 +1,1 @@
-import { DLM } from './index.namespace';
-export default DLM;
+import{DLM}from'./index.namespace';export default DLM;

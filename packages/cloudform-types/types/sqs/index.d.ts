@@ -1,2 +1,1 @@
-import { SQS } from './index.namespace';
-export default SQS;
+import{SQS}from'./index.namespace';export default SQS;

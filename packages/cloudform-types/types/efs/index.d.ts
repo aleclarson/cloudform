@@ -1,2 +1,1 @@
-import { EFS } from './index.namespace';
-export default EFS;
+import{EFS}from'./index.namespace';export default EFS;

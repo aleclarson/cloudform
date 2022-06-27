@@ -1,2 +1,1 @@
-import { CodeBuild } from './index.namespace';
-export default CodeBuild;
+import{CodeBuild}from'./index.namespace';export default CodeBuild;

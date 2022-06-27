@@ -1,2 +1,1 @@
-import { Inspector } from './index.namespace';
-export default Inspector;
+import{Inspector}from'./index.namespace';export default Inspector;

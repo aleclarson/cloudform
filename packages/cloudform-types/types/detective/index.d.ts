@@ -1,2 +1,1 @@
-import { Detective } from './index.namespace';
-export default Detective;
+import{Detective}from'./index.namespace';export default Detective;

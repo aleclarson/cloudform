@@ -1,2 +1,1 @@
-import { IoTEvents } from './index.namespace';
-export default IoTEvents;
+import{IoTEvents}from'./index.namespace';export default IoTEvents;

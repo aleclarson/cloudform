@@ -1,2 +1,1 @@
-import { GroundStation } from './index.namespace';
-export default GroundStation;
+import{GroundStation}from'./index.namespace';export default GroundStation;

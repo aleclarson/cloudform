@@ -1,2 +1,1 @@
-import { CloudTrail } from './index.namespace';
-export default CloudTrail;
+import{CloudTrail}from'./index.namespace';export default CloudTrail;

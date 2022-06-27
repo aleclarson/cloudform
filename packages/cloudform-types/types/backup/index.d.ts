@@ -1,2 +1,1 @@
-import { Backup } from './index.namespace';
-export default Backup;
+import{Backup}from'./index.namespace';export default Backup;

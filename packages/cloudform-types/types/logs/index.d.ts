@@ -1,2 +1,1 @@
-import { Logs } from './index.namespace';
-export default Logs;
+import{Logs}from'./index.namespace';export default Logs;

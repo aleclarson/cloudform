@@ -1,2 +1,1 @@
-import { AppSync } from './index.namespace';
-export default AppSync;
+import{AppSync}from'./index.namespace';export default AppSync;

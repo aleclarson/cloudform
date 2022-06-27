@@ -1,6 +1,6 @@
 {
   "name": "@alloc/cloudform-types",
-  "version": "7.3.0",
+  "version": "7.4.0",
   "description": "TypeScript AWS CloudFormation template types - used by cloudform",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc --declaration",
     "generate": "ts-node --project tsconfig.json generator/generator.ts",
-    "minify": "bucket-runner types/**/*.js -- uglifyjs {files} -c -o {files} && node ./dtsMinify types/**/*.d.ts"
+    "minify": "bucket-runner --partition-size 1 --concurrency 1 --no-resolve-files types/**/*.js -- uglifyjs {files} -c -o {files} && node ./dtsMinify types/**/*.d.ts"
   },
   "keywords": [
     "cloudformation",

@@ -1,2 +1,1 @@
-import { S3 } from './index.namespace';
-export default S3;
+import{S3}from'./index.namespace';export default S3;

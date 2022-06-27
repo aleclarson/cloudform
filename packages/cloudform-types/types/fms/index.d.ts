@@ -1,2 +1,1 @@
-import { FMS } from './index.namespace';
-export default FMS;
+import{FMS}from'./index.namespace';export default FMS;

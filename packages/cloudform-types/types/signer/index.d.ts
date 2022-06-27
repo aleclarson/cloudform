@@ -1,2 +1,1 @@
-import { Signer } from './index.namespace';
-export default Signer;
+import{Signer}from'./index.namespace';export default Signer;

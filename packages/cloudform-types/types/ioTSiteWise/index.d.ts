@@ -1,2 +1,1 @@
-import { IoTSiteWise } from './index.namespace';
-export default IoTSiteWise;
+import{IoTSiteWise}from'./index.namespace';export default IoTSiteWise;

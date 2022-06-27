@@ -1,2 +1,1 @@
-import { ServiceCatalog } from './index.namespace';
-export default ServiceCatalog;
+import{ServiceCatalog}from'./index.namespace';export default ServiceCatalog;

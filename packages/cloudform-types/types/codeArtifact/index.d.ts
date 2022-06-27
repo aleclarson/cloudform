@@ -1,2 +1,1 @@
-import { CodeArtifact } from './index.namespace';
-export default CodeArtifact;
+import{CodeArtifact}from'./index.namespace';export default CodeArtifact;

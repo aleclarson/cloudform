@@ -1,2 +1,1 @@
-import { CloudWatch } from './index.namespace';
-export default CloudWatch;
+import{CloudWatch}from'./index.namespace';export default CloudWatch;

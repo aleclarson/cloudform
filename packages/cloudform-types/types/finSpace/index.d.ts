@@ -1,2 +1,1 @@
-import { FinSpace } from './index.namespace';
-export default FinSpace;
+import{FinSpace}from'./index.namespace';export default FinSpace;

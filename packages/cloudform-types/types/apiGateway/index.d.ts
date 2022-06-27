@@ -1,2 +1,1 @@
-import { ApiGateway } from './index.namespace';
-export default ApiGateway;
+import{ApiGateway}from'./index.namespace';export default ApiGateway;

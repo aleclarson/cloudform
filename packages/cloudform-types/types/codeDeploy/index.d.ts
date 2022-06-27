@@ -1,2 +1,1 @@
-import { CodeDeploy } from './index.namespace';
-export default CodeDeploy;
+import{CodeDeploy}from'./index.namespace';export default CodeDeploy;

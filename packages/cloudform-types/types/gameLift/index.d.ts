@@ -1,2 +1,1 @@
-import { GameLift } from './index.namespace';
-export default GameLift;
+import{GameLift}from'./index.namespace';export default GameLift;

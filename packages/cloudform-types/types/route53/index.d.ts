@@ -1,2 +1,1 @@
-import { Route53 } from './index.namespace';
-export default Route53;
+import{Route53}from'./index.namespace';export default Route53;

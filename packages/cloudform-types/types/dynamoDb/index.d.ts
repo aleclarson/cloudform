@@ -1,2 +1,1 @@
-import { DynamoDB } from './index.namespace';
-export default DynamoDB;
+import{DynamoDB}from'./index.namespace';export default DynamoDB;

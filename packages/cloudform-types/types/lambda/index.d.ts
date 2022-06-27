@@ -1,2 +1,1 @@
-import { Lambda } from './index.namespace';
-export default Lambda;
+import{Lambda}from'./index.namespace';export default Lambda;

@@ -1,2 +1,1 @@
-import { Pinpoint } from './index.namespace';
-export default Pinpoint;
+import{Pinpoint}from'./index.namespace';export default Pinpoint;

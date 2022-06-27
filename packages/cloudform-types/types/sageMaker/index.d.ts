@@ -1,2 +1,1 @@
-import { SageMaker } from './index.namespace';
-export default SageMaker;
+import{SageMaker}from'./index.namespace';export default SageMaker;

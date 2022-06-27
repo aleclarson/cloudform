@@ -1,2 +1,1 @@
-import { ServiceCatalogAppRegistry } from './index.namespace';
-export default ServiceCatalogAppRegistry;
+import{ServiceCatalogAppRegistry}from'./index.namespace';export default ServiceCatalogAppRegistry;

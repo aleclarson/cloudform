@@ -1,2 +1,1 @@
-import { CodeStarConnections } from './index.namespace';
-export default CodeStarConnections;
+import{CodeStarConnections}from'./index.namespace';export default CodeStarConnections;

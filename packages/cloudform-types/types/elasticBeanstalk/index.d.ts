@@ -1,2 +1,1 @@
-import { ElasticBeanstalk } from './index.namespace';
-export default ElasticBeanstalk;
+import{ElasticBeanstalk}from'./index.namespace';export default ElasticBeanstalk;

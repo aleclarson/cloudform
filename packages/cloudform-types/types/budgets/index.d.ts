@@ -1,2 +1,1 @@
-import { Budgets } from './index.namespace';
-export default Budgets;
+import{Budgets}from'./index.namespace';export default Budgets;

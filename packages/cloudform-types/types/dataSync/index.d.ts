@@ -1,2 +1,1 @@
-import { DataSync } from './index.namespace';
-export default DataSync;
+import{DataSync}from'./index.namespace';export default DataSync;

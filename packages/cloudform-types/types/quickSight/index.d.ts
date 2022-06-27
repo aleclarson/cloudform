@@ -1,2 +1,1 @@
-import { QuickSight } from './index.namespace';
-export default QuickSight;
+import{QuickSight}from'./index.namespace';export default QuickSight;

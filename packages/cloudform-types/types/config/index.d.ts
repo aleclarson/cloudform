@@ -1,2 +1,1 @@
-import { Config } from './index.namespace';
-export default Config;
+import{Config}from'./index.namespace';export default Config;

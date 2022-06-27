@@ -1,9 +1,1 @@
-import { ResourceBase } from '../resource';
-import { Value } from '../dataTypes';
-export interface ThingPrincipalAttachmentProperties {
-    Principal: Value<string>;
-    ThingName: Value<string>;
-}
-export default class ThingPrincipalAttachment extends ResourceBase<ThingPrincipalAttachmentProperties> {
-    constructor(properties: ThingPrincipalAttachmentProperties);
-}
+import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface ThingPrincipalAttachmentProperties{Principal:Value<string>;ThingName:Value<string>;}export default class ThingPrincipalAttachment extends ResourceBase<ThingPrincipalAttachmentProperties>{constructor(properties:ThingPrincipalAttachmentProperties);}

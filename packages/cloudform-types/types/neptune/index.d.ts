@@ -1,2 +1,1 @@
-import { Neptune } from './index.namespace';
-export default Neptune;
+import{Neptune}from'./index.namespace';export default Neptune;

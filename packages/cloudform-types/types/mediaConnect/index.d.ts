@@ -1,2 +1,1 @@
-import { MediaConnect } from './index.namespace';
-export default MediaConnect;
+import{MediaConnect}from'./index.namespace';export default MediaConnect;

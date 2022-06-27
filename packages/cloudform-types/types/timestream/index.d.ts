@@ -1,2 +1,1 @@
-import { Timestream } from './index.namespace';
-export default Timestream;
+import{Timestream}from'./index.namespace';export default Timestream;

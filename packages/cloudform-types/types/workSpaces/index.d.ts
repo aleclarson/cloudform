@@ -1,2 +1,1 @@
-import { WorkSpaces } from './index.namespace';
-export default WorkSpaces;
+import{WorkSpaces}from'./index.namespace';export default WorkSpaces;

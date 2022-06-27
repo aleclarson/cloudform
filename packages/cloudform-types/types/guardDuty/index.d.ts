@@ -1,2 +1,1 @@
-import { GuardDuty } from './index.namespace';
-export default GuardDuty;
+import{GuardDuty}from'./index.namespace';export default GuardDuty;

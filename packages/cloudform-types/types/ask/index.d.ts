@@ -1,2 +1,1 @@
-import { ASK } from './index.namespace';
-export default ASK;
+import{ASK}from'./index.namespace';export default ASK;

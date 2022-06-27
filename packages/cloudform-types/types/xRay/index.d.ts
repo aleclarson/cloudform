@@ -1,2 +1,1 @@
-import { XRay } from './index.namespace';
-export default XRay;
+import{XRay}from'./index.namespace';export default XRay;

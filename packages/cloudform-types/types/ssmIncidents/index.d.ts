@@ -1,2 +1,1 @@
-import { SSMIncidents } from './index.namespace';
-export default SSMIncidents;
+import{SSMIncidents}from'./index.namespace';export default SSMIncidents;

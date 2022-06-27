@@ -1,2 +1,1 @@
-import { MediaConvert } from './index.namespace';
-export default MediaConvert;
+import{MediaConvert}from'./index.namespace';export default MediaConvert;

@@ -1,2 +1,1 @@
-import { MSK } from './index.namespace';
-export default MSK;
+import{MSK}from'./index.namespace';export default MSK;

@@ -1,2 +1,1 @@
-import { IoTFleetHub } from './index.namespace';
-export default IoTFleetHub;
+import{IoTFleetHub}from'./index.namespace';export default IoTFleetHub;

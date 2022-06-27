@@ -1,2 +1,1 @@
-import { Elasticsearch } from './index.namespace';
-export default Elasticsearch;
+import{Elasticsearch}from'./index.namespace';export default Elasticsearch;

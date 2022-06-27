@@ -1,2 +1,1 @@
-import { PinpointEmail } from './index.namespace';
-export default PinpointEmail;
+import{PinpointEmail}from'./index.namespace';export default PinpointEmail;

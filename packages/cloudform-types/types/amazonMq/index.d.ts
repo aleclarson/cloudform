@@ -1,2 +1,1 @@
-import { AmazonMQ } from './index.namespace';
-export default AmazonMQ;
+import{AmazonMQ}from'./index.namespace';export default AmazonMQ;

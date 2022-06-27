@@ -1,2 +1,1 @@
-import { MediaPackage } from './index.namespace';
-export default MediaPackage;
+import{MediaPackage}from'./index.namespace';export default MediaPackage;

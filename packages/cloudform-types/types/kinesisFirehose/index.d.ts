@@ -1,2 +1,1 @@
-import { KinesisFirehose } from './index.namespace';
-export default KinesisFirehose;
+import{KinesisFirehose}from'./index.namespace';export default KinesisFirehose;

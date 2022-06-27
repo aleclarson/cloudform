@@ -1,2 +1,1 @@
-import { IoTThingsGraph } from './index.namespace';
-export default IoTThingsGraph;
+import{IoTThingsGraph}from'./index.namespace';export default IoTThingsGraph;

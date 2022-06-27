@@ -1,2 +1,1 @@
-import { KinesisAnalytics } from './index.namespace';
-export default KinesisAnalytics;
+import{KinesisAnalytics}from'./index.namespace';export default KinesisAnalytics;
