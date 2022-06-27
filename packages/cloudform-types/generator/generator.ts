@@ -194,7 +194,7 @@ ${propertiesEntries(properties)
   .join('\n')}
 }
 
-export default class ${typeName} extends ResourceBase<Properties> {
+class ${typeName} extends ResourceBase<Properties> {
 ${Object.keys(innerTypes)
   .filter(innerType => !!innerTypes[innerType].Properties)
   .map(innerTypeFullName => {
@@ -259,13 +259,14 @@ function generateFile(
   )
 
   const template = `${fileHeader}
-   
+
 import {${resourceImports.join(', ')}} from '../resource'
 import {Value, List} from '../dataTypes'
 
 ${innerTypesTemplates.join('\n\n')}
 
 ${generatedClass}
+export { ${resourceName} as R }
 `
 
   if (!fs.existsSync(`./types/${adjustedCamelCase(namespace)}`)) {
@@ -279,26 +280,42 @@ ${generatedClass}
   )
 }
 
+type Resource = {
+  typeName: string
+  innerTypes: string[]
+}
+
 function generateIndexNamespaceFile(
   fileHeader: string,
   namespace: string,
-  resourceTypeNames: string[]
+  resources: Resource[]
 ): void {
-  const imports = resourceTypeNames.map(
-    typeName => `import ${typeName}_ from './${camelCase(typeName)}'`
+  const ident = (i: number) => `_${i.toString(16)}`
+  const imports = resources.map(
+    (r, i) => `import * as ${ident(i)} from './${camelCase(r.typeName)}'`
   )
 
   const template = `${fileHeader}
-   
-${imports.join('\n')} 
+
+${imports.join('\n')}
 
 export namespace ${namespace} {
-${resourceTypeNames
-  .map(typeName => `  export const ${typeName} = ${typeName}_`)
+${resources
+  .map((r, i) => `  export const ${r.typeName} = ${ident(i)}.R`)
   .join('\n')}
 
-${resourceTypeNames
-  .map(typeName => `  export type ${typeName} = ${typeName}_`)
+${resources
+  .map((r, i) => `  export type ${r.typeName} = ${ident(i)}.R`)
+  .join('\n')}
+
+${resources
+  .filter(r => r.innerTypes.length)
+  .map(
+    (r, i) =>
+      `  export namespace ${r.typeName} {\n    ${r.innerTypes
+        .map(typeName => `export type ${typeName} = ${ident(i)}.${typeName}`)
+        .join('\n    ')}\n  }`
+  )
   .join('\n')}
 }
 `
@@ -315,7 +332,7 @@ function generateIndexReexportFile(
   namespace: string
 ): void {
   const template = `${fileHeader}
-   
+
 import {${namespace}} from './index.namespace'
 
 export default ${namespace}
@@ -330,22 +347,19 @@ export default ${namespace}
 
 function generateGrandIndexFile(
   fileHeader: string,
-  indexContent: { [key: string]: string[] }
+  indexContent: { [key: string]: Resource[] }
 ): void {
   const lines: string[] = []
 
-  forEach(
-    indexContent,
-    (dependentResourceTypeNames: string[], namespace: string) => {
-      lines.push(`import ${namespace} from './${adjustedCamelCase(namespace)}'`)
-      lines.push(`export {${namespace}}`)
-      lines.push('')
-    }
-  )
+  forEach(indexContent, (_, namespace: string) => {
+    lines.push(`import ${namespace} from './${adjustedCamelCase(namespace)}'`)
+    lines.push(`export {${namespace}}`)
+    lines.push('')
+  })
 
   const template = `${fileHeader}
-   
-${lines.join('\n')} 
+
+${lines.join('\n')}
 
 export default {
 ${Object.keys(indexContent)
@@ -374,7 +388,7 @@ function generateFilesFromSchema(
   schemaVersions: { [key: string]: string }
 ) {
   const regionsUsed = new Set<string>()
-  const indexContent: { [key: string]: string[] } = {}
+  const indexContent: { [key: string]: Resource[] } = {}
 
   forEach(
     schema.ResourceTypes,
@@ -397,7 +411,12 @@ function generateFilesFromSchema(
       ) as ResourceTypeMap
 
       indexContent[namespace] = indexContent[namespace] || []
-      indexContent[namespace].push(typeName)
+      indexContent[namespace].push({
+        typeName,
+        innerTypes: Object.keys(resourcePropertyTypes).map(name =>
+          name.slice(name.lastIndexOf('.') + 1)
+        ),
+      })
 
       generateFile(
         fileHeader,
@@ -411,8 +430,8 @@ function generateFilesFromSchema(
 
   const indexFileHeader = generateFileHeader([...regionsUsed], schemaVersions)
 
-  forEach(indexContent, (resourceTypeNames: string[], namespace: string) => {
-    generateIndexNamespaceFile(indexFileHeader, namespace, resourceTypeNames)
+  forEach(indexContent, (resources: Resource[], namespace: string) => {
+    generateIndexNamespaceFile(indexFileHeader, namespace, resources)
     generateIndexReexportFile(indexFileHeader, namespace)
   })
 
