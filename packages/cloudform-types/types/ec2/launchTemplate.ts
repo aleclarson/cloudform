@@ -1,22 +1,22 @@
 /* Generated from: 
- * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-3 (https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-3 (https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
+
 import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
 
@@ -39,6 +39,15 @@ export class SpotOptions {
     ValidUntil?: Value<string>
 
     constructor(properties: SpotOptions) {
+        Object.assign(this, properties)
+    }
+}
+
+export class AcceleratorTotalMemoryMiB {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: AcceleratorTotalMemoryMiB) {
         Object.assign(this, properties)
     }
 }
@@ -75,6 +84,15 @@ export class Ebs {
     }
 }
 
+export class BaselineEbsBandwidthMbps {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: BaselineEbsBandwidthMbps) {
+        Object.assign(this, properties)
+    }
+}
+
 export class EnclaveOptions {
     Enabled?: Value<boolean>
 
@@ -88,6 +106,7 @@ export class LaunchTemplateData {
     TagSpecifications?: List<TagSpecification>
     UserData?: Value<string>
     BlockDeviceMappings?: List<BlockDeviceMapping>
+    MaintenanceOptions?: MaintenanceOptions
     IamInstanceProfile?: IamInstanceProfile
     KernelId?: Value<string>
     EbsOptimized?: Value<boolean>
@@ -103,11 +122,14 @@ export class LaunchTemplateData {
     MetadataOptions?: MetadataOptions
     LicenseSpecifications?: List<LicenseSpecification>
     InstanceInitiatedShutdownBehavior?: Value<string>
+    DisableApiStop?: Value<boolean>
     CpuOptions?: CpuOptions
+    PrivateDnsNameOptions?: PrivateDnsNameOptions
     SecurityGroupIds?: List<Value<string>>
     KeyName?: Value<string>
     DisableApiTermination?: Value<boolean>
     InstanceMarketOptions?: InstanceMarketOptions
+    InstanceRequirements?: InstanceRequirements
     RamDiskId?: Value<string>
     CapacityReservationSpecification?: CapacityReservationSpecification
     CreditSpecification?: CreditSpecification
@@ -117,9 +139,19 @@ export class LaunchTemplateData {
     }
 }
 
+export class MaintenanceOptions {
+    AutoRecovery?: Value<string>
+
+    constructor(properties: MaintenanceOptions) {
+        Object.assign(this, properties)
+    }
+}
+
 export class MetadataOptions {
     HttpPutResponseHopLimit?: Value<number>
     HttpTokens?: Value<string>
+    HttpProtocolIpv6?: Value<string>
+    InstanceMetadataTags?: Value<string>
     HttpEndpoint?: Value<string>
 
     constructor(properties: MetadataOptions) {
@@ -132,6 +164,15 @@ export class CapacityReservationSpecification {
     CapacityReservationTarget?: CapacityReservationTarget
 
     constructor(properties: CapacityReservationSpecification) {
+        Object.assign(this, properties)
+    }
+}
+
+export class NetworkInterfaceCount {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: NetworkInterfaceCount) {
         Object.assign(this, properties)
     }
 }
@@ -163,6 +204,44 @@ export class PrivateIpAdd {
     }
 }
 
+export class PrivateDnsNameOptions {
+    EnableResourceNameDnsARecord?: Value<boolean>
+    HostnameType?: Value<string>
+    EnableResourceNameDnsAAAARecord?: Value<boolean>
+
+    constructor(properties: PrivateDnsNameOptions) {
+        Object.assign(this, properties)
+    }
+}
+
+export class InstanceRequirements {
+    LocalStorageTypes?: List<Value<string>>
+    InstanceGenerations?: List<Value<string>>
+    NetworkInterfaceCount?: NetworkInterfaceCount
+    MemoryGiBPerVCpu?: MemoryGiBPerVCpu
+    AcceleratorTypes?: List<Value<string>>
+    VCpuCount?: VCpuCount
+    ExcludedInstanceTypes?: List<Value<string>>
+    AcceleratorManufacturers?: List<Value<string>>
+    LocalStorage?: Value<string>
+    CpuManufacturers?: List<Value<string>>
+    AcceleratorCount?: AcceleratorCount
+    BareMetal?: Value<string>
+    RequireHibernateSupport?: Value<boolean>
+    SpotMaxPricePercentageOverLowestPrice?: Value<number>
+    BaselineEbsBandwidthMbps?: BaselineEbsBandwidthMbps
+    OnDemandMaxPricePercentageOverLowestPrice?: Value<number>
+    AcceleratorNames?: List<Value<string>>
+    AcceleratorTotalMemoryMiB?: AcceleratorTotalMemoryMiB
+    BurstablePerformance?: Value<string>
+    MemoryMiB?: MemoryMiB
+    TotalLocalStorageGB?: TotalLocalStorageGB
+
+    constructor(properties: InstanceRequirements) {
+        Object.assign(this, properties)
+    }
+}
+
 export class IamInstanceProfile {
     Arn?: Value<string>
     Name?: Value<string>
@@ -188,6 +267,15 @@ export class HibernationOptions {
     }
 }
 
+export class VCpuCount {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: VCpuCount) {
+        Object.assign(this, properties)
+    }
+}
+
 export class InstanceMarketOptions {
     SpotOptions?: SpotOptions
     MarketType?: Value<string>
@@ -201,6 +289,15 @@ export class CreditSpecification {
     CpuCredits?: Value<string>
 
     constructor(properties: CreditSpecification) {
+        Object.assign(this, properties)
+    }
+}
+
+export class TotalLocalStorageGB {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: TotalLocalStorageGB) {
         Object.assign(this, properties)
     }
 }
@@ -228,6 +325,22 @@ export class Placement {
     }
 }
 
+export class Ipv4PrefixSpecification {
+    Ipv4Prefix?: Value<string>
+
+    constructor(properties: Ipv4PrefixSpecification) {
+        Object.assign(this, properties)
+    }
+}
+
+export class Ipv6PrefixSpecification {
+    Ipv6Prefix?: Value<string>
+
+    constructor(properties: Ipv6PrefixSpecification) {
+        Object.assign(this, properties)
+    }
+}
+
 export class Ipv6Add {
     Ipv6Address?: Value<string>
 
@@ -241,7 +354,11 @@ export class NetworkInterface {
     PrivateIpAddress?: Value<string>
     PrivateIpAddresses?: List<PrivateIpAdd>
     SecondaryPrivateIpAddressCount?: Value<number>
+    Ipv6PrefixCount?: Value<number>
+    Ipv4Prefixes?: List<Ipv4PrefixSpecification>
     DeviceIndex?: Value<number>
+    Ipv4PrefixCount?: Value<number>
+    Ipv6Prefixes?: List<Ipv6PrefixSpecification>
     SubnetId?: Value<string>
     Ipv6Addresses?: List<Ipv6Add>
     AssociatePublicIpAddress?: Value<boolean>
@@ -254,6 +371,33 @@ export class NetworkInterface {
     DeleteOnTermination?: Value<boolean>
 
     constructor(properties: NetworkInterface) {
+        Object.assign(this, properties)
+    }
+}
+
+export class AcceleratorCount {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: AcceleratorCount) {
+        Object.assign(this, properties)
+    }
+}
+
+export class MemoryMiB {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: MemoryMiB) {
+        Object.assign(this, properties)
+    }
+}
+
+export class MemoryGiBPerVCpu {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: MemoryGiBPerVCpu) {
         Object.assign(this, properties)
     }
 }
@@ -278,36 +422,49 @@ export class LaunchTemplateTagSpecification {
 
 export interface LaunchTemplateProperties {
     LaunchTemplateName?: Value<string>
-    LaunchTemplateData?: LaunchTemplateData
+    LaunchTemplateData: LaunchTemplateData
     TagSpecifications?: List<LaunchTemplateTagSpecification>
 }
 
 export default class LaunchTemplate extends ResourceBase<LaunchTemplateProperties> {
     static BlockDeviceMapping = BlockDeviceMapping
     static SpotOptions = SpotOptions
+    static AcceleratorTotalMemoryMiB = AcceleratorTotalMemoryMiB
     static ElasticGpuSpecification = ElasticGpuSpecification
     static TagSpecification = TagSpecification
     static Ebs = Ebs
+    static BaselineEbsBandwidthMbps = BaselineEbsBandwidthMbps
     static EnclaveOptions = EnclaveOptions
     static LaunchTemplateData = LaunchTemplateData
+    static MaintenanceOptions = MaintenanceOptions
     static MetadataOptions = MetadataOptions
     static CapacityReservationSpecification = CapacityReservationSpecification
+    static NetworkInterfaceCount = NetworkInterfaceCount
     static CapacityReservationTarget = CapacityReservationTarget
     static CpuOptions = CpuOptions
     static PrivateIpAdd = PrivateIpAdd
+    static PrivateDnsNameOptions = PrivateDnsNameOptions
+    static InstanceRequirements = InstanceRequirements
     static IamInstanceProfile = IamInstanceProfile
     static LicenseSpecification = LicenseSpecification
     static HibernationOptions = HibernationOptions
+    static VCpuCount = VCpuCount
     static InstanceMarketOptions = InstanceMarketOptions
     static CreditSpecification = CreditSpecification
+    static TotalLocalStorageGB = TotalLocalStorageGB
     static Monitoring = Monitoring
     static Placement = Placement
+    static Ipv4PrefixSpecification = Ipv4PrefixSpecification
+    static Ipv6PrefixSpecification = Ipv6PrefixSpecification
     static Ipv6Add = Ipv6Add
     static NetworkInterface = NetworkInterface
+    static AcceleratorCount = AcceleratorCount
+    static MemoryMiB = MemoryMiB
+    static MemoryGiBPerVCpu = MemoryGiBPerVCpu
     static LaunchTemplateElasticInferenceAccelerator = LaunchTemplateElasticInferenceAccelerator
     static LaunchTemplateTagSpecification = LaunchTemplateTagSpecification
 
-    constructor(properties?: LaunchTemplateProperties) {
-        super('AWS::EC2::LaunchTemplate', properties || {})
+    constructor(properties: LaunchTemplateProperties) {
+        super('AWS::EC2::LaunchTemplate', properties)
     }
 }

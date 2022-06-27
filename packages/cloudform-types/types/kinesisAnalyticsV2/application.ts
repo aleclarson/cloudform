@@ -1,23 +1,29 @@
 /* Generated from: 
- * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-3 (https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
+
 import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class CustomArtifactConfiguration {
+    ArtifactType!: Value<string>
     MavenReference?: MavenReference
     S3ContentLocation?: S3ContentLocation
-    ArtifactType!: Value<string>
 
     constructor(properties: CustomArtifactConfiguration) {
         Object.assign(this, properties)
@@ -25,8 +31,8 @@ export class CustomArtifactConfiguration {
 }
 
 export class S3ContentLocation {
-    BucketARN?: Value<string>
-    FileKey?: Value<string>
+    BucketARN!: Value<string>
+    FileKey!: Value<string>
     ObjectVersion?: Value<string>
 
     constructor(properties: S3ContentLocation) {
@@ -43,8 +49,8 @@ export class DeployAsApplicationConfiguration {
 }
 
 export class PropertyGroup {
-    PropertyMap?: {[key: string]: any}
     PropertyGroupId?: Value<string>
+    PropertyMap?: {[key: string]: Value<string>}
 
     constructor(properties: PropertyGroup) {
         Object.assign(this, properties)
@@ -52,8 +58,8 @@ export class PropertyGroup {
 }
 
 export class MappingParameters {
-    JSONMappingParameters?: JSONMappingParameters
     CSVMappingParameters?: CSVMappingParameters
+    JSONMappingParameters?: JSONMappingParameters
 
     constructor(properties: MappingParameters) {
         Object.assign(this, properties)
@@ -70,8 +76,8 @@ export class InputParallelism {
 
 export class FlinkApplicationConfiguration {
     CheckpointConfiguration?: CheckpointConfiguration
-    ParallelismConfiguration?: ParallelismConfiguration
     MonitoringConfiguration?: MonitoringConfiguration
+    ParallelismConfiguration?: ParallelismConfiguration
 
     constructor(properties: FlinkApplicationConfiguration) {
         Object.assign(this, properties)
@@ -120,8 +126,8 @@ export class InputSchema {
 export class ParallelismConfiguration {
     ConfigurationType!: Value<string>
     ParallelismPerKPU?: Value<number>
-    AutoScalingEnabled?: Value<boolean>
     Parallelism?: Value<number>
+    AutoScalingEnabled?: Value<boolean>
 
     constructor(properties: ParallelismConfiguration) {
         Object.assign(this, properties)
@@ -137,8 +143,6 @@ export class MonitoringConfiguration {
         Object.assign(this, properties)
     }
 }
-
-export type CustomArtifactsConfiguration = List<CustomArtifactConfiguration>
 
 export class SqlApplicationConfiguration {
     Inputs?: List<Input>
@@ -157,8 +161,8 @@ export class InputProcessingConfiguration {
 }
 
 export class ApplicationCodeConfiguration {
-    CodeContentType!: Value<string>
     CodeContent!: CodeContent
+    CodeContentType!: Value<string>
 
     constructor(properties: ApplicationCodeConfiguration) {
         Object.assign(this, properties)
@@ -169,7 +173,7 @@ export class ZeppelinApplicationConfiguration {
     CatalogConfiguration?: CatalogConfiguration
     MonitoringConfiguration?: ZeppelinMonitoringConfiguration
     DeployAsApplicationConfiguration?: DeployAsApplicationConfiguration
-    CustomArtifactsConfiguration?: CustomArtifactsConfiguration
+    CustomArtifactsConfiguration?: List<CustomArtifactConfiguration>
 
     constructor(properties: ZeppelinApplicationConfiguration) {
         Object.assign(this, properties)
@@ -178,8 +182,8 @@ export class ZeppelinApplicationConfiguration {
 
 export class MavenReference {
     ArtifactId!: Value<string>
-    Version!: Value<string>
     GroupId!: Value<string>
+    Version!: Value<string>
 
     constructor(properties: MavenReference) {
         Object.assign(this, properties)
@@ -196,9 +200,9 @@ export class KinesisStreamsInput {
 
 export class CheckpointConfiguration {
     ConfigurationType!: Value<string>
+    CheckpointingEnabled?: Value<boolean>
     CheckpointInterval?: Value<number>
     MinPauseBetweenCheckpoints?: Value<number>
-    CheckpointingEnabled?: Value<boolean>
 
     constructor(properties: CheckpointConfiguration) {
         Object.assign(this, properties)
@@ -215,7 +219,7 @@ export class ZeppelinMonitoringConfiguration {
 
 export class S3ContentBaseLocation {
     BucketARN!: Value<string>
-    BasePath!: Value<string>
+    BasePath?: Value<string>
 
     constructor(properties: S3ContentBaseLocation) {
         Object.assign(this, properties)
@@ -232,8 +236,8 @@ export class InputLambdaProcessor {
 
 export class RecordColumn {
     Mapping?: Value<string>
-    SqlType!: Value<string>
     Name!: Value<string>
+    SqlType!: Value<string>
 
     constructor(properties: RecordColumn) {
         Object.assign(this, properties)
@@ -241,8 +245,8 @@ export class RecordColumn {
 }
 
 export class CSVMappingParameters {
-    RecordRowDelimiter!: Value<string>
     RecordColumnDelimiter!: Value<string>
+    RecordRowDelimiter!: Value<string>
 
     constructor(properties: CSVMappingParameters) {
         Object.assign(this, properties)
@@ -250,8 +254,8 @@ export class CSVMappingParameters {
 }
 
 export class RecordFormat {
-    MappingParameters?: MappingParameters
     RecordFormatType!: Value<string>
+    MappingParameters?: MappingParameters
 
     constructor(properties: RecordFormat) {
         Object.assign(this, properties)
@@ -286,11 +290,11 @@ export class CodeContent {
 
 export class ApplicationConfiguration {
     ApplicationCodeConfiguration?: ApplicationCodeConfiguration
+    ApplicationSnapshotConfiguration?: ApplicationSnapshotConfiguration
     EnvironmentProperties?: EnvironmentProperties
     FlinkApplicationConfiguration?: FlinkApplicationConfiguration
     SqlApplicationConfiguration?: SqlApplicationConfiguration
     ZeppelinApplicationConfiguration?: ZeppelinApplicationConfiguration
-    ApplicationSnapshotConfiguration?: ApplicationSnapshotConfiguration
 
     constructor(properties: ApplicationConfiguration) {
         Object.assign(this, properties)
@@ -314,13 +318,13 @@ export class CatalogConfiguration {
 }
 
 export interface ApplicationProperties {
-    ApplicationName?: Value<string>
-    RuntimeEnvironment: Value<string>
-    ApplicationMode?: Value<string>
     ApplicationConfiguration?: ApplicationConfiguration
     ApplicationDescription?: Value<string>
-    Tags?: List<ResourceTag>
+    ApplicationMode?: Value<string>
+    ApplicationName?: Value<string>
+    RuntimeEnvironment: Value<string>
     ServiceExecutionRole: Value<string>
+    Tags?: List<ResourceTag>
 }
 
 export default class Application extends ResourceBase<ApplicationProperties> {

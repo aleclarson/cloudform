@@ -1,12 +1,17 @@
 /* Generated from: 
- * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
+
 import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
 
@@ -15,6 +20,71 @@ export class MetricDimension {
     Value?: Value<number>
 
     constructor(properties: MetricDimension) {
+        Object.assign(this, properties)
+    }
+}
+
+export class InAppMessageButton {
+    Web?: OverrideButtonConfiguration
+    DefaultConfig?: DefaultButtonConfiguration
+    IOS?: OverrideButtonConfiguration
+    Android?: OverrideButtonConfiguration
+
+    constructor(properties: InAppMessageButton) {
+        Object.assign(this, properties)
+    }
+}
+
+export class InAppMessageBodyConfig {
+    Alignment?: Value<string>
+    TextColor?: Value<string>
+    Body?: Value<string>
+
+    constructor(properties: InAppMessageBodyConfig) {
+        Object.assign(this, properties)
+    }
+}
+
+export class InAppMessageContent {
+    BodyConfig?: InAppMessageBodyConfig
+    SecondaryBtn?: InAppMessageButton
+    ImageUrl?: Value<string>
+    PrimaryBtn?: InAppMessageButton
+    HeaderConfig?: InAppMessageHeaderConfig
+    BackgroundColor?: Value<string>
+
+    constructor(properties: InAppMessageContent) {
+        Object.assign(this, properties)
+    }
+}
+
+export class DefaultButtonConfiguration {
+    ButtonAction?: Value<string>
+    BorderRadius?: Value<number>
+    Text?: Value<string>
+    TextColor?: Value<string>
+    Link?: Value<string>
+    BackgroundColor?: Value<string>
+
+    constructor(properties: DefaultButtonConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
+export class CampaignCustomMessage {
+    Data?: Value<string>
+
+    constructor(properties: CampaignCustomMessage) {
+        Object.assign(this, properties)
+    }
+}
+
+export class InAppMessageHeaderConfig {
+    Alignment?: Value<string>
+    Header?: Value<string>
+    TextColor?: Value<string>
+
+    constructor(properties: InAppMessageHeaderConfig) {
         Object.assign(this, properties)
     }
 }
@@ -29,6 +99,17 @@ export class Schedule {
     IsLocalTime?: Value<boolean>
 
     constructor(properties: Schedule) {
+        Object.assign(this, properties)
+    }
+}
+
+export class TemplateConfiguration {
+    SMSTemplate?: Template
+    EmailTemplate?: Template
+    PushTemplate?: Template
+    VoiceTemplate?: Template
+
+    constructor(properties: TemplateConfiguration) {
         Object.assign(this, properties)
     }
 }
@@ -61,11 +142,30 @@ export class Message {
     }
 }
 
+export class CampaignInAppMessage {
+    CustomConfig?: {[key: string]: any}
+    Layout?: Value<string>
+    Content?: List<InAppMessageContent>
+
+    constructor(properties: CampaignInAppMessage) {
+        Object.assign(this, properties)
+    }
+}
+
 export class CampaignEventFilter {
     FilterType?: Value<string>
     Dimensions?: EventDimensions
 
     constructor(properties: CampaignEventFilter) {
+        Object.assign(this, properties)
+    }
+}
+
+export class Template {
+    Version?: Value<string>
+    Name?: Value<string>
+
+    constructor(properties: Template) {
         Object.assign(this, properties)
     }
 }
@@ -87,6 +187,8 @@ export class WriteTreatmentResource {
     TreatmentDescription?: Value<string>
     MessageConfiguration?: MessageConfiguration
     Schedule?: Schedule
+    TemplateConfiguration?: TemplateConfiguration
+    CustomDeliveryConfiguration?: CustomDeliveryConfiguration
     SizePercent?: Value<number>
     TreatmentName?: Value<string>
 
@@ -114,11 +216,30 @@ export class EventDimensions {
     }
 }
 
+export class CustomDeliveryConfiguration {
+    DeliveryUri?: Value<string>
+    EndpointTypes?: List<Value<string>>
+
+    constructor(properties: CustomDeliveryConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
+export class OverrideButtonConfiguration {
+    ButtonAction?: Value<string>
+    Link?: Value<string>
+
+    constructor(properties: OverrideButtonConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
 export class Limits {
     Daily?: Value<number>
     MaximumDuration?: Value<number>
     Total?: Value<number>
     MessagesPerSecond?: Value<number>
+    Session?: Value<number>
 
     constructor(properties: Limits) {
         Object.assign(this, properties)
@@ -138,9 +259,11 @@ export class MessageConfiguration {
     APNSMessage?: Message
     BaiduMessage?: Message
     DefaultMessage?: Message
+    InAppMessage?: CampaignInAppMessage
     EmailMessage?: CampaignEmailMessage
     GCMMessage?: Message
     SMSMessage?: CampaignSmsMessage
+    CustomMessage?: CampaignCustomMessage
     ADMMessage?: Message
 
     constructor(properties: MessageConfiguration) {
@@ -172,15 +295,18 @@ export class CampaignEmailMessage {
 export interface CampaignProperties {
     Description?: Value<string>
     SegmentId: Value<string>
+    Priority?: Value<number>
+    TemplateConfiguration?: TemplateConfiguration
     IsPaused?: Value<boolean>
     AdditionalTreatments?: List<WriteTreatmentResource>
     Name: Value<string>
     SegmentVersion?: Value<number>
     TreatmentDescription?: Value<string>
-    MessageConfiguration: MessageConfiguration
+    MessageConfiguration?: MessageConfiguration
     Limits?: Limits
     HoldoutPercent?: Value<number>
     Schedule: Schedule
+    CustomDeliveryConfiguration?: CustomDeliveryConfiguration
     ApplicationId: Value<string>
     CampaignHook?: CampaignHook
     Tags?: {[key: string]: any}
@@ -189,14 +315,25 @@ export interface CampaignProperties {
 
 export default class Campaign extends ResourceBase<CampaignProperties> {
     static MetricDimension = MetricDimension
+    static InAppMessageButton = InAppMessageButton
+    static InAppMessageBodyConfig = InAppMessageBodyConfig
+    static InAppMessageContent = InAppMessageContent
+    static DefaultButtonConfiguration = DefaultButtonConfiguration
+    static CampaignCustomMessage = CampaignCustomMessage
+    static InAppMessageHeaderConfig = InAppMessageHeaderConfig
     static Schedule = Schedule
+    static TemplateConfiguration = TemplateConfiguration
     static QuietTime = QuietTime
     static Message = Message
+    static CampaignInAppMessage = CampaignInAppMessage
     static CampaignEventFilter = CampaignEventFilter
+    static Template = Template
     static CampaignSmsMessage = CampaignSmsMessage
     static WriteTreatmentResource = WriteTreatmentResource
     static SetDimension = SetDimension
     static EventDimensions = EventDimensions
+    static CustomDeliveryConfiguration = CustomDeliveryConfiguration
+    static OverrideButtonConfiguration = OverrideButtonConfiguration
     static Limits = Limits
     static AttributeDimension = AttributeDimension
     static MessageConfiguration = MessageConfiguration

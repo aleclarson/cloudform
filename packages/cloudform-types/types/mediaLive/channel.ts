@@ -1,20 +1,24 @@
 /* Generated from: 
- * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
+
 import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
 
 export class HlsInputSettings {
+    Scte35Source?: Value<string>
     BufferSegments?: Value<number>
     Retries?: Value<number>
     Bandwidth?: Value<number>
@@ -104,6 +108,15 @@ export class FrameCaptureCdnSettings {
     }
 }
 
+export class NielsenNaesIiNw {
+    CheckDigitString?: Value<string>
+    Sid?: Value<number>
+
+    constructor(properties: NielsenNaesIiNw) {
+        Object.assign(this, properties)
+    }
+}
+
 export class InputLossBehavior {
     InputLossImageColor?: Value<string>
     BlackFrameMsec?: Value<number>
@@ -173,6 +186,7 @@ export class ArchiveCdnSettings {
 }
 
 export class Scte27SourceSettings {
+    OcrLanguage?: Value<string>
     Pid?: Value<number>
 
     constructor(properties: Scte27SourceSettings) {
@@ -514,6 +528,7 @@ export class AudioSelectorSettings {
     AudioPidSelection?: AudioPidSelection
     AudioLanguageSelection?: AudioLanguageSelection
     AudioTrackSelection?: AudioTrackSelection
+    AudioHlsRenditionSelection?: AudioHlsRenditionSelection
 
     constructor(properties: AudioSelectorSettings) {
         Object.assign(this, properties)
@@ -588,6 +603,7 @@ export class HlsGroupSettings {
     KeyFormat?: Value<string>
     IvInManifest?: Value<string>
     BaseUrlContent1?: Value<string>
+    ProgramDateTimeClock?: Value<string>
     ManifestCompression?: Value<string>
     ManifestDurationFormat?: Value<string>
     TimedMetadataId3Period?: Value<number>
@@ -692,7 +708,7 @@ export class DvbNitSettings {
 }
 
 export class WebvttDestinationSettings {
-
+    StyleControl?: Value<string>
 
     constructor(properties: WebvttDestinationSettings) {
         Object.assign(this, properties)
@@ -998,6 +1014,16 @@ export class VideoSelectorProgramId {
     }
 }
 
+export class NielsenWatermarksSettings {
+    NielsenDistributionType?: Value<string>
+    NielsenCbetSettings?: NielsenCBET
+    NielsenNaesIiNwSettings?: NielsenNaesIiNw
+
+    constructor(properties: NielsenWatermarksSettings) {
+        Object.assign(this, properties)
+    }
+}
+
 export class InputAttachment {
     InputAttachmentName?: Value<string>
     InputId?: Value<string>
@@ -1031,6 +1057,16 @@ export class PassThroughSettings {
 
 
     constructor(properties: PassThroughSettings) {
+        Object.assign(this, properties)
+    }
+}
+
+export class NielsenCBET {
+    CbetCheckDigitString?: Value<string>
+    CbetStepaside?: Value<string>
+    Csid?: Value<string>
+
+    constructor(properties: NielsenCBET) {
         Object.assign(this, properties)
     }
 }
@@ -1138,6 +1174,15 @@ export class H265ColorSpaceSettings {
     }
 }
 
+export class AudioHlsRenditionSelection {
+    GroupId?: Value<string>
+    Name?: Value<string>
+
+    constructor(properties: AudioHlsRenditionSelection) {
+        Object.assign(this, properties)
+    }
+}
+
 export class EmbeddedDestinationSettings {
 
 
@@ -1156,6 +1201,7 @@ export class AvailBlanking {
 }
 
 export class InputSettings {
+    Scte35Pid?: Value<number>
     DeblockFilter?: Value<string>
     FilterStrength?: Value<number>
     InputFilter?: Value<string>
@@ -1178,6 +1224,14 @@ export class AudioNormalizationSettings {
     AlgorithmControl?: Value<string>
 
     constructor(properties: AudioNormalizationSettings) {
+        Object.assign(this, properties)
+    }
+}
+
+export class AudioWatermarkSettings {
+    NielsenWatermarksSettings?: NielsenWatermarksSettings
+
+    constructor(properties: AudioWatermarkSettings) {
         Object.assign(this, properties)
     }
 }
@@ -1226,6 +1280,7 @@ export class CaptionLanguageMapping {
 }
 
 export class DvbSubSourceSettings {
+    OcrLanguage?: Value<string>
     Pid?: Value<number>
 
     constructor(properties: DvbSubSourceSettings) {
@@ -1380,6 +1435,7 @@ export class AudioDescription {
     AudioTypeControl?: Value<string>
     CodecSettings?: AudioCodecSettings
     Name?: Value<string>
+    AudioWatermarkingSettings?: AudioWatermarkSettings
 
     constructor(properties: AudioDescription) {
         Object.assign(this, properties)
@@ -1703,6 +1759,7 @@ export default class Channel extends ResourceBase<ChannelProperties> {
     static FrameCaptureSettings = FrameCaptureSettings
     static MotionGraphicsSettings = MotionGraphicsSettings
     static FrameCaptureCdnSettings = FrameCaptureCdnSettings
+    static NielsenNaesIiNw = NielsenNaesIiNw
     static InputLossBehavior = InputLossBehavior
     static MultiplexProgramChannelDestinationSettings = MultiplexProgramChannelDestinationSettings
     static HlsCdnSettings = HlsCdnSettings
@@ -1778,10 +1835,12 @@ export default class Channel extends ResourceBase<ChannelProperties> {
     static RawSettings = RawSettings
     static DvbSdtSettings = DvbSdtSettings
     static VideoSelectorProgramId = VideoSelectorProgramId
+    static NielsenWatermarksSettings = NielsenWatermarksSettings
     static InputAttachment = InputAttachment
     static InputChannelLevel = InputChannelLevel
     static StandardHlsSettings = StandardHlsSettings
     static PassThroughSettings = PassThroughSettings
+    static NielsenCBET = NielsenCBET
     static ArchiveContainerSettings = ArchiveContainerSettings
     static EmbeddedSourceSettings = EmbeddedSourceSettings
     static InputSpecification = InputSpecification
@@ -1792,10 +1851,12 @@ export default class Channel extends ResourceBase<ChannelProperties> {
     static MediaPackageGroupSettings = MediaPackageGroupSettings
     static MultiplexOutputSettings = MultiplexOutputSettings
     static H265ColorSpaceSettings = H265ColorSpaceSettings
+    static AudioHlsRenditionSelection = AudioHlsRenditionSelection
     static EmbeddedDestinationSettings = EmbeddedDestinationSettings
     static AvailBlanking = AvailBlanking
     static InputSettings = InputSettings
     static AudioNormalizationSettings = AudioNormalizationSettings
+    static AudioWatermarkSettings = AudioWatermarkSettings
     static MultiplexGroupSettings = MultiplexGroupSettings
     static InputLossFailoverSettings = InputLossFailoverSettings
     static AudioSelector = AudioSelector

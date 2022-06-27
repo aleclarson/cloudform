@@ -1,11 +1,11 @@
 /* Generated from: 
- * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
+
 import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
 
@@ -80,6 +80,15 @@ export class CodeConfigurationValues {
     }
 }
 
+export class ServiceObservabilityConfiguration {
+    ObservabilityEnabled!: Value<boolean>
+    ObservabilityConfigurationArn?: Value<string>
+
+    constructor(properties: ServiceObservabilityConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
 export class SourceCodeVersion {
     Type!: Value<string>
     Value!: Value<string>
@@ -95,6 +104,23 @@ export class ImageRepository {
     ImageRepositoryType!: Value<string>
 
     constructor(properties: ImageRepository) {
+        Object.assign(this, properties)
+    }
+}
+
+export class NetworkConfiguration {
+    EgressConfiguration!: EgressConfiguration
+
+    constructor(properties: NetworkConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
+export class EgressConfiguration {
+    EgressType!: Value<string>
+    VpcConnectorArn?: Value<string>
+
+    constructor(properties: EgressConfiguration) {
         Object.assign(this, properties)
     }
 }
@@ -136,7 +162,9 @@ export interface ServiceProperties {
     Tags?: List<ResourceTag>
     EncryptionConfiguration?: EncryptionConfiguration
     HealthCheckConfiguration?: HealthCheckConfiguration
+    ObservabilityConfiguration?: ServiceObservabilityConfiguration
     AutoScalingConfigurationArn?: Value<string>
+    NetworkConfiguration?: NetworkConfiguration
 }
 
 export default class Service extends ResourceBase<ServiceProperties> {
@@ -147,8 +175,11 @@ export default class Service extends ResourceBase<ServiceProperties> {
     static EncryptionConfiguration = EncryptionConfiguration
     static HealthCheckConfiguration = HealthCheckConfiguration
     static CodeConfigurationValues = CodeConfigurationValues
+    static ServiceObservabilityConfiguration = ServiceObservabilityConfiguration
     static SourceCodeVersion = SourceCodeVersion
     static ImageRepository = ImageRepository
+    static NetworkConfiguration = NetworkConfiguration
+    static EgressConfiguration = EgressConfiguration
     static SourceConfiguration = SourceConfiguration
     static CodeRepository = CodeRepository
     static CodeConfiguration = CodeConfiguration

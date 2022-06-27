@@ -1,22 +1,22 @@
 /* Generated from: 
- * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-3 (https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-3 (https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
+
 import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
 
@@ -33,6 +33,14 @@ export class InputFormatConfiguration {
     Deserializer?: Deserializer
 
     constructor(properties: InputFormatConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
+export class AmazonopensearchserviceRetryOptions {
+    DurationInSeconds?: Value<number>
+
+    constructor(properties: AmazonopensearchserviceRetryOptions) {
         Object.assign(this, properties)
     }
 }
@@ -105,6 +113,26 @@ export class HttpEndpointConfiguration {
     }
 }
 
+export class AmazonopensearchserviceDestinationConfiguration {
+    BufferingHints?: AmazonopensearchserviceBufferingHints
+    CloudWatchLoggingOptions?: CloudWatchLoggingOptions
+    DomainARN?: Value<string>
+    IndexName!: Value<string>
+    IndexRotationPeriod?: Value<string>
+    ProcessingConfiguration?: ProcessingConfiguration
+    RetryOptions?: AmazonopensearchserviceRetryOptions
+    RoleARN!: Value<string>
+    S3BackupMode?: Value<string>
+    S3Configuration!: S3DestinationConfiguration
+    ClusterEndpoint?: Value<string>
+    TypeName?: Value<string>
+    VpcConfiguration?: VpcConfiguration
+
+    constructor(properties: AmazonopensearchserviceDestinationConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
 export class Serializer {
     OrcSerDe?: OrcSerDe
     ParquetSerDe?: ParquetSerDe
@@ -130,6 +158,15 @@ export class OpenXJsonSerDe {
     ConvertDotsInJsonKeysToUnderscores?: Value<boolean>
 
     constructor(properties: OpenXJsonSerDe) {
+        Object.assign(this, properties)
+    }
+}
+
+export class DynamicPartitioningConfiguration {
+    Enabled?: Value<boolean>
+    RetryOptions?: RetryOptions
+
+    constructor(properties: DynamicPartitioningConfiguration) {
         Object.assign(this, properties)
     }
 }
@@ -209,6 +246,15 @@ export class ProcessorParameter {
     ParameterValue!: Value<string>
 
     constructor(properties: ProcessorParameter) {
+        Object.assign(this, properties)
+    }
+}
+
+export class AmazonopensearchserviceBufferingHints {
+    IntervalInSeconds?: Value<number>
+    SizeInMBs?: Value<number>
+
+    constructor(properties: AmazonopensearchserviceBufferingHints) {
         Object.assign(this, properties)
     }
 }
@@ -344,6 +390,7 @@ export class ExtendedS3DestinationConfiguration {
     CloudWatchLoggingOptions?: CloudWatchLoggingOptions
     CompressionFormat?: Value<string>
     DataFormatConversionConfiguration?: DataFormatConversionConfiguration
+    DynamicPartitioningConfiguration?: DynamicPartitioningConfiguration
     EncryptionConfiguration?: EncryptionConfiguration
     ErrorOutputPrefix?: Value<string>
     Prefix?: Value<string>
@@ -405,6 +452,7 @@ export interface DeliveryStreamProperties {
     DeliveryStreamName?: Value<string>
     DeliveryStreamType?: Value<string>
     ElasticsearchDestinationConfiguration?: ElasticsearchDestinationConfiguration
+    AmazonopensearchserviceDestinationConfiguration?: AmazonopensearchserviceDestinationConfiguration
     ExtendedS3DestinationConfiguration?: ExtendedS3DestinationConfiguration
     KinesisStreamSourceConfiguration?: KinesisStreamSourceConfiguration
     RedshiftDestinationConfiguration?: RedshiftDestinationConfiguration
@@ -417,6 +465,7 @@ export interface DeliveryStreamProperties {
 export default class DeliveryStream extends ResourceBase<DeliveryStreamProperties> {
     static EncryptionConfiguration = EncryptionConfiguration
     static InputFormatConfiguration = InputFormatConfiguration
+    static AmazonopensearchserviceRetryOptions = AmazonopensearchserviceRetryOptions
     static HiveJsonSerDe = HiveJsonSerDe
     static Processor = Processor
     static DataFormatConversionConfiguration = DataFormatConversionConfiguration
@@ -424,9 +473,11 @@ export default class DeliveryStream extends ResourceBase<DeliveryStreamPropertie
     static SplunkRetryOptions = SplunkRetryOptions
     static HttpEndpointRequestConfiguration = HttpEndpointRequestConfiguration
     static HttpEndpointConfiguration = HttpEndpointConfiguration
+    static AmazonopensearchserviceDestinationConfiguration = AmazonopensearchserviceDestinationConfiguration
     static Serializer = Serializer
     static CopyCommand = CopyCommand
     static OpenXJsonSerDe = OpenXJsonSerDe
+    static DynamicPartitioningConfiguration = DynamicPartitioningConfiguration
     static OrcSerDe = OrcSerDe
     static ElasticsearchBufferingHints = ElasticsearchBufferingHints
     static SplunkDestinationConfiguration = SplunkDestinationConfiguration
@@ -434,6 +485,7 @@ export default class DeliveryStream extends ResourceBase<DeliveryStreamPropertie
     static ProcessingConfiguration = ProcessingConfiguration
     static BufferingHints = BufferingHints
     static ProcessorParameter = ProcessorParameter
+    static AmazonopensearchserviceBufferingHints = AmazonopensearchserviceBufferingHints
     static DeliveryStreamEncryptionConfigurationInput = DeliveryStreamEncryptionConfigurationInput
     static ElasticsearchRetryOptions = ElasticsearchRetryOptions
     static KMSEncryptionConfig = KMSEncryptionConfig

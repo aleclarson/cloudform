@@ -1,29 +1,47 @@
 /* Generated from: 
- * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-3 (https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-3 (https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
-import {ResourceBase} from '../resource'
+
+import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
+
+export class SageMakerPipelineParameter {
+    Name!: Value<string>
+    Value!: Value<string>
+
+    constructor(properties: SageMakerPipelineParameter) {
+        Object.assign(this, properties)
+    }
+}
 
 export class BatchRetryStrategy {
     Attempts?: Value<number>
 
     constructor(properties: BatchRetryStrategy) {
+        Object.assign(this, properties)
+    }
+}
+
+export class PlacementConstraint {
+    Expression?: Value<string>
+    Type?: Value<string>
+
+    constructor(properties: PlacementConstraint) {
         Object.assign(this, properties)
     }
 }
@@ -90,6 +108,16 @@ export class RunCommandTarget {
     }
 }
 
+export class CapacityProviderStrategyItem {
+    Base?: Value<number>
+    CapacityProvider!: Value<string>
+    Weight?: Value<number>
+
+    constructor(properties: CapacityProviderStrategyItem) {
+        Object.assign(this, properties)
+    }
+}
+
 export class InputTransformer {
     InputPathsMap?: {[key: string]: Value<string>}
     InputTemplate!: Value<string>
@@ -116,6 +144,15 @@ export class RetryPolicy {
     }
 }
 
+export class PlacementStrategy {
+    Field?: Value<string>
+    Type?: Value<string>
+
+    constructor(properties: PlacementStrategy) {
+        Object.assign(this, properties)
+    }
+}
+
 export class Target {
     Arn!: Value<string>
     BatchParameters?: BatchParameters
@@ -131,6 +168,7 @@ export class Target {
     RetryPolicy?: RetryPolicy
     RoleArn?: Value<string>
     RunCommandParameters?: RunCommandParameters
+    SageMakerPipelineParameters?: SageMakerPipelineParameters
     SqsParameters?: SqsParameters
 
     constructor(properties: Target) {
@@ -142,6 +180,23 @@ export class KinesisParameters {
     PartitionKeyPath!: Value<string>
 
     constructor(properties: KinesisParameters) {
+        Object.assign(this, properties)
+    }
+}
+
+export class SageMakerPipelineParameters {
+    PipelineParameterList?: List<SageMakerPipelineParameter>
+
+    constructor(properties: SageMakerPipelineParameters) {
+        Object.assign(this, properties)
+    }
+}
+
+export class Tag {
+    Key?: Value<string>
+    Value?: Value<string>
+
+    constructor(properties: Tag) {
         Object.assign(this, properties)
     }
 }
@@ -160,10 +215,18 @@ export class RedshiftDataParameters {
 }
 
 export class EcsParameters {
+    CapacityProviderStrategy?: List<CapacityProviderStrategyItem>
+    EnableECSManagedTags?: Value<boolean>
+    EnableExecuteCommand?: Value<boolean>
     Group?: Value<string>
     LaunchType?: Value<string>
     NetworkConfiguration?: NetworkConfiguration
+    PlacementConstraints?: List<PlacementConstraint>
+    PlacementStrategies?: List<PlacementStrategy>
     PlatformVersion?: Value<string>
+    PropagateTags?: Value<string>
+    ReferenceId?: Value<string>
+    TagList?: List<ResourceTag>
     TaskCount?: Value<number>
     TaskDefinitionArn!: Value<string>
 
@@ -194,7 +257,9 @@ export interface RuleProperties {
 }
 
 export default class Rule extends ResourceBase<RuleProperties> {
+    static SageMakerPipelineParameter = SageMakerPipelineParameter
     static BatchRetryStrategy = BatchRetryStrategy
+    static PlacementConstraint = PlacementConstraint
     static HttpParameters = HttpParameters
     static BatchArrayProperties = BatchArrayProperties
     static BatchParameters = BatchParameters
@@ -202,11 +267,15 @@ export default class Rule extends ResourceBase<RuleProperties> {
     static DeadLetterConfig = DeadLetterConfig
     static NetworkConfiguration = NetworkConfiguration
     static RunCommandTarget = RunCommandTarget
+    static CapacityProviderStrategyItem = CapacityProviderStrategyItem
     static InputTransformer = InputTransformer
     static SqsParameters = SqsParameters
     static RetryPolicy = RetryPolicy
+    static PlacementStrategy = PlacementStrategy
     static Target = Target
     static KinesisParameters = KinesisParameters
+    static SageMakerPipelineParameters = SageMakerPipelineParameters
+    static Tag = Tag
     static RedshiftDataParameters = RedshiftDataParameters
     static EcsParameters = EcsParameters
     static AwsVpcConfiguration = AwsVpcConfiguration

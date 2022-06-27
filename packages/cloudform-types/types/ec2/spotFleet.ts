@@ -1,24 +1,42 @@
 /* Generated from: 
- * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-3 (https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-3 (https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
+
 import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
+
+export class MemoryGiBPerVCpuRequest {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: MemoryGiBPerVCpuRequest) {
+        Object.assign(this, properties)
+    }
+}
+
+export class MemoryMiBRequest {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: MemoryMiBRequest) {
+        Object.assign(this, properties)
+    }
+}
 
 export class SpotPlacement {
     AvailabilityZone?: Value<string>
@@ -30,14 +48,62 @@ export class SpotPlacement {
     }
 }
 
+export class BaselineEbsBandwidthMbpsRequest {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: BaselineEbsBandwidthMbpsRequest) {
+        Object.assign(this, properties)
+    }
+}
+
+export class InstanceRequirementsRequest {
+    VCpuCount?: VCpuCountRangeRequest
+    MemoryMiB?: MemoryMiBRequest
+    CpuManufacturers?: List<Value<string>>
+    MemoryGiBPerVCpu?: MemoryGiBPerVCpuRequest
+    ExcludedInstanceTypes?: List<Value<string>>
+    InstanceGenerations?: List<Value<string>>
+    SpotMaxPricePercentageOverLowestPrice?: Value<number>
+    OnDemandMaxPricePercentageOverLowestPrice?: Value<number>
+    BareMetal?: Value<string>
+    BurstablePerformance?: Value<string>
+    RequireHibernateSupport?: Value<boolean>
+    NetworkInterfaceCount?: NetworkInterfaceCountRequest
+    LocalStorage?: Value<string>
+    LocalStorageTypes?: List<Value<string>>
+    TotalLocalStorageGB?: TotalLocalStorageGBRequest
+    BaselineEbsBandwidthMbps?: BaselineEbsBandwidthMbpsRequest
+    AcceleratorTypes?: List<Value<string>>
+    AcceleratorCount?: AcceleratorCountRequest
+    AcceleratorManufacturers?: List<Value<string>>
+    AcceleratorNames?: List<Value<string>>
+    AcceleratorTotalMemoryMiB?: AcceleratorTotalMemoryMiBRequest
+
+    constructor(properties: InstanceRequirementsRequest) {
+        Object.assign(this, properties)
+    }
+}
+
 export class LaunchTemplateOverrides {
     AvailabilityZone?: Value<string>
     InstanceType?: Value<string>
     SpotPrice?: Value<string>
     SubnetId?: Value<string>
     WeightedCapacity?: Value<number>
+    InstanceRequirements?: InstanceRequirementsRequest
+    Priority?: Value<number>
 
     constructor(properties: LaunchTemplateOverrides) {
+        Object.assign(this, properties)
+    }
+}
+
+export class TotalLocalStorageGBRequest {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: TotalLocalStorageGBRequest) {
         Object.assign(this, properties)
     }
 }
@@ -73,7 +139,7 @@ export class SpotFleetLaunchSpecification {
     EbsOptimized?: Value<boolean>
     IamInstanceProfile?: IamInstanceProfileSpecification
     ImageId!: Value<string>
-    InstanceType!: Value<string>
+    InstanceType?: Value<string>
     KernelId?: Value<string>
     KeyName?: Value<string>
     Monitoring?: SpotFleetMonitoring
@@ -86,6 +152,7 @@ export class SpotFleetLaunchSpecification {
     TagSpecifications?: List<SpotFleetTagSpecification>
     UserData?: Value<string>
     WeightedCapacity?: Value<number>
+    InstanceRequirements?: InstanceRequirementsRequest
 
     constructor(properties: SpotFleetLaunchSpecification) {
         Object.assign(this, properties)
@@ -96,6 +163,15 @@ export class ClassicLoadBalancersConfig {
     ClassicLoadBalancers!: List<ClassicLoadBalancer>
 
     constructor(properties: ClassicLoadBalancersConfig) {
+        Object.assign(this, properties)
+    }
+}
+
+export class AcceleratorCountRequest {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: AcceleratorCountRequest) {
         Object.assign(this, properties)
     }
 }
@@ -128,6 +204,7 @@ export class PrivateIpAddressSpecification {
 
 export class SpotCapacityRebalance {
     ReplacementStrategy?: Value<string>
+    TerminationDelay?: Value<number>
 
     constructor(properties: SpotCapacityRebalance) {
         Object.assign(this, properties)
@@ -166,10 +243,28 @@ export class FleetLaunchTemplateSpecification {
     }
 }
 
+export class AcceleratorTotalMemoryMiBRequest {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: AcceleratorTotalMemoryMiBRequest) {
+        Object.assign(this, properties)
+    }
+}
+
 export class TargetGroup {
     Arn!: Value<string>
 
     constructor(properties: TargetGroup) {
+        Object.assign(this, properties)
+    }
+}
+
+export class NetworkInterfaceCountRequest {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: NetworkInterfaceCountRequest) {
         Object.assign(this, properties)
     }
 }
@@ -220,6 +315,8 @@ export class SpotFleetRequestConfigData {
     Type?: Value<string>
     ValidFrom?: Value<string>
     ValidUntil?: Value<string>
+    Context?: Value<string>
+    TargetCapacityUnitType?: Value<string>
 
     constructor(properties: SpotFleetRequestConfigData) {
         Object.assign(this, properties)
@@ -261,17 +358,32 @@ export class BlockDeviceMapping {
     }
 }
 
+export class VCpuCountRangeRequest {
+    Min?: Value<number>
+    Max?: Value<number>
+
+    constructor(properties: VCpuCountRangeRequest) {
+        Object.assign(this, properties)
+    }
+}
+
 export interface SpotFleetProperties {
     SpotFleetRequestConfigData: SpotFleetRequestConfigData
 }
 
 export default class SpotFleet extends ResourceBase<SpotFleetProperties> {
+    static MemoryGiBPerVCpuRequest = MemoryGiBPerVCpuRequest
+    static MemoryMiBRequest = MemoryMiBRequest
     static SpotPlacement = SpotPlacement
+    static BaselineEbsBandwidthMbpsRequest = BaselineEbsBandwidthMbpsRequest
+    static InstanceRequirementsRequest = InstanceRequirementsRequest
     static LaunchTemplateOverrides = LaunchTemplateOverrides
+    static TotalLocalStorageGBRequest = TotalLocalStorageGBRequest
     static IamInstanceProfileSpecification = IamInstanceProfileSpecification
     static InstanceNetworkInterfaceSpecification = InstanceNetworkInterfaceSpecification
     static SpotFleetLaunchSpecification = SpotFleetLaunchSpecification
     static ClassicLoadBalancersConfig = ClassicLoadBalancersConfig
+    static AcceleratorCountRequest = AcceleratorCountRequest
     static SpotMaintenanceStrategies = SpotMaintenanceStrategies
     static SpotFleetTagSpecification = SpotFleetTagSpecification
     static PrivateIpAddressSpecification = PrivateIpAddressSpecification
@@ -279,7 +391,9 @@ export default class SpotFleet extends ResourceBase<SpotFleetProperties> {
     static EbsBlockDevice = EbsBlockDevice
     static LoadBalancersConfig = LoadBalancersConfig
     static FleetLaunchTemplateSpecification = FleetLaunchTemplateSpecification
+    static AcceleratorTotalMemoryMiBRequest = AcceleratorTotalMemoryMiBRequest
     static TargetGroup = TargetGroup
+    static NetworkInterfaceCountRequest = NetworkInterfaceCountRequest
     static SpotFleetMonitoring = SpotFleetMonitoring
     static ClassicLoadBalancer = ClassicLoadBalancer
     static LaunchTemplateConfig = LaunchTemplateConfig
@@ -288,6 +402,7 @@ export default class SpotFleet extends ResourceBase<SpotFleetProperties> {
     static TargetGroupsConfig = TargetGroupsConfig
     static GroupIdentifier = GroupIdentifier
     static BlockDeviceMapping = BlockDeviceMapping
+    static VCpuCountRangeRequest = VCpuCountRangeRequest
 
     constructor(properties: SpotFleetProperties) {
         super('AWS::EC2::SpotFleet', properties)

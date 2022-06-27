@@ -1,21 +1,21 @@
 /* Generated from: 
- * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
+
 import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
 
@@ -40,6 +40,7 @@ export class S3OutputFormatConfig {
     FileType?: Value<string>
     PrefixConfig?: PrefixConfig
     AggregationConfig?: AggregationConfig
+    PreserveSourceDataTyping?: Value<boolean>
 
     constructor(properties: S3OutputFormatConfig) {
         Object.assign(this, properties)
@@ -50,6 +51,7 @@ export class DestinationFlowConfig {
     ConnectorType!: Value<string>
     ConnectorProfileName?: Value<string>
     DestinationConnectorProperties!: DestinationConnectorProperties
+    ApiVersion?: Value<string>
 
     constructor(properties: DestinationFlowConfig) {
         Object.assign(this, properties)
@@ -78,6 +80,8 @@ export class ScheduledTriggerProperties {
     ScheduleStartTime?: Value<number>
     ScheduleEndTime?: Value<number>
     TimeZone?: Value<string>
+    ScheduleOffset?: Value<number>
+    FlowErrorDeactivationThreshold?: Value<number>
 
     constructor(properties: ScheduledTriggerProperties) {
         Object.assign(this, properties)
@@ -92,7 +96,10 @@ export class DestinationConnectorProperties {
     EventBridge?: EventBridgeDestinationProperties
     Upsolver?: UpsolverDestinationProperties
     LookoutMetrics?: LookoutMetricsDestinationProperties
+    Marketo?: MarketoDestinationProperties
     Zendesk?: ZendeskDestinationProperties
+    SAPOData?: SAPODataDestinationProperties
+    CustomConnector?: CustomConnectorDestinationProperties
 
     constructor(properties: DestinationConnectorProperties) {
         Object.assign(this, properties)
@@ -107,6 +114,7 @@ export class ConnectorOperator {
     InforNexus?: Value<string>
     Marketo?: Value<string>
     S3?: Value<string>
+    SAPOData?: Value<string>
     Salesforce?: Value<string>
     ServiceNow?: Value<string>
     Singular?: Value<string>
@@ -114,6 +122,7 @@ export class ConnectorOperator {
     Trendmicro?: Value<string>
     Veeva?: Value<string>
     Zendesk?: Value<string>
+    CustomConnector?: Value<string>
 
     constructor(properties: ConnectorOperator) {
         Object.assign(this, properties)
@@ -152,6 +161,7 @@ export class ErrorHandlingConfig {
 export class S3SourceProperties {
     BucketName!: Value<string>
     BucketPrefix!: Value<string>
+    S3InputFormatConfig?: S3InputFormatConfig
 
     constructor(properties: S3SourceProperties) {
         Object.assign(this, properties)
@@ -225,6 +235,7 @@ export class SourceFlowConfig {
     ConnectorProfileName?: Value<string>
     SourceConnectorProperties!: SourceConnectorProperties
     IncrementalPullConfig?: IncrementalPullConfig
+    ApiVersion?: Value<string>
 
     constructor(properties: SourceFlowConfig) {
         Object.assign(this, properties)
@@ -259,6 +270,22 @@ export class ServiceNowSourceProperties {
     }
 }
 
+export class S3InputFormatConfig {
+    S3InputFileType?: Value<string>
+
+    constructor(properties: S3InputFormatConfig) {
+        Object.assign(this, properties)
+    }
+}
+
+export class SAPODataSourceProperties {
+    ObjectPath!: Value<string>
+
+    constructor(properties: SAPODataSourceProperties) {
+        Object.assign(this, properties)
+    }
+}
+
 export class ZendeskDestinationProperties {
     Object!: Value<string>
     ErrorHandlingConfig?: ErrorHandlingConfig
@@ -270,10 +297,40 @@ export class ZendeskDestinationProperties {
     }
 }
 
+export class SAPODataDestinationProperties {
+    ObjectPath!: Value<string>
+    ErrorHandlingConfig?: ErrorHandlingConfig
+    SuccessResponseHandlingConfig?: SuccessResponseHandlingConfig
+    IdFieldNames?: List<Value<string>>
+    WriteOperationType?: Value<string>
+
+    constructor(properties: SAPODataDestinationProperties) {
+        Object.assign(this, properties)
+    }
+}
+
+export class SuccessResponseHandlingConfig {
+    BucketPrefix?: Value<string>
+    BucketName?: Value<string>
+
+    constructor(properties: SuccessResponseHandlingConfig) {
+        Object.assign(this, properties)
+    }
+}
+
 export class InforNexusSourceProperties {
     Object!: Value<string>
 
     constructor(properties: InforNexusSourceProperties) {
+        Object.assign(this, properties)
+    }
+}
+
+export class MarketoDestinationProperties {
+    Object!: Value<string>
+    ErrorHandlingConfig?: ErrorHandlingConfig
+
+    constructor(properties: MarketoDestinationProperties) {
         Object.assign(this, properties)
     }
 }
@@ -296,6 +353,7 @@ export class SourceConnectorProperties {
     InforNexus?: InforNexusSourceProperties
     Marketo?: MarketoSourceProperties
     S3?: S3SourceProperties
+    SAPOData?: SAPODataSourceProperties
     Salesforce?: SalesforceSourceProperties
     ServiceNow?: ServiceNowSourceProperties
     Singular?: SingularSourceProperties
@@ -303,6 +361,7 @@ export class SourceConnectorProperties {
     Trendmicro?: TrendmicroSourceProperties
     Veeva?: VeevaSourceProperties
     Zendesk?: ZendeskSourceProperties
+    CustomConnector?: CustomConnectorSourceProperties
 
     constructor(properties: SourceConnectorProperties) {
         Object.assign(this, properties)
@@ -338,6 +397,10 @@ export class GoogleAnalyticsSourceProperties {
 
 export class VeevaSourceProperties {
     Object!: Value<string>
+    DocumentType?: Value<string>
+    IncludeSourceFiles?: Value<boolean>
+    IncludeRenditions?: Value<boolean>
+    IncludeAllVersions?: Value<boolean>
 
     constructor(properties: VeevaSourceProperties) {
         Object.assign(this, properties)
@@ -390,6 +453,29 @@ export class AmplitudeSourceProperties {
     }
 }
 
+export type CustomProperties = {[key: string]: any}
+
+export class CustomConnectorSourceProperties {
+    EntityName!: Value<string>
+    CustomProperties?: CustomProperties
+
+    constructor(properties: CustomConnectorSourceProperties) {
+        Object.assign(this, properties)
+    }
+}
+
+export class CustomConnectorDestinationProperties {
+    EntityName!: Value<string>
+    ErrorHandlingConfig?: ErrorHandlingConfig
+    WriteOperationType?: Value<string>
+    IdFieldNames?: List<Value<string>>
+    CustomProperties?: CustomProperties
+
+    constructor(properties: CustomConnectorDestinationProperties) {
+        Object.assign(this, properties)
+    }
+}
+
 export interface FlowProperties {
     FlowName: Value<string>
     Description?: Value<string>
@@ -426,8 +512,13 @@ export default class Flow extends ResourceBase<FlowProperties> {
     static UpsolverS3OutputFormatConfig = UpsolverS3OutputFormatConfig
     static UpsolverDestinationProperties = UpsolverDestinationProperties
     static ServiceNowSourceProperties = ServiceNowSourceProperties
+    static S3InputFormatConfig = S3InputFormatConfig
+    static SAPODataSourceProperties = SAPODataSourceProperties
     static ZendeskDestinationProperties = ZendeskDestinationProperties
+    static SAPODataDestinationProperties = SAPODataDestinationProperties
+    static SuccessResponseHandlingConfig = SuccessResponseHandlingConfig
     static InforNexusSourceProperties = InforNexusSourceProperties
+    static MarketoDestinationProperties = MarketoDestinationProperties
     static S3DestinationProperties = S3DestinationProperties
     static SourceConnectorProperties = SourceConnectorProperties
     static TrendmicroSourceProperties = TrendmicroSourceProperties
@@ -439,6 +530,8 @@ export default class Flow extends ResourceBase<FlowProperties> {
     static TaskPropertiesObject = TaskPropertiesObject
     static TriggerConfig = TriggerConfig
     static AmplitudeSourceProperties = AmplitudeSourceProperties
+    static CustomConnectorSourceProperties = CustomConnectorSourceProperties
+    static CustomConnectorDestinationProperties = CustomConnectorDestinationProperties
 
     constructor(properties: FlowProperties) {
         super('AWS::AppFlow::Flow', properties)

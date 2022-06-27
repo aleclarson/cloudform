@@ -1,9 +1,9 @@
 /* Generated from: 
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
+
 import {ResourceBase} from '../resource'
 import {Value, List} from '../dataTypes'
 
@@ -29,6 +29,37 @@ export class Action {
     LambdaAction?: LambdaAction
 
     constructor(properties: Action) {
+        Object.assign(this, properties)
+    }
+}
+
+export class WorkmailAction {
+    TopicArn?: Value<string>
+    OrganizationArn!: Value<string>
+
+    constructor(properties: WorkmailAction) {
+        Object.assign(this, properties)
+    }
+}
+
+export class Rule {
+    ScanEnabled?: Value<boolean>
+    Recipients?: List<Value<string>>
+    Actions?: List<Action>
+    Enabled?: Value<boolean>
+    Name?: Value<string>
+    TlsPolicy?: Value<string>
+
+    constructor(properties: Rule) {
+        Object.assign(this, properties)
+    }
+}
+
+export class AddHeaderAction {
+    HeaderValue!: Value<string>
+    HeaderName!: Value<string>
+
+    constructor(properties: AddHeaderAction) {
         Object.assign(this, properties)
     }
 }
@@ -62,43 +93,12 @@ export class S3Action {
     }
 }
 
-export class WorkmailAction {
-    TopicArn?: Value<string>
-    OrganizationArn!: Value<string>
-
-    constructor(properties: WorkmailAction) {
-        Object.assign(this, properties)
-    }
-}
-
-export class Rule {
-    ScanEnabled?: Value<boolean>
-    Recipients?: List<Value<string>>
-    Actions?: List<Action>
-    Enabled?: Value<boolean>
-    Name?: Value<string>
-    TlsPolicy?: Value<string>
-
-    constructor(properties: Rule) {
-        Object.assign(this, properties)
-    }
-}
-
 export class LambdaAction {
     FunctionArn!: Value<string>
     TopicArn?: Value<string>
     InvocationType?: Value<string>
 
     constructor(properties: LambdaAction) {
-        Object.assign(this, properties)
-    }
-}
-
-export class AddHeaderAction {
-    HeaderValue!: Value<string>
-    HeaderName!: Value<string>
-
-    constructor(properties: AddHeaderAction) {
         Object.assign(this, properties)
     }
 }
@@ -112,13 +112,13 @@ export interface ReceiptRuleProperties {
 export default class ReceiptRule extends ResourceBase<ReceiptRuleProperties> {
     static BounceAction = BounceAction
     static Action = Action
+    static WorkmailAction = WorkmailAction
+    static Rule = Rule
+    static AddHeaderAction = AddHeaderAction
     static StopAction = StopAction
     static SNSAction = SNSAction
     static S3Action = S3Action
-    static WorkmailAction = WorkmailAction
-    static Rule = Rule
     static LambdaAction = LambdaAction
-    static AddHeaderAction = AddHeaderAction
 
     constructor(properties: ReceiptRuleProperties) {
         super('AWS::SES::ReceiptRule', properties)

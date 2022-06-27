@@ -1,13 +1,43 @@
 /* Generated from: 
- * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
+
 import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
+
+export class WebCrawlerBasicAuthentication {
+    Host!: Value<string>
+    Port!: Value<number>
+    Credentials!: Value<string>
+
+    constructor(properties: WebCrawlerBasicAuthentication) {
+        Object.assign(this, properties)
+    }
+}
+
+export class WebCrawlerUrls {
+    SeedUrlConfiguration?: WebCrawlerSeedUrlConfiguration
+    SiteMapsConfiguration?: WebCrawlerSiteMapsConfiguration
+
+    constructor(properties: WebCrawlerUrls) {
+        Object.assign(this, properties)
+    }
+}
+
+export class WebCrawlerSeedUrlConfiguration {
+    SeedUrls!: List<Value<string>>
+    WebCrawlerMode?: Value<string>
+
+    constructor(properties: WebCrawlerSeedUrlConfiguration) {
+        Object.assign(this, properties)
+    }
+}
 
 export class ConfluenceAttachmentToIndexFieldMapping {
     DataSourceFieldName!: Value<string>
@@ -37,6 +67,17 @@ export class SalesforceChatterFeedConfiguration {
     IncludeFilterTypes?: List<Value<string>>
 
     constructor(properties: SalesforceChatterFeedConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
+export class CustomDocumentEnrichmentConfiguration {
+    InlineConfigurations?: List<InlineCustomDocumentEnrichmentConfiguration>
+    PreExtractionHookConfiguration?: HookConfiguration
+    PostExtractionHookConfiguration?: HookConfiguration
+    RoleArn?: Value<string>
+
+    constructor(properties: CustomDocumentEnrichmentConfiguration) {
         Object.assign(this, properties)
     }
 }
@@ -109,11 +150,44 @@ export class GoogleDriveConfiguration {
     }
 }
 
+export class DocumentAttributeTarget {
+    TargetDocumentAttributeKey!: Value<string>
+    TargetDocumentAttributeValueDeletion?: Value<boolean>
+    TargetDocumentAttributeValue?: DocumentAttributeValue
+
+    constructor(properties: DocumentAttributeTarget) {
+        Object.assign(this, properties)
+    }
+}
+
+export class WorkDocsConfiguration {
+    OrganizationId!: Value<string>
+    CrawlComments?: Value<boolean>
+    UseChangeLog?: Value<boolean>
+    InclusionPatterns?: List<Value<string>>
+    ExclusionPatterns?: List<Value<string>>
+    FieldMappings?: List<DataSourceToIndexFieldMapping>
+
+    constructor(properties: WorkDocsConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
 export class S3Path {
     Bucket!: Value<string>
     Key!: Value<string>
 
     constructor(properties: S3Path) {
+        Object.assign(this, properties)
+    }
+}
+
+export class ProxyConfiguration {
+    Host!: Value<string>
+    Port!: Value<number>
+    Credentials?: Value<string>
+
+    constructor(properties: ProxyConfiguration) {
         Object.assign(this, properties)
     }
 }
@@ -167,6 +241,16 @@ export class DatabaseConfiguration {
     SqlConfiguration?: SqlConfiguration
 
     constructor(properties: DatabaseConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
+export class DocumentAttributeCondition {
+    ConditionDocumentAttributeKey!: Value<string>
+    Operator!: Value<string>
+    ConditionOnValue?: DocumentAttributeValue
+
+    constructor(properties: DocumentAttributeCondition) {
         Object.assign(this, properties)
     }
 }
@@ -263,6 +347,35 @@ export class ConfluenceBlogToIndexFieldMapping {
     }
 }
 
+export class DocumentAttributeValue {
+    StringValue?: Value<string>
+    StringListValue?: List<Value<string>>
+    LongValue?: Value<number>
+    DateValue?: Value<string>
+
+    constructor(properties: DocumentAttributeValue) {
+        Object.assign(this, properties)
+    }
+}
+
+export class InlineCustomDocumentEnrichmentConfiguration {
+    Condition?: DocumentAttributeCondition
+    Target?: DocumentAttributeTarget
+    DocumentContentDeletion?: Value<boolean>
+
+    constructor(properties: InlineCustomDocumentEnrichmentConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
+export class WebCrawlerSiteMapsConfiguration {
+    SiteMaps!: List<Value<string>>
+
+    constructor(properties: WebCrawlerSiteMapsConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
 export class OneDriveUsers {
     OneDriveUserList?: List<Value<string>>
     OneDriveUserS3Path?: S3Path
@@ -290,6 +403,22 @@ export class SalesforceStandardKnowledgeArticleTypeConfiguration {
     }
 }
 
+export class WebCrawlerConfiguration {
+    Urls!: WebCrawlerUrls
+    CrawlDepth?: Value<number>
+    MaxLinksPerPage?: Value<number>
+    MaxContentSizePerPageInMegaBytes?: Value<number>
+    MaxUrlsPerMinuteCrawlRate?: Value<number>
+    UrlInclusionPatterns?: List<Value<string>>
+    UrlExclusionPatterns?: List<Value<string>>
+    ProxyConfiguration?: ProxyConfiguration
+    AuthenticationConfiguration?: WebCrawlerAuthenticationConfiguration
+
+    constructor(properties: WebCrawlerConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
 export class ConfluenceAttachmentConfiguration {
     CrawlAttachments?: Value<boolean>
     AttachmentFieldMappings?: List<ConfluenceAttachmentToIndexFieldMapping>
@@ -304,6 +433,14 @@ export class DataSourceVpcConfiguration {
     SecurityGroupIds!: List<Value<string>>
 
     constructor(properties: DataSourceVpcConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
+export class WebCrawlerAuthenticationConfiguration {
+    BasicAuthentication?: List<WebCrawlerBasicAuthentication>
+
+    constructor(properties: WebCrawlerAuthenticationConfiguration) {
         Object.assign(this, properties)
     }
 }
@@ -369,8 +506,20 @@ export class DataSourceConfiguration {
     DatabaseConfiguration?: DatabaseConfiguration
     ConfluenceConfiguration?: ConfluenceConfiguration
     GoogleDriveConfiguration?: GoogleDriveConfiguration
+    WebCrawlerConfiguration?: WebCrawlerConfiguration
+    WorkDocsConfiguration?: WorkDocsConfiguration
 
     constructor(properties: DataSourceConfiguration) {
+        Object.assign(this, properties)
+    }
+}
+
+export class HookConfiguration {
+    InvocationCondition?: DocumentAttributeCondition
+    LambdaArn!: Value<string>
+    S3Bucket!: Value<string>
+
+    constructor(properties: HookConfiguration) {
         Object.assign(this, properties)
     }
 }
@@ -387,6 +536,7 @@ export class SharePointConfiguration {
     FieldMappings?: List<DataSourceToIndexFieldMapping>
     DocumentTitleFieldName?: Value<string>
     DisableLocalGroups?: Value<boolean>
+    SslCertificateS3Path?: S3Path
 
     constructor(properties: SharePointConfiguration) {
         Object.assign(this, properties)
@@ -410,22 +560,31 @@ export interface DataSourceProperties {
     Schedule?: Value<string>
     RoleArn?: Value<string>
     Tags?: List<ResourceTag>
+    CustomDocumentEnrichmentConfiguration?: CustomDocumentEnrichmentConfiguration
 }
 
 export default class DataSource extends ResourceBase<DataSourceProperties> {
+    static WebCrawlerBasicAuthentication = WebCrawlerBasicAuthentication
+    static WebCrawlerUrls = WebCrawlerUrls
+    static WebCrawlerSeedUrlConfiguration = WebCrawlerSeedUrlConfiguration
     static ConfluenceAttachmentToIndexFieldMapping = ConfluenceAttachmentToIndexFieldMapping
     static SalesforceStandardObjectConfiguration = SalesforceStandardObjectConfiguration
     static SalesforceChatterFeedConfiguration = SalesforceChatterFeedConfiguration
+    static CustomDocumentEnrichmentConfiguration = CustomDocumentEnrichmentConfiguration
     static SalesforceConfiguration = SalesforceConfiguration
     static ColumnConfiguration = ColumnConfiguration
     static ServiceNowKnowledgeArticleConfiguration = ServiceNowKnowledgeArticleConfiguration
     static ConfluenceSpaceConfiguration = ConfluenceSpaceConfiguration
     static GoogleDriveConfiguration = GoogleDriveConfiguration
+    static DocumentAttributeTarget = DocumentAttributeTarget
+    static WorkDocsConfiguration = WorkDocsConfiguration
     static S3Path = S3Path
+    static ProxyConfiguration = ProxyConfiguration
     static ServiceNowConfiguration = ServiceNowConfiguration
     static ConfluenceConfiguration = ConfluenceConfiguration
     static ConfluencePageToIndexFieldMapping = ConfluencePageToIndexFieldMapping
     static DatabaseConfiguration = DatabaseConfiguration
+    static DocumentAttributeCondition = DocumentAttributeCondition
     static SqlConfiguration = SqlConfiguration
     static S3DataSourceConfiguration = S3DataSourceConfiguration
     static ConfluenceBlogConfiguration = ConfluenceBlogConfiguration
@@ -435,17 +594,23 @@ export default class DataSource extends ResourceBase<DataSourceProperties> {
     static SalesforceStandardObjectAttachmentConfiguration = SalesforceStandardObjectAttachmentConfiguration
     static SalesforceCustomKnowledgeArticleTypeConfiguration = SalesforceCustomKnowledgeArticleTypeConfiguration
     static ConfluenceBlogToIndexFieldMapping = ConfluenceBlogToIndexFieldMapping
+    static DocumentAttributeValue = DocumentAttributeValue
+    static InlineCustomDocumentEnrichmentConfiguration = InlineCustomDocumentEnrichmentConfiguration
+    static WebCrawlerSiteMapsConfiguration = WebCrawlerSiteMapsConfiguration
     static OneDriveUsers = OneDriveUsers
     static AclConfiguration = AclConfiguration
     static SalesforceStandardKnowledgeArticleTypeConfiguration = SalesforceStandardKnowledgeArticleTypeConfiguration
+    static WebCrawlerConfiguration = WebCrawlerConfiguration
     static ConfluenceAttachmentConfiguration = ConfluenceAttachmentConfiguration
     static DataSourceVpcConfiguration = DataSourceVpcConfiguration
+    static WebCrawlerAuthenticationConfiguration = WebCrawlerAuthenticationConfiguration
     static SalesforceKnowledgeArticleConfiguration = SalesforceKnowledgeArticleConfiguration
     static AccessControlListConfiguration = AccessControlListConfiguration
     static DataSourceToIndexFieldMapping = DataSourceToIndexFieldMapping
     static ConfluenceSpaceToIndexFieldMapping = ConfluenceSpaceToIndexFieldMapping
     static OneDriveConfiguration = OneDriveConfiguration
     static DataSourceConfiguration = DataSourceConfiguration
+    static HookConfiguration = HookConfiguration
     static SharePointConfiguration = SharePointConfiguration
     static DocumentsMetadataConfiguration = DocumentsMetadataConfiguration
 

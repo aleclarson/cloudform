@@ -1,22 +1,22 @@
 /* Generated from: 
- * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-northeast-3 (https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0,
- * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 39.2.0
+ * ap-northeast-1 (https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-2 (https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-northeast-3 (https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-south-1 (https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-1 (https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ap-southeast-2 (https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * ca-central-1 (https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-central-1 (https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-1 (https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-2 (https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * eu-west-3 (https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * sa-east-1 (https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-1 (https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-east-2 (https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-1 (https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0,
+ * us-west-2 (https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json), version 78.0.0
  */
-   
+
 import {ResourceBase, ResourceTag} from '../resource'
 import {Value, List} from '../dataTypes'
 
@@ -31,10 +31,20 @@ export class CustomRequestHandling {
 export class ManagedRuleGroupStatement {
     Name!: Value<string>
     VendorName!: Value<string>
+    Version?: Value<string>
     ExcludedRules?: List<ExcludedRule>
     ScopeDownStatement?: Statement
+    ManagedRuleGroupConfigs?: List<ManagedRuleGroupConfig>
 
     constructor(properties: ManagedRuleGroupStatement) {
+        Object.assign(this, properties)
+    }
+}
+
+export class FieldIdentifier {
+    Identifier!: Value<string>
+
+    constructor(properties: FieldIdentifier) {
         Object.assign(this, properties)
     }
 }
@@ -111,6 +121,16 @@ export class Label {
     }
 }
 
+export class CookieMatchPattern {
+    All?: {[key: string]: any}
+    IncludedCookies?: List<Value<string>>
+    ExcludedCookies?: List<Value<string>>
+
+    constructor(properties: CookieMatchPattern) {
+        Object.assign(this, properties)
+    }
+}
+
 export class CustomHTTPHeader {
     Name!: Value<string>
     Value!: Value<string>
@@ -164,8 +184,17 @@ export class Statement {
     OrStatement?: OrStatement
     NotStatement?: NotStatement
     LabelMatchStatement?: LabelMatchStatement
+    RegexMatchStatement?: RegexMatchStatement
 
     constructor(properties: Statement) {
+        Object.assign(this, properties)
+    }
+}
+
+export class ImmunityTimeProperty {
+    ImmunityTime!: Value<number>
+
+    constructor(properties: ImmunityTimeProperty) {
         Object.assign(this, properties)
     }
 }
@@ -221,6 +250,14 @@ export class CountAction {
     }
 }
 
+export class CaptchaConfig {
+    ImmunityTimeProperty?: ImmunityTimeProperty
+
+    constructor(properties: CaptchaConfig) {
+        Object.assign(this, properties)
+    }
+}
+
 export class SizeConstraintStatement {
     FieldToMatch!: FieldToMatch
     ComparisonOperator!: Value<string>
@@ -238,9 +275,11 @@ export class FieldToMatch {
     AllQueryArguments?: {[key: string]: any}
     UriPath?: {[key: string]: any}
     QueryString?: {[key: string]: any}
-    Body?: {[key: string]: any}
+    Body?: Body
     Method?: {[key: string]: any}
     JsonBody?: JsonBody
+    Headers?: Headers
+    Cookies?: Cookies
 
     constructor(properties: FieldToMatch) {
         Object.assign(this, properties)
@@ -252,6 +291,17 @@ export class SqliMatchStatement {
     TextTransformations!: List<TextTransformation>
 
     constructor(properties: SqliMatchStatement) {
+        Object.assign(this, properties)
+    }
+}
+
+export class ManagedRuleGroupConfig {
+    LoginPath?: Value<string>
+    PayloadType?: Value<string>
+    UsernameField?: FieldIdentifier
+    PasswordField?: FieldIdentifier
+
+    constructor(properties: ManagedRuleGroupConfig) {
         Object.assign(this, properties)
     }
 }
@@ -269,6 +319,7 @@ export class RuleAction {
     Allow?: AllowAction
     Block?: BlockAction
     Count?: CountAction
+    Captcha?: CaptchaAction
 
     constructor(properties: RuleAction) {
         Object.assign(this, properties)
@@ -279,8 +330,17 @@ export class JsonBody {
     MatchPattern!: JsonMatchPattern
     MatchScope!: Value<string>
     InvalidFallbackBehavior?: Value<string>
+    OversizeHandling?: Value<string>
 
     constructor(properties: JsonBody) {
+        Object.assign(this, properties)
+    }
+}
+
+export class Body {
+    OversizeHandling?: Value<string>
+
+    constructor(properties: Body) {
         Object.assign(this, properties)
     }
 }
@@ -302,6 +362,26 @@ export class OverrideAction {
     }
 }
 
+export class RegexMatchStatement {
+    RegexString!: Value<string>
+    FieldToMatch!: FieldToMatch
+    TextTransformations!: List<TextTransformation>
+
+    constructor(properties: RegexMatchStatement) {
+        Object.assign(this, properties)
+    }
+}
+
+export class Headers {
+    MatchPattern!: HeaderMatchPattern
+    MatchScope!: Value<string>
+    OversizeHandling!: Value<string>
+
+    constructor(properties: Headers) {
+        Object.assign(this, properties)
+    }
+}
+
 export class Rule {
     Name!: Value<string>
     Priority!: Value<number>
@@ -310,6 +390,7 @@ export class Rule {
     OverrideAction?: OverrideAction
     RuleLabels?: List<Label>
     VisibilityConfig!: VisibilityConfig
+    CaptchaConfig?: CaptchaConfig
 
     constructor(properties: Rule) {
         Object.assign(this, properties)
@@ -333,6 +414,16 @@ export class RateBasedStatement {
     ForwardedIPConfig?: ForwardedIPConfiguration
 
     constructor(properties: RateBasedStatement) {
+        Object.assign(this, properties)
+    }
+}
+
+export class HeaderMatchPattern {
+    All?: {[key: string]: any}
+    IncludedHeaders?: List<Value<string>>
+    ExcludedHeaders?: List<Value<string>>
+
+    constructor(properties: HeaderMatchPattern) {
         Object.assign(this, properties)
     }
 }
@@ -364,6 +455,24 @@ export class IPSetReferenceStatement {
     }
 }
 
+export class CaptchaAction {
+    CustomRequestHandling?: CustomRequestHandling
+
+    constructor(properties: CaptchaAction) {
+        Object.assign(this, properties)
+    }
+}
+
+export class Cookies {
+    MatchPattern!: CookieMatchPattern
+    MatchScope!: Value<string>
+    OversizeHandling!: Value<string>
+
+    constructor(properties: Cookies) {
+        Object.assign(this, properties)
+    }
+}
+
 export interface WebACLProperties {
     DefaultAction: DefaultAction
     Description?: Value<string>
@@ -373,11 +482,13 @@ export interface WebACLProperties {
     VisibilityConfig: VisibilityConfig
     Tags?: List<ResourceTag>
     CustomResponseBodies?: {[key: string]: CustomResponseBody}
+    CaptchaConfig?: CaptchaConfig
 }
 
 export default class WebACL extends ResourceBase<WebACLProperties> {
     static CustomRequestHandling = CustomRequestHandling
     static ManagedRuleGroupStatement = ManagedRuleGroupStatement
+    static FieldIdentifier = FieldIdentifier
     static TextTransformation = TextTransformation
     static AllowAction = AllowAction
     static DefaultAction = DefaultAction
@@ -386,31 +497,41 @@ export default class WebACL extends ResourceBase<WebACLProperties> {
     static ForwardedIPConfiguration = ForwardedIPConfiguration
     static OrStatement = OrStatement
     static Label = Label
+    static CookieMatchPattern = CookieMatchPattern
     static CustomHTTPHeader = CustomHTTPHeader
     static RegexPatternSetReferenceStatement = RegexPatternSetReferenceStatement
     static IPSetForwardedIPConfiguration = IPSetForwardedIPConfiguration
     static CustomResponseBody = CustomResponseBody
     static Statement = Statement
+    static ImmunityTimeProperty = ImmunityTimeProperty
     static BlockAction = BlockAction
     static RuleGroupReferenceStatement = RuleGroupReferenceStatement
     static LabelMatchStatement = LabelMatchStatement
     static JsonMatchPattern = JsonMatchPattern
     static AndStatement = AndStatement
     static CountAction = CountAction
+    static CaptchaConfig = CaptchaConfig
     static SizeConstraintStatement = SizeConstraintStatement
     static FieldToMatch = FieldToMatch
     static SqliMatchStatement = SqliMatchStatement
+    static ManagedRuleGroupConfig = ManagedRuleGroupConfig
     static GeoMatchStatement = GeoMatchStatement
     static RuleAction = RuleAction
     static JsonBody = JsonBody
+    static Body = Body
     static NotStatement = NotStatement
     static OverrideAction = OverrideAction
+    static RegexMatchStatement = RegexMatchStatement
+    static Headers = Headers
     static Rule = Rule
     static CustomResponse = CustomResponse
     static RateBasedStatement = RateBasedStatement
+    static HeaderMatchPattern = HeaderMatchPattern
     static ExcludedRule = ExcludedRule
     static VisibilityConfig = VisibilityConfig
     static IPSetReferenceStatement = IPSetReferenceStatement
+    static CaptchaAction = CaptchaAction
+    static Cookies = Cookies
 
     constructor(properties: WebACLProperties) {
         super('AWS::WAFv2::WebACL', properties)
