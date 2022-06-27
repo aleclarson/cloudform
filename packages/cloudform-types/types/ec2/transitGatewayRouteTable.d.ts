@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{TransitGatewayId:Value<string>;Tags?:List<ResourceTag>;}declare class TransitGatewayRouteTable extends ResourceBase<Properties>{constructor(properties:Properties);}export{TransitGatewayRouteTable as R};

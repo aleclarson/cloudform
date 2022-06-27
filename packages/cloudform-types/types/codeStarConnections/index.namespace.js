@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.CodeStarConnections=void 0;const _0=require("./connection");var CodeStarConnections;!function(CodeStarConnections){CodeStarConnections.Connection=_0.R}(CodeStarConnections=exports.CodeStarConnections||(exports.CodeStarConnections={}));

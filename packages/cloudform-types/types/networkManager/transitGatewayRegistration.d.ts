@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{GlobalNetworkId:Value<string>;TransitGatewayArn:Value<string>;}declare class TransitGatewayRegistration extends ResourceBase<Properties>{constructor(properties:Properties);}export{TransitGatewayRegistration as R};

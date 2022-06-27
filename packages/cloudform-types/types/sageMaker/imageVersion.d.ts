@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ImageName:Value<string>;BaseImage:Value<string>;}declare class ImageVersion extends ResourceBase<Properties>{constructor(properties:Properties);}export{ImageVersion as R};

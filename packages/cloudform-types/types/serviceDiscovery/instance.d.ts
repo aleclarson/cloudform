@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{InstanceAttributes:{[key:string]:any;};InstanceId?:Value<string>;ServiceId:Value<string>;}declare class Instance extends ResourceBase<Properties>{constructor(properties:Properties);}export{Instance as R};

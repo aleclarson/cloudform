@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{PolicyName:Value<string>;PolicyDocument:Value<string>;}declare class ResourcePolicy extends ResourceBase<Properties>{constructor(properties:Properties);}export{ResourcePolicy as R};

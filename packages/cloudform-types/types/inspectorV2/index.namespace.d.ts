@@ -1,1 +1,0 @@
-import*as _0 from'./filter';export declare namespace InspectorV2{const Filter:typeof _0.R;type Filter=_0.R;namespace Filter{type NumberFilter=_0.NumberFilter;type PortRangeFilter=_0.PortRangeFilter;type DateFilter=_0.DateFilter;type MapFilter=_0.MapFilter;type PackageFilter=_0.PackageFilter;type StringFilter=_0.StringFilter;type FilterCriteria=_0.FilterCriteria;}}

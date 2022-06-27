@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{GraphArn:Value<string>;MemberId:Value<string>;MemberEmailAddress:Value<string>;DisableEmailNotification?:Value<boolean>;Message?:Value<string>;}declare class MemberInvitation extends ResourceBase<Properties>{constructor(properties:Properties);}export{MemberInvitation as R};

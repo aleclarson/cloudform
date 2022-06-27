@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ClientSecret:Value<string>;Enabled?:Value<boolean>;ClientId:Value<string>;ApplicationId:Value<string>;}declare class ADMChannel extends ResourceBase<Properties>{constructor(properties:Properties);}export{ADMChannel as R};

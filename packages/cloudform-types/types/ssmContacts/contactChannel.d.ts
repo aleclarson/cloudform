@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ContactId:Value<string>;ChannelName:Value<string>;ChannelType:Value<string>;DeferActivation?:Value<boolean>;ChannelAddress:Value<string>;}declare class ContactChannel extends ResourceBase<Properties>{constructor(properties:Properties);}export{ContactChannel as R};

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';export interface Properties{Tags?:{[key:string]:any;};}declare class Hub extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Hub as R};

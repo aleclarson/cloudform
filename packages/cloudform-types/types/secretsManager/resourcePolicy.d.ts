@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{BlockPublicPolicy?:Value<boolean>;SecretId:Value<string>;ResourcePolicy:{[key:string]:any;};}declare class ResourcePolicy extends ResourceBase<Properties>{constructor(properties:Properties);}export{ResourcePolicy as R};

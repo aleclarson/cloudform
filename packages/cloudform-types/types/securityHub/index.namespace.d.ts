@@ -1,1 +1,0 @@
-import*as _0 from'./hub';export declare namespace SecurityHub{const Hub:typeof _0.R;type Hub=_0.R;}

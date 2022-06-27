@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{CellName:Value<string>;Cells?:List<Value<string>>;Tags?:List<ResourceTag>;}declare class Cell extends ResourceBase<Properties>{constructor(properties:Properties);}export{Cell as R};

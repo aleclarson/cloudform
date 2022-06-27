@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ApplicationId:Value<string>;DestinationStreamArn:Value<string>;RoleArn:Value<string>;}declare class EventStream extends ResourceBase<Properties>{constructor(properties:Properties);}export{EventStream as R};

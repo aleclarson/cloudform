@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Description:Value<string>;Parameters:{[key:string]:any;};Family:Value<string>;Tags?:List<ResourceTag>;Name?:Value<string>;}declare class DBClusterParameterGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{DBClusterParameterGroup as R};

@@ -1,1 +1,0 @@
-import*as _0 from'./skill';export declare namespace ASK{const Skill:typeof _0.R;type Skill=_0.R;namespace Skill{type Overrides=_0.Overrides;type SkillPackage=_0.SkillPackage;type AuthenticationConfiguration=_0.AuthenticationConfiguration;}}

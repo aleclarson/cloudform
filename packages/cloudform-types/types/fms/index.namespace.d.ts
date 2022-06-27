@@ -1,1 +1,0 @@
-import*as _0 from'./notificationChannel';import*as _1 from'./policy';export declare namespace FMS{const NotificationChannel:typeof _0.R;const Policy:typeof _1.R;type NotificationChannel=_0.R;type Policy=_1.R;namespace Policy{type PolicyTag=_1.PolicyTag;type IEMap=_1.IEMap;}}

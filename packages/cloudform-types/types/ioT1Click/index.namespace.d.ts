@@ -1,1 +1,0 @@
-import*as _0 from'./project';import*as _1 from'./placement';import*as _2 from'./device';export declare namespace IoT1Click{const Project:typeof _0.R;const Placement:typeof _1.R;const Device:typeof _2.R;type Project=_0.R;type Placement=_1.R;type Device=_2.R;namespace Project{type DeviceTemplate=_0.DeviceTemplate;type PlacementTemplate=_0.PlacementTemplate;}}

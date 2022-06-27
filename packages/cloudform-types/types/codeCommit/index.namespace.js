@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.CodeCommit=void 0;const _0=require("./repository");var CodeCommit;!function(CodeCommit){CodeCommit.Repository=_0.R}(CodeCommit=exports.CodeCommit||(exports.CodeCommit={}));

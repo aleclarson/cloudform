@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{ClusterArn?:Value<string>;Name:Value<string>;Tags?:List<ResourceTag>;}declare class ControlPanel extends ResourceBase<Properties>{constructor(properties:Properties);}export{ControlPanel as R};

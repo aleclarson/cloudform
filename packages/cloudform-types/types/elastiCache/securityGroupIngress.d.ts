@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{CacheSecurityGroupName:Value<string>;EC2SecurityGroupName:Value<string>;EC2SecurityGroupOwnerId?:Value<string>;}declare class SecurityGroupIngress extends ResourceBase<Properties>{constructor(properties:Properties);}export{SecurityGroupIngress as R};

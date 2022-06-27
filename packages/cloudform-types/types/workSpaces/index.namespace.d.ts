@@ -1,1 +1,0 @@
-import*as _0 from'./connectionAlias';import*as _1 from'./workspace';export declare namespace WorkSpaces{const ConnectionAlias:typeof _0.R;const Workspace:typeof _1.R;type ConnectionAlias=_0.R;type Workspace=_1.R;namespace ConnectionAlias{type ConnectionAliasAssociation=_0.ConnectionAliasAssociation;}namespace Workspace{type WorkspaceProperties=_1.WorkspaceProperties;}}

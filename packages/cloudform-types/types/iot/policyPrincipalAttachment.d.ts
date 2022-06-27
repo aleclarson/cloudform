@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{PolicyName:Value<string>;Principal:Value<string>;}declare class PolicyPrincipalAttachment extends ResourceBase<Properties>{constructor(properties:Properties);}export{PolicyPrincipalAttachment as R};

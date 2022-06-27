@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{InstanceArn:Value<string>;ParentGroupArn?:Value<string>;Name:Value<string>;}declare class UserHierarchyGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{UserHierarchyGroup as R};

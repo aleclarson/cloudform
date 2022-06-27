@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{FleetName:Value<string>;StackName:Value<string>;}declare class StackFleetAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{StackFleetAssociation as R};

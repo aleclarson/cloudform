@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ContentType?:Value<string>;Description?:Value<string>;Name?:Value<string>;RestApiId:Value<string>;Schema?:{[key:string]:any;};}declare class Model extends ResourceBase<Properties>{constructor(properties:Properties);}export{Model as R};

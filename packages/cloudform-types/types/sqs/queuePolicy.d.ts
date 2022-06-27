@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{PolicyDocument:{[key:string]:any;};Queues:List<Value<string>>;}declare class QueuePolicy extends ResourceBase<Properties>{constructor(properties:Properties);}export{QueuePolicy as R};

@@ -1,1 +1,0 @@
-import*as _0 from'./contact';import*as _1 from'./contactChannel';export declare namespace SSMContacts{const Contact:typeof _0.R;const ContactChannel:typeof _1.R;type Contact=_0.R;type ContactChannel=_1.R;namespace Contact{type ContactTargetInfo=_0.ContactTargetInfo;type Targets=_0.Targets;type ChannelTargetInfo=_0.ChannelTargetInfo;type Stage=_0.Stage;}}

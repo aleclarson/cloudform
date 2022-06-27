@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ServerType:Value<string>;Username?:Value<string>;Token:Value<string>;AuthType:Value<string>;}declare class SourceCredential extends ResourceBase<Properties>{constructor(properties:Properties);}export{SourceCredential as R};

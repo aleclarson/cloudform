@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{RouteTableIds:List<Value<string>>;VpnGatewayId:Value<string>;}declare class VPNGatewayRoutePropagation extends ResourceBase<Properties>{constructor(properties:Properties);}export{VPNGatewayRoutePropagation as R};

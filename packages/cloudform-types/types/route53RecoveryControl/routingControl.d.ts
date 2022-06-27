@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ControlPanelArn?:Value<string>;Name:Value<string>;ClusterArn?:Value<string>;}declare class RoutingControl extends ResourceBase<Properties>{constructor(properties:Properties);}export{RoutingControl as R};

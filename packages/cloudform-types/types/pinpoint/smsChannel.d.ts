@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ShortCode?:Value<string>;Enabled?:Value<boolean>;ApplicationId:Value<string>;SenderId?:Value<string>;}declare class SMSChannel extends ResourceBase<Properties>{constructor(properties:Properties);}export{SMSChannel as R};

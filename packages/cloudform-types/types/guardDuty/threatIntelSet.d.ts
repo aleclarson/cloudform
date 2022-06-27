@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Format:Value<string>;Activate:Value<boolean>;DetectorId:Value<string>;Name?:Value<string>;Location:Value<string>;}declare class ThreatIntelSet extends ResourceBase<Properties>{constructor(properties:Properties);}export{ThreatIntelSet as R};

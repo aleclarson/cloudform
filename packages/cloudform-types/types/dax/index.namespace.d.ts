@@ -1,1 +1,0 @@
-import*as _0 from'./parameterGroup';import*as _1 from'./cluster';import*as _2 from'./subnetGroup';export declare namespace DAX{const ParameterGroup:typeof _0.R;const Cluster:typeof _1.R;const SubnetGroup:typeof _2.R;type ParameterGroup=_0.R;type Cluster=_1.R;type SubnetGroup=_2.R;namespace Cluster{type SSESpecification=_1.SSESpecification;}}

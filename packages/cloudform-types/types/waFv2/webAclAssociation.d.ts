@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ResourceArn:Value<string>;WebACLArn:Value<string>;}declare class WebACLAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{WebACLAssociation as R};

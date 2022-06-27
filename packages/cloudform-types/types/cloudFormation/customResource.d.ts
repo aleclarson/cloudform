@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ServiceToken:Value<string>;}declare class CustomResource extends ResourceBase<Properties>{constructor(properties:Properties);}export{CustomResource as R};

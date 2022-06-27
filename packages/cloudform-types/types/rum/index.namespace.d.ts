@@ -1,1 +1,0 @@
-import*as _0 from'./appMonitor';export declare namespace RUM{const AppMonitor:typeof _0.R;type AppMonitor=_0.R;namespace AppMonitor{type AppMonitorConfiguration=_0.AppMonitorConfiguration;}}

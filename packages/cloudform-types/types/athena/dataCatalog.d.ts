@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name:Value<string>;Description?:Value<string>;Parameters?:{[key:string]:Value<string>;};Tags?:List<ResourceTag>;Type:Value<string>;}declare class DataCatalog extends ResourceBase<Properties>{constructor(properties:Properties);}export{DataCatalog as R};

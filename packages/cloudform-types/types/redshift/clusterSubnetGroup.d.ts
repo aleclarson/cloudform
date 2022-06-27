@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Description:Value<string>;SubnetIds:List<Value<string>>;Tags?:List<ResourceTag>;}declare class ClusterSubnetGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{ClusterSubnetGroup as R};

@@ -1,1 +1,0 @@
-import*as _0 from'./flowTemplate';export declare namespace IoTThingsGraph{const FlowTemplate:typeof _0.R;type FlowTemplate=_0.R;namespace FlowTemplate{type DefinitionDocument=_0.DefinitionDocument;}}

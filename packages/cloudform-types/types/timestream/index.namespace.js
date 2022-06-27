@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Timestream=void 0;const _0=require("./scheduledQuery"),_1=require("./database"),_2=require("./table");var Timestream;!function(Timestream){Timestream.ScheduledQuery=_0.R,Timestream.Database=_1.R,Timestream.Table=_2.R}(Timestream=exports.Timestream||(exports.Timestream={}));

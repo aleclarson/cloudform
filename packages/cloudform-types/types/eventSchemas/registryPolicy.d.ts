@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Policy:{[key:string]:any;};RegistryName:Value<string>;RevisionId?:Value<string>;}declare class RegistryPolicy extends ResourceBase<Properties>{constructor(properties:Properties);}export{RegistryPolicy as R};

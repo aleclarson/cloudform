@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{VpcId:Value<string>;Tags?:List<ResourceTag>;}declare class CarrierGateway extends ResourceBase<Properties>{constructor(properties:Properties);}export{CarrierGateway as R};

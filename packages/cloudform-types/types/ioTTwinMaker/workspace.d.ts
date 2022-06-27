@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{WorkspaceId:Value<string>;Description?:Value<string>;Role:Value<string>;S3Location:Value<string>;Tags?:{[key:string]:Value<string>;};}declare class Workspace extends ResourceBase<Properties>{constructor(properties:Properties);}export{Workspace as R};

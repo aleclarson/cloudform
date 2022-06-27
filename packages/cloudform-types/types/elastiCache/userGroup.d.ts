@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{UserGroupId:Value<string>;Engine:Value<string>;UserIds?:List<Value<string>>;}declare class UserGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{UserGroup as R};

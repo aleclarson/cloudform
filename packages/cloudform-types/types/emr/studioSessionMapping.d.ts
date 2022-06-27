@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{IdentityName:Value<string>;IdentityType:Value<string>;SessionPolicyArn:Value<string>;StudioId:Value<string>;}declare class StudioSessionMapping extends ResourceBase<Properties>{constructor(properties:Properties);}export{StudioSessionMapping as R};

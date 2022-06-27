@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.IoT1Click=void 0;const _0=require("./project"),_1=require("./placement"),_2=require("./device");var IoT1Click;!function(IoT1Click){IoT1Click.Project=_0.R,IoT1Click.Placement=_1.R,IoT1Click.Device=_2.R}(IoT1Click=exports.IoT1Click||(exports.IoT1Click={}));

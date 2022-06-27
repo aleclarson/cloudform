@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Name:Value<string>;Description?:Value<string>;Tags?:{[key:string]:Value<string>;};}declare class Application extends ResourceBase<Properties>{constructor(properties:Properties);}export{Application as R};

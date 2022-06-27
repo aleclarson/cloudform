@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name?:Value<string>;PublicKeyMaterial:Value<string>;Tags?:List<ResourceTag>;}declare class PlaybackKeyPair extends ResourceBase<Properties>{constructor(properties:Properties);}export{PlaybackKeyPair as R};

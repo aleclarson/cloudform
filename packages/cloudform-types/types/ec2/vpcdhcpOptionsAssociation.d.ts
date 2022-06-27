@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{DhcpOptionsId:Value<string>;VpcId:Value<string>;}declare class VPCDHCPOptionsAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{VPCDHCPOptionsAssociation as R};

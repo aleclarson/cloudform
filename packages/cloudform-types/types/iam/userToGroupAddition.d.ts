@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{GroupName:Value<string>;Users:List<Value<string>>;}declare class UserToGroupAddition extends ResourceBase<Properties>{constructor(properties:Properties);}export{UserToGroupAddition as R};

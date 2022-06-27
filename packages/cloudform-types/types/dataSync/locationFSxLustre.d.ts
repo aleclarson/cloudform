@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{FsxFilesystemArn:Value<string>;SecurityGroupArns:List<Value<string>>;Subdirectory?:Value<string>;Tags?:List<ResourceTag>;}declare class LocationFSxLustre extends ResourceBase<Properties>{constructor(properties:Properties);}export{LocationFSxLustre as R};

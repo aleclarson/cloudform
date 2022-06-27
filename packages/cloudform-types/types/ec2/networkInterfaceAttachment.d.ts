@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{DeleteOnTermination?:Value<boolean>;DeviceIndex:Value<string>;InstanceId:Value<string>;NetworkInterfaceId:Value<string>;}declare class NetworkInterfaceAttachment extends ResourceBase<Properties>{constructor(properties:Properties);}export{NetworkInterfaceAttachment as R};

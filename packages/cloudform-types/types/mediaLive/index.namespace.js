@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.MediaLive=void 0;const _0=require("./inputSecurityGroup"),_1=require("./channel"),_2=require("./input");var MediaLive;!function(MediaLive){MediaLive.InputSecurityGroup=_0.R,MediaLive.Channel=_1.R,MediaLive.Input=_2.R}(MediaLive=exports.MediaLive||(exports.MediaLive={}));

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{TransitGatewayRouteTableId:Value<string>;DestinationCidrBlock?:Value<string>;Blackhole?:Value<boolean>;TransitGatewayAttachmentId?:Value<string>;}declare class TransitGatewayRoute extends ResourceBase<Properties>{constructor(properties:Properties);}export{TransitGatewayRoute as R};

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Rekognition=void 0;const _0=require("./collection"),_1=require("./project"),_2=require("./streamProcessor");var Rekognition;!function(Rekognition){Rekognition.Collection=_0.R,Rekognition.Project=_1.R,Rekognition.StreamProcessor=_2.R}(Rekognition=exports.Rekognition||(exports.Rekognition={}));

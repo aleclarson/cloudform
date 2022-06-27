@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.KinesisFirehose=void 0;const _0=require("./deliveryStream");var KinesisFirehose;!function(KinesisFirehose){KinesisFirehose.DeliveryStream=_0.R}(KinesisFirehose=exports.KinesisFirehose||(exports.KinesisFirehose={}));

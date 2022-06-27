@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{PolicyDocument:{[key:string]:any;};Topics:List<Value<string>>;}declare class TopicPolicy extends ResourceBase<Properties>{constructor(properties:Properties);}export{TopicPolicy as R};

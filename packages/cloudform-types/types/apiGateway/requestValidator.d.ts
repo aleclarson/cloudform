@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Name?:Value<string>;RestApiId:Value<string>;ValidateRequestBody?:Value<boolean>;ValidateRequestParameters?:Value<boolean>;}declare class RequestValidator extends ResourceBase<Properties>{constructor(properties:Properties);}export{RequestValidator as R};

@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export declare type Tags=List<ResourceTag>;export interface Properties{RuleState:Value<string>;RuleBody:Value<string>;RuleName:Value<string>;Tags?:Tags;}declare class InsightRule extends ResourceBase<Properties>{constructor(properties:Properties);}export{InsightRule as R};

@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{List}from'../dataTypes';export interface Properties{SuiteDefinitionConfiguration:{[key:string]:any;};Tags?:List<ResourceTag>;}declare class SuiteDefinition extends ResourceBase<Properties>{constructor(properties:Properties);}export{SuiteDefinition as R};

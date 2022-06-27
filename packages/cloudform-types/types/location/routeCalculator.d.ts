@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{CalculatorName:Value<string>;DataSource:Value<string>;Description?:Value<string>;PricingPlan?:Value<string>;}declare class RouteCalculator extends ResourceBase<Properties>{constructor(properties:Properties);}export{RouteCalculator as R};

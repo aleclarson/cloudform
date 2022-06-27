@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{AllowedPrincipals?:List<Value<string>>;ServiceId:Value<string>;}declare class VPCEndpointServicePermissions extends ResourceBase<Properties>{constructor(properties:Properties);}export{VPCEndpointServicePermissions as R};

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Application:Value<string>;AttributeGroup:Value<string>;}declare class AttributeGroupAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{AttributeGroupAssociation as R};

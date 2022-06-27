@@ -1,1 +1,0 @@
-import*as _0 from'./reportDefinition';export declare namespace CUR{const ReportDefinition:typeof _0.R;type ReportDefinition=_0.R;}

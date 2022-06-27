@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Name?:Value<string>;Database:Value<string>;Description?:Value<string>;QueryString:Value<string>;WorkGroup?:Value<string>;}declare class NamedQuery extends ResourceBase<Properties>{constructor(properties:Properties);}export{NamedQuery as R};

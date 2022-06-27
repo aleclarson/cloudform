@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{PortalId:Value<string>;ProjectName:Value<string>;ProjectDescription?:Value<string>;AssetIds?:List<Value<string>>;Tags?:List<ResourceTag>;}declare class Project extends ResourceBase<Properties>{constructor(properties:Properties);}export{Project as R};

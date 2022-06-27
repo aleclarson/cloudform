@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.CodeArtifact=void 0;const _0=require("./domain"),_1=require("./repository");var CodeArtifact;!function(CodeArtifact){CodeArtifact.Domain=_0.R,CodeArtifact.Repository=_1.R}(CodeArtifact=exports.CodeArtifact||(exports.CodeArtifact={}));

@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name?:Value<string>;Domains?:List<Value<string>>;DomainFileUrl?:Value<string>;Tags?:List<ResourceTag>;}declare class FirewallDomainList extends ResourceBase<Properties>{constructor(properties?:Properties);}export{FirewallDomainList as R};

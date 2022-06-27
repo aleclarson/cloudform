@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ConsumerName:Value<string>;StreamARN:Value<string>;}declare class StreamConsumer extends ResourceBase<Properties>{constructor(properties:Properties);}export{StreamConsumer as R};

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Category?:Value<string>;Description?:Value<string>;SettingsJson:{[key:string]:any;};Tags?:{[key:string]:any;};Name?:Value<string>;}declare class Preset extends ResourceBase<Properties>{constructor(properties:Properties);}export{Preset as R};

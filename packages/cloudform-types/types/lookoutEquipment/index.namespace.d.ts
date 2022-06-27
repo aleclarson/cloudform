@@ -1,1 +1,0 @@
-import*as _0 from'./inferenceScheduler';export declare namespace LookoutEquipment{const InferenceScheduler:typeof _0.R;type InferenceScheduler=_0.R;}

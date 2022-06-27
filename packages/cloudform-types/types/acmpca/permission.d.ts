@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Actions:List<Value<string>>;CertificateAuthorityArn:Value<string>;Principal:Value<string>;SourceAccount?:Value<string>;}declare class Permission extends ResourceBase<Properties>{constructor(properties:Properties);}export{Permission as R};

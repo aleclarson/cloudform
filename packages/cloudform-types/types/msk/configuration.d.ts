@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name:Value<string>;Description?:Value<string>;ServerProperties:Value<string>;KafkaVersionsList?:List<Value<string>>;}declare class Configuration extends ResourceBase<Properties>{constructor(properties:Properties);}export{Configuration as R};

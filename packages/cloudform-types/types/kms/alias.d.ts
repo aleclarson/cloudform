@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{AliasName:Value<string>;TargetKeyId:Value<string>;}declare class Alias extends ResourceBase<Properties>{constructor(properties:Properties);}export{Alias as R};

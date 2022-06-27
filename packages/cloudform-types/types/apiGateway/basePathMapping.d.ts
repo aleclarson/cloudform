@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Id?:Value<string>;BasePath?:Value<string>;DomainName:Value<string>;RestApiId?:Value<string>;Stage?:Value<string>;}declare class BasePathMapping extends ResourceBase<Properties>{constructor(properties:Properties);}export{BasePathMapping as R};

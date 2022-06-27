@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Name:Value<string>;KmsKeyArn?:Value<string>;RoleArn?:Value<string>;Domain?:Value<string>;}declare class DatasetGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{DatasetGroup as R};

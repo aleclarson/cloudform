@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.MediaConvert=void 0;const _0=require("./queue"),_1=require("./jobTemplate"),_2=require("./preset");var MediaConvert;!function(MediaConvert){MediaConvert.Queue=_0.R,MediaConvert.JobTemplate=_1.R,MediaConvert.Preset=_2.R}(MediaConvert=exports.MediaConvert||(exports.MediaConvert={}));

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ProfileName:Value<string>;ProfileVersion?:Value<string>;Action:Value<string>;Principal:Value<string>;StatementId:Value<string>;}declare class ProfilePermission extends ResourceBase<Properties>{constructor(properties:Properties);}export{ProfilePermission as R};

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.GreengrassV2=void 0;const _0=require("./componentVersion");var GreengrassV2;!function(GreengrassV2){GreengrassV2.ComponentVersion=_0.R}(GreengrassV2=exports.GreengrassV2||(exports.GreengrassV2={}));

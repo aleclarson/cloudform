@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Chatbot=void 0;const _0=require("./slackChannelConfiguration");var Chatbot;!function(Chatbot){Chatbot.SlackChannelConfiguration=_0.R}(Chatbot=exports.Chatbot||(exports.Chatbot={}));

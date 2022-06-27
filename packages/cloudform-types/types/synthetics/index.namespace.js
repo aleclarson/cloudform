@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Synthetics=void 0;const _0=require("./canary");var Synthetics;!function(Synthetics){Synthetics.Canary=_0.R}(Synthetics=exports.Synthetics||(exports.Synthetics={}));

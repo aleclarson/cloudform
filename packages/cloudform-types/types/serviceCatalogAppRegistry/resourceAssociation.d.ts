@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Application:Value<string>;Resource:Value<string>;ResourceType:Value<string>;}declare class ResourceAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{ResourceAssociation as R};

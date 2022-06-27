@@ -1,1 +1,0 @@
-import*as _0 from'./gitHubRepository';export declare namespace CodeStar{const GitHubRepository:typeof _0.R;type GitHubRepository=_0.R;namespace GitHubRepository{type Code=_0.Code;type S3=_0.S3;}}

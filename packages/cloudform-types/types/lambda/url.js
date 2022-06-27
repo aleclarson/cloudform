@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=exports.Cors=void 0;const resource_1=require("../resource");class Cors{constructor(properties){Object.assign(this,properties)}}exports.Cors=Cors;class Url extends resource_1.ResourceBase{constructor(properties){super("AWS::Lambda::Url",properties)}}(exports.R=Url).Cors=Cors;

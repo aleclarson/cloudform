@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{GroupIpAddress:Value<string>;TransitGatewayMulticastDomainId:Value<string>;NetworkInterfaceId:Value<string>;}declare class TransitGatewayMulticastGroupSource extends ResourceBase<Properties>{constructor(properties:Properties);}export{TransitGatewayMulticastGroupSource as R};

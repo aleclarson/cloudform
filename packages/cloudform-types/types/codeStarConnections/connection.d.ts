@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{ConnectionName:Value<string>;ProviderType?:Value<string>;HostArn?:Value<string>;Tags?:List<ResourceTag>;}declare class Connection extends ResourceBase<Properties>{constructor(properties:Properties);}export{Connection as R};

@@ -1,1 +1,0 @@
-import*as _0 from'./accessPoint';import*as _1 from'./accessPointPolicy';export declare namespace S3ObjectLambda{const AccessPoint:typeof _0.R;const AccessPointPolicy:typeof _1.R;type AccessPoint=_0.R;type AccessPointPolicy=_1.R;namespace AccessPoint{type ObjectLambdaConfiguration=_0.ObjectLambdaConfiguration;type TransformationConfiguration=_0.TransformationConfiguration;}}

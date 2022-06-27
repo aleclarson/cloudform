@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{RouteTableId:Value<string>;GatewayId:Value<string>;}declare class GatewayRouteTableAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{GatewayRouteTableAssociation as R};

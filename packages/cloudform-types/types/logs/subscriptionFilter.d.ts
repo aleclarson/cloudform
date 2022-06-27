@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{DestinationArn:Value<string>;FilterPattern:Value<string>;LogGroupName:Value<string>;RoleArn?:Value<string>;}declare class SubscriptionFilter extends ResourceBase<Properties>{constructor(properties:Properties);}export{SubscriptionFilter as R};

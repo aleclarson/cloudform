@@ -1,1 +1,0 @@
-import*as _0 from'./domain';export declare namespace SDB{const Domain:typeof _0.R;type Domain=_0.R;}

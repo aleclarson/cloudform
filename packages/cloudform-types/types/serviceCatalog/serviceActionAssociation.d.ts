@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ProductId:Value<string>;ProvisioningArtifactId:Value<string>;ServiceActionId:Value<string>;}declare class ServiceActionAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{ServiceActionAssociation as R};

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.DynamoDB=void 0;const _0=require("./table"),_1=require("./globalTable");var DynamoDB;!function(DynamoDB){DynamoDB.Table=_0.R,DynamoDB.GlobalTable=_1.R}(DynamoDB=exports.DynamoDB||(exports.DynamoDB={}));

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.CodeStarNotifications=void 0;const _0=require("./notificationRule");var CodeStarNotifications;!function(CodeStarNotifications){CodeStarNotifications.NotificationRule=_0.R}(CodeStarNotifications=exports.CodeStarNotifications||(exports.CodeStarNotifications={}));

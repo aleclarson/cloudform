@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{GroupName:Value<string>;UserPoolId:Value<string>;Username:Value<string>;}declare class UserPoolUserToGroupAttachment extends ResourceBase<Properties>{constructor(properties:Properties);}export{UserPoolUserToGroupAttachment as R};

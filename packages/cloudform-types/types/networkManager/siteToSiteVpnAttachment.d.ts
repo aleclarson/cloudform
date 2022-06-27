@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{CoreNetworkId?:Value<string>;Tags?:List<ResourceTag>;VpnConnectionArn?:Value<string>;}declare class SiteToSiteVpnAttachment extends ResourceBase<Properties>{constructor(properties?:Properties);}export{SiteToSiteVpnAttachment as R};

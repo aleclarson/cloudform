@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{SubnetIds:List<Value<string>>;SecurityGroupIds?:List<Value<string>>;Tags?:{[key:string]:Value<string>;};Name:Value<string>;}declare class VpcLink extends ResourceBase<Properties>{constructor(properties:Properties);}export{VpcLink as R};

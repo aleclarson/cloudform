@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Amplify=void 0;const _0=require("./app"),_1=require("./domain"),_2=require("./branch");var Amplify;!function(Amplify){Amplify.App=_0.R,Amplify.Domain=_1.R,Amplify.Branch=_2.R}(Amplify=exports.Amplify||(exports.Amplify={}));

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{CSS?:Value<string>;UserPoolId:Value<string>;ClientId:Value<string>;}declare class UserPoolUICustomizationAttachment extends ResourceBase<Properties>{constructor(properties:Properties);}export{UserPoolUICustomizationAttachment as R};

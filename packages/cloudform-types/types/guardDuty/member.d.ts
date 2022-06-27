@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Status?:Value<string>;MemberId:Value<string>;Email:Value<string>;Message?:Value<string>;DisableEmailNotification?:Value<boolean>;DetectorId:Value<string>;}declare class Member extends ResourceBase<Properties>{constructor(properties:Properties);}export{Member as R};

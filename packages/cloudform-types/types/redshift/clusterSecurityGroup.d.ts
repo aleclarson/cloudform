@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Description:Value<string>;Tags?:List<ResourceTag>;}declare class ClusterSecurityGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{ClusterSecurityGroup as R};

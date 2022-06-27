@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.S3ObjectLambda=void 0;const _0=require("./accessPoint"),_1=require("./accessPointPolicy");var S3ObjectLambda;!function(S3ObjectLambda){S3ObjectLambda.AccessPoint=_0.R,S3ObjectLambda.AccessPointPolicy=_1.R}(S3ObjectLambda=exports.S3ObjectLambda||(exports.S3ObjectLambda={}));

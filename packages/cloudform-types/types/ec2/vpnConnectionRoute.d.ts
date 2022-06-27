@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{DestinationCidrBlock:Value<string>;VpnConnectionId:Value<string>;}declare class VPNConnectionRoute extends ResourceBase<Properties>{constructor(properties:Properties);}export{VPNConnectionRoute as R};

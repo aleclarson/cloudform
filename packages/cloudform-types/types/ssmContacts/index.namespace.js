@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.SSMContacts=void 0;const _0=require("./contact"),_1=require("./contactChannel");var SSMContacts;!function(SSMContacts){SSMContacts.Contact=_0.R,SSMContacts.ContactChannel=_1.R}(SSMContacts=exports.SSMContacts||(exports.SSMContacts={}));

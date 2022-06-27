@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{PermissionsMode:Value<string>;DeletionProtection?:Value<boolean>;KmsKey?:Value<string>;Tags?:List<ResourceTag>;Name?:Value<string>;}declare class Ledger extends ResourceBase<Properties>{constructor(properties:Properties);}export{Ledger as R};

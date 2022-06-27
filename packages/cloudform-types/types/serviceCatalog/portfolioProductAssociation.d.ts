@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{SourcePortfolioId?:Value<string>;AcceptLanguage?:Value<string>;PortfolioId:Value<string>;ProductId:Value<string>;}declare class PortfolioProductAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{PortfolioProductAssociation as R};

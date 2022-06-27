@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{JobNames?:List<Value<string>>;CronExpression:Value<string>;Name:Value<string>;Tags?:List<ResourceTag>;}declare class Schedule extends ResourceBase<Properties>{constructor(properties:Properties);}export{Schedule as R};

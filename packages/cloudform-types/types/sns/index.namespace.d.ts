@@ -1,1 +1,0 @@
-import*as _0 from'./topic';import*as _1 from'./subscription';import*as _2 from'./topicPolicy';export declare namespace SNS{const Topic:typeof _0.R;const Subscription:typeof _1.R;const TopicPolicy:typeof _2.R;type Topic=_0.R;type Subscription=_1.R;type TopicPolicy=_2.R;namespace Topic{type Subscription=_0.Subscription;}}

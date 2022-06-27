@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{GroupName?:Value<string>;Description?:Value<string>;UserPoolId:Value<string>;Precedence?:Value<number>;RoleArn?:Value<string>;}declare class UserPoolGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{UserPoolGroup as R};

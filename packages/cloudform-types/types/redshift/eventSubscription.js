@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=void 0;const resource_1=require("../resource");class EventSubscription extends resource_1.ResourceBase{constructor(properties){super("AWS::Redshift::EventSubscription",properties)}}exports.R=EventSubscription;

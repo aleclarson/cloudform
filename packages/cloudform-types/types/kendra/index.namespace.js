@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Kendra=void 0;const _0=require("./dataSource"),_1=require("./indexResource"),_2=require("./faq");var Kendra;!function(Kendra){Kendra.DataSource=_0.R,Kendra.Index=_1.R,Kendra.Faq=_2.R}(Kendra=exports.Kendra||(exports.Kendra={}));

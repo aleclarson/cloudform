@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{AuthorizedAccountId:Value<string>;AuthorizedAwsRegion:Value<string>;Tags?:List<ResourceTag>;}declare class AggregationAuthorization extends ResourceBase<Properties>{constructor(properties:Properties);}export{AggregationAuthorization as R};

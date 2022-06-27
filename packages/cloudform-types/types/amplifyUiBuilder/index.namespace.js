@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.AmplifyUIBuilder=void 0;const _0=require("./component"),_1=require("./theme");var AmplifyUIBuilder;!function(AmplifyUIBuilder){AmplifyUIBuilder.Component=_0.R,AmplifyUIBuilder.Theme=_1.R}(AmplifyUIBuilder=exports.AmplifyUIBuilder||(exports.AmplifyUIBuilder={}));

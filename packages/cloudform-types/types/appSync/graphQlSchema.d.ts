@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Definition?:Value<string>;DefinitionS3Location?:Value<string>;ApiId:Value<string>;}declare class GraphQLSchema extends ResourceBase<Properties>{constructor(properties:Properties);}export{GraphQLSchema as R};

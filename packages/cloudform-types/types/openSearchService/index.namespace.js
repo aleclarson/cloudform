@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.OpenSearchService=void 0;const _0=require("./domain");var OpenSearchService;!function(OpenSearchService){OpenSearchService.Domain=_0.R}(OpenSearchService=exports.OpenSearchService||(exports.OpenSearchService={}));

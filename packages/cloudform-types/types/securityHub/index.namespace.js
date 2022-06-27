@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.SecurityHub=void 0;const _0=require("./hub");var SecurityHub;!function(SecurityHub){SecurityHub.Hub=_0.R}(SecurityHub=exports.SecurityHub||(exports.SecurityHub={}));

@@ -1,1 +1,0 @@
-import*as _0 from'./queuePolicy';import*as _1 from'./queue';export declare namespace SQS{const QueuePolicy:typeof _0.R;const Queue:typeof _1.R;type QueuePolicy=_0.R;type Queue=_1.R;}

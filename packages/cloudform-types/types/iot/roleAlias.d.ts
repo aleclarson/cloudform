@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{RoleAlias?:Value<string>;RoleArn:Value<string>;CredentialDurationSeconds?:Value<number>;Tags?:List<ResourceTag>;}declare class RoleAlias extends ResourceBase<Properties>{constructor(properties:Properties);}export{RoleAlias as R};

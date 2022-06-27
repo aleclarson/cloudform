@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Description?:Value<string>;Name?:Value<string>;NetworkFabricType?:Value<string>;Tags?:List<ResourceTag>;}declare class Environment extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Environment as R};

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{UserId:Value<string>;UserName:Value<string>;Engine:Value<string>;AccessString?:Value<string>;NoPasswordRequired?:Value<boolean>;Passwords?:List<Value<string>>;}declare class User extends ResourceBase<Properties>{constructor(properties:Properties);}export{User as R};

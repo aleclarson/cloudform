@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{FlowArn:Value<string>;Name:Value<string>;RoleArn:Value<string>;SecurityGroupIds:List<Value<string>>;SubnetId:Value<string>;}declare class FlowVpcInterface extends ResourceBase<Properties>{constructor(properties:Properties);}export{FlowVpcInterface as R};

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{ClusterIdentifier:Value<string>;Account:Value<string>;VpcIds?:List<Value<string>>;Force?:Value<boolean>;}declare class EndpointAuthorization extends ResourceBase<Properties>{constructor(properties:Properties);}export{EndpointAuthorization as R};

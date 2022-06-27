@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.AmazonMQ=void 0;const _0=require("./configurationAssociation"),_1=require("./configuration"),_2=require("./broker");var AmazonMQ;!function(AmazonMQ){AmazonMQ.ConfigurationAssociation=_0.R,AmazonMQ.Configuration=_1.R,AmazonMQ.Broker=_2.R}(AmazonMQ=exports.AmazonMQ||(exports.AmazonMQ={}));

@@ -1,1 +1,0 @@
-import*as _0 from'./environment';export declare namespace MWAA{const Environment:typeof _0.R;type Environment=_0.R;namespace Environment{type NetworkConfiguration=_0.NetworkConfiguration;type ModuleLoggingConfiguration=_0.ModuleLoggingConfiguration;type LoggingConfiguration=_0.LoggingConfiguration;}}

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{AutoPlacement?:Value<string>;AvailabilityZone:Value<string>;HostRecovery?:Value<string>;InstanceType:Value<string>;}declare class Host extends ResourceBase<Properties>{constructor(properties:Properties);}export{Host as R};

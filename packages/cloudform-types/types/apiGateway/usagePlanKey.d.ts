@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{KeyId:Value<string>;KeyType:Value<string>;UsagePlanId:Value<string>;}declare class UsagePlanKey extends ResourceBase<Properties>{constructor(properties:Properties);}export{UsagePlanKey as R};

@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Description:Value<string>;Family:Value<string>;Parameters?:{[key:string]:Value<string>;};Tags?:List<ResourceTag>;}declare class DBParameterGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{DBParameterGroup as R};

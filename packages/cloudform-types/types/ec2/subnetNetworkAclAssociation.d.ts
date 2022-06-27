@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{NetworkAclId:Value<string>;SubnetId:Value<string>;}declare class SubnetNetworkAclAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{SubnetNetworkAclAssociation as R};

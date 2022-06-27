@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{VpcId:Value<string>;}declare class EgressOnlyInternetGateway extends ResourceBase<Properties>{constructor(properties:Properties);}export{EgressOnlyInternetGateway as R};

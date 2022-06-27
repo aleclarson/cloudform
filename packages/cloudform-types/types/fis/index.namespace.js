@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.FIS=void 0;const _0=require("./experimentTemplate");var FIS;!function(FIS){FIS.ExperimentTemplate=_0.R}(FIS=exports.FIS||(exports.FIS={}));

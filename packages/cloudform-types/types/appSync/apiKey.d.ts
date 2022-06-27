@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Description?:Value<string>;ApiKeyId?:Value<string>;Expires?:Value<number>;ApiId:Value<string>;}declare class ApiKey extends ResourceBase<Properties>{constructor(properties:Properties);}export{ApiKey as R};

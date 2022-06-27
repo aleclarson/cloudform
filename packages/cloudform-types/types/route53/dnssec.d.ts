@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{HostedZoneId:Value<string>;}declare class DNSSEC extends ResourceBase<Properties>{constructor(properties:Properties);}export{DNSSEC as R};

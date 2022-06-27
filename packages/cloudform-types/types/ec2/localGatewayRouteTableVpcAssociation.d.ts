@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{LocalGatewayRouteTableId:Value<string>;VpcId:Value<string>;Tags?:List<ResourceTag>;}declare class LocalGatewayRouteTableVPCAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{LocalGatewayRouteTableVPCAssociation as R};

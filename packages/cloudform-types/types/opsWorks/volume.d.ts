@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Ec2VolumeId:Value<string>;MountPoint?:Value<string>;Name?:Value<string>;StackId:Value<string>;}declare class Volume extends ResourceBase<Properties>{constructor(properties:Properties);}export{Volume as R};

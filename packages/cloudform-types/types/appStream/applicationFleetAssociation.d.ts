@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{FleetName:Value<string>;ApplicationArn:Value<string>;}declare class ApplicationFleetAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{ApplicationFleetAssociation as R};

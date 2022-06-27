@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Strategy?:Value<string>;}declare class PlacementGroup extends ResourceBase<Properties>{constructor(properties?:Properties);}export{PlacementGroup as R};

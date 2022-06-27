@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name?:Value<string>;Type:Value<string>;StringValues:List<Value<string>>;Tags?:List<ResourceTag>;}declare class Dimension extends ResourceBase<Properties>{constructor(properties:Properties);}export{Dimension as R};

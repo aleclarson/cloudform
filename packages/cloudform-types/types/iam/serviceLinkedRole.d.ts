@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{CustomSuffix?:Value<string>;Description?:Value<string>;AWSServiceName:Value<string>;}declare class ServiceLinkedRole extends ResourceBase<Properties>{constructor(properties:Properties);}export{ServiceLinkedRole as R};

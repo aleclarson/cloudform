@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{VirtualMfaDeviceName?:Value<string>;Path?:Value<string>;Users:List<Value<string>>;Tags?:List<ResourceTag>;}declare class VirtualMFADevice extends ResourceBase<Properties>{constructor(properties:Properties);}export{VirtualMFADevice as R};

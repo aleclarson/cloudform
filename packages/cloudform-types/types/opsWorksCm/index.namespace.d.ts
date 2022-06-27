@@ -1,1 +1,0 @@
-import*as _0 from'./server';export declare namespace OpsWorksCM{const Server:typeof _0.R;type Server=_0.R;namespace Server{type EngineAttribute=_0.EngineAttribute;}}

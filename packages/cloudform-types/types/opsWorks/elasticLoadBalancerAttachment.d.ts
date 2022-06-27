@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ElasticLoadBalancerName:Value<string>;LayerId:Value<string>;}declare class ElasticLoadBalancerAttachment extends ResourceBase<Properties>{constructor(properties:Properties);}export{ElasticLoadBalancerAttachment as R};

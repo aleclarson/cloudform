@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ApiKey:Value<string>;Enabled?:Value<boolean>;ApplicationId:Value<string>;}declare class GCMChannel extends ResourceBase<Properties>{constructor(properties:Properties);}export{GCMChannel as R};

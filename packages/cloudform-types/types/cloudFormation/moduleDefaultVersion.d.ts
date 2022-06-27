@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Arn?:Value<string>;ModuleName?:Value<string>;VersionId?:Value<string>;}declare class ModuleDefaultVersion extends ResourceBase<Properties>{constructor(properties?:Properties);}export{ModuleDefaultVersion as R};

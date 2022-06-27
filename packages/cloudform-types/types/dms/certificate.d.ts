@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{CertificateIdentifier?:Value<string>;CertificatePem?:Value<string>;CertificateWallet?:Value<string>;}declare class Certificate extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Certificate as R};

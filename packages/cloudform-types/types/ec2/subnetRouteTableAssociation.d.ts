@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{RouteTableId:Value<string>;SubnetId:Value<string>;}declare class SubnetRouteTableAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{SubnetRouteTableAssociation as R};

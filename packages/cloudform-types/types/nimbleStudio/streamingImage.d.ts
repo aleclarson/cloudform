@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Description?:Value<string>;Ec2ImageId:Value<string>;Name:Value<string>;StudioId:Value<string>;Tags?:{[key:string]:Value<string>;};}declare class StreamingImage extends ResourceBase<Properties>{constructor(properties:Properties);}export{StreamingImage as R};

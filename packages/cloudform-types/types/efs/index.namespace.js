@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.EFS=void 0;const _0=require("./mountTarget"),_1=require("./fileSystem"),_2=require("./accessPoint");var EFS;!function(EFS){EFS.MountTarget=_0.R,EFS.FileSystem=_1.R,EFS.AccessPoint=_2.R}(EFS=exports.EFS||(exports.EFS={}));

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Format:Value<string>;Activate:Value<boolean>;DetectorId:Value<string>;Name?:Value<string>;Location:Value<string>;}declare class IPSet extends ResourceBase<Properties>{constructor(properties:Properties);}export{IPSet as R};

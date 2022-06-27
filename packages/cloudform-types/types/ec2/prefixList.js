@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=exports.Entry=void 0;const resource_1=require("../resource");class Entry{constructor(properties){Object.assign(this,properties)}}exports.Entry=Entry;class PrefixList extends resource_1.ResourceBase{constructor(properties){super("AWS::EC2::PrefixList",properties)}}(exports.R=PrefixList).Entry=Entry;

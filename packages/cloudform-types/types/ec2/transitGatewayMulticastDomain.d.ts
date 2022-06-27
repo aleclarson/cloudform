@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{TransitGatewayId:Value<string>;Tags?:List<ResourceTag>;Options?:{[key:string]:any;};}declare class TransitGatewayMulticastDomain extends ResourceBase<Properties>{constructor(properties:Properties);}export{TransitGatewayMulticastDomain as R};

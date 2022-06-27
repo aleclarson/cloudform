@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{SnsRoleName:Value<string>;SnsTopicArn:Value<string>;}declare class NotificationChannel extends ResourceBase<Properties>{constructor(properties:Properties);}export{NotificationChannel as R};

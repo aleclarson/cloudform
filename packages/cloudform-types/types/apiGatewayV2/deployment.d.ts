@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Description?:Value<string>;StageName?:Value<string>;ApiId:Value<string>;}declare class Deployment extends ResourceBase<Properties>{constructor(properties:Properties);}export{Deployment as R};

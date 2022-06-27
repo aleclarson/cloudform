@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{SecretKey:Value<string>;ApiKey:Value<string>;Enabled?:Value<boolean>;ApplicationId:Value<string>;}declare class BaiduChannel extends ResourceBase<Properties>{constructor(properties:Properties);}export{BaiduChannel as R};

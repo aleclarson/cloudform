@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{TypeVersionArn?:Value<string>;TypeName?:Value<string>;VersionId?:Value<string>;}declare class HookDefaultVersion extends ResourceBase<Properties>{constructor(properties?:Properties);}export{HookDefaultVersion as R};

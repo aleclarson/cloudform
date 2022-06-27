@@ -1,1 +1,0 @@
-import*as _0 from'./environment';export declare namespace FinSpace{const Environment:typeof _0.R;type Environment=_0.R;namespace Environment{type FederationParameters=_0.FederationParameters;type SuperuserParameters=_0.SuperuserParameters;}}

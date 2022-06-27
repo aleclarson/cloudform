@@ -1,1 +1,0 @@
-import*as _0 from'./resourceGroup';import*as _1 from'./assessmentTemplate';import*as _2 from'./assessmentTarget';export declare namespace Inspector{const ResourceGroup:typeof _0.R;const AssessmentTemplate:typeof _1.R;const AssessmentTarget:typeof _2.R;type ResourceGroup=_0.R;type AssessmentTemplate=_1.R;type AssessmentTarget=_2.R;}

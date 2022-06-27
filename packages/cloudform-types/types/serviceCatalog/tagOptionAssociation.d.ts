@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{TagOptionId:Value<string>;ResourceId:Value<string>;}declare class TagOptionAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{TagOptionAssociation as R};

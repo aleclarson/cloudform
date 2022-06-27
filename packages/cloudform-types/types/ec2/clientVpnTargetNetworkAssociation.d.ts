@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ClientVpnEndpointId:Value<string>;SubnetId:Value<string>;}declare class ClientVpnTargetNetworkAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{ClientVpnTargetNetworkAssociation as R};

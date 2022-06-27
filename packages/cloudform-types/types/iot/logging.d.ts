@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{AccountId:Value<string>;RoleArn:Value<string>;DefaultLogLevel:Value<string>;}declare class Logging extends ResourceBase<Properties>{constructor(properties:Properties);}export{Logging as R};

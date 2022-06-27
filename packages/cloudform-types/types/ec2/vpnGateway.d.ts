@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{AmazonSideAsn?:Value<number>;Tags?:List<ResourceTag>;Type:Value<string>;}declare class VPNGateway extends ResourceBase<Properties>{constructor(properties:Properties);}export{VPNGateway as R};

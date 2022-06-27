@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Description?:Value<string>;DefaultRunProperties?:{[key:string]:any;};Tags?:{[key:string]:any;};Name?:Value<string>;}declare class Workflow extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Workflow as R};

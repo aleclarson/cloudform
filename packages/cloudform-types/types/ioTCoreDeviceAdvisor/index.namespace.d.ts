@@ -1,1 +1,0 @@
-import*as _0 from'./suiteDefinition';export declare namespace IoTCoreDeviceAdvisor{const SuiteDefinition:typeof _0.R;type SuiteDefinition=_0.R;}

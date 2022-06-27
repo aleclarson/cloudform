@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Workspace:Value<string>;Name:Value<string>;Data:Value<string>;Tags?:List<ResourceTag>;}declare class RuleGroupsNamespace extends ResourceBase<Properties>{constructor(properties:Properties);}export{RuleGroupsNamespace as R};

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ProjectName:Value<string>;}declare class Project extends ResourceBase<Properties>{constructor(properties:Properties);}export{Project as R};

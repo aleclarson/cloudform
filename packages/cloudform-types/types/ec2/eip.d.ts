@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Domain?:Value<string>;InstanceId?:Value<string>;NetworkBorderGroup?:Value<string>;PublicIpv4Pool?:Value<string>;Tags?:List<ResourceTag>;}declare class EIP extends ResourceBase<Properties>{constructor(properties?:Properties);}export{EIP as R};

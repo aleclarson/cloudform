@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{ProjectId?:Value<string>;DashboardName:Value<string>;DashboardDescription:Value<string>;DashboardDefinition:Value<string>;Tags?:List<ResourceTag>;}declare class Dashboard extends ResourceBase<Properties>{constructor(properties:Properties);}export{Dashboard as R};

@@ -1,1 +1,0 @@
-import*as _0 from'./account';import*as _1 from'./certificate';export declare namespace CertificateManager{const Account:typeof _0.R;const Certificate:typeof _1.R;type Account=_0.R;type Certificate=_1.R;namespace Account{type ExpiryEventsConfiguration=_0.ExpiryEventsConfiguration;}namespace Certificate{type DomainValidationOption=_1.DomainValidationOption;}}

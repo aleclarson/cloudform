@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Tags?:{[key:string]:Value<string>;};Name?:Value<string>;}declare class Fleet extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Fleet as R};

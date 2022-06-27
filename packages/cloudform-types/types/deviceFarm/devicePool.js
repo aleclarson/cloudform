@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.R=exports.Rule=void 0;const resource_1=require("../resource");class Rule{constructor(properties){Object.assign(this,properties)}}exports.Rule=Rule;class DevicePool extends resource_1.ResourceBase{constructor(properties){super("AWS::DeviceFarm::DevicePool",properties)}}(exports.R=DevicePool).Rule=Rule;

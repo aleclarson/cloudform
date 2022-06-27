@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Ipv6CidrBlock:Value<string>;SubnetId:Value<string>;}declare class SubnetCidrBlock extends ResourceBase<Properties>{constructor(properties:Properties);}export{SubnetCidrBlock as R};

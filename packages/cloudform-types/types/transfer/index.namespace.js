@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Transfer=void 0;const _0=require("./workflow"),_1=require("./server"),_2=require("./user");var Transfer;!function(Transfer){Transfer.Workflow=_0.R,Transfer.Server=_1.R,Transfer.User=_2.R}(Transfer=exports.Transfer||(exports.Transfer={}));

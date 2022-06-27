@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{NetworkInsightsAccessScopeId:Value<string>;Tags?:List<ResourceTag>;}declare class NetworkInsightsAccessScopeAnalysis extends ResourceBase<Properties>{constructor(properties:Properties);}export{NetworkInsightsAccessScopeAnalysis as R};

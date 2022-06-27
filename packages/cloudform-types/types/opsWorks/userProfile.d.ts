@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{AllowSelfManagement?:Value<boolean>;IamUserArn:Value<string>;SshPublicKey?:Value<string>;SshUsername?:Value<string>;}declare class UserProfile extends ResourceBase<Properties>{constructor(properties:Properties);}export{UserProfile as R};

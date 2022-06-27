@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{SendEmailNotification?:Value<boolean>;UserName:Value<string>;StackName:Value<string>;AuthenticationType:Value<string>;}declare class StackUserAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{StackUserAssociation as R};

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.MediaStore=void 0;const _0=require("./container");var MediaStore;!function(MediaStore){MediaStore.Container=_0.R}(MediaStore=exports.MediaStore||(exports.MediaStore={}));

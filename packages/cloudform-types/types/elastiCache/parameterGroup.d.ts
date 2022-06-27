@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{CacheParameterGroupFamily:Value<string>;Description:Value<string>;Properties?:{[key:string]:Value<string>;};Tags?:List<ResourceTag>;}declare class ParameterGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{ParameterGroup as R};

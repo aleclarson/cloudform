@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.DevOpsGuru=void 0;const _0=require("./notificationChannel"),_1=require("./resourceCollection");var DevOpsGuru;!function(DevOpsGuru){DevOpsGuru.NotificationChannel=_0.R,DevOpsGuru.ResourceCollection=_1.R}(DevOpsGuru=exports.DevOpsGuru||(exports.DevOpsGuru={}));

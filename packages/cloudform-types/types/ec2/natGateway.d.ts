@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{SubnetId:Value<string>;ConnectivityType?:Value<string>;Tags?:List<ResourceTag>;AllocationId?:Value<string>;}declare class NatGateway extends ResourceBase<Properties>{constructor(properties:Properties);}export{NatGateway as R};

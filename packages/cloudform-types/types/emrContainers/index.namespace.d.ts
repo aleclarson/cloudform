@@ -1,1 +1,0 @@
-import*as _0 from'./virtualCluster';export declare namespace EMRContainers{const VirtualCluster:typeof _0.R;type VirtualCluster=_0.R;namespace VirtualCluster{type ContainerInfo=_0.ContainerInfo;type EksInfo=_0.EksInfo;type ContainerProvider=_0.ContainerProvider;}}

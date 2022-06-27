@@ -1,1 +1,0 @@
-import*as _0 from'./queue';import*as _1 from'./jobTemplate';import*as _2 from'./preset';export declare namespace MediaConvert{const Queue:typeof _0.R;const JobTemplate:typeof _1.R;const Preset:typeof _2.R;type Queue=_0.R;type JobTemplate=_1.R;type Preset=_2.R;namespace JobTemplate{type HopDestination=_1.HopDestination;type AccelerationSettings=_1.AccelerationSettings;}}

@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name?:Value<string>;SamlMetadataDocument:Value<string>;Tags?:List<ResourceTag>;}declare class SAMLProvider extends ResourceBase<Properties>{constructor(properties:Properties);}export{SAMLProvider as R};

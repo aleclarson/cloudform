@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{ClientIdList?:List<Value<string>>;Url?:Value<string>;ThumbprintList:List<Value<string>>;Tags?:List<ResourceTag>;}declare class OIDCProvider extends ResourceBase<Properties>{constructor(properties:Properties);}export{OIDCProvider as R};

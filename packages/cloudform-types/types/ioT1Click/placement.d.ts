@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{PlacementName?:Value<string>;ProjectName:Value<string>;AssociatedDevices?:{[key:string]:any;};Attributes?:{[key:string]:any;};}declare class Placement extends ResourceBase<Properties>{constructor(properties:Properties);}export{Placement as R};

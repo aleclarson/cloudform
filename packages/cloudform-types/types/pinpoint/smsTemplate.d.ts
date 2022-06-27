@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{TemplateName:Value<string>;TemplateDescription?:Value<string>;DefaultSubstitutions?:Value<string>;Body:Value<string>;Tags?:{[key:string]:any;};}declare class SmsTemplate extends ResourceBase<Properties>{constructor(properties:Properties);}export{SmsTemplate as R};

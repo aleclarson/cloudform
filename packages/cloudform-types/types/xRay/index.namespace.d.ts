@@ -1,1 +1,0 @@
-import*as _0 from'./group';import*as _1 from'./samplingRule';export declare namespace XRay{const Group:typeof _0.R;const SamplingRule:typeof _1.R;type Group=_0.R;type SamplingRule=_1.R;namespace Group{type InsightsConfiguration=_0.InsightsConfiguration;}namespace SamplingRule{type SamplingRuleUpdate=_1.SamplingRuleUpdate;type SamplingRuleRecord=_1.SamplingRuleRecord;}}

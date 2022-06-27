@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{CertificateArn:Value<string>;RoleArn:Value<string>;}declare class EnclaveCertificateIamRoleAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{EnclaveCertificateIamRoleAssociation as R};

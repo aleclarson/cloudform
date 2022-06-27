@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Inspector=void 0;const _0=require("./resourceGroup"),_1=require("./assessmentTemplate"),_2=require("./assessmentTarget");var Inspector;!function(Inspector){Inspector.ResourceGroup=_0.R,Inspector.AssessmentTemplate=_1.R,Inspector.AssessmentTarget=_2.R}(Inspector=exports.Inspector||(exports.Inspector={}));

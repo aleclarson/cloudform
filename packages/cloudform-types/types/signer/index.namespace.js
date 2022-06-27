@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Signer=void 0;const _0=require("./signingProfile"),_1=require("./profilePermission");var Signer;!function(Signer){Signer.SigningProfile=_0.R,Signer.ProfilePermission=_1.R}(Signer=exports.Signer||(exports.Signer={}));

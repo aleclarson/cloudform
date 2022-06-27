@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.CloudTrail=void 0;const _0=require("./trail"),_1=require("./eventDataStore");var CloudTrail;!function(CloudTrail){CloudTrail.Trail=_0.R,CloudTrail.EventDataStore=_1.R}(CloudTrail=exports.CloudTrail||(exports.CloudTrail={}));

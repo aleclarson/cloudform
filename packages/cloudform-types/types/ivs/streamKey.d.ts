@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{ChannelArn:Value<string>;Tags?:List<ResourceTag>;}declare class StreamKey extends ResourceBase<Properties>{constructor(properties:Properties);}export{StreamKey as R};

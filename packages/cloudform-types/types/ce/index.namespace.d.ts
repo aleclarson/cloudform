@@ -1,1 +1,0 @@
-import*as _0 from'./costCategory';import*as _1 from'./anomalyMonitor';import*as _2 from'./anomalySubscription';export declare namespace CE{const CostCategory:typeof _0.R;const AnomalyMonitor:typeof _1.R;const AnomalySubscription:typeof _2.R;type CostCategory=_0.R;type AnomalyMonitor=_1.R;type AnomalySubscription=_2.R;namespace AnomalySubscription{type Subscriber=_2.Subscriber;}}

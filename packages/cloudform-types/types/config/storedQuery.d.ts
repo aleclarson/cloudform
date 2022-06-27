@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{QueryName:Value<string>;QueryDescription?:Value<string>;QueryExpression:Value<string>;Tags?:List<ResourceTag>;}declare class StoredQuery extends ResourceBase<Properties>{constructor(properties:Properties);}export{StoredQuery as R};

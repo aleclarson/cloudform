@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.SQS=void 0;const _0=require("./queuePolicy"),_1=require("./queue");var SQS;!function(SQS){SQS.QueuePolicy=_0.R,SQS.Queue=_1.R}(SQS=exports.SQS||(exports.SQS={}));

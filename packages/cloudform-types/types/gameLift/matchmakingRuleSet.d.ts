@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{RuleSetBody:Value<string>;Tags?:List<ResourceTag>;Name:Value<string>;}declare class MatchmakingRuleSet extends ResourceBase<Properties>{constructor(properties:Properties);}export{MatchmakingRuleSet as R};

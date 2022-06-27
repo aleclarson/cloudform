@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Name:Value<string>;RuleVersion:Value<string>;Rules:Value<string>;SplitChargeRules?:Value<string>;DefaultValue?:Value<string>;}declare class CostCategory extends ResourceBase<Properties>{constructor(properties:Properties);}export{CostCategory as R};

@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name:Value<string>;IpAddressType?:Value<string>;IpAddresses?:List<Value<string>>;Enabled?:Value<boolean>;Tags?:List<ResourceTag>;}declare class Accelerator extends ResourceBase<Properties>{constructor(properties:Properties);}export{Accelerator as R};

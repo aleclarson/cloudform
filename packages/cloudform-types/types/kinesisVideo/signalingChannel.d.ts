@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name?:Value<string>;Type?:Value<string>;MessageTtlSeconds?:Value<number>;Tags?:List<ResourceTag>;}declare class SignalingChannel extends ResourceBase<Properties>{constructor(properties?:Properties);}export{SignalingChannel as R};

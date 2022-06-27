@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{CollectionName:Value<string>;Description?:Value<string>;KmsKeyId?:Value<string>;PricingPlan?:Value<string>;PricingPlanDataSource?:Value<string>;}declare class GeofenceCollection extends ResourceBase<Properties>{constructor(properties:Properties);}export{GeofenceCollection as R};

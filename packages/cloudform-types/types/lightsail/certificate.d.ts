@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{CertificateName:Value<string>;DomainName:Value<string>;SubjectAlternativeNames?:List<Value<string>>;Tags?:List<ResourceTag>;}declare class Certificate extends ResourceBase<Properties>{constructor(properties:Properties);}export{Certificate as R};

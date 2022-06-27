@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.MWAA=void 0;const _0=require("./environment");var MWAA;!function(MWAA){MWAA.Environment=_0.R}(MWAA=exports.MWAA||(exports.MWAA={}));

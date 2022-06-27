@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Detective=void 0;const _0=require("./memberInvitation"),_1=require("./graph");var Detective;!function(Detective){Detective.MemberInvitation=_0.R,Detective.Graph=_1.R}(Detective=exports.Detective||(exports.Detective={}));

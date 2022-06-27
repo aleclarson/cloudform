@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Description?:Value<string>;DocumentationVersion:Value<string>;RestApiId:Value<string>;}declare class DocumentationVersion extends ResourceBase<Properties>{constructor(properties:Properties);}export{DocumentationVersion as R};

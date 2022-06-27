@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Status?:Value<string>;Description?:Value<string>;PricingPlan?:Value<string>;Tags?:{[key:string]:any;};Name?:Value<string>;}declare class Queue extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Queue as R};

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.FinSpace=void 0;const _0=require("./environment");var FinSpace;!function(FinSpace){FinSpace.Environment=_0.R}(FinSpace=exports.FinSpace||(exports.FinSpace={}));

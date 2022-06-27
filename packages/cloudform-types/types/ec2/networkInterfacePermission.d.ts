@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{AwsAccountId:Value<string>;NetworkInterfaceId:Value<string>;Permission:Value<string>;}declare class NetworkInterfacePermission extends ResourceBase<Properties>{constructor(properties:Properties);}export{NetworkInterfacePermission as R};

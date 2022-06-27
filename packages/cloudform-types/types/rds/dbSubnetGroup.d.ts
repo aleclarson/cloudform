@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{DBSubnetGroupDescription:Value<string>;DBSubnetGroupName?:Value<string>;SubnetIds:List<Value<string>>;Tags?:List<ResourceTag>;}declare class DBSubnetGroup extends ResourceBase<Properties>{constructor(properties:Properties);}export{DBSubnetGroup as R};

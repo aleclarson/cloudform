@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{SecretId:Value<string>;TargetType:Value<string>;TargetId:Value<string>;}declare class SecretTargetAttachment extends ResourceBase<Properties>{constructor(properties:Properties);}export{SecretTargetAttachment as R};

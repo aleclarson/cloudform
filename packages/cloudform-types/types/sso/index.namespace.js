@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.SSO=void 0;const _0=require("./assignment"),_1=require("./instanceAccessControlAttributeConfiguration"),_2=require("./permissionSet");var SSO;!function(SSO){SSO.Assignment=_0.R,SSO.InstanceAccessControlAttributeConfiguration=_1.R,SSO.PermissionSet=_2.R}(SSO=exports.SSO||(exports.SSO={}));

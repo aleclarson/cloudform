@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{TypeArn?:Value<string>;TypeName?:Value<string>;Configuration:Value<string>;ConfigurationAlias?:Value<string>;}declare class HookTypeConfig extends ResourceBase<Properties>{constructor(properties:Properties);}export{HookTypeConfig as R};

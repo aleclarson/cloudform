@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{DomainName:Value<string>;EncryptionKey?:Value<string>;PermissionsPolicyDocument?:{[key:string]:any;};Tags?:List<ResourceTag>;}declare class Domain extends ResourceBase<Properties>{constructor(properties:Properties);}export{Domain as R};

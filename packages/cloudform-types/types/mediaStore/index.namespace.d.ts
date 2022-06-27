@@ -1,1 +1,0 @@
-import*as _0 from'./container';export declare namespace MediaStore{const Container:typeof _0.R;type Container=_0.R;namespace Container{type MetricPolicy=_0.MetricPolicy;type MetricPolicyRule=_0.MetricPolicyRule;type CorsRule=_0.CorsRule;}}

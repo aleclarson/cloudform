@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{CloudWatchRoleArn?:Value<string>;}declare class Account extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Account as R};

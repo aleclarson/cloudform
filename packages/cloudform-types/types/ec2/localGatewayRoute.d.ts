@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{DestinationCidrBlock:Value<string>;LocalGatewayRouteTableId:Value<string>;LocalGatewayVirtualInterfaceGroupId:Value<string>;}declare class LocalGatewayRoute extends ResourceBase<Properties>{constructor(properties:Properties);}export{LocalGatewayRoute as R};

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.FSx=void 0;const _0=require("./fileSystem"),_1=require("./volume"),_2=require("./storageVirtualMachine"),_3=require("./snapshot");var FSx;!function(FSx){FSx.FileSystem=_0.R,FSx.Volume=_1.R,FSx.StorageVirtualMachine=_2.R,FSx.Snapshot=_3.R}(FSx=exports.FSx||(exports.FSx={}));

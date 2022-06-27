@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ResourceArn:Value<string>;UseServiceLinkedRole:Value<boolean>;RoleArn?:Value<string>;}declare class Resource extends ResourceBase<Properties>{constructor(properties:Properties);}export{Resource as R};

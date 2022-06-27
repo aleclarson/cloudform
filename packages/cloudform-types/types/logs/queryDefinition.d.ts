@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name:Value<string>;QueryString:Value<string>;LogGroupNames?:List<Value<string>>;}declare class QueryDefinition extends ResourceBase<Properties>{constructor(properties:Properties);}export{QueryDefinition as R};

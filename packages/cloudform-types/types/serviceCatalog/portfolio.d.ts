@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{ProviderName:Value<string>;Description?:Value<string>;DisplayName:Value<string>;AcceptLanguage?:Value<string>;Tags?:List<ResourceTag>;}declare class Portfolio extends ResourceBase<Properties>{constructor(properties:Properties);}export{Portfolio as R};

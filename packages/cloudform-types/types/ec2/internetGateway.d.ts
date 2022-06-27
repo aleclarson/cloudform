@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{List}from'../dataTypes';export interface Properties{Tags?:List<ResourceTag>;}declare class InternetGateway extends ResourceBase<Properties>{constructor(properties?:Properties);}export{InternetGateway as R};

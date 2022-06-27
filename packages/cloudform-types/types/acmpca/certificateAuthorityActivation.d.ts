@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{CertificateAuthorityArn:Value<string>;Certificate:Value<string>;CertificateChain?:Value<string>;Status?:Value<string>;}declare class CertificateAuthorityActivation extends ResourceBase<Properties>{constructor(properties:Properties);}export{CertificateAuthorityActivation as R};

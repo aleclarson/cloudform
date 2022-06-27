@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name:Value<string>;Tags?:List<ResourceTag>;Description?:Value<string>;}declare class Outcome extends ResourceBase<Properties>{constructor(properties:Properties);}export{Outcome as R};

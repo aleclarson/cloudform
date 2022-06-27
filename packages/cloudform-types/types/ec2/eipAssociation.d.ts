@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{AllocationId?:Value<string>;EIP?:Value<string>;InstanceId?:Value<string>;NetworkInterfaceId?:Value<string>;PrivateIpAddress?:Value<string>;}declare class EIPAssociation extends ResourceBase<Properties>{constructor(properties?:Properties);}export{EIPAssociation as R};

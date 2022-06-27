@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Name?:Value<string>;SecurityConfiguration:{[key:string]:any;};}declare class SecurityConfiguration extends ResourceBase<Properties>{constructor(properties:Properties);}export{SecurityConfiguration as R};

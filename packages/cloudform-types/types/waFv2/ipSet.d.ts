@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Description?:Value<string>;Name?:Value<string>;Scope:Value<string>;IPAddressVersion:Value<string>;Addresses:List<Value<string>>;Tags?:List<ResourceTag>;}declare class IPSet extends ResourceBase<Properties>{constructor(properties:Properties);}export{IPSet as R};

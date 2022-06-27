@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{AcceptLanguage?:Value<string>;PortfolioId:Value<string>;}declare class AcceptedPortfolioShare extends ResourceBase<Properties>{constructor(properties:Properties);}export{AcceptedPortfolioShare as R};

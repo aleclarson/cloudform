@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Name?:Value<string>;DestinationArn?:Value<string>;}declare class ResolverQueryLoggingConfig extends ResourceBase<Properties>{constructor(properties?:Properties);}export{ResolverQueryLoggingConfig as R};

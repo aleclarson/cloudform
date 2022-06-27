@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{InstanceArn:Value<string>;TargetId:Value<string>;TargetType:Value<string>;PermissionSetArn:Value<string>;PrincipalType:Value<string>;PrincipalId:Value<string>;}declare class Assignment extends ResourceBase<Properties>{constructor(properties:Properties);}export{Assignment as R};

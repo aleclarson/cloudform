@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{TargetArn:Value<string>;Description?:Value<string>;Type:Value<string>;CountryCode:Value<string>;Prefix?:Value<string>;Tags?:List<ResourceTag>;}declare class PhoneNumber extends ResourceBase<Properties>{constructor(properties:Properties);}export{PhoneNumber as R};

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{ArchiveName?:Value<string>;SourceArn:Value<string>;Description?:Value<string>;EventPattern?:{[key:string]:any;};RetentionDays?:Value<number>;}declare class Archive extends ResourceBase<Properties>{constructor(properties:Properties);}export{Archive as R};

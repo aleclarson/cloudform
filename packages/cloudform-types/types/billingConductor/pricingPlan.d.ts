@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{Value,List}from'../dataTypes';export interface Properties{Name:Value<string>;PricingRuleArns?:List<Value<string>>;Description?:Value<string>;Tags?:List<ResourceTag>;}declare class PricingPlan extends ResourceBase<Properties>{constructor(properties:Properties);}export{PricingPlan as R};

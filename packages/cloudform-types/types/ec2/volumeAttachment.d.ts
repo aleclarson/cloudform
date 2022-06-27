@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Device:Value<string>;InstanceId:Value<string>;VolumeId:Value<string>;}declare class VolumeAttachment extends ResourceBase<Properties>{constructor(properties:Properties);}export{VolumeAttachment as R};

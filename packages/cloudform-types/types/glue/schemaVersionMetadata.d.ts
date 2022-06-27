@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{SchemaVersionId:Value<string>;Key:Value<string>;Value:Value<string>;}declare class SchemaVersionMetadata extends ResourceBase<Properties>{constructor(properties:Properties);}export{SchemaVersionMetadata as R};

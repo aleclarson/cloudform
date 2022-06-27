@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{GlobalNetworkId:Value<string>;CustomerGatewayArn:Value<string>;DeviceId:Value<string>;LinkId?:Value<string>;}declare class CustomerGatewayAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{CustomerGatewayAssociation as R};

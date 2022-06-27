@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{Description?:Value<string>;AcceptLanguage?:Value<string>;PortfolioId:Value<string>;ProductId:Value<string>;Rules:Value<string>;}declare class LaunchTemplateConstraint extends ResourceBase<Properties>{constructor(properties:Properties);}export{LaunchTemplateConstraint as R};

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{DomainName:Value<string>;ApiId:Value<string>;}declare class DomainNameApiAssociation extends ResourceBase<Properties>{constructor(properties:Properties);}export{DomainNameApiAssociation as R};

@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{AccountId:Value<string>;AcceptLanguage?:Value<string>;PortfolioId:Value<string>;ShareTagOptions?:Value<boolean>;}declare class PortfolioShare extends ResourceBase<Properties>{constructor(properties:Properties);}export{PortfolioShare as R};

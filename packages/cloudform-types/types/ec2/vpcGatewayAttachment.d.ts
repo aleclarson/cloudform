@@ -1,1 +1,0 @@
-import{ResourceBase}from'../resource';import{Value}from'../dataTypes';export interface Properties{InternetGatewayId?:Value<string>;VpcId:Value<string>;VpnGatewayId?:Value<string>;}declare class VPCGatewayAttachment extends ResourceBase<Properties>{constructor(properties:Properties);}export{VPCGatewayAttachment as R};

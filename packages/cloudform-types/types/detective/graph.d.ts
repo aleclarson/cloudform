@@ -1,1 +1,0 @@
-import{ResourceBase,ResourceTag}from'../resource';import{List}from'../dataTypes';export interface Properties{Tags?:List<ResourceTag>;}declare class Graph extends ResourceBase<Properties>{constructor(properties?:Properties);}export{Graph as R};
