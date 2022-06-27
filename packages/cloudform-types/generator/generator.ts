@@ -138,11 +138,14 @@ function propertiesEntries(
   )
 }
 
-function hasTags(properties: { [key: string]: TypeProperties }): boolean {
+function isTagList(p: TypeProperties) {
   return (
-    Object.keys(properties).includes('Tags') ||
-    some(properties, p => p.Type === 'List' && p.ItemType === 'Tag')
+    p.Type === 'List' && (p.ItemType === 'ResourceTag' || p.ItemType === 'Tag')
   )
+}
+
+function hasTags(properties: { [key: string]: TypeProperties }): boolean {
+  return !!properties.ResourceTags || some(properties, isTagList)
 }
 
 function innerTypeName(innerTypeFullName: string): string {
@@ -220,7 +223,12 @@ function generateFile(
 ): void {
   let innerHasTags = false
   const innerTypesTemplates = Object.entries(innerTypes)
-    .filter(([, innerType]: [string, any]) => {
+    .filter(([innerTypeFullName, innerType]: [string, any]) => {
+      if (innerTypeFullName.endsWith('.ResourceTag')) {
+        // Avoid declaration conflicts.
+        // ResourceTag is imported from /types/resource.ts
+        return false
+      }
       const hasProperties = !!innerType.Properties
       const hasPrimitiveType = !!innerType.PrimitiveType
       const hasPrimitiveItemType = !!innerType.PrimitiveItemType
